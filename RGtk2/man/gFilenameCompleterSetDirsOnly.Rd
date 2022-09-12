@@ -1,7 +1,7 @@
 \alias{gFilenameCompleterSetDirsOnly}
 \name{gFilenameCompleterSetDirsOnly}
 \title{gFilenameCompleterSetDirsOnly}
-\description{If \code{dirs.only} is \code{TRUE}, \code{completer} will only 
+\description{If \code{dirs.only} is \code{TRUE}, \code{completer} will only
 complete directory names, and not file names.}
 \usage{gFilenameCompleterSetDirsOnly(object, dirs.only)}
 \arguments{

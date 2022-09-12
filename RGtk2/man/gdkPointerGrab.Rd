@@ -5,7 +5,7 @@
 application until the pointer is ungrabbed with \code{\link{gdkPointerUngrab}}, or
 the grab window becomes unviewable.
 This overrides any previous pointer grab by this client.}
-\usage{gdkPointerGrab(window, owner.events = FALSE, event.mask = 0, 
+\usage{gdkPointerGrab(window, owner.events = FALSE, event.mask = 0,
     confine.to = NULL, cursor = NULL, time = "GDK_CURRENT_TIME")}
 \arguments{
 \item{\verb{window}}{the \code{\link{GdkWindow}} which will own the grab (the grab window).}
@@ -33,7 +33,7 @@ events, even if the mouse leaves the application.
 For example in GTK+ it is used for Drag and Drop, for dragging the handle in
 the \code{\link{GtkHPaned}} and \code{\link{GtkVPaned}} widgets, and for resizing columns in \code{\link{GtkCList}}
 widgets.
-  
+
 Note that if the event mask of an X window has selected both button press and
 button release events, then a button press event will cause an automatic
 pointer grab until the button is released.
@@ -41,7 +41,7 @@ X does this automatically since most applications expect to receive button
 press and release events in pairs.
 It is equivalent to a pointer grab on the window with \code{owner.events} set to
 \code{TRUE}.
-  
+
 If you set up anything at the time you take the grab that needs to be cleaned
 up when the grab ends, you should handle the \code{\link{GdkEventGrabBroken}} events that
 are emitted when the grab ends unvoluntarily.}

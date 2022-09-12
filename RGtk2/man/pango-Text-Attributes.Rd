@@ -167,11 +167,11 @@ The \code{\link{PangoColor}} structure is used to
 represent a color in an uncalibrated RGB color-space.
 
 \describe{
-\item{\verb{red}}{[integer] The red component of the color. This is a value between 0 and 65535, 
+\item{\verb{red}}{[integer] The red component of the color. This is a value between 0 and 65535,
       with 65535 indicating full intensity.}
-\item{\verb{green}}{[integer] The green component of the color. This is a value between 0 and 65535, 
+\item{\verb{green}}{[integer] The green component of the color. This is a value between 0 and 65535,
       with 65535 indicating full intensity.}
-\item{\verb{blue}}{[integer] The blue component of the color. This is a value between 0 and 65535, 
+\item{\verb{blue}}{[integer] The blue component of the color. This is a value between 0 and 65535,
       with 65535 indicating full intensity.}
 }
 
@@ -182,7 +182,7 @@ that apply to a section of text. The attributes are, in general,
 allowed to overlap in an arbitrary fashion, however, if the
 attributes are manipulated only through \code{\link{pangoAttrListChange}},
 the overlap between properties will meet stricter criteria.
-  
+
 Since the \code{\link{PangoAttrList}} structure is stored as a linear list,
 it is not suitable for storing attributes for large amounts
 of text. In general, you should not use a single \code{\link{PangoAttrList}}

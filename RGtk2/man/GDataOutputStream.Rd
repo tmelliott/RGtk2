@@ -21,7 +21,7 @@
    +----GOutputStream
          +----GFilterOutputStream
                +----GDataOutputStream}}
-\section{Detailed Description}{Data output stream implements \code{\link{GOutputStream}} and includes functions for 
+\section{Detailed Description}{Data output stream implements \code{\link{GOutputStream}} and includes functions for
 writing data directly to an output stream.}
 \section{Structures}{\describe{\item{\verb{GDataOutputStream}}{
 An implementation of \code{\link{GBufferedOutputStream}} that allows for high-level

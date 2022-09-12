@@ -4,8 +4,8 @@
 COLUMN <- c(holiday.name = 0, alex = 1, havoc = 2, tim = 3, owen = 4, dave = 5, visible = 6, world = 7)
 
 nameTreeItem <- function(item) {
-	names(item) <- c("label", "alex", "havoc", "tim", "owen", "dave", "world.holiday", "children")
-	item
+  names(item) <- c("label", "alex", "havoc", "tim", "owen", "dave", "world.holiday", "children")
+  item
 }
 
 # tree data
@@ -36,7 +36,7 @@ april <- lapply(list(
 may <- lapply(list(
   list("Nurses' Day", FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, NULL),
   list("National Day of Prayer", FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, NULL),
-  list("Mothers' Day", FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, NULL ),
+  list("Mothers' Day", FALSE, FALSE, FALSE, FALSE, FALSE, TRUE, NULL),
   list("Armed Forces Day", FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, NULL),
   list("Memorial Day", TRUE, TRUE, TRUE, TRUE, FALSE, TRUE, NULL)
 ), nameTreeItem)
@@ -101,56 +101,58 @@ toplevel <- lapply(list(
   list("December", FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, december)
 ), nameTreeItem)
 
-create.model <- function()
-{
+create.model <- function() {
   # create tree store
-  model <- gtkTreeStoreNew("gchararray", "gboolean", "gboolean", "gboolean", "gboolean",
-			      "gboolean", "gboolean", "gboolean")
+  model <- gtkTreeStoreNew(
+    "gchararray", "gboolean", "gboolean", "gboolean", "gboolean",
+    "gboolean", "gboolean", "gboolean"
+  )
 
   month <- toplevel
-  
+
   # add data to the tree store
-  sapply(toplevel, function(month)
-    {
-      holidays <- month$children
+  sapply(toplevel, function(month) {
+    holidays <- month$children
 
-      iter <- model$append(NULL)$iter
-      model$set(iter,
-	  		  COLUMN["holiday.name"], month$label,
-			  COLUMN["alex"], FALSE,
-			  COLUMN["havoc"], FALSE,
-			  COLUMN["tim"], FALSE,
-			  COLUMN["owen"], FALSE,
-			  COLUMN["dave"], FALSE,
-			  COLUMN["visible"], FALSE,
-			  COLUMN["world"], FALSE)
+    iter <- model$append(NULL)$iter
+    model$set(
+      iter,
+      COLUMN["holiday.name"], month$label,
+      COLUMN["alex"], FALSE,
+      COLUMN["havoc"], FALSE,
+      COLUMN["tim"], FALSE,
+      COLUMN["owen"], FALSE,
+      COLUMN["dave"], FALSE,
+      COLUMN["visible"], FALSE,
+      COLUMN["world"], FALSE
+    )
 
-      # add children
-      sapply(holidays, function(holiday)
-	{
-	  child.iter <- model$append(iter)$iter
-	  model$set(child.iter,
-			      COLUMN["holiday.name"], holiday$label,
-			      COLUMN["alex"], holiday$alex,
-			      COLUMN["havoc"], holiday$havoc,
-			      COLUMN["tim"], holiday$tim,
-			      COLUMN["owen"], holiday$owen,
-			      COLUMN["dave"], holiday$dave,
-			      COLUMN["visible"], TRUE,
-			      COLUMN["world"], holiday$world.holiday)
-	})
+    # add children
+    sapply(holidays, function(holiday) {
+      child.iter <- model$append(iter)$iter
+      model$set(
+        child.iter,
+        COLUMN["holiday.name"], holiday$label,
+        COLUMN["alex"], holiday$alex,
+        COLUMN["havoc"], holiday$havoc,
+        COLUMN["tim"], holiday$tim,
+        COLUMN["owen"], holiday$owen,
+        COLUMN["dave"], holiday$dave,
+        COLUMN["visible"], TRUE,
+        COLUMN["world"], holiday$world.holiday
+      )
     })
+  })
 
   return(model)
 }
 
-item.toggled <- function(cell, path.str, data)
-{
+item.toggled <- function(cell, path.str, data) {
   checkPtrType(data, "GtkTreeModel")
   model <- data
-  
+
   path <- gtkTreePathNewFromString(path.str)
-  
+
   column <- cell$getData("column")
 
   # get toggled iter
@@ -164,17 +166,17 @@ item.toggled <- function(cell, path.str, data)
   model$set(iter, column, toggle.item)
 }
 
-add.columns <- function(treeview)
-{
+add.columns <- function(treeview) {
   model <- gtkTreeViewGetModel(treeview)
 
   # column for holiday names
   renderer <- gtkCellRendererTextNew()
   renderer$set(xalign = 0.0)
 
-  col.offset <- treeview$insertColumnWithAttributes(-1, "Holiday", renderer, 
-  								text = COLUMN[["holiday.name"]])
-								
+  col.offset <- treeview$insertColumnWithAttributes(-1, "Holiday", renderer,
+    text = COLUMN[["holiday.name"]]
+  )
+
   column <- treeview$getColumn(col.offset - 1)
   column$setClickable(TRUE)
 
@@ -186,9 +188,10 @@ add.columns <- function(treeview)
   gSignalConnect(renderer, "toggled", item.toggled, model)
 
   col.offset <- treeview$insertColumnWithAttributes(-1, "Alex", renderer,
-							    active = COLUMN[["alex"]],
-							    visible = COLUMN[["visible"]],
-							    activatable = COLUMN[["world"]])
+    active = COLUMN[["alex"]],
+    visible = COLUMN[["visible"]],
+    activatable = COLUMN[["world"]]
+  )
 
   column <- treeview$getColumn(col.offset - 1)
   column$setSizing("fixed")
@@ -203,9 +206,10 @@ add.columns <- function(treeview)
   gSignalConnect(renderer, "toggled", item.toggled, model)
 
   col.offset <- treeview$insertColumnWithAttributes(-1, "Havoc", renderer,
-							    active = COLUMN[["havoc"]],
-							    visible = COLUMN[["visible"]],
-							    activatable = COLUMN[["world"]])
+    active = COLUMN[["havoc"]],
+    visible = COLUMN[["visible"]],
+    activatable = COLUMN[["world"]]
+  )
 
   column <- treeview$getColumn(col.offset - 1)
   column$setSizing("fixed")
@@ -220,9 +224,10 @@ add.columns <- function(treeview)
   gSignalConnect(renderer, "toggled", item.toggled, model)
 
   col.offset <- treeview$insertColumnWithAttributes(-1, "Tim", renderer,
-							    active = COLUMN[["tim"]],
-							    visible = COLUMN[["visible"]],
-							    activatable = COLUMN[["world"]])
+    active = COLUMN[["tim"]],
+    visible = COLUMN[["visible"]],
+    activatable = COLUMN[["world"]]
+  )
 
   column <- treeview$getColumn(col.offset - 1)
   column$setSizing("fixed")
@@ -237,9 +242,10 @@ add.columns <- function(treeview)
   gSignalConnect(renderer, "toggled", item.toggled, model)
 
   col.offset <- treeview$insertColumnWithAttributes(-1, "Owen", renderer,
-							    active = COLUMN[["owen"]],
-							    visible = COLUMN[["visible"]],
-							    activatable = COLUMN[["world"]])
+    active = COLUMN[["owen"]],
+    visible = COLUMN[["visible"]],
+    activatable = COLUMN[["world"]]
+  )
 
   column <- treeview$getColumn(col.offset - 1)
   column$setSizing("fixed")
@@ -254,9 +260,10 @@ add.columns <- function(treeview)
   gSignalConnect(renderer, "toggled", item.toggled, model)
 
   col.offset <- treeview$insertColumnWithAttributes(-1, "Dave", renderer,
-							    active = COLUMN[["dave"]],
-							    visible = COLUMN[["visible"]],
-							    activatable = COLUMN[["world"]])
+    active = COLUMN[["dave"]],
+    visible = COLUMN[["visible"]],
+    activatable = COLUMN[["world"]]
+  )
 
   column <- treeview$getColumn(col.offset - 1)
   column$setSizing("fixed")
@@ -272,8 +279,10 @@ vbox <- gtkVBoxNew(FALSE, 8)
 vbox$setBorderWidth(8)
 window$add(vbox)
 
-vbox$packStart(gtkLabelNew("Jonathan's Holiday Card Planning Sheet"),
-	  FALSE, FALSE, 0)
+vbox$packStart(
+  gtkLabelNew("Jonathan's Holiday Card Planning Sheet"),
+  FALSE, FALSE, 0
+)
 
 sw <- gtkScrolledWindowNew(NULL, NULL)
 sw$setShadowType("etched-in")

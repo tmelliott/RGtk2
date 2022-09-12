@@ -1,7 +1,7 @@
 \alias{gtkComboBoxEntryNewText}
 \name{gtkComboBoxEntryNewText}
 \title{gtkComboBoxEntryNewText}
-\description{Convenience function which constructs a new editable text combo box, which 
+\description{Convenience function which constructs a new editable text combo box, which
 is a \code{\link{GtkComboBoxEntry}} just displaying strings. If you use this function to
 create a text combo box, you should only manipulate its data source with
 the following convenience functions: \code{\link{gtkComboBoxAppendText}},

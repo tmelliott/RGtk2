@@ -6,7 +6,7 @@ Gets the recent manager object associated with \code{screen}; if this
 function has not previously been called for the given screen,
 a new recent manager object will be created and associated with
 the screen. Recent manager objects are fairly expensive to create,
-so using this function is usually a better choice than calling 
+so using this function is usually a better choice than calling
 \code{\link{gtkRecentManagerNew}} and setting the screen yourself; by using
 this function a single recent manager object will be shared between
 users.

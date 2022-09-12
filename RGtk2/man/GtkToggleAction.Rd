@@ -47,7 +47,7 @@ If the toggle action should be active in or not.
 \item{\verb{draw-as-radio} [logical : Read / Write]}{
 
 Whether the proxies for this action look like radio action proxies.
-  
+
 This is an appearance property and thus only applies if
 \verb{"use-action-appearance"} is \code{TRUE}.
   Default value: FALSE

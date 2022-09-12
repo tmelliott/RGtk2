@@ -1,7 +1,7 @@
 \alias{gFileInfoSetAttributeByteString}
 \name{gFileInfoSetAttributeByteString}
 \title{gFileInfoSetAttributeByteString}
-\description{Sets the \code{attribute} to contain the given \code{attr.value}, 
+\description{Sets the \code{attribute} to contain the given \code{attr.value},
 if possible.}
 \usage{gFileInfoSetAttributeByteString(object, attribute, attr.value)}
 \arguments{

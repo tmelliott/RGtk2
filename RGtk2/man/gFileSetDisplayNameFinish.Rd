@@ -1,7 +1,7 @@
 \alias{gFileSetDisplayNameFinish}
 \name{gFileSetDisplayNameFinish}
 \title{gFileSetDisplayNameFinish}
-\description{Finishes setting a display name started with 
+\description{Finishes setting a display name started with
 \code{\link{gFileSetDisplayNameAsync}}.}
 \usage{gFileSetDisplayNameFinish(object, res, .errwarn = TRUE)}
 \arguments{

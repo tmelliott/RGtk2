@@ -15,7 +15,7 @@ moving or deleting a selected region can change the numbering.}
 A list containing the following elements:
 \item{retval}{[character]  the selected text.}
 \item{\verb{start.offset}}{[integer]  passes back the start position of the selected region}
-\item{\verb{end.offset}}{[integer]  passes back the end position of (e.g. offset immediately past) 
+\item{\verb{end.offset}}{[integer]  passes back the end position of (e.g. offset immediately past)
 the selected region}
 }
 \author{Derived by RGtkGen from GTK+ documentation}

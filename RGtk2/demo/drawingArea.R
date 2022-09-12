@@ -3,10 +3,11 @@ window <- NULL
 pixmap <- NULL
 
 # Create a new pixmap of the appropriate size to store our scribbles
-scribble.configure.event <- function(widget, event, data)
-{
-  pixmap <<- gdkPixmapNew(widget[["window"]], widget[["allocation"]][["width"]],
-               widget[["allocation"]][["height"]], -1)
+scribble.configure.event <- function(widget, event, data) {
+  pixmap <<- gdkPixmapNew(
+    widget[["window"]], widget[["allocation"]][["width"]],
+    widget[["allocation"]][["height"]], -1
+  )
 
   # Initialize the pixmap to white
   cr <- gdkCairoCreate(pixmap)
@@ -18,8 +19,7 @@ scribble.configure.event <- function(widget, event, data)
 }
 
 # Redraw the screen from the pixmap
-scribble.expose.event <- function(widget, event, data)
-{
+scribble.expose.event <- function(widget, event, data) {
   # We use the "foreground GC" for the widget since it already exists,
   # but honestly any GC would work. The only thing to worry about
   # is whether the GC has an inappropriate clip region set.
@@ -29,40 +29,39 @@ scribble.expose.event <- function(widget, event, data)
   gdkCairoSetSourcePixmap(cr, pixmap, 0, 0)
   gdkCairoRectangle(cr, event[["area"]])
   cr$fill()
-  
+
   return(FALSE)
 }
 
 # Draw a rectangle on the screen
-draw.brush <- function(widget, x, y)
-
-{
-  update.rect <- c(x=x-3, y=y-3, width=6, height=6)
+draw.brush <- function(widget, x, y) {
+  update.rect <- c(x = x - 3, y = y - 3, width = 6, height = 6)
 
   cr <- gdkCairoCreate(pixmap)
   gdkCairoRectangle(cr, update.rect)
   cr$fill()
-  
+
   # Now invalidate the affected region of the drawing area. (so it will be updated)
   gdkWindowInvalidateRect(widget[["window"]], update.rect, FALSE)
 }
 
-scribble.button.press.event <- function(widget, event, data)
-{
-  if (is.null(pixmap))
-    return(FALSE) # paranoia check, in case we haven't gotten a configure event
+scribble.button.press.event <- function(widget, event, data) {
+  if (is.null(pixmap)) {
+    return(FALSE)
+  } # paranoia check, in case we haven't gotten a configure event
 
-  if (event[["button"]] == 1) # left mouse button click
+  if (event[["button"]] == 1) { # left mouse button click
     draw.brush(widget, event[["x"]], event[["y"]])
+  }
 
   # We've handled the event, stop processing
   return(TRUE)
 }
 
-scribble.motion.notify.event <- function(widget, event, data)
-{
-  if (is.null(pixmap))
-    return(FALSE) # paranoia check, in case we haven't gotten a configure event
+scribble.motion.notify.event <- function(widget, event, data) {
+  if (is.null(pixmap)) {
+    return(FALSE)
+  } # paranoia check, in case we haven't gotten a configure event
 
   # This call is very important it requests the next motion event.
   # If you don't call gdkWindowGetPointer() you'll only get
@@ -78,18 +77,17 @@ scribble.motion.notify.event <- function(widget, event, data)
   pointer <- gdkWindowGetPointer(event[["window"]])
 
   # if button1 held down, draw
-  if (as.flag(pointer$mask) & GdkModifierType["button1-mask"])
+  if (as.flag(pointer$mask) & GdkModifierType["button1-mask"]) {
     draw.brush(widget, pointer$x, pointer$y)
+  }
 
   # We've handled it, stop processing
   return(TRUE)
 }
 
-checkerboard.expose <- function(da, event, data)
-{
-
- CHECK.SIZE <- 10
- SPACING <- 2
+checkerboard.expose <- function(da, event, data) {
+  CHECK.SIZE <- 10
+  SPACING <- 2
 
   # At the start of an expose handler, a clip region of event[["area"]]
   # is set on the window, and event[["area"]] has been cleared to the
@@ -97,23 +95,22 @@ checkerboard.expose <- function(da, event, data)
   # gdkWindowBeginPaintRegion() give more details on how this
   # works.
   #
- 
+
   cr <- gdkCairoCreate(da[["window"]])
   gdkCairoRectangle(cr, event[["area"]])
   cr$clip()
- 
+
   xcount <- 0
   i <- SPACING
-  while (i < da[["allocation"]][["width"]])
-    {
-      j <- SPACING
-      ycount <- xcount %% 2 # start with even/odd depending on row
-      while (j < da[["allocation"]][["height"]])
-    {
-      if (ycount %% 2)
+  while (i < da[["allocation"]][["width"]]) {
+    j <- SPACING
+    ycount <- xcount %% 2 # start with even/odd depending on row
+    while (j < da[["allocation"]][["height"]]) {
+      if (ycount %% 2) {
         cr$setSourceRgb(0.45777, 0, 0.45777)
-      else
+      } else {
         cr$setSourceRgb(1, 1, 1)
+      }
 
       # If we're outside event->area, this will do nothing.
       # It might be mildly more efficient if we handled
@@ -122,14 +119,14 @@ checkerboard.expose <- function(da, event, data)
 
       cr$rectangle(i, j, CHECK.SIZE, CHECK.SIZE)
       cr$fill()
-      
+
       j <- j + CHECK.SIZE + SPACING
       ycount <- ycount + 1
     }
 
-      i <- i + CHECK.SIZE + SPACING
-      xcount <- xcount + 1
-    }
+    i <- i + CHECK.SIZE + SPACING
+    xcount <- xcount + 1
+  }
 
   # return TRUE because we've handled this event, so no
   # further processing is performed
@@ -138,7 +135,7 @@ checkerboard.expose <- function(da, event, data)
   return(TRUE)
 }
 
-window <- gtkWindowNew("toplevel", show=F)
+window <- gtkWindowNew("toplevel", show = F)
 
 window$setTitle("Drawing Area")
 window$setBorderWidth(8)
@@ -159,7 +156,7 @@ frame <- gtkFrameNew()
 frame$setShadowType("in")
 vbox$packStart(frame, TRUE, TRUE, 0)
 
-da <- gtkDrawingAreaNew(show=F)
+da <- gtkDrawingAreaNew(show = F)
 # set a minimum size
 da$setSizeRequest(100, 100)
 
@@ -200,6 +197,6 @@ gSignalConnect(da, "button_press_event", scribble.button.press.event)
 #
 # we have to do this numerically, because the function takes gint, not GdkEventMask
 da$setEvents(da$getEvents() + GdkEventMask["button-press-mask"] +
-    GdkEventMask["pointer-motion-mask"] + GdkEventMask["pointer-motion-hint-mask"])
+  GdkEventMask["pointer-motion-mask"] + GdkEventMask["pointer-motion-hint-mask"])
 
 window$showAll()

@@ -10,7 +10,7 @@ actually used for the translation; some keys such as Enter are not
 affected by the active keyboard group. The \code{level} is derived from
 \code{state}. For convenience, \code{\link{GdkEventKey}} already contains the translated
 keyval, so this function isn't as useful as you might think.}
-\usage{gdkKeymapTranslateKeyboardState(object, hardware.keycode, state, 
+\usage{gdkKeymapTranslateKeyboardState(object, hardware.keycode, state,
     group)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GdkKeymap}}, or \code{NULL} to use the default. \emph{[  \acronym{allow-none}  ]}}
@@ -26,14 +26,14 @@ symbol is shifted, so when comparing a key press to a
 be masked out.
   \preformatted{
 # We want to ignore irrelevant modifiers like ScrollLock
-all_accels_mask <- GdkModifierType["control-mask"] | 
+all_accels_mask <- GdkModifierType["control-mask"] |
 GdkModifierType["shift-mask"] | GdkModifierType["mod1-mask"]
 state <- gdkKeymapTranslateKeyboardState(keymap, event[["hardware_keycode"]],
                                          event[["state"]], event[["group"]])
-unconsumed <- all_accels_mask & event[["state"]] & !as.flag(state$consumed) 
+unconsumed <- all_accels_mask & event[["state"]] & !as.flag(state$consumed)
 if (state$keyval == .gdkPlus && unconsumed == GdkModifierType["control-mask"])
   print("Control was pressed")
-}  
+}
 An older interpretation \code{consumed.modifiers} was that it contained
 all modifiers that might affect the translation of the key;
 this allowed accelerators to be stored with irrelevant consumed
@@ -43,7 +43,7 @@ unconsumed <- all_accel_mask & event[["state"]] & !as.flag(state$consumed)
 if (state$keyval == accel_keyval &&
     unconsumed == accel_mods & !as.flag(state$consumed))
   print("Accellerator was pressed")
-}  
+}
 However, this did not work if multi-modifier combinations were
 used in the keymap, since, for instance, \code{<Control>}
 would be masked out even if only \code{<Control><Alt>}
@@ -70,11 +70,11 @@ instance, on a US keyboard, the \code{plus}
 symbol is shifted, so when comparing a key press to a
 \code{<Control>plus} accelerator <Shift> should
 be masked out.
-  
+
 An older interpretation \code{consumed.modifiers} was that it contained
 all modifiers that might affect the translation of the key;
 this allowed accelerators to be stored with irrelevant consumed
-modifiers, by doing:  
+modifiers, by doing:
 However, this did not work if multi-modifier combinations were
 used in the keymap, since, for instance, \code{<Control>}
 would be masked out even if only \code{<Control><Alt>}

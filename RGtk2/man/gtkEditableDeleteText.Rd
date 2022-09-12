@@ -1,8 +1,8 @@
 \alias{gtkEditableDeleteText}
 \name{gtkEditableDeleteText}
 \title{gtkEditableDeleteText}
-\description{Deletes a sequence of characters. The characters that are deleted are 
-those characters at positions from \code{start.pos} up to, but not including 
+\description{Deletes a sequence of characters. The characters that are deleted are
+those characters at positions from \code{start.pos} up to, but not including
 \code{end.pos}. If \code{end.pos} is negative, then the the characters deleted
 are those from \code{start.pos} to the end of the text.}
 \usage{gtkEditableDeleteText(object, start.pos, end.pos)}

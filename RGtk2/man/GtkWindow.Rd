@@ -122,7 +122,7 @@
 custom <accel-groups> element, which supports any number of <group>
 elements representing the GtkAccelGroup objects you want to add to your
 window (synonymous with \code{\link{gtkWindowAddAccelGroup}}.
-  
+
  \emph{A UI definition fragment with accel groups}\preformatted{<object class="GtkWindow">
   <accel-groups>
     <group name="accelgroup1"/>

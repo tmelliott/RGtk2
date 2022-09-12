@@ -14,9 +14,9 @@ for the path.}
 \item{\verb{closure}}{closure to be executed upon accelerator activation}
 }
 \details{The signature used for the \code{closure} is that of \code{\link{GtkAccelGroupActivate}}.
-  
+
 Note that \code{accel.path} string will be stored in a \code{\link{GQuark}}. Therefore, if you
-pass a static string, you can save some memory by interning it first with 
+pass a static string, you can save some memory by interning it first with
 \code{gInternStaticString()}.}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

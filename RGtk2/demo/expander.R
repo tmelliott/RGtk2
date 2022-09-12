@@ -1,8 +1,10 @@
-window <- gtkDialogNewWithButtons("GtkExpander",
-                      NULL,
-                      0,
-                      "gtk-close",
-                      GtkResponseType["none"])
+window <- gtkDialogNewWithButtons(
+    "GtkExpander",
+    NULL,
+    0,
+    "gtk-close",
+    GtkResponseType["none"]
+)
 window$setResizable(FALSE)
 
 gSignalConnect(window, "response", gtkWidgetDestroy)

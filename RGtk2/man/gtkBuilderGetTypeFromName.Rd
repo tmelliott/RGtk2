@@ -1,7 +1,7 @@
 \alias{gtkBuilderGetTypeFromName}
 \name{gtkBuilderGetTypeFromName}
 \title{gtkBuilderGetTypeFromName}
-\description{Looks up a type by name, using the virtual function that 
+\description{Looks up a type by name, using the virtual function that
 \code{\link{GtkBuilder}} has for that purpose. This is mainly used when
 implementing the \code{\link{GtkBuildable}} interface on a type.}
 \usage{gtkBuilderGetTypeFromName(object, type.name)}

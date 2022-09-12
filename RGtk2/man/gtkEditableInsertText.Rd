@@ -9,7 +9,7 @@ widget, at position \code{position}.}
 \item{\verb{new.text}}{the text to append}
 \item{\verb{position}}{location of the position text will be inserted at. \emph{[  \acronym{in-out}  ]}}
 }
-\details{Note that the position is in characters, not in bytes. 
+\details{Note that the position is in characters, not in bytes.
 The function updates \code{position} to point after the newly inserted text.}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

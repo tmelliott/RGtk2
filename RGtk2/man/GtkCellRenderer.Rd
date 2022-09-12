@@ -38,7 +38,7 @@ rendering a cell to a \code{\link{GdkDrawable}}.  These objects are used primari
 the \code{\link{GtkTreeView}} widget, though they aren't tied to them in any
 specific way.  It is worth noting that \code{\link{GtkCellRenderer}} is not a
 \code{\link{GtkWidget}} and cannot be treated as such.
-  
+
 The primary use of a \code{\link{GtkCellRenderer}} is for drawing a certain graphical
 elements on a \code{\link{GdkDrawable}}.  Typically, one cell renderer is used to
 draw many cells on the screen.  To this extent, it isn't expected that a
@@ -46,13 +46,13 @@ CellRenderer keep any permanent state around.  Instead, any state is set
 just prior to use using \code{\link{GObject}}s property system.  Then, the
 cell is measured using \code{\link{gtkCellRendererGetSize}}.  Finally, the cell
 is rendered in the correct location using \code{\link{gtkCellRendererRender}}.
-  
+
 There are a number of rules that must be followed when writing a new
 \code{\link{GtkCellRenderer}}.  First and formost, it's important that a certain set
 of properties will always yield a cell renderer of the same size,
 barring a \code{\link{GtkStyle}} change.  The \code{\link{GtkCellRenderer}} also has a number of
 generic properties that are expected to be honored by all children.
-  
+
 Beyond merely rendering a cell, cell renderers can optionally
 provide active user interface elements. A cell renderer can be
 \dfn{activatable} like \code{\link{GtkCellRendererToggle}},
@@ -100,7 +100,7 @@ it cannot be individually modified.}
 This signal gets emitted when the user cancels the process of editing a
 cell.  For example, an editable cell renderer could be written to cancel
 editing when the user presses Escape.
-  
+
 See also: \code{\link{gtkCellRendererStopEditing}}.
   Since 2.4
 
@@ -116,7 +116,7 @@ This signal gets emitted when a cell starts to be edited.
 The intended use of this signal is to do special setup
 on \code{editable}, e.g. adding a \code{\link{GtkEntryCompletion}} or setting
 up additional columns in a \code{\link{GtkComboBox}}.
-  
+
 Note that GTK+ doesn't guarantee that cell renderers will
 continue to use the same kind of widget for editing in future
 releases, therefore you should check the type of \code{editable}

@@ -12,9 +12,9 @@
 }
 \details{If this function is called on a window with setting of \code{TRUE}, before
 it is realized or showed, it will have a "frame" window around
-\code{window->window}, accessible in \code{window->frame}. Using the signal 
+\code{window->window}, accessible in \code{window->frame}. Using the signal
 frame_event you can receive all events targeted at the frame.
-  
+
 This function is used by the linux-fb port to implement managed
 windows, but it could conceivably be used by X-programs that
 want to do their own window decorations.}

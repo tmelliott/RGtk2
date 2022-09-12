@@ -1,7 +1,7 @@
 \alias{gdkScreenGetHeightMm}
 \name{gdkScreenGetHeightMm}
 \title{gdkScreenGetHeightMm}
-\description{Returns the height of \code{screen} in millimeters. 
+\description{Returns the height of \code{screen} in millimeters.
 Note that on some X servers this value will not be correct.}
 \usage{gdkScreenGetHeightMm(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GdkScreen}}}}

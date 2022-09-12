@@ -5,8 +5,8 @@
 set at the position \code{offset} in the text. \code{start.offset} and \code{end.offset} are
 set to the start and end of the range around \code{offset} where the attributes are
 invariant. Note that \code{end.offset} is the offset of the first character
-after the range.  See the enum AtkTextAttribute for types of text 
-attributes that can be returned. Note that other attributes may also be 
+after the range.  See the enum AtkTextAttribute for types of text
+attributes that can be returned. Note that other attributes may also be
 returned.}
 \usage{atkTextGetRunAttributes(object, offset)}
 \arguments{

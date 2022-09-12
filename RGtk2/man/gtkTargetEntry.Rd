@@ -3,7 +3,7 @@
 \alias{gtkTargetEntryNew}
 \title{Create a new target for drag-n-drop(?)}
 \description{
-\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)} 
+\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)}
 
   This creates a new GtkTarget object.
   This is used in transferring data
@@ -39,5 +39,3 @@ Duncan Temple Lang <duncan@research.bell-labs.com>
 }
 \keyword{interface}
 \keyword{internal}
-
-

@@ -14,7 +14,7 @@ call \code{\link{gtkWidgetGetColormap}}.}
 matching pixel from a color cube. The color is then ready to be
 used for drawing, e.g. you can call \code{\link{gdkGCSetForeground}} which
 expects \code{pixel} to be initialized.
-  
+
 In many cases, you can avoid this whole issue by calling
 \code{\link{gdkGCSetRgbFgColor}} or \code{\link{gdkGCSetRgbBgColor}}, which
 do not expect \code{pixel} to be initialized in advance. If you use those

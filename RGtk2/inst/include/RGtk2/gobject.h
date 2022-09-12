@@ -162,8 +162,8 @@ __extension__ \
     _asRPrimArrayWithSize(array, size, LOGICAL); \
 })
 
-/* for converting each element to an R pointer of a specified class 
-	-- I don't think this is ever used */ 
+/* for converting each element to an R pointer of a specified class
+	-- I don't think this is ever used */
 #define toRPointerArray(array, type) \
 __extension__ \
 ({ \
@@ -175,7 +175,7 @@ __extension__ \
     toRPointerWithFinalizerArrayWithSize(array, type, NULL, n); \
 })
 
-/* for converting elements to R pointers of a specified class with a special finalizer 
+/* for converting elements to R pointers of a specified class with a special finalizer
 	- only used like once */
 #define toRPointerWithFinalizerArray(array, type, finalizer) \
 __extension__ \
@@ -203,7 +203,7 @@ __extension__ \
     s_array; \
 })
 
-/* converts each element to a ref'd R pointer (ie, they're GObjects) 
+/* converts each element to a ref'd R pointer (ie, they're GObjects)
 	- used only a couple of times */
 #define toRPointerWithRefArray(array, type) \
 __extension__ \
@@ -232,7 +232,7 @@ __extension__ \
 })
 
 /* this is used when there is an array of struct values that need to be copied
-	into separate areas in memory so that they can be individually finalized 
+	into separate areas in memory so that they can be individually finalized
 	- used maybe once */
 #define asRStructArray(array, type) \
 __extension__ \
@@ -358,7 +358,7 @@ gint asCEnum(USER_OBJECT_ s_enum, GType etype);
 
 /******* Pointer-type conversion ********/
 
-USER_OBJECT_ toRPointerWithFinalizer(gconstpointer val, const gchar *typeName, 
+USER_OBJECT_ toRPointerWithFinalizer(gconstpointer val, const gchar *typeName,
   RPointerFinalizer finalizer);
 #define toRPointer(val, name) toRPointerWithFinalizer(val, name, NULL)
 USER_OBJECT_ toRPointerWithRef(gconstpointer val, const gchar *type);
@@ -390,7 +390,7 @@ USER_OBJECT_ asRGSListWithRef(GSList *gslist, const gchar* type);
 USER_OBJECT_ asRGSListWithFinalizer(GSList *gslist, const gchar* type, RPointerFinalizer finalizer);
 USER_OBJECT_ asRGSListConv(GSList *gslist, ElementConverter converter);
 USER_OBJECT_ asRGError(GError *error);
-GError *asCGError(USER_OBJECT_ s_error); 
+GError *asCGError(USER_OBJECT_ s_error);
 
 /******* GObject structure conversion *********/
 int R_setGValueFromSValue(GValue *val, USER_OBJECT_ sval);
@@ -526,5 +526,5 @@ GType g_io_condition_get_type (void) G_GNUC_CONST;
 #else
 #define UNOWNED_TYPE_NAME "GtkObject"
 #endif
-  
+
 #endif

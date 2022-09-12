@@ -36,22 +36,22 @@ They appear in the \code{keyval} field of the
 The complete list of key values can be found in the \file{<gdk/gdkkeysyms.h>}
 header file. \file{<gdk/gdkkeysyms.h>} is not included in \file{<gdk/gdk.h>},
 it must be included independently, because the file is quite large.
-  
+
 Key values are regularly updated from the upstream X.org X11 implementation,
 so new values are added regularly. They will be prefixed with GDK_ rather than
 XF86XK_ or XK_ (for older symbols).
-  
+
 Key values can be converted into a string representation using
 \code{\link{gdkKeyvalName}}. The reverse function, converting a string to a key value,
 is provided by \code{\link{gdkKeyvalFromName}}.
-  
+
 The case of key values can be determined using \code{\link{gdkKeyvalIsUpper}} and
 \code{\link{gdkKeyvalIsLower}}. Key values can be converted to upper or lower case
 using \code{\link{gdkKeyvalToUpper}} and \code{\link{gdkKeyvalToLower}}.
-  
+
 When it makes sense, key values can be converted to and from
 Unicode characters with \code{\link{gdkKeyvalToUnicode}} and \code{\link{gdkUnicodeToKeyval}}.
-  
+
 One \code{\link{GdkKeymap}} object exists for each user display. \code{\link{gdkKeymapGetDefault}}
 returns the \code{\link{GdkKeymap}} for the default display; to obtain keymaps for other
 displays, use \code{\link{gdkKeymapGetForDisplay}}. A keymap
@@ -72,7 +72,7 @@ horizontal direction. Usually groups are used for two different languages.  In
 group 0, a key might have two English characters, and in group 1 it might have
 two Hebrew characters. The Hebrew characters will be printed on the key next to
 the English characters.
-  
+
 In order to use a keymap to interpret a key event, it's necessary to first
 convert the keyboard state into an effective group and level. This is done via a
 set of rules that varies widely according to type of keyboard and user
@@ -84,7 +84,7 @@ group and level. i.e. it returns "unconsumed modifiers." The keyboard group may
 differ from the effective group used for keymap lookups because some keys don't
 have multiple groups - e.g. the Enter key is always in group 0 regardless of
 keyboard state.
-  
+
 Note that \code{\link{gdkKeymapTranslateKeyboardState}} also returns the keyval, i.e. it
 goes ahead and performs the keymap lookup in addition to telling you which
 effective group/level values were used for the lookup.  \code{\link{GdkEventKey}} already

@@ -13,7 +13,7 @@
 \section{Detailed Description}{Pango supports bidirectional text (like Arabic and Hebrew) automatically.
 Some applications however, need some help to correctly handle bidirectional
 text.
-  
+
 The \code{\link{PangoDirection}} type can be used with \code{\link{pangoContextSetBaseDir}} to
 instruct Pango about direction of text, though in most cases Pango detects
 that correctly and automatically.  The rest of the facilities in this section
@@ -30,12 +30,12 @@ or \code{PANGO_DIRECTION_WEAK_RTL}, since every character is either
 neutral or has a strong direction; on the other hand
 \code{PANGO_DIRECTION_NEUTRAL} doesn't make sense to pass
 to \code{\link{pangoItemizeWithBaseDir}}.
-  
+
 The \code{PANGO_DIRECTION_TTB_LTR}, \code{PANGO_DIRECTION_TTB_RTL}
 values come from an earlier interpretation of this
 enumeration as the writing direction of a block of
 text and are no longer used; See \code{\link{PangoGravity}} for how
-vertical text is handled in Pango.  
+vertical text is handled in Pango.
 
 \describe{
 \item{\verb{ltr}}{ A strong left-to-right direction}
@@ -50,7 +50,7 @@ vertical text is handled in Pango.
 \item{\verb{PangoBidiType}}{
 The \code{\link{PangoBidiType}} type represents the bidirectional character
 type of a Unicode character as specified by the
-Unicode bidirectional algorithm (\url{http://www.unicode.org/reports/tr9/}).  
+Unicode bidirectional algorithm (\url{http://www.unicode.org/reports/tr9/}).
   Since 1.22
 
 \describe{

@@ -50,25 +50,25 @@ arguments. The \code{\link{gtkInit}} function initializes GTK+. \code{\link{gtkI
 the application if errors occur; to avoid this, use \code{gtkInitCheck()}.
 \code{gtkInitCheck()} allows you to recover from a failed GTK+
 initialization - you might start up your application in text mode instead.
-  
+
 Like all GUI toolkits, GTK+ uses an event-driven programming
 model. When the user is doing nothing, GTK+ sits in the
 \dfn{main loop} and waits for input. If the user
 performs some action - say, a mouse click - then the main loop "wakes
 up" and delivers an event to GTK+. GTK+ forwards the event to one or
 more widgets.
-  
+
 When widgets receive an event, they frequently emit one or more
 \dfn{signals}. Signals notify your program that
 "something interesting happened" by invoking functions you've
 connected to the signal with \code{\link{gSignalConnect}}. Functions connected
 to a signal are often termed \dfn{callbacks}.
-  
+
 When your callbacks are invoked, you would typically take some action
 - for example, when an Open button is clicked you might display a
 \verb{GtkFileSelectionDialog}. After a callback finishes, GTK+ will return
 to the main loop and await more user input.
-  
+
  \emph{Typical   \code{main}   function for a GTK+ application}\preformatted{int
 main (int argc, char **argv)
 {
@@ -87,7 +87,7 @@ main (int argc, char **argv)
   /* The user lost interest */
   return 0;
 }
-}  
+}
 It's OK to use the GLib main loop directly instead of \code{\link{gtkMain}},
 though it involves slightly more typing. See \verb{GMainLoop} in the GLib
 documentation.}

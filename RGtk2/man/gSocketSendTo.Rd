@@ -4,7 +4,7 @@
 \description{Tries to send \code{size} bytes from \code{buffer} to \code{address}. If \code{address} is
 \code{NULL} then the message is sent to the default receiver (set by
 \code{\link{gSocketConnect}}).}
-\usage{gSocketSendTo(object, address, buffer, size, cancellable = NULL, 
+\usage{gSocketSendTo(object, address, buffer, size, cancellable = NULL,
     .errwarn = TRUE)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GSocket}}}

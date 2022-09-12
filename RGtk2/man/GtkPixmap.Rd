@@ -21,13 +21,13 @@
 \section{Detailed Description}{The \code{\link{GtkPixmap}} widget displays a graphical image or icon.
 The icon is typically created using \code{\link{gdkPixmapColormapCreateFromXpm}}
 or \code{\link{gdkPixmapColormapCreateFromXpmD}}.
-  
+
 The pixels in a \code{\link{GtkPixmap}} cannot be manipulated by the application after
 creation, since under the X Window system the pixel data is stored on the
 X server and so is not available to the client application.
 If you want to create graphical images which can be manipulated by the
 application, look at \code{\link{GtkImage}} and \verb{GdkRGB}.
-  
+
 GtkPixmap has been deprecated since GTK+ 2.0 and should not be used
 in newly written code. Use \code{\link{GtkImage}} instead.}
 \section{Structures}{\describe{\item{\verb{GtkPixmap}}{

@@ -1,7 +1,7 @@
 \alias{gtkTextIterBackwardVisibleWordStart}
 \name{gtkTextIterBackwardVisibleWordStart}
 \title{gtkTextIterBackwardVisibleWordStart}
-\description{Moves backward to the previous visible word start. (If \code{iter} is currently 
+\description{Moves backward to the previous visible word start. (If \code{iter} is currently
 on a word start, moves backward to the next one after that.) Word breaks
 are determined by Pango and should be correct for nearly any
 language (if not, the correct fix would be to the Pango word break

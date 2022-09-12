@@ -1,7 +1,7 @@
 \alias{gtkBuilderSetTranslationDomain}
 \name{gtkBuilderSetTranslationDomain}
 \title{gtkBuilderSetTranslationDomain}
-\description{Sets the translation domain of \code{builder}. 
+\description{Sets the translation domain of \code{builder}.
 See \verb{"translation-domain"}.}
 \usage{gtkBuilderSetTranslationDomain(object, domain)}
 \arguments{

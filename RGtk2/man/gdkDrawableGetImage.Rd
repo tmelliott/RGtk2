@@ -22,18 +22,18 @@ want to think about what makes sense for your application.}
 }
 \details{\code{x}, \code{y}, \code{width}, and \code{height} define the region of \code{drawable} to
 obtain as an image.
-  
+
 You would usually copy image data to the client side if you intend
 to examine the values of individual pixels, for example to darken
 an image or add a red tint. It would be prohibitively slow to
 make a round-trip request to the windowing system for each pixel,
 so instead you get all of them at once, modify them, then copy
 them all back at once.
-  
+
 If the X server or other windowing system backend is on the local
 machine, this function may use shared memory to avoid copying
 the image data.
-  
+
 If the source drawable is a \code{\link{GdkWindow}} and partially offscreen
 or obscured, then the obscured portions of the returned image
 will contain undefined data.}

@@ -3,7 +3,7 @@
 \title{gdkPixbufSaveToBuffer}
 \description{Saves pixbuf to a new buffer in format \code{type}, which is currently "jpeg",
 "png", "tiff", "ico" or "bmp".  This is a convenience function that uses
-\code{\link{gdkPixbufSaveToCallback}} to do the real work. Note that the buffer 
+\code{\link{gdkPixbufSaveToCallback}} to do the real work. Note that the buffer
 is not and may contain embedded  nuls.
 If \code{error} is set, \code{FALSE} will be returned and \code{buffer} will be set to
 \code{NULL}. Possible errors include those in the \verb{GDK_PIXBUF_ERROR}

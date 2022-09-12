@@ -1,7 +1,7 @@
 \alias{atkRelationSetAddRelationByType}
 \name{atkRelationSetAddRelationByType}
 \title{atkRelationSetAddRelationByType}
-\description{Add a new relation of the specified type with the specified target to 
+\description{Add a new relation of the specified type with the specified target to
 the current relation set if the relation set does not contain a relation
 of that type. If it is does contain a relation of that typea the target
 is added to the relation.}

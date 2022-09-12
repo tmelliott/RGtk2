@@ -13,7 +13,7 @@ styles are drawn.}
 examined by \code{\link{cairoStroke}}, \code{\link{cairoStrokeExtents}}, and
 \code{cairoStrokeToPath()}, but does not have any effect during path
 construction.
-  
+
 The default line cap style is \code{CAIRO_LINE_CAP_BUTT}.  }
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

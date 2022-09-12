@@ -1,7 +1,7 @@
 \alias{gtkPrintSettingsGetDoubleWithDefault}
 \name{gtkPrintSettingsGetDoubleWithDefault}
 \title{gtkPrintSettingsGetDoubleWithDefault}
-\description{Returns the floating point number represented by 
+\description{Returns the floating point number represented by
 the value that is associated with \code{key}, or \code{default.val}
 if the value does not represent a floating point number.}
 \usage{gtkPrintSettingsGetDoubleWithDefault(object, key, def)}

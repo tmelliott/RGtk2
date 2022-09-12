@@ -5,7 +5,7 @@
 about the filesystem the \code{file} is on, rather than the file itself.
 For instance the amount of space available and the type of
 the filesystem.}
-\usage{gFileQueryFilesystemInfo(object, attributes, cancellable = NULL, 
+\usage{gFileQueryFilesystemInfo(object, attributes, cancellable = NULL,
     .errwarn = TRUE)}
 \arguments{
 \item{\verb{object}}{input \code{\link{GFile}}.}
@@ -22,11 +22,11 @@ namespace. The standard namespace for filesystem attributes is "fs".
 Common attributes of interest are \verb{G_FILE_ATTRIBUTE_FILESYSTEM_SIZE}
 (the total size of the filesystem in bytes), \verb{G_FILE_ATTRIBUTE_FILESYSTEM_FREE} (number of
 bytes available), and \verb{G_FILE_ATTRIBUTE_FILESYSTEM_TYPE} (type of the filesystem).
-  
+
 If \code{cancellable} is not \code{NULL}, then the operation can be cancelled by
 triggering the cancellable object from another thread. If the operation
-was cancelled, the error \code{G_IO_ERROR_CANCELLED} will be returned. 
-  
+was cancelled, the error \code{G_IO_ERROR_CANCELLED} will be returned.
+
 If the file does not exist, the G_IO_ERROR_NOT_FOUND error will be returned.
 Other errors are possible too, and depend on what kind of filesystem the file is on.}
 \value{

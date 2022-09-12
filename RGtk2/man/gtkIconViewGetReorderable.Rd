@@ -1,7 +1,7 @@
 \alias{gtkIconViewGetReorderable}
 \name{gtkIconViewGetReorderable}
 \title{gtkIconViewGetReorderable}
-\description{Retrieves whether the user can reorder the list via drag-and-drop. 
+\description{Retrieves whether the user can reorder the list via drag-and-drop.
 See \code{\link{gtkIconViewSetReorderable}}.}
 \usage{gtkIconViewGetReorderable(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkIconView}}}}

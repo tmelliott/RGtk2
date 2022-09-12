@@ -1,7 +1,7 @@
 \alias{atkSelectionRefSelection}
 \name{atkSelectionRefSelection}
 \title{atkSelectionRefSelection}
-\description{Gets a reference to the accessible object representing the specified 
+\description{Gets a reference to the accessible object representing the specified
 selected child of the object.
 Note: callers should not rely on \code{NULL} or on a zero value for
 indication of whether AtkSelectionIface is implemented, they should

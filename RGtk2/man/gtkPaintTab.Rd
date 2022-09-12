@@ -3,7 +3,7 @@
 \title{gtkPaintTab}
 \description{Draws an option menu tab (i.e. the up and down pointing arrows)
 in the given rectangle on \code{window} using the given parameters.}
-\usage{gtkPaintTab(object, window, state.type, shadow.type, area = NULL, 
+\usage{gtkPaintTab(object, window, state.type, shadow.type, area = NULL,
     widget = NULL, detail = NULL, x, y, width, height)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GtkStyle}}}

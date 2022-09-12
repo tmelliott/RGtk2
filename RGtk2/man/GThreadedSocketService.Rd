@@ -15,15 +15,15 @@
 that handles incoming connections by creating a worker thread and
 dispatching the connection to it by emitting the ::run signal in
 the new thread.
-  
+
 The signal handler may perform blocking IO and need not return
 until the connection is closed.
-  
+
 The service is implemented using a thread pool, so there is a
 limited amount of threads availible to serve incomming requests.
 The service automatically stops the \code{\link{GSocketService}} from accepting
 new connections when all threads are busy.
-  
+
 As with \code{\link{GSocketService}}, you may connect to \verb{"run"},
 or subclass and override the default handler.}
 \section{Structures}{\describe{\item{\verb{GThreadedSocketService}}{

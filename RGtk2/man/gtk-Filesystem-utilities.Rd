@@ -24,11 +24,11 @@ It is an implementation of \code{\link{GMountOperation}} that can be used with
 GIO functions for mounting volumes such as
 \code{\link{gFileMountEnclosingVolume}}, \code{\link{gFileMountMountable}},
 \code{\link{gVolumeMount}}, \code{\link{gMountUnmountWithOperation}} and others.
-  
+
 When necessary, \code{\link{GtkMountOperation}} shows dialogs to ask for
 passwords, questions or show processes blocking unmount.
   \code{\link{gtkShowUri}} is a convenient way to launch applications for URIs.
-  
+
 Another object that is worth mentioning in this context is
 \code{\link{GdkAppLaunchContext}}, which provides visual feedback when lauching
 applications.}

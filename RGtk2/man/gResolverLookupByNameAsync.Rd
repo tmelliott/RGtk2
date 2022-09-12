@@ -5,7 +5,7 @@
 associated IP address(es), and eventually calls \code{callback}, which
 must call \code{\link{gResolverLookupByNameFinish}} to get the result.
 See \code{\link{gResolverLookupByName}} for more details.}
-\usage{gResolverLookupByNameAsync(object, hostname, cancellable = NULL, 
+\usage{gResolverLookupByNameAsync(object, hostname, cancellable = NULL,
     callback, user.data = NULL)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GResolver}}}

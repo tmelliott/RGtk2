@@ -1,8 +1,8 @@
 \alias{gSimpleAsyncReportGerrorInIdle}
 \name{gSimpleAsyncReportGerrorInIdle}
 \title{gSimpleAsyncReportGerrorInIdle}
-\description{Reports an error in an idle function. Similar to 
-\code{\link{gSimpleAsyncReportErrorInIdle}}, but takes a \code{\link{GError}} rather 
+\description{Reports an error in an idle function. Similar to
+\code{\link{gSimpleAsyncReportErrorInIdle}}, but takes a \code{\link{GError}} rather
 than building a new one.}
 \usage{gSimpleAsyncReportGerrorInIdle(object, callback, user.data = NULL)}
 \arguments{

@@ -12,7 +12,7 @@ to a \code{\link{cairoShowTextGlyphs}} call.}
 still succeed.  It just will
 act like a \code{\link{cairoShowGlyphs}} operation.  Users can use this
 function to avoid computing UTF-8 text and cluster mapping if the
-target surface does not use it.  
+target surface does not use it.
   Since 1.8}
 \value{[logical] \code{TRUE} if \code{surface} supports
               \code{\link{cairoShowTextGlyphs}}, \code{FALSE} otherwise}

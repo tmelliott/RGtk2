@@ -16,14 +16,14 @@ initialization. If an object implements this interface the
 after construction. If \code{\link{gInitableInit}} is not called, or if
 it returns an error, all further operations on the object
 should fail, generally with a \code{G_IO_ERROR_NOT_INITIALIZED} error.
-  
+
 Users of objects implementing this are not intended to use
 the interface method directly, instead it will be used automatically
 in various ways. For C applications you generally just call
 \code{\link{gInitableNew}} directly, or indirectly via a \code{fooThingNew()} wrapper.
 This will call \code{\link{gInitableInit}} under the cover, returning \code{NULL} and
 setting a \code{\link{GError}} on failure.
-  
+
 For bindings in languages where the native constructor supports
 exceptions the binding could check for objects implemention \code{\link{GInitable}}
 during normal construction and automatically initialize them, throwing

@@ -29,7 +29,7 @@ of \code{\link{GtkHButtonBox}} and \code{\link{GtkVButtonBox}} widgets.
   \code{\link{gtkButtonBoxGetChildSize}} retrieves the minimum width and height
 for widgets in a given button box. \code{\link{gtkButtonBoxSetChildSize}}
 allows those properties to be changed.
-  
+
 The internal padding of buttons can be retrieved and changed per button box using
 \code{\link{gtkButtonBoxGetChildIpadding}} and \code{\link{gtkButtonBoxSetChildIpadding}}
 respectively.
@@ -37,7 +37,7 @@ respectively.
 change default number of pixels between buttons, respectively.
   \code{\link{gtkButtonBoxGetLayout}} and \code{\link{gtkButtonBoxSetLayout}} retrieve and alter the method
 used to spread the buttons in a button box across the container, respectively.
-  
+
 The main purpose of GtkButtonBox is to make sure the children have all the same size.
 Therefore it ignores the homogeneous property which it inherited from GtkBox, and always
 behaves as if homogeneous was \code{TRUE}.}

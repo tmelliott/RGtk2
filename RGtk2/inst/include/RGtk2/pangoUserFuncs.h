@@ -5,14 +5,14 @@
 
 
   gboolean
-S_PangoFontsetForeachFunc(PangoFontset* s_fontset, PangoFont* s_font, gpointer s_data); 
+S_PangoFontsetForeachFunc(PangoFontset* s_fontset, PangoFont* s_font, gpointer s_data);
 
   gboolean
-S_PangoAttrFilterFunc(PangoAttribute* s_attribute, gpointer s_data); 
+S_PangoAttrFilterFunc(PangoAttribute* s_attribute, gpointer s_data);
 
 #if PANGO_CHECK_VERSION(1, 18, 0)
   gboolean
 S_PangoCairoShapeRendererFunc(cairo_t* s_cr, PangoAttrShape* s_attr, gboolean s_do_path, gpointer s_data);
-#endif 
+#endif
 
 #endif

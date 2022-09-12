@@ -82,17 +82,17 @@
 \item{\verb{Cairo}}{
 A \code{\link{Cairo}} contains the current state of the rendering device,
 including coordinates of yet to be drawn shapes.
-  
+
 Cairo contexts, as \code{\link{Cairo}} objects are named, are central to
 cairo and all drawing with cairo is always done to a \code{\link{Cairo}}
 object.
-  
+
 Memory management of \code{\link{Cairo}} is done with
-\code{cairoReference()} and \code{cairoDestroy()}.  
+\code{cairoReference()} and \code{cairoDestroy()}.
 
 }
 \item{\verb{CairoRectangle}}{
-A data structure for holding a rectangle.  
+A data structure for holding a rectangle.
   Since 1.4
 \strong{\verb{CairoRectangle} is a \link{transparent-type}.}
 
@@ -106,7 +106,7 @@ A data structure for holding a rectangle.
 }
 \item{\verb{CairoRectangleList}}{
 A data structure for holding a dynamically allocated
-array of rectangles.  
+array of rectangles.
   Since 1.4
 \strong{\verb{CairoRectangleList} is a \link{transparent-type}.}
 
@@ -121,7 +121,7 @@ array of rectangles.
 \section{Convenient Construction}{\code{cairo} is the equivalent of \code{\link{cairoCreate}}.}
 \section{Enums and Flags}{\describe{
 \item{\verb{CairoAntialias}}{
-Specifies the type of antialiasing to do when rendering text or shapes.  
+Specifies the type of antialiasing to do when rendering text or shapes.
 
 \describe{
 \item{\verb{default}}{ Use the default antialiasing for
@@ -144,10 +144,10 @@ as long as it doesn't pass through the end point of a segment
 or have a tricky intersection such as intersecting tangent to the path.
 (Note that filling is not actually implemented in this way. This
 is just a description of the rule that is applied.)
-  
+
 The default fill rule is \code{CAIRO_FILL_RULE_WINDING}.
-  
-New entries may be added in future versions.  
+
+New entries may be added in future versions.
 
 \describe{
 \item{\verb{winding}}{ If the path crosses the ray from
@@ -164,8 +164,8 @@ filled.}
 }
 \item{\verb{CairoLineCap}}{
 Specifies how to render the endpoints of the path when stroking.
-  
-The default line cap style is \code{CAIRO_LINE_CAP_BUTT}.  
+
+The default line cap style is \code{CAIRO_LINE_CAP_BUTT}.
 
 \describe{
 \item{\verb{butt}}{ start(stop) the line exactly at the start(end) point}
@@ -176,8 +176,8 @@ The default line cap style is \code{CAIRO_LINE_CAP_BUTT}.
 }
 \item{\verb{CairoLineJoin}}{
 Specifies how to render the junction of two lines when stroking.
-  
-The default line join style is \code{CAIRO_LINE_JOIN_MITER}.  
+
+The default line join style is \code{CAIRO_LINE_JOIN_MITER}.
 
 \describe{
 \item{\verb{miter}}{ use a sharp (angled) corner, see
@@ -192,21 +192,21 @@ the line width from the joint point}
 \item{\verb{CairoOperator}}{
 \code{\link{CairoOperator}} is used to set the compositing operator for all cairo
 drawing operations.
-  
+
 The default operator is \code{CAIRO_OPERATOR_OVER}.
-  
+
 The operators marked as \dfn{unbounded} modify their
 destination even outside of the mask layer (that is, their effect is not
 bound by the mask layer).  However, their effect can still be limited by
 way of clipping.
-  
+
 To keep things simple, the operator descriptions here
 document the behavior for when both source and destination are either fully
 transparent or fully opaque.  The actual implementation works for
 translucent layers too.
 For a more detailed explanation of the effects of each operator, including
 the mathematical definitions, see
-https://cairographics.org/operators/ (\url{https://cairographics.org/operators/}).  
+https://cairographics.org/operators/ (\url{https://cairographics.org/operators/}).
 
 \describe{
 \item{\verb{clear}}{ clear destination layer (bounded)}

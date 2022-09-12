@@ -28,11 +28,11 @@
    +----GSocketClient}}
 \section{Detailed Description}{\code{\link{GSocketClient}} is a high-level utility class for connecting to a
 network host using a connection oriented socket type.
-  
+
 You create a \code{\link{GSocketClient}} object, set any options you want, then
 call a sync or async connect operation, which returns a \code{\link{GSocketConnection}}
 subclass on success.
-  
+
 The type of the \code{\link{GSocketConnection}} object returned depends on the type of
 the underlying socket that is in use. For instance, for a TCP/IP connection
 it will be a \code{\link{GTcpConnection}}.}

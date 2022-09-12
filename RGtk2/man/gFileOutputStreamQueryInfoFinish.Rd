@@ -1,7 +1,7 @@
 \alias{gFileOutputStreamQueryInfoFinish}
 \name{gFileOutputStreamQueryInfoFinish}
 \title{gFileOutputStreamQueryInfoFinish}
-\description{Finalizes the asynchronous query started 
+\description{Finalizes the asynchronous query started
 by \code{\link{gFileOutputStreamQueryInfoAsync}}.}
 \usage{gFileOutputStreamQueryInfoFinish(object, result, .errwarn = TRUE)}
 \arguments{

@@ -11,7 +11,7 @@ surface for the current group as started by the most recent call to
 can be a "nil" surface if \code{cr} is already in an error state,
 (ie. \code{\link{cairoStatus}} \code{!=} \code{CAIRO_STATUS_SUCCESS}).
 A nil surface is indicated by \code{\link{cairoSurfaceStatus}}
-\code{!=} \code{CAIRO_STATUS_SUCCESS}.  
+\code{!=} \code{CAIRO_STATUS_SUCCESS}.
   Since 1.2}
 \value{[\code{\link{CairoSurface}}]  the target surface. To
 keep a reference to it,}

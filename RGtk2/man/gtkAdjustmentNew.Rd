@@ -2,7 +2,7 @@
 \name{gtkAdjustmentNew}
 \title{gtkAdjustmentNew}
 \description{Creates a new \code{\link{GtkAdjustment}}.}
-\usage{gtkAdjustmentNew(value = NULL, lower = NULL, upper = NULL, step.incr = NULL, 
+\usage{gtkAdjustmentNew(value = NULL, lower = NULL, upper = NULL, step.incr = NULL,
     page.incr = NULL, page.size = NULL)}
 \arguments{
 \item{\verb{value}}{the initial value.}

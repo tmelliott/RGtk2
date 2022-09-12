@@ -23,13 +23,13 @@
 together so they all request the same amount of space.  This is
 typically useful when you want a column of widgets to have the same
 size, but you can't use a \code{\link{GtkTable}} widget.
-  
+
 In detail, the size requested for each widget in a \code{\link{GtkSizeGroup}} is
 the maximum of the sizes that would have been requested for each
 widget in the size group if they were not in the size group. The mode
 of the size group (see \code{\link{gtkSizeGroupSetMode}}) determines whether
 this applies to the horizontal size, the vertical size, or both sizes.
-  
+
 Note that size groups only affect the amount of space requested, not
 the size that the widgets finally receive. If you want the widgets in
 a \code{\link{GtkSizeGroup}} to actually be the same size, you need to pack them in
@@ -43,7 +43,7 @@ widgets in the size group are subsequently destroyed, then they will
 be removed from the size group and drop their references on the size
 group; when all widgets have been removed, the size group will be
 freed.
-  
+
 Widgets can be part of multiple size groups; GTK+ will compute the
 horizontal size of a widget from the horizontal requisition of all
 widgets that can be reached from the widget by a chain of size groups
@@ -57,7 +57,7 @@ somewhere in the UI definition. The widgets that belong to the
 size group are specified by a <widgets> element that may
 contain multiple <widget> elements, one for each member
 of the size group. The name attribute gives the id of the widget.
-  
+
  \emph{A UI definition fragment with GtkSizeGroup}\preformatted{<object class="GtkSizeGroup">
   <property name="mode">GTK_SIZE_GROUP_HORIZONTAL</property>
   <widgets>

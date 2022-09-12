@@ -14,15 +14,15 @@ name will also appear in the dialog's file name entry.}
 of \code{chooser} will be changed to the folder containing \code{uri}. This is equivalent
 to a sequence of \code{\link{gtkFileChooserUnselectAll}} followed by
 \code{\link{gtkFileChooserSelectUri}}.
-  
-Note that the URI must exist, or nothing will be done except for the 
+
+Note that the URI must exist, or nothing will be done except for the
 directory change.
 If you are implementing a \emph{File/Save As...} dialog,
-you should use this function if you already have a file name to which the 
-user may save; for example, when the user opens an existing file and then 
-does \emph{File/Save As...} on it.  If you don't have 
-a file name already -- for example, if the user just created a new 
-file and is saving it for the first time, do not call this function.  
+you should use this function if you already have a file name to which the
+user may save; for example, when the user opens an existing file and then
+does \emph{File/Save As...} on it.  If you don't have
+a file name already -- for example, if the user just created a new
+file and is saving it for the first time, do not call this function.
 Instead, use something similar to this:
 \preformatted{if (document_is_new)
   {
@@ -32,7 +32,7 @@ Instead, use something similar to this:
   }
 else
   {
-    /* the user edited an existing document */ 
+    /* the user edited an existing document */
     gtk_file_chooser_set_uri (chooser, existing_uri);
   }
 }

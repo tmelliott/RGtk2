@@ -19,7 +19,7 @@ call this function immediately afterwards to make sure that you
 know what you are deleting. You should also account for the fact
 that even if the signal was handled, the input context might not
 have deleted all the characters that were requested to be deleted.
-  
+
 This function is used by an input method that wants to make
 subsitutions in the existing text in response to new input. It is
 not useful for applications.}

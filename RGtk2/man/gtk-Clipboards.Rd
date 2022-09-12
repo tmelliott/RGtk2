@@ -53,7 +53,7 @@
     corresponds to the "CLIPBOARD" atom; another commonly used clipboard
     is the "PRIMARY" clipboard, which, in X, traditionally contains
     the currently selected text.
-    
+
     To support having a number of different formats on the clipboard
     at the same time, the clipboard mechanism allows providing
     callbacks instead of the actual data.  When you set the contents
@@ -77,7 +77,7 @@
     entry widget can call \code{\link{gtkClipboardSetWithOwner}} to update
     the timestamp for clipboard ownership, without having to worry
     about \code{clear.func} being called.
-    
+
     Requesting the data from the clipboard is essentially
     asynchronous. If the contents of the clipboard are provided within
     the same process, then a direct function call will be made to
@@ -92,7 +92,7 @@
     the contents. This can simplify the code flow, but you still have
     to be aware that other callbacks in your program can be called
     while this recursive mainloop is running.
-    
+
     Along with the functions to get the clipboard contents as an
     arbitrary data chunk, there are also functions to retrieve
     it as text, \code{\link{gtkClipboardRequestText}} and

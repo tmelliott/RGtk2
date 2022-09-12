@@ -1,7 +1,7 @@
 \alias{gFileReadFinish}
 \name{gFileReadFinish}
 \title{gFileReadFinish}
-\description{Finishes an asynchronous file read operation started with 
+\description{Finishes an asynchronous file read operation started with
 \code{\link{gFileReadAsync}}.}
 \usage{gFileReadFinish(object, res, .errwarn = TRUE)}
 \arguments{

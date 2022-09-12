@@ -1,8 +1,8 @@
 \alias{gFileInfoGetAttributeInt32}
 \name{gFileInfoGetAttributeInt32}
 \title{gFileInfoGetAttributeInt32}
-\description{Gets a signed 32-bit integer contained within the attribute. If the 
-attribute does not contain a signed 32-bit integer, or is invalid, 
+\description{Gets a signed 32-bit integer contained within the attribute. If the
+attribute does not contain a signed 32-bit integer, or is invalid,
 0 will be returned.}
 \usage{gFileInfoGetAttributeInt32(object, attribute)}
 \arguments{

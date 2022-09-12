@@ -12,10 +12,10 @@
 \details{This is identical to \code{\link{gInputStreamRead}}, from a behaviour standpoint,
 but the bytes that are skipped are not returned to the user. Some
 streams have an implementation that is more efficient than reading the data.
-  
+
 This function is optional for inherited classes, as the default implementation
 emulates it using read.
-  
+
 If \code{cancellable} is not \code{NULL}, then the operation can be cancelled by
 triggering the cancellable object from another thread. If the operation
 was cancelled, the error \code{G_IO_ERROR_CANCELLED} will be returned. If an

@@ -1,7 +1,7 @@
 \alias{gtkWindowSetIconFromFile}
 \name{gtkWindowSetIconFromFile}
 \title{gtkWindowSetIconFromFile}
-\description{Sets the icon for \code{window}.  
+\description{Sets the icon for \code{window}.
 Warns on failure if \code{err} is \code{NULL}.}
 \usage{gtkWindowSetIconFromFile(object, filename, .errwarn = TRUE)}
 \arguments{

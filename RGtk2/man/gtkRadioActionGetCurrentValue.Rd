@@ -1,7 +1,7 @@
 \alias{gtkRadioActionGetCurrentValue}
 \name{gtkRadioActionGetCurrentValue}
 \title{gtkRadioActionGetCurrentValue}
-\description{Obtains the value property of the currently active member of 
+\description{Obtains the value property of the currently active member of
 the group to which \code{action} belongs.}
 \usage{gtkRadioActionGetCurrentValue(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkRadioAction}}}}

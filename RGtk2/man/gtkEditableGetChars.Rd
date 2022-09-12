@@ -1,9 +1,9 @@
 \alias{gtkEditableGetChars}
 \name{gtkEditableGetChars}
 \title{gtkEditableGetChars}
-\description{Retrieves a sequence of characters. The characters that are retrieved 
-are those characters at positions from \code{start.pos} up to, but not 
-including \code{end.pos}. If \code{end.pos} is negative, then the the characters 
+\description{Retrieves a sequence of characters. The characters that are retrieved
+are those characters at positions from \code{start.pos} up to, but not
+including \code{end.pos}. If \code{end.pos} is negative, then the the characters
 retrieved are those characters from \code{start.pos} to the end of the text.}
 \usage{gtkEditableGetChars(object, start.pos, end.pos)}
 \arguments{

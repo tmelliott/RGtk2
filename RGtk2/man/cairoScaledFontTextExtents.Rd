@@ -18,7 +18,7 @@ size of the rectangle (extents.width and extents.height). They do
 contribute indirectly by changing the position of non-whitespace
 characters. In particular, trailing whitespace characters are
 likely to not affect the size of the rectangle, though they will
-affect the x_advance and y_advance values.  
+affect the x_advance and y_advance values.
   Since 1.2}
 \value{
 A list containing the following elements:

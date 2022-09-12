@@ -12,7 +12,7 @@ it is above \code{sibling} (if \code{above} is \code{TRUE}) or below \code{sibli
 }
 \details{If \code{sibling} is \code{NULL}, then this either raises (if \code{above} is \code{TRUE}) or
 lowers the window.
-  
+
 If \code{window} is a toplevel, the window manager may choose to deny the
 request to move the window in the Z-order, \code{\link{gdkWindowRestack}} only
 requests the restack, does not guarantee it.

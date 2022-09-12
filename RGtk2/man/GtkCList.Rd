@@ -96,7 +96,7 @@
 \section{Detailed Description}{The \code{\link{GtkCList}} widget is a very useful multi-columned scrolling list.
 It can display data in nicely aligned vertical columns, with titles
 at the top of the list.
-  
+
 GtkCList has been deprecated since GTK+ 2.0 and should not be used
 in newly written code. Use \code{\link{GtkTreeView}} instead.}
 \section{Structures}{\describe{

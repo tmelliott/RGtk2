@@ -28,7 +28,7 @@
 \code{\link{gdkSettingGet}(name)}\cr
 }
 \section{Detailed Description}{This section describes functions dealing with events from the window system.
-  
+
 In GTK+ applications the events are handled automatically in
 \code{\link{gtkMainDoEvent}} and passed on to the appropriate widgets, so these
 functions are rarely needed. Though some of the fields in the
@@ -36,7 +36,7 @@ Event Structures are useful.}
 \section{Enums and Flags}{\describe{
 \item{\verb{GdkEventType}}{
 Specifies the type of the event.
-  
+
 Do not confuse these events with the signals that GTK+ widgets emit.
 Although many of these events result in corresponding signals being emitted,
 the events are often transformed or filtered along the way.
@@ -133,7 +133,7 @@ needs to asks for more, by calling \code{\link{gdkEventRequestMotions}}.
 \item{\verb{visibility-notify-mask}}{receive visibility change events}
 \item{\verb{proximity-in-mask}}{receive proximity in events}
 \item{\verb{proximity-out-mask}}{receive proximity out events}
-\item{\verb{substructure-mask}}{receive events about window configuration changes of 
+\item{\verb{substructure-mask}}{receive events about window configuration changes of
   child windows}
 \item{\verb{scroll-mask}}{receive scroll events}
 \item{\verb{all-events-mask}}{the combination of all the above event masks.}

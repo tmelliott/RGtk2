@@ -1,7 +1,7 @@
 \alias{gtkCalendarSetDisplayOptions}
 \name{gtkCalendarSetDisplayOptions}
 \title{gtkCalendarSetDisplayOptions}
-\description{Sets display options (whether to display the heading and the month  
+\description{Sets display options (whether to display the heading and the month
 headings).}
 \usage{gtkCalendarSetDisplayOptions(object, flags)}
 \arguments{

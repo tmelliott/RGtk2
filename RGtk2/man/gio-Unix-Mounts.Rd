@@ -5,9 +5,9 @@
 \section{Hierarchy}{\preformatted{GObject
    +----GUnixMountMonitor}}
 \section{Detailed Description}{Routines for managing mounted UNIX mount points and paths.
-  
-Note that \file{<gio/gunixmounts.h>} belongs to the 
-UNIX-specific GIO interfaces, thus you have to use the 
+
+Note that \file{<gio/gunixmounts.h>} belongs to the
+UNIX-specific GIO interfaces, thus you have to use the
 \file{gio-unix-2.0.pc} pkg-config file when using it.}
 \section{Signals}{\describe{
 \item{\code{mountpoints-changed(monitor, user.data)}}{

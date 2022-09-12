@@ -67,7 +67,7 @@ coordinates and device coordinates. The transformation
 is given by
   \preformatted{x_device = x_user * matrix->xx + y_user * matrix->xy + matrix->x0;
 y_device = x_user * matrix->yx + y_user * matrix->yy + matrix->y0;
-}  
+}
   Since 1.6
 
 \describe{

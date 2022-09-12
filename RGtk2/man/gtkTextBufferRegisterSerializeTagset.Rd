@@ -16,7 +16,7 @@ and embedded pixbufs.}
 for registering is "application/x-gtk-text-buffer-rich-text", or
 "application/x-gtk-text-buffer-rich-text;format=\code{tagset.name}" if a
 \code{tagset.name} was passed.
-  
+
 The \code{tagset.name} can be used to restrict the transfer of rich text
 to buffers with compatible sets of tags, in order to avoid unknown
 tags from being pasted. It is probably the common case to pass an

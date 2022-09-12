@@ -2,9 +2,9 @@
 \name{gFileQueryInfo}
 \title{gFileQueryInfo}
 \description{Gets the requested information about specified \code{file}. The result
-is a \code{\link{GFileInfo}} object that contains key-value attributes (such as 
+is a \code{\link{GFileInfo}} object that contains key-value attributes (such as
 the type or size of the file).}
-\usage{gFileQueryInfo(object, attributes, flags = "G_FILE_QUERY_INFO_NONE", 
+\usage{gFileQueryInfo(object, attributes, flags = "G_FILE_QUERY_INFO_NONE",
     cancellable = NULL, .errwarn = TRUE)}
 \arguments{
 \item{\verb{object}}{input \code{\link{GFile}}.}
@@ -20,18 +20,18 @@ be a comma-separated list of attribute or attribute wildcards. The wildcard "*"
 means all attributes, and a wildcard like "standard::*" means all attributes in the standard
 namespace. An example attribute query be "standard::*,owner::user".
 The standard attributes are available as defines, like \verb{G_FILE_ATTRIBUTE_STANDARD_NAME}.
-  
+
 If \code{cancellable} is not \code{NULL}, then the operation can be cancelled by
 triggering the cancellable object from another thread. If the operation
-was cancelled, the error \code{G_IO_ERROR_CANCELLED} will be returned. 
-  
+was cancelled, the error \code{G_IO_ERROR_CANCELLED} will be returned.
+
 For symlinks, normally the information about the target of the
 symlink is returned, rather than information about the symlink itself.
 However if you pass \verb{G_FILE_QUERY_INFO_NOFOLLOW_SYMLINKS} in \code{flags} the
 information about the symlink itself will be returned. Also, for symlinks
 that point to non-existing files the information about the symlink itself
 will be returned.
-  
+
 If the file does not exist, the G_IO_ERROR_NOT_FOUND error will be returned.
 Other errors are possible too, and depend on what kind of filesystem the file is on.}
 \value{

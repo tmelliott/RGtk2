@@ -1,7 +1,7 @@
 \alias{gtkProgressBarGetEllipsize}
 \name{gtkProgressBarGetEllipsize}
 \title{gtkProgressBarGetEllipsize}
-\description{Returns the ellipsizing position of the progressbar. 
+\description{Returns the ellipsizing position of the progressbar.
 See \code{\link{gtkProgressBarSetEllipsize}}.}
 \usage{gtkProgressBarGetEllipsize(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkProgressBar}}}}

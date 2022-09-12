@@ -4,7 +4,7 @@
 \description{Returns a keybinding associated with this action, if one exists.
 The returned string is in the format "<a>;<b>;<c>"
 (i.e. semicolon-delimited), where <a> is the keybinding which
-activates the object if it is presently enabled onscreen, 
+activates the object if it is presently enabled onscreen,
 <b> corresponds to the keybinding or sequence of keys
 which invokes the action even if the relevant element is not
 currently posted on screen (for instance, for a menu item it

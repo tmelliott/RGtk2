@@ -34,7 +34,7 @@
 the accepts a single child widget. \code{\link{GtkScrolledWindow}} adds scrollbars
 to the child widget and optionally draws a beveled frame around the
 child widget.
-  
+
 The scrolled window can work in two ways. Some widgets have native
 scrolling support; these widgets have "slots" for \code{\link{GtkAdjustment}}
 objects.
@@ -48,19 +48,19 @@ implementation, but it wasn't worth breaking the
 API.)
 Widgets with native scroll support include \code{\link{GtkTreeView}}, \code{\link{GtkTextView}},
 and \code{\link{GtkLayout}}.
-  
+
 For widgets that lack native scrolling support, the \code{\link{GtkViewport}}
 widget acts as an adaptor class, implementing scrollability for child
 widgets that lack their own scrolling capabilities. Use \code{\link{GtkViewport}}
 to scroll child widgets such as \code{\link{GtkTable}}, \code{\link{GtkBox}}, and so on.
-  
+
 If a widget has native scrolling abilities, it can be added to the
 \code{\link{GtkScrolledWindow}} with \code{\link{gtkContainerAdd}}. If a widget does not, you
 must first add the widget to a \code{\link{GtkViewport}}, then add the \code{\link{GtkViewport}}
 to the scrolled window. The convenience function
 \code{\link{gtkScrolledWindowAddWithViewport}} does exactly this, so you can
 ignore the presence of the viewport.
-  
+
 The position of the scrollbars is controlled by the scroll
 adjustments. See \code{\link{GtkAdjustment}} for the fields in an adjustment - for
 \code{\link{GtkScrollbar}}, used by \code{\link{GtkScrolledWindow}}, the "value" field
@@ -70,7 +70,7 @@ represents the size of the visible scrollable area. The
 "step_increment" and "page_increment" fields are used when the user
 asks to step down (using the small stepper arrows) or page down (using
 for example the PageDown key).
-  
+
 If a \code{\link{GtkScrolledWindow}} doesn't behave quite as you would like, or
 doesn't have exactly the right layout, it's very possible to set up
 your own scrolling with \code{\link{GtkScrollbar}} and for example a \code{\link{GtkTable}}.}

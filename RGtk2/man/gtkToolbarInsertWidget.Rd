@@ -5,7 +5,7 @@
 Inserts a widget in the toolbar at the given position.
 \strong{WARNING: \code{gtk_toolbar_insert_widget} has been deprecated since version 2.4 and should not be used in newly-written code. Use \code{\link{gtkToolbarInsert}} instead.}
 }
-\usage{gtkToolbarInsertWidget(object, widget, tooltip.text = NULL, tooltip.private.text = NULL, 
+\usage{gtkToolbarInsertWidget(object, widget, tooltip.text = NULL, tooltip.private.text = NULL,
     position)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GtkToolbar}}.}

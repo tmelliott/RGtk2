@@ -10,9 +10,9 @@
 the format understood by \code{\link{gtkAcceleratorParse}}, or "" for no accelerator, or
 \code{NULL} to use the stock accelerator. \emph{[  \acronym{allow-none}  ]}}
 }
-\details{If \code{accelerator} is \code{NULL}, attempts to use the accelerator associated 
-with the stock_id of the action. 
-  
+\details{If \code{accelerator} is \code{NULL}, attempts to use the accelerator associated
+with the stock_id of the action.
+
 Accel paths are set to
 \code{<Actions>/  \\var{group-name}  /  \\var{action-name}}.
   Since 2.4}

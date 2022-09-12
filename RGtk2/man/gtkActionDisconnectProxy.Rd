@@ -2,7 +2,7 @@
 \name{gtkActionDisconnectProxy}
 \title{gtkActionDisconnectProxy}
 \description{
-Disconnects a proxy widget from an action.  
+Disconnects a proxy widget from an action.
 Does \emph{not} destroy the widget, however.
 \strong{WARNING: \code{gtk_action_disconnect_proxy} has been deprecated since version 2.16 and should not be used in newly-written code. Use \code{\link{gtkActivatableSetRelatedAction}} instead.}
 }

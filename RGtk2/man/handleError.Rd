@@ -19,7 +19,7 @@ handleError(x, .errwarn)
   }
   \item{.errwarn}{
     \emph{DEPRECATED}. Whether to emit a warning if there is an error
-    and \code{getOption("RGtk2::newErrorHandling")} is 
+    and \code{getOption("RGtk2::newErrorHandling")} is
     \code{FALSE} (\code{TRUE} is now the default).
   }
 }

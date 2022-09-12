@@ -2,7 +2,7 @@
 \name{gOutputStreamSplice}
 \title{gOutputStreamSplice}
 \description{Splices an input stream into an output stream.}
-\usage{gOutputStreamSplice(object, source, flags = "G_OUTPUT_STREAM_SPLICE_NONE", 
+\usage{gOutputStreamSplice(object, source, flags = "G_OUTPUT_STREAM_SPLICE_NONE",
     cancellable = NULL, .errwarn = TRUE)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GOutputStream}}.}

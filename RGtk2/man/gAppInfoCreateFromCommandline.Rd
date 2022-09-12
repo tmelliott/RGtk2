@@ -2,7 +2,7 @@
 \name{gAppInfoCreateFromCommandline}
 \title{gAppInfoCreateFromCommandline}
 \description{Creates a new \code{\link{GAppInfo}} from the given information.}
-\usage{gAppInfoCreateFromCommandline(commandline, application.name = NULL, 
+\usage{gAppInfoCreateFromCommandline(commandline, application.name = NULL,
     flags = "G_APP_INFO_CREATE_NONE", .errwarn = TRUE)}
 \arguments{
 \item{\verb{commandline}}{the commandline to use}

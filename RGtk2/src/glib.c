@@ -15,14 +15,14 @@ USER_OBJECT_
 asRGTimeVal(const GTimeVal *timeval)
 {
   USER_OBJECT_ s_timeval;
-  
+
   PROTECT(s_timeval = NEW_LIST(2));
-  
+
   SET_VECTOR_ELT(s_timeval, 0, asRNumeric(timeval->tv_sec));
   SET_VECTOR_ELT(s_timeval, 1, asRNumeric(timeval->tv_usec));
-  
+
   UNPROTECT(1);
-  
+
   return s_timeval;
 }
 
@@ -67,7 +67,7 @@ asRGListWithRef(GList *glist, const gchar* type)
 		g_object_ref(cur->data);
 		cur = g_list_next(cur);
 	}
-		
+
 	return(asRGListWithFinalizer(glist, type, g_object_unref));
 }
 USER_OBJECT_
@@ -134,11 +134,11 @@ asRGSListWithRef(GSList *gslist, const gchar* type)
 		g_object_ref(cur->data);
 		cur = g_slist_next(cur);
 	}
-		
+
 	return(asRGSListWithFinalizer(gslist, type, g_object_unref));
 }
 USER_OBJECT_
-asRGSListWithFinalizer(GSList *gslist, const gchar* type, RPointerFinalizer finalizer) { 
+asRGSListWithFinalizer(GSList *gslist, const gchar* type, RPointerFinalizer finalizer) {
     USER_OBJECT_ list;
     GSList * cur = gslist;
     int l = g_slist_length(gslist), i;
@@ -184,7 +184,7 @@ GSListFreeStrings(GSList *gslist)
 		g_free(cur->data);
 		cur = g_slist_next(cur);
 	}
-	
+
 }
 
 USER_OBJECT_
@@ -225,14 +225,14 @@ GError *
 asCGError(USER_OBJECT_ s_error)
 {
   GError *error;
-  
+
   if (s_error == NULL_USER_OBJECT)
     return NULL;
-  
+
   error = g_error_new(asCNumeric(VECTOR_ELT(s_error, 0)),
                       asCInteger(VECTOR_ELT(s_error, 1)), "%s",
                       asCString(VECTOR_ELT(s_error, 2)));
-  
+
   return error;
 }
 
@@ -243,7 +243,7 @@ asRGError(GError *error)
     USER_OBJECT_ names;
     static gchar * classes[] = { "GError", "simpleError", "error", "condition",
                                  NULL };
-    
+
     if (!error)
         return(NULL_USER_OBJECT);
 
@@ -262,7 +262,7 @@ asRGError(GError *error)
     SET_NAMES(s_error, names);
 
     SET_CLASS(s_error, asRStringArray(classes));
-    
+
     UNPROTECT(2);
 
     return(s_error);
@@ -408,4 +408,3 @@ S_g_file_error_quark()
 
 	return(_result);
 }
-

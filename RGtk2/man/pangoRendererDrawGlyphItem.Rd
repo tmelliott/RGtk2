@@ -16,11 +16,11 @@ output format supports it (PDF for example).}
 }
 \details{Note that \code{text} is the start of the text for layout, which is then
 indexed by \code{glyph_item->item->offset}.
-  
+
 If \code{text} is \code{NULL}, this simply calls \code{\link{pangoRendererDrawGlyphs}}.
-  
+
 The default implementation of this method simply falls back to
-\code{\link{pangoRendererDrawGlyphs}}.  
+\code{\link{pangoRendererDrawGlyphs}}.
   Since 1.22}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

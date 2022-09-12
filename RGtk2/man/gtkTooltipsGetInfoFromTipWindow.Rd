@@ -2,8 +2,8 @@
 \name{gtkTooltipsGetInfoFromTipWindow}
 \title{gtkTooltipsGetInfoFromTipWindow}
 \description{
-Determines the tooltips and the widget they belong to from the window in 
-which they are displayed. 
+Determines the tooltips and the widget they belong to from the window in
+which they are displayed.
 \strong{WARNING: \code{gtk_tooltips_get_info_from_tip_window} has been deprecated since version 2.12 and should not be used in newly-written code. }
 }
 \usage{gtkTooltipsGetInfoFromTipWindow(object)}

@@ -19,9 +19,9 @@ and the other-half strikethrough, then the cluster will end
 up with both underline and strikethrough attributes. In these
 cases, it may happen that item->extra_attrs for some of the
 result items can have multiple attributes of the same type.
-  
+
 This function takes ownership of \code{glyph.item}; it will be reused
-as one of the elements in the list.  
+as one of the elements in the list.
   Since 1.2}
 \value{[list]  a list of glyph items resulting from splitting
   \code{glyph.item}.}

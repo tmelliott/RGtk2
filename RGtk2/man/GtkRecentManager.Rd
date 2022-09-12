@@ -58,7 +58,7 @@ registered it, the number of time each application has registered
 the same file, the mime type of the file and whether the file
 should be displayed only by the applications that have
 registered it.
-  
+
 The \code{\link{GtkRecentManager}} acts like a database of all the recently
 used files.  You can create new \code{\link{GtkRecentManager}} objects, but
 it is more efficient to use the standard recent manager for
@@ -76,7 +76,7 @@ lookup <- manager$lookupItem(file_uri)
 if (lookup$error)
   warning("Could not find the file:", lookup$error$message)
 else use_info_object(lookup$retval)
-}  
+}
 Recently used files are supported since GTK+ 2.10.}
 \section{Structures}{\describe{
 \item{\verb{GtkRecentManager}}{

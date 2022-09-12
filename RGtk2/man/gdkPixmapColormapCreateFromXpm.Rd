@@ -2,7 +2,7 @@
 \name{gdkPixmapColormapCreateFromXpm}
 \title{gdkPixmapColormapCreateFromXpm}
 \description{Create a pixmap from a XPM file using a particular colormap.}
-\usage{gdkPixmapColormapCreateFromXpm(drawable, colormap, transparent.color, 
+\usage{gdkPixmapColormapCreateFromXpm(drawable, colormap, transparent.color,
     filename)}
 \arguments{
 \item{\verb{drawable}}{a \code{\link{GdkDrawable}}, used to determine default values

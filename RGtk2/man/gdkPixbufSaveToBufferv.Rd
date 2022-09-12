@@ -2,9 +2,9 @@
 \name{gdkPixbufSaveToBufferv}
 \title{gdkPixbufSaveToBufferv}
 \description{Saves pixbuf to a new buffer in format \code{type}, which is currently "jpeg",
-"tiff", "png", "ico" or "bmp".  See \code{\link{gdkPixbufSaveToBuffer}} 
+"tiff", "png", "ico" or "bmp".  See \code{\link{gdkPixbufSaveToBuffer}}
 for more details.}
-\usage{gdkPixbufSaveToBufferv(object, type, option.keys, option.values, 
+\usage{gdkPixbufSaveToBufferv(object, type, option.keys, option.values,
     .errwarn = TRUE)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GdkPixbuf}}.}

@@ -2,7 +2,7 @@
 \name{gtkHSVToRgb}
 \title{gtkHSVToRgb}
 \description{Converts a color from HSV space to RGB.
-Input values must be in the [0.0, 1.0] range; 
+Input values must be in the [0.0, 1.0] range;
 output values will be in the same range.}
 \usage{gtkHSVToRgb(h, s, r, g, b)}
 \arguments{

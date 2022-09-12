@@ -18,7 +18,7 @@
 \section{Detailed Description}{A GtkRecentAction represents a list of recently used files, which
 can be shown by widgets such as \code{\link{GtkRecentChooserDialog}} or
 \code{\link{GtkRecentChooserMenu}}.
-  
+
 To construct a submenu showing recently used files, use a GtkRecentAction
 as the action for a <menuitem>. To construct a menu toolbutton showing
 the recently used files in the popup menu, use a GtkRecentAction as the

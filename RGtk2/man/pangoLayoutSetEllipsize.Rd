@@ -15,7 +15,7 @@ fit within the width and height of layout set with
 force it to be layed out in multiple paragraphs, then whether
 each paragraph is ellipsized separately or the entire layout
 is ellipsized as a whole depends on the set height of the layout.
-See \code{\link{pangoLayoutSetHeight}} for details.  
+See \code{\link{pangoLayoutSetHeight}} for details.
   Since 1.6}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

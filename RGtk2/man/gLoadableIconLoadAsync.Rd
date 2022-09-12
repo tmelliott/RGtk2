@@ -1,10 +1,10 @@
 \alias{gLoadableIconLoadAsync}
 \name{gLoadableIconLoadAsync}
 \title{gLoadableIconLoadAsync}
-\description{Loads an icon asynchronously. To finish this function, see 
-\code{\link{gLoadableIconLoadFinish}}. For the synchronous, blocking 
+\description{Loads an icon asynchronously. To finish this function, see
+\code{\link{gLoadableIconLoadFinish}}. For the synchronous, blocking
 version of this function, see \code{\link{gLoadableIconLoad}}.}
-\usage{gLoadableIconLoadAsync(object, size, cancellable = NULL, callback, 
+\usage{gLoadableIconLoadAsync(object, size, cancellable = NULL, callback,
     user.data = NULL)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GLoadableIcon}}.}

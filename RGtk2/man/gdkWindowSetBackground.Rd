@@ -12,7 +12,7 @@ implementing a custom widget.)}
 }
 \details{The \code{color} must be allocated; \code{\link{gdkRgbFindColor}} is the best way
 to allocate a color.
-  
+
 See also \code{\link{gdkWindowSetBackPixmap}}.}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

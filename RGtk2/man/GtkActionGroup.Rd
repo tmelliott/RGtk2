@@ -35,7 +35,7 @@
  \code{\link{GtkBuildable}}.}
 \section{Detailed Description}{Actions are organised into groups.  An action group is essentially a
 map from names to \code{\link{GtkAction}} objects.
-  
+
 All actions that would make sense to use in a particular context
 should be in a single group.  Multiple action groups may be used for a
 particular user interface.  In fact, it is expected that most nontrivial
@@ -44,7 +44,7 @@ that can edit multiple documents, one group holding global actions
 (e.g. quit, about, new), and one group per document holding actions that
 act on that document (eg. save, cut/copy/paste, etc).  Each window's menus
 would be constructed from a combination of two action groups.
-  
+
 Accelerators are handled by the GTK+ accelerator map. All actions are assigned an
 accelerator path (which normally has the form
 \code{<Actions>/  \\var{group-name}  /  \\var{action-name}})
@@ -53,16 +53,16 @@ toolitems take on this accelerator path. The GTK+ accelerator map code makes
 sure that the correct shortcut is displayed next to the menu item.}
 \section{GtkActionGroup as GtkBuildable}{The GtkActionGroup implementation of the GtkBuildable interface accepts
 GtkAction objects as <child> elements in UI definitions.
-  
+
 Note that it is probably more common to define actions and action groups
 in the code, since they are directly related to what the code can do.
-  
+
 The GtkActionGroup implementation of the GtkBuildable interface supports a
 custom <accelerator> element, which has attributes named key and
 modifiers and allows to specify accelerators. This is similar to the
 <accelerator> element of GtkWidget, the main difference is that
 it doesn't allow you to specify a signal.
-  
+
  \emph{A   \code{GtkDialog}   UI definition fragment.}\preformatted{<object class="GtkActionGroup" id="actiongroup">
   <child>
       <object class="GtkAction" id="About">
@@ -146,7 +146,7 @@ translation, see \code{\link{gtkActionGroupSetTranslationDomain}}.}
 The ::connect-proxy signal is emitted after connecting a proxy to
 an action in the group. Note that the proxy may have been connected
 to a different action before.
-  
+
 This is intended for simple customizations for which a custom action
 class would be too clumsy, e.g. showing tooltips for menuitems in the
 statusbar.
@@ -184,7 +184,7 @@ convenient to use.
 \item{\code{post-activate(action.group, action, user.data)}}{
 The ::post-activate signal is emitted just after the \code{action} in the
 \code{action.group} is activated
-  
+
 This is intended for \code{\link{GtkUIManager}} to proxy the signal and provide global
 notification just after any action is activated.
   Since 2.4
@@ -200,7 +200,7 @@ notification just after any action is activated.
 \item{\code{pre-activate(action.group, action, user.data)}}{
 The ::pre-activate signal is emitted just before the \code{action} in the
 \code{action.group} is activated
-  
+
 This is intended for \code{\link{GtkUIManager}} to proxy the signal and provide global
 notification just before any action is activated.
   Since 2.4

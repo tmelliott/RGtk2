@@ -80,27 +80,27 @@ GObject
    +----GFileInfo
 }}
 \section{Detailed Description}{Functionality for manipulating basic metadata for files. \code{\link{GFileInfo}}
-implements methods for getting information that all files should 
-contain, and allows for manipulation of extended attributes. 
-  
+implements methods for getting information that all files should
+contain, and allows for manipulation of extended attributes.
+
 See GFileAttribute for more
 information on how GIO handles file attributes.
-  
-To obtain a \code{\link{GFileInfo}} for a \code{\link{GFile}}, use \code{\link{gFileQueryInfo}} (or its 
-async variant). To obtain a \code{\link{GFileInfo}} for a file input or output 
-stream, use \code{\link{gFileInputStreamQueryInfo}} or 
+
+To obtain a \code{\link{GFileInfo}} for a \code{\link{GFile}}, use \code{\link{gFileQueryInfo}} (or its
+async variant). To obtain a \code{\link{GFileInfo}} for a file input or output
+stream, use \code{\link{gFileInputStreamQueryInfo}} or
 \code{\link{gFileOutputStreamQueryInfo}} (or their async variants).
-  
-To change the actual attributes of a file, you should then set the 
-attribute in the \code{\link{GFileInfo}} and call \code{\link{gFileSetAttributesFromInfo}} 
+
+To change the actual attributes of a file, you should then set the
+attribute in the \code{\link{GFileInfo}} and call \code{\link{gFileSetAttributesFromInfo}}
 or \code{\link{gFileSetAttributesAsync}} on a GFile.
-  
-However, not all attributes can be changed in the file. For instance, 
-the actual size of a file cannot be changed via \code{\link{gFileInfoSetSize}}. 
-You may call \code{\link{gFileQuerySettableAttributes}} and 
-\code{\link{gFileQueryWritableNamespaces}} to discover the settable attributes 
+
+However, not all attributes can be changed in the file. For instance,
+the actual size of a file cannot be changed via \code{\link{gFileInfoSetSize}}.
+You may call \code{\link{gFileQuerySettableAttributes}} and
+\code{\link{gFileQueryWritableNamespaces}} to discover the settable attributes
 of a particular file at runtime.
-  \code{\link{GFileAttributeMatcher}} allows for searching through a \code{\link{GFileInfo}} for 
+  \code{\link{GFileAttributeMatcher}} allows for searching through a \code{\link{GFileInfo}} for
 attributes.}
 \section{Structures}{\describe{
 \item{\verb{GFileAttributeMatcher}}{

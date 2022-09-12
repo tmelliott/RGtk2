@@ -3,7 +3,7 @@
 \title{gtkDragSourceAddImageTargets}
 \description{Add the writable image targets supported by \verb{GtkSelection} to
 the target list of the drag source. The targets
-are added with \code{info} = 0. If you need another value, 
+are added with \code{info} = 0. If you need another value,
 use \code{\link{gtkTargetListAddImageTargets}} and
 \code{\link{gtkDragSourceSetTargetList}}.}
 \usage{gtkDragSourceAddImageTargets(object)}

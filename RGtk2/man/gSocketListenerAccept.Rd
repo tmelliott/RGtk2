@@ -13,7 +13,7 @@ accepted.}
 \details{If \code{source.object} is not \code{NULL} it will be filled out with the source
 object specified when the corresponding socket or address was added
 to the listener.
-  
+
 If \code{cancellable} is not \code{NULL}, then the operation can be cancelled by
 triggering the cancellable object from another thread. If the operation
 was cancelled, the error \code{G_IO_ERROR_CANCELLED} will be returned.

@@ -10,7 +10,7 @@ Mod3,...) and set the corresponding bits in \code{state}.}
 \details{GDK already does this before delivering key events, but for
 compatibility reasons, it only sets the first virtual modifier
 it finds, whereas this function sets all matching virtual modifiers.
-  
+
 This function is useful when matching key events against
 accelerators.
   Since 2.20}

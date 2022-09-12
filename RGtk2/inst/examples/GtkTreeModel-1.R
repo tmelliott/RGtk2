@@ -2,7 +2,7 @@
 
 ## Three ways of getting the iter pointing to the location
 
-## get the iterator from a string 
+## get the iterator from a string
 model$getIterFromString("3:2:5")$iter
 
 ## get the iterator from a path

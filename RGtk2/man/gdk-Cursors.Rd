@@ -22,7 +22,7 @@ cursors can be constructed on a given display, see
 \code{\link{gdkDisplaySupportsCursorColor}},
 \code{\link{gdkDisplayGetDefaultCursorSize}} and
 \code{\link{gdkDisplayGetMaximalCursorSize}}.
-  
+
 Cursors by themselves are not very interesting, they must be be
 bound to a window for users to see them. This is done with
 \code{\link{gdkWindowSetCursor}} or by setting the cursor member of the

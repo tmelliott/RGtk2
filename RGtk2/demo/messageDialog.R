@@ -3,23 +3,25 @@ entry1 <- NULL
 entry2 <- NULL
 i <- 1
 
-message.dialog.clicked <- function(button, user.data)
-{
-  dialog <- gtkMessageDialogNew(window, c("modal", "destroy-with-parent"), "info", "ok",
-                   "This message box has been popped up the following\n",
-                   "number of times:")
+message.dialog.clicked <- function(button, user.data) {
+  dialog <- gtkMessageDialogNew(
+    window, c("modal", "destroy-with-parent"), "info", "ok",
+    "This message box has been popped up the following\n",
+    "number of times:"
+  )
   dialog$formatSecondaryText(i)
   dialog$run()
   dialog$destroy()
   i <<- i + 1
 }
 
-interactive.dialog.clicked <- function(button, user.data)
-{
-  dialog <- gtkDialogNewWithButtons("Interactive Dialog",
-                    window, "modal",
-                    "gtk-ok", GtkResponseType["ok"],
-                    "_Non-stock Button", GtkResponseType["cancel"])
+interactive.dialog.clicked <- function(button, user.data) {
+  dialog <- gtkDialogNewWithButtons(
+    "Interactive Dialog",
+    window, "modal",
+    "gtk-ok", GtkResponseType["ok"],
+    "_Non-stock Button", GtkResponseType["cancel"]
+  )
 
   hbox <- gtkHBoxNew(FALSE, 8)
   hbox$setBorderWidth(8)
@@ -50,11 +52,10 @@ interactive.dialog.clicked <- function(button, user.data)
   gtkWidgetShowAll(hbox)
   response <- dialog$run()
 
-  if (response == GtkResponseType["ok"])
-    {
-      entry1$setText(local.entry1$getText())
-      entry2$setText(local.entry2$getText())
-    }
+  if (response == GtkResponseType["ok"]) {
+    entry1$setText(local.entry1$getText())
+    entry2$setText(local.entry2$getText())
+  }
 
   dialog$destroy()
 }

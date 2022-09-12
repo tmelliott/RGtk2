@@ -22,10 +22,10 @@
 files.  It is the main building block of a \code{\link{GtkRecentChooserDialog}}.  Most
 applications will only need to use the latter; you can use
 \code{\link{GtkRecentChooserWidget}} as part of a larger window if you have special needs.
-  
+
 Note that \code{\link{GtkRecentChooserWidget}} does not have any methods of its own.
 Instead, you should use the functions that work on a \code{\link{GtkRecentChooser}}.
-  
+
 Recently used files are supported since GTK+ 2.10.}
 \section{Structures}{\describe{\item{\verb{GtkRecentChooserWidget}}{
 \emph{undocumented

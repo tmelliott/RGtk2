@@ -12,7 +12,7 @@ notebook or widget.}
 \details{Note that 2 notebooks must share a common group identificator
 (see \code{\link{gtkNotebookSetGroupId}}) to allow automatic tabs
 interchange between them.
-  
+
 If you want a widget to interact with a notebook through DnD
 (i.e.: accept dragged tabs from it) it must be set as a drop
 destination and accept the target "GTK_NOTEBOOK_TAB". The notebook
@@ -32,7 +32,7 @@ on_drop_zone_drag_data_received <- function(widget, context, x, y,
   # notebook$remove(child)
 }
 }
-  
+
 If you want a notebook to accept drags from other widgets,
 you will have to set your own DnD code to do it.
   Since 2.10}

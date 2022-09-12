@@ -30,7 +30,7 @@ respectively. If two iters compare as equal, their order in the sorted model
 is undefined. In order to ensure that the \code{\link{GtkTreeSortable}} behaves as
 expected, the GtkTreeIterCompareFunc must define a partial order on
 the model, i.e. it must be reflexive, antisymmetric and transitive.
-  
+
 For example, if \code{model} is a product catalogue, then a compare function
 for the "price" column could be one which returns
 \code{price_of(  a  ) - price_of(  b  )}.

@@ -10,7 +10,7 @@ for the availibility of the specified \code{condition} on the socket.}
 \item{\verb{cancellable}}{a \code{\link{GCancellable}} or \code{NULL}}
 }
 \details{The callback on the source is of the \verb{GSocketSourceFunc} type.
-  
+
 It is meaningless to specify \code{G_IO_ERR} or \code{G_IO_HUP} in condition;
 these conditions will always be reported output if they are true.
   \code{cancellable} if not \code{NULL} can be used to cancel the source, which will

@@ -13,7 +13,7 @@
    +----GSeekable}}
 \section{Implementations}{GSeekable is implemented by
  \code{\link{GFileIOStream}},  \code{\link{GFileInputStream}},  \code{\link{GFileOutputStream}},  \code{\link{GMemoryInputStream}} and  \code{\link{GMemoryOutputStream}}.}
-\section{Detailed Description}{\code{\link{GSeekable}} is implemented by streams (implementations of 
+\section{Detailed Description}{\code{\link{GSeekable}} is implemented by streams (implementations of
 \code{\link{GInputStream}} or \code{\link{GOutputStream}}) that support seeking.}
 \section{Structures}{\describe{\item{\verb{GSeekable}}{
 Seek object for streaming operations.

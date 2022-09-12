@@ -1,7 +1,7 @@
 \alias{gAppInfoLaunchUris}
 \name{gAppInfoLaunchUris}
 \title{gAppInfoLaunchUris}
-\description{Launches the application. Passes \code{uris} to the launched application 
+\description{Launches the application. Passes \code{uris} to the launched application
 as arguments, using the optional \code{launch.context} to get information
 about the details of the launcher (like what screen it is on).
 On error, \code{error} will be set accordingly.}
@@ -13,7 +13,7 @@ On error, \code{error} will be set accordingly.}
 \item{.errwarn}{Whether to issue a warning on error or fail silently}
 }
 \details{To lauch the application without arguments pass a \code{NULL} \code{uris} list.
-  
+
 Note that even if the launch is successful the application launched
 can fail to start if it runs into problems during startup. There is
 no way to detect this.}

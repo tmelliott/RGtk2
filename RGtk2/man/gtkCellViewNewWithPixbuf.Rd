@@ -1,7 +1,7 @@
 \alias{gtkCellViewNewWithPixbuf}
 \name{gtkCellViewNewWithPixbuf}
 \title{gtkCellViewNewWithPixbuf}
-\description{Creates a new \code{\link{GtkCellView}} widget, adds a \code{\link{GtkCellRendererPixbuf}} 
+\description{Creates a new \code{\link{GtkCellView}} widget, adds a \code{\link{GtkCellRendererPixbuf}}
 to it, and makes its show \code{pixbuf}.}
 \usage{gtkCellViewNewWithPixbuf(pixbuf)}
 \arguments{\item{\verb{pixbuf}}{the image to display in the cell view}}

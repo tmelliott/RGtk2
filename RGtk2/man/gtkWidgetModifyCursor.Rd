@@ -3,7 +3,7 @@
 \title{gtkWidgetModifyCursor}
 \description{Sets the cursor color to use in a widget, overriding the
 \verb{"cursor-color"} and \verb{"secondary-cursor-color"}
-style properties. All other style values are left untouched. 
+style properties. All other style values are left untouched.
 See also \code{\link{gtkWidgetModifyStyle}}.}
 \usage{gtkWidgetModifyCursor(object, primary, secondary)}
 \arguments{

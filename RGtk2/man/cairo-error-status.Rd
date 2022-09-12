@@ -7,7 +7,7 @@
 \section{Detailed Description}{Cairo uses a single status type to represent all kinds of errors.  A status
 value of \code{CAIRO_STATUS_SUCCESS} represents no error and has an integer value
 of zero.  All other status values represent an error.
-  
+
 Cairo's error handling is designed to be easy to use and safe.  All major
 cairo objects \dfn{retain} an error status internally which
 can be queried anytime by the users using cairo*\code{status()} calls.  In
@@ -19,9 +19,9 @@ code is required before or after each individual cairo function call.}
 using Cairo. In some cases it is returned directly by functions.
 but when using \code{\link{Cairo}}, the last error, if any, is stored in
 the context and can be retrieved with \code{\link{cairoStatus}}.
-  
+
 New entries may be added in future versions.  Use \code{\link{cairoStatusToString}}
-to get a human-readable representation of an error message.  
+to get a human-readable representation of an error message.
 
 \describe{
 \item{\verb{success}}{ no error has occurred}

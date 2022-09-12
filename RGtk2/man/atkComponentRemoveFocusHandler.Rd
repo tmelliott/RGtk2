@@ -2,7 +2,7 @@
 \name{atkComponentRemoveFocusHandler}
 \title{atkComponentRemoveFocusHandler}
 \description{Remove the handler specified by \code{handler.id} from the list of
-functions to be executed when this object receives focus events 
+functions to be executed when this object receives focus events
 (in or out).}
 \usage{atkComponentRemoveFocusHandler(object, handler.id)}
 \arguments{

@@ -21,7 +21,7 @@ PostScript files and is a multi-page vector surface backend.}
 \section{Enums and Flags}{\describe{\item{\verb{CairoPsLevel}}{
 \code{\link{CairoPsLevel}} is used to describe the language level of the
 PostScript Language Reference that a generated PostScript file will
-conform to.  
+conform to.
 
 \describe{
 \item{\verb{2}}{ The language level 2 of the PostScript specification.}

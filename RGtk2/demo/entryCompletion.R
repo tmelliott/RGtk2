@@ -1,8 +1,7 @@
 window <- NULL
 
 # Creates a tree model containing the completions
-create.completion.model <- function()
-{
+create.completion.model <- function() {
   store <- gtkListStoreNew("gchararray")
 
   # Append one word
@@ -18,10 +17,12 @@ create.completion.model <- function()
 }
 
 window <- gtkDialogNewWithButtons("GtkEntryCompletion",
-                      NULL,
-                      0,
-                      "gtk-close",
-                      GtkResponseType["none"], show = F)
+  NULL,
+  0,
+  "gtk-close",
+  GtkResponseType["none"],
+  show = F
+)
 window$setResizable(FALSE)
 gSignalConnect(window, "response", gtkWidgetDestroy)
 vbox <- gtkVBoxNew(FALSE, 5)

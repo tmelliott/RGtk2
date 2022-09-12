@@ -3,7 +3,7 @@
 \title{gtkToolbarSetDropHighlightItem}
 \description{Highlights \code{toolbar} to give an idea of what it would look like
 if \code{item} was added to \code{toolbar} at the position indicated by \code{index.}.
-If \code{item} is \code{NULL}, highlighting is turned off. In that case \code{index.} 
+If \code{item} is \code{NULL}, highlighting is turned off. In that case \code{index.}
 is ignored.}
 \usage{gtkToolbarSetDropHighlightItem(object, tool.item = NULL, index)}
 \arguments{

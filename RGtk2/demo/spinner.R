@@ -1,17 +1,17 @@
-on_play_clicked <- function(button, user_data)
-{
+on_play_clicked <- function(button, user_data) {
   spinner_sensitive$start()
   spinner_unsensitive$start()
 }
 
-on_stop_clicked <- function(button, user_data)
-{
+on_stop_clicked <- function(button, user_data) {
   spinner_sensitive$stop()
   spinner_unsensitive$stop()
 }
 
-window <- gtkDialog("GtkSpinner", NULL, 0, "gtk-close",
-                    GtkResponseType["none"])
+window <- gtkDialog(
+  "GtkSpinner", NULL, 0, "gtk-close",
+  GtkResponseType["none"]
+)
 
 window$setResizable(FALSE)
 

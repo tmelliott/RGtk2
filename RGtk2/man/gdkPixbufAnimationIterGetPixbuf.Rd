@@ -3,8 +3,8 @@
 \title{gdkPixbufAnimationIterGetPixbuf}
 \description{Gets the current pixbuf which should be displayed; the pixbuf will
 be the same size as the animation itself
-(\code{\link{gdkPixbufAnimationGetWidth}}, \code{\link{gdkPixbufAnimationGetHeight}}). 
-This pixbuf should be displayed for 
+(\code{\link{gdkPixbufAnimationGetWidth}}, \code{\link{gdkPixbufAnimationGetHeight}}).
+This pixbuf should be displayed for
 \code{\link{gdkPixbufAnimationIterGetDelayTime}} milliseconds.  The caller
 of this function does not own a reference to the returned pixbuf;
 the returned pixbuf will become invalid when the iterator advances

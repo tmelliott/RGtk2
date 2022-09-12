@@ -1,7 +1,7 @@
 \alias{gtkIMContextFilterKeypress}
 \name{gtkIMContextFilterKeypress}
 \title{gtkIMContextFilterKeypress}
-\description{Allow an input method to internally handle key press and release 
+\description{Allow an input method to internally handle key press and release
 events. If this function returns \code{TRUE}, then no further processing
 should be done for this key event.}
 \usage{gtkIMContextFilterKeypress(object, event)}

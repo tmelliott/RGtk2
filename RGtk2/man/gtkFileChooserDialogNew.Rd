@@ -3,7 +3,7 @@
 \title{gtkFileChooserDialogNew}
 \description{Creates a new \code{\link{GtkFileChooserDialog}}.  This function is analogous to
 \code{\link{gtkDialogNewWithButtons}}.}
-\usage{gtkFileChooserDialogNew(title = NULL, parent = NULL, action, 
+\usage{gtkFileChooserDialogNew(title = NULL, parent = NULL, action,
     ..., show = TRUE)}
 \arguments{
 \item{\verb{title}}{Title of the dialog, or \code{NULL}. \emph{[  \acronym{allow-none}  ]}}

@@ -22,11 +22,11 @@
 \section{Detailed Description}{  A \verb{GtkSeparatorItem} is a \code{\link{GtkToolItem}} that separates groups of other
   \verb{GtkToolItems}. Depending on the theme, a \code{\link{GtkSeparatorToolItem}} will
   often look like a vertical line on horizontally docked toolbars.
-  
+
 If the property "expand" is \verb{TRUE} and the property "draw" is \verb{FALSE}, a
 \code{\link{GtkSeparatorToolItem}} will act as a "spring" that forces other items
 to the ends of the toolbar.
-  
+
   Use \code{\link{gtkSeparatorToolItemNew}} to create a new \code{\link{GtkSeparatorToolItem}}.}
 \section{Structures}{\describe{\item{\verb{GtkSeparatorToolItem}}{
 The \code{\link{GtkSeparatorToolItem}} struct contains only private data and

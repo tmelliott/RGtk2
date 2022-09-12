@@ -4,7 +4,7 @@
 \description{Starts a file of type G_FILE_TYPE_MOUNTABLE.
 Using \code{start.operation}, you can request callbacks when, for instance,
 passwords are needed during authentication.}
-\usage{gFileStartMountable(object, flags, start.operation, cancellable = NULL, 
+\usage{gFileStartMountable(object, flags, start.operation, cancellable = NULL,
     callback, user.data = NULL)}
 \arguments{
 \item{\verb{object}}{input \code{\link{GFile}}.}
@@ -17,7 +17,7 @@ passwords are needed during authentication.}
 \details{If \code{cancellable} is not \code{NULL}, then the operation can be cancelled by
 triggering the cancellable object from another thread. If the operation
 was cancelled, the error \code{G_IO_ERROR_CANCELLED} will be returned.
-  
+
 When the operation is finished, \code{callback} will be called. You can then call
 \code{\link{gFileMountMountableFinish}} to get the result of the operation.
   Since 2.22}

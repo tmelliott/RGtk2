@@ -24,7 +24,7 @@ UI description, an object class must implement the
 GtkBuildable interface. The interface includes methods for setting
 names and properties of objects, parsing custom tags, constructing
 child objects.
-  
+
 The GtkBuildable interface is implemented by all widgets and
 many of the non-widget objects that are provided by GTK+. The
 main user of this interface is \code{\link{GtkBuilder}}, there should be

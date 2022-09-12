@@ -8,14 +8,14 @@ returned widget; it should not be unreferenced.}
 \usage{gtkWidgetGetToplevel(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkWidget}}}}
 \details{Note the difference in behavior vs. \code{\link{gtkWidgetGetAncestor}};
-\code{gtk_widget_get_ancestor (widget, GTK_TYPE_WINDOW)} 
+\code{gtk_widget_get_ancestor (widget, GTK_TYPE_WINDOW)}
 would return
 \code{NULL} if \code{widget} wasn't inside a toplevel window, and if the
 window was inside a \verb{GtkWindow-derived} widget which was in turn
 inside the toplevel \code{\link{GtkWindow}}. While the second case may
 seem unlikely, it actually happens when a \code{\link{GtkPlug}} is embedded
 inside a \code{\link{GtkSocket}} within the same application.
-  
+
 To reliably find the toplevel \code{\link{GtkWindow}}, use
 \code{\link{gtkWidgetGetToplevel}} and check if the \code{TOPLEVEL} flags
 is set on the result.

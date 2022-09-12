@@ -1,7 +1,7 @@
 ######
 # Creating a combobox with a complex item
 ######
-  
+
 combo <- gtkCombo()
 item <- gtkListItem()
 
@@ -9,7 +9,7 @@ item <- gtkListItem()
 ##   a horizontal box with an arrow and a label in it.
 hbox <- gtkHbox(FALSE, 3)
 item$add(hbox)
-  
+
 arrow <- gtkArrow("right", "out")
 hbox$packStart(arrow, FALSE, FALSE, 0)
 

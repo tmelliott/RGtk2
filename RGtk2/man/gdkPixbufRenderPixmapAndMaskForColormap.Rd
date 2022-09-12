@@ -15,7 +15,7 @@ given drawables should use \code{\link{gdkDrawPixbuf}}, and \code{\link{gdkPixbu
 \details{The pixmap that is created uses the \code{\link{GdkColormap}} specified by \code{colormap}.
 This colormap must match the colormap of the window where the pixmap
 will eventually be used or an error will result.
-  
+
 If the pixbuf does not have an alpha channel, then *\code{mask.return} will be set
 to \code{NULL}.}
 \value{

@@ -1,9 +1,9 @@
 \alias{gtkActionGroupAddRadioActionsFull}
 \name{gtkActionGroupAddRadioActionsFull}
 \title{gtkActionGroupAddRadioActionsFull}
-\description{This variant of \code{\link{gtkActionGroupAddRadioActions}} adds a 
+\description{This variant of \code{\link{gtkActionGroupAddRadioActions}} adds a
 \verb{GDestroyNotify} callback for \code{user.data}.}
-\usage{gtkActionGroupAddRadioActionsFull(object, entries, value, on.change = NULL, 
+\usage{gtkActionGroupAddRadioActionsFull(object, entries, value, on.change = NULL,
     user.data = NULL)}
 \arguments{
 \item{\verb{object}}{the action group}

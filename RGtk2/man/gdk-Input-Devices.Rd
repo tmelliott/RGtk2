@@ -30,7 +30,7 @@ tablets typically return sub-pixel positioning information and possibly
 information about the pressure and tilt of the stylus. Under
 X, the support for extended devices is done through the
 \dfn{XInput} extension.
-  
+
 Because handling extended input devices may involve considerable
 overhead, they need to be turned on for each \code{\link{GdkWindow}}
 individually using \code{\link{gdkInputSetExtensionEvents}}.
@@ -47,7 +47,7 @@ must retrieve the device information using \code{\link{gdkDevicesList}},
 check the \code{has_cursor} field, and,
 if it is \code{FALSE}, draw a cursor itself when it receives
 motion events.
-  
+
 Each pointing device is assigned a unique integer ID; events from a
 particular device can be identified by the
 \code{deviceid} field in the event structure. The
@@ -60,7 +60,7 @@ a double value ranging from 0.0 to 1.0, while the tilt fields are
 double values ranging from -1.0 to 1.0. (With -1.0 representing the
 maximum tilt to the left or up, and 1.0 representing the maximum
 tilt to the right or down.)
-  
+
 One additional field in each event is the
 \code{source} field, which contains an
 enumeration value describing the type of device; this currently
@@ -69,7 +69,7 @@ or \code{GDK_SOURCE_CURSOR}. This field is present to allow simple
 applications to (for instance) delete when they detect eraser
 devices without having to keep track of complicated per-device
 settings.
-  
+
 Various aspects of each device may be configured.
 The configuration of devices is queried using \code{\link{gdkDevicesList}}.
 Each device must be activated using \code{\link{gdkDeviceSetMode}}, which
@@ -78,12 +78,12 @@ entire screen or to a single window. The mapping of the valuators of
 the device onto the predefined valuator types is set using
 \code{\link{gdkDeviceSetAxisUse}}. And the source type for each device
 can be set with \code{\link{gdkDeviceSetSource}}.
-  
+
 Devices may also have associated \dfn{keys}
 or function buttons. Such keys can be globally set to map
 into normal X keyboard events. The mapping is set using
 \code{\link{gdkDeviceSetKey}}.
-  
+
 The interfaces in this section will most likely be considerably
 modified in the future to accomodate devices that may have different
 sets of additional valuators than the pressure \code{xtilt}

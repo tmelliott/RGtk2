@@ -1,8 +1,8 @@
 \alias{gtkWindowSetDeletable}
 \name{gtkWindowSetDeletable}
 \title{gtkWindowSetDeletable}
-\description{By default, windows have a close button in the window frame. Some 
-window managers allow GTK+ to 
+\description{By default, windows have a close button in the window frame. Some
+window managers allow GTK+ to
 disable this button. If you set the deletable property to \code{FALSE}
 using this function, GTK+ will do its best to convince the window
 manager not to show a close button. Depending on the system, this

@@ -16,7 +16,7 @@
 either a given \code{\link{GdkPixbuf}} (set via the
 pixbuf property) or a stock icon
 (set via the stock-id property).
-  
+
 To support the tree view, \code{\link{GtkCellRendererPixbuf}} also supports rendering two alternative
 pixbufs, when the is-expander property
 is \code{TRUE}. If the is-expanded property

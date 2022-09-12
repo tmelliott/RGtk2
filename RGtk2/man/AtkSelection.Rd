@@ -21,7 +21,7 @@ are exposed by \verb{atk_object_ref_child} and \verb{atk_object_get_n_children},
 the use of the parent UI component ordinarily involves selection of one
 or more of the objects corresponding to those \code{\link{AtkObject}} children - for
 example, selectable lists.
-  
+
 Note that other types of "selection" (for instance text selection) are
 accomplished a other ATK interfaces - \code{\link{AtkSelection}} is limited to the
 selection/deselection of children.}

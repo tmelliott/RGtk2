@@ -45,7 +45,7 @@ is tailored for this use case.}
 The ::popdown signal is a
 keybinding signal
 which gets emitted to popdown the scale widget.
-  
+
 The default binding for this signal is Escape.
   Since 2.12
 
@@ -60,7 +60,7 @@ The default binding for this signal is Escape.
 The ::popup signal is a
 keybinding signal
 which gets emitted to popup the scale widget.
-  
+
 The default bindings for this signal are Space, Enter and Return.
   Since 2.12
 
@@ -99,12 +99,12 @@ when the current value is the lowest value, the second
 item for the highest value. All the subsequent icons will
 be used for all the other values, spread evenly over the
 range of values.
-  
+
 If there's only one icon name in the \code{icons} list, it will
 be used for all the values. If only two icon names are in
 the \code{icons} list, the first one will be used for the bottom
 50\% of the scale, and the second one for the top 50\%.
-  
+
 It is recommended to use at least 3 icons so that the
 \code{\link{GtkScaleButton}} reflects the current value of the scale
 better for the users.

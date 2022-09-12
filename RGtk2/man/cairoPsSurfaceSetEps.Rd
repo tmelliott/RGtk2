@@ -12,7 +12,7 @@ PostScript.}
 have been performed on the current page. The simplest way to do
 this is to call this function immediately after creating the
 surface. An Encapsulated PostScript file should never contain more
-than one page.  
+than one page.
   Since 1.6}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

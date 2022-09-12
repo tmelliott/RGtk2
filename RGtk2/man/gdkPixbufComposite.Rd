@@ -7,8 +7,8 @@ This gives an image in the coordinates of the destination pixbuf.
 The rectangle (\code{dest.x}, \code{dest.y}, \code{dest.width}, \code{dest.height})
 is then composited onto the corresponding rectangle of the
 original destination image.}
-\usage{gdkPixbufComposite(object, dest, dest.x, dest.y, dest.width, 
-    dest.height, offset.x, offset.y, scale.x, scale.y, interp.type, 
+\usage{gdkPixbufComposite(object, dest, dest.x, dest.y, dest.width,
+    dest.height, offset.x, offset.y, scale.x, scale.y, interp.type,
     overall.alpha)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GdkPixbuf}}}
@@ -24,9 +24,9 @@ original destination image.}
 \item{\verb{interp.type}}{the interpolation type for the transformation.}
 \item{\verb{overall.alpha}}{overall alpha for source image (0..255)}
 }
-\details{When the destination rectangle contains parts not in the source 
+\details{When the destination rectangle contains parts not in the source
 image, the data at the edges of the source image is replicated
-to infinity. 
+to infinity.
   }
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

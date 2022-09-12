@@ -6,7 +6,7 @@ GdkWindow. This may fail in some situations, returning \code{FALSE}.}
 \usage{gdkWindowEnsureNative(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GdkWindow}}}}
 \details{Offscreen window and children of them can never have native windows.
-  
+
 Some backends may not support native child windows.
   Since 2.18}
 \value{[logical] \code{TRUE} if the window has a native window, \code{FALSE} otherwise}

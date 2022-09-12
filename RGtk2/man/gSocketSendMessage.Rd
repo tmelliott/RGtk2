@@ -4,7 +4,7 @@
 \description{Send data to \code{address} on \code{socket}.  This is the most complicated and
 fully-featured version of this call. For easier use, see
 \code{\link{gSocketSend}} and \code{\link{gSocketSendTo}}.}
-\usage{gSocketSendMessage(object, address, vectors, messages = NULL, 
+\usage{gSocketSendMessage(object, address, vectors, messages = NULL,
     flags = 0, cancellable = NULL, .errwarn = TRUE)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GSocket}}}
@@ -34,7 +34,7 @@ array.
 for this are available in the \verb{GSocketMsgFlags} enum, but the
 values there are the same as the system values, and the flags
 are passed in as-is, so you can pass in system-specific flags too.
-  
+
 If the socket is in blocking mode the call will block until there is
 space for the data in the socket queue. If there is no space available
 and the socket is in non-blocking mode a \code{G_IO_ERROR_WOULD_BLOCK} error
@@ -43,7 +43,7 @@ will be returned. To be notified when space is available, wait for the
 \code{G_IO_ERROR_WOULD_BLOCK} from \code{\link{gSocketSend}} even if you were previously
 notified of a \code{G_IO_OUT} condition. (On Windows in particular, this is
 very common due to the way the underlying APIs work.)
-  
+
 On error -1 is returned and \code{error} is set accordingly.
   Since 2.22}
 \value{

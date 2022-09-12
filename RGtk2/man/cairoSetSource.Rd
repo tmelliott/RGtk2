@@ -14,7 +14,7 @@ subsequent drawing operations.}
 user space in effect at the time of \code{\link{cairoSetSource}}. This means
 that further modifications of the current transformation matrix
 will not affect the source pattern. See \code{\link{cairoPatternSetMatrix}}.
-  
+
 The default source pattern is a solid pattern that is opaque black,
 (that is, it is equivalent to cairo_set_source_rgb(cr, 0.0, 0.0,
 0.0)).  }

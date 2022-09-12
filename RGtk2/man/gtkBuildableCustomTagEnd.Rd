@@ -1,7 +1,7 @@
 \alias{gtkBuildableCustomTagEnd}
 \name{gtkBuildableCustomTagEnd}
 \title{gtkBuildableCustomTagEnd}
-\description{This is called at the end of each custom element handled by 
+\description{This is called at the end of each custom element handled by
 the buildable.}
 \usage{gtkBuildableCustomTagEnd(object, builder, child, tagname, data)}
 \arguments{

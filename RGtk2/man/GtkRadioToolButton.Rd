@@ -27,7 +27,7 @@
 \section{Detailed Description}{A \code{\link{GtkRadioToolButton}} is a \code{\link{GtkToolItem}} that contains a radio button,
 that is, a button that is part of a group of toggle buttons where only
 one button can be active at a time.
-  
+
 Use \code{\link{gtkRadioToolButtonNew}} to create a new
 \code{\link{GtkRadioToolButton}}. use \code{\link{gtkRadioToolButtonNewFromWidget}} to
 create a new \code{\link{GtkRadioToolButton}} that is part of the same group as an

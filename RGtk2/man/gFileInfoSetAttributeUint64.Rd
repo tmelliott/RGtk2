@@ -1,7 +1,7 @@
 \alias{gFileInfoSetAttributeUint64}
 \name{gFileInfoSetAttributeUint64}
 \title{gFileInfoSetAttributeUint64}
-\description{Sets the \code{attribute} to contain the given \code{attr.value}, 
+\description{Sets the \code{attribute} to contain the given \code{attr.value},
 if possible.}
 \usage{gFileInfoSetAttributeUint64(object, attribute, attr.value)}
 \arguments{

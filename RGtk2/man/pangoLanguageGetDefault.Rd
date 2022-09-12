@@ -12,7 +12,7 @@ the form lang_COUNTRY, where lang is an ISO-639 language code, and
 COUNTRY is an ISO-3166 country code. For instance, sv_FI for
 Swedish as written in Finland or pt_BR for Portuguese as written in
 Brazil.
-  
+
 On Windows, the C library does not use any such environment
 variables, and setting them won't affect the behavior of functions
 like \code{ctime()}. The user sets the locale through the Regional Options
@@ -22,11 +22,11 @@ names spelled out in English.
 However, this function does check the above environment
 variables, and does return a Unix-style locale string based on
 either said environment variables or the thread's current locale.
-  
+
 Your application should call \code{setlocale(LC_ALL, "");}
 for the user settings to take effect.  Gtk+ does this in its initialization
 functions automatically (by calling \code{gtkSetLocale()}).
-See \code{man setlocale} for more details.  
+See \code{man setlocale} for more details.
   Since 1.16}
 \value{[\code{\link{PangoLanguage}}]  the default language as a \code{\link{PangoLanguage}}, must not be
               freed.}

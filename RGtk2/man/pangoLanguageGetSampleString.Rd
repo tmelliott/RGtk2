@@ -9,10 +9,10 @@ render a particular language.}
 be demonstrative of normal text in the language, as well as exposing font
 feature requirements unique to the language.  It is suitable for use
 as sample text in a font selection dialog.
-  
+
 If \code{language} is \code{NULL}, the default language as found by
 \code{\link{pangoLanguageGetDefault}} is used.
-  
+
 If Pango does not have a sample string for \code{language}, the classic
 "The quick brown fox..." is returned.  This can be detected by
 comparing the returned pointer value to that returned for (non-existent)

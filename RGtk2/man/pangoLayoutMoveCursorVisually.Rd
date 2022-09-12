@@ -7,7 +7,7 @@ then the new strong cursor position will be one position
 to the right of the old cursor position. If \code{direction} is negative,
 then the new strong cursor position will be one position
 to the left of the old cursor position.}
-\usage{pangoLayoutMoveCursorVisually(object, strong, old.index, old.trailing, 
+\usage{pangoLayoutMoveCursorVisually(object, strong, old.index, old.trailing,
     direction)}
 \arguments{
 \item{\verb{object}}{[\code{\link{PangoLayout}}]        a \code{\link{PangoLayout}}.}
@@ -25,7 +25,7 @@ to the left of the old cursor position.}
 between logical and visual order will depend on the direction
 of the current run, and there may be jumps when the cursor
 is moved off of the end of a run.
-  
+
 Motion here is in cursor positions, not in characters, so a
 single call to \code{\link{pangoLayoutMoveCursorVisually}} may move the
 cursor over multiple characters when multiple characters combine

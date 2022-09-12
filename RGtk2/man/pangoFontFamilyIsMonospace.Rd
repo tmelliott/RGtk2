@@ -13,7 +13,7 @@ character is typically double-width in a monospace font.}
 \details{The best way to find out the grid-cell size is to call
 \code{\link{pangoFontMetricsGetApproximateDigitWidth}}, since the results
 of \code{\link{pangoFontMetricsGetApproximateCharWidth}} may be affected
-by double-width characters.  
+by double-width characters.
   Since 1.4}
 \value{[logical] \code{TRUE} if the family is monospace.}
 \author{Derived by RGtkGen from GTK+ documentation}

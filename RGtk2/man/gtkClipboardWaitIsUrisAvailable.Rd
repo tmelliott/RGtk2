@@ -4,7 +4,7 @@
 \description{Test to see if there is a list of URIs available to be pasted
 This is done by requesting the TARGETS atom and checking
 if it contains the URI targets. This function
-waits for the data to be received using the main loop, so events, 
+waits for the data to be received using the main loop, so events,
 timeouts, etc, may be dispatched during the wait.}
 \usage{gtkClipboardWaitIsUrisAvailable(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkClipboard}}}}

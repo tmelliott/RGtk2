@@ -11,7 +11,7 @@ Finishes an unmount operation, see \code{\link{gFileUnmountMountable}} for detai
 \item{\verb{result}}{a \code{\link{GAsyncResult}}.}
 \item{.errwarn}{Whether to issue a warning on error or fail silently}
 }
-\details{Finish an asynchronous unmount operation that was started 
+\details{Finish an asynchronous unmount operation that was started
 with \code{\link{gFileUnmountMountable}}.}
 \value{
 A list containing the following elements:

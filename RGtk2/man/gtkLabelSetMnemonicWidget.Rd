@@ -15,9 +15,9 @@ set it explicitly using this function.}
 \item{\verb{object}}{a \code{\link{GtkLabel}}}
 \item{\verb{widget}}{the target \code{\link{GtkWidget}}. \emph{[  \acronym{allow-none}  ]}}
 }
-\details{The target widget will be accelerated by emitting the 
-GtkWidget::mnemonic-activate signal on it. The default handler for 
-this signal will activate the widget if there are no mnemonic collisions 
+\details{The target widget will be accelerated by emitting the
+GtkWidget::mnemonic-activate signal on it. The default handler for
+this signal will activate the widget if there are no mnemonic collisions
 and toggle focus between the colliding widgets otherwise.}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

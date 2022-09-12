@@ -16,14 +16,14 @@ a wrapper around \code{\link{gInetAddressNewFromString}}).}
 \code{\link{GInetAddress}}, sorted in order of preference. (That is, you should
 attempt to connect to the first address first, then the second if
 the first fails, etc.)
-  
+
 If the DNS resolution fails, \code{error} (if non-\code{NULL}) will be set to a
 value from \verb{GResolverError}.
-  
+
 If \code{cancellable} is non-\code{NULL}, it can be used to cancel the
 operation, in which case \code{error} (if non-\code{NULL}) will be set to
 \code{G_IO_ERROR_CANCELLED}.
-  
+
 If you are planning to connect to a socket on the resolved IP
 address, it may be easier to create a \code{\link{GNetworkAddress}} and use its
 \code{\link{GSocketConnectable}} interface.

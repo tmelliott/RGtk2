@@ -2,11 +2,11 @@
 \name{gtkDrawOption}
 \title{gtkDrawOption}
 \description{
-Draws a radio button indicator in the given rectangle on \code{window} with 
+Draws a radio button indicator in the given rectangle on \code{window} with
 the given parameters.
 \strong{WARNING: \code{gtk_draw_option} has been deprecated since version 2.0 and should not be used in newly-written code. Use \code{\link{gtkPaintOption}} instead.}
 }
-\usage{gtkDrawOption(object, window, state.type, shadow.type, x, y, 
+\usage{gtkDrawOption(object, window, state.type, shadow.type, x, y,
     width, height)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GtkStyle}}}

@@ -1,7 +1,7 @@
 \alias{gtkIconThemeAppendSearchPath}
 \name{gtkIconThemeAppendSearchPath}
 \title{gtkIconThemeAppendSearchPath}
-\description{Appends a directory to the search path. 
+\description{Appends a directory to the search path.
 See \code{\link{gtkIconThemeSetSearchPath}}.}
 \usage{gtkIconThemeAppendSearchPath(object, path)}
 \arguments{

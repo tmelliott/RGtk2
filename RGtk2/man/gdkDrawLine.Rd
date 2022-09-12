@@ -1,7 +1,7 @@
 \alias{gdkDrawLine}
 \name{gdkDrawLine}
 \title{gdkDrawLine}
-\description{Draws a line, using the foreground color and other attributes of 
+\description{Draws a line, using the foreground color and other attributes of
 the \code{\link{GdkGC}}.}
 \usage{gdkDrawLine(object, gc, x1, y1, x2, y2)}
 \arguments{

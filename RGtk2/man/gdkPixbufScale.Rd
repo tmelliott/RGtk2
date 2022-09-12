@@ -6,7 +6,7 @@
 then renders the rectangle (\code{dest.x}, \code{dest.y}, \code{dest.width},
 \code{dest.height}) of the resulting image onto the destination image
 replacing the previous contents.}
-\usage{gdkPixbufScale(object, dest, dest.x, dest.y, dest.width, dest.height, 
+\usage{gdkPixbufScale(object, dest, dest.x, dest.y, dest.width, dest.height,
     offset.x, offset.y, scale.x, scale.y, interp.type)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GdkPixbuf}}}
@@ -24,7 +24,7 @@ replacing the previous contents.}
 \details{Try to use \code{\link{gdkPixbufScaleSimple}} first, this function is
 the industrial-strength power tool you can fall back to if
 \code{\link{gdkPixbufScaleSimple}} isn't powerful enough.
-  
+
 If the source rectangle overlaps the destination rectangle on the
 same pixbuf, it will be overwritten during the scaling which
 results in rendering artifacts.}

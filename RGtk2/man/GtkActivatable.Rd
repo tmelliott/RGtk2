@@ -18,7 +18,7 @@
 the state of its action. A \code{\link{GtkActivatable}} can also provide feedback
 through its action, as they are responsible for activating their
 related actions.
-  
+
  \emph{Implementing GtkActivatable}
 When extending a class that is already \code{\link{GtkActivatable}}; it is only
 necessary to implement the \code{\link{GtkActivatable}}->\code{syncActionProperties()}
@@ -109,7 +109,7 @@ call \code{\link{gtkActivatableDoSetRelatedAction}} when it changes.  Since 2.16
 Whether this activatable should reset its layout
 and appearance when setting the related action or when
 the action changes appearance.
-  
+
 See the \code{\link{GtkAction}} documentation directly to find which properties
 should be ignored by the \code{\link{GtkActivatable}} when this property is \code{FALSE}.
   \strong{PLEASE NOTE:} \code{\link{GtkActivatable}} implementors need to handle this property

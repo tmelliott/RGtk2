@@ -19,13 +19,13 @@ edit the text, \code{\link{GtkCellRendererCombo}} offers a \code{\link{GtkComboB
 widget to edit the text. The values to display in the combo box are taken from
 the tree model specified in the
 model property.
-  
+
 The combo cell renderer takes care of adding a text cell renderer to the combo
 box and sets it to display the column specified by its
 text-column
 property. Further properties of the comnbo box can be set in a handler for the
 editing-started signal.
-  
+
 The \code{\link{GtkCellRendererCombo}} cell renderer was added in GTK+ 2.6.}
 \section{Structures}{\describe{\item{\verb{GtkCellRendererCombo}}{
 \emph{undocumented
@@ -40,7 +40,7 @@ to GtkComboBox, GtkCellRendererCombo::changed is not emitted for
 changes made to a selected item in the entry.  The argument \code{new.iter}
 corresponds to the newly selected item in the combo box and it is relative
 to the GtkTreeModel set via the model property on GtkCellRendererCombo.
-  
+
 Note that as soon as you change the model displayed in the tree view,
 the tree view will immediately cease the editing operating.  This
 means that you most probably want to refrain from changing the model
@@ -77,7 +77,7 @@ Use the text_column property to specify the column holding the values.
 
 Specifies the model column which holds the possible values for the
 combo box.
-  
+
 Note that this refers to the model specified in the model property,
 \emph{not} the model backing the tree view to which
 this cell renderer is attached.

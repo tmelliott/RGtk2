@@ -3,8 +3,8 @@
 \title{gtkExpanderNewWithMnemonic}
 \description{Creates a new expander using \code{label} as the text of the label.
 If characters in \code{label} are preceded by an underscore, they are underlined.
-If you need a literal underscore character in a label, use '__' (two 
-underscores). The first underlined character represents a keyboard 
+If you need a literal underscore character in a label, use '__' (two
+underscores). The first underlined character represents a keyboard
 accelerator called a mnemonic.
 Pressing Alt and that key activates the button.}
 \usage{gtkExpanderNewWithMnemonic(label = NULL)}

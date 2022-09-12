@@ -9,12 +9,12 @@ it always returns a valid \code{\link{GtkImage}} widget.}
 \arguments{\item{\verb{filename}}{a filename}}
 \details{If the file contains an animation, the image will contain an
 animation.
-  
+
 If you need to detect failures to load the file, use
 \code{\link{gdkPixbufNewFromFile}} to load the file yourself, then create
 the \code{\link{GtkImage}} from the pixbuf. (Or for animations, use
 \code{\link{gdkPixbufAnimationNewFromFile}}).
-  
+
 The storage type (\code{\link{gtkImageGetStorageType}}) of the returned
 image is not defined, it will be whatever is appropriate for
 displaying the file.}

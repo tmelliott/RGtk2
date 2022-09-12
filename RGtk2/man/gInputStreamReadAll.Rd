@@ -12,11 +12,11 @@
 }
 \details{This function is similar to \code{\link{gInputStreamRead}}, except it tries to
 read as many bytes as requested, only stopping on an error or end of stream.
-  
+
 On a successful read of \code{count} bytes, or if we reached the end of the
 stream,  \code{TRUE} is returned, and \code{bytes.read} is set to the number of bytes
 read into \code{buffer}.
-  
+
 If there is an error during the operation \code{FALSE} is returned and \code{error}
 is set to indicate the error status, \code{bytes.read} is updated to contain
 the number of bytes read into \code{buffer} before the error occurred.}

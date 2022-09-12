@@ -22,7 +22,7 @@ connections.  For more determinstic behaviour, see
 to accept to identify this particular source, which is
 useful if you're listening on multiple addresses and do
 different things depending on what address is connected to.
-  
+
 If successful and \code{effective.address} is non-\code{NULL} then it will
 be set to the address that the binding actually occured at.  This
 is helpful for determining the port number that was used for when

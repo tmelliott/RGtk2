@@ -16,13 +16,13 @@ other words, in code}
   mount = g_volume_get_mount (volume); /* mounted, so never NULL */
   mount_root = g_mount_get_root (mount);
   volume_activation_root = g_volume_get_activation_root(volume); /* assume not NULL */
-}  
+}
 then the expression
   \preformatted{  (g_file_has_prefix (volume_activation_root, mount_root) ||
       g_file_equal (volume_activation_root, mount_root))
-}  
+}
 will always be \code{TRUE}.
-  
+
 Activation roots are typically used in \code{\link{GVolumeMonitor}}
 implementations to find the underlying mount to shadow, see
 \code{\link{gMountIsShadowed}} for more details.

@@ -31,17 +31,17 @@ and a file list corresponding to the current working directory. The filesystem
 can be navigated using the directory list or the drop-down history menu.
 Alternatively, the TAB key can be used to navigate using filename
 completion - common in text based editors such as emacs and jed.
-  
+
 File selection dialogs are created with a call to \code{\link{gtkFileSelectionNew}}.
-  
+
 The default filename can be set using \code{\link{gtkFileSelectionSetFilename}} and the selected filename retrieved using \code{\link{gtkFileSelectionGetFilename}}.
-  
+
 Use \code{\link{gtkFileSelectionComplete}} to display files and directories
 that match a given pattern. This can be used for example, to show only
 *.txt files, or only files beginning with gtk*.
-  
+
 Simple file operations; create directory, delete file, and rename file, are available from buttons at the top of the dialog. These can be hidden using \code{\link{gtkFileSelectionHideFileopButtons}} and shown again using \code{\link{gtkFileSelectionShowFileopButtons}}.
-  
+
  \emph{Getting a filename from the user.}
 \preformatted{
 # Getting a filename from a user
@@ -55,23 +55,23 @@ store_filename <- function(widget, file_selector) {
 create_file_selection <- function() {
 
   ## Create the selector
-   
+
   file_selector <- gtkFileSelection("Please select a file for editing.",
                                     show = FALSE)
-   
+
   gSignalConnect(file_selector[["ok_button"]], "clicked", store_filename,
                  file_selector)
-   			   
+
   ## Ensure that the dialog box is destroyed when the user clicks a button.
-   
-  gSignalConnect(file_selector[["ok_button"]], "clicked", gtkWidgetDestroy, 
+
+  gSignalConnect(file_selector[["ok_button"]], "clicked", gtkWidgetDestroy,
                  file_selector, user.data.first = TRUE)
-  
+
   gSignalConnect(file_selector[["cancel_button"]], "clicked", gtkWidgetDestroy,
-                 file_selector, user.data.first = TRUE) 
-   
+                 file_selector, user.data.first = TRUE)
+
   ## Display that dialog
-   
+
   file_selector$show()
 }
 }}

@@ -1,7 +1,7 @@
 \alias{gtkStatusbarSetHasResizeGrip}
 \name{gtkStatusbarSetHasResizeGrip}
 \title{gtkStatusbarSetHasResizeGrip}
-\description{Sets whether the statusbar has a resize grip. 
+\description{Sets whether the statusbar has a resize grip.
 \code{TRUE} by default.}
 \usage{gtkStatusbarSetHasResizeGrip(object, setting)}
 \arguments{

@@ -4,8 +4,8 @@
 \description{Replaces the widget packed into the tooltip with
 \code{custom.widget}. \code{custom.widget} does not get destroyed when the tooltip goes
 away.
-By default a box with a \code{\link{GtkImage}} and \code{\link{GtkLabel}} is embedded in 
-the tooltip, which can be configured using \code{\link{gtkTooltipSetMarkup}} 
+By default a box with a \code{\link{GtkImage}} and \code{\link{GtkLabel}} is embedded in
+the tooltip, which can be configured using \code{\link{gtkTooltipSetMarkup}}
 and \code{\link{gtkTooltipSetIcon}}.}
 \usage{gtkTooltipSetCustom(object, custom.widget)}
 \arguments{

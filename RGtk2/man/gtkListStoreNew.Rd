@@ -2,7 +2,7 @@
 \name{gtkListStoreNew}
 \title{gtkListStoreNew}
 \description{Creates a new list store as with \code{n.columns} columns each of the types passed
-in.  Note that only types derived from standard GObject fundamental types 
+in.  Note that only types derived from standard GObject fundamental types
 are supported. }
 \usage{gtkListStoreNew(...)}
 \arguments{\item{\verb{...}}{a new \code{\link{GtkListStore}}}}

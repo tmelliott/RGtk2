@@ -11,7 +11,7 @@ works.}
 }
 \details{The font-face should not be immutable or a \code{CAIRO_STATUS_USER_FONT_IMMUTABLE}
 error will occur.  A user font-face is immutable as soon as a scaled-font
-is created from it.  
+is created from it.
   Since 1.8}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

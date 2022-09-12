@@ -10,7 +10,7 @@ planning to connect to it.)}
 \details{This function is thread-safe. In other words, you can safely call
 it from a thread other than the one running the operation that was
 passed the \code{cancellable}.
-  
+
 The convention within gio is that cancelling an asynchronous
 operation causes it to complete asynchronously. That is, if you
 cancel the operation from the same thread in which it is running,

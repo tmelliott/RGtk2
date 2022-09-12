@@ -26,7 +26,7 @@ text editing widgets, such as \code{\link{GtkEntry}} and \verb{GtkText}. It cont
 for generically manipulating an editable widget, a large number of action
 signals used for key bindings, and several signals that an application can
 connect to to modify the behavior of a widget.
-  
+
 As an example of the latter usage, by connecting
 the following handler to "insert_text", an application
 can convert all entry into a widget into uppercase.
@@ -50,7 +50,7 @@ cannot be directly accessed.
 \item{\code{changed(editable, user.data)}}{
 The ::changed signal is emitted at the end of a single
 user-visible operation on the contents of the \code{\link{GtkEditable}}.
-  
+
 E.g., a paste operation that replaces the contents of the
 selection will cause only one signal emission (even though it
 is implemented by first deleting the selection, then inserting

@@ -5,24 +5,21 @@ frame <- NULL
 
 # Expose callback for the drawing area
 # This is where we actually draw the color rectangle
-expose.event.callback <- function(widget, event, data)
-{
-  if (!is.null(widget[["window"]]))
-    {      
-      style <- widget$getStyle()
-      cr <- gdkCairoCreate(widget[["window"]])
-      gdkCairoSetSourceColor(cr, style[["bg"]][[GtkStateType["normal"]+1L]])
-      gdkCairoRectangle(cr, event[["area"]])
-      cr$fill()
-    }
+expose.event.callback <- function(widget, event, data) {
+  if (!is.null(widget[["window"]])) {
+    style <- widget$getStyle()
+    cr <- gdkCairoCreate(widget[["window"]])
+    gdkCairoSetSourceColor(cr, style[["bg"]][[GtkStateType["normal"] + 1L]])
+    gdkCairoRectangle(cr, event[["area"]])
+    cr$fill()
+  }
 
   TRUE
 }
 
 # show a color selection dialog and save the selected color
-change.color.callback <- function(button, data)
-{
-  dialog <- gtkColorSelectionDialogNew("Changing color", show=F)
+change.color.callback <- function(button, data) {
+  dialog <- gtkColorSelectionDialogNew("Changing color", show = F)
 
   dialog$setTransientFor(window)
 
@@ -33,18 +30,17 @@ change.color.callback <- function(button, data)
   colorsel$setHasPalette(TRUE)
 
   response <- dialog$run()
-  if (response == GtkResponseType["ok"])
-    {
-      color <- colorsel$getCurrentColor()$color
-      # save the color in the graphics context
-      da$modifyBg("normal", color)
-    }
+  if (response == GtkResponseType["ok"]) {
+    color <- colorsel$getCurrentColor()$color
+    # save the color in the graphics context
+    da$modifyBg("normal", color)
+  }
 
   dialog$destroy()
 }
 
- # initialize color to blue (r,g,b)
-color <- c(red=0, green=0, blue=65535)
+# initialize color to blue (r,g,b)
+color <- c(red = 0, green = 0, blue = 65535)
 
 # make a window
 window <- gtkWindowNew("topleve")

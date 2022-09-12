@@ -1,10 +1,10 @@
 \alias{gtkPaintArrow}
 \name{gtkPaintArrow}
 \title{gtkPaintArrow}
-\description{Draws an arrow in the given rectangle on \code{window} using the given 
+\description{Draws an arrow in the given rectangle on \code{window} using the given
 parameters. \code{arrow.type} determines the direction of the arrow.}
-\usage{gtkPaintArrow(object, window, state.type, shadow.type, area = NULL, 
-    widget = NULL, detail = NULL, arrow.type, fill, x, y, width, 
+\usage{gtkPaintArrow(object, window, state.type, shadow.type, area = NULL,
+    widget = NULL, detail = NULL, arrow.type, fill, x, y, width,
     height)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GtkStyle}}}

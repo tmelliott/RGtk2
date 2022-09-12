@@ -10,7 +10,7 @@ enumerator return \code{G_IO_ERROR_CLOSED} on all calls.}
 \item{.errwarn}{Whether to issue a warning on error or fail silently}
 }
 \details{This will be automatically called when the last reference
-is dropped, but you might want to call this function to make 
+is dropped, but you might want to call this function to make
 sure resources are released as early as possible.}
 \value{
 A list containing the following elements:

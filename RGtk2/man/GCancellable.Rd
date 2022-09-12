@@ -19,7 +19,7 @@
 }
 \section{Hierarchy}{\preformatted{GObject
    +----GCancellable}}
-\section{Detailed Description}{GCancellable is a thread-safe operation cancellation stack used 
+\section{Detailed Description}{GCancellable is a thread-safe operation cancellation stack used
 throughout GIO to allow for cancellation of synchronous and
 asynchronous operations.}
 \section{Structures}{\describe{\item{\verb{GCancellable}}{
@@ -29,30 +29,30 @@ Allows actions to be cancelled.
 \section{Convenient Construction}{\code{gCancellable} is the equivalent of \code{\link{gCancellableNew}}.}
 \section{Signals}{\describe{\item{\code{cancelled(cancellable, user.data)}}{
 Emitted when the operation has been cancelled.
-  
+
 Can be used by implementations of cancellable operations. If the
 operation is cancelled from another thread, the signal will be
 emitted in the thread that cancelled the operation, not the
 thread that is running the operation.
-  
+
 Note that disconnecting from this signal (or any signal) in a
 multi-threaded program is prone to race conditions. For instance
 it is possible that a signal handler may be invoked even
 \emph{after} a call to
 \code{\link{gSignalHandlerDisconnect}} for that handler has already
 returned.
-  
+
 There is also a problem when cancellation happen
 right before connecting to the signal. If this happens the
 signal will unexpectedly not be emitted, and checking before
 connecting to the signal leaves a race condition where this is
 still happening.
-  
+
 In order to make it safe and easy to connect handlers there
 are two helper functions: \code{gCancellableConnect()} and
 \code{\link{gCancellableDisconnect}} which protect against problems
 like this.
-  
+
 An example of how to us this:
 \preformatted{
 ## Make sure we don't do any unnecessary work if already cancelled
@@ -70,7 +70,7 @@ if (!is.null(cancellable))
 
 cancellable$disconnect(id)
 }
-  
+
 Note that the cancelled signal is emitted in the thread that
 the user cancelled from, which may be the main thread. So, the
 cancellable signal should not do something that can block.

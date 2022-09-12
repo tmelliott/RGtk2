@@ -27,11 +27,11 @@
 \section{Detailed Description}{A \code{\link{GtkLinkButton}} is a \code{\link{GtkButton}} with a hyperlink, similar to the one
 used by web browsers, which triggers an action when clicked. It is useful
 to show quick links to resources.
-  
+
 A link button is created by calling either \code{\link{gtkLinkButtonNew}} or
 \code{\link{gtkLinkButtonNewWithLabel}}. If using the former, the URI you pass
 to the constructor is used as a label for the widget.
-  
+
 The URI bound to a \code{\link{GtkLinkButton}} can be set specifically using
 \code{\link{gtkLinkButtonSetUri}}, and retrieved using \code{\link{gtkLinkButtonGetUri}}.
   \code{\link{GtkLinkButton}} offers a global hook, which is called when the used clicks

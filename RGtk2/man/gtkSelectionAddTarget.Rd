@@ -1,7 +1,7 @@
 \alias{gtkSelectionAddTarget}
 \name{gtkSelectionAddTarget}
 \title{gtkSelectionAddTarget}
-\description{Appends a specified target to the list of supported targets for a 
+\description{Appends a specified target to the list of supported targets for a
 given widget and selection.}
 \usage{gtkSelectionAddTarget(object, selection, target, info)}
 \arguments{

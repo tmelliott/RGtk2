@@ -11,4 +11,3 @@ frame1$setSizeRequest(50, -1)
 
 hpaned$pack2(frame2, FALSE, FALSE)
 frame2$setSizeRequest(50, -1)
-

@@ -31,5 +31,4 @@ S_cairo_write_func_t(gpointer s_closure, const guchar* s_data, guint s_length)
   if(err)
     return(((cairo_status_t)0));
   return(((cairo_status_t)asCEnum(s_ans, CAIRO_TYPE_STATUS)));
-} 
-
+}

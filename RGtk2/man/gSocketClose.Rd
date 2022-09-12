@@ -10,15 +10,15 @@
 \details{Closing a socket does not wait for all outstanding I/O operations
 to finish, so the caller should not rely on them to be guaranteed
 to complete even if the close returns with no error.
-  
+
 Once the socket is closed, all other operations will return
 \code{G_IO_ERROR_CLOSED}. Closing a socket multiple times will not
 return an error.
-  
+
 Sockets will be automatically closed when the last reference
 is dropped, but you might want to call this function to make sure
 resources are released as early as possible.
-  
+
 Beware that due to the way that TCP works, it is possible for
 recently-sent data to be lost if either you close a socket while the
 \code{G_IO_IN} condition is set, or else if the remote connection tries to

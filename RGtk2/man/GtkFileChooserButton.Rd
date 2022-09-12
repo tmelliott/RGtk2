@@ -32,13 +32,13 @@ file name with a button to bring up a \code{\link{GtkFileChooserDialog}}.
 The user can then use that dialog to change the file associated with
 that button.  This widget does not support setting the "select-multiple"
 property to \code{TRUE}.
-  
+
  \emph{Create a button to let the user select a file in /etc}
 \preformatted{
 # Create a button to let the user select a file in /etc
 button <- gtkFileChooserButton("Select a file", "open")
 button$setCurrentFolder("/etc")
-}  
+}
 The \code{\link{GtkFileChooserButton}} supports the \code{\link{GtkFileChooserAction}}s \code{GTK_FILE_CHOOSER_ACTION_OPEN} and \code{GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER}.
   \strong{PLEASE NOTE:} The \code{\link{GtkFileChooserButton}} will ellipsize the label,
 and thus will thus request little horizontal space.  To give the button
@@ -52,7 +52,7 @@ This should not be accessed directly.  Use the accessor functions below.
 \section{Convenient Construction}{\code{gtkFileChooserButton} is the result of collapsing the constructors of \code{GtkFileChooserButton} (\code{\link{gtkFileChooserButtonNew}}, \code{\link{gtkFileChooserButtonNewWithBackend}}) and accepts a subset of its arguments matching the required arguments of one of its delegate constructors.}
 \section{Signals}{\describe{\item{\code{file-set(widget, user.data)}}{
 The ::file-set signal is emitted when the user selects a file.
-  
+
 Note that this signal is only emitted when the \emph{user}
 changes the file.
   Since 2.12

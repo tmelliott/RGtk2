@@ -11,7 +11,7 @@ that is normally done using \code{\link{gtkContainerPropagateExpose}}.}
 \item{\verb{object}}{a \code{\link{GtkWidget}}}
 \item{\verb{event}}{a expose \code{\link{GdkEvent}}}
 }
-\details{If you want to force an area of a window to be redrawn, 
+\details{If you want to force an area of a window to be redrawn,
 use \code{\link{gdkWindowInvalidateRect}} or \code{\link{gdkWindowInvalidateRegion}}.
 To cause the redraw to be done immediately, follow that call
 with a call to \code{\link{gdkWindowProcessUpdates}}.}

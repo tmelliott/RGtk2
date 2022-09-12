@@ -1,8 +1,8 @@
 \alias{gtkPageSetupNewFromFile}
 \name{gtkPageSetupNewFromFile}
 \title{gtkPageSetupNewFromFile}
-\description{Reads the page setup from the file \code{file.name}. Returns a 
-new \code{\link{GtkPageSetup}} object with the restored page setup, 
+\description{Reads the page setup from the file \code{file.name}. Returns a
+new \code{\link{GtkPageSetup}} object with the restored page setup,
 or \code{NULL} if an error occurred. See \code{\link{gtkPageSetupToFile}}.}
 \usage{gtkPageSetupNewFromFile(file.name, .errwarn = TRUE)}
 \arguments{

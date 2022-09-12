@@ -16,18 +16,18 @@ with \code{address} set to \code{NULL}.}
 the socket. If the received message is too large to fit in \code{buffer}, then
 the data beyond \code{size} bytes will be discarded, without any explicit
 indication that this has occurred.
-  
+
 For \code{G_SOCKET_TYPE_STREAM} sockets, \code{\link{gSocketReceive}} can return any
 number of bytes, up to \code{size}. If more than \code{size} bytes have been
 received, the additional data will be returned in future calls to
 \code{\link{gSocketReceive}}.
-  
+
 If the socket is in blocking mode the call will block until there is
 some data to receive or there is an error. If there is no data available
 and the socket is in non-blocking mode, a \code{G_IO_ERROR_WOULD_BLOCK} error
 will be returned. To be notified when data is available, wait for the
 \code{G_IO_IN} condition.
-  
+
 On error -1 is returned and \code{error} is set accordingly.
   Since 2.22}
 \value{

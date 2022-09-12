@@ -69,10 +69,10 @@ The AtkImplementor interface is implemented by objects for which AtkObject peers
 \section{Enums and Flags}{\describe{
 \item{\verb{AtkRole}}{
 Describes the role of an object
-  
+
 These are the built-in enumerated roles that UI components can have in
 ATK.  Other roles may be added at runtime, so an AtkRole >=
-ATK_ROLE_LAST_DEFINED is not necessarily an error.  
+ATK_ROLE_LAST_DEFINED is not necessarily an error.
 
 \describe{
 \item{\verb{invalid}}{ Invalid role}
@@ -159,10 +159,10 @@ ATK_ROLE_LAST_DEFINED is not necessarily an error.
 }
 \item{\verb{AtkLayer}}{
 Describes the layer of a component
-  
+
 These enumerated "layer values" are used when determining which UI
 rendering layer a component is drawn into, which can help in making
-determinations of when components occlude one another.  
+determinations of when components occlude one another.
 
 \describe{
 \item{\verb{invalid}}{ The object does not have a layer}

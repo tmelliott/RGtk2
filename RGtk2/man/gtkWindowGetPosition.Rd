@@ -17,19 +17,19 @@ does not specify a way to obtain the geometry of the
 decorations placed on a window by the window manager.
 Thus GTK+ is using a "best guess" that works with most
 window managers.
-  
+
 Moreover, nearly all window managers are historically broken with
 respect to their handling of window gravity. So moving a window to
 its current position as returned by \code{\link{gtkWindowGetPosition}} tends
 to result in moving the window slightly. Window managers are
 slowly getting better over time.
-  
+
 If a window has gravity \verb{GDK_GRAVITY_STATIC} the window manager
 frame is not relevant, and thus \code{\link{gtkWindowGetPosition}} will
 always produce accurate results. However you can't use static
 gravity to do things like place a window in a corner of the screen,
 because static gravity ignores the window manager decorations.
-  
+
 If you are saving and restoring your application's window
 positions, you should know that it's impossible for applications to
 do this without getting it somewhat wrong because applications do

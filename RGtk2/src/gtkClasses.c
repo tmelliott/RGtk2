@@ -13,7 +13,7 @@ S_gtk_about_dialog_class_init(GtkAboutDialogClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkAccelGroup_symbol;
 
@@ -79,7 +79,7 @@ S_gtk_accel_group_class_accel_changed(USER_OBJECT_ s_object_class, USER_OBJECT_ 
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkAccelLabel_symbol;
 void
@@ -95,7 +95,7 @@ S_gtk_accel_label_class_init(GtkAccelLabelClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkAccessible_symbol;
 
@@ -152,7 +152,7 @@ S_gtk_accessible_class_connect_widget_destroyed(USER_OBJECT_ s_object_class, USE
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkAction_symbol;
 
@@ -385,7 +385,7 @@ S_gtk_action_class_disconnect_proxy(USER_OBJECT_ s_object_class, USER_OBJECT_ s_
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkActionGroup_symbol;
 
@@ -448,7 +448,7 @@ S_gtk_action_group_class_get_action(USER_OBJECT_ s_object_class, USER_OBJECT_ s_
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkAdjustment_symbol;
 
@@ -546,7 +546,7 @@ S_gtk_adjustment_class_value_changed(USER_OBJECT_ s_object_class, USER_OBJECT_ s
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkAlignment_symbol;
 void
@@ -562,7 +562,7 @@ S_gtk_alignment_class_init(GtkAlignmentClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkArrow_symbol;
 void
@@ -578,7 +578,7 @@ S_gtk_arrow_class_init(GtkArrowClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkAspectFrame_symbol;
 void
@@ -594,7 +594,7 @@ S_gtk_aspect_frame_class_init(GtkAspectFrameClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkBin_symbol;
 void
@@ -610,7 +610,7 @@ S_gtk_bin_class_init(GtkBinClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkBox_symbol;
 void
@@ -626,7 +626,7 @@ S_gtk_box_class_init(GtkBoxClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkButton_symbol;
 
@@ -888,7 +888,7 @@ S_gtk_button_class_activate(USER_OBJECT_ s_object_class, USER_OBJECT_ s_object)
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkButtonBox_symbol;
 void
@@ -904,7 +904,7 @@ S_gtk_button_box_class_init(GtkButtonBoxClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkCalendar_symbol;
 
@@ -1207,7 +1207,7 @@ S_gtk_calendar_class_next_year(USER_OBJECT_ s_object_class, USER_OBJECT_ s_objec
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkCellRenderer_symbol;
 
@@ -1556,7 +1556,7 @@ S_gtk_cell_renderer_class_start_editing(USER_OBJECT_ s_object_class, USER_OBJECT
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkCellRendererCombo_symbol;
 void
@@ -1572,7 +1572,7 @@ S_gtk_cell_renderer_combo_class_init(GtkCellRendererComboClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkCellRendererPixbuf_symbol;
 void
@@ -1588,7 +1588,7 @@ S_gtk_cell_renderer_pixbuf_class_init(GtkCellRendererPixbufClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkCellRendererProgress_symbol;
 void
@@ -1604,7 +1604,7 @@ S_gtk_cell_renderer_progress_class_init(GtkCellRendererProgressClass * c, SEXP e
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkCellRendererText_symbol;
 
@@ -1667,7 +1667,7 @@ S_gtk_cell_renderer_text_class_edited(USER_OBJECT_ s_object_class, USER_OBJECT_ 
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkCellRendererToggle_symbol;
 
@@ -1727,7 +1727,7 @@ S_gtk_cell_renderer_toggle_class_toggled(USER_OBJECT_ s_object_class, USER_OBJEC
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkCellView_symbol;
 void
@@ -1743,7 +1743,7 @@ S_gtk_cell_view_class_init(GtkCellViewClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkCheckButton_symbol;
 
@@ -1803,7 +1803,7 @@ S_gtk_check_button_class_draw_indicator(USER_OBJECT_ s_object_class, USER_OBJECT
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkCheckMenuItem_symbol;
 
@@ -1904,7 +1904,7 @@ S_gtk_check_menu_item_class_draw_indicator(USER_OBJECT_ s_object_class, USER_OBJ
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkCList_symbol;
 
@@ -3245,7 +3245,7 @@ S_gtk_clist_class_cell_size_request(USER_OBJECT_ s_object_class, USER_OBJECT_ s_
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkColorButton_symbol;
 
@@ -3302,7 +3302,7 @@ S_gtk_color_button_class_color_set(USER_OBJECT_ s_object_class, USER_OBJECT_ s_o
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkColorSelection_symbol;
 
@@ -3359,7 +3359,7 @@ S_gtk_color_selection_class_color_changed(USER_OBJECT_ s_object_class, USER_OBJE
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkColorSelectionDialog_symbol;
 void
@@ -3375,7 +3375,7 @@ S_gtk_color_selection_dialog_class_init(GtkColorSelectionDialogClass * c, SEXP e
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkCombo_symbol;
 void
@@ -3391,7 +3391,7 @@ S_gtk_combo_class_init(GtkComboClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkComboBox_symbol;
 
@@ -3493,7 +3493,7 @@ S_gtk_combo_box_class_get_active_text(USER_OBJECT_ s_object_class, USER_OBJECT_ 
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkComboBoxEntry_symbol;
 void
@@ -3509,7 +3509,7 @@ S_gtk_combo_box_entry_class_init(GtkComboBoxEntryClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkContainer_symbol;
 
@@ -3953,7 +3953,7 @@ S_gtk_container_class_get_child_property(USER_OBJECT_ s_object_class, USER_OBJEC
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkCTree_symbol;
 
@@ -4245,7 +4245,7 @@ S_gtk_ctree_class_change_focus_row_expansion(USER_OBJECT_ s_object_class, USER_O
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkCurve_symbol;
 
@@ -4302,7 +4302,7 @@ S_gtk_curve_class_curve_type_changed(USER_OBJECT_ s_object_class, USER_OBJECT_ s
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkDialog_symbol;
 
@@ -4403,7 +4403,7 @@ S_gtk_dialog_class_close(USER_OBJECT_ s_object_class, USER_OBJECT_ s_object)
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkDrawingArea_symbol;
 void
@@ -4419,7 +4419,7 @@ S_gtk_drawing_area_class_init(GtkDrawingAreaClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkEntry_symbol;
 
@@ -4866,7 +4866,7 @@ S_gtk_entry_class_toggle_overwrite(USER_OBJECT_ s_object_class, USER_OBJECT_ s_o
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkEntryCompletion_symbol;
 
@@ -5023,7 +5023,7 @@ S_gtk_entry_completion_class_insert_prefix(USER_OBJECT_ s_object_class, USER_OBJ
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkEventBox_symbol;
 void
@@ -5039,7 +5039,7 @@ S_gtk_event_box_class_init(GtkEventBoxClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkExpander_symbol;
 
@@ -5096,7 +5096,7 @@ S_gtk_expander_class_activate(USER_OBJECT_ s_object_class, USER_OBJECT_ s_object
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkFileChooserButton_symbol;
 void
@@ -5112,7 +5112,7 @@ S_gtk_file_chooser_button_class_init(GtkFileChooserButtonClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkFileChooserDialog_symbol;
 void
@@ -5128,7 +5128,7 @@ S_gtk_file_chooser_dialog_class_init(GtkFileChooserDialogClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkFileChooserWidget_symbol;
 void
@@ -5144,7 +5144,7 @@ S_gtk_file_chooser_widget_class_init(GtkFileChooserWidgetClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkFileSelection_symbol;
 void
@@ -5160,7 +5160,7 @@ S_gtk_file_selection_class_init(GtkFileSelectionClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkFixed_symbol;
 void
@@ -5176,7 +5176,7 @@ S_gtk_fixed_class_init(GtkFixedClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkFontButton_symbol;
 
@@ -5233,7 +5233,7 @@ S_gtk_font_button_class_font_set(USER_OBJECT_ s_object_class, USER_OBJECT_ s_obj
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkFontSelection_symbol;
 void
@@ -5249,7 +5249,7 @@ S_gtk_font_selection_class_init(GtkFontSelectionClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkFontSelectionDialog_symbol;
 void
@@ -5265,7 +5265,7 @@ S_gtk_font_selection_dialog_class_init(GtkFontSelectionDialogClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkFrame_symbol;
 
@@ -5325,7 +5325,7 @@ S_gtk_frame_class_compute_child_allocation(USER_OBJECT_ s_object_class, USER_OBJ
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkGammaCurve_symbol;
 void
@@ -5341,7 +5341,7 @@ S_gtk_gamma_curve_class_init(GtkGammaCurveClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkHandleBox_symbol;
 
@@ -5445,7 +5445,7 @@ S_gtk_handle_box_class_child_detached(USER_OBJECT_ s_object_class, USER_OBJECT_ 
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkHBox_symbol;
 void
@@ -5461,7 +5461,7 @@ S_gtk_hbox_class_init(GtkHBoxClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkHButtonBox_symbol;
 void
@@ -5477,7 +5477,7 @@ S_gtk_hbutton_box_class_init(GtkHButtonBoxClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkHPaned_symbol;
 void
@@ -5493,7 +5493,7 @@ S_gtk_hpaned_class_init(GtkHPanedClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkHRuler_symbol;
 void
@@ -5509,7 +5509,7 @@ S_gtk_hruler_class_init(GtkHRulerClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkHScale_symbol;
 void
@@ -5525,7 +5525,7 @@ S_gtk_hscale_class_init(GtkHScaleClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkHScrollbar_symbol;
 void
@@ -5541,7 +5541,7 @@ S_gtk_hscrollbar_class_init(GtkHScrollbarClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkHSeparator_symbol;
 void
@@ -5557,7 +5557,7 @@ S_gtk_hseparator_class_init(GtkHSeparatorClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkIconFactory_symbol;
 void
@@ -5573,7 +5573,7 @@ S_gtk_icon_factory_class_init(GtkIconFactoryClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkIconTheme_symbol;
 
@@ -5630,7 +5630,7 @@ S_gtk_icon_theme_class_changed(USER_OBJECT_ s_object_class, USER_OBJECT_ s_objec
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkIconView_symbol;
 
@@ -6036,7 +6036,7 @@ S_gtk_icon_view_class_activate_cursor_item(USER_OBJECT_ s_object_class, USER_OBJ
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkImage_symbol;
 void
@@ -6052,7 +6052,7 @@ S_gtk_image_class_init(GtkImageClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkImageMenuItem_symbol;
 void
@@ -6068,7 +6068,7 @@ S_gtk_image_menu_item_class_init(GtkImageMenuItemClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkIMContext_symbol;
 
@@ -6801,7 +6801,7 @@ S_gtk_imcontext_class_get_surrounding(USER_OBJECT_ s_object_class, USER_OBJECT_ 
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkIMContextSimple_symbol;
 void
@@ -6817,7 +6817,7 @@ S_gtk_imcontext_simple_class_init(GtkIMContextSimpleClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkIMMulticontext_symbol;
 void
@@ -6833,7 +6833,7 @@ S_gtk_immulticontext_class_init(GtkIMMulticontextClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkInputDialog_symbol;
 
@@ -6937,7 +6937,7 @@ S_gtk_input_dialog_class_disable_device(USER_OBJECT_ s_object_class, USER_OBJECT
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkInvisible_symbol;
 void
@@ -6953,7 +6953,7 @@ S_gtk_invisible_class_init(GtkInvisibleClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkItem_symbol;
 
@@ -7092,7 +7092,7 @@ S_gtk_item_class_toggle(USER_OBJECT_ s_object_class, USER_OBJECT_ s_object)
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkItemFactory_symbol;
 void
@@ -7108,7 +7108,7 @@ S_gtk_item_factory_class_init(GtkItemFactoryClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkLabel_symbol;
 
@@ -7259,7 +7259,7 @@ S_gtk_label_class_populate_popup(USER_OBJECT_ s_object_class, USER_OBJECT_ s_obj
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkLayout_symbol;
 
@@ -7322,7 +7322,7 @@ S_gtk_layout_class_set_scroll_adjustments(USER_OBJECT_ s_object_class, USER_OBJE
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkList_symbol;
 
@@ -7467,7 +7467,7 @@ S_gtk_list_class_unselect_child(USER_OBJECT_ s_object_class, USER_OBJECT_ s_obje
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkListItem_symbol;
 
@@ -7914,7 +7914,7 @@ S_gtk_list_item_class_toggle_add_mode(USER_OBJECT_ s_object_class, USER_OBJECT_ 
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkListStore_symbol;
 void
@@ -7930,7 +7930,7 @@ S_gtk_list_store_class_init(GtkListStoreClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkMenu_symbol;
 void
@@ -7946,7 +7946,7 @@ S_gtk_menu_class_init(GtkMenuClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkMenuBar_symbol;
 void
@@ -7962,7 +7962,7 @@ S_gtk_menu_bar_class_init(GtkMenuBarClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkMenuItem_symbol;
 
@@ -8151,7 +8151,7 @@ S_gtk_menu_item_class_toggle_size_allocate(USER_OBJECT_ s_object_class, USER_OBJ
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkMenuShell_symbol;
 
@@ -8513,7 +8513,7 @@ S_gtk_menu_shell_class_get_popup_delay(USER_OBJECT_ s_object_class, USER_OBJECT_
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkMenuToolButton_symbol;
 
@@ -8570,7 +8570,7 @@ S_gtk_menu_tool_button_class_show_menu(USER_OBJECT_ s_object_class, USER_OBJECT_
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkMessageDialog_symbol;
 void
@@ -8586,7 +8586,7 @@ S_gtk_message_dialog_class_init(GtkMessageDialogClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkMisc_symbol;
 void
@@ -8602,7 +8602,7 @@ S_gtk_misc_class_init(GtkMiscClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkNotebook_symbol;
 
@@ -8965,7 +8965,7 @@ S_gtk_notebook_class_insert_page(USER_OBJECT_ s_object_class, USER_OBJECT_ s_obj
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkObject_symbol;
 void
@@ -8981,7 +8981,7 @@ S_gtk_object_class_init(GtkObjectClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkOldEditable_symbol;
 
@@ -9752,7 +9752,7 @@ S_gtk_old_editable_class_set_position(USER_OBJECT_ s_object_class, USER_OBJECT_ 
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkOptionMenu_symbol;
 
@@ -9809,7 +9809,7 @@ S_gtk_option_menu_class_changed(USER_OBJECT_ s_object_class, USER_OBJECT_ s_obje
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkPaned_symbol;
 
@@ -10098,7 +10098,7 @@ S_gtk_paned_class_cancel_position(USER_OBJECT_ s_object_class, USER_OBJECT_ s_ob
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkPixmap_symbol;
 void
@@ -10114,7 +10114,7 @@ S_gtk_pixmap_class_init(GtkPixmapClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkPlug_symbol;
 
@@ -10171,7 +10171,7 @@ S_gtk_plug_class_embedded(USER_OBJECT_ s_object_class, USER_OBJECT_ s_object)
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkPreview_symbol;
 void
@@ -10187,7 +10187,7 @@ S_gtk_preview_class_init(GtkPreviewClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkProgress_symbol;
 
@@ -10326,7 +10326,7 @@ S_gtk_progress_class_act_mode_enter(USER_OBJECT_ s_object_class, USER_OBJECT_ s_
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkProgressBar_symbol;
 void
@@ -10342,7 +10342,7 @@ S_gtk_progress_bar_class_init(GtkProgressBarClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkRadioAction_symbol;
 
@@ -10402,7 +10402,7 @@ S_gtk_radio_action_class_changed(USER_OBJECT_ s_object_class, USER_OBJECT_ s_obj
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkRadioButton_symbol;
 
@@ -10459,7 +10459,7 @@ S_gtk_radio_button_class_group_changed(USER_OBJECT_ s_object_class, USER_OBJECT_
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkRadioMenuItem_symbol;
 
@@ -10516,7 +10516,7 @@ S_gtk_radio_menu_item_class_group_changed(USER_OBJECT_ s_object_class, USER_OBJE
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkRadioToolButton_symbol;
 void
@@ -10532,7 +10532,7 @@ S_gtk_radio_tool_button_class_init(GtkRadioToolButtonClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkRange_symbol;
 
@@ -10771,7 +10771,7 @@ S_gtk_range_class_change_value(USER_OBJECT_ s_object_class, USER_OBJECT_ s_objec
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkRcStyle_symbol;
 
@@ -10969,7 +10969,7 @@ S_gtk_rc_style_class_create_style(USER_OBJECT_ s_object_class, USER_OBJECT_ s_ob
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkRuler_symbol;
 
@@ -11067,7 +11067,7 @@ S_gtk_ruler_class_draw_pos(USER_OBJECT_ s_object_class, USER_OBJECT_ s_object)
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkScale_symbol;
 
@@ -11222,7 +11222,7 @@ S_gtk_scale_class_get_layout_offsets(USER_OBJECT_ s_object_class, USER_OBJECT_ s
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkScrollbar_symbol;
 void
@@ -11238,7 +11238,7 @@ S_gtk_scrollbar_class_init(GtkScrollbarClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkScrolledWindow_symbol;
 
@@ -11345,7 +11345,7 @@ S_gtk_scrolled_window_class_move_focus_out(USER_OBJECT_ s_object_class, USER_OBJ
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkSeparator_symbol;
 void
@@ -11361,7 +11361,7 @@ S_gtk_separator_class_init(GtkSeparatorClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkSeparatorMenuItem_symbol;
 void
@@ -11377,7 +11377,7 @@ S_gtk_separator_menu_item_class_init(GtkSeparatorMenuItemClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkSeparatorToolItem_symbol;
 void
@@ -11393,7 +11393,7 @@ S_gtk_separator_tool_item_class_init(GtkSeparatorToolItemClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkSettings_symbol;
 void
@@ -11409,7 +11409,7 @@ S_gtk_settings_class_init(GtkSettingsClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkSizeGroup_symbol;
 void
@@ -11425,7 +11425,7 @@ S_gtk_size_group_class_init(GtkSizeGroupClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkSocket_symbol;
 
@@ -11526,7 +11526,7 @@ S_gtk_socket_class_plug_removed(USER_OBJECT_ s_object_class, USER_OBJECT_ s_obje
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkSpinButton_symbol;
 
@@ -11768,7 +11768,7 @@ S_gtk_spin_button_class_wrapped(USER_OBJECT_ s_object_class, USER_OBJECT_ s_obje
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkStatusbar_symbol;
 
@@ -11878,7 +11878,7 @@ S_gtk_statusbar_class_text_popped(USER_OBJECT_ s_object_class, USER_OBJECT_ s_ob
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkStyle_symbol;
 
@@ -13708,7 +13708,7 @@ S_gtk_style_class_draw_resize_grip(USER_OBJECT_ s_object_class, USER_OBJECT_ s_o
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkTable_symbol;
 void
@@ -13724,7 +13724,7 @@ S_gtk_table_class_init(GtkTableClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkTearoffMenuItem_symbol;
 void
@@ -13740,7 +13740,7 @@ S_gtk_tearoff_menu_item_class_init(GtkTearoffMenuItemClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkTextBuffer_symbol;
 
@@ -14302,7 +14302,7 @@ S_gtk_text_buffer_class_end_user_action(USER_OBJECT_ s_object_class, USER_OBJECT
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkTextChildAnchor_symbol;
 void
@@ -14318,7 +14318,7 @@ S_gtk_text_child_anchor_class_init(GtkTextChildAnchorClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkTextMark_symbol;
 void
@@ -14334,7 +14334,7 @@ S_gtk_text_mark_class_init(GtkTextMarkClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkTextTag_symbol;
 
@@ -14403,7 +14403,7 @@ S_gtk_text_tag_class_event(USER_OBJECT_ s_object_class, USER_OBJECT_ s_object, U
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkTextTagTable_symbol;
 
@@ -14554,7 +14554,7 @@ S_gtk_text_tag_table_class_tag_removed(USER_OBJECT_ s_object_class, USER_OBJECT_
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkTextView_symbol;
 
@@ -15139,7 +15139,7 @@ S_gtk_text_view_class_move_focus(USER_OBJECT_ s_object_class, USER_OBJECT_ s_obj
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkTipsQuery_symbol;
 
@@ -15343,7 +15343,7 @@ S_gtk_tips_query_class_widget_selected(USER_OBJECT_ s_object_class, USER_OBJECT_
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkToggleAction_symbol;
 
@@ -15400,7 +15400,7 @@ S_gtk_toggle_action_class_toggled(USER_OBJECT_ s_object_class, USER_OBJECT_ s_ob
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkToggleButton_symbol;
 
@@ -15457,7 +15457,7 @@ S_gtk_toggle_button_class_toggled(USER_OBJECT_ s_object_class, USER_OBJECT_ s_ob
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkToggleToolButton_symbol;
 
@@ -15514,7 +15514,7 @@ S_gtk_toggle_tool_button_class_toggled(USER_OBJECT_ s_object_class, USER_OBJECT_
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkToolbar_symbol;
 
@@ -15671,7 +15671,7 @@ S_gtk_toolbar_class_popup_context_menu(USER_OBJECT_ s_object_class, USER_OBJECT_
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkToolButton_symbol;
 
@@ -15728,7 +15728,7 @@ S_gtk_tool_button_class_clicked(USER_OBJECT_ s_object_class, USER_OBJECT_ s_obje
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkToolItem_symbol;
 
@@ -15882,7 +15882,7 @@ S_gtk_tool_item_class_set_tooltip(USER_OBJECT_ s_object_class, USER_OBJECT_ s_ob
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkTooltips_symbol;
 void
@@ -15898,7 +15898,7 @@ S_gtk_tooltips_class_init(GtkTooltipsClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkTreeModelFilter_symbol;
 void
@@ -15914,7 +15914,7 @@ S_gtk_tree_model_filter_class_init(GtkTreeModelFilterClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkTreeModelSort_symbol;
 void
@@ -15930,7 +15930,7 @@ S_gtk_tree_model_sort_class_init(GtkTreeModelSortClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkTreeSelection_symbol;
 
@@ -15987,7 +15987,7 @@ S_gtk_tree_selection_class_changed(USER_OBJECT_ s_object_class, USER_OBJECT_ s_o
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkTreeStore_symbol;
 void
@@ -16003,7 +16003,7 @@ S_gtk_tree_store_class_init(GtkTreeStoreClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkTreeView_symbol;
 
@@ -16759,7 +16759,7 @@ S_gtk_tree_view_class_start_interactive_search(USER_OBJECT_ s_object_class, USER
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkTreeViewColumn_symbol;
 
@@ -16816,7 +16816,7 @@ S_gtk_tree_view_column_class_clicked(USER_OBJECT_ s_object_class, USER_OBJECT_ s
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkUIManager_symbol;
 
@@ -17193,7 +17193,7 @@ S_gtk_uimanager_class_get_action(USER_OBJECT_ s_object_class, USER_OBJECT_ s_obj
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkVBox_symbol;
 void
@@ -17209,7 +17209,7 @@ S_gtk_vbox_class_init(GtkVBoxClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkVButtonBox_symbol;
 void
@@ -17225,7 +17225,7 @@ S_gtk_vbutton_box_class_init(GtkVButtonBoxClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkViewport_symbol;
 
@@ -17288,7 +17288,7 @@ S_gtk_viewport_class_set_scroll_adjustments(USER_OBJECT_ s_object_class, USER_OB
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkVPaned_symbol;
 void
@@ -17304,7 +17304,7 @@ S_gtk_vpaned_class_init(GtkVPanedClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkVRuler_symbol;
 void
@@ -17320,7 +17320,7 @@ S_gtk_vruler_class_init(GtkVRulerClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkVScale_symbol;
 void
@@ -17336,7 +17336,7 @@ S_gtk_vscale_class_init(GtkVScaleClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkVScrollbar_symbol;
 void
@@ -17352,7 +17352,7 @@ S_gtk_vscrollbar_class_init(GtkVScrollbarClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkVSeparator_symbol;
 void
@@ -17368,7 +17368,7 @@ S_gtk_vseparator_class_init(GtkVSeparatorClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GtkWidget_symbol;
 
@@ -20380,7 +20380,7 @@ S_gtk_widget_class_composited_changed(USER_OBJECT_ s_object_class, USER_OBJECT_ 
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkWindow_symbol;
 
@@ -20654,7 +20654,7 @@ S_gtk_window_class_keys_changed(USER_OBJECT_ s_object_class, USER_OBJECT_ s_obje
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkWindowGroup_symbol;
 void
@@ -20670,7 +20670,7 @@ S_gtk_window_group_class_init(GtkWindowGroupClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 #if GTK_CHECK_VERSION(2, 10, 0)
 static SEXP S_GtkCellRendererAccel_symbol;
@@ -20797,7 +20797,7 @@ S_gtk_cell_renderer_accel_class_accel_cleared(USER_OBJECT_ s_object_class, USER_
 
   return(_result);
 }
- 
+
 
 #if GTK_CHECK_VERSION(2, 10, 0)
 static SEXP S_GtkCellRendererSpin_symbol;
@@ -20815,7 +20815,7 @@ S_gtk_cell_renderer_spin_class_init(GtkCellRendererSpinClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GTK_CHECK_VERSION(2, 10, 0)
 static SEXP S_GtkPrintOperation_symbol;
@@ -21351,7 +21351,7 @@ S_gtk_print_operation_class_preview(USER_OBJECT_ s_object_class, USER_OBJECT_ s_
 
   return(_result);
 }
- 
+
 
 #if GTK_CHECK_VERSION(2, 10, 0)
 static SEXP S_GtkRecentManager_symbol;
@@ -21416,7 +21416,7 @@ S_gtk_recent_manager_class_changed(USER_OBJECT_ s_object_class, USER_OBJECT_ s_o
 
   return(_result);
 }
- 
+
 
 #if GTK_CHECK_VERSION(2, 10, 0)
 static SEXP S_GtkStatusIcon_symbol;
@@ -21587,7 +21587,7 @@ S_gtk_status_icon_class_size_changed(USER_OBJECT_ s_object_class, USER_OBJECT_ s
 
   return(_result);
 }
- 
+
 
 #if GTK_CHECK_VERSION(2, 10, 0)
 static SEXP S_GtkRecentChooserMenu_symbol;
@@ -21605,7 +21605,7 @@ S_gtk_recent_chooser_menu_class_init(GtkRecentChooserMenuClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GTK_CHECK_VERSION(2, 10, 0)
 static SEXP S_GtkLinkButton_symbol;
@@ -21623,7 +21623,7 @@ S_gtk_link_button_class_init(GtkLinkButtonClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GTK_CHECK_VERSION(2, 10, 0)
 static SEXP S_GtkRecentChooserWidget_symbol;
@@ -21641,7 +21641,7 @@ S_gtk_recent_chooser_widget_class_init(GtkRecentChooserWidgetClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GTK_CHECK_VERSION(2, 10, 0)
 static SEXP S_GtkRecentChooserDialog_symbol;
@@ -21659,7 +21659,7 @@ S_gtk_recent_chooser_dialog_class_init(GtkRecentChooserDialogClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GTK_CHECK_VERSION(2, 10, 0)
 static SEXP S_GtkAssistant_symbol;
@@ -21868,7 +21868,7 @@ S_gtk_assistant_class_cancel(USER_OBJECT_ s_object_class, USER_OBJECT_ s_object)
 
   return(_result);
 }
- 
+
 
 #if GTK_CHECK_VERSION(2, 12, 0)
 static SEXP S_GtkBuilder_symbol;
@@ -21939,7 +21939,7 @@ S_gtk_builder_class_get_type_from_name(USER_OBJECT_ s_object_class, USER_OBJECT_
 
   return(_result);
 }
- 
+
 
 #if GTK_CHECK_VERSION(2, 12, 0)
 static SEXP S_GtkRecentAction_symbol;
@@ -21957,7 +21957,7 @@ S_gtk_recent_action_class_init(GtkRecentActionClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GTK_CHECK_VERSION(2, 12, 0)
 static SEXP S_GtkScaleButton_symbol;
@@ -21975,7 +21975,7 @@ S_gtk_scale_button_class_init(GtkScaleButtonClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GTK_CHECK_VERSION(2, 12, 0)
 static SEXP S_GtkVolumeButton_symbol;
@@ -21993,7 +21993,7 @@ S_gtk_volume_button_class_init(GtkVolumeButtonClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GTK_CHECK_VERSION(2, 14, 0)
 static SEXP S_GtkMountOperation_symbol;
@@ -22011,7 +22011,7 @@ S_gtk_mount_operation_class_init(GtkMountOperationClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GTK_CHECK_VERSION(2, 18, 0)
 static SEXP S_GtkEntryBuffer_symbol;
@@ -22029,7 +22029,7 @@ S_gtk_entry_buffer_class_init(GtkEntryBufferClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GTK_CHECK_VERSION(2, 18, 0)
 static SEXP S_GtkInfoBar_symbol;
@@ -22047,7 +22047,7 @@ S_gtk_info_bar_class_init(GtkInfoBarClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GTK_CHECK_VERSION(2, 18, 0)
 static SEXP S_GtkHSV_symbol;
@@ -22065,7 +22065,7 @@ S_gtk_hsv_class_init(GtkHSVClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GTK_CHECK_VERSION(2, 20, 0)
 static SEXP S_GtkToolItemGroup_symbol;
@@ -22083,7 +22083,7 @@ S_gtk_tool_item_group_class_init(GtkToolItemGroupClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GTK_CHECK_VERSION(2, 20, 0)
 static SEXP S_GtkToolPalette_symbol;
@@ -22101,7 +22101,7 @@ S_gtk_tool_palette_class_init(GtkToolPaletteClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GTK_CHECK_VERSION(2, 20, 0)
 static SEXP S_GtkCellRendererSpinner_symbol;
@@ -22119,7 +22119,7 @@ S_gtk_cell_renderer_spinner_class_init(GtkCellRendererSpinnerClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GTK_CHECK_VERSION(2, 20, 0)
 static SEXP S_GtkOffscreenWindow_symbol;
@@ -22137,7 +22137,7 @@ S_gtk_offscreen_window_class_init(GtkOffscreenWindowClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GTK_CHECK_VERSION(2, 20, 0)
 static SEXP S_GtkSpinner_symbol;
@@ -22155,7 +22155,7 @@ S_gtk_spinner_class_init(GtkSpinnerClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 static SEXP S_GtkCellEditable_symbol;
 
@@ -22295,7 +22295,7 @@ S_gtk_cell_editable_iface_start_editing(USER_OBJECT_ s_object_class, USER_OBJECT
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkCellLayout_symbol;
 
@@ -22638,7 +22638,7 @@ S_gtk_cell_layout_iface_reorder(USER_OBJECT_ s_object_class, USER_OBJECT_ s_obje
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkEditable_symbol;
 
@@ -23126,7 +23126,7 @@ S_gtk_editable_iface_get_position(USER_OBJECT_ s_object_class, USER_OBJECT_ s_ob
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkTreeDragDest_symbol;
 
@@ -23240,7 +23240,7 @@ S_gtk_tree_drag_dest_iface_row_drop_possible(USER_OBJECT_ s_object_class, USER_O
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkTreeDragSource_symbol;
 
@@ -23398,7 +23398,7 @@ S_gtk_tree_drag_source_iface_drag_data_delete(USER_OBJECT_ s_object_class, USER_
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkTreeModel_symbol;
 
@@ -24331,7 +24331,7 @@ S_gtk_tree_model_iface_unref_node(USER_OBJECT_ s_object_class, USER_OBJECT_ s_ob
 
   return(_result);
 }
- 
+
 
 static SEXP S_GtkTreeSortable_symbol;
 
@@ -24633,7 +24633,7 @@ S_gtk_tree_sortable_iface_has_default_sort_func(USER_OBJECT_ s_object_class, USE
 
   return(_result);
 }
- 
+
 
 #if GTK_CHECK_VERSION(2, 12, 0)
 static SEXP S_GtkBuildable_symbol;
@@ -25214,7 +25214,7 @@ S_gtk_buildable_iface_get_internal_child(USER_OBJECT_ s_object_class, USER_OBJEC
 
   return(_result);
 }
- 
+
 
 #if GTK_CHECK_VERSION(2, 14, 0)
 static SEXP S_GtkToolShell_symbol;
@@ -25477,7 +25477,7 @@ S_gtk_tool_shell_iface_rebuild_menu(USER_OBJECT_ s_object_class, USER_OBJECT_ s_
 
   return(_result);
 }
- 
+
 
 #if GTK_CHECK_VERSION(2, 16, 0)
 static SEXP S_GtkActivatable_symbol;
@@ -25596,7 +25596,7 @@ S_gtk_activatable_iface_sync_action_properties(USER_OBJECT_ s_object_class, USER
 
   return(_result);
 }
- 
+
 
 #if GTK_CHECK_VERSION(2, 16, 0)
 static SEXP S_GtkOrientable_symbol;
@@ -25612,5 +25612,4 @@ S_gtk_orientable_class_init(GtkOrientableIface * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
-
+#endif

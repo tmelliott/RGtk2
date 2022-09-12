@@ -14,7 +14,7 @@ are involved, less than one character will be deleted.}
 \item{\verb{interactive}}{whether the deletion is caused by user interaction}
 \item{\verb{default.editable}}{whether the buffer is editable by default}
 }
-\details{Because the buffer is modified, all outstanding iterators become 
+\details{Because the buffer is modified, all outstanding iterators become
 invalid after calling this function; however, the \code{iter} will be
 re-initialized to point to the location where text was deleted.
   Since 2.6}

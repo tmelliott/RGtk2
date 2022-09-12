@@ -77,7 +77,7 @@ sources and in various flavours, so lets explain the terminology here:
 \item{Volumes}{\emph{undocumented
 }}
 }
-  
+
  \emph{File Names and Encodings}
 When the user is finished selecting files in a
 \code{\link{GtkFileChooser}}, your program can get the selected names
@@ -144,7 +144,7 @@ widgets in a file chooser.
 toggle <- gtkCheckButton("Open file read-only")
 my_file_chooser$setExtraWidget(toggle)
 }\strong{PLEASE NOTE:}    If you want to set more than one extra widget in the file
-   chooser, you can a container such as a   \code{\link{GtkVBox}}   or a   \code{\link{GtkTable}}  
+   chooser, you can a container such as a   \code{\link{GtkVBox}}   or a   \code{\link{GtkTable}}
    and include your widgets in it.  Then, set the container as
    the whole extra widget.
  \emph{Key Bindings}
@@ -170,9 +170,9 @@ location-popup \tab \kbd{Control}-\kbd{L}   (empty path);
 		 \cr
 up-folder \tab \kbd{Alt}-\kbd{Up}  \strong{PLEASE NOTE:} 		      Both the individual Up key and the numeric
 		      keypad's Up key are supported.
-		    
+
 		  ;
-		    \kbd{Backspace}  
+		    \kbd{Backspace}
 		 \cr
 down-folder \tab \kbd{Alt}-\kbd{Down} \cr
 home-folder \tab \kbd{Alt}-\kbd{Home} \cr
@@ -226,7 +226,7 @@ of "~" itself for access to home directories.
      \code{path}   strings, and have a crude form
    of easily-to-type bookmarks.  For example, say you access
    the path   \file{/home/username/misc}   very
-   frequently.  You could then create an   \kbd{Alt}-\kbd{M}  
+   frequently.  You could then create an   \kbd{Alt}-\kbd{M}
    shortcut by including the following in your
      \file{.gtkrc-2.0}  :
      \preformatted{   binding "misc-shortcut" {
@@ -236,8 +236,8 @@ of "~" itself for access to home directories.
    }
 
    class "GtkFileChooserDefault" binding "misc-shortcut"
-   
-}  
+
+}
  \emph{The "GtkFileChooserDefault::up-folder" signal}\preformatted{          void user_function (GtkFileChooserDefault *chooser,
                                 gpointer   user_data);
 }
@@ -381,7 +381,7 @@ This signal gets emitted whenever it is appropriate to present a
 confirmation dialog when the user has selected a file name that
 already exists.  The signal only gets emitted when the file
 chooser is in \code{GTK_FILE_CHOOSER_ACTION_SAVE} mode.
-  
+
 Most applications just need to turn on the
 \verb{"do-overwrite-confirmation"} property (or call the
 \code{\link{gtkFileChooserSetDoOverwriteConfirmation}} function), and
@@ -389,7 +389,7 @@ they will automatically get a stock confirmation dialog.
 Applications which need to customize this behavior should do
 that, and also connect to the \verb{"confirm-overwrite"}
 signal.
-  
+
 A signal handler for this signal must return a
 \code{\link{GtkFileChooserConfirmation}} value, which indicates the action to
 take.  If the handler determines that the user wants to select a
@@ -449,10 +449,10 @@ changes.  This can happen due to the user performing some action that
 changes folders, such as selecting a bookmark or visiting a folder on the
 file list.  It can also happen as a result of calling a function to
 explicitly change the current folder in a file chooser.
-  
+
 Normally you do not need to connect to this signal, unless you need to keep
 track of which folder a file chooser is showing.
-  
+
 See also:  \code{\link{gtkFileChooserSetCurrentFolder}},
 \code{\link{gtkFileChooserGetCurrentFolder}},
 \code{\link{gtkFileChooserSetCurrentFolderUri}},
@@ -469,11 +469,11 @@ See also:  \code{\link{gtkFileChooserSetCurrentFolder}},
 This signal is emitted when the user "activates" a file in the file
 chooser.  This can happen by double-clicking on a file in the file list, or
 by pressing \kbd{Enter}.
-  
+
 Normally you do not need to connect to this signal.  It is used internally
 by \code{\link{GtkFileChooserDialog}} to know when to activate the default button in the
 dialog.
-  
+
 See also: \code{\link{gtkFileChooserGetFilename}},
 \code{\link{gtkFileChooserGetFilenames}}, \code{\link{gtkFileChooserGetUri}},
 \code{\link{gtkFileChooserGetUris}}.
@@ -490,11 +490,11 @@ This signal is emitted when there is a change in the set of selected files
 in a \code{\link{GtkFileChooser}}.  This can happen when the user modifies the selection
 with the mouse or the keyboard, or when explicitly calling functions to
 change the selection.
-  
+
 Normally you do not need to connect to this signal, as it is easier to wait
 for the file chooser to finish running, and then to get the list of
 selected files using the functions mentioned below.
-  
+
 See also: \code{\link{gtkFileChooserSelectFilename}},
 \code{\link{gtkFileChooserUnselectFilename}}, \code{\link{gtkFileChooserGetFilename}},
 \code{\link{gtkFileChooserGetFilenames}}, \code{\link{gtkFileChooserSelectUri}},
@@ -513,7 +513,7 @@ This signal is emitted when the preview in a file chooser should be
 regenerated.  For example, this can happen when the currently selected file
 changes.  You should use this signal if you want your file chooser to have
 a preview widget.
-  
+
 Once you have installed a preview widget with
 \code{\link{gtkFileChooserSetPreviewWidget}}, you should update it when this
 signal is emitted.  You can use the functions
@@ -522,9 +522,9 @@ signal is emitted.  You can use the functions
 Your widget may not be able to preview all kinds of files; your callback
 must call \code{\link{gtkFileChooserSetPreviewWidgetActive}} to inform the file
 chooser about whether the preview was generated successfully or not.
-  
+
 Please see the example code in .
-  
+
 See also: \code{\link{gtkFileChooserSetPreviewWidget}},
 \code{\link{gtkFileChooserSetPreviewWidgetActive}},
 \code{\link{gtkFileChooserSetUsePreviewLabel}},

@@ -22,18 +22,18 @@
  AtkImplementorIface and  \code{\link{GtkBuildable}}.}
 \section{Detailed Description}{The \code{\link{GtkTipsQuery}} widget is a subclass of \code{\link{GtkLabel}} which is used to display
 help about widgets in a user interface.
-  
+
 A query is started with a call to \code{\link{gtkTipsQueryStartQuery}}, usually
 when some kind of 'Help' button is pressed. The \code{\link{GtkTipsQuery}} then grabs all
 events, stopping the user interface from functioning normally.
 Then as the user moves the mouse over the widgets, the \code{\link{GtkTipsQuery}} displays
 each widget's tooltip text.
-  
+
 By connecting to the "widget-entered" or "widget-selected" signals, it is
 possible to customize the \code{\link{GtkTipsQuery}} to perform other actions when widgets
 are entered or selected. For example, a help browser could be opened with
 documentation on the widget selected.
-  
+
 At some point a call to \code{\link{gtkTipsQueryStopQuery}} must be made in order to
 stop the query and return the interface to its normal state.
 The \code{\link{gtkTipsQuerySetCaller}} function can be used to specify a widget

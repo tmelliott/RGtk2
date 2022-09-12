@@ -29,7 +29,7 @@
 \section{Interfaces}{GtkImageMenuItem implements
  AtkImplementorIface,  \code{\link{GtkBuildable}} and  \code{\link{GtkActivatable}}.}
 \section{Detailed Description}{A GtkImageMenuItem is a menu item which has an icon next to the text label.
-  
+
 Note that the user can disable display of menu icons, so make sure to still
 fill in the text label.}
 \section{Structures}{\describe{\item{\verb{GtkImageMenuItem}}{
@@ -49,7 +49,7 @@ The Accel Group to use for stock accelerator keys
 
 If \code{TRUE}, the menu item will ignore the \verb{"gtk-menu-images"}
 setting and always show the image, if available.
-  
+
 Use this property if the menuitem would be useless or hard to use
 without the image.
   Default value: FALSE  Since 2.16

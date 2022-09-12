@@ -12,7 +12,7 @@ creates a \code{\link{GSocket}} object for it.}
 }
 \details{The \code{socket} must be bound to a local address with \code{\link{gSocketBind}} and
 must be listening for incoming connections (\code{\link{gSocketListen}}).
-  
+
 If there are no outstanding connections then the operation will block
 or return \code{G_IO_ERROR_WOULD_BLOCK} if non-blocking I/O is enabled.
 To be notified of an incoming connection, wait for the \code{G_IO_IN} condition.

@@ -3,7 +3,7 @@
 \title{gtkTextBufferRegisterDeserializeFormat}
 \description{This function registers a rich text deserialization \code{function} along with
 its \code{mime.type} with the passed \code{buffer}.}
-\usage{gtkTextBufferRegisterDeserializeFormat(object, mime.type, fun, 
+\usage{gtkTextBufferRegisterDeserializeFormat(object, mime.type, fun,
     user.data)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GtkTextBuffer}}}

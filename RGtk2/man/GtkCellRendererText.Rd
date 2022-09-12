@@ -20,7 +20,7 @@
 style information provided by its properties. The text will be ellipsized if it is
 too long and the ellipsize
 property allows it.
-  
+
 If the mode is \code{GTK_CELL_RENDERER_MODE_EDITABLE},
 the \code{\link{GtkCellRendererText}} allows to edit its text using an entry.}
 \section{Structures}{\describe{\item{\verb{GtkCellRendererText}}{
@@ -31,7 +31,7 @@ the \code{\link{GtkCellRendererText}} allows to edit its text using an entry.}
 \section{Convenient Construction}{\code{gtkCellRendererText} is the equivalent of \code{\link{gtkCellRendererTextNew}}.}
 \section{Signals}{\describe{\item{\code{edited(renderer, path, new.text, user.data)}}{
 This signal is emitted after \code{renderer} has been edited.
-  
+
 It is the responsibility of the application to update the model
 and store \code{new.text} at the position indicated by \code{path}.
 
@@ -53,7 +53,7 @@ Whether this tag affects the alignment mode.  Default value: FALSE
 \item{\verb{alignment} [\code{\link{PangoAlignment}} : Read / Write]}{
 
 Specifies how to align the lines of text with respect to each other.
-  
+
 Note that this property describes how to align the lines of text in
 case there are several of them. The "xalign" property of \code{\link{GtkCellRenderer}},
 on the other hand, sets the horizontal alignment of the whole text.

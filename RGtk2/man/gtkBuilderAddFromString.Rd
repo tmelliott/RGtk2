@@ -1,7 +1,7 @@
 \alias{gtkBuilderAddFromString}
 \name{gtkBuilderAddFromString}
 \title{gtkBuilderAddFromString}
-\description{Parses a string containing a GtkBuilder 
+\description{Parses a string containing a GtkBuilder
 UI definition and merges it with the current contents of \code{builder}. }
 \usage{gtkBuilderAddFromString(object, buffer, length, .errwarn = TRUE)}
 \arguments{

@@ -11,14 +11,14 @@ operations:
   \preformatted{
 group <- cr$popGroup()
 cr$setSource(group)
-}  
+}
 but is more convenient as their is no need for a variable to store
 the short-lived pointer to the pattern.
-  
+
 The \code{\link{cairoPopGroup}} function calls \code{\link{cairoRestore}}, (balancing a
 call to \code{\link{cairoSave}} by the push_group function), so that any
 changes to the graphics state will not be visible outside the
-group.  
+group.
   Since 1.2}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

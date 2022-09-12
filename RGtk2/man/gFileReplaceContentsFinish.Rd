@@ -2,7 +2,7 @@
 \name{gFileReplaceContentsFinish}
 \title{gFileReplaceContentsFinish}
 \description{Finishes an asynchronous replace of the given \code{file}. See
-\code{\link{gFileReplaceContentsAsync}}. Sets \code{new.etag} to the new entity 
+\code{\link{gFileReplaceContentsAsync}}. Sets \code{new.etag} to the new entity
 tag for the document, if present.}
 \usage{gFileReplaceContentsFinish(object, res, .errwarn = TRUE)}
 \arguments{

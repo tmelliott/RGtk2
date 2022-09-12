@@ -3,7 +3,7 @@
 \title{gtkTreeSortableSetSortColumnId}
 \description{Sets the current sort column to be \code{sort.column.id}. The \code{sortable} will
 resort itself to reflect this change, after emitting a
-\code{\link{gtkTreeSortableSortColumnChanged}} signal. \code{sortable} may either be 
+\code{\link{gtkTreeSortableSortColumnChanged}} signal. \code{sortable} may either be
 a regular column id, or one of the following special values:
 \describe{
 \item{\code{GTK_TREE_SORTABLE_DEFAULT_SORT_COLUMN_ID}}{\emph{undocumented

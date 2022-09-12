@@ -6,7 +6,7 @@ it returns the encoded version of Pango available at run-time,
 as opposed to the version available at compile-time.}
 \usage{pangoVersion()}
 \details{A version number can be encoded into an integer using
-\code{pangoVersionEncode()}.  
+\code{pangoVersionEncode()}.
   Since 1.16}
 \value{[integer]  The encoded version of Pango library
   available at run time.}

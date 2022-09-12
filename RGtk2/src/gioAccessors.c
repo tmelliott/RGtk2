@@ -18,7 +18,7 @@ S_GFileAttributeInfoListGetInfos (USER_OBJECT_ s_obj)
 #endif
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GFileAttributeInfoListGetNInfos (USER_OBJECT_ s_obj)
 {
@@ -36,4 +36,4 @@ S_GFileAttributeInfoListGetNInfos (USER_OBJECT_ s_obj)
 #endif
 
    return(_result);
-} 
+}

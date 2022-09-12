@@ -1,7 +1,7 @@
 \alias{atkTableGetSelectedRows}
 \name{atkTableGetSelectedRows}
 \title{atkTableGetSelectedRows}
-\description{Gets the selected rows of the table by initializing **selected with 
+\description{Gets the selected rows of the table by initializing **selected with
 the selected row numbers.}
 \usage{atkTableGetSelectedRows(object)}
 \arguments{\item{\verb{object}}{[\code{\link{AtkTable}}]  a GObject instance that implements AtkTableIface}}

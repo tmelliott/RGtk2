@@ -38,20 +38,20 @@
 running operation.  It provides a visual clue that processing
 is underway.  The \code{\link{GtkProgressBar}} can be used in two different
 modes: percentage mode and activity mode.
-  
+
 When an application can determine how much work needs to take place
 (e.g. read a fixed number of bytes from a file) and can monitor its
 progress, it can use the \code{\link{GtkProgressBar}} in percentage mode and the user
 sees a growing bar indicating the percentage of the work that has
 been completed.  In this mode, the application is required to call
 \code{\link{gtkProgressBarSetFraction}} periodically to update the progress bar.
-  
+
 When an application has no accurate way of knowing the amount of work
 to do, it can use the \code{\link{GtkProgressBar}} in activity mode, which shows activity
 by a block moving back and forth within the progress area. In this mode,
 the application is required to call \code{\link{gtkProgressBarPulse}} perodically
 to update the progress bar.
-  
+
 There is quite a bit of flexibility provided to control the appearance
 of the \code{\link{GtkProgressBar}}.  Functions are provided to control the
 orientation of the bar, optional text can be displayed along with
@@ -126,7 +126,7 @@ The number of discrete blocks in a progress bar (when shown in the discrete styl
 The preferred place to ellipsize the string, if the progressbar does
 not have enough room to display the entire string, specified as a
 \verb{PangoEllisizeMode}.
-  
+
 Note that setting this property to a value other than
 \code{PANGO_ELLIPSIZE_NONE} has the side-effect that the progressbar requests
 only enough space to display the ellipsis "...". Another means to set a

@@ -18,12 +18,12 @@ makes both of these spaces identical. That is, if there is no
 change to the CTM between a call to \code{\link{cairoSetLineWidth}} and the
 stroking operation, then one can just pass user-space values to
 \code{\link{cairoSetLineWidth}} and ignore this note.
-  
+
 As with the other stroke parameters, the current line width is
 examined by \code{\link{cairoStroke}}, \code{\link{cairoStrokeExtents}}, and
 \code{cairoStrokeToPath()}, but does not have any effect during path
 construction.
-  
+
 The default line width value is 2.0.  }
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

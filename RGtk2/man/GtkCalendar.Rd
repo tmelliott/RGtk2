@@ -34,18 +34,18 @@
  AtkImplementorIface and  \code{\link{GtkBuildable}}.}
 \section{Detailed Description}{\code{\link{GtkCalendar}} is a widget that displays a calendar, one month at a time.
 It can be created with \code{\link{gtkCalendarNew}}.
-  
+
 The month and year currently displayed can be altered with
 \code{\link{gtkCalendarSelectMonth}}. The exact day can be selected from the displayed
 month using \code{\link{gtkCalendarSelectDay}}.
-  
+
 To place a visual marker on a particular day, use \code{\link{gtkCalendarMarkDay}}
 and to remove the marker, \code{\link{gtkCalendarUnmarkDay}}.
 Alternative, all marks can be cleared with \code{\link{gtkCalendarClearMarks}}.
-  
+
 The way in which the calendar itself is displayed can be altered using
 \code{\link{gtkCalendarSetDisplayOptions}}.
-  
+
 The selected date can be retrieved from a \code{\link{GtkCalendar}} using
 \code{\link{gtkCalendarGetDate}}.}
 \section{Structures}{\describe{\item{\verb{GtkCalendar}}{
@@ -56,7 +56,7 @@ that currently have a mark over them.
   \code{month}, \code{year}, and
 \code{selected_day} contain the currently visible month,
 year, and selected day respectively.
-  
+
 All of these fields should be considered read only, and everything in this
 struct should only be modified using the functions provided below.
 

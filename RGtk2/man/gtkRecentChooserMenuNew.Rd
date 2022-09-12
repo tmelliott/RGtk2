@@ -7,9 +7,9 @@
 a menu, each item as a menu item.  Each item inside the menu might
 have an icon, representing its MIME type, and a number, for mnemonic
 access.
-  
+
 This widget implements the \code{\link{GtkRecentChooser}} interface.
-  
+
 This widget creates its own \code{\link{GtkRecentManager}} object.  See the
 \code{\link{gtkRecentChooserMenuNewForManager}} function to know how to create
 a \code{\link{GtkRecentChooserMenu}} widget bound to another \code{\link{GtkRecentManager}} object.

@@ -16,7 +16,7 @@
    +----GVolumeMonitor}}
 \section{Detailed Description}{\code{\link{GVolumeMonitor}} is for listing the user interesting devices and volumes
 on the computer. In other words, what a file selector or file manager
-would show in a sidebar. 
+would show in a sidebar.
   \code{\link{GVolumeMonitor}} is not thread-default-context
 aware, and so should not be used other than from the main
 thread, with no thread-default-context active.}

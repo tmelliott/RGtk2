@@ -13,11 +13,11 @@ and other attributes of the \code{\link{GdkGC}}.}
 \item{\verb{width}}{the width of the rectangle.}
 \item{\verb{height}}{the height of the rectangle.}
 }
-\details{A rectangle drawn filled is 1 pixel smaller in both dimensions than a 
-rectangle outlined. Calling 
-\code{gdk_draw_rectangle (window, gc, TRUE, 0, 0, 20, 20)} 
+\details{A rectangle drawn filled is 1 pixel smaller in both dimensions than a
+rectangle outlined. Calling
+\code{gdk_draw_rectangle (window, gc, TRUE, 0, 0, 20, 20)}
 results in a filled rectangle 20 pixels wide and 20 pixels high. Calling
-\code{gdk_draw_rectangle (window, gc, FALSE, 0, 0, 20, 20)} 
+\code{gdk_draw_rectangle (window, gc, FALSE, 0, 0, 20, 20)}
 results in an outlined rectangle with corners at (0, 0), (0, 20), (20, 20),
 and (20, 0), which makes it 21 pixels wide and 21 pixels high.
   }

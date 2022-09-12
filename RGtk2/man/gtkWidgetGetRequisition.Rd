@@ -8,7 +8,7 @@
 order to figure whether the widget's requisition has actually
 changed after some internal state change (so that they can call
 \code{\link{gtkWidgetQueueResize}} instead of \code{\link{gtkWidgetQueueDraw}}).
-  
+
 Normally, \code{\link{gtkWidgetSizeRequest}} should be used.
   Since 2.20}
 \value{

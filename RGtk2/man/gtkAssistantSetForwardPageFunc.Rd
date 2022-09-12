@@ -4,7 +4,7 @@
 \description{Sets the page forwarding function to be \code{page.func}, this function will
 be used to determine what will be the next page when the user presses
 the forward button. Setting \code{page.func} to \code{NULL} will make the assistant
-to use the default forward function, which just goes to the next visible 
+to use the default forward function, which just goes to the next visible
 page.}
 \usage{gtkAssistantSetForwardPageFunc(object, page.func, data)}
 \arguments{

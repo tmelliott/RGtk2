@@ -11,7 +11,7 @@ start of the text.  The selected region closest to the beginning
 of the text region is assigned the number 0, etc.  Note that adding,
 moving or deleting a selected region can change the numbering.}
 \item{\verb{start.offset}}{[integer]  the new start position of the selection}
-\item{\verb{end.offset}}{[integer]  the new end position of (e.g. offset immediately past) 
+\item{\verb{end.offset}}{[integer]  the new end position of (e.g. offset immediately past)
 the selection}
 }
 \value{[logical] \code{TRUE} if success, \code{FALSE} otherwise}

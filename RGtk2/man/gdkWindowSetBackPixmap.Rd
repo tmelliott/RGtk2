@@ -15,13 +15,13 @@ of \code{NULL}.}
 the origin of \code{window}, or if \code{parent.relative} is \code{TRUE}, the tiling
 will be done based on the origin of the parent window (useful to
 align tiles in a parent with tiles in a child).
-  
+
 A background pixmap of \code{NULL} means that the window will have no
 background.  A window with no background will never have its
 background filled by the windowing system, instead the window will
 contain whatever pixels were already in the corresponding area of
 the display.
-  
+
 The windowing system will normally fill a window with its background
 when the window is obscured then exposed, and when you call
 \code{\link{gdkWindowClear}}.}

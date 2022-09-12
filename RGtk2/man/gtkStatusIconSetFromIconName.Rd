@@ -1,7 +1,7 @@
 \alias{gtkStatusIconSetFromIconName}
 \name{gtkStatusIconSetFromIconName}
 \title{gtkStatusIconSetFromIconName}
-\description{Makes \code{status.icon} display the icon named \code{icon.name} from the 
+\description{Makes \code{status.icon} display the icon named \code{icon.name} from the
 current icon theme.
 See \code{\link{gtkStatusIconNewFromIconName}} for details.}
 \usage{gtkStatusIconSetFromIconName(object, icon.name)}

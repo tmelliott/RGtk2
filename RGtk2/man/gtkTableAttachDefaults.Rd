@@ -2,7 +2,7 @@
 \name{gtkTableAttachDefaults}
 \title{gtkTableAttachDefaults}
 \description{As there are many options associated with \code{\link{gtkTableAttach}}, this convenience function provides the programmer with a means to add children to a table with identical padding and expansion options. The values used for the \code{\link{GtkAttachOptions}} are \code{GTK_EXPAND | GTK_FILL}, and the padding is set to 0.}
-\usage{gtkTableAttachDefaults(object, widget, left.attach, right.attach, 
+\usage{gtkTableAttachDefaults(object, widget, left.attach, right.attach,
     top.attach, bottom.attach)}
 \arguments{
 \item{\verb{object}}{The table to add a new child widget to.}

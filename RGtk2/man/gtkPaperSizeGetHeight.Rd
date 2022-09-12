@@ -1,7 +1,7 @@
 \alias{gtkPaperSizeGetHeight}
 \name{gtkPaperSizeGetHeight}
 \title{gtkPaperSizeGetHeight}
-\description{Gets the paper height of the \code{\link{GtkPaperSize}}, in 
+\description{Gets the paper height of the \code{\link{GtkPaperSize}}, in
 units of \code{unit}.}
 \usage{gtkPaperSizeGetHeight(object, unit)}
 \arguments{

@@ -10,7 +10,7 @@ instead.}
 \details{Note that the type of the returned object will depend
 on the particular font backend Cairo was compiled to use;
 You generally should only use the \code{\link{PangoFontMap}} and
-\code{\link{PangoCairoFontMap}} interfaces on the returned object.  
+\code{\link{PangoCairoFontMap}} interfaces on the returned object.
   Since 1.10}
 \value{[\code{\link{PangoFontMap}}]  the newly allocated \code{\link{PangoFontMap}},}
 \author{Derived by RGtkGen from GTK+ documentation}

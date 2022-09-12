@@ -7,8 +7,8 @@
 \item{\verb{object}}{a \code{\link{GtkPageSetup}}}
 \item{\verb{unit}}{the unit for the return value}
 }
-\details{Note that this function takes orientation, but 
-not margins into consideration. 
+\details{Note that this function takes orientation, but
+not margins into consideration.
 See \code{\link{gtkPageSetupGetPageWidth}}.
   Since 2.10}
 \value{[numeric] the paper width.}

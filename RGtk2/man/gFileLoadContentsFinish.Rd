@@ -1,9 +1,9 @@
 \alias{gFileLoadContentsFinish}
 \name{gFileLoadContentsFinish}
 \title{gFileLoadContentsFinish}
-\description{Finishes an asynchronous load of the \code{file}'s contents. 
-The contents are placed in \code{contents}, and \code{length} is set to the 
-size of the \code{contents} string. If \code{etag.out} is present, it will be 
+\description{Finishes an asynchronous load of the \code{file}'s contents.
+The contents are placed in \code{contents}, and \code{length} is set to the
+size of the \code{contents} string. If \code{etag.out} is present, it will be
 set to the new entity tag for the \code{file}.}
 \usage{gFileLoadContentsFinish(object, res, .errwarn = TRUE)}
 \arguments{

@@ -66,7 +66,7 @@
 some information how it should be presented in the interface. Each action
 provides methods to create icons, menu items and toolbar items representing
 itself.
-  
+
 As well as the callback that is called when the action gets activated, the
 following also gets associated with the action:
 \itemize{
@@ -82,11 +82,11 @@ The action will also have some state information:
 \item visible (shown/hidden)
 \item sensitive (enabled/disabled)
 }
-  
+
 Apart from regular actions, there are \code{\link{GtkToggleAction}}, which can be toggled between two states and \code{\link{GtkRadioAction}}, of which only one in a group
 can be in the "active" state. Other actions can be implemented as \code{\link{GtkAction}}
 subclasses.
-  
+
 Each action can have one or more proxy menu item, toolbar button or
 other proxy widgets.  Proxies mirror the state of the action (text
 label, tooltip, icon, visible, sensitive, etc), and should change when
@@ -119,7 +119,7 @@ The GtkActionGroup this GtkAction is associated with, or NULL (for internal use)
 
 If \code{TRUE}, the action's menu item proxies will ignore the \verb{"gtk-menu-images"}
 setting and always show their image, if available.
-  
+
 Use this property if the menu item would be useless or hard to use
 without their image.
   Default value: FALSE  Since 2.20
@@ -128,10 +128,10 @@ without their image.
 \item{\verb{gicon} [\code{\link{GIcon}} : *                : Read / Write]}{
 
 The \code{\link{GIcon}} displayed in the \code{\link{GtkAction}}.
-  
+
 Note that the stock icon is preferred, if the \verb{"stock-id"}
 property holds the id of an existing stock icon.
-  
+
 This is an appearance property and thus only applies if
 \verb{"use-action-appearance"} is \code{TRUE}.
   Since 2.16
@@ -145,11 +145,11 @@ When TRUE, empty menu proxies for this action are hidden.  Default value: TRUE
 \item{\verb{icon-name} [character : *                : Read / Write]}{
 
 The name of the icon from the icon theme.
-  
+
 Note that the stock icon is preferred, if the \verb{"stock-id"}
 property holds the id of an existing stock icon, and the \code{\link{GIcon}} is
 preferred if the \verb{"gicon"} property is set.
-  
+
 This is an appearance property and thus only applies if
 \verb{"use-action-appearance"} is \code{TRUE}.
   Default value: NULL  Since 2.10
@@ -165,7 +165,7 @@ Whether the action is considered important. When TRUE, toolitem proxies for this
 The label used for menu items and buttons that activate
 this action. If the label is \code{NULL}, GTK+ uses the stock
 label specified via the stock-id property.
-  
+
 This is an appearance property and thus only applies if
 \verb{"use-action-appearance"} is \code{TRUE}.
   Default value: NULL
@@ -184,7 +184,7 @@ Whether the action is enabled.  Default value: TRUE
 \item{\verb{short-label} [character : *                : Read / Write]}{
 
 A shorter label that may be used on toolbar buttons.
-  
+
 This is an appearance property and thus only applies if
 \verb{"use-action-appearance"} is \code{TRUE}.
   Default value: NULL
@@ -193,7 +193,7 @@ This is an appearance property and thus only applies if
 \item{\verb{stock-id} [character : *                : Read / Write]}{
 
 The stock icon displayed in widgets representing this action.
-  
+
 This is an appearance property and thus only applies if
 \verb{"use-action-appearance"} is \code{TRUE}.
   Default value: NULL

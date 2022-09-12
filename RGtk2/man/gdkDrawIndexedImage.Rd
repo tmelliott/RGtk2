@@ -3,7 +3,7 @@
 \title{gdkDrawIndexedImage}
 \description{Draws an indexed image in the drawable, using a \code{\link{GdkRgbCmap}} to assign
 actual colors to the color indices.}
-\usage{gdkDrawIndexedImage(object, gc, x, y, width, height, dith, buf, 
+\usage{gdkDrawIndexedImage(object, gc, x, y, width, height, dith, buf,
     cmap)}
 \arguments{
 \item{\verb{object}}{The \code{\link{GdkDrawable}} to draw in (usually a \code{\link{GdkWindow}}).}

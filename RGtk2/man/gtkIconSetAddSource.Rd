@@ -14,14 +14,14 @@ a \code{\link{GtkIconSource}}.}
 }
 \details{This function copies \code{source}, so you can reuse the same source immediately
 without affecting the icon set.
-  
+
 An example of when you'd use this function: a web browser's "Back
 to Previous Page" icon might point in a different direction in
 Hebrew and in English; it might look different when insensitive;
 and it might change size depending on toolbar mode (small/large
 icons). So a single icon set would contain all those variants of
 the icon, and you might add a separate source for each one.
-  
+
 You should nearly always add a "default" icon source with all
 fields wildcarded, which will be used as a fallback if no more
 specific source matches. \code{\link{GtkIconSet}} always prefers more specific

@@ -1,7 +1,7 @@
 \alias{gtkLabelGetLineWrap}
 \name{gtkLabelGetLineWrap}
 \title{gtkLabelGetLineWrap}
-\description{Returns whether lines in the label are automatically wrapped. 
+\description{Returns whether lines in the label are automatically wrapped.
 See \code{\link{gtkLabelSetLineWrap}}.}
 \usage{gtkLabelGetLineWrap(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkLabel}}}}

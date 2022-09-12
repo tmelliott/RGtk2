@@ -1,8 +1,8 @@
 \alias{gtkWidgetChildNotify}
 \name{gtkWidgetChildNotify}
 \title{gtkWidgetChildNotify}
-\description{Emits a \code{\link{gtkWidgetChildNotify}} signal for the 
-child property \code{child.property} 
+\description{Emits a \code{\link{gtkWidgetChildNotify}} signal for the
+child property \code{child.property}
 on \code{widget}.}
 \usage{gtkWidgetChildNotify(object, child.property)}
 \arguments{

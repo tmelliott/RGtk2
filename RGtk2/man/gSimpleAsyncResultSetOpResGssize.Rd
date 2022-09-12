@@ -1,7 +1,7 @@
 \alias{gSimpleAsyncResultSetOpResGssize}
 \name{gSimpleAsyncResultSetOpResGssize}
 \title{gSimpleAsyncResultSetOpResGssize}
-\description{Sets the operation result within the asynchronous result to 
+\description{Sets the operation result within the asynchronous result to
 the given \code{op.res}.}
 \usage{gSimpleAsyncResultSetOpResGssize(object, op.res)}
 \arguments{

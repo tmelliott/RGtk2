@@ -51,18 +51,18 @@
 \section{Interfaces}{GtkToolbar implements
  AtkImplementorIface,  \code{\link{GtkBuildable}},  \code{\link{GtkToolShell}} and  \code{\link{GtkOrientable}}.}
 \section{Detailed Description}{A toolbar is created with a call to \code{\link{gtkToolbarNew}}.
-  
+
 A toolbar can contain instances of a subclass of \code{\link{GtkToolItem}}. To add
 a \code{\link{GtkToolItem}} to the a toolbar, use \code{\link{gtkToolbarInsert}}. To remove
 an item from the toolbar use \code{\link{gtkContainerRemove}}. To add a button
 to the toolbar, add an instance of \code{\link{GtkToolButton}}.
-  
+
 Toolbar items can be visually grouped by adding instances of
 \code{\link{GtkSeparatorToolItem}} to the toolbar. If a \code{\link{GtkSeparatorToolItem}} has
 the "expand" property set to \verb{TRUE} and the "draw" property set to
 \verb{FALSE} the effect is to force all following items to the end of the
 toolbar.
-  
+
 Creating a context menu for the toolbar can be done by connecting to
 the \verb{"popup-context-menu"} signal.}
 \section{Structures}{\describe{\item{\verb{GtkToolbar}}{
@@ -127,7 +127,7 @@ Emitted when the orientation of the toolbar changes.
 \item{\code{popup-context-menu(toolbar, x, y, button, user.data)}}{
 Emitted when the user right-clicks the toolbar or uses the
 keybinding to display a popup menu.
-  
+
 Application developers should handle this signal if they want
 to display a context menu on the toolbar. The context-menu should
 appear at the coordinates given by \code{x} and \code{y}. The mouse button
@@ -163,7 +163,7 @@ Emitted when the style of the toolbar changes.
 The size of the icons in a toolbar is normally determined by
 the toolbar-icon-size setting. When this property is set, it
 overrides the setting.
-  
+
 This should only be used for special-purpose toolbars, normal
 application toolbars should respect the user preferences for the
 size of icons.

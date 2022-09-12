@@ -9,8 +9,8 @@ section of the PostScript output.}
 \details{This function should be called at most once per surface, and must
 be called before any call to \code{\link{cairoPsSurfaceDscBeginPageSetup}}
 and before any drawing is performed to the surface.
-  
-See \code{\link{cairoPsSurfaceDscComment}} for more details.  
+
+See \code{\link{cairoPsSurfaceDscComment}} for more details.
   Since 1.2}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

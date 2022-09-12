@@ -13,7 +13,7 @@ it retrieves the last size request value from \code{widget->requisition},
 while \code{\link{gtkWidgetSizeRequest}} actually calls the "size_request" method
 on \code{widget} to compute the size request and fill in \code{widget->requisition},
 and only then returns \code{widget->requisition}.
-  
+
 Because this function does not call the "size_request" method, it
 can only be used when you know that \code{widget->requisition} is
 up-to-date, that is, \code{\link{gtkWidgetSizeRequest}} has been called

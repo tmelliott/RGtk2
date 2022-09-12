@@ -1,7 +1,7 @@
 \alias{gVolumeGetIdentifier}
 \name{gVolumeGetIdentifier}
 \title{gVolumeGetIdentifier}
-\description{Gets the identifier of the given kind for \code{volume}. 
+\description{Gets the identifier of the given kind for \code{volume}.
 See the introduction
 for more information about volume identifiers.}
 \usage{gVolumeGetIdentifier(object, kind)}

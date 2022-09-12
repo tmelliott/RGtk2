@@ -33,19 +33,19 @@ the user without showing a dialog. It is often temporarily shown
 at the top or bottom of a document. In contrast to \code{\link{GtkDialog}}, which
 has a horizontal action area at the bottom, \code{\link{GtkInfoBar}} has a
 vertical action area at the side.
-  
+
 The API of \code{\link{GtkInfoBar}} is very similar to \code{\link{GtkDialog}}, allowing you
 to add buttons to the action area with \code{\link{gtkInfoBarAddButton}} or
 \code{\link{gtkInfoBarNewWithButtons}}. The sensitivity of action widgets
 can be controlled with \code{\link{gtkInfoBarSetResponseSensitive}}.
 To add widgets to the main content area of a \code{\link{GtkInfoBar}}, use
 \code{\link{gtkInfoBarGetContentArea}} and add your widgets to the container.
-  
+
 Similar to \code{\link{GtkMessageDialog}}, the contents of a \code{\link{GtkInfoBar}} can by
 classified as error message, warning, informational message, etc,
 by using \code{\link{gtkInfoBarSetMessageType}}. GTK+ uses the message type
 to determine the background color of the message area.
-  
+
  \emph{Simple GtkInfoBar usage.}\preformatted{/* set up info bar */
 info_bar = gtk_info_bar_new ();
 gtk_widget_set_no_show_all (info_bar, TRUE);
@@ -70,7 +70,7 @@ gtk_label_set_text (GTK_LABEL (message_label), error_message);
 gtk_info_bar_set_message_type (GTK_INFO_BAR (info_bar),
                                GTK_MESSAGE_ERROR);
 gtk_widget_show (info_bar);
-}  
+}
  \emph{GtkInfoBar as GtkBuildable}
 The GtkInfoBar implementation of the GtkBuildable interface exposes
 the content area and action area as internal children with the names
@@ -92,7 +92,7 @@ The ::close signal is a
 keybinding signal
 which gets emitted when the user uses a keybinding to dismiss
 the info bar.
-  
+
 The default binding for this signal is the Escape key.
   Since 2.18
 
@@ -118,7 +118,7 @@ widget was clicked.
 \section{Properties}{\describe{\item{\verb{message-type} [\code{\link{GtkMessageType}} : Read / Write / Construct]}{
 
 The type of the message.
-  
+
 The type is used to determine the colors to use in the info bar.
 The following symbolic color names can by used to customize
 these colors:
@@ -127,7 +127,7 @@ these colors:
 "question_fg_color", "question_bg_color",
 "error_fg_color", "error_bg_color".
 "other_fg_color", "other_bg_color".
-  
+
 If the type is \verb{GTK_MESSAGE_OTHER}, no info bar is painted but the
 colors are still set.
   Default value: GTK_MESSAGE_INFO  Since 2.18

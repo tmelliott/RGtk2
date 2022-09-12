@@ -2,7 +2,7 @@
 \alias{findWidgetByType}
 \title{Find widget in hierarchy by type}
 \description{
-\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)} 
+\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)}
 
   This function recursively descends the widget hierarchy
   identified by the root node \code{win} and finds the first
@@ -51,5 +51,3 @@ Duncan Temple Lang <duncan@research.bell-labs.com>
 
 \keyword{interface}
 \keyword{internal}
-
-

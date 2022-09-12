@@ -62,7 +62,7 @@ If you want to handle errors in loading the file yourself,
 for example by displaying an error message, then load the image with
 \code{\link{gdkPixbufNewFromFile}}, then create the \code{\link{GtkImage}} with
 \code{\link{gtkImageNewFromPixbuf}}.
-  
+
 The image file may contain an animation, if so the \code{\link{GtkImage}} will
 display an animation (\code{\link{GdkPixbufAnimation}}) instead of a static image.
   \code{\link{GtkImage}} is a subclass of \code{\link{GtkMisc}}, which implies that you can
@@ -81,34 +81,34 @@ button_press_callback <- function(event_box, event, data) {
   print(paste("Event box clicked at coordinates ", event[["x"]], ",",
               event[["y"]], sep=""))
 
-  ## Returning TRUE means we handled the event, so the signal 
-  ## emission should be stopped (don't call any further 
+  ## Returning TRUE means we handled the event, so the signal
+  ## emission should be stopped (don't call any further
   ## callbacks that may be connected). Return FALSE
   ## to continue invoking callbacks.
-  
+
   return(TRUE)
 }
 
 create_image <- function() {
   image <- gtkImage(file="myfile.png")
-  
+
   event_box <- gtkEventBox()
   event_box$add(image)
-  
-  
+
+
   gSignalConnect(event_box, "button_press_event", button_press_callback, image)
-  
+
   return(image)
 }
 }
-  
+
 When handling events on the event box, keep in mind that coordinates
 in the image may be different from event box coordinates due to
 the alignment and padding settings on the image (see \code{\link{GtkMisc}}).
 The simplest way to solve this is to set the alignment to 0.0
 (left/top), and set the padding to zero. Then the origin of
 the image will be the same as the origin of the event box.
-  
+
 Sometimes an application will want to avoid depending on external data
 files, such as image files. GTK+ comes with a program to avoid this,
 called \command{gdk-pixbuf-csource}. This program

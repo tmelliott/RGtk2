@@ -39,7 +39,7 @@ should not be used directly.
 The ::color-set signal is emitted when the user selects a color.
 When handling this signal, use \code{\link{gtkColorButtonGetColor}} and
 \code{\link{gtkColorButtonGetAlpha}} to find out which color was just selected.
-  
+
 Note that this signal is only emitted when the \emph{user}
 changes the color. If you need to react to programmatic color changes
 as well, use the notify::color signal.

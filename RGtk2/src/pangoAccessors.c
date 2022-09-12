@@ -14,7 +14,7 @@ S_PangoColorGetRed (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoColorGetGreen (USER_OBJECT_ s_obj)
 {
@@ -28,7 +28,7 @@ S_PangoColorGetGreen (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoColorGetBlue (USER_OBJECT_ s_obj)
 {
@@ -42,7 +42,7 @@ S_PangoColorGetBlue (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoGlyphStringGetNumGlyphs (USER_OBJECT_ s_obj)
 {
@@ -56,7 +56,7 @@ S_PangoGlyphStringGetNumGlyphs (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoGlyphStringGetGlyphs (USER_OBJECT_ s_obj)
 {
@@ -70,7 +70,7 @@ S_PangoGlyphStringGetGlyphs (USER_OBJECT_ s_obj)
    _result = toRPointer(val, "PangoGlyphInfo");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoGlyphStringGetLogClusters (USER_OBJECT_ s_obj)
 {
@@ -84,7 +84,7 @@ S_PangoGlyphStringGetLogClusters (USER_OBJECT_ s_obj)
    _result = asRIntegerArray(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoItemGetOffset (USER_OBJECT_ s_obj)
 {
@@ -98,7 +98,7 @@ S_PangoItemGetOffset (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoItemGetLength (USER_OBJECT_ s_obj)
 {
@@ -112,7 +112,7 @@ S_PangoItemGetLength (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoItemGetNumChars (USER_OBJECT_ s_obj)
 {
@@ -126,7 +126,7 @@ S_PangoItemGetNumChars (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoItemGetAnalysis (USER_OBJECT_ s_obj)
 {
@@ -140,7 +140,7 @@ S_PangoItemGetAnalysis (USER_OBJECT_ s_obj)
    _result = toRPointer(&val, "PangoAnalysis");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoLayoutLineGetLayout (USER_OBJECT_ s_obj)
 {
@@ -154,7 +154,7 @@ S_PangoLayoutLineGetLayout (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "PangoLayout");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoLayoutLineGetStartIndex (USER_OBJECT_ s_obj)
 {
@@ -168,7 +168,7 @@ S_PangoLayoutLineGetStartIndex (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoLayoutLineGetLength (USER_OBJECT_ s_obj)
 {
@@ -182,7 +182,7 @@ S_PangoLayoutLineGetLength (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoLayoutLineGetRuns (USER_OBJECT_ s_obj)
 {
@@ -196,7 +196,7 @@ S_PangoLayoutLineGetRuns (USER_OBJECT_ s_obj)
    _result = asRGSList(val, "PangoGlyphItem");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoLayoutLineGetIsParagraphStart (USER_OBJECT_ s_obj)
 {
@@ -210,7 +210,7 @@ S_PangoLayoutLineGetIsParagraphStart (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoLayoutLineGetResolvedDir (USER_OBJECT_ s_obj)
 {
@@ -224,7 +224,7 @@ S_PangoLayoutLineGetResolvedDir (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoAnalysisGetFont (USER_OBJECT_ s_obj)
 {
@@ -238,7 +238,7 @@ S_PangoAnalysisGetFont (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "PangoFont");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoAnalysisGetLevel (USER_OBJECT_ s_obj)
 {
@@ -252,7 +252,7 @@ S_PangoAnalysisGetLevel (USER_OBJECT_ s_obj)
    _result = asRRaw(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoAnalysisGetLanguage (USER_OBJECT_ s_obj)
 {
@@ -266,7 +266,7 @@ S_PangoAnalysisGetLanguage (USER_OBJECT_ s_obj)
    _result = toRPointer(val ? (val) : NULL, "PangoLanguage");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoAnalysisGetExtraAttrs (USER_OBJECT_ s_obj)
 {
@@ -280,7 +280,7 @@ S_PangoAnalysisGetExtraAttrs (USER_OBJECT_ s_obj)
    _result = asRGSListConv(val, ((ElementConverter)asRPangoAttributeCopy));
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoLogAttrGetIsLineBreak (USER_OBJECT_ s_obj)
 {
@@ -294,7 +294,7 @@ S_PangoLogAttrGetIsLineBreak (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoLogAttrGetIsMandatoryBreak (USER_OBJECT_ s_obj)
 {
@@ -308,7 +308,7 @@ S_PangoLogAttrGetIsMandatoryBreak (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoLogAttrGetIsCharBreak (USER_OBJECT_ s_obj)
 {
@@ -322,7 +322,7 @@ S_PangoLogAttrGetIsCharBreak (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoLogAttrGetIsWhite (USER_OBJECT_ s_obj)
 {
@@ -336,7 +336,7 @@ S_PangoLogAttrGetIsWhite (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoLogAttrGetIsCursorPosition (USER_OBJECT_ s_obj)
 {
@@ -350,7 +350,7 @@ S_PangoLogAttrGetIsCursorPosition (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoLogAttrGetIsWordStart (USER_OBJECT_ s_obj)
 {
@@ -364,7 +364,7 @@ S_PangoLogAttrGetIsWordStart (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoLogAttrGetIsWordEnd (USER_OBJECT_ s_obj)
 {
@@ -378,7 +378,7 @@ S_PangoLogAttrGetIsWordEnd (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoLogAttrGetIsSentenceBoundary (USER_OBJECT_ s_obj)
 {
@@ -392,7 +392,7 @@ S_PangoLogAttrGetIsSentenceBoundary (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoLogAttrGetIsSentenceStart (USER_OBJECT_ s_obj)
 {
@@ -406,7 +406,7 @@ S_PangoLogAttrGetIsSentenceStart (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoLogAttrGetIsSentenceEnd (USER_OBJECT_ s_obj)
 {
@@ -420,7 +420,7 @@ S_PangoLogAttrGetIsSentenceEnd (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoLogAttrGetBackspaceDeletesCharacter (USER_OBJECT_ s_obj)
 {
@@ -434,7 +434,7 @@ S_PangoLogAttrGetBackspaceDeletesCharacter (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoAttributeGetKlass (USER_OBJECT_ s_obj)
 {
@@ -448,7 +448,7 @@ S_PangoAttributeGetKlass (USER_OBJECT_ s_obj)
    _result = toRPointer(val, "PangoAttrClass");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoAttributeGetStartIndex (USER_OBJECT_ s_obj)
 {
@@ -462,7 +462,7 @@ S_PangoAttributeGetStartIndex (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoAttributeGetEndIndex (USER_OBJECT_ s_obj)
 {
@@ -476,7 +476,7 @@ S_PangoAttributeGetEndIndex (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoAttrClassGetType (USER_OBJECT_ s_obj)
 {
@@ -490,7 +490,7 @@ S_PangoAttrClassGetType (USER_OBJECT_ s_obj)
    _result = asREnum(val, PANGO_TYPE_ATTR_TYPE);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoGlyphItemGetItem (USER_OBJECT_ s_obj)
 {
@@ -504,7 +504,7 @@ S_PangoGlyphItemGetItem (USER_OBJECT_ s_obj)
    _result = toRPointerWithFinalizer(val, "PangoItem", (RPointerFinalizer) pango_item_free);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoGlyphItemGetGlyphs (USER_OBJECT_ s_obj)
 {
@@ -518,7 +518,7 @@ S_PangoGlyphItemGetGlyphs (USER_OBJECT_ s_obj)
    _result = toRPointerWithFinalizer(val ? pango_glyph_string_copy(val) : NULL, "PangoGlyphString", (RPointerFinalizer) pango_glyph_string_free);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoGlyphInfoGetGlyph (USER_OBJECT_ s_obj)
 {
@@ -532,7 +532,7 @@ S_PangoGlyphInfoGetGlyph (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoGlyphInfoGetGeometry (USER_OBJECT_ s_obj)
 {
@@ -546,7 +546,7 @@ S_PangoGlyphInfoGetGeometry (USER_OBJECT_ s_obj)
    _result = toRPointer(&val, "PangoGlyphGeometry");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoGlyphInfoGetAttr (USER_OBJECT_ s_obj)
 {
@@ -560,7 +560,7 @@ S_PangoGlyphInfoGetAttr (USER_OBJECT_ s_obj)
    _result = toRPointer(&val, "PangoGlyphVisAttr");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoGlyphGeometryGetWidth (USER_OBJECT_ s_obj)
 {
@@ -574,7 +574,7 @@ S_PangoGlyphGeometryGetWidth (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoGlyphGeometryGetXOffset (USER_OBJECT_ s_obj)
 {
@@ -588,7 +588,7 @@ S_PangoGlyphGeometryGetXOffset (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoGlyphGeometryGetYOffset (USER_OBJECT_ s_obj)
 {
@@ -602,7 +602,7 @@ S_PangoGlyphGeometryGetYOffset (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoGlyphVisAttrGetIsClusterStart (USER_OBJECT_ s_obj)
 {
@@ -616,7 +616,7 @@ S_PangoGlyphVisAttrGetIsClusterStart (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoAttrStringGetValue (USER_OBJECT_ s_obj)
 {
@@ -630,7 +630,7 @@ S_PangoAttrStringGetValue (USER_OBJECT_ s_obj)
    _result = asRString(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoAttrLanguageGetValue (USER_OBJECT_ s_obj)
 {
@@ -644,7 +644,7 @@ S_PangoAttrLanguageGetValue (USER_OBJECT_ s_obj)
    _result = toRPointer(val ? (val) : NULL, "PangoLanguage");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoAttrColorGetColor (USER_OBJECT_ s_obj)
 {
@@ -658,7 +658,7 @@ S_PangoAttrColorGetColor (USER_OBJECT_ s_obj)
    _result = toRPointerWithFinalizer(&val ? pango_color_copy(&val) : NULL, "PangoColor", (RPointerFinalizer) pango_color_free);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoAttrIntGetValue (USER_OBJECT_ s_obj)
 {
@@ -672,7 +672,7 @@ S_PangoAttrIntGetValue (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoAttrFloatGetValue (USER_OBJECT_ s_obj)
 {
@@ -686,7 +686,7 @@ S_PangoAttrFloatGetValue (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoAttrFontDescGetDesc (USER_OBJECT_ s_obj)
 {
@@ -700,7 +700,7 @@ S_PangoAttrFontDescGetDesc (USER_OBJECT_ s_obj)
    _result = toRPointerWithFinalizer(val ? pango_font_description_copy(val) : NULL, "PangoFontDescription", (RPointerFinalizer) pango_font_description_free);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoAttrShapeGetInkRect (USER_OBJECT_ s_obj)
 {
@@ -714,7 +714,7 @@ S_PangoAttrShapeGetInkRect (USER_OBJECT_ s_obj)
    _result = asRPangoRectangle(&val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoAttrShapeGetLogicalRect (USER_OBJECT_ s_obj)
 {
@@ -728,7 +728,7 @@ S_PangoAttrShapeGetLogicalRect (USER_OBJECT_ s_obj)
    _result = asRPangoRectangle(&val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoAttrSizeGetSize (USER_OBJECT_ s_obj)
 {
@@ -742,7 +742,7 @@ S_PangoAttrSizeGetSize (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_PangoAttrSizeGetAbsolute (USER_OBJECT_ s_obj)
 {
@@ -756,4 +756,4 @@ S_PangoAttrSizeGetAbsolute (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}

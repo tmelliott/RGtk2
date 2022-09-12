@@ -30,13 +30,13 @@ window}) containing the child widget. A thin
 \dfn{ghost} is drawn in the original location of the
 handlebox. By dragging the separate window back to its original
 location, it can be reattached.
-  
+
 When reattaching, the ghost and float window, must be aligned
 along one of the edges, the \dfn{snap edge}.
 This either can be specified by the application programmer
 explicitely, or GTK+ will pick a reasonable default based
 on the handle position.
-  
+
 To make detaching and reattaching the handlebox as minimally confusing
 as possible to the user, it is important to set the snap edge so that
 the snap edge does not move when the handlebox is deattached. For

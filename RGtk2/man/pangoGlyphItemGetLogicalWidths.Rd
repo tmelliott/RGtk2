@@ -12,7 +12,7 @@ cluster is divided equally among the characters.}
   (glyph_item->item->offset is an offset from the
    start of \code{text})}
 }
-\details{See also \code{\link{pangoGlyphStringGetLogicalWidths}}.  
+\details{See also \code{\link{pangoGlyphStringGetLogicalWidths}}.
   Since 1.26}
 \value{
 A list containing the following elements:

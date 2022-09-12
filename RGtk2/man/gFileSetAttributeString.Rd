@@ -1,9 +1,9 @@
 \alias{gFileSetAttributeString}
 \name{gFileSetAttributeString}
 \title{gFileSetAttributeString}
-\description{Sets \code{attribute} of type \code{G_FILE_ATTRIBUTE_TYPE_STRING} to \code{value}. 
+\description{Sets \code{attribute} of type \code{G_FILE_ATTRIBUTE_TYPE_STRING} to \code{value}.
 If \code{attribute} is of a different type, this operation will fail.}
-\usage{gFileSetAttributeString(object, attribute, value, flags = "G_FILE_QUERY_INFO_NONE", 
+\usage{gFileSetAttributeString(object, attribute, value, flags = "G_FILE_QUERY_INFO_NONE",
     cancellable = NULL, .errwarn = TRUE)}
 \arguments{
 \item{\verb{object}}{input \code{\link{GFile}}.}

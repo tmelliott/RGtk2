@@ -15,7 +15,7 @@ request to a smaller value.}
 \details{If \code{\link{gtkWindowResize}} is called before showing a window for the
 first time, it overrides any default size set with
 \code{\link{gtkWindowSetDefaultSize}}.
-  
+
 Windows may not be resized smaller than 1 by 1 pixels.}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

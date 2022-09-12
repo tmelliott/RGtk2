@@ -30,7 +30,7 @@
     image's pixel data, its color space, bits per sample, width and
     height, and the rowstride (the number of bytes between the start of
     one row and the start of the next).
-  
+
 
 }}}
 \section{Convenient Construction}{\code{gdkPixbuf} is the result of collapsing the constructors of \code{GdkPixbuf} (\code{\link{gdkPixbufNew}}, \code{\link{gdkPixbufNewFromFile}}, \code{\link{gdkPixbufNewFromFileAtSize}}, \code{\link{gdkPixbufNewFromFileAtScale}}, \code{\link{gdkPixbufNewFromData}}, \code{\link{gdkPixbufNewFromXpmData}}, NULL, \code{\link{gdkPixbufNewFromStream}}, \code{\link{gdkPixbufNewFromStreamAtScale}}) and accepts a subset of its arguments matching the required arguments of one of its delegate constructors.}
@@ -54,7 +54,7 @@ given operation on the type of image at hand.}
 \item{\verb{GdkColorspace}}{
     This enumeration defines the color spaces that are supported by
     the \command{gdk-pixbuf} library.  Currently only RGB is supported.
-  
+
 
 \describe{\item{\verb{b}}{Indicates a red/green/blue additive color space.}}
 
@@ -68,7 +68,7 @@ given operation on the type of image at hand.}
     channel extension, it will be possible to do full alpha
     compositing onto arbitrary drawables.  For now both cases fall
     back to a bilevel clipping mask.
-  
+
 
 \describe{
 \item{\verb{bilevel}}{A bilevel clipping mask (black and white)

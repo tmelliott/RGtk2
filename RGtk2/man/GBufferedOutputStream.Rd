@@ -16,19 +16,19 @@
    +----GOutputStream
          +----GFilterOutputStream
                +----GBufferedOutputStream}}
-\section{Detailed Description}{Buffered output stream implements \code{\link{GFilterOutputStream}} and provides 
-for buffered writes. 
-  
+\section{Detailed Description}{Buffered output stream implements \code{\link{GFilterOutputStream}} and provides
+for buffered writes.
+
 By default, \code{\link{GBufferedOutputStream}}'s buffer size is set at 4 kilobytes.
-  
-To create a buffered output stream, use \code{\link{gBufferedOutputStreamNew}}, 
-or \code{\link{gBufferedOutputStreamNewSized}} to specify the buffer's size 
+
+To create a buffered output stream, use \code{\link{gBufferedOutputStreamNew}},
+or \code{\link{gBufferedOutputStreamNewSized}} to specify the buffer's size
 at construction.
-  
-To get the size of a buffer within a buffered input stream, use 
-\code{\link{gBufferedOutputStreamGetBufferSize}}. To change the size of a 
-buffered output stream's buffer, use 
-\code{\link{gBufferedOutputStreamSetBufferSize}}. Note that the buffer's 
+
+To get the size of a buffer within a buffered input stream, use
+\code{\link{gBufferedOutputStreamGetBufferSize}}. To change the size of a
+buffered output stream's buffer, use
+\code{\link{gBufferedOutputStreamSetBufferSize}}. Note that the buffer's
 size cannot be reduced below the size of the data within the buffer.}
 \section{Structures}{\describe{\item{\verb{GBufferedOutputStream}}{
 An implementation of \code{\link{GFilterOutputStream}} with a sized buffer.

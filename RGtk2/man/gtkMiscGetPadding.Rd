@@ -1,7 +1,7 @@
 \alias{gtkMiscGetPadding}
 \name{gtkMiscGetPadding}
 \title{gtkMiscGetPadding}
-\description{Gets the padding in the X and Y directions of the widget. 
+\description{Gets the padding in the X and Y directions of the widget.
 See \code{\link{gtkMiscSetPadding}}.}
 \usage{gtkMiscGetPadding(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkMisc}}}}

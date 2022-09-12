@@ -14,7 +14,7 @@ the connection.}
 }
 \details{This option is only functional on certain kinds of sockets. (Notably,
 \code{G_SOCKET_PROTOCOL_TCP} sockets.)
-  
+
 The exact time between pings is system- and protocol-dependent, but will
 normally be at least two hours. Most commonly, you would set this flag
 on a server socket if you want to allow clients to remain idle for long

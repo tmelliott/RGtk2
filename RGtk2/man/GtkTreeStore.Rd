@@ -42,7 +42,7 @@ drop interfaces.}
 to specify the model columns with a <columns> element that may
 contain multiple <column> elements, each specifying one model
 column. The "type" attribute specifies the data type for the column.
-  
+
  \emph{A UI Definition fragment for a tree store}\preformatted{<object class="GtkTreeStore">
   <columns>
     <column type="gchararray"/>

@@ -21,7 +21,7 @@
 \section{Detailed Description}{\code{\link{GtkCellLayout}} is an interface to be implemented by all objects which
 want to provide a \verb{GtkTreeViewColumn-like} API for packing cells, setting
 attributes and data funcs.
-  
+
 One of the notable features provided by implementations of GtkCellLayout
 are \emph{attributes}. Attributes let you set the properties
 in flexible ways. They can just be set to constant values like regular
@@ -39,7 +39,7 @@ as <child> elements in UI definitions. They support a custom
 multiple <attribute> elements. Each <attribute> element has
 a name attribute which specifies a property of the cell renderer; the
 content of the element is the attribute value.
-  
+
  \emph{A UI definition fragment specifying attributes}\preformatted{<object class="GtkCellView">
   <child>
     <object class="GtkCellRendererText"/>

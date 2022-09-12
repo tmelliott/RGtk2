@@ -1,8 +1,8 @@
 \alias{gtkBoxPackEnd}
 \name{gtkBoxPackEnd}
 \title{gtkBoxPackEnd}
-\description{Adds \code{child} to \code{box}, packed with reference to the end of \code{box}.  
-The \code{child} is packed after (away from end of) any other child 
+\description{Adds \code{child} to \code{box}, packed with reference to the end of \code{box}.
+The \code{child} is packed after (away from end of) any other child
 packed with reference to the end of \code{box}.}
 \usage{gtkBoxPackEnd(object, child, expand = TRUE, fill = TRUE, padding = 0)}
 \arguments{

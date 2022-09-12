@@ -1,7 +1,7 @@
 \alias{atkComponentGetPosition}
 \name{atkComponentGetPosition}
 \title{atkComponentGetPosition}
-\description{Gets the position of \code{component} in the form of 
+\description{Gets the position of \code{component} in the form of
 a point specifying \code{component}'s top-left corner.}
 \usage{atkComponentGetPosition(object, coord.type)}
 \arguments{

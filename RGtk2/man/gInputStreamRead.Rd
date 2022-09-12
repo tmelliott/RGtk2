@@ -12,18 +12,18 @@
 }
 \details{If count is zero returns zero and does nothing. A value of \code{count}
 larger than \code{G_MAXSSIZE} will cause a \code{G_IO_ERROR_INVALID_ARGUMENT} error.
-  
+
 On success, the number of bytes read into the buffer is returned.
 It is not an error if this is not the same as the requested size, as it
 can happen e.g. near the end of a file. Zero is returned on end of file
 (or if \code{count} is zero),  but never otherwise.
-  
+
 If \code{cancellable} is not NULL, then the operation can be cancelled by
 triggering the cancellable object from another thread. If the operation
 was cancelled, the error G_IO_ERROR_CANCELLED will be returned. If an
 operation was partially finished when the operation was cancelled the
 partial result will be returned, without an error.
-  
+
 On error -1 is returned and \code{error} is set accordingly.}
 \value{
 A list containing the following elements:

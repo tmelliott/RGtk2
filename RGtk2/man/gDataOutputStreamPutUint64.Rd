@@ -2,7 +2,7 @@
 \name{gDataOutputStreamPutUint64}
 \title{gDataOutputStreamPutUint64}
 \description{Puts an unsigned 64-bit integer into the stream.}
-\usage{gDataOutputStreamPutUint64(object, data, cancellable = NULL, 
+\usage{gDataOutputStreamPutUint64(object, data, cancellable = NULL,
     .errwarn = TRUE)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GDataOutputStream}}.}

@@ -1,7 +1,7 @@
 \alias{gFileInfoSetName}
 \name{gFileInfoSetName}
 \title{gFileInfoSetName}
-\description{Sets the name attribute for the current \code{\link{GFileInfo}}. 
+\description{Sets the name attribute for the current \code{\link{GFileInfo}}.
 See \code{G_FILE_ATTRIBUTE_STANDARD_NAME}.}
 \usage{gFileInfoSetName(object, name)}
 \arguments{

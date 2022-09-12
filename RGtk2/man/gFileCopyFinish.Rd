@@ -1,7 +1,7 @@
 \alias{gFileCopyFinish}
 \name{gFileCopyFinish}
 \title{gFileCopyFinish}
-\description{Finishes copying the file started with 
+\description{Finishes copying the file started with
 \code{\link{gFileCopyAsync}}.}
 \usage{gFileCopyFinish(object, res, .errwarn = TRUE)}
 \arguments{

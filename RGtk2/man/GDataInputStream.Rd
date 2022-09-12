@@ -37,7 +37,7 @@ GEnum
 GEnum
    +----GDataStreamNewlineType
 }}
-\section{Detailed Description}{Data input stream implements \code{\link{GInputStream}} and includes functions for 
+\section{Detailed Description}{Data input stream implements \code{\link{GInputStream}} and includes functions for
 reading structured data directly from a binary input stream.}
 \section{Structures}{\describe{\item{\verb{GDataInputStream}}{
 An implementation of \code{\link{GBufferedInputStream}} that allows for high-level

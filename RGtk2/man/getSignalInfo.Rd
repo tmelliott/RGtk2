@@ -2,7 +2,7 @@
 \alias{getSignalInfo}
 \title{Information for all signals for multiple classes}
 \description{
-\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)} 
+\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)}
 
   This retrieves the signal information for
   all of the signals defined for each of the classes

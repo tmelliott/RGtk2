@@ -1,7 +1,7 @@
 \alias{gdkPixbufNew}
 \name{gdkPixbufNew}
 \title{gdkPixbufNew}
-\description{Creates a new \code{\link{GdkPixbuf}} structure and allocates a buffer for it.  The 
+\description{Creates a new \code{\link{GdkPixbuf}} structure and allocates a buffer for it.  The
 buffer has an optimal rowstride.  Note that the buffer is not cleared;
 you will have to fill it completely yourself.}
 \usage{gdkPixbufNew(colorspace, has.alpha, bits.per.sample, width, height)}

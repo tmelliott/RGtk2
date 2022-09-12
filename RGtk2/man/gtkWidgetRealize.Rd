@@ -13,7 +13,7 @@ the widget's parent widgets to be realized; calling
 \code{\link{gtkWidgetRealize}} realizes the widget's parents in addition to
 \code{widget} itself. If a widget is not yet inside a toplevel window
 when you realize it, bad things will happen.
-  
+
 This function is primarily used in widget implementations, and
 isn't very useful otherwise. Many times when you think you might
 need it, a better approach is to connect to a signal that will be

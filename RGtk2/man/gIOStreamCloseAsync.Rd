@@ -5,7 +5,7 @@
 related to it. When the operation is finished \code{callback} will be
 called. You can then call \code{\link{gIOStreamCloseFinish}} to get
 the result of the operation.}
-\usage{gIOStreamCloseAsync(object, io.priority, cancellable = NULL, 
+\usage{gIOStreamCloseAsync(object, io.priority, cancellable = NULL,
     callback, user.data = NULL)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GIOStream}}}
@@ -15,7 +15,7 @@ the result of the operation.}
 \item{\verb{user.data}}{the data to pass to callback function}
 }
 \details{For behaviour details see \code{\link{gIOStreamClose}}.
-  
+
 The asynchronous methods have a default fallback that uses threads
 to implement asynchronicity, so they are optional for inheriting
 classes. However, if you override one you must override all.

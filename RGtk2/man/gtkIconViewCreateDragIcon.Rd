@@ -1,7 +1,7 @@
 \alias{gtkIconViewCreateDragIcon}
 \name{gtkIconViewCreateDragIcon}
 \title{gtkIconViewCreateDragIcon}
-\description{Creates a \code{\link{GdkPixmap}} representation of the item at \code{path}.  
+\description{Creates a \code{\link{GdkPixmap}} representation of the item at \code{path}.
 This image is used for a drag icon.}
 \usage{gtkIconViewCreateDragIcon(object, path)}
 \arguments{

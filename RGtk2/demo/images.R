@@ -5,8 +5,7 @@ pixbuf.loader <- NULL
 load.timeout <- NULL
 image.stream <- NULL
 
-progressive.prepared.callback <- function(loader, data)
-{
+progressive.prepared.callback <- function(loader, data) {
   checkPtrType(data, "GtkWidget")
 
   pixbuf <- loader$getPixbuf()
@@ -19,8 +18,7 @@ progressive.prepared.callback <- function(loader, data)
   data$setFromPixbuf(pixbuf)
 }
 
-progressive.updated.callback <- function(loader, x, y, width, height, data)
-{
+progressive.updated.callback <- function(loader, x, y, width, height, data) {
   checkPtrType(data, "GtkWidget")
 
   # We know the pixbuf inside the GtkImage has changed, but the image
@@ -34,8 +32,7 @@ progressive.updated.callback <- function(loader, x, y, width, height, data)
   data$queueDraw()
 }
 
-progressive.timeout <- function(data)
-{
+progressive.timeout <- function(data) {
   checkPtrType(data, "GtkWidget")
 
   # This shows off fully-paranoid error handling, so looks scary.
@@ -43,14 +40,14 @@ progressive.timeout <- function(data)
   # function to make things nicer.
   #
 
-  if (!is.null(image.stream))
-    {
-        bytes.read <- try(readBin(image.stream, "integer", 256, 1, FALSE))
+  if (!is.null(image.stream)) {
+    bytes.read <- try(readBin(image.stream, "integer", 256, 1, FALSE))
 
-      if (inherits(bytes.read, "try-error"))
-    {
-      dialog <- gtkMessageDialogNew(window, "destroy-with-parent", "error", "close",
-                       "Failure reading image file 'alphatest.png':", bytes.read)
+    if (inherits(bytes.read, "try-error")) {
+      dialog <- gtkMessageDialogNew(
+        window, "destroy-with-parent", "error", "close",
+        "Failure reading image file 'alphatest.png':", bytes.read
+      )
 
       gSignalConnect(dialog, "response", gtkWidgetDestroy)
 
@@ -62,8 +59,7 @@ progressive.timeout <- function(data)
       return(FALSE) # uninstall the timeout
     }
 
-      if (length(bytes.read) == 0)
-    {
+    if (length(bytes.read) == 0) {
       close(image.stream)
       image.stream <<- NULL
 
@@ -73,42 +69,43 @@ progressive.timeout <- function(data)
       #
       close.result <- pixbuf.loader$close()
       if (!close.result[[1]]) {
-          dialog <- gtkMessageDialogNew(window, "destroy-with-parent", "error", "close",
-                       "Failed to load image:", close.result$error$message)
+        dialog <- gtkMessageDialogNew(
+          window, "destroy-with-parent", "error", "close",
+          "Failed to load image:", close.result$error$message
+        )
 
-          gSignalConnect(dialog, "response", gtkWidgetDestroy)
+        gSignalConnect(dialog, "response", gtkWidgetDestroy)
 
-          pixbuf.loader <<- NULL
+        pixbuf.loader <<- NULL
 
-          load.timeout <<- NULL
+        load.timeout <<- NULL
 
-          return(FALSE)
-        }
+        return(FALSE)
+      }
 
       pixbuf.loader <<- NULL
     } else {
-        write.result <- pixbuf.loader$write(bytes.read, length(bytes.read))
-        if (!write.result[[1]])
-        {
-            dialog <- gtkMessageDialogNew(window, "destroy-with-parent", "error", "close",
-                       "Failed to load image:", write.result$error$message)
+      write.result <- pixbuf.loader$write(bytes.read, length(bytes.read))
+      if (!write.result[[1]]) {
+        dialog <- gtkMessageDialogNew(
+          window, "destroy-with-parent", "error", "close",
+          "Failed to load image:", write.result$error$message
+        )
 
-            gSignalConnect(dialog, "response", gtkWidgetDestroy)
+        gSignalConnect(dialog, "response", gtkWidgetDestroy)
 
-            close(image.stream)
-            image.stream <<- NULL
+        close(image.stream)
+        image.stream <<- NULL
 
-            load.timeout <<- NULL
+        load.timeout <<- NULL
 
-            return(FALSE) # uninstall the timeout
-        }
+        return(FALSE) # uninstall the timeout
+      }
     }
-  } else
-    {
-      filename <- imagefile("alphatest.png")
-      if (!file.exists(filename))
-    {
-        error.message <- "File 'alphatest.png' does not exist"
+  } else {
+    filename <- imagefile("alphatest.png")
+    if (!file.exists(filename)) {
+      error.message <- "File 'alphatest.png' does not exist"
     } else {
       image.stream <<- try(file(filename, "rb"))
 
@@ -116,84 +113,79 @@ progressive.timeout <- function(data)
         error.message <- paste("Unable to open image file 'alphatest.png':", image.stream)
         image.stream <<- NULL
       }
-
     }
 
-      if (is.null(image.stream))
-    {
+    if (is.null(image.stream)) {
+      dialog <- gtkMessageDialogNew(
+        window, "destroy-with-parent", "error", "close",
+        "Failed to load image:", error.message
+      )
 
-        dialog <- gtkMessageDialogNew(window, "destroy-with-parent", "error", "close",
-                       "Failed to load image:", error.message)
+      gSignalConnect(dialog, "response", gtkWidgetDestroy)
 
-        gSignalConnect(dialog, "response", gtkWidgetDestroy)
-
-        load.timeout <<- NULL
+      load.timeout <<- NULL
 
       return(FALSE)
     }
 
-      if (!is.null(pixbuf.loader))
-    {
+    if (!is.null(pixbuf.loader)) {
       pixbuf.loader$close(NULL)
       pixbuf.loader <<- NULL
     }
 
-      pixbuf.loader <<- gdkPixbufLoaderNew()
+    pixbuf.loader <<- gdkPixbufLoaderNew()
 
-      gSignalConnect(pixbuf.loader, "area_prepared", progressive.prepared.callback, data)
+    gSignalConnect(pixbuf.loader, "area_prepared", progressive.prepared.callback, data)
 
-      gSignalConnect(pixbuf.loader, "area_updated", progressive.updated.callback, data)
-    }
+    gSignalConnect(pixbuf.loader, "area_updated", progressive.updated.callback, data)
+  }
 
   # leave timeout installed
   return(TRUE)
 }
 
-start.progressive.loading <- function(image)
-{
+start.progressive.loading <- function(image) {
   # This is obviously totally contrived (we slow down loading
-   # on purpose to show how incremental loading works).
-   # The real purpose of incremental loading is the case where
-   # you are reading data from a slow source such as the network.
-   # The timeout simply simulates a slow data source by inserting
-   # pauses in the reading process.
-   #
+  # on purpose to show how incremental loading works).
+  # The real purpose of incremental loading is the case where
+  # you are reading data from a slow source such as the network.
+  # The timeout simply simulates a slow data source by inserting
+  # pauses in the reading process.
+  #
   load.timeout <<- gTimeoutAdd(150, progressive.timeout, image)
 }
 
-cleanup.callback <- function(object, data)
-{
-  if (!is.null(load.timeout))
-    {
-      gSourceRemove(load.timeout)
-      load.timeout <<- NULL
-    }
+cleanup.callback <- function(object, data) {
+  if (!is.null(load.timeout)) {
+    gSourceRemove(load.timeout)
+    load.timeout <<- NULL
+  }
 
-  if (!is.null(pixbuf.loader))
-    {
-      pixbuf.loader$close()
-      pixbuf.loader <<- NULL
-    }
+  if (!is.null(pixbuf.loader)) {
+    pixbuf.loader$close()
+    pixbuf.loader <<- NULL
+  }
 
-  if (!is.null(image.stream))
+  if (!is.null(image.stream)) {
     close(image.stream)
+  }
   image.stream <<- NULL
 }
 
-toggle.sensitivity.callback <- function(togglebutton, user.data)
-{
+toggle.sensitivity.callback <- function(togglebutton, user.data) {
   container <- user.data
 
   list <- container$getChildren()
 
   sapply(list, function(child) {
-      # don't disable our toggle
-      if (!inherits(child, "GtkToggleButton"))
-        child$setSensitive(!togglebutton$getActive())
-    })
+    # don't disable our toggle
+    if (!inherits(child, "GtkToggleButton")) {
+      child$setSensitive(!togglebutton$getActive())
+    }
+  })
 }
 
-window <- gtkWindowNew("toplevel", show=F)
+window <- gtkWindowNew("toplevel", show = F)
 window$setTitle("Images")
 
 gSignalConnect(window, "destroy", cleanup.callback)
@@ -220,23 +212,23 @@ vbox$packStart(align, FALSE, FALSE, 0)
 pixbuf.result <- NULL
 pixbuf <- NULL
 filename <- imagefile("rgtk-logo.gif")
-if (file.exists(filename))
-{
-    pixbuf.result <- gdkPixbufNewFromFile(filename)
-    pixbuf <- pixbuf.result[[1]]
+if (file.exists(filename)) {
+  pixbuf.result <- gdkPixbufNewFromFile(filename)
+  pixbuf <- pixbuf.result[[1]]
 }
-if (is.null(pixbuf.result) || !is.null(pixbuf.result$error))
-{
-    # This code shows off error handling. You can just use
-    # gtkImageNewFromFile() instead if you don't want to report
-    # errors to the user. If the file doesn't load when using
-    # gtkImageNewFromFile(), a "missing image" icon will
-    # be displayed instead.
-    #
-    dialog <- gtkMessageDialogNew(window, "destroy-with-parent", "error", "close",
-                   "Failed to load 'rgtk-logo.gif':", pixbuf.result$error$message)
+if (is.null(pixbuf.result) || !is.null(pixbuf.result$error)) {
+  # This code shows off error handling. You can just use
+  # gtkImageNewFromFile() instead if you don't want to report
+  # errors to the user. If the file doesn't load when using
+  # gtkImageNewFromFile(), a "missing image" icon will
+  # be displayed instead.
+  #
+  dialog <- gtkMessageDialogNew(
+    window, "destroy-with-parent", "error", "close",
+    "Failed to load 'rgtk-logo.gif':", pixbuf.result$error$message
+  )
 
-    gSignalConnect(dialog, "response", gtkWidgetDestroy)
+  gSignalConnect(dialog, "response", gtkWidgetDestroy)
 }
 
 image <- gtkImageNewFromPixbuf(pixbuf)
@@ -288,10 +280,12 @@ gSignalConnect(button, "toggled", toggle.sensitivity.callback, vbox)
 
 button <- gtkButtonNewWithLabel("Quit")
 vbox$packStart(button, FALSE, FALSE, 0)
-gSignalConnect(button, "clicked", function(...) { gtkMainQuit(); window$destroy() })
+gSignalConnect(button, "clicked", function(...) {
+  gtkMainQuit()
+  window$destroy()
+})
 
 
 window$showAll()
 
 gtkMain()
-

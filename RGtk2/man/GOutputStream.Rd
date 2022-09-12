@@ -35,15 +35,15 @@ GObject
 }}
 \section{Detailed Description}{GOutputStream has functions to write to a stream (\code{\link{gOutputStreamWrite}}),
 to close a stream (\code{\link{gOutputStreamClose}}) and to flush pending writes
-(\code{\link{gOutputStreamFlush}}). 
-  
-To copy the content of an input stream to an output stream without 
-manually handling the reads and writes, use \code{\link{gOutputStreamSplice}}. 
-  
+(\code{\link{gOutputStreamFlush}}).
+
+To copy the content of an input stream to an output stream without
+manually handling the reads and writes, use \code{\link{gOutputStreamSplice}}.
+
 All of these functions have async variants too.}
 \section{Structures}{\describe{\item{\verb{GOutputStream}}{
 Base class for writing output.
-  
+
 All classes derived from GOutputStream should implement synchronous
 writing, splicing, flushing and closing streams, but may implement
 asynchronous versions.

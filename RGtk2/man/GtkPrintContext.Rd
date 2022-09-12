@@ -23,10 +23,10 @@ drawing pages for printing, such as the cairo context and important
 parameters like page size and resolution. It also lets you easily
 create \code{\link{PangoLayout}} and \code{\link{PangoContext}} objects that match the font metrics
 of the cairo surface.
-  
+
 GtkPrintContext objects gets passed to the ::begin-print, ::end-print,
 ::request-page-setup and ::draw-page signals on the \code{\link{GtkPrintOperation}}.
-  
+
  \emph{Using GtkPrintContext in a ::draw-page callback}
 \preformatted{
 draw_page <- function(operation, context, page_nr)
@@ -36,7 +36,7 @@ draw_page <- function(operation, context, page_nr)
   # Draw a red rectangle, as wide as the paper (inside the margins)
   cr$setSourceRgb(1.0, 0, 0)
   cr$rectangle(0, 0, context$getWidth(), 50)
-  
+
   cr$fill()
 
   # Draw some lines
@@ -44,21 +44,21 @@ draw_page <- function(operation, context, page_nr)
   cr$lineTo(40, 20)
   cr$arc(60, 60, 20, 0, pi)
   cr$lineTo(80, 20)
-  
+
   cr$setSourceRgb(0, 0, 0)
   cr$setLineWidth(5)
   cr$setLineCap("round")
   cr$setLineJoin("round")
-  
+
   cr$stroke()
 
   # Draw some text
-  
+
   layout <- context$createLayout()
   layout$setText("Hello World! Printing is easy")
   desc <- pangoFontDescriptionFromString("sans 28")
   layout$setFontDescription(desc)
-  
+
   cr$moveTo(30, 20)
   cr$layoutPath(layout)
 
@@ -71,7 +71,7 @@ draw_page <- function(operation, context, page_nr)
   cr$setSourceRgb(0, 0.0, 1.0)
   cr$fill()
 }
-}  
+}
 Printing support was added in GTK+ 2.10.}
 \section{Structures}{\describe{\item{\verb{GtkPrintContext}}{
 \emph{undocumented

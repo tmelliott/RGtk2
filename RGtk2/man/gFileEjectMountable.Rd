@@ -2,13 +2,13 @@
 \name{gFileEjectMountable}
 \title{gFileEjectMountable}
 \description{
-Starts an asynchronous eject on a mountable.  
+Starts an asynchronous eject on a mountable.
 When this operation has completed, \code{callback} will be called with
-\code{user.user} data, and the operation can be finalized with 
+\code{user.user} data, and the operation can be finalized with
 \code{\link{gFileEjectMountableFinish}}.
 \strong{WARNING: \code{g_file_eject_mountable} has been deprecated since version 2.22 and should not be used in newly-written code. Use \code{\link{gFileEjectMountableWithOperation}} instead.}
 }
-\usage{gFileEjectMountable(object, flags = "G_MOUNT_UNMOUNT_NONE", cancellable = NULL, 
+\usage{gFileEjectMountable(object, flags = "G_MOUNT_UNMOUNT_NONE", cancellable = NULL,
     callback, user.data = NULL)}
 \arguments{
 \item{\verb{object}}{input \code{\link{GFile}}.}

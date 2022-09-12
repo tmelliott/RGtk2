@@ -8,7 +8,7 @@
 and under some combinations of circumstances IPv6 sockets are also
 capable of speaking IPv4.  See RFC 3493 section 3.7 for more
 information.
-  
+
 No other types of sockets are currently considered as being capable
 of speaking IPv4.
   Since 2.22.}

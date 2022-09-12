@@ -12,7 +12,7 @@ is returned.}
 }
 \details{It is meaningless to specify \code{G_IO_ERR} or \code{G_IO_HUP} in condition;
 these conditions will always be set in the output if they are true.
-  
+
 This call never blocks.
   Since 2.22}
 \value{[\code{\link{GIOCondition}}] the \code{GIOCondition} mask of the current state}

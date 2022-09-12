@@ -1,7 +1,7 @@
 \alias{gtkTextIterBackwardVisibleCursorPosition}
 \name{gtkTextIterBackwardVisibleCursorPosition}
 \title{gtkTextIterBackwardVisibleCursorPosition}
-\description{Moves \code{iter} forward to the previous visible cursor position. See 
+\description{Moves \code{iter} forward to the previous visible cursor position. See
 \code{\link{gtkTextIterBackwardCursorPosition}} for details.}
 \usage{gtkTextIterBackwardVisibleCursorPosition(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkTextIter}}}}

@@ -11,7 +11,7 @@ the font description.}
 \item{\verb{gravity}}{[\code{\link{PangoGravity}}]  the gravity for the font description.}
 }
 \details{This function is seldom useful to the user.  Gravity should normally
-be set on a \code{\link{PangoContext}}.  
+be set on a \code{\link{PangoContext}}.
   Since 1.16}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

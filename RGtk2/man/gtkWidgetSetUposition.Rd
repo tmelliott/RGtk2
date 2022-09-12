@@ -21,7 +21,7 @@ possible to get the centering to work correctly in all cases from
 application code. But if you insist, use \code{\link{gtkWindowSetPosition}}
 to set \verb{GTK_WIN_POS_CENTER_ON_PARENT}, don't do the centering
 manually.
-  
+
 Note that although \code{x} and \code{y} can be individually unset, the position
 is not honoured unless both \code{x} and \code{y} are set.}
 \author{Derived by RGtkGen from GTK+ documentation}

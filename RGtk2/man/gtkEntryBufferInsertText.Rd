@@ -14,7 +14,7 @@ buffer, at position \code{position}.}
 until a null-terminator is found. If \code{position} or \code{n.chars} are out of
 bounds, or the maximum buffer text length is exceeded, then they are
 coerced to sane values.
-  
+
 Note that the position and length are in characters, not in bytes.
   Since 2.18}
 \value{[numeric] The number of characters actually inserted.}

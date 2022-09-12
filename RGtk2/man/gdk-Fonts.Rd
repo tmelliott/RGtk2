@@ -37,7 +37,7 @@ the screen. These functions provide support for
 loading fonts, and also for determining the dimensions
 of characters and strings when drawn with a particular
 font.
-  
+
 Fonts in X are specified by a
 \dfn{X Logical Font Description}.
 The following description is considerably simplified.
@@ -48,7 +48,7 @@ characters. For example, Adobe Helvetica Bold 12 pt, has the
 full description:
 \preformatted{"-adobe-helvetica-bold-r-normal--12-120-75-75-p-70-iso8859-1"
 }
-  
+
 The fields in the XLFD are:
 \tabular{ll}{
 Foundry \tab the company or organization where the font originated. \cr
@@ -75,7 +75,7 @@ the font. Together with the Charset Encoding field, this
 defines the character set for the font. \cr
 Charset Encoding \tab An identifier for the particular character set encoding. \cr
 }
-  
+
 When specifying a font via a X logical Font Description,
 '*' can be used as a wildcard to match any portion of
 the XLFD. For instance, the above example could
@@ -86,12 +86,12 @@ It is generally a good idea to use wildcards for any
 portion of the XLFD that your program does not care
 about specifically, since that will improve the
 chances of finding a matching font.
-  
+
 A \dfn{fontset} is a list of fonts
 that is used for drawing international text that may
 contain characters from a number of different character
 sets. It is represented by a list of XLFD's.
-  
+
 The font for a given character set is determined by going
 through the list of XLFD's in order. For each one, if
 the registry and and encoding fields match the desired
@@ -101,7 +101,7 @@ fields, the registry and encoding for the desired character
 set are substituted in and a lookup is done. If a match is found
 that font is used. Otherwise, processing continues
 on to the next font in the list.
-  
+
 The functions for determining the metrics of a string
 come in several varieties that can take a number
 of forms of string input:
@@ -141,7 +141,7 @@ of forms of string input:
     constant.)
     }
 }
-  
+
 GDK provides functions to determine a number of different
 measurements (metrics) for a given string. (Need diagram
 here).

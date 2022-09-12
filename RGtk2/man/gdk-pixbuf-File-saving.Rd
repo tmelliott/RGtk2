@@ -12,10 +12,10 @@
 \code{\link{gdkPixbufSaveToBufferv}(object, type, option.keys, option.values, .errwarn = TRUE)}\cr
 \code{\link{gdkPixbufSaveToStream}(object, stream, type, cancellable, .errwarn = TRUE)}\cr
 }
-\section{Detailed Description}{These functions allow to save a \code{\link{GdkPixbuf}} in a number of 
+\section{Detailed Description}{These functions allow to save a \code{\link{GdkPixbuf}} in a number of
 file formats. The formatted data can be written to a file
 or to a memory buffer. &gdk-pixbuf; can also call a user-defined
-callback on the data, which allows to e.g. write the image 
+callback on the data, which allows to e.g. write the image
 to a socket or store it in a database.}
 \section{User Functions}{\describe{\item{\code{GdkPixbufSaveFunc(buf, count, error, data)}}{
 Specifies the type of the function passed to

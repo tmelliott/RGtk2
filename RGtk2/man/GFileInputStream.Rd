@@ -15,9 +15,9 @@
  \code{\link{GSeekable}}.}
 \section{Detailed Description}{GFileInputStream provides input streams that take their
 content from a file.
-  
-GFileInputStream implements \code{\link{GSeekable}}, which allows the input 
-stream to jump to arbitrary positions in the file, provided the 
+
+GFileInputStream implements \code{\link{GSeekable}}, which allows the input
+stream to jump to arbitrary positions in the file, provided the
 filesystem of the file allows it. To find the position of a file
 input stream, use \code{\link{gSeekableTell}}. To find out if a file input
 stream supports seeking, use \code{gSeekableStreamCanSeek()}.

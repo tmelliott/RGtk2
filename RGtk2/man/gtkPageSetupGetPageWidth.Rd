@@ -8,7 +8,7 @@
 \item{\verb{unit}}{the unit for the return value}
 }
 \details{Note that this function takes orientation and
-margins into consideration. 
+margins into consideration.
 See \code{\link{gtkPageSetupGetPaperWidth}}.
   Since 2.10}
 \value{[numeric] the page width.}

@@ -12,7 +12,7 @@ that crashes if not.}
 \details{It's permitted to call this function before showing a window,
 in which case the window will be maximized when it appears onscreen
 initially.
-  
+
 You can track maximization via the "window-state-event" signal
 on \code{\link{GtkWidget}}.}
 \author{Derived by RGtkGen from GTK+ documentation}

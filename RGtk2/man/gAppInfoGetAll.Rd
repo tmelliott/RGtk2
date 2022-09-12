@@ -1,11 +1,11 @@
 \alias{gAppInfoGetAll}
 \name{gAppInfoGetAll}
 \title{gAppInfoGetAll}
-\description{Gets a list of all of the applications currently registered 
+\description{Gets a list of all of the applications currently registered
 on this system.}
 \usage{gAppInfoGetAll()}
-\details{For desktop files, this includes applications that have 
-\code{NoDisplay=true} set or are excluded from 
+\details{For desktop files, this includes applications that have
+\code{NoDisplay=true} set or are excluded from
 display by means of \code{OnlyShowIn} or
 \code{NotShowIn}. See \code{\link{gAppInfoShouldShow}}.
 The returned list does not include applications which have

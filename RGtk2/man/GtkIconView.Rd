@@ -116,11 +116,11 @@ selected rows.  It will be called on every selected row in the view.
 A keybinding signal
 which gets emitted when the user activates the currently
 focused item.
-  
+
 Applications should not connect to it, but may emit it with
 \code{gSignalEmitByName()} if they need to control activation
 programmatically.
-  
+
 The default bindings for this signal are Space, Return and Enter.
 
 \describe{
@@ -149,18 +149,18 @@ pressed.
 The ::move-cursor signal is a
 keybinding signal
 which gets emitted when the user initiates a cursor movement.
-  
+
 Applications should not connect to it, but may emit it with
 \code{gSignalEmitByName()} if they need to control the cursor
 programmatically.
-  
+
 The default bindings for this signal include
 \itemize{
-\item 
-\item 
-\item 
+\item
+\item
+\item
 }
-  
+
 All of these will extend the selection when combined with
 the Shift modifier.
 
@@ -176,11 +176,11 @@ the Shift modifier.
 \item{\code{select-all(iconview, user.data)}}{
 A keybinding signal
 which gets emitted when the user selects all items.
-  
+
 Applications should not connect to it, but may emit it with
 \code{gSignalEmitByName()} if they need to control selection
 programmatically.
-  
+
 The default binding for this signal is Ctrl-a.
 
 \describe{
@@ -194,11 +194,11 @@ The default binding for this signal is Ctrl-a.
 A keybinding signal
 which gets emitted when the user selects the item that is currently
 focused.
-  
+
 Applications should not connect to it, but may emit it with
 \code{gSignalEmitByName()} if they need to control selection
 programmatically.
-  
+
 There is no default binding for this signal.
 
 \describe{
@@ -237,11 +237,11 @@ A keybinding signal
 which gets emitted when the user toggles whether the currently
 focused item is selected or not. The exact effect of this
 depend on the selection mode.
-  
+
 Applications should not connect to it, but may emit it with
 \code{gSignalEmitByName()} if they need to control selection
 programmatically.
-  
+
 There is no default binding for this signal is Ctrl-Space.
 
 \describe{
@@ -254,11 +254,11 @@ There is no default binding for this signal is Ctrl-Space.
 \item{\code{unselect-all(iconview, user.data)}}{
 A keybinding signal
 which gets emitted when the user unselects all items.
-  
+
 Applications should not connect to it, but may emit it with
 \code{gSignalEmitByName()} if they need to control selection
 programmatically.
-  
+
 The default binding for this signal is Ctrl-Shift-a.
 
 \describe{

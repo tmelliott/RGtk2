@@ -13,12 +13,12 @@ is drawn above the scale, anything else below. For a vertical scale,
 right.}
 \item{\verb{markup}}{Text to be shown at the mark, using Pango markup, or \code{NULL}. \emph{[  \acronym{allow-none}  ]}}
 }
-\details{A mark is indicated visually by drawing a tick mark next to the scale, 
-and GTK+ makes it easy for the user to position the scale exactly at the 
+\details{A mark is indicated visually by drawing a tick mark next to the scale,
+and GTK+ makes it easy for the user to position the scale exactly at the
 marks value.
-  
-If \code{markup} is not \code{NULL}, text is shown next to the tick mark. 
-  
+
+If \code{markup} is not \code{NULL}, text is shown next to the tick mark.
+
 To remove marks from a scale, use \code{\link{gtkScaleClearMarks}}.
   Since 2.16}
 \author{Derived by RGtkGen from GTK+ documentation}

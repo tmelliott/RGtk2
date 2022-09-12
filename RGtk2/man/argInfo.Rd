@@ -3,7 +3,7 @@
 \alias{names.GtkObject}
 \title{Access information about properties of a GtkObject}
 \description{
-\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)} 
+\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)}
 
   These allow one to discover what ``properties'' or variables
   a Gtk object supports and the details of each property
@@ -48,7 +48,7 @@ gtkObjectGetArgInfo(obj, parents=TRUE, collapse=TRUE)
     specifies whether the property is read-only or read-write
     and when it can be specified, etc.}
   Each property is indexed by its name in the list.
-  
+
   The precise form of the returned value depends on the different
   arguments.
   If \code{parents} is \code{FALSE}, then a simple list giving

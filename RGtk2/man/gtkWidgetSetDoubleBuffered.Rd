@@ -18,10 +18,10 @@ primitives being rendered.}
 \details{In very simple terms, double buffered widgets don't flicker,
 so you would only use this function to turn off double buffering
 if you had special needs and really knew what you were doing.
-  
+
 Note: if you turn off double-buffering, you have to handle
-expose events, since even the clearing to the background color or 
-pixmap will not happen automatically (as it is done in 
+expose events, since even the clearing to the background color or
+pixmap will not happen automatically (as it is done in
 \code{gdkWindowBeginPaint()}).}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

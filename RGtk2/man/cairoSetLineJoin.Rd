@@ -13,7 +13,7 @@ styles are drawn.}
 examined by \code{\link{cairoStroke}}, \code{\link{cairoStrokeExtents}}, and
 \code{cairoStrokeToPath()}, but does not have any effect during path
 construction.
-  
+
 The default line join style is \code{CAIRO_LINE_JOIN_MITER}.  }
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

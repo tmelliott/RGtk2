@@ -26,7 +26,7 @@ Implements \code{\link{GOutputStream}} for arbitrary memory chunks.
 \section{User Functions}{\describe{\item{\code{GReallocFunc(data, size)}}{
 Changes the size of the memory block pointed to by \code{data} to
 \code{size} bytes.
-  
+
 The function should have the same semantics as \code{realloc()}.
 
 \describe{

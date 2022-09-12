@@ -12,7 +12,7 @@ containing the tooltip texts, or -1 to disable this feature.}
 }
 \details{When enabled, \verb{"has-tooltip"} will be set to \code{TRUE} and
 \code{tree.view} will connect a \verb{"query-tooltip"} signal handler.
-  
+
 Note that the signal handler sets the text with \code{\link{gtkTooltipSetMarkup}},
 so &, <, etc have to be escaped in the text.
   Since 2.12}

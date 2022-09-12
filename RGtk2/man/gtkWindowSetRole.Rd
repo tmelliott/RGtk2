@@ -13,7 +13,7 @@ same" window when an application is restarted. So for example you
 might set the "toolbox" role on your app's toolbox window, so that
 when the user restarts their session, the window manager can put
 the toolbox back in the same place.
-  
+
 If a window already has a unique title, you don't need to set the
 role, since the WM can use the title to identify the window when
 restoring the session.}

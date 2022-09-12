@@ -1,7 +1,7 @@
 \alias{gFileAppendToFinish}
 \name{gFileAppendToFinish}
 \title{gFileAppendToFinish}
-\description{Finishes an asynchronous file append operation started with 
+\description{Finishes an asynchronous file append operation started with
 \code{\link{gFileAppendToAsync}}.}
 \usage{gFileAppendToFinish(object, res, .errwarn = TRUE)}
 \arguments{

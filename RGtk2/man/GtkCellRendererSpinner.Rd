@@ -16,7 +16,7 @@
 similar to \code{\link{GtkSpinner}}. It can often be used as an alternative
 to a \code{\link{GtkCellRendererProgress}} for displaying indefinite activity,
 instead of actual progress.
-  
+
 To start the animation in a cell, set the \verb{"active"}
 property to \code{TRUE} and increment the \verb{"pulse"} property
 at regular intervals. The usual way to set the cell renderer properties
@@ -38,7 +38,7 @@ Whether the spinner is active (ie. shown) in the cell.  Default value: FALSE
 
 Pulse of the spinner. Increment this value to draw the next frame of the
 spinner animation. Usually, you would update this value in a timeout.
-  
+
 The \code{\link{GtkSpinner}} widget draws one full cycle of the animation per second by default.
 You can learn about the number of frames used by the theme
 by looking at the \verb{"num-steps"} style property and the duration

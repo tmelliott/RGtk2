@@ -41,36 +41,35 @@ The constructors return instances of \code{RGtkDataFrame}.
 \code{[.RGtkDataFrame} returns the result of the \code{[} method on the backing frame.
 }
 \details{
-The RGtk2 interface carries a lot of overhead, slowing down operations that require 
-large numbers of function calls, such as loading a GtkTreeModel. Under the assumption 
-that R programmers will store large datasets as data frames, a new \code{\link{GtkTreeModel}} 
-was implemented that draws data directly from an R data frame. This offers not only a 
-dramatic performance gain but also allows efficient addition of columns to a model, 
+The RGtk2 interface carries a lot of overhead, slowing down operations that require
+large numbers of function calls, such as loading a GtkTreeModel. Under the assumption
+that R programmers will store large datasets as data frames, a new \code{\link{GtkTreeModel}}
+was implemented that draws data directly from an R data frame. This offers not only a
+dramatic performance gain but also allows efficient addition of columns to a model,
 which the default GTK implementations do not allow.
 
-The \code{RGtkDataFrame} is constructed with a delegate data frame, which can be empty, 
-via either \code{rGtkDataFrameNew} or \code{rGtkDataFrame} for short. The subset and 
-replacement methods work much the same as for normal data frames, except one should note that 
+The \code{RGtkDataFrame} is constructed with a delegate data frame, which can be empty,
+via either \code{rGtkDataFrameNew} or \code{rGtkDataFrame} for short. The subset and
+replacement methods work much the same as for normal data frames, except one should note that
 removing columns (ie by replacing columns with \code{NULL}s) is not supported.
-Note that even if the initial data frame is empty, one should ensure that the empty vectors 
+Note that even if the initial data frame is empty, one should ensure that the empty vectors
 representing the column are of the desired types. If one wants to simply replace the backing frame
 with a new one, then there are two options: create a new RGtkDataFrame and connect it to the views
 of the old model, or use \code{rGtkDataFrameSetFrame}.
 
-The \code{rGtkDataFrameAppendColumns} and \code{rGtkDataFrameAppendRows} 
-methods allow appending columns and rows, respectively. 
+The \code{rGtkDataFrameAppendColumns} and \code{rGtkDataFrameAppendRows}
+methods allow appending columns and rows, respectively.
 Note that these are a lot shorter if using the \code{object$appendColumns(...)} syntax.
 
-The \code{as.data.frame} method retrieves the backing data frame from the model, so that one 
-can perform any data frame operation on the data. Of course, any changes are \emph{not} 
+The \code{as.data.frame} method retrieves the backing data frame from the model, so that one
+can perform any data frame operation on the data. Of course, any changes are \emph{not}
 propagated back to the model, so it may take some work to efficiently merge any changes, if necessary.
 
 For convenience, one can access the dimensions and dimension names using \code{dim.RGtkDataframe} and
 \code{dimnames.RGtkDataFrame}, respectively. It is possible to set the dimension names using the
 conventional replacement function. Note that rownames mean nothing to GTK.
 }
-\note{It is not yet clear how to encode a tree structure with a data frame, so this is 
+\note{It is not yet clear how to encode a tree structure with a data frame, so this is
 only currently useful for flat tables.}
 \author{Michael Lawrence}
 \keyword{interface}
-

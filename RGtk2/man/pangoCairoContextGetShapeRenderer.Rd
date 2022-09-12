@@ -8,7 +8,7 @@ details.}
 \arguments{\item{\verb{object}}{[\code{\link{PangoContext}}]  a \code{\link{PangoContext}}, from a pangocairo font map}}
 \details{Retrieves callback function and associated user data for rendering
 attributes of type \code{PANGO_ATTR_SHAPE} as set by
-\code{\link{pangoCairoContextSetShapeRenderer}}, if any.  
+\code{\link{pangoCairoContextSetShapeRenderer}}, if any.
   Since 1.18}
 \value{
 A list containing the following elements:

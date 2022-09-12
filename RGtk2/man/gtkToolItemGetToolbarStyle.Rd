@@ -9,10 +9,10 @@ the toolbar is displayed and change themselves accordingly }
 \arguments{\item{\verb{object}}{a \code{\link{GtkToolItem}}}}
 \details{Possibilities are:
 \itemize{
-\item 
-\item 
-\item 
-\item 
+\item
+\item
+\item
+\item
 }
   Since 2.4}
 \value{[\code{\link{GtkToolbarStyle}}] A \code{\link{GtkToolbarStyle}} indicating the toolbar style used

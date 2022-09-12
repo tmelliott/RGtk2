@@ -21,12 +21,12 @@
 \details{
   These functions allow one to create and access
   \code{\link{GtkTreeIter}} structures when implementing a \code{\link{GtkTreeModel}}.
-  
+
   \code{gtkTreeIter} creates an iter from scratch, given an id and stamp.
-  
+
   \code{gtkTreeIterGetId} and \code{gtkTreeIterSetId} access the integer that
   identifies the data element referred to by \code{iter}.
-  
+
   \code{gtkTreeIterGetStamp} and \code{gtkTreeIterSetStamp} access the integer
   that serves as a version stamp. After the model changes, the model version
   should be incremented, so that all existing iters are invalidated, as
@@ -34,16 +34,16 @@
 }
 \value{
   For \code{gtkTreeIter}, an external pointer to the underlying C structure.
-  
+
   For \code{gtkTreeIterGetId}, the integer code identifying the element
   referred to by \code{iter}.
-  
+
   For \code{gtkTreeIterGetStamp}, the integer code identifying the version
   of \code{iter}.
 }
 \note{
   These functions are for implementing \code{\link{GtkTreeModel}}s only! Most
-  of the time, one can use one of the implementations included with GTK+ 
+  of the time, one can use one of the implementations included with GTK+
   (\code{\link{GtkListStore}} or \code{\link{GtkTreeStore}}) or
   \code{\link{RGtkDataFrame}}.
 }
@@ -51,4 +51,3 @@
 \author{Michael Lawrence}
 \keyword{interface}
 \keyword{internal}
-

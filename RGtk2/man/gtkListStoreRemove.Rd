@@ -1,8 +1,8 @@
 \alias{gtkListStoreRemove}
 \name{gtkListStoreRemove}
 \title{gtkListStoreRemove}
-\description{Removes the given row from the list store.  After being removed, 
-\code{iter} is set to be the next valid row, or invalidated if it pointed 
+\description{Removes the given row from the list store.  After being removed,
+\code{iter} is set to be the next valid row, or invalidated if it pointed
 to the last row in \code{list.store}.}
 \usage{gtkListStoreRemove(object, iter)}
 \arguments{

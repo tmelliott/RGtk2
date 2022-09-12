@@ -21,11 +21,11 @@ one of the four cardinal directions (up, down, left, or right).  The
 style of the arrow can be one of shadow in, shadow out, etched in, or
 etched out.  Note that these directions and style types may be
 ammended in versions of Gtk to come.
-  
+
 GtkArrow will fill any space alloted to it, but since it is inherited
 from \code{\link{GtkMisc}}, it can be padded and/or aligned, to fill exactly the
 space the programmer desires.
-  
+
 Arrows are created with a call to \code{\link{gtkArrowNew}}.  The direction or
 style of an arrow can be changed after creation by using \code{\link{gtkArrowSet}}.}
 \section{Structures}{\describe{\item{\verb{GtkArrow}}{

@@ -33,18 +33,18 @@
 \section{Interfaces}{GtkToolButton implements
  AtkImplementorIface,  \code{\link{GtkBuildable}} and  \code{\link{GtkActivatable}}.}
 \section{Detailed Description}{\code{\link{GtkToolButton}}s are \verb{GtkToolItems} containing buttons.
-  
+
 Use \code{\link{gtkToolButtonNew}} to create a new \code{\link{GtkToolButton}}. Use
 \code{gtkToolButtonNewWithStock()} to create a \code{\link{GtkToolButton}}
 containing a stock item.
-  
+
 The label of a \code{\link{GtkToolButton}} is determined by the properties
 "label-widget", "label", and "stock-id". If "label-widget" is
 non-\code{NULL}, then that widget is used as the label. Otherwise, if
 "label" is non-\code{NULL}, that string is used as the label. Otherwise, if
 "stock-id" is non-\code{NULL}, the label is determined by the stock
 item. Otherwise, the button does not have a label.
-  
+
 The icon of a \code{\link{GtkToolButton}} is determined by the properties
 "icon-widget" and "stock-id". If "icon-widget" is non-\code{NULL}, then
 that widget is used as the icon. Otherwise, if "stock-id" is

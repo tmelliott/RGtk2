@@ -1,8 +1,8 @@
 \alias{gtkImageMenuItemNewFromStock}
 \name{gtkImageMenuItemNewFromStock}
 \title{gtkImageMenuItemNewFromStock}
-\description{Creates a new \code{\link{GtkImageMenuItem}} containing the image and text from a 
-stock item. Some stock ids have preprocessor functions like \verb{GTK_STOCK_OK} 
+\description{Creates a new \code{\link{GtkImageMenuItem}} containing the image and text from a
+stock item. Some stock ids have preprocessor functions like \verb{GTK_STOCK_OK}
 and \verb{GTK_STOCK_APPLY}.}
 \usage{gtkImageMenuItemNewFromStock(stock.id, accel.group, show = TRUE)}
 \arguments{

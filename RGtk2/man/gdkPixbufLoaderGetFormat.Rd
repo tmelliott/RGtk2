@@ -1,7 +1,7 @@
 \alias{gdkPixbufLoaderGetFormat}
 \name{gdkPixbufLoaderGetFormat}
 \title{gdkPixbufLoaderGetFormat}
-\description{Obtains the available information about the format of the 
+\description{Obtains the available information about the format of the
 currently loading image file.}
 \usage{gdkPixbufLoaderGetFormat(object)}
 \arguments{\item{\verb{object}}{A pixbuf loader.}}

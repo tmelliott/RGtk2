@@ -21,7 +21,7 @@ to transfer strings efficiently between clients without
 having to transfer the entire string.) A property
 has an associated type, which is also identified
 using an atom.
-  
+
 A property has an associated \dfn{format},
 an integer describing how many bits are in each unit
 of data inside the property. It must be 8, 16, or 32.
@@ -34,7 +34,7 @@ even if a long integer has more than 32 bits on the platform.
 (This decision was apparently made for Xlib to maintain
 compatibility with programs that assumed longs were 32
 bits, at the expense of programs that knew better.)
-  
+
 The functions in this section are used to add, remove
 and change properties on windows, to convert atoms
 to and from strings and to manipulate some types of

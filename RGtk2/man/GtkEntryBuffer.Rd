@@ -21,13 +21,13 @@
    +----GtkEntryBuffer}}
 \section{Detailed Description}{The \code{\link{GtkEntryBuffer}} class contains the actual text displayed in a
 \code{\link{GtkEntry}} widget.
-  
+
 A single \code{\link{GtkEntryBuffer}} object can be shared by multiple \code{\link{GtkEntry}}
 widgets which will then share the same text content, but not the cursor
 position, visibility attributes, icon etc.
   \code{\link{GtkEntryBuffer}} may be derived from. Such a derived class might allow
 text to be stored in an alternate location, such as non-pageable memory,
-useful in the case of important passwords. Or a derived class could 
+useful in the case of important passwords. Or a derived class could
 integrate with an application's concept of undo/redo.}
 \section{Structures}{\describe{\item{\verb{GtkEntryBuffer}}{
 \emph{undocumented

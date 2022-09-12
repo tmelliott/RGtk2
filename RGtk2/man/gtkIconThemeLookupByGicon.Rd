@@ -2,7 +2,7 @@
 \name{gtkIconThemeLookupByGicon}
 \title{gtkIconThemeLookupByGicon}
 \description{Looks up an icon and returns a structure containing
-information such as the filename of the icon. 
+information such as the filename of the icon.
 The icon can then be rendered into a pixbuf using
 \code{\link{gtkIconInfoLoadIcon}}.}
 \usage{gtkIconThemeLookupByGicon(object, icon, size, flags)}

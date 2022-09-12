@@ -4,7 +4,7 @@
 \description{Sets the icon for a given drag from a named themed icon. See
 the docs for \code{\link{GtkIconTheme}} for more details. Note that the
 size of the icon depends on the icon theme (the icon is
-loaded at the symbolic size \verb{GTK_ICON_SIZE_DND}), thus 
+loaded at the symbolic size \verb{GTK_ICON_SIZE_DND}), thus
 \code{hot.x} and \code{hot.y} have to be used with care.}
 \usage{gtkDragSetIconName(object, icon.name, hot.x, hot.y)}
 \arguments{

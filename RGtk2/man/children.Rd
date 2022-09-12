@@ -3,10 +3,10 @@
 \alias{gtkParent}
 \title{Get child widgets of a Gtk container}
 \description{
-\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)} 
+\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)}
 
 This returns a list of the widgets that
-are currently contained or managed by 
+are currently contained or managed by
 a particular Gtk container widget.
 }
 \usage{
@@ -33,10 +33,10 @@ gtkParent(object)
 \note{
 THIS STUFF IS VERY OLD AND DEPRECATED (compatibility wrappers for RGtk 1)
 
-This is a slightly modified function from Duncan's original. It now always behaves 
+This is a slightly modified function from Duncan's original. It now always behaves
 as if the former argument \code{FULL} is \code{TRUE}.
 
-This is an extra-ordinarily early release 
+This is an extra-ordinarily early release
 intended to encourage others to contribute code, etc.}
 
 \seealso{
@@ -47,4 +47,3 @@ intended to encourage others to contribute code, etc.}
 
 \keyword{interface}
 \keyword{internal}
-

@@ -2,10 +2,10 @@
 \name{gFileReplaceContents}
 \title{gFileReplaceContents}
 \description{Replaces the contents of \code{file} with \code{contents} of \code{length} bytes.
- 
+
 If \code{etag} is specified (not \code{NULL}) any existing file must have that etag, or
 the error \code{G_IO_ERROR_WRONG_ETAG} will be returned.}
-\usage{gFileReplaceContents(object, contents, length, etag, make.backup, 
+\usage{gFileReplaceContents(object, contents, length, etag, make.backup,
     flags = "G_FILE_CREATE_NONE", cancellable = NULL, .errwarn = TRUE)}
 \arguments{
 \item{\verb{object}}{input \code{\link{GFile}}.}
@@ -19,11 +19,11 @@ for the document, or \code{NULL}}
 \item{.errwarn}{Whether to issue a warning on error or fail silently}
 }
 \details{If \code{make.backup} is \code{TRUE}, this function will attempt to make a backup of \code{file}.
-  
+
 If \code{cancellable} is not \code{NULL}, then the operation can be cancelled by
 triggering the cancellable object from another thread. If the operation
-was cancelled, the error \code{G_IO_ERROR_CANCELLED} will be returned. 
-  
+was cancelled, the error \code{G_IO_ERROR_CANCELLED} will be returned.
+
 The returned \code{new.etag} can be used to verify that the file hasn't changed the
 next time it is saved over.}
 \value{

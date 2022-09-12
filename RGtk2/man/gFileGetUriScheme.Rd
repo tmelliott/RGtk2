@@ -3,7 +3,7 @@
 \title{gFileGetUriScheme}
 \description{Gets the URI scheme for a \code{\link{GFile}}.
 RFC 3986 decodes the scheme as:
-\preformatted{URI = scheme ":" hier-part [ "?" query ] [ "#" fragment ] 
+\preformatted{URI = scheme ":" hier-part [ "?" query ] [ "#" fragment ]
 }
 Common schemes include "file", "http", "ftp", etc. }
 \usage{gFileGetUriScheme(object)}

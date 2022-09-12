@@ -2,7 +2,7 @@
 \name{gtkPrintOperationSetUnit}
 \title{gtkPrintOperationSetUnit}
 \description{Sets up the transformation for the cairo context obtained from
-\code{\link{GtkPrintContext}} in such a way that distances are measured in 
+\code{\link{GtkPrintContext}} in such a way that distances are measured in
 units of \code{unit}.}
 \usage{gtkPrintOperationSetUnit(object, unit)}
 \arguments{

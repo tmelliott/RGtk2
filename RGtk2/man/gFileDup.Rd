@@ -1,8 +1,8 @@
 \alias{gFileDup}
 \name{gFileDup}
 \title{gFileDup}
-\description{Duplicates a \code{\link{GFile}} handle. This operation does not duplicate 
-the actual file or directory represented by the \code{\link{GFile}}; see 
+\description{Duplicates a \code{\link{GFile}} handle. This operation does not duplicate
+the actual file or directory represented by the \code{\link{GFile}}; see
 \code{\link{gFileCopy}} if attempting to copy a file. }
 \usage{gFileDup(object)}
 \arguments{\item{\verb{object}}{input \code{\link{GFile}}.}}

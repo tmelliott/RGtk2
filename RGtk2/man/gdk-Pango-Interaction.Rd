@@ -30,7 +30,7 @@
 and types in this section are used to render Pango objects to GDK.
 drawables, and also extend the set of Pango attributes to include
 stippling and embossing.
-  
+
 Creating a \code{\link{PangoLayout}} object is the first step in rendering text,
 and requires getting a handle to a \code{\link{PangoContext}}. For GTK+ programs,
 you'll usually want to use \code{\link{gtkWidgetGetPangoContext}}, or
@@ -40,14 +40,14 @@ can set the text and attributes of it with Pango functions like
 \code{\link{pangoLayoutSetText}} and get its size with \code{\link{pangoLayoutGetSize}}.
 (Note that Pango uses a fixed point system internally, so converting
 between Pango units and pixels using PANGO_SCALE or the \code{pangoPixels()} function.)
-  
+
 Rendering a Pango layout is done most simply with \code{\link{gdkDrawLayout}};
 you can also draw pieces of the layout with \code{\link{gdkDrawLayout}} or
 \code{\link{gdkDrawGlyphs}}. \code{\link{GdkPangoRenderer}} is a subclass of \code{\link{PangoRenderer}}
 that is used internally to implement these functions. Using it
 directly or subclassing it can be useful in some cases. See the
 \code{\link{GdkPangoRenderer}} documentation for details.
-  
+
  \emph{Using   \code{\link{GdkPangoRenderer}}   to draw transformed text}
 \preformatted{
 window <- NULL
@@ -61,7 +61,7 @@ rotated.text.expose.event <- function(widget, event, data)
 
   ## matrix describing font transformation, initialize to identity
   matrix <- pangoMatrixInit()
-  
+
   width <- widget[["allocation"]][["width"]]
   height <- widget[["allocation"]][["height"]]
 
@@ -89,26 +89,26 @@ rotated.text.expose.event <- function(widget, event, data)
   for (i in 1:N.WORDS) {
     rotated.matrix <- matrix$copy()
     angle <- (360 * i) / N.WORDS
-    
+
     color <- list()
     ## Gradient from red at angle 60 to blue at angle 300
     color$red <- 65535 * (1 + cos((angle - 60) * pi / 180)) / 2
     color$green <- 0
     color$blue <- 65535 - color$red
-    
+
     renderer$setOverrideColor("foreground", color)
-    
+
     rotated.matrix$rotate(angle)
-    
+
     context$setMatrix(rotated.matrix)
-    
+
     ## Inform Pango to re-layout the text with the new transformation matrix
     layout$contextChanged()
-    
+
     size <- layout$getSize()
     renderer$drawLayout(layout, - size$width / 2, - RADIUS * 1024)
   }
-  
+
   ## Clean up default renderer, since it is shared
   renderer$setOverrideColor("foreground", NULL)
   renderer$setDrawable(NULL)
@@ -142,14 +142,14 @@ screen is obtained with \code{\link{gdkPangoRendererGetDefault}}; Pango
 functions like \code{\link{pangoRendererDrawLayout}} and
 \code{\link{pangoRendererDrawLayoutLine}} are then used to draw objects with
 the renderer.
-  
+
 In most simple cases, applications can just use \code{\link{gdkDrawLayout}}, and
 don't need to directly use \code{\link{GdkPangoRenderer}} at all. Using the
 \code{\link{GdkPangoRenderer}} directly is most useful when working with a
 transformation such as a rotation, because the Pango drawing functions
 take user space coordinates (coordinates before the transformation)
 instead of device coordinates.
-  
+
 In certain cases it can be useful to subclass \code{\link{GdkPangoRenderer}}. Examples
 of reasons to do this are to add handling of custom attributes by
 overriding 'prepare_run' or to do custom drawing of embedded objects

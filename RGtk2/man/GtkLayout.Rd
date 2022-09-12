@@ -32,7 +32,7 @@ different in that it supports scrolling natively (you can add it to a
 \code{\link{GtkScrolledWindow}}), and it can contain child widgets, since it's a
 \code{\link{GtkContainer}}. However if you're just going to draw, a \code{\link{GtkDrawingArea}}
 is a better choice since it has lower overhead.
-  
+
 When handling expose events on a \code{\link{GtkLayout}}, you must draw to
 GTK_LAYOUT (layout)->bin_window, rather than to
 GTK_WIDGET (layout)->window, as you would for a drawing

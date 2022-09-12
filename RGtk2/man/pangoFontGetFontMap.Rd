@@ -10,7 +10,7 @@ map will be finalized even if there are fonts created with the font
 map that are still alive.  In that case this function will return \code{NULL}.
 It is the responsibility of the user to ensure that the font map is kept
 alive.  In most uses this is not an issue as a \code{\link{PangoContext}} holds
-a reference to the font map.  
+a reference to the font map.
   Since 1.10}
 \value{[\code{\link{PangoFontMap}}]  the \code{\link{PangoFontMap}} for the font, or \code{NULL} if \code{font} is \code{NULL}.}
 \author{Derived by RGtkGen from GTK+ documentation}

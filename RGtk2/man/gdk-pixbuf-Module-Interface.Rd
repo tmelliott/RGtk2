@@ -27,7 +27,7 @@ formats. Each loadable module must export a
 \verb{GdkPixbufModuleFillInfoFunc} function named \code{fillInfo} and
 a \verb{GdkPixbufModuleFillVtableFunc} function named
 \code{fillVtable}.
-  
+
 In order to make format-checking work before actually loading the modules
 (which may require dlopening image libraries), modules export their
 signatures (and other information) via the \code{fillInfo}
@@ -35,7 +35,7 @@ function. An external utility, \command{gdk-pixbuf-query-loaders},
 uses this to create a text file containing a list of all available loaders and
 their signatures. This file is then read at runtime by \command{gdk-pixbuf} to obtain
 the list of available loaders and their signatures.
-  
+
 Modules may only implement a subset of the functionality available via
 \verb{GdkPixbufModule}. If a particular functionality is not implemented, the
 \code{fillVtable} function will simply not set the corresponding
@@ -43,7 +43,7 @@ function pointers of the \verb{GdkPixbufModule} structure. If a module supports
 incremental loading (i.e. provides \verb{begin_load}, \verb{stop_load} and
 \verb{load_increment}), it doesn't have to implement \verb{load}, since \command{gdk-pixbuf} can
 supply a generic \verb{load} implementation wrapping the incremental loading.
-  
+
 Installing a module is a two-step process:
 \itemize{
 \item copy the module file(s) to the loader directory (normally
@@ -56,7 +56,7 @@ module file (normally
 unless overridden by the environment variable
 \env{GDK_PIXBUF_MODULE_FILE})
 }
-  
+
 The \command{gdk-pixbuf} interfaces needed for implementing modules are contained in
 \file{gdk-pixbuf-io.h} (and
 \file{gdk-pixbuf-animation.h} if the module supports animations).
@@ -106,13 +106,13 @@ Defines the type of the function used to fill a
 \item{\code{GdkPixbufModuleSizeFunc(width, height, user.data)}}{
 Defines the type of the function that gets called once the size
 of the loaded image is known.
-  
+
 The function is expected to set \code{width} and \code{height} to the desired
 size to which the image should be scaled. If a module has no efficient
 way to achieve the desired scaling during the loading of the image, it may
 either ignore the size request, or only approximate it -- \command{gdk-pixbuf} will
 then perform the required scaling on the completely loaded image.
-  
+
 If the function sets \code{width} or \code{height} to zero, the module should interpret
 this as a hint that it will be closed soon and shouldn't allocate further
 resources. This convention is used to implement \code{\link{gdkPixbufGetFileInfo}}

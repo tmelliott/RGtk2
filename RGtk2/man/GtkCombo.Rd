@@ -27,20 +27,20 @@
 \section{Detailed Description}{The \code{\link{GtkCombo}} widget consists of a single-line text entry field and a drop-down
 list. The drop-down list is displayed when the user clicks on a small arrow
 button to the right of the entry field.
-  
+
 The drop-down list is a \code{\link{GtkList}} widget and can be accessed using the
 \code{list} member of the \code{\link{GtkCombo}}.
 List elements can contain arbitrary widgets, but if an element is not a
 plain label, then you must use the \code{gtkListSetItemString()} function.
 This sets the string which will be placed in the text entry field when the
 item is selected.
-  
+
 By default, the user can step through the items in the list using the
 arrow (cursor) keys, though this behaviour can be turned off with
 \code{\link{gtkComboSetUseArrows}}.
-  
+
 As of GTK+ 2.4, \code{\link{GtkCombo}} has been deprecated in favor of \code{\link{GtkComboBoxEntry}}.
-  
+
  \emph{Creating a   \code{GtkCombo}   widget with simple text
 items.}
 \preformatted{
@@ -52,13 +52,13 @@ items <- c("First Item", "Second Item", "Third Item", "Fourth Item",
            "Fifth Item")
 combo <- gtkCombo()
 combo$setPopdownStrings(items)
-}  
+}
  \emph{Creating a   \code{GtkCombo}   widget with a complex item.}
 \preformatted{
 ######
 # Creating a combobox with a complex item
 ######
-  
+
 combo <- gtkCombo()
 item <- gtkListItem()
 
@@ -66,7 +66,7 @@ item <- gtkListItem()
 ##   a horizontal box with an arrow and a label in it.
 hbox <- gtkHbox(FALSE, 3)
 item$add(hbox)
-  
+
 arrow <- gtkArrow("right", "out")
 hbox$packStart(arrow, FALSE, FALSE, 0)
 

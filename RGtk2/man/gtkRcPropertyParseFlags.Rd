@@ -9,7 +9,7 @@ or \code{\link{gtkWidgetClassInstallStylePropertyParser}} which parses flags. }
 \item{\verb{gstring}}{the \verb{character} to be parsed}
 }
 \details{Flags can be specified by their name, their nickname or
-numerically. Multiple flags can be specified in the form 
+numerically. Multiple flags can be specified in the form
 \code{"( flag1 | flag2 | ... )"}.}
 \value{
 A list containing the following elements:

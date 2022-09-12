@@ -1,16 +1,16 @@
 # Accessing the child model in a selection changed callback
 
-selection_changed <- function(selection, data)
-{
+selection_changed <- function(selection, data) {
   # Get the current selected row and the model.
   selected <- selection$getSelected()
-  if (!selected[[1]])
+  if (!selected[[1]]) {
     return()
+  }
 
   ## Look up the current value on the selected row and get a new value
   ## to change it to.
   some_data <- selected$model$get(selected$iter, COLUMN_1)
-  
+
   modified_data <- change_the_data(some_data)
 
   ## Get an iterator on the child model, instead of the sort model.

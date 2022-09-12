@@ -2,7 +2,7 @@
 \name{gVolumeEnumerateIdentifiers}
 \title{gVolumeEnumerateIdentifiers}
 \description{Gets the kinds of identifiers
-that \code{volume} has. Use \code{gVolumeGetIdentifer()} to obtain 
+that \code{volume} has. Use \code{gVolumeGetIdentifer()} to obtain
 the identifiers themselves.}
 \usage{gVolumeEnumerateIdentifiers(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GVolume}}}}

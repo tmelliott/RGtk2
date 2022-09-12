@@ -1,7 +1,7 @@
 \alias{atkObjectFactoryCreateAccessible}
 \name{atkObjectFactoryCreateAccessible}
 \title{atkObjectFactoryCreateAccessible}
-\description{Provides an \code{\link{AtkObject}} that implements an accessibility interface 
+\description{Provides an \code{\link{AtkObject}} that implements an accessibility interface
 on behalf of \code{obj}}
 \usage{atkObjectFactoryCreateAccessible(object, obj)}
 \arguments{

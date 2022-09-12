@@ -10,7 +10,7 @@ group.}
 \details{The \code{\link{cairoPopGroup}} function calls \code{\link{cairoRestore}}, (balancing a
 call to \code{\link{cairoSave}} by the push_group function), so that any
 changes to the graphics state will not be visible outside the
-group.  
+group.
   Since 1.2}
 \value{[\code{\link{CairoPattern}}]  a newly created (surface) pattern containing the
 results of all drawing operations performed to the group.}

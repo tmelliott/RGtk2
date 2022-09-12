@@ -4,7 +4,7 @@
 \description{Asynchronously gets the requested information about specified \code{file}. The result
 is a \code{\link{GFileInfo}} object that contains key-value attributes (such as type or size
 for the file).}
-\usage{gFileQueryInfoAsync(object, attributes, flags = "G_FILE_QUERY_INFO_NONE", 
+\usage{gFileQueryInfoAsync(object, attributes, flags = "G_FILE_QUERY_INFO_NONE",
     io.priority = 0, cancellable = NULL, callback, user.data = NULL)}
 \arguments{
 \item{\verb{object}}{input \code{\link{GFile}}.}
@@ -18,7 +18,7 @@ of the request.}
 }
 \details{For more details, see \code{\link{gFileQueryInfo}} which is
 the synchronous version of this call.
-  
+
 When the operation is finished, \code{callback} will be called. You can then call
 \code{\link{gFileQueryInfoFinish}} to get the result of the operation.}
 \author{Derived by RGtkGen from GTK+ documentation}

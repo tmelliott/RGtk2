@@ -19,13 +19,13 @@ to be saved for future use. (See \code{\link{gtkAccelMapSave}}.)}
 be used by a menu creation system like \code{\link{GtkUIManager}}. If you
 use \code{\link{GtkUIManager}}, setting up accelerator paths will be done
 automatically.
-  
+
 Even when you you aren't using \code{\link{GtkUIManager}}, if you only want to
 set up accelerators on menu items \code{\link{gtkMenuItemSetAccelPath}}
 provides a somewhat more convenient interface.
-  
+
 Note that \code{accel.path} string will be stored in a \code{\link{GQuark}}. Therefore, if you
-pass a static string, you can save some memory by interning it first with 
+pass a static string, you can save some memory by interning it first with
 \code{gInternStaticString()}.}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

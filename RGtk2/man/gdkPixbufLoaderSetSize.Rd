@@ -11,7 +11,7 @@ signal handler for the ::size-prepared signal.}
 \item{\verb{width}}{The desired width of the image being loaded.}
 \item{\verb{height}}{The desired height of the image being loaded.}
 }
-\details{Attempts to set the desired image size  are ignored after the 
+\details{Attempts to set the desired image size  are ignored after the
 emission of the ::size-prepared signal.
   Since 2.2}
 \author{Derived by RGtkGen from GTK+ documentation}

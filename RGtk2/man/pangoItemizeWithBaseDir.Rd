@@ -4,7 +4,7 @@
 \description{Like \code{\link{pangoItemize}}, but the base direction to use when
 computing bidirectional levels (see \code{\link{pangoContextSetBaseDir}}),
 is specified explicitly rather than gotten from the \code{\link{PangoContext}}.}
-\usage{pangoItemizeWithBaseDir(context, base.dir, text, start.index, 
+\usage{pangoItemizeWithBaseDir(context, base.dir, text, start.index,
     length, attrs, cached.iter = NULL)}
 \arguments{
 \item{\verb{context}}{[\code{\link{PangoContext}}]    a structure holding information that affects

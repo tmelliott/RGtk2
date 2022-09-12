@@ -1,7 +1,7 @@
 \alias{gtkUIManagerRemoveActionGroup}
 \name{gtkUIManagerRemoveActionGroup}
 \title{gtkUIManagerRemoveActionGroup}
-\description{Removes an action group from the list of action groups associated 
+\description{Removes an action group from the list of action groups associated
 with \code{self}.}
 \usage{gtkUIManagerRemoveActionGroup(object, action.group)}
 \arguments{

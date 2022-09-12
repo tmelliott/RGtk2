@@ -11,10 +11,10 @@ size allocations to give them with \code{\link{gtkWidgetSizeAllocate}}.}
 caveats. Most notably, getting a size request requires the widget
 to be associated with a screen, because font information may be
 needed. Multihead-aware applications should keep this in mind.
-  
+
 Also remember that the size request is not necessarily the size
 a widget will actually be allocated.
-  
+
 See also \code{\link{gtkWidgetGetChildRequisition}}.}
 \value{
 A list containing the following elements:

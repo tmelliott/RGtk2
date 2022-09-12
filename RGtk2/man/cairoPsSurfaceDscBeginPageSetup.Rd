@@ -10,8 +10,8 @@ PageSetup section of the PostScript output.}
 surface. It should be called after any call to
 \code{\link{cairoPsSurfaceDscBeginSetup}} and before any drawing is
 performed to the surface.
-  
-See \code{\link{cairoPsSurfaceDscComment}} for more details.  
+
+See \code{\link{cairoPsSurfaceDscComment}} for more details.
   Since 1.2}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

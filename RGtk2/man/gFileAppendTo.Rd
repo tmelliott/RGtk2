@@ -3,7 +3,7 @@
 \title{gFileAppendTo}
 \description{Gets an output stream for appending data to the file. If
 the file doesn't already exist it is created.}
-\usage{gFileAppendTo(object, flags = "G_FILE_CREATE_NONE", cancellable = NULL, 
+\usage{gFileAppendTo(object, flags = "G_FILE_CREATE_NONE", cancellable = NULL,
     .errwarn = TRUE)}
 \arguments{
 \item{\verb{object}}{input \code{\link{GFile}}.}
@@ -15,11 +15,11 @@ the file doesn't already exist it is created.}
 but if you pass \verb{G_FILE_CREATE_PRIVATE} in \code{flags} the file
 will be made readable only to the current user, to the level that
 is supported on the target filesystem.
-  
+
 If \code{cancellable} is not \code{NULL}, then the operation can be cancelled by
 triggering the cancellable object from another thread. If the operation
-was cancelled, the error \code{G_IO_ERROR_CANCELLED} will be returned. 
-  
+was cancelled, the error \code{G_IO_ERROR_CANCELLED} will be returned.
+
 Some file systems don't allow all file names, and may
 return an \code{G_IO_ERROR_INVALID_FILENAME} error.
 If the file is a directory the \code{G_IO_ERROR_IS_DIRECTORY} error will be

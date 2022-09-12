@@ -1,7 +1,7 @@
 \alias{gtkButtonSetImagePosition}
 \name{gtkButtonSetImagePosition}
 \title{gtkButtonSetImagePosition}
-\description{Sets the position of the image relative to the text 
+\description{Sets the position of the image relative to the text
 inside the button.}
 \usage{gtkButtonSetImagePosition(object, position)}
 \arguments{

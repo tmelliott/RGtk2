@@ -52,7 +52,7 @@ asCGdkWindowAttr(USER_OBJECT_ s_window_attr, GdkWindowAttributesType *mask)
 {
 	GdkWindowAttr* attr = (GdkWindowAttr*)S_alloc(1, sizeof(GdkWindowAttr));
 	*mask = 0;
-  
+
 	if (GET_LENGTH(VECTOR_ELT(s_window_attr, 0)) > 0) {
 		*mask |= GDK_WA_TITLE;
 		attr->title = (gchar *)asCString(VECTOR_ELT(s_window_attr, 0));
@@ -152,7 +152,7 @@ asCGdkGCValuesWithMask(USER_OBJECT_ s_values, GdkGCValuesMask *mask)
     if (GET_LENGTH(VECTOR_ELT(s_values, 2)) > 0) {
         *mask |= GDK_GC_FONT;
         values->font = (GdkFont*)getPtrValue(VECTOR_ELT(s_values, 2));
-    } 
+    }
     if (GET_LENGTH(VECTOR_ELT(s_values, 3)) > 0) {
         *mask |= GDK_GC_FUNCTION;
         values->function = (GdkFunction)INTEGER_DATA(VECTOR_ELT(s_values, 3))[0];
@@ -213,7 +213,7 @@ asCGdkGCValuesWithMask(USER_OBJECT_ s_values, GdkGCValuesMask *mask)
         *mask |= GDK_GC_JOIN_STYLE;
         values->join_style = (GdkJoinStyle)INTEGER_DATA(VECTOR_ELT(s_values, 17))[0];
     }
-	
+
 	return(values);
 }
 
@@ -221,8 +221,8 @@ USER_OBJECT_
 asRGdkGCValues(GdkGCValues *values)
 {
     USER_OBJECT_ s_values;
-	static char *names[] = { "foreground", "background", "font", "function", "fill", "tile", "stipple", 
-		"clip.mask", "subwindow.mode", "ts.x.origin", "ts.y.origin", "clip.x.origin", "clip.y.origin", 
+	static char *names[] = { "foreground", "background", "font", "function", "fill", "tile", "stipple",
+		"clip.mask", "subwindow.mode", "ts.x.origin", "ts.y.origin", "clip.x.origin", "clip.y.origin",
 		"graphics.exposures", "line.width", "line.style", "cap.style", "join.style", NULL };
 
     PROTECT(s_values = NEW_LIST(18));
@@ -247,7 +247,7 @@ asRGdkGCValues(GdkGCValues *values)
     SET_VECTOR_ELT(s_values, 17, asREnum(values->join_style, GDK_TYPE_JOIN_STYLE));
 
 	SET_NAMES(s_values, asRStringArray(names));
-	
+
     UNPROTECT(1);
 
     return(s_values);
@@ -263,7 +263,7 @@ asRGdkTimeCoord(GdkTimeCoord* coord, int num_axes)
 
     SET_VECTOR_ELT(s_coord, 0, asRNumeric(coord->time));
     SET_VECTOR_ELT(s_coord, 1, asRNumericArrayWithSize(coord->axes, num_axes));
-	
+
 	SET_NAMES(s_coord, asRStringArray(names));
 
     UNPROTECT(1);
@@ -298,7 +298,7 @@ asRGdkRectangle(GdkRectangle *rect)
     SET_VECTOR_ELT(s_rect, 1, asRInteger(rect->y));
     SET_VECTOR_ELT(s_rect, 2, asRInteger(rect->width));
     SET_VECTOR_ELT(s_rect, 3, asRInteger(rect->height));
-	
+
 	SET_NAMES(s_rect, asRStringArray(names));
 
     UNPROTECT(1);
@@ -385,7 +385,7 @@ asRGdkKeymapKey(GdkKeymapKey* key)
     SET_VECTOR_ELT(s_key, 0, asRNumeric(key->keycode));
     SET_VECTOR_ELT(s_key, 1, asRInteger(key->group));
     SET_VECTOR_ELT(s_key, 2, asRInteger(key->level));
-	
+
 	SET_NAMES(s_key, asRStringArray(names));
 
     UNPROTECT(1);
@@ -417,7 +417,7 @@ asRGdkPoint(GdkPoint *point)
     SET_VECTOR_ELT(s_point, 1, asRInteger(point->y));
 
 	SET_NAMES(s_point, asRStringArray(names));
-	
+
     UNPROTECT(1);
 
     return(s_point);
@@ -475,9 +475,9 @@ asCGdkColor(USER_OBJECT_ s_color)
     color->red = asCInteger(VECTOR_ELT(s_color, 0+offset));
     color->green = asCInteger(VECTOR_ELT(s_color, 1+offset));
     color->blue = asCInteger(VECTOR_ELT(s_color, 2+offset));
-	
+
 	/*Rprintf("rgb: %d %d %d\n", color->red, color->green, color->blue);*/
-	
+
     return(color);
 }
 USER_OBJECT_
@@ -494,7 +494,7 @@ asRGdkColor(const GdkColor* color)
     SET_VECTOR_ELT(s_color, 3, asRInteger(color->blue));
 
 	SET_NAMES(s_color, asRStringArray(names));
-	
+
     UNPROTECT(1);
 
     return(s_color);
@@ -605,7 +605,7 @@ toRGdkEvent(GdkEvent *event, gboolean own)
 
     if (!own)
       event = gdk_event_copy(event);
-    
+
     PROTECT(result = toRPointerWithFinalizer(event, NULL, (RPointerFinalizer)gdk_event_free));
 
     char *classes[] = { type, "GdkEventAny", "GdkEvent", "RGtkObject" };
@@ -634,14 +634,14 @@ GdkTrapezoid *
 asCGdkTrapezoid(USER_OBJECT_ s_trapezoid)
 {
 	GdkTrapezoid *trapezoid = (GdkTrapezoid *)R_alloc(1, sizeof(GdkTrapezoid));
-	
+
 	trapezoid->y1 = asCNumeric(VECTOR_ELT(s_trapezoid, 0));
 	trapezoid->x11 = asCNumeric(VECTOR_ELT(s_trapezoid, 1));
 	trapezoid->x21 = asCNumeric(VECTOR_ELT(s_trapezoid, 2));
 	trapezoid->y2 = asCNumeric(VECTOR_ELT(s_trapezoid, 3));
 	trapezoid->x12 = asCNumeric(VECTOR_ELT(s_trapezoid, 4));
 	trapezoid->x22 = asCNumeric(VECTOR_ELT(s_trapezoid, 5));
-	
+
 	return(trapezoid);
 }
 

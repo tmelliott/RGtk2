@@ -8,7 +8,7 @@ avoid displaying \code{mount} in the user interface if it is shadowed.}
 \details{A mount is said to be shadowed if there exists one or more user
 visible objects (currently \code{\link{GMount}} objects) with a root that is
 inside the root of \code{mount}.
-  
+
 One application of shadow mounts is when exposing a single file
 system that is used to address several logical volumes. In this
 situation, a \code{\link{GVolumeMonitor}} implementation would create two
@@ -21,7 +21,7 @@ underlying mount (with root
 \code{\link{GVolumeMonitor}} implementation would create two \code{\link{GMount}} objects
 (each with their root matching the corresponding volume activation
 root) that would shadow the original mount.
-  
+
 The proxy monitor in GVfs 2.26 and later, automatically creates and
 manage shadow mounts (and shadows the underlying mount) if the
 activation root on a \code{\link{GVolume}} is set.

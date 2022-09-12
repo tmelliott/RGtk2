@@ -21,10 +21,10 @@
 \section{Interfaces}{GtkHBox implements
  AtkImplementorIface,  \code{\link{GtkBuildable}} and  \code{\link{GtkOrientable}}.}
 \section{Detailed Description}{GtkHBox is a container that organizes child widgets into a single row.
-  
+
 Use the \code{\link{GtkBox}} packing interface to determine the arrangement,
 spacing, width, and alignment of GtkHBox children.
-  
+
 All children are allocated the same height.}
 \section{Structures}{\describe{\item{\verb{GtkHBox}}{
 \emph{undocumented

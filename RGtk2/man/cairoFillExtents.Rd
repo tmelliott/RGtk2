@@ -11,12 +11,12 @@ dimensions and clipping are not taken into account.}
 \details{Contrast with \code{\link{cairoPathExtents}}, which is similar, but returns
 non-zero extents for some paths with no inked area, (such as a
 simple line segment).
-  
+
 Note that \code{\link{cairoFillExtents}} must necessarily do more work to
 compute the precise inked areas in light of the fill rule, so
 \code{\link{cairoPathExtents}} may be more desirable for sake of performance
 if the non-inked path extents are desired.
-  
+
 See \code{\link{cairoFill}}, \code{\link{cairoSetFillRule}} and \code{\link{cairoFillPreserve}}.  }
 \value{
 A list containing the following elements:

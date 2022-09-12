@@ -2,8 +2,8 @@
 \name{gdkGCSetForeground}
 \title{gdkGCSetForeground}
 \description{Sets the foreground color for a graphics context.
-Note that this function uses \code{color->pixel}, use 
-\code{\link{gdkGCSetRgbFgColor}} to specify the foreground 
+Note that this function uses \code{color->pixel}, use
+\code{\link{gdkGCSetRgbFgColor}} to specify the foreground
 color as red, green, blue components.}
 \usage{gdkGCSetForeground(object, color)}
 \arguments{

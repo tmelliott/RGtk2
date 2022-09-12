@@ -5,7 +5,7 @@
 Draws an extension, i.e. a notebook tab.
 \strong{WARNING: \code{gtk_draw_extension} has been deprecated since version 2.0 and should not be used in newly-written code. Use \code{\link{gtkPaintExtension}} instead.}
 }
-\usage{gtkDrawExtension(object, window, state.type, shadow.type, x, 
+\usage{gtkDrawExtension(object, window, state.type, shadow.type, x,
     y, width, height, gap.side)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GtkStyle}}}

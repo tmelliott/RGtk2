@@ -1,7 +1,7 @@
 \alias{gMountRemountFinish}
 \name{gMountRemountFinish}
 \title{gMountRemountFinish}
-\description{Finishes remounting a mount. If any errors occurred during the operation, 
+\description{Finishes remounting a mount. If any errors occurred during the operation,
 \code{error} will be set to contain the errors and \code{FALSE} will be returned.}
 \usage{gMountRemountFinish(object, result, .errwarn = TRUE)}
 \arguments{

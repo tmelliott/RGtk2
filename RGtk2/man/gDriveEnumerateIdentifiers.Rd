@@ -1,7 +1,7 @@
 \alias{gDriveEnumerateIdentifiers}
 \name{gDriveEnumerateIdentifiers}
 \title{gDriveEnumerateIdentifiers}
-\description{Gets the kinds of identifiers that \code{drive} has. 
+\description{Gets the kinds of identifiers that \code{drive} has.
 Use \code{gDriveGetIdentifer()} to obtain the identifiers
 themselves.}
 \usage{gDriveEnumerateIdentifiers(object)}

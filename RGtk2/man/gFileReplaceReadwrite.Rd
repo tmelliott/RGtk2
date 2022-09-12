@@ -4,7 +4,7 @@
 \description{Returns an output stream for overwriting the file in readwrite mode,
 possibly creating a backup copy of the file first. If the file doesn't
 exist, it will be created.}
-\usage{gFileReplaceReadwrite(object, etag, make.backup, flags, cancellable = NULL, 
+\usage{gFileReplaceReadwrite(object, etag, make.backup, flags, cancellable = NULL,
     .errwarn = TRUE)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GFile}}}
@@ -17,7 +17,7 @@ current \code{\link{GFile}}, or \verb{NULL} to ignore}
 }
 \details{For details about the behaviour, see \code{\link{gFileReplace}} which does the same
 thing but returns an output stream only.
-  
+
 Note that in many non-local file cases read and write streams are not
 supported, so make sure you really need to do read and write streaming,
 rather than just opening for reading or writing.

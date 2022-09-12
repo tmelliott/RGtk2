@@ -1,7 +1,7 @@
 \alias{gtkActionGroupSetTranslateFunc}
 \name{gtkActionGroupSetTranslateFunc}
 \title{gtkActionGroupSetTranslateFunc}
-\description{Sets a function to be used for translating the \code{label} and \code{tooltip} of 
+\description{Sets a function to be used for translating the \code{label} and \code{tooltip} of
 \verb{GtkActionGroupEntry}s added by \code{\link{gtkActionGroupAddActions}}.}
 \usage{gtkActionGroupSetTranslateFunc(object, func, data = NULL)}
 \arguments{

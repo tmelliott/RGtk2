@@ -10,7 +10,7 @@ USER_OBJECT_
          PangoLanguage* language = (PangoLanguage*)getPtrValue(s_language);
          PangoLogAttr* log_attrs;
 		 int attrs_len = g_utf8_strlen(text, length) + 1;
-		 
+
          USER_OBJECT_ _result = NULL_USER_OBJECT;
 
          log_attrs = (PangoLogAttr*)R_alloc(attrs_len, sizeof(PangoLogAttr));

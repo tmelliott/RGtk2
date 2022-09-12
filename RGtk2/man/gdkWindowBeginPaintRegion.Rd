@@ -23,7 +23,7 @@ as individual drawing operations are performed in sequence.  The
 clipping and background-initializing features of
 \code{\link{gdkWindowBeginPaintRegion}} are conveniences for the
 programmer, so you can avoid doing that work yourself.
-  
+
 When using GTK+, the widget system automatically places calls to
 \code{\link{gdkWindowBeginPaintRegion}} and \code{\link{gdkWindowEndPaint}} around
 emissions of the expose_event signal. That is, if you're writing an
@@ -34,7 +34,7 @@ Therefore in most cases, application code need not call
 \code{\link{gdkWindowBeginPaintRegion}}. (You can disable the automatic
 calls around expose events on a widget-by-widget basis by calling
 \code{\link{gtkWidgetSetDoubleBuffered}}.)
-  
+
 If you call this function multiple times before calling the
 matching \code{\link{gdkWindowEndPaint}}, the backing stores are pushed onto
 a stack. \code{\link{gdkWindowEndPaint}} copies the topmost backing store

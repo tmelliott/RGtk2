@@ -26,7 +26,7 @@ The AtkRelation structure should not be accessed directly.
 }}}
 \section{Convenient Construction}{\code{atkRelation} is the equivalent of \code{\link{atkRelationNew}}.}
 \section{Enums and Flags}{\describe{\item{\verb{AtkRelationType}}{
-Describes the type of the relation  
+Describes the type of the relation
 
 \describe{
 \item{\verb{null}}{ Not used, represens "no relationship" or an error condition.}
@@ -41,8 +41,8 @@ Describes the type of the relation
 \item{\verb{flows-from}}{ Indicates that the object has content that flows logically from
  another AtkObject in a sequential way, (for instance text-flow).}
 \item{\verb{subwindow-of}}{ Indicates a subwindow attached to a component but otherwise has no connection in  the UI heirarchy to that component.}
-\item{\verb{embeds}}{ Indicates that the object visually embeds 
- another object's content, i.e. this object's content flows around 
+\item{\verb{embeds}}{ Indicates that the object visually embeds
+ another object's content, i.e. this object's content flows around
  another's content.}
 \item{\verb{embedded-by}}{ Inverse of \code{ATK_RELATION_EMBEDS}, indicates that
  this object's content is visualy embedded in another object.}

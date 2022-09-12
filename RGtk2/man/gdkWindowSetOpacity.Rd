@@ -9,11 +9,11 @@ of the opacity parameter are clamped to the [0,1] range.) }
 \item{\verb{object}}{a top-level \code{\link{GdkWindow}}}
 \item{\verb{opacity}}{opacity}
 }
-\details{On X11, this works only on X screens with a compositing manager 
+\details{On X11, this works only on X screens with a compositing manager
 running.
-  
+
 For setting up per-pixel alpha, see \code{\link{gdkScreenGetRgbaColormap}}.
-For making non-toplevel windows translucent, see 
+For making non-toplevel windows translucent, see
 \code{\link{gdkWindowSetComposited}}.
   Since 2.12}
 \author{Derived by RGtkGen from GTK+ documentation}

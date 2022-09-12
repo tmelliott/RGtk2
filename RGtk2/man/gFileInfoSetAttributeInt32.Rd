@@ -1,7 +1,7 @@
 \alias{gFileInfoSetAttributeInt32}
 \name{gFileInfoSetAttributeInt32}
 \title{gFileInfoSetAttributeInt32}
-\description{Sets the \code{attribute} to contain the given \code{attr.value}, 
+\description{Sets the \code{attribute} to contain the given \code{attr.value},
 if possible.}
 \usage{gFileInfoSetAttributeInt32(object, attribute, attr.value)}
 \arguments{

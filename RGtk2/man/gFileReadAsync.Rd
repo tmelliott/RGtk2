@@ -2,7 +2,7 @@
 \name{gFileReadAsync}
 \title{gFileReadAsync}
 \description{Asynchronously opens \code{file} for reading.}
-\usage{gFileReadAsync(object, io.priority = 0, cancellable = NULL, callback, 
+\usage{gFileReadAsync(object, io.priority = 0, cancellable = NULL, callback,
     user.data = NULL)}
 \arguments{
 \item{\verb{object}}{input \code{\link{GFile}}}
@@ -14,7 +14,7 @@ of the request.}
 }
 \details{For more details, see \code{\link{gFileRead}} which is
 the synchronous version of this call.
-  
+
 When the operation is finished, \code{callback} will be called. You can then call
 \code{\link{gFileReadFinish}} to get the result of the operation.}
 \author{Derived by RGtkGen from GTK+ documentation}

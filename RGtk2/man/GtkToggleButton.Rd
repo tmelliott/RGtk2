@@ -30,28 +30,28 @@
 \section{Detailed Description}{A \code{\link{GtkToggleButton}} is a \code{\link{GtkButton}} which will remain 'pressed-in' when
 clicked. Clicking again will cause the toggle button to return to its
 normal state.
-  
+
 A toggle button is created by calling either \code{\link{gtkToggleButtonNew}} or
 \code{\link{gtkToggleButtonNewWithLabel}}. If using the former, it is advisable to
 pack a widget, (such as a \code{\link{GtkLabel}} and/or a \code{\link{GtkPixmap}}), into the toggle
 button's container. (See \code{\link{GtkButton}} for more information).
-  
+
 The state of a \code{\link{GtkToggleButton}} can be set specifically using
 \code{\link{gtkToggleButtonSetActive}}, and retrieved using
 \code{\link{gtkToggleButtonGetActive}}.
-  
+
 To simply switch the state of a toggle button, use gtk_toggle_button_toggled.
-  
+
  \emph{Creating two   \code{GtkToggleButton}   widgets.}
 \preformatted{
 # Let's make two toggle buttons
 make_toggles <- function() {
   dialog <- gtkDialog(show = F)
   toggle1 <- gtkToggleButton("Hi, i'm a toggle button.")
-  
+
   ## Makes this toggle button invisible
   toggle1$setMode(TRUE)
-   
+
   gSignalConnect(toggle1, "toggled", output_state)
   dialog[["actionArea"]]$packStart(toggle1, FALSE, FALSE, 2)
 

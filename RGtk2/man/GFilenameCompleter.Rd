@@ -13,7 +13,7 @@
 \section{Hierarchy}{\preformatted{GObject
    +----GFilenameCompleter}}
 \section{Detailed Description}{Completes partial file and directory names given a partial string by
-looking in the file system for clues. Can return a list of possible 
+looking in the file system for clues. Can return a list of possible
 completion strings for widget implementations.}
 \section{Structures}{\describe{\item{\verb{GFilenameCompleter}}{
 Completes filenames based on files that exist within the file system.

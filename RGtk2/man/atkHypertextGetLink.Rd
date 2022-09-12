@@ -1,7 +1,7 @@
 \alias{atkHypertextGetLink}
 \name{atkHypertextGetLink}
 \title{atkHypertextGetLink}
-\description{Gets the link in this hypertext document at index 
+\description{Gets the link in this hypertext document at index
 \code{link.index}}
 \usage{atkHypertextGetLink(object, link.index)}
 \arguments{

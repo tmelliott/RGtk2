@@ -2,7 +2,7 @@
 \name{gdkDrawRgbImageDithalign}
 \title{gdkDrawRgbImageDithalign}
 \description{Draws an RGB image in the drawable, with an adjustment for dither alignment.}
-\usage{gdkDrawRgbImageDithalign(object, gc, x, y, width, height, dith, 
+\usage{gdkDrawRgbImageDithalign(object, gc, x, y, width, height, dith,
     rgb.buf, xdith, ydith)}
 \arguments{
 \item{\verb{object}}{The \code{\link{GdkDrawable}} to draw in (usually a \code{\link{GdkWindow}}).}
@@ -21,7 +21,7 @@ that may be scrolled. Pixel (x, y) will be drawn dithered as if its
 actual location is (x + \code{xdith}, y + \code{ydith}). Thus, if you draw an
 image into a window using zero dither alignment, then scroll up one
 pixel, subsequent draws to the window should have \code{ydith} = 1.
-  
+
 Setting the dither alignment correctly allows updating of small parts
 of the screen while avoiding visible "seams" between the different
 dither textures.}

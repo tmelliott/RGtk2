@@ -27,7 +27,7 @@
 scrollability for child widgets that lack their own scrolling
 capabilities. Use \code{\link{GtkViewport}} to scroll child widgets such as
 \code{\link{GtkTable}}, \code{\link{GtkBox}}, and so on.
-  
+
 If a widget has native scrolling abilities, such as \code{\link{GtkTextView}},
 \code{\link{GtkTreeView}} or \verb{GtkIconview}, it can be added to a \code{\link{GtkScrolledWindow}}
 with \code{\link{gtkContainerAdd}}. If a widget does not, you must first add the

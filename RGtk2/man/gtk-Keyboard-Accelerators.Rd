@@ -39,7 +39,7 @@ typically attached to a toplevel \code{\link{GtkWindow}} (with
 \code{\link{GtkAccelGroup}} directly; instead, when using \code{\link{GtkItemFactory}}, GTK+
 automatically sets up the accelerators for your menus in the item
 factory's \code{\link{GtkAccelGroup}}.
-  
+
 Note that \dfn{accelerators} are different from
 \dfn{mnemonics}. Accelerators are shortcuts for
 activating a menu item; they appear alongside the menu item they're a
@@ -103,7 +103,7 @@ The accel-activate signal is an implementation detail of
 \item{\code{accel-changed(accel.group, keyval, modifier, accel.closure, user.data)}}{
 The accel-changed signal is emitted when a \verb{GtkAccelGroupEntry}
 is added to or removed from the accel group.
-  
+
 Widgets like \code{\link{GtkAccelLabel}} which display an associated
 accelerator should connect to this signal, and rebuild
 their visual representation if the \code{accel.closure} is theirs.

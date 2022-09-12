@@ -2,7 +2,7 @@
 \name{gtkPrintSettingsSetResolution}
 \title{gtkPrintSettingsSetResolution}
 \description{Sets the values of \code{GTK_PRINT_SETTINGS_RESOLUTION},
-\code{GTK_PRINT_SETTINGS_RESOLUTION_X} and 
+\code{GTK_PRINT_SETTINGS_RESOLUTION_X} and
 \code{GTK_PRINT_SETTINGS_RESOLUTION_Y}.}
 \usage{gtkPrintSettingsSetResolution(object, resolution)}
 \arguments{

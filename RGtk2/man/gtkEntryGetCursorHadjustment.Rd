@@ -1,7 +1,7 @@
 \alias{gtkEntryGetCursorHadjustment}
 \name{gtkEntryGetCursorHadjustment}
 \title{gtkEntryGetCursorHadjustment}
-\description{Retrieves the horizontal cursor adjustment for the entry. 
+\description{Retrieves the horizontal cursor adjustment for the entry.
 See \code{\link{gtkEntrySetCursorHadjustment}}.}
 \usage{gtkEntryGetCursorHadjustment(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkEntry}}}}

@@ -1,7 +1,7 @@
 \alias{atkStateSetContainsStates}
 \name{atkStateSetContainsStates}
 \title{atkStateSetContainsStates}
-\description{Checks whether the states for all the specified types are in the 
+\description{Checks whether the states for all the specified types are in the
 specified set.}
 \usage{atkStateSetContainsStates(object, types)}
 \arguments{

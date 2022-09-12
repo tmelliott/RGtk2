@@ -1,9 +1,9 @@
 \alias{gdkPixbufNewFromFileAtSize}
 \name{gdkPixbufNewFromFileAtSize}
 \title{gdkPixbufNewFromFileAtSize}
-\description{Creates a new pixbuf by loading an image from a file.  
-The file format is detected automatically. If \code{NULL} is returned, then 
-\code{error} will be set. Possible errors are in the \verb{GDK_PIXBUF_ERROR} and 
+\description{Creates a new pixbuf by loading an image from a file.
+The file format is detected automatically. If \code{NULL} is returned, then
+\code{error} will be set. Possible errors are in the \verb{GDK_PIXBUF_ERROR} and
 \verb{G_FILE_ERROR} domains.}
 \usage{gdkPixbufNewFromFileAtSize(filename, width, height, .errwarn = TRUE)}
 \arguments{

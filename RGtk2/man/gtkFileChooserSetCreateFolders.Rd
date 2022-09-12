@@ -2,7 +2,7 @@
 \name{gtkFileChooserSetCreateFolders}
 \title{gtkFileChooserSetCreateFolders}
 \description{Sets whether file choser will offer to create new folders.
-This is only relevant if the action is not set to be 
+This is only relevant if the action is not set to be
 \code{GTK_FILE_CHOOSER_ACTION_OPEN}.}
 \usage{gtkFileChooserSetCreateFolders(object, create.folders)}
 \arguments{

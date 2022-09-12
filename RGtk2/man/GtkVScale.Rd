@@ -19,7 +19,7 @@
  AtkImplementorIface,  \code{\link{GtkBuildable}} and  \code{\link{GtkOrientable}}.}
 \section{Detailed Description}{The \code{\link{GtkVScale}} widget is used to allow the user to select a value using
 a vertical slider. To create one, use \code{\link{gtkHScaleNewWithRange}}.
-  
+
 The position to show the current value, and the number of decimal places
 shown can be set using the parent \code{\link{GtkScale}} class's functions.}
 \section{Structures}{\describe{\item{\verb{GtkVScale}}{

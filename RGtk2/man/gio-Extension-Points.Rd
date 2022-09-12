@@ -18,16 +18,16 @@
 \code{\link{gIoExtensionRefClass}(object)}\cr
 }
 \section{Detailed Description}{\code{\link{GIOExtensionPoint}} provides a mechanism for modules to extend the
-functionality of the library or application that loaded it in an 
-organized fashion.  
-  
+functionality of the library or application that loaded it in an
+organized fashion.
+
 An extension point is identified by a name, and it may optionally
 require that any implementation must by of a certain type (or derived
 thereof). Use \code{\link{gIoExtensionPointRegister}} to register an
 extension point, and \code{\link{gIoExtensionPointSetRequiredType}} to
 set a required type.
-  
-A module can implement an extension point by specifying the \code{\link{GType}} 
+
+A module can implement an extension point by specifying the \code{\link{GType}}
 that implements the functionality. Additionally, each implementation
 of an extension point has a name, and a priority. Use
 \code{\link{gIoExtensionPointImplement}} to implement an extension point.
@@ -42,7 +42,7 @@ gIoExtensionPointImplement ("my-extension-point",
                             myExampleImplType,
                             "my-example",
                             10);
-}  
+}
  It is up to the code that registered the extension point how
  it uses the implementations that have been associated with it.
  Depending on the use case, it may use all implementations, or

@@ -2,8 +2,8 @@
 \name{gFileEnumeratorNextFile}
 \title{gFileEnumeratorNextFile}
 \description{Returns information for the next file in the enumerated object.
-Will block until the information is available. The \code{\link{GFileInfo}} 
-returned from this function will contain attributes that match the 
+Will block until the information is available. The \code{\link{GFileInfo}}
+returned from this function will contain attributes that match the
 attribute string that was passed when the \code{\link{GFileEnumerator}} was created.}
 \usage{gFileEnumeratorNextFile(object, cancellable = NULL, .errwarn = TRUE)}
 \arguments{

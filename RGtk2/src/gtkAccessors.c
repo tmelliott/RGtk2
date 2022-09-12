@@ -14,7 +14,7 @@ S_GtkAdjustmentGetValue (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkAdjustmentGetLower (USER_OBJECT_ s_obj)
 {
@@ -28,7 +28,7 @@ S_GtkAdjustmentGetLower (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkAdjustmentGetUpper (USER_OBJECT_ s_obj)
 {
@@ -42,7 +42,7 @@ S_GtkAdjustmentGetUpper (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkAdjustmentGetStepIncrement (USER_OBJECT_ s_obj)
 {
@@ -56,7 +56,7 @@ S_GtkAdjustmentGetStepIncrement (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkAdjustmentGetPageIncrement (USER_OBJECT_ s_obj)
 {
@@ -70,7 +70,7 @@ S_GtkAdjustmentGetPageIncrement (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkAdjustmentGetPageSize (USER_OBJECT_ s_obj)
 {
@@ -84,7 +84,7 @@ S_GtkAdjustmentGetPageSize (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkBinGetChild (USER_OBJECT_ s_obj)
 {
@@ -98,7 +98,7 @@ S_GtkBinGetChild (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkBoxGetSpacing (USER_OBJECT_ s_obj)
 {
@@ -112,7 +112,7 @@ S_GtkBoxGetSpacing (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkBoxGetHomogeneous (USER_OBJECT_ s_obj)
 {
@@ -126,7 +126,7 @@ S_GtkBoxGetHomogeneous (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkCheckMenuItemGetActive (USER_OBJECT_ s_obj)
 {
@@ -140,7 +140,7 @@ S_GtkCheckMenuItemGetActive (USER_OBJECT_ s_obj)
    _result = asRLogical(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkColorSelectionDialogGetColorsel (USER_OBJECT_ s_obj)
 {
@@ -154,7 +154,7 @@ S_GtkColorSelectionDialogGetColorsel (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkColorSelectionDialogGetOkButton (USER_OBJECT_ s_obj)
 {
@@ -168,7 +168,7 @@ S_GtkColorSelectionDialogGetOkButton (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkColorSelectionDialogGetCancelButton (USER_OBJECT_ s_obj)
 {
@@ -182,7 +182,7 @@ S_GtkColorSelectionDialogGetCancelButton (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkColorSelectionDialogGetHelpButton (USER_OBJECT_ s_obj)
 {
@@ -196,7 +196,7 @@ S_GtkColorSelectionDialogGetHelpButton (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkComboGetEntry (USER_OBJECT_ s_obj)
 {
@@ -210,7 +210,7 @@ S_GtkComboGetEntry (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkComboGetList (USER_OBJECT_ s_obj)
 {
@@ -224,7 +224,7 @@ S_GtkComboGetList (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkContainerGetFocusChild (USER_OBJECT_ s_obj)
 {
@@ -238,7 +238,7 @@ S_GtkContainerGetFocusChild (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkContainerGetBorderWidth (USER_OBJECT_ s_obj)
 {
@@ -252,7 +252,7 @@ S_GtkContainerGetBorderWidth (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkContainerGetNeedResize (USER_OBJECT_ s_obj)
 {
@@ -266,7 +266,7 @@ S_GtkContainerGetNeedResize (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkContainerGetResizeMode (USER_OBJECT_ s_obj)
 {
@@ -280,7 +280,7 @@ S_GtkContainerGetResizeMode (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkContainerGetReallocateRedraws (USER_OBJECT_ s_obj)
 {
@@ -294,7 +294,7 @@ S_GtkContainerGetReallocateRedraws (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkContainerGetHasFocusChain (USER_OBJECT_ s_obj)
 {
@@ -308,7 +308,7 @@ S_GtkContainerGetHasFocusChain (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkDialogGetVbox (USER_OBJECT_ s_obj)
 {
@@ -322,7 +322,7 @@ S_GtkDialogGetVbox (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkDialogGetActionArea (USER_OBJECT_ s_obj)
 {
@@ -336,7 +336,7 @@ S_GtkDialogGetActionArea (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkFileSelectionGetDirList (USER_OBJECT_ s_obj)
 {
@@ -350,7 +350,7 @@ S_GtkFileSelectionGetDirList (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkFileSelectionGetFileList (USER_OBJECT_ s_obj)
 {
@@ -364,7 +364,7 @@ S_GtkFileSelectionGetFileList (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkFileSelectionGetSelectionEntry (USER_OBJECT_ s_obj)
 {
@@ -378,7 +378,7 @@ S_GtkFileSelectionGetSelectionEntry (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkFileSelectionGetSelectionText (USER_OBJECT_ s_obj)
 {
@@ -392,7 +392,7 @@ S_GtkFileSelectionGetSelectionText (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkFileSelectionGetMainVbox (USER_OBJECT_ s_obj)
 {
@@ -406,7 +406,7 @@ S_GtkFileSelectionGetMainVbox (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkFileSelectionGetOkButton (USER_OBJECT_ s_obj)
 {
@@ -420,7 +420,7 @@ S_GtkFileSelectionGetOkButton (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkFileSelectionGetCancelButton (USER_OBJECT_ s_obj)
 {
@@ -434,7 +434,7 @@ S_GtkFileSelectionGetCancelButton (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkFileSelectionGetHelpButton (USER_OBJECT_ s_obj)
 {
@@ -448,7 +448,7 @@ S_GtkFileSelectionGetHelpButton (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkFileSelectionGetHistoryPulldown (USER_OBJECT_ s_obj)
 {
@@ -462,7 +462,7 @@ S_GtkFileSelectionGetHistoryPulldown (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkFileSelectionGetHistoryMenu (USER_OBJECT_ s_obj)
 {
@@ -476,7 +476,7 @@ S_GtkFileSelectionGetHistoryMenu (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkFileSelectionGetFileopDialog (USER_OBJECT_ s_obj)
 {
@@ -490,7 +490,7 @@ S_GtkFileSelectionGetFileopDialog (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkFileSelectionGetFileopEntry (USER_OBJECT_ s_obj)
 {
@@ -504,7 +504,7 @@ S_GtkFileSelectionGetFileopEntry (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkFileSelectionGetFileopFile (USER_OBJECT_ s_obj)
 {
@@ -518,7 +518,7 @@ S_GtkFileSelectionGetFileopFile (USER_OBJECT_ s_obj)
    _result = asRString(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkFileSelectionGetFileopCDir (USER_OBJECT_ s_obj)
 {
@@ -532,7 +532,7 @@ S_GtkFileSelectionGetFileopCDir (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkFileSelectionGetFileopDelFile (USER_OBJECT_ s_obj)
 {
@@ -546,7 +546,7 @@ S_GtkFileSelectionGetFileopDelFile (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkFileSelectionGetFileopRenFile (USER_OBJECT_ s_obj)
 {
@@ -560,7 +560,7 @@ S_GtkFileSelectionGetFileopRenFile (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkFileSelectionGetButtonArea (USER_OBJECT_ s_obj)
 {
@@ -574,7 +574,7 @@ S_GtkFileSelectionGetButtonArea (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkFileSelectionGetActionArea (USER_OBJECT_ s_obj)
 {
@@ -588,7 +588,7 @@ S_GtkFileSelectionGetActionArea (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkFixedGetChildren (USER_OBJECT_ s_obj)
 {
@@ -602,7 +602,7 @@ S_GtkFixedGetChildren (USER_OBJECT_ s_obj)
    _result = asRGList(val, "GtkFixedChild");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkFontSelectionDialogGetOkButton (USER_OBJECT_ s_obj)
 {
@@ -616,7 +616,7 @@ S_GtkFontSelectionDialogGetOkButton (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkFontSelectionDialogGetApplyButton (USER_OBJECT_ s_obj)
 {
@@ -630,7 +630,7 @@ S_GtkFontSelectionDialogGetApplyButton (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkFontSelectionDialogGetCancelButton (USER_OBJECT_ s_obj)
 {
@@ -644,7 +644,7 @@ S_GtkFontSelectionDialogGetCancelButton (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkGammaCurveGetTable (USER_OBJECT_ s_obj)
 {
@@ -658,7 +658,7 @@ S_GtkGammaCurveGetTable (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkGammaCurveGetCurve (USER_OBJECT_ s_obj)
 {
@@ -672,7 +672,7 @@ S_GtkGammaCurveGetCurve (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkGammaCurveGetGamma (USER_OBJECT_ s_obj)
 {
@@ -686,7 +686,7 @@ S_GtkGammaCurveGetGamma (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkGammaCurveGetGammaDialog (USER_OBJECT_ s_obj)
 {
@@ -700,7 +700,7 @@ S_GtkGammaCurveGetGammaDialog (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkGammaCurveGetGammaText (USER_OBJECT_ s_obj)
 {
@@ -714,7 +714,7 @@ S_GtkGammaCurveGetGammaText (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkLayoutGetBinWindow (USER_OBJECT_ s_obj)
 {
@@ -728,7 +728,7 @@ S_GtkLayoutGetBinWindow (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "GdkWindow");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkMessageDialogGetImage (USER_OBJECT_ s_obj)
 {
@@ -742,7 +742,7 @@ S_GtkMessageDialogGetImage (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkMessageDialogGetLabel (USER_OBJECT_ s_obj)
 {
@@ -756,7 +756,7 @@ S_GtkMessageDialogGetLabel (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkNotebookGetTabPos (USER_OBJECT_ s_obj)
 {
@@ -770,7 +770,7 @@ S_GtkNotebookGetTabPos (USER_OBJECT_ s_obj)
    _result = asREnum(val, GTK_TYPE_POSITION_TYPE);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkStyleGetFg (USER_OBJECT_ s_obj)
 {
@@ -784,7 +784,7 @@ S_GtkStyleGetFg (USER_OBJECT_ s_obj)
    _result = asRArrayRefWithSize(val, asRGdkColor, 5);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkStyleGetBg (USER_OBJECT_ s_obj)
 {
@@ -798,7 +798,7 @@ S_GtkStyleGetBg (USER_OBJECT_ s_obj)
    _result = asRArrayRefWithSize(val, asRGdkColor, 5);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkStyleGetLight (USER_OBJECT_ s_obj)
 {
@@ -812,7 +812,7 @@ S_GtkStyleGetLight (USER_OBJECT_ s_obj)
    _result = asRArrayRefWithSize(val, asRGdkColor, 5);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkStyleGetDark (USER_OBJECT_ s_obj)
 {
@@ -826,7 +826,7 @@ S_GtkStyleGetDark (USER_OBJECT_ s_obj)
    _result = asRArrayRefWithSize(val, asRGdkColor, 5);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkStyleGetMid (USER_OBJECT_ s_obj)
 {
@@ -840,7 +840,7 @@ S_GtkStyleGetMid (USER_OBJECT_ s_obj)
    _result = asRArrayRefWithSize(val, asRGdkColor, 5);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkStyleGetText (USER_OBJECT_ s_obj)
 {
@@ -854,7 +854,7 @@ S_GtkStyleGetText (USER_OBJECT_ s_obj)
    _result = asRArrayRefWithSize(val, asRGdkColor, 5);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkStyleGetBase (USER_OBJECT_ s_obj)
 {
@@ -868,7 +868,7 @@ S_GtkStyleGetBase (USER_OBJECT_ s_obj)
    _result = asRArrayRefWithSize(val, asRGdkColor, 5);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkStyleGetTextAa (USER_OBJECT_ s_obj)
 {
@@ -882,7 +882,7 @@ S_GtkStyleGetTextAa (USER_OBJECT_ s_obj)
    _result = asRArrayRefWithSize(val, asRGdkColor, 5);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkStyleGetWhite (USER_OBJECT_ s_obj)
 {
@@ -896,7 +896,7 @@ S_GtkStyleGetWhite (USER_OBJECT_ s_obj)
    _result = asRGdkColor(&val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkStyleGetBlack (USER_OBJECT_ s_obj)
 {
@@ -910,7 +910,7 @@ S_GtkStyleGetBlack (USER_OBJECT_ s_obj)
    _result = asRGdkColor(&val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkStyleGetFontDesc (USER_OBJECT_ s_obj)
 {
@@ -924,7 +924,7 @@ S_GtkStyleGetFontDesc (USER_OBJECT_ s_obj)
    _result = toRPointerWithFinalizer(val ? pango_font_description_copy(val) : NULL, "PangoFontDescription", (RPointerFinalizer) pango_font_description_free);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkStyleGetXthickness (USER_OBJECT_ s_obj)
 {
@@ -938,7 +938,7 @@ S_GtkStyleGetXthickness (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkStyleGetYthickness (USER_OBJECT_ s_obj)
 {
@@ -952,7 +952,7 @@ S_GtkStyleGetYthickness (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkStyleGetFgGc (USER_OBJECT_ s_obj)
 {
@@ -966,7 +966,7 @@ S_GtkStyleGetFgGc (USER_OBJECT_ s_obj)
    _result = toRPointerWithRefArrayWithSize(val, "GdkGC", 5);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkStyleGetBgGc (USER_OBJECT_ s_obj)
 {
@@ -980,7 +980,7 @@ S_GtkStyleGetBgGc (USER_OBJECT_ s_obj)
    _result = toRPointerWithRefArrayWithSize(val, "GdkGC", 5);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkStyleGetLightGc (USER_OBJECT_ s_obj)
 {
@@ -994,7 +994,7 @@ S_GtkStyleGetLightGc (USER_OBJECT_ s_obj)
    _result = toRPointerWithRefArrayWithSize(val, "GdkGC", 5);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkStyleGetDarkGc (USER_OBJECT_ s_obj)
 {
@@ -1008,7 +1008,7 @@ S_GtkStyleGetDarkGc (USER_OBJECT_ s_obj)
    _result = toRPointerWithRefArrayWithSize(val, "GdkGC", 5);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkStyleGetMidGc (USER_OBJECT_ s_obj)
 {
@@ -1022,7 +1022,7 @@ S_GtkStyleGetMidGc (USER_OBJECT_ s_obj)
    _result = toRPointerWithRefArrayWithSize(val, "GdkGC", 5);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkStyleGetTextGc (USER_OBJECT_ s_obj)
 {
@@ -1036,7 +1036,7 @@ S_GtkStyleGetTextGc (USER_OBJECT_ s_obj)
    _result = toRPointerWithRefArrayWithSize(val, "GdkGC", 5);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkStyleGetBaseGc (USER_OBJECT_ s_obj)
 {
@@ -1050,7 +1050,7 @@ S_GtkStyleGetBaseGc (USER_OBJECT_ s_obj)
    _result = toRPointerWithRefArrayWithSize(val, "GdkGC", 5);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkStyleGetTextAaGc (USER_OBJECT_ s_obj)
 {
@@ -1064,7 +1064,7 @@ S_GtkStyleGetTextAaGc (USER_OBJECT_ s_obj)
    _result = toRPointerWithRefArrayWithSize(val, "GdkGC", 5);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkStyleGetWhiteGc (USER_OBJECT_ s_obj)
 {
@@ -1078,7 +1078,7 @@ S_GtkStyleGetWhiteGc (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "GdkGC");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkStyleGetBlackGc (USER_OBJECT_ s_obj)
 {
@@ -1092,7 +1092,7 @@ S_GtkStyleGetBlackGc (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "GdkGC");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkStyleGetBgPixmap (USER_OBJECT_ s_obj)
 {
@@ -1106,7 +1106,7 @@ S_GtkStyleGetBgPixmap (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "GdkPixmap");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTableGetChildren (USER_OBJECT_ s_obj)
 {
@@ -1120,7 +1120,7 @@ S_GtkTableGetChildren (USER_OBJECT_ s_obj)
    _result = asRGList(val, "GtkTableChild");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTableGetRows (USER_OBJECT_ s_obj)
 {
@@ -1134,7 +1134,7 @@ S_GtkTableGetRows (USER_OBJECT_ s_obj)
    _result = toRPointer(val, "GtkTableRowCol");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTableGetCols (USER_OBJECT_ s_obj)
 {
@@ -1148,7 +1148,7 @@ S_GtkTableGetCols (USER_OBJECT_ s_obj)
    _result = toRPointer(val, "GtkTableRowCol");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTableGetNrows (USER_OBJECT_ s_obj)
 {
@@ -1162,7 +1162,7 @@ S_GtkTableGetNrows (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTableGetNcols (USER_OBJECT_ s_obj)
 {
@@ -1176,7 +1176,7 @@ S_GtkTableGetNcols (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTextBufferGetTagTable (USER_OBJECT_ s_obj)
 {
@@ -1190,7 +1190,7 @@ S_GtkTextBufferGetTagTable (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "GtkTextTagTable");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkToggleButtonGetDrawIndicator (USER_OBJECT_ s_obj)
 {
@@ -1204,7 +1204,7 @@ S_GtkToggleButtonGetDrawIndicator (USER_OBJECT_ s_obj)
    _result = asRLogical(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWidgetGetStyle (USER_OBJECT_ s_obj)
 {
@@ -1218,7 +1218,7 @@ S_GtkWidgetGetStyle (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "GtkStyle");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWidgetGetRequisition (USER_OBJECT_ s_obj)
 {
@@ -1232,7 +1232,7 @@ S_GtkWidgetGetRequisition (USER_OBJECT_ s_obj)
    _result = toRPointerWithFinalizer(&val ? gtk_requisition_copy(&val) : NULL, "GtkRequisition", (RPointerFinalizer) gtk_requisition_free);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWidgetGetAllocation (USER_OBJECT_ s_obj)
 {
@@ -1246,7 +1246,7 @@ S_GtkWidgetGetAllocation (USER_OBJECT_ s_obj)
    _result = asRGtkAllocation(&val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWidgetGetWindow (USER_OBJECT_ s_obj)
 {
@@ -1260,7 +1260,7 @@ S_GtkWidgetGetWindow (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "GdkWindow");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWidgetGetParent (USER_OBJECT_ s_obj)
 {
@@ -1274,7 +1274,7 @@ S_GtkWidgetGetParent (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetTitle (USER_OBJECT_ s_obj)
 {
@@ -1288,7 +1288,7 @@ S_GtkWindowGetTitle (USER_OBJECT_ s_obj)
    _result = asRString(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetWmclassName (USER_OBJECT_ s_obj)
 {
@@ -1302,7 +1302,7 @@ S_GtkWindowGetWmclassName (USER_OBJECT_ s_obj)
    _result = asRString(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetWmclassClass (USER_OBJECT_ s_obj)
 {
@@ -1316,7 +1316,7 @@ S_GtkWindowGetWmclassClass (USER_OBJECT_ s_obj)
    _result = asRString(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetWmRole (USER_OBJECT_ s_obj)
 {
@@ -1330,7 +1330,7 @@ S_GtkWindowGetWmRole (USER_OBJECT_ s_obj)
    _result = asRString(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetFocusWidget (USER_OBJECT_ s_obj)
 {
@@ -1344,7 +1344,7 @@ S_GtkWindowGetFocusWidget (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetDefaultWidget (USER_OBJECT_ s_obj)
 {
@@ -1358,7 +1358,7 @@ S_GtkWindowGetDefaultWidget (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetTransientParent (USER_OBJECT_ s_obj)
 {
@@ -1372,7 +1372,7 @@ S_GtkWindowGetTransientParent (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWindow");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetFrame (USER_OBJECT_ s_obj)
 {
@@ -1386,7 +1386,7 @@ S_GtkWindowGetFrame (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "GdkWindow");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetGroup (USER_OBJECT_ s_obj)
 {
@@ -1400,7 +1400,7 @@ S_GtkWindowGetGroup (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "GtkWindowGroup");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetConfigureRequestCount (USER_OBJECT_ s_obj)
 {
@@ -1414,7 +1414,7 @@ S_GtkWindowGetConfigureRequestCount (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetAllowShrink (USER_OBJECT_ s_obj)
 {
@@ -1428,7 +1428,7 @@ S_GtkWindowGetAllowShrink (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetAllowGrow (USER_OBJECT_ s_obj)
 {
@@ -1442,7 +1442,7 @@ S_GtkWindowGetAllowGrow (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetConfigureNotifyReceived (USER_OBJECT_ s_obj)
 {
@@ -1456,7 +1456,7 @@ S_GtkWindowGetConfigureNotifyReceived (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetNeedDefaultPosition (USER_OBJECT_ s_obj)
 {
@@ -1470,7 +1470,7 @@ S_GtkWindowGetNeedDefaultPosition (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetNeedDefaultSize (USER_OBJECT_ s_obj)
 {
@@ -1484,7 +1484,7 @@ S_GtkWindowGetNeedDefaultSize (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetPosition (USER_OBJECT_ s_obj)
 {
@@ -1498,7 +1498,7 @@ S_GtkWindowGetPosition (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetType (USER_OBJECT_ s_obj)
 {
@@ -1512,7 +1512,7 @@ S_GtkWindowGetType (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetHasUserRefCount (USER_OBJECT_ s_obj)
 {
@@ -1526,7 +1526,7 @@ S_GtkWindowGetHasUserRefCount (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetHasFocus (USER_OBJECT_ s_obj)
 {
@@ -1540,7 +1540,7 @@ S_GtkWindowGetHasFocus (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetModal (USER_OBJECT_ s_obj)
 {
@@ -1554,7 +1554,7 @@ S_GtkWindowGetModal (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetDestroyWithParent (USER_OBJECT_ s_obj)
 {
@@ -1568,7 +1568,7 @@ S_GtkWindowGetDestroyWithParent (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetHasFrame (USER_OBJECT_ s_obj)
 {
@@ -1582,7 +1582,7 @@ S_GtkWindowGetHasFrame (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetIconifyInitially (USER_OBJECT_ s_obj)
 {
@@ -1596,7 +1596,7 @@ S_GtkWindowGetIconifyInitially (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetStickInitially (USER_OBJECT_ s_obj)
 {
@@ -1610,7 +1610,7 @@ S_GtkWindowGetStickInitially (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetMaximizeInitially (USER_OBJECT_ s_obj)
 {
@@ -1624,7 +1624,7 @@ S_GtkWindowGetMaximizeInitially (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetDecorated (USER_OBJECT_ s_obj)
 {
@@ -1638,7 +1638,7 @@ S_GtkWindowGetDecorated (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetTypeHint (USER_OBJECT_ s_obj)
 {
@@ -1652,7 +1652,7 @@ S_GtkWindowGetTypeHint (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetGravity (USER_OBJECT_ s_obj)
 {
@@ -1666,7 +1666,7 @@ S_GtkWindowGetGravity (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetFrameLeft (USER_OBJECT_ s_obj)
 {
@@ -1680,7 +1680,7 @@ S_GtkWindowGetFrameLeft (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetFrameTop (USER_OBJECT_ s_obj)
 {
@@ -1694,7 +1694,7 @@ S_GtkWindowGetFrameTop (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetFrameRight (USER_OBJECT_ s_obj)
 {
@@ -1708,7 +1708,7 @@ S_GtkWindowGetFrameRight (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetFrameBottom (USER_OBJECT_ s_obj)
 {
@@ -1722,7 +1722,7 @@ S_GtkWindowGetFrameBottom (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetKeysChangedHandler (USER_OBJECT_ s_obj)
 {
@@ -1736,7 +1736,7 @@ S_GtkWindowGetKeysChangedHandler (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkWindowGetMnemonicModifier (USER_OBJECT_ s_obj)
 {
@@ -1750,7 +1750,7 @@ S_GtkWindowGetMnemonicModifier (USER_OBJECT_ s_obj)
    _result = asRFlag(val, GDK_TYPE_MODIFIER_TYPE);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkRequisitionGetWidth (USER_OBJECT_ s_obj)
 {
@@ -1764,7 +1764,7 @@ S_GtkRequisitionGetWidth (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkRequisitionGetHeight (USER_OBJECT_ s_obj)
 {
@@ -1778,7 +1778,7 @@ S_GtkRequisitionGetHeight (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkSelectionDataGetSelection (USER_OBJECT_ s_obj)
 {
@@ -1792,7 +1792,7 @@ S_GtkSelectionDataGetSelection (USER_OBJECT_ s_obj)
    _result = asRGdkAtom(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkSelectionDataGetTarget (USER_OBJECT_ s_obj)
 {
@@ -1806,7 +1806,7 @@ S_GtkSelectionDataGetTarget (USER_OBJECT_ s_obj)
    _result = asRGdkAtom(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkSelectionDataGetType (USER_OBJECT_ s_obj)
 {
@@ -1820,7 +1820,7 @@ S_GtkSelectionDataGetType (USER_OBJECT_ s_obj)
    _result = asRGdkAtom(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkSelectionDataGetFormat (USER_OBJECT_ s_obj)
 {
@@ -1834,7 +1834,7 @@ S_GtkSelectionDataGetFormat (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkSelectionDataGetData (USER_OBJECT_ s_obj)
 {
@@ -1848,7 +1848,7 @@ S_GtkSelectionDataGetData (USER_OBJECT_ s_obj)
    _result = asRRawArray(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTextAttributesGetAppearance (USER_OBJECT_ s_obj)
 {
@@ -1862,7 +1862,7 @@ S_GtkTextAttributesGetAppearance (USER_OBJECT_ s_obj)
    _result = toRPointer(&val, "GtkTextAppearance");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTextAttributesGetJustification (USER_OBJECT_ s_obj)
 {
@@ -1876,7 +1876,7 @@ S_GtkTextAttributesGetJustification (USER_OBJECT_ s_obj)
    _result = asREnum(val, GTK_TYPE_JUSTIFICATION);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTextAttributesGetDirection (USER_OBJECT_ s_obj)
 {
@@ -1890,7 +1890,7 @@ S_GtkTextAttributesGetDirection (USER_OBJECT_ s_obj)
    _result = asREnum(val, GTK_TYPE_TEXT_DIRECTION);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTextAttributesGetFont (USER_OBJECT_ s_obj)
 {
@@ -1904,7 +1904,7 @@ S_GtkTextAttributesGetFont (USER_OBJECT_ s_obj)
    _result = toRPointerWithFinalizer(val ? pango_font_description_copy(val) : NULL, "PangoFontDescription", (RPointerFinalizer) pango_font_description_free);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTextAttributesGetFontScale (USER_OBJECT_ s_obj)
 {
@@ -1918,7 +1918,7 @@ S_GtkTextAttributesGetFontScale (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTextAttributesGetLeftMargin (USER_OBJECT_ s_obj)
 {
@@ -1932,7 +1932,7 @@ S_GtkTextAttributesGetLeftMargin (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTextAttributesGetIndent (USER_OBJECT_ s_obj)
 {
@@ -1946,7 +1946,7 @@ S_GtkTextAttributesGetIndent (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTextAttributesGetRightMargin (USER_OBJECT_ s_obj)
 {
@@ -1960,7 +1960,7 @@ S_GtkTextAttributesGetRightMargin (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTextAttributesGetPixelsAboveLines (USER_OBJECT_ s_obj)
 {
@@ -1974,7 +1974,7 @@ S_GtkTextAttributesGetPixelsAboveLines (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTextAttributesGetPixelsBelowLines (USER_OBJECT_ s_obj)
 {
@@ -1988,7 +1988,7 @@ S_GtkTextAttributesGetPixelsBelowLines (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTextAttributesGetPixelsInsideWrap (USER_OBJECT_ s_obj)
 {
@@ -2002,7 +2002,7 @@ S_GtkTextAttributesGetPixelsInsideWrap (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTextAttributesGetTabs (USER_OBJECT_ s_obj)
 {
@@ -2016,7 +2016,7 @@ S_GtkTextAttributesGetTabs (USER_OBJECT_ s_obj)
    _result = toRPointerWithFinalizer(val ? pango_tab_array_copy(val) : NULL, "PangoTabArray", (RPointerFinalizer) pango_tab_array_free);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTextAttributesGetWrapMode (USER_OBJECT_ s_obj)
 {
@@ -2030,7 +2030,7 @@ S_GtkTextAttributesGetWrapMode (USER_OBJECT_ s_obj)
    _result = asREnum(val, GTK_TYPE_WRAP_MODE);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTextAttributesGetLanguage (USER_OBJECT_ s_obj)
 {
@@ -2044,7 +2044,7 @@ S_GtkTextAttributesGetLanguage (USER_OBJECT_ s_obj)
    _result = toRPointer(val ? (val) : NULL, "PangoLanguage");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTextAttributesGetInvisible (USER_OBJECT_ s_obj)
 {
@@ -2058,7 +2058,7 @@ S_GtkTextAttributesGetInvisible (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTextAttributesGetBgFullHeight (USER_OBJECT_ s_obj)
 {
@@ -2072,7 +2072,7 @@ S_GtkTextAttributesGetBgFullHeight (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTextAttributesGetEditable (USER_OBJECT_ s_obj)
 {
@@ -2086,7 +2086,7 @@ S_GtkTextAttributesGetEditable (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTextAttributesGetRealized (USER_OBJECT_ s_obj)
 {
@@ -2100,7 +2100,7 @@ S_GtkTextAttributesGetRealized (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkCTreeRowGetRow (USER_OBJECT_ s_obj)
 {
@@ -2114,7 +2114,7 @@ S_GtkCTreeRowGetRow (USER_OBJECT_ s_obj)
    _result = toRPointer(&val, "GtkCListRow");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkCTreeRowGetParent (USER_OBJECT_ s_obj)
 {
@@ -2128,7 +2128,7 @@ S_GtkCTreeRowGetParent (USER_OBJECT_ s_obj)
    _result = toRPointer(val, "GtkCTreeNode");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkCTreeRowGetSibling (USER_OBJECT_ s_obj)
 {
@@ -2142,7 +2142,7 @@ S_GtkCTreeRowGetSibling (USER_OBJECT_ s_obj)
    _result = toRPointer(val, "GtkCTreeNode");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkCTreeRowGetChildren (USER_OBJECT_ s_obj)
 {
@@ -2156,7 +2156,7 @@ S_GtkCTreeRowGetChildren (USER_OBJECT_ s_obj)
    _result = toRPointer(val, "GtkCTreeNode");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkCTreeRowGetPixmapClosed (USER_OBJECT_ s_obj)
 {
@@ -2170,7 +2170,7 @@ S_GtkCTreeRowGetPixmapClosed (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "GdkPixmap");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkCTreeRowGetMaskClosed (USER_OBJECT_ s_obj)
 {
@@ -2184,7 +2184,7 @@ S_GtkCTreeRowGetMaskClosed (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "GdkBitmap");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkCTreeRowGetPixmapOpened (USER_OBJECT_ s_obj)
 {
@@ -2198,7 +2198,7 @@ S_GtkCTreeRowGetPixmapOpened (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "GdkPixmap");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkCTreeRowGetMaskOpened (USER_OBJECT_ s_obj)
 {
@@ -2212,7 +2212,7 @@ S_GtkCTreeRowGetMaskOpened (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "GdkBitmap");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkCTreeRowGetLevel (USER_OBJECT_ s_obj)
 {
@@ -2226,7 +2226,7 @@ S_GtkCTreeRowGetLevel (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkCTreeRowGetIsLeaf (USER_OBJECT_ s_obj)
 {
@@ -2240,7 +2240,7 @@ S_GtkCTreeRowGetIsLeaf (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkCTreeRowGetExpanded (USER_OBJECT_ s_obj)
 {
@@ -2254,7 +2254,7 @@ S_GtkCTreeRowGetExpanded (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkCListRowGetCell (USER_OBJECT_ s_obj)
 {
@@ -2268,7 +2268,7 @@ S_GtkCListRowGetCell (USER_OBJECT_ s_obj)
    _result = toRPointer(val, "GtkCell");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkCListRowGetState (USER_OBJECT_ s_obj)
 {
@@ -2282,7 +2282,7 @@ S_GtkCListRowGetState (USER_OBJECT_ s_obj)
    _result = asREnum(val, GTK_TYPE_STATE_TYPE);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkCListRowGetForeground (USER_OBJECT_ s_obj)
 {
@@ -2296,7 +2296,7 @@ S_GtkCListRowGetForeground (USER_OBJECT_ s_obj)
    _result = asRGdkColor(&val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkCListRowGetBackground (USER_OBJECT_ s_obj)
 {
@@ -2310,7 +2310,7 @@ S_GtkCListRowGetBackground (USER_OBJECT_ s_obj)
    _result = asRGdkColor(&val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkCListRowGetStyle (USER_OBJECT_ s_obj)
 {
@@ -2324,7 +2324,7 @@ S_GtkCListRowGetStyle (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "GtkStyle");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkCListRowGetData (USER_OBJECT_ s_obj)
 {
@@ -2338,7 +2338,7 @@ S_GtkCListRowGetData (USER_OBJECT_ s_obj)
    _result = val;
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkCListRowGetDestroy (USER_OBJECT_ s_obj)
 {
@@ -2352,7 +2352,7 @@ S_GtkCListRowGetDestroy (USER_OBJECT_ s_obj)
    _result = toRPointer(&val, "GtkDestroyNotify");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkCListRowGetFgSet (USER_OBJECT_ s_obj)
 {
@@ -2366,7 +2366,7 @@ S_GtkCListRowGetFgSet (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkCListRowGetBgSet (USER_OBJECT_ s_obj)
 {
@@ -2380,7 +2380,7 @@ S_GtkCListRowGetBgSet (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkCListRowGetSelectable (USER_OBJECT_ s_obj)
 {
@@ -2394,7 +2394,7 @@ S_GtkCListRowGetSelectable (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTextAppearanceGetBgColor (USER_OBJECT_ s_obj)
 {
@@ -2408,7 +2408,7 @@ S_GtkTextAppearanceGetBgColor (USER_OBJECT_ s_obj)
    _result = asRGdkColor(&val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTextAppearanceGetFgColor (USER_OBJECT_ s_obj)
 {
@@ -2422,7 +2422,7 @@ S_GtkTextAppearanceGetFgColor (USER_OBJECT_ s_obj)
    _result = asRGdkColor(&val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTextAppearanceGetBgStipple (USER_OBJECT_ s_obj)
 {
@@ -2436,7 +2436,7 @@ S_GtkTextAppearanceGetBgStipple (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "GdkBitmap");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTextAppearanceGetFgStipple (USER_OBJECT_ s_obj)
 {
@@ -2450,7 +2450,7 @@ S_GtkTextAppearanceGetFgStipple (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "GdkBitmap");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTextAppearanceGetRise (USER_OBJECT_ s_obj)
 {
@@ -2464,7 +2464,7 @@ S_GtkTextAppearanceGetRise (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTextAppearanceGetUnderline (USER_OBJECT_ s_obj)
 {
@@ -2478,7 +2478,7 @@ S_GtkTextAppearanceGetUnderline (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTextAppearanceGetStrikethrough (USER_OBJECT_ s_obj)
 {
@@ -2492,7 +2492,7 @@ S_GtkTextAppearanceGetStrikethrough (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTextAppearanceGetDrawBg (USER_OBJECT_ s_obj)
 {
@@ -2506,7 +2506,7 @@ S_GtkTextAppearanceGetDrawBg (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkBoxChildGetWidget (USER_OBJECT_ s_obj)
 {
@@ -2520,7 +2520,7 @@ S_GtkBoxChildGetWidget (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkBoxChildGetPadding (USER_OBJECT_ s_obj)
 {
@@ -2534,7 +2534,7 @@ S_GtkBoxChildGetPadding (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkBoxChildGetExpand (USER_OBJECT_ s_obj)
 {
@@ -2548,7 +2548,7 @@ S_GtkBoxChildGetExpand (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkBoxChildGetFill (USER_OBJECT_ s_obj)
 {
@@ -2562,7 +2562,7 @@ S_GtkBoxChildGetFill (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkBoxChildGetPack (USER_OBJECT_ s_obj)
 {
@@ -2576,7 +2576,7 @@ S_GtkBoxChildGetPack (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkBoxChildGetIsSecondary (USER_OBJECT_ s_obj)
 {
@@ -2590,7 +2590,7 @@ S_GtkBoxChildGetIsSecondary (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkFixedChildGetWidget (USER_OBJECT_ s_obj)
 {
@@ -2604,7 +2604,7 @@ S_GtkFixedChildGetWidget (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkFixedChildGetX (USER_OBJECT_ s_obj)
 {
@@ -2618,7 +2618,7 @@ S_GtkFixedChildGetX (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkFixedChildGetY (USER_OBJECT_ s_obj)
 {
@@ -2632,7 +2632,7 @@ S_GtkFixedChildGetY (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkPreviewInfoGetLookup (USER_OBJECT_ s_obj)
 {
@@ -2646,7 +2646,7 @@ S_GtkPreviewInfoGetLookup (USER_OBJECT_ s_obj)
    _result = asRRawArray(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkPreviewInfoGetGamma (USER_OBJECT_ s_obj)
 {
@@ -2660,7 +2660,7 @@ S_GtkPreviewInfoGetGamma (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTableRowColGetRequisition (USER_OBJECT_ s_obj)
 {
@@ -2674,7 +2674,7 @@ S_GtkTableRowColGetRequisition (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTableRowColGetAllocation (USER_OBJECT_ s_obj)
 {
@@ -2688,7 +2688,7 @@ S_GtkTableRowColGetAllocation (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTableRowColGetSpacing (USER_OBJECT_ s_obj)
 {
@@ -2702,7 +2702,7 @@ S_GtkTableRowColGetSpacing (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTableRowColGetNeedExpand (USER_OBJECT_ s_obj)
 {
@@ -2716,7 +2716,7 @@ S_GtkTableRowColGetNeedExpand (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTableRowColGetNeedShrink (USER_OBJECT_ s_obj)
 {
@@ -2730,7 +2730,7 @@ S_GtkTableRowColGetNeedShrink (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTableRowColGetExpand (USER_OBJECT_ s_obj)
 {
@@ -2744,7 +2744,7 @@ S_GtkTableRowColGetExpand (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTableRowColGetShrink (USER_OBJECT_ s_obj)
 {
@@ -2758,7 +2758,7 @@ S_GtkTableRowColGetShrink (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTableRowColGetEmpty (USER_OBJECT_ s_obj)
 {
@@ -2772,7 +2772,7 @@ S_GtkTableRowColGetEmpty (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTableChildGetWidget (USER_OBJECT_ s_obj)
 {
@@ -2786,7 +2786,7 @@ S_GtkTableChildGetWidget (USER_OBJECT_ s_obj)
    _result = toRPointerWithSink(val, "GtkWidget");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTableChildGetLeftAttach (USER_OBJECT_ s_obj)
 {
@@ -2800,7 +2800,7 @@ S_GtkTableChildGetLeftAttach (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTableChildGetRightAttach (USER_OBJECT_ s_obj)
 {
@@ -2814,7 +2814,7 @@ S_GtkTableChildGetRightAttach (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTableChildGetTopAttach (USER_OBJECT_ s_obj)
 {
@@ -2828,7 +2828,7 @@ S_GtkTableChildGetTopAttach (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTableChildGetBottomAttach (USER_OBJECT_ s_obj)
 {
@@ -2842,7 +2842,7 @@ S_GtkTableChildGetBottomAttach (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTableChildGetXpadding (USER_OBJECT_ s_obj)
 {
@@ -2856,7 +2856,7 @@ S_GtkTableChildGetXpadding (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTableChildGetYpadding (USER_OBJECT_ s_obj)
 {
@@ -2870,7 +2870,7 @@ S_GtkTableChildGetYpadding (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTableChildGetXexpand (USER_OBJECT_ s_obj)
 {
@@ -2884,7 +2884,7 @@ S_GtkTableChildGetXexpand (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTableChildGetYexpand (USER_OBJECT_ s_obj)
 {
@@ -2898,7 +2898,7 @@ S_GtkTableChildGetYexpand (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTableChildGetXshrink (USER_OBJECT_ s_obj)
 {
@@ -2912,7 +2912,7 @@ S_GtkTableChildGetXshrink (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTableChildGetYshrink (USER_OBJECT_ s_obj)
 {
@@ -2926,7 +2926,7 @@ S_GtkTableChildGetYshrink (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTableChildGetXfill (USER_OBJECT_ s_obj)
 {
@@ -2940,7 +2940,7 @@ S_GtkTableChildGetXfill (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GtkTableChildGetYfill (USER_OBJECT_ s_obj)
 {
@@ -2954,4 +2954,4 @@ S_GtkTableChildGetYfill (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}

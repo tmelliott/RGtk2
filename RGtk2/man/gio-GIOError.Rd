@@ -41,7 +41,7 @@ Error codes returned by GIO functions.
 \item{\verb{would-block}}{Operation would block.}
 \item{\verb{host-not-found}}{Host couldn't be found (remote operations).}
 \item{\verb{would-merge}}{Operation would merge files.}
-\item{\verb{failed-handled}}{Operation failed and a helper program has 
+\item{\verb{failed-handled}}{Operation failed and a helper program has
     already interacted with the user. Do not display any error dialog.}
 }
 

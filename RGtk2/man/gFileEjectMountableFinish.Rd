@@ -2,7 +2,7 @@
 \name{gFileEjectMountableFinish}
 \title{gFileEjectMountableFinish}
 \description{
-Finishes an asynchronous eject operation started by 
+Finishes an asynchronous eject operation started by
 \code{\link{gFileEjectMountable}}.
 \strong{WARNING: \code{g_file_eject_mountable_finish} has been deprecated since version 2.22 and should not be used in newly-written code. Use \code{\link{gFileEjectMountableWithOperationFinish}} instead.}
 }

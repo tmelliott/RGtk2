@@ -14,7 +14,7 @@ S_GdkDeviceGetName (USER_OBJECT_ s_obj)
    _result = asRString(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkDeviceGetSource (USER_OBJECT_ s_obj)
 {
@@ -28,7 +28,7 @@ S_GdkDeviceGetSource (USER_OBJECT_ s_obj)
    _result = asREnum(val, GDK_TYPE_INPUT_SOURCE);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkDeviceGetMode (USER_OBJECT_ s_obj)
 {
@@ -42,7 +42,7 @@ S_GdkDeviceGetMode (USER_OBJECT_ s_obj)
    _result = asREnum(val, GDK_TYPE_INPUT_MODE);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkDeviceGetHasCursor (USER_OBJECT_ s_obj)
 {
@@ -56,7 +56,7 @@ S_GdkDeviceGetHasCursor (USER_OBJECT_ s_obj)
    _result = asRLogical(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkDeviceGetNumAxes (USER_OBJECT_ s_obj)
 {
@@ -70,7 +70,7 @@ S_GdkDeviceGetNumAxes (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkDeviceGetAxes (USER_OBJECT_ s_obj)
 {
@@ -84,7 +84,7 @@ S_GdkDeviceGetAxes (USER_OBJECT_ s_obj)
    _result = toRPointer(val, "GdkDeviceAxis");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkDeviceGetNumKeys (USER_OBJECT_ s_obj)
 {
@@ -98,7 +98,7 @@ S_GdkDeviceGetNumKeys (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkDeviceGetKeys (USER_OBJECT_ s_obj)
 {
@@ -112,7 +112,7 @@ S_GdkDeviceGetKeys (USER_OBJECT_ s_obj)
    _result = toRPointer(val, "GdkDeviceKey");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkDragContextGetProtocol (USER_OBJECT_ s_obj)
 {
@@ -126,7 +126,7 @@ S_GdkDragContextGetProtocol (USER_OBJECT_ s_obj)
    _result = asREnum(val, GDK_TYPE_DRAG_PROTOCOL);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkDragContextGetIsSource (USER_OBJECT_ s_obj)
 {
@@ -140,7 +140,7 @@ S_GdkDragContextGetIsSource (USER_OBJECT_ s_obj)
    _result = asRLogical(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkDragContextGetSourceWindow (USER_OBJECT_ s_obj)
 {
@@ -154,7 +154,7 @@ S_GdkDragContextGetSourceWindow (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "GdkWindow");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkDragContextGetDestWindow (USER_OBJECT_ s_obj)
 {
@@ -168,7 +168,7 @@ S_GdkDragContextGetDestWindow (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "GdkWindow");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkDragContextGetTargets (USER_OBJECT_ s_obj)
 {
@@ -182,7 +182,7 @@ S_GdkDragContextGetTargets (USER_OBJECT_ s_obj)
    _result = asRGListConv(val, ((ElementConverter)asRGdkAtom));
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkDragContextGetActions (USER_OBJECT_ s_obj)
 {
@@ -196,7 +196,7 @@ S_GdkDragContextGetActions (USER_OBJECT_ s_obj)
    _result = asRFlag(val, GDK_TYPE_DRAG_ACTION);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkDragContextGetSuggestedAction (USER_OBJECT_ s_obj)
 {
@@ -210,7 +210,7 @@ S_GdkDragContextGetSuggestedAction (USER_OBJECT_ s_obj)
    _result = asRFlag(val, GDK_TYPE_DRAG_ACTION);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkDragContextGetAction (USER_OBJECT_ s_obj)
 {
@@ -224,7 +224,7 @@ S_GdkDragContextGetAction (USER_OBJECT_ s_obj)
    _result = asRFlag(val, GDK_TYPE_DRAG_ACTION);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkDragContextGetStartTime (USER_OBJECT_ s_obj)
 {
@@ -238,7 +238,7 @@ S_GdkDragContextGetStartTime (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkImageGetType (USER_OBJECT_ s_obj)
 {
@@ -252,7 +252,7 @@ S_GdkImageGetType (USER_OBJECT_ s_obj)
    _result = asREnum(val, GDK_TYPE_IMAGE_TYPE);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkImageGetVisual (USER_OBJECT_ s_obj)
 {
@@ -266,7 +266,7 @@ S_GdkImageGetVisual (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "GdkVisual");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkImageGetByteOrder (USER_OBJECT_ s_obj)
 {
@@ -280,7 +280,7 @@ S_GdkImageGetByteOrder (USER_OBJECT_ s_obj)
    _result = asREnum(val, GDK_TYPE_BYTE_ORDER);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkImageGetWidth (USER_OBJECT_ s_obj)
 {
@@ -294,7 +294,7 @@ S_GdkImageGetWidth (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkImageGetHeight (USER_OBJECT_ s_obj)
 {
@@ -308,7 +308,7 @@ S_GdkImageGetHeight (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkImageGetDepth (USER_OBJECT_ s_obj)
 {
@@ -322,7 +322,7 @@ S_GdkImageGetDepth (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkImageGetBpp (USER_OBJECT_ s_obj)
 {
@@ -336,7 +336,7 @@ S_GdkImageGetBpp (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkImageGetBpl (USER_OBJECT_ s_obj)
 {
@@ -350,7 +350,7 @@ S_GdkImageGetBpl (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkImageGetBitsPerPixel (USER_OBJECT_ s_obj)
 {
@@ -364,7 +364,7 @@ S_GdkImageGetBitsPerPixel (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkImageGetMem (USER_OBJECT_ s_obj)
 {
@@ -378,7 +378,7 @@ S_GdkImageGetMem (USER_OBJECT_ s_obj)
    _result = asRRawArrayWithSize(val, obj->width*obj->height*obj->bpp);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkImageGetColormap (USER_OBJECT_ s_obj)
 {
@@ -392,7 +392,7 @@ S_GdkImageGetColormap (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "GdkColormap");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkVisualGetType (USER_OBJECT_ s_obj)
 {
@@ -406,7 +406,7 @@ S_GdkVisualGetType (USER_OBJECT_ s_obj)
    _result = asREnum(val, GDK_TYPE_VISUAL_TYPE);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkVisualGetDepth (USER_OBJECT_ s_obj)
 {
@@ -420,7 +420,7 @@ S_GdkVisualGetDepth (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkVisualGetByteOrder (USER_OBJECT_ s_obj)
 {
@@ -434,7 +434,7 @@ S_GdkVisualGetByteOrder (USER_OBJECT_ s_obj)
    _result = asREnum(val, GDK_TYPE_BYTE_ORDER);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkVisualGetColormapSize (USER_OBJECT_ s_obj)
 {
@@ -448,7 +448,7 @@ S_GdkVisualGetColormapSize (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkVisualGetBitsPerRgb (USER_OBJECT_ s_obj)
 {
@@ -462,7 +462,7 @@ S_GdkVisualGetBitsPerRgb (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkVisualGetRedMask (USER_OBJECT_ s_obj)
 {
@@ -476,7 +476,7 @@ S_GdkVisualGetRedMask (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkVisualGetRedShift (USER_OBJECT_ s_obj)
 {
@@ -490,7 +490,7 @@ S_GdkVisualGetRedShift (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkVisualGetRedPrec (USER_OBJECT_ s_obj)
 {
@@ -504,7 +504,7 @@ S_GdkVisualGetRedPrec (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkVisualGetGreenMask (USER_OBJECT_ s_obj)
 {
@@ -518,7 +518,7 @@ S_GdkVisualGetGreenMask (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkVisualGetGreenShift (USER_OBJECT_ s_obj)
 {
@@ -532,7 +532,7 @@ S_GdkVisualGetGreenShift (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkVisualGetGreenPrec (USER_OBJECT_ s_obj)
 {
@@ -546,7 +546,7 @@ S_GdkVisualGetGreenPrec (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkVisualGetBlueMask (USER_OBJECT_ s_obj)
 {
@@ -560,7 +560,7 @@ S_GdkVisualGetBlueMask (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkVisualGetBlueShift (USER_OBJECT_ s_obj)
 {
@@ -574,7 +574,7 @@ S_GdkVisualGetBlueShift (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkVisualGetBluePrec (USER_OBJECT_ s_obj)
 {
@@ -588,7 +588,7 @@ S_GdkVisualGetBluePrec (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkFontGetType (USER_OBJECT_ s_obj)
 {
@@ -602,7 +602,7 @@ S_GdkFontGetType (USER_OBJECT_ s_obj)
    _result = asREnum(val, GDK_TYPE_FONT_TYPE);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkFontGetAscent (USER_OBJECT_ s_obj)
 {
@@ -616,7 +616,7 @@ S_GdkFontGetAscent (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkFontGetDescent (USER_OBJECT_ s_obj)
 {
@@ -630,7 +630,7 @@ S_GdkFontGetDescent (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkCursorGetType (USER_OBJECT_ s_obj)
 {
@@ -644,7 +644,7 @@ S_GdkCursorGetType (USER_OBJECT_ s_obj)
    _result = asREnum(val, GDK_TYPE_CURSOR_TYPE);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventAnyGetType (USER_OBJECT_ s_obj)
 {
@@ -658,7 +658,7 @@ S_GdkEventAnyGetType (USER_OBJECT_ s_obj)
    _result = asREnum(val, GDK_TYPE_EVENT_TYPE);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventAnyGetWindow (USER_OBJECT_ s_obj)
 {
@@ -672,7 +672,7 @@ S_GdkEventAnyGetWindow (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "GdkWindow");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventAnyGetSendEvent (USER_OBJECT_ s_obj)
 {
@@ -686,7 +686,7 @@ S_GdkEventAnyGetSendEvent (USER_OBJECT_ s_obj)
    _result = asRRaw(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventKeyGetTime (USER_OBJECT_ s_obj)
 {
@@ -700,7 +700,7 @@ S_GdkEventKeyGetTime (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventKeyGetState (USER_OBJECT_ s_obj)
 {
@@ -714,7 +714,7 @@ S_GdkEventKeyGetState (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventKeyGetKeyval (USER_OBJECT_ s_obj)
 {
@@ -728,7 +728,7 @@ S_GdkEventKeyGetKeyval (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventKeyGetLength (USER_OBJECT_ s_obj)
 {
@@ -742,7 +742,7 @@ S_GdkEventKeyGetLength (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventKeyGetString (USER_OBJECT_ s_obj)
 {
@@ -756,7 +756,7 @@ S_GdkEventKeyGetString (USER_OBJECT_ s_obj)
    _result = asRString(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventKeyGetHardwareKeycode (USER_OBJECT_ s_obj)
 {
@@ -770,7 +770,7 @@ S_GdkEventKeyGetHardwareKeycode (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventKeyGetGroup (USER_OBJECT_ s_obj)
 {
@@ -784,7 +784,7 @@ S_GdkEventKeyGetGroup (USER_OBJECT_ s_obj)
    _result = asRRaw(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventSelectionGetSelection (USER_OBJECT_ s_obj)
 {
@@ -798,7 +798,7 @@ S_GdkEventSelectionGetSelection (USER_OBJECT_ s_obj)
    _result = asRGdkAtom(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventSelectionGetTarget (USER_OBJECT_ s_obj)
 {
@@ -812,7 +812,7 @@ S_GdkEventSelectionGetTarget (USER_OBJECT_ s_obj)
    _result = asRGdkAtom(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventSelectionGetProperty (USER_OBJECT_ s_obj)
 {
@@ -826,7 +826,7 @@ S_GdkEventSelectionGetProperty (USER_OBJECT_ s_obj)
    _result = asRGdkAtom(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventSelectionGetTime (USER_OBJECT_ s_obj)
 {
@@ -840,7 +840,7 @@ S_GdkEventSelectionGetTime (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventSelectionGetRequestor (USER_OBJECT_ s_obj)
 {
@@ -854,7 +854,7 @@ S_GdkEventSelectionGetRequestor (USER_OBJECT_ s_obj)
    _result = asRGdkNativeWindow(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventDNDGetContext (USER_OBJECT_ s_obj)
 {
@@ -868,7 +868,7 @@ S_GdkEventDNDGetContext (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "GdkDragContext");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventDNDGetTime (USER_OBJECT_ s_obj)
 {
@@ -882,7 +882,7 @@ S_GdkEventDNDGetTime (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventDNDGetXRoot (USER_OBJECT_ s_obj)
 {
@@ -896,7 +896,7 @@ S_GdkEventDNDGetXRoot (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventDNDGetYRoot (USER_OBJECT_ s_obj)
 {
@@ -910,7 +910,7 @@ S_GdkEventDNDGetYRoot (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventExposeGetArea (USER_OBJECT_ s_obj)
 {
@@ -924,7 +924,7 @@ S_GdkEventExposeGetArea (USER_OBJECT_ s_obj)
    _result = asRGdkRectangle(&val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventExposeGetRegion (USER_OBJECT_ s_obj)
 {
@@ -938,7 +938,7 @@ S_GdkEventExposeGetRegion (USER_OBJECT_ s_obj)
    _result = toRPointer(val, "GdkRegion");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventExposeGetCount (USER_OBJECT_ s_obj)
 {
@@ -952,7 +952,7 @@ S_GdkEventExposeGetCount (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventButtonGetTime (USER_OBJECT_ s_obj)
 {
@@ -966,7 +966,7 @@ S_GdkEventButtonGetTime (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventButtonGetX (USER_OBJECT_ s_obj)
 {
@@ -980,7 +980,7 @@ S_GdkEventButtonGetX (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventButtonGetY (USER_OBJECT_ s_obj)
 {
@@ -994,7 +994,7 @@ S_GdkEventButtonGetY (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventButtonGetAxes (USER_OBJECT_ s_obj)
 {
@@ -1008,7 +1008,7 @@ S_GdkEventButtonGetAxes (USER_OBJECT_ s_obj)
    _result = asRNumericArray(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventButtonGetState (USER_OBJECT_ s_obj)
 {
@@ -1022,7 +1022,7 @@ S_GdkEventButtonGetState (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventButtonGetButton (USER_OBJECT_ s_obj)
 {
@@ -1036,7 +1036,7 @@ S_GdkEventButtonGetButton (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventButtonGetDevice (USER_OBJECT_ s_obj)
 {
@@ -1050,7 +1050,7 @@ S_GdkEventButtonGetDevice (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "GdkDevice");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventButtonGetXRoot (USER_OBJECT_ s_obj)
 {
@@ -1064,7 +1064,7 @@ S_GdkEventButtonGetXRoot (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventButtonGetYRoot (USER_OBJECT_ s_obj)
 {
@@ -1078,7 +1078,7 @@ S_GdkEventButtonGetYRoot (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventScrollGetTime (USER_OBJECT_ s_obj)
 {
@@ -1092,7 +1092,7 @@ S_GdkEventScrollGetTime (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventScrollGetX (USER_OBJECT_ s_obj)
 {
@@ -1106,7 +1106,7 @@ S_GdkEventScrollGetX (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventScrollGetY (USER_OBJECT_ s_obj)
 {
@@ -1120,7 +1120,7 @@ S_GdkEventScrollGetY (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventScrollGetState (USER_OBJECT_ s_obj)
 {
@@ -1134,7 +1134,7 @@ S_GdkEventScrollGetState (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventScrollGetDirection (USER_OBJECT_ s_obj)
 {
@@ -1148,7 +1148,7 @@ S_GdkEventScrollGetDirection (USER_OBJECT_ s_obj)
    _result = asREnum(val, GDK_TYPE_SCROLL_DIRECTION);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventScrollGetDevice (USER_OBJECT_ s_obj)
 {
@@ -1162,7 +1162,7 @@ S_GdkEventScrollGetDevice (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "GdkDevice");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventScrollGetXRoot (USER_OBJECT_ s_obj)
 {
@@ -1176,7 +1176,7 @@ S_GdkEventScrollGetXRoot (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventScrollGetYRoot (USER_OBJECT_ s_obj)
 {
@@ -1190,7 +1190,7 @@ S_GdkEventScrollGetYRoot (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventMotionGetTime (USER_OBJECT_ s_obj)
 {
@@ -1204,7 +1204,7 @@ S_GdkEventMotionGetTime (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventMotionGetX (USER_OBJECT_ s_obj)
 {
@@ -1218,7 +1218,7 @@ S_GdkEventMotionGetX (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventMotionGetY (USER_OBJECT_ s_obj)
 {
@@ -1232,7 +1232,7 @@ S_GdkEventMotionGetY (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventMotionGetAxes (USER_OBJECT_ s_obj)
 {
@@ -1246,7 +1246,7 @@ S_GdkEventMotionGetAxes (USER_OBJECT_ s_obj)
    _result = asRNumericArray(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventMotionGetState (USER_OBJECT_ s_obj)
 {
@@ -1260,7 +1260,7 @@ S_GdkEventMotionGetState (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventMotionGetIsHint (USER_OBJECT_ s_obj)
 {
@@ -1274,7 +1274,7 @@ S_GdkEventMotionGetIsHint (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventMotionGetDevice (USER_OBJECT_ s_obj)
 {
@@ -1288,7 +1288,7 @@ S_GdkEventMotionGetDevice (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "GdkDevice");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventMotionGetXRoot (USER_OBJECT_ s_obj)
 {
@@ -1302,7 +1302,7 @@ S_GdkEventMotionGetXRoot (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventMotionGetYRoot (USER_OBJECT_ s_obj)
 {
@@ -1316,7 +1316,7 @@ S_GdkEventMotionGetYRoot (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventVisibilityGetState (USER_OBJECT_ s_obj)
 {
@@ -1330,7 +1330,7 @@ S_GdkEventVisibilityGetState (USER_OBJECT_ s_obj)
    _result = asREnum(val, GDK_TYPE_VISIBILITY_STATE);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventCrossingGetTime (USER_OBJECT_ s_obj)
 {
@@ -1344,7 +1344,7 @@ S_GdkEventCrossingGetTime (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventCrossingGetX (USER_OBJECT_ s_obj)
 {
@@ -1358,7 +1358,7 @@ S_GdkEventCrossingGetX (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventCrossingGetY (USER_OBJECT_ s_obj)
 {
@@ -1372,7 +1372,7 @@ S_GdkEventCrossingGetY (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventCrossingGetXRoot (USER_OBJECT_ s_obj)
 {
@@ -1386,7 +1386,7 @@ S_GdkEventCrossingGetXRoot (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventCrossingGetYRoot (USER_OBJECT_ s_obj)
 {
@@ -1400,7 +1400,7 @@ S_GdkEventCrossingGetYRoot (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventCrossingGetMode (USER_OBJECT_ s_obj)
 {
@@ -1414,7 +1414,7 @@ S_GdkEventCrossingGetMode (USER_OBJECT_ s_obj)
    _result = asREnum(val, GDK_TYPE_CROSSING_MODE);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventCrossingGetDetail (USER_OBJECT_ s_obj)
 {
@@ -1428,7 +1428,7 @@ S_GdkEventCrossingGetDetail (USER_OBJECT_ s_obj)
    _result = asREnum(val, GDK_TYPE_NOTIFY_TYPE);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventCrossingGetFocus (USER_OBJECT_ s_obj)
 {
@@ -1442,7 +1442,7 @@ S_GdkEventCrossingGetFocus (USER_OBJECT_ s_obj)
    _result = asRLogical(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventCrossingGetState (USER_OBJECT_ s_obj)
 {
@@ -1456,7 +1456,7 @@ S_GdkEventCrossingGetState (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventFocusGetIn (USER_OBJECT_ s_obj)
 {
@@ -1470,7 +1470,7 @@ S_GdkEventFocusGetIn (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventConfigureGetX (USER_OBJECT_ s_obj)
 {
@@ -1484,7 +1484,7 @@ S_GdkEventConfigureGetX (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventConfigureGetY (USER_OBJECT_ s_obj)
 {
@@ -1498,7 +1498,7 @@ S_GdkEventConfigureGetY (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventConfigureGetWidth (USER_OBJECT_ s_obj)
 {
@@ -1512,7 +1512,7 @@ S_GdkEventConfigureGetWidth (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventConfigureGetHeight (USER_OBJECT_ s_obj)
 {
@@ -1526,7 +1526,7 @@ S_GdkEventConfigureGetHeight (USER_OBJECT_ s_obj)
    _result = asRInteger(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventPropertyGetAtom (USER_OBJECT_ s_obj)
 {
@@ -1540,7 +1540,7 @@ S_GdkEventPropertyGetAtom (USER_OBJECT_ s_obj)
    _result = asRGdkAtom(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventPropertyGetTime (USER_OBJECT_ s_obj)
 {
@@ -1554,7 +1554,7 @@ S_GdkEventPropertyGetTime (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventPropertyGetState (USER_OBJECT_ s_obj)
 {
@@ -1568,7 +1568,7 @@ S_GdkEventPropertyGetState (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventProximityGetTime (USER_OBJECT_ s_obj)
 {
@@ -1582,7 +1582,7 @@ S_GdkEventProximityGetTime (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventProximityGetDevice (USER_OBJECT_ s_obj)
 {
@@ -1596,7 +1596,7 @@ S_GdkEventProximityGetDevice (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "GdkDevice");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventWindowStateGetChangedMask (USER_OBJECT_ s_obj)
 {
@@ -1610,7 +1610,7 @@ S_GdkEventWindowStateGetChangedMask (USER_OBJECT_ s_obj)
    _result = asRFlag(val, GDK_TYPE_WINDOW_STATE);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventWindowStateGetNewWindowState (USER_OBJECT_ s_obj)
 {
@@ -1624,7 +1624,7 @@ S_GdkEventWindowStateGetNewWindowState (USER_OBJECT_ s_obj)
    _result = asRFlag(val, GDK_TYPE_WINDOW_STATE);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventSettingGetAction (USER_OBJECT_ s_obj)
 {
@@ -1638,7 +1638,7 @@ S_GdkEventSettingGetAction (USER_OBJECT_ s_obj)
    _result = asREnum(val, GDK_TYPE_SETTING_ACTION);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventSettingGetName (USER_OBJECT_ s_obj)
 {
@@ -1652,7 +1652,7 @@ S_GdkEventSettingGetName (USER_OBJECT_ s_obj)
    _result = asRString(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventOwnerChangeGetOwner (USER_OBJECT_ s_obj)
 {
@@ -1666,7 +1666,7 @@ S_GdkEventOwnerChangeGetOwner (USER_OBJECT_ s_obj)
    _result = asRGdkNativeWindow(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventOwnerChangeGetReason (USER_OBJECT_ s_obj)
 {
@@ -1680,7 +1680,7 @@ S_GdkEventOwnerChangeGetReason (USER_OBJECT_ s_obj)
    _result = asREnum(val, GDK_TYPE_OWNER_CHANGE);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventOwnerChangeGetSelection (USER_OBJECT_ s_obj)
 {
@@ -1694,7 +1694,7 @@ S_GdkEventOwnerChangeGetSelection (USER_OBJECT_ s_obj)
    _result = asRGdkAtom(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventOwnerChangeGetTime (USER_OBJECT_ s_obj)
 {
@@ -1708,7 +1708,7 @@ S_GdkEventOwnerChangeGetTime (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventOwnerChangeGetSelectionTime (USER_OBJECT_ s_obj)
 {
@@ -1722,7 +1722,7 @@ S_GdkEventOwnerChangeGetSelectionTime (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventClientGetMessageType (USER_OBJECT_ s_obj)
 {
@@ -1736,7 +1736,7 @@ S_GdkEventClientGetMessageType (USER_OBJECT_ s_obj)
    _result = asRGdkAtom(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventGrabBrokenGetKeyboard (USER_OBJECT_ s_obj)
 {
@@ -1750,7 +1750,7 @@ S_GdkEventGrabBrokenGetKeyboard (USER_OBJECT_ s_obj)
    _result = asRLogical(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventGrabBrokenGetImplicit (USER_OBJECT_ s_obj)
 {
@@ -1764,7 +1764,7 @@ S_GdkEventGrabBrokenGetImplicit (USER_OBJECT_ s_obj)
    _result = asRLogical(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkEventGrabBrokenGetGrabWindow (USER_OBJECT_ s_obj)
 {
@@ -1778,7 +1778,7 @@ S_GdkEventGrabBrokenGetGrabWindow (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "GdkWindow");
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkDeviceKeyGetKeyval (USER_OBJECT_ s_obj)
 {
@@ -1792,7 +1792,7 @@ S_GdkDeviceKeyGetKeyval (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkDeviceKeyGetModifiers (USER_OBJECT_ s_obj)
 {
@@ -1806,7 +1806,7 @@ S_GdkDeviceKeyGetModifiers (USER_OBJECT_ s_obj)
    _result = asRFlag(val, GDK_TYPE_MODIFIER_TYPE);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkDeviceAxisGetUse (USER_OBJECT_ s_obj)
 {
@@ -1820,7 +1820,7 @@ S_GdkDeviceAxisGetUse (USER_OBJECT_ s_obj)
    _result = asREnum(val, GDK_TYPE_AXIS_USE);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkDeviceAxisGetMin (USER_OBJECT_ s_obj)
 {
@@ -1834,7 +1834,7 @@ S_GdkDeviceAxisGetMin (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkDeviceAxisGetMax (USER_OBJECT_ s_obj)
 {
@@ -1848,7 +1848,7 @@ S_GdkDeviceAxisGetMax (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkPangoAttrEmbossedGetEmbossed (USER_OBJECT_ s_obj)
 {
@@ -1862,7 +1862,7 @@ S_GdkPangoAttrEmbossedGetEmbossed (USER_OBJECT_ s_obj)
    _result = asRLogical(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_GdkPangoAttrStippleGetStipple (USER_OBJECT_ s_obj)
 {
@@ -1876,4 +1876,4 @@ S_GdkPangoAttrStippleGetStipple (USER_OBJECT_ s_obj)
    _result = toRPointerWithRef(val, "GdkBitmap");
 
    return(_result);
-} 
+}

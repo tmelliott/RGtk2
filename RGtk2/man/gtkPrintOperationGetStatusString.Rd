@@ -1,7 +1,7 @@
 \alias{gtkPrintOperationGetStatusString}
 \name{gtkPrintOperationGetStatusString}
 \title{gtkPrintOperationGetStatusString}
-\description{Returns a string representation of the status of the 
+\description{Returns a string representation of the status of the
 print operation. The string is translated and suitable
 for displaying the print status e.g. in a \code{\link{GtkStatusbar}}.}
 \usage{gtkPrintOperationGetStatusString(object)}

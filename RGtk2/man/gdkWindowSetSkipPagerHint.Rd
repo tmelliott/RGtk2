@@ -5,9 +5,9 @@
 switcher, or other desktop utility program that displays a small
 thumbnail representation of the windows on the desktop). If a
 window's semantic type as specified with \code{\link{gdkWindowSetTypeHint}}
-already fully describes the window, this function should 
-\emph{not} be called in addition, instead you should 
-allow the window to be treated according to standard policy for 
+already fully describes the window, this function should
+\emph{not} be called in addition, instead you should
+allow the window to be treated according to standard policy for
 its semantic type.}
 \usage{gdkWindowSetSkipPagerHint(object, modal)}
 \arguments{

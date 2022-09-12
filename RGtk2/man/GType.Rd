@@ -41,8 +41,8 @@ example \code{\link{GtkWidgetClass}}.
 signals supported by the type.
 }
 \details{
-The \code{GType} system supports inheritance and interfaces, enabling the 
-psuedo-object-oriented system known as \code{\link{GObject}}. However, they 
+The \code{GType} system supports inheritance and interfaces, enabling the
+psuedo-object-oriented system known as \code{\link{GObject}}. However, they
 also encompass all fundamental (primitive) types.
 
 A \code{GType} is considered a \code{\link{transparent-type}} in RGtk2,

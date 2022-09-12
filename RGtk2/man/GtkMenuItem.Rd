@@ -42,13 +42,13 @@
 \section{Detailed Description}{The \code{\link{GtkMenuItem}} widget and the derived widgets are the only valid
 childs for menus. Their function is to correctly handle highlighting,
 alignment, events and submenus.
-  
+
 As it derives from \code{\link{GtkBin}} it can hold any valid child widget, altough
 only a few are really useful.}
 \section{GtkMenuItem as GtkBuildable}{The GtkMenuItem implementation of the GtkBuildable interface
 supports adding a submenu by specifying "submenu" as the "type"
 attribute of a <child> element.
-  
+
  \emph{A UI definition fragment with submenus}\preformatted{<object class="GtkMenuItem">
   <child type="submenu">
     <object class="GtkMenu"/>

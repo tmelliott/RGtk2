@@ -15,7 +15,7 @@ an image from a file in synchronous fashion.  This means that the
 library takes control of the application while the file is being
 loaded; from the user's point of view, the application will block
 until the image is done loading.
-  
+
 This interface can be used by applications in which blocking is
 acceptable while an image is being loaded.  It can also be used to
 load small images in general.  Applications that need progressive

@@ -45,7 +45,7 @@ operation splitted in several steps, guiding the user through its pages
 and controlling the page flow to collect the necessary data.}
 \section{GtkAssistant as GtkBuildable}{The GtkAssistant implementation of the GtkBuildable interface exposes the
 \code{action.area} as internal children with the name "action_area".
-  
+
 To add pages to an assistant in GtkBuilder, simply add it as a <child>
 to the GtkAssistant object, and set its child properties as necessary.}
 \section{Structures}{\describe{\item{\verb{GtkAssistant}}{
@@ -57,7 +57,7 @@ to the GtkAssistant object, and set its child properties as necessary.}
 \section{Enums and Flags}{\describe{\item{\verb{GtkAssistantPageType}}{
 An enum for determining the page role inside the \code{\link{GtkAssistant}}. It's used to
 handle buttons sensitivity and visibility.
-  
+
 Note that an assistant needs to end its page flow with a page of type GTK_ASSISTANT_PAGE_CONFIRM
 or GTK_ASSISTANT_PAGE_SUMMARY to be correct.
 
@@ -89,7 +89,7 @@ the behavior of the "last" button.
 The ::apply signal is emitted when the apply button is clicked. The default
 behavior of the \code{\link{GtkAssistant}} is to switch to the page after the current
 page, unless the current page is the last one.
-  
+
 A handler for the ::apply signal should carry out the actions for which
 the wizard has collected data. If the action takes a long time to complete,
 you might consider to put a page of type \code{GTK_ASSISTANT_PAGE_PROGRESS}

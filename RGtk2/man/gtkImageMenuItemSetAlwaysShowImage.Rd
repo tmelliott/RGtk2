@@ -1,7 +1,7 @@
 \alias{gtkImageMenuItemSetAlwaysShowImage}
 \name{gtkImageMenuItemSetAlwaysShowImage}
 \title{gtkImageMenuItemSetAlwaysShowImage}
-\description{If \code{TRUE}, the menu item will ignore the \verb{"gtk-menu-images"} 
+\description{If \code{TRUE}, the menu item will ignore the \verb{"gtk-menu-images"}
 setting and always show the image, if available.}
 \usage{gtkImageMenuItemSetAlwaysShowImage(object, always.show)}
 \arguments{

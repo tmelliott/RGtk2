@@ -22,11 +22,11 @@
 \section{Hierarchy}{\preformatted{GObject
    +----GtkSettings}}
 \section{Detailed Description}{GtkSettings provide a mechanism to share global settings between applications.
-On the X window system, this sharing is realized by an XSettings 
+On the X window system, this sharing is realized by an XSettings
 manager that is usually part of the desktop environment, along with utilities
 that let the user change these settings. In the absence of an Xsettings manager,
 settings can also be specified in RC files.
-  
+
 Applications can override system-wide settings with \code{\link{gtkSettingsSetStringProperty}},
 \code{\link{gtkSettingsSetLongProperty}}, etc. This should be restricted to special
 cases though; GtkSettings are not meant as an application configuration
@@ -38,7 +38,7 @@ realized at least once. The following example demonstrates a way to do this:
   g_type_class_unref (g_type_class_ref (GTK_TYPE_IMAGE_MENU_ITEM));
   g_object_set (gtk_settings_get_default (), "gtk-menu-images", FALSE, NULL);
 }
-  
+
 There is one GtkSettings instance per screen. It can be obtained with
 \code{\link{gtkSettingsGetForScreen}}, but in many cases, it is more convenient
 to use \code{\link{gtkWidgetGetSettings}}. \code{\link{gtkSettingsGetDefault}} returns the
@@ -110,11 +110,11 @@ Color names must be acceptable as identifiers in the
 gtkrc syntax, and
 color specifications must be in the format accepted by
 \code{\link{gdkColorParse}}.
-  
+
 Note that due to the way the color tables from different sources are
 merged, color specifications will be converted to hexadecimal form
 when getting this property.
-  
+
 Starting with GTK+ 2.12, the entries can alternatively be separated
 by ';' instead of newlines:
 \preformatted{name1: color1; name2: color2; ...
@@ -125,7 +125,7 @@ by ';' instead of newlines:
 \item{\verb{gtk-cursor-blink} [logical : Read / Write]}{
 
 Whether the cursor should blink.
-  
+
 Also see the \verb{"gtk-cursor-blink-timeout"} setting,
 which allows more flexible control over cursor blinking.
   Default value: TRUE
@@ -140,7 +140,7 @@ Length of the cursor blink cycle, in milliseconds.  Allowed values: >= 100  Defa
 
 Time after which the cursor stops blinking, in seconds.
 The timer is reset after each user interaction.
-  
+
 Setting this to zero has the same effect as setting
 \verb{"gtk-cursor-blink"} to \code{FALSE}.
   Allowed values: >= 1  Default value: 2147483647  Since 2.12
@@ -186,10 +186,10 @@ Whether to enable toolkit-wide animations.  Default value: TRUE
 \item{\verb{gtk-enable-event-sounds} [logical : Read / Write]}{
 
 Whether to play any event sounds at all.
-  
+
 See the Sound Theme spec (\url{http://www.freedesktop.org/wiki/Specifications/sound-theme-spec})
 for more information on event sounds and sound themes.
-  
+
 GTK+ itself does not support event sounds, you have to use a loadable
 module like the one that comes with libcanberra.
   Default value: TRUE  Since 2.14
@@ -198,10 +198,10 @@ module like the one that comes with libcanberra.
 \item{\verb{gtk-enable-input-feedback-sounds} [logical : Read / Write]}{
 
 Whether to play event sounds as feedback to user input.
-  
+
 See the Sound Theme spec (\url{http://www.freedesktop.org/wiki/Specifications/sound-theme-spec})
 for more information on event sounds and sound themes.
-  
+
 GTK+ itself does not support event sounds, you have to use a loadable
 module like the one that comes with libcanberra.
   Default value: TRUE  Since 2.14
@@ -268,7 +268,7 @@ Timestamp of current fontconfig configuration.  Default value: 0
 A list of icon sizes. The list is separated by colons, and
 item has the form:
   \\var{size-name} = \\var{width} , \\var{height}
-  
+
 E.g. "gtk-menu=16,16:gtk-button=20,20:gtk-dialog=48,48".
 GTK+ itself use the following named icon sizes: gtk-menu,
 gtk-button, gtk-small-toolbar, gtk-large-toolbar, gtk-dnd,
@@ -287,7 +287,7 @@ Name of icon theme to use.  Default value: "hicolor"
 Which IM (input method) module should be used by default. This is the
 input method that will be used if the user has not explicitly chosen
 another input method from the IM context menu.
-  
+
 See \code{\link{GtkIMContext}} and see the \verb{"gtk-show-input-method-menu"} property.
   Default value: NULL
 
@@ -363,7 +363,7 @@ the path to the pdf file. The command may also contain a \code{s}
 placeholder, which will get replaced by the path to a file
 containing the print settings in the format produced by
 \code{\link{gtkPrintSettingsToFile}}.
-  
+
 The preview application is responsible for removing the pdf file
 and the print settings file when it is done.
   Default value: "evince --unlink-tempfile --preview --print-settings \%s \%f"  Since 2.10
@@ -406,10 +406,10 @@ Whether the context menus of entries and text views should offer to insert contr
 \item{\verb{gtk-sound-theme-name} [character : *                : Read / Write]}{
 
 The XDG sound theme to use for event sounds.
-  
+
 See the Sound Theme spec (\url{http://www.freedesktop.org/wiki/Specifications/sound-theme-spec})
 for more information on event sounds and sound themes.
-  
+
 GTK+ itself does not support event sounds, you have to use a loadable
 module like the one that comes with libcanberra.
   Default value: "freedesktop"  Since 2.14
@@ -454,7 +454,7 @@ Whether default toolbars have text only, text and icons, icons only, etc.  Defau
 
 Amount of time, in milliseconds, after which the browse mode
 will be disabled.
-  
+
 See \verb{"gtk-tooltip-browse-timeout"} for more information
 about browse mode.
   Allowed values: >= 0  Default value: 500  Since 2.12
@@ -464,7 +464,7 @@ about browse mode.
 
 Controls the time after which tooltips will appear when
 browse mode is enabled, in milliseconds.
-  
+
 Browse mode is enabled when the mouse pointer moves off an object
 where a tooltip was currently being displayed. If the mouse pointer
 hits another object before the browse mode timeout expires (see

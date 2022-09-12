@@ -1,7 +1,7 @@
 \alias{gtkMenuSetReserveToggleSize}
 \name{gtkMenuSetReserveToggleSize}
 \title{gtkMenuSetReserveToggleSize}
-\description{Sets whether the menu should reserve space for drawing toggles 
+\description{Sets whether the menu should reserve space for drawing toggles
 or icons, regardless of their actual presence.}
 \usage{gtkMenuSetReserveToggleSize(object, reserve.toggle.size)}
 \arguments{

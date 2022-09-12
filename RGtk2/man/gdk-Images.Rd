@@ -17,18 +17,18 @@
 \section{Detailed Description}{The \code{\link{GdkImage}} type represents an area for drawing graphics.
 It has now been superceded to a large extent by the much more flexible
 GdkRGB functions.
-  
+
 To create an empty \code{\link{GdkImage}} use \code{\link{gdkImageNew}}.
 To create a \code{\link{GdkImage}} from bitmap data use \code{gdkImageNewBitmap()}.
 To create an image from part of a \code{\link{GdkWindow}} use \code{\link{gdkDrawableGetImage}}.
-  
+
 The image can be manipulated with \code{\link{gdkImageGetPixel}} and
 \code{\link{gdkImagePutPixel}}, or alternatively by changing the actual pixel data.
 Though manipulating the pixel data requires complicated code to cope with
 the different formats that may be used.
-  
+
 To draw a \code{\link{GdkImage}} in a \code{\link{GdkWindow}} or \code{\link{GdkPixmap}} use \code{\link{gdkDrawImage}}.
-  
+
 To destroy a \code{\link{GdkImage}} use \code{gdkImageDestroy()}.}
 \section{Structures}{\describe{\item{\verb{GdkImage}}{
 The \code{\link{GdkImage}} struct contains information on the image and the pixel data.

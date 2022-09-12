@@ -15,7 +15,7 @@ if you are redrawing the same region 400 times you may never
 notice, aside from noticing a speed problem. Enabling update
 debugging causes GTK to flicker slowly and noticeably, so you can
 see exactly what's being redrawn when, in what order.
-  
+
 The --gtk-debug=updates command line option passed to GTK+ programs
 enables this debug option at application startup time. That's
 usually more useful than calling \code{\link{gdkWindowSetDebugUpdates}}

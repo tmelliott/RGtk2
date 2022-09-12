@@ -1,10 +1,10 @@
 \alias{gtkEditableSelectRegion}
 \name{gtkEditableSelectRegion}
 \title{gtkEditableSelectRegion}
-\description{Selects a region of text. The characters that are selected are 
-those characters at positions from \code{start.pos} up to, but not 
-including \code{end.pos}. If \code{end.pos} is negative, then the the 
-characters selected are those characters from \code{start.pos} to 
+\description{Selects a region of text. The characters that are selected are
+those characters at positions from \code{start.pos} up to, but not
+including \code{end.pos}. If \code{end.pos} is negative, then the the
+characters selected are those characters from \code{start.pos} to
 the end of the text.}
 \usage{gtkEditableSelectRegion(object, start, end)}
 \arguments{

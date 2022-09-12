@@ -1,7 +1,7 @@
 \alias{gtkAccelGroupFind}
 \name{gtkAccelGroupFind}
 \title{gtkAccelGroupFind}
-\description{Finds the first entry in an accelerator group for which 
+\description{Finds the first entry in an accelerator group for which
 \code{find.func} returns \code{TRUE} and returns its \code{\link{GtkAccelKey}}.}
 \usage{gtkAccelGroupFind(object, find.func, data = NULL)}
 \arguments{

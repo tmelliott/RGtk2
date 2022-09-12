@@ -1,7 +1,7 @@
 \alias{gtkSeparatorToolItemGetDraw}
 \name{gtkSeparatorToolItemGetDraw}
 \title{gtkSeparatorToolItemGetDraw}
-\description{Returns whether \code{item} is drawn as a line, or just blank. 
+\description{Returns whether \code{item} is drawn as a line, or just blank.
 See \code{\link{gtkSeparatorToolItemSetDraw}}.}
 \usage{gtkSeparatorToolItemGetDraw(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkSeparatorToolItem}}}}

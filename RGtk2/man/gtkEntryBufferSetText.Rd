@@ -10,7 +10,7 @@
 }
 \details{This is roughly equivalent to calling \code{\link{gtkEntryBufferDeleteText}}
 and \code{\link{gtkEntryBufferInsertText}}.
-  
+
 Note that \code{n.chars} is in characters, not in bytes.
   Since 2.18}
 \author{Derived by RGtkGen from GTK+ documentation}

@@ -1,7 +1,7 @@
 \alias{gFileInfoGetAttributeString}
 \name{gFileInfoGetAttributeString}
 \title{gFileInfoGetAttributeString}
-\description{Gets the value of a string attribute. If the attribute does 
+\description{Gets the value of a string attribute. If the attribute does
 not contain a string, \code{NULL} will be returned.}
 \usage{gFileInfoGetAttributeString(object, attribute)}
 \arguments{

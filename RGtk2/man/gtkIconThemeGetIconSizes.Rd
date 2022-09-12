@@ -2,8 +2,8 @@
 \name{gtkIconThemeGetIconSizes}
 \title{gtkIconThemeGetIconSizes}
 \description{Returns a list of integers describing the sizes at which
-the icon is available without scaling. A size of -1 means 
-that the icon is available in a scalable format. The list 
+the icon is available without scaling. A size of -1 means
+that the icon is available in a scalable format. The list
 is zero-terminated.}
 \usage{gtkIconThemeGetIconSizes(object, icon.name)}
 \arguments{

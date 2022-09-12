@@ -42,7 +42,7 @@
 vertically in order, and can be selected.
 The list has many selection modes, which are programmer selective and
 depend on how many elements are able to be selected at the same time.
-  
+
 GtkList has been deprecated since GTK+ 2.0 and should not be used
 in newly written code. Use \code{\link{GtkTreeView}} instead.}
 \section{Structures}{\describe{\item{\verb{GtkList}}{

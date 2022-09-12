@@ -15,9 +15,9 @@ operation when the user clicks and drags the icon.}
 signal, and use \code{\link{gtkEntryGetCurrentIconDragSource}} in
 your signal handler to find out if the drag was started from
 an icon.
-  
-By default, GTK+ uses the icon as the drag icon. You can use the 
-\verb{"drag-begin"} signal to set a different icon. Note that you 
+
+By default, GTK+ uses the icon as the drag icon. You can use the
+\verb{"drag-begin"} signal to set a different icon. Note that you
 have to use \code{gSignalConnectAfter()} to ensure that your signal handler
 gets executed after the default handler.
   Since 2.16}

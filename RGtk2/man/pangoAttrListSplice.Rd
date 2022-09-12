@@ -16,7 +16,7 @@ the left, and then merges \code{other} on top of the hole.}
 that applies at position \code{pos} in \code{list} by an amount \code{len},
 and then calling \code{\link{pangoAttrListChange}} with a copy
 of each attribute in \code{other} in sequence (offset in position by \code{pos}).
-  
+
 This operation proves useful for, for instance, inserting
 a pre-edit string in the middle of an edit buffer.  }
 \author{Derived by RGtkGen from GTK+ documentation}

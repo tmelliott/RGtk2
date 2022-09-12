@@ -15,7 +15,7 @@ zero-length item).}
 \item{\verb{split.index}}{[integer]  byte index of position to split item, relative to the start of the item}
 }
 \details{This function is similar in function to \code{\link{pangoItemSplit}} (and uses
-it internally.)  
+it internally.)
   Since 1.2}
 \value{[\code{\link{PangoGlyphItem}}]  the newly allocated item representing text before
               \code{split.index},}

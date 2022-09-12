@@ -13,7 +13,7 @@
 \details{If the layout's \code{\link{PangoContext}} has a transformation matrix set, then
 \code{x} and \code{y} specify the position of the top left corner of the
 bounding box (in device space) of the transformed layout.
-  
+
 If you're using GTK+, the usual way to obtain a \code{\link{PangoLayout}}
 is \code{\link{gtkWidgetCreatePangoLayout}}.}
 \author{Derived by RGtkGen from GTK+ documentation}

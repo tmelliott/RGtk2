@@ -25,25 +25,25 @@ other application to draw "funky" fonts.}
 \item{\code{cairo_user_scaled_font_init_func_t(scaled.font, cr, extents)}}{
 \verb{cairo_user_scaled_font_init_func_t} is the type of function which is
 called when a scaled-font needs to be created for a user font-face.
-  
+
 The cairo context \code{cr} is not used by the caller, but is prepared in font
 space, similar to what the cairo contexts passed to the render_glyph
 method will look like.  The callback can use this context for extents
 computation for example.  After the callback is called, \code{cr} is checked
 for any error status.
-  
+
 The \code{extents} argument is where the user font sets the font extents for
 \code{scaled.font}.  It is in font space, which means that for most cases its
 ascent and descent members should add to 1.0.  \code{extents} is preset to
 hold a value of 1.0 for ascent, height, and max_x_advance, and 0.0 for
 descent and max_y_advance members.
-  
+
 The callback is optional.  If not set, default font extents as described
 in the previous paragraph will be used.
-  
+
 Note that \code{scaled.font} is not fully initialized at this
 point and trying to use it for text operations in the callback will result
-in deadlock.  
+in deadlock.
   Since 1.8
 
 \describe{
@@ -59,7 +59,7 @@ in deadlock.
 \item{\code{cairo_user_scaled_font_render_glyph_func_t(scaled.font, glyph, cr, extents)}}{
 \verb{cairo_user_scaled_font_render_glyph_func_t} is the type of function which
 is called when a user scaled-font needs to render a glyph.
-  
+
 The callback is mandatory, and expected to draw the glyph with code \code{glyph} to
 the cairo context \code{cr}.  \code{cr} is prepared such that the glyph drawing is done in
 font space.  That is, the matrix set on \code{cr} is the scale matrix of \code{scaled.font},
@@ -69,11 +69,11 @@ achieve that by changing the matrix on \code{cr}.  All cairo rendering operation
 to \code{cr} are permitted, however, the result is undefined if any source other
 than the default source on \code{cr} is used.  That means, glyph bitmaps should
 be rendered using \code{\link{cairoMask}} instead of \code{\link{cairoPaint}}.
-  
+
 Other non-default settings on \code{cr} include a font size of 1.0 (given that
 it is set up to be in font space), and font options corresponding to
 \code{scaled.font}.
-  
+
 The \code{extents} argument is preset to have \code{x_bearing},
 \code{width}, and \code{y_advance} of zero,
 \code{y_bearing} set to \code{-font_extents.ascent},
@@ -86,7 +86,7 @@ If the \code{width} field is zero upon the callback returning
 based on the drawings done to \code{cr}.  This is in most cases exactly what the
 desired behavior is.  However, if for any reason the callback sets the
 extents, it must be ink extents, and include the extents of all drawing
-done to \code{cr} in the callback.  
+done to \code{cr} in the callback.
   Since 1.8
 
 \describe{
@@ -104,12 +104,12 @@ done to \code{cr} in the callback.
 \verb{cairo_user_scaled_font_text_to_glyphs_func_t} is the type of function which
 is called to convert input text to a list of glyphs.  This is used by the
 \code{\link{cairoShowText}} operation.
-  
+
 Using this callback the user-font has full control on glyphs and their
 positions.  That means, it allows for features like ligatures and kerning,
 as well as complex \dfn{shaping} required for scripts like
 Arabic and Indic.
-  
+
 The \code{num.glyphs} argument is preset to the number of glyph entries available
 in the \code{glyphs} buffer. If the \code{glyphs} buffer is \code{NULL}, the value of
 \code{num.glyphs} will be zero.  If the provided glyph list is too short for
@@ -120,7 +120,7 @@ using \code{cairoGlyphAllocate()} and placed in \code{glyphs}.  Upon return,
 allocated glyph list using \code{cairoGlyphFree()}.
 The callback should populate the glyph indices and positions (in font space)
 assuming that the text is to be shown at the origin.
-  
+
 If \code{clusters} is not \code{NULL}, \code{num.clusters} and \code{cluster.flags} are also
 non-\code{NULL}, and cluster mapping should be computed. The semantics of how
 cluster list allocation works is similar to the glyph list.  That is,
@@ -132,18 +132,18 @@ using \code{cairoTextClusterAllocate()} and placed in \code{clusters}.  Upon ret
 \code{num.clusters} should contain the number of generated clusters.
 If the value \code{clusters} points at has changed after the call, the caller
 will free the allocated cluster list using \code{cairoTextClusterFree()}.
-  
+
 The callback is optional.  If \code{num.glyphs} is negative upon
 the callback returning, the unicode_to_glyph callback
 is tried.  See \verb{cairo_user_scaled_font_unicode_to_glyph_func_t}.
-  
+
 Note: While cairo does not impose any limitation on glyph indices,
 some applications may assume that a glyph index fits in a 16-bit
 unsigned integer.  As such, it is advised that user-fonts keep their
 glyphs in the 0 to 65535 range.  Furthermore, some applications may
 assume that glyph 0 is a special glyph-not-found glyph.  User-fonts
 are advised to use glyph 0 for such purposes and do not use that
-glyph value for other purposes.  
+glyph value for other purposes.
   Since 1.8
 
 \describe{
@@ -166,7 +166,7 @@ glyph value for other purposes.
 \verb{cairo_user_scaled_font_unicode_to_glyph_func_t} is the type of function which
 is called to convert an input Unicode character to a single glyph.
 This is used by the \code{\link{cairoShowText}} operation.
-  
+
 This callback is used to provide the same functionality as the
 text_to_glyphs callback does (see \verb{cairo_user_scaled_font_text_to_glyphs_func_t})
 but has much less control on the output,
@@ -175,18 +175,18 @@ this callback is that each character maps to one glyph, and that the
 mapping is context independent.  It also assumes that glyphs are positioned
 according to their advance width.  These mean no ligatures, kerning, or
 complex scripts can be implemented using this callback.
-  
+
 The callback is optional, and only used if text_to_glyphs callback is not
 set or fails to return glyphs.  If this callback is not set, an identity
 mapping from Unicode code-points to glyph indices is assumed.
-  
+
 Note: While cairo does not impose any limitation on glyph indices,
 some applications may assume that a glyph index fits in a 16-bit
 unsigned integer.  As such, it is advised that user-fonts keep their
 glyphs in the 0 to 65535 range.  Furthermore, some applications may
 assume that glyph 0 is a special glyph-not-found glyph.  User-fonts
 are advised to use glyph 0 for such purposes and do not use that
-glyph value for other purposes.  
+glyph value for other purposes.
   Since 1.8
 
 \describe{

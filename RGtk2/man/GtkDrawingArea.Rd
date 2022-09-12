@@ -25,26 +25,26 @@ the application may want to connect to:
 \item     Mouse and button press signals to respond to input from
     the user. (Use \code{\link{gtkWidgetAddEvents}} to enable events
     you wish to receive.)
-    
+
 \item     The "realize" signal to take any necessary actions
     when the widget is instantiated on a particular display.
     (Create GDK resources in response to this signal.)
-    
+
 \item     The "configure_event" signal to take any necessary actions
     when the widget changes size.
-    
+
 \item     The "expose_event" signal to handle redrawing the
     contents of the widget.
-    
+
 }
-  
+
 The following code portion demonstrates using a drawing
 area to display a circle in the normal widget foreground
 color.
 Note that GDK automatically clears the exposed area
 to the background color before sending the expose event, and
 that drawing is implicitly clipped to the exposed area.
-  
+
  \emph{Simple   \code{GtkDrawingArea}   usage.}
 \preformatted{
 expose_event_callback <- function(widget, event, data) {
@@ -55,21 +55,21 @@ expose_event_callback <- function(widget, event, data) {
   return(TRUE)
 }
 [...]
-  
+
 drawing_area = gtkDrawingArea()
 drawing_area$setSizeRequest(100, 100)
 gSignalConnect(drawing_area, "expose_event", expose_event_callback)
-}  
+}
 Expose events are normally delivered when a drawing area first comes
 onscreen, or when it's covered by another window and then uncovered
 (exposed). You can also force an expose event by adding to the "damage
 region" of the drawing area's window; \code{\link{gtkWidgetQueueDrawArea}} and
 \code{\link{gdkWindowInvalidateRect}} are equally good ways to do this. You'll
 then get an expose event for the invalid region.
-  
+
 The available routines for drawing are documented on the GDK Drawing Primitives page.
 See also \code{\link{gdkDrawPixbuf}} for drawing a \code{\link{GdkPixbuf}}.
-  
+
 To receive mouse events on a drawing area, you will need to enable
 them with \code{\link{gtkWidgetAddEvents}}. To receive keyboard events, you
 will need to set the \verb{GTK_CAN_FOCUS} flag on the drawing area, and

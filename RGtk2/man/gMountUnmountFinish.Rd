@@ -2,7 +2,7 @@
 \name{gMountUnmountFinish}
 \title{gMountUnmountFinish}
 \description{
-Finishes unmounting a mount. If any errors occurred during the operation, 
+Finishes unmounting a mount. If any errors occurred during the operation,
 \code{error} will be set to contain the errors and \code{FALSE} will be returned.
 \strong{WARNING: \code{g_mount_unmount_finish} has been deprecated since version 2.22 and should not be used in newly-written code. Use \code{\link{gMountUnmountWithOperationFinish}} instead.}
 }

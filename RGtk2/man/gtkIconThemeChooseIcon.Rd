@@ -13,8 +13,8 @@ combines these two steps if all you need is the pixbuf.)}
 \item{\verb{size}}{desired icon size}
 \item{\verb{flags}}{flags modifying the behavior of the icon lookup}
 }
-\details{If \code{icon.names} contains more than one name, this function 
-tries them all in the given order before falling back to 
+\details{If \code{icon.names} contains more than one name, this function
+tries them all in the given order before falling back to
 inherited icon themes.
   Since 2.12}
 \value{[\code{\link{GtkIconInfo}}] a \code{\link{GtkIconInfo}} structure containing information

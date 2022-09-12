@@ -1,7 +1,7 @@
 \alias{gdkDrawPoint}
 \name{gdkDrawPoint}
 \title{gdkDrawPoint}
-\description{Draws a point, using the foreground color and other attributes of 
+\description{Draws a point, using the foreground color and other attributes of
 the \code{\link{GdkGC}}.}
 \usage{gdkDrawPoint(object, gc, x, y)}
 \arguments{

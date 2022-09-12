@@ -26,18 +26,18 @@
 \section{Detailed Description}{The \code{\link{GVolume}} interface represents user-visible objects that can be
 mounted. Note, when porting from GnomeVFS, \code{\link{GVolume}} is the moral
 equivalent of \verb{GnomeVFSDrive}.
-  
+
 Mounting a \code{\link{GVolume}} instance is an asynchronous operation. For more
 information about asynchronous operations, see \verb{GAsyncReady} and
 \verb{GSimpleAsyncReady}. To mount a \code{\link{GVolume}}, first call
 \code{\link{gVolumeMount}} with (at least) the \code{\link{GVolume}} instance, optionally
-a \code{\link{GMountOperation}} object and a \code{\link{GAsyncReadyCallback}}. 
-  
+a \code{\link{GMountOperation}} object and a \code{\link{GAsyncReadyCallback}}.
+
 Typically, one will only want to pass \code{NULL} for the
 \code{\link{GMountOperation}} if automounting all volumes when a desktop session
 starts since it's not desirable to put up a lot of dialogs asking
 for credentials.
-  
+
 The callback will be fired when the operation has resolved (either
 with success or failure), and a \verb{GAsyncReady} structure will be
 passed to the callback.  That callback should then call
@@ -45,7 +45,7 @@ passed to the callback.  That callback should then call
 \verb{GAsyncReady} data to see if the operation was completed
 successfully.  If an \code{error} is present when \code{\link{gVolumeMountFinish}}
 is called, then it will be filled with any error information.
-  
+
 It is sometimes necessary to directly access the underlying
 operating system object behind a volume (e.g. for passing a volume
 to an application via the commandline). For this purpose, GIO
@@ -56,7 +56,7 @@ uuids. GIO uses predefind strings as names for the different kinds
 of identifiers: \verb{G_VOLUME_IDENTIFIER_KIND_HAL_UDI},
 \verb{G_VOLUME_IDENTIFIER_KIND_LABEL}, etc. Use \code{\link{gVolumeGetIdentifier}}
 to obtain an identifier for a volume.
-  
+
 Note that \verb{G_VOLUME_IDENTIFIER_KIND_HAL_UDI} will only be available
 when the gvfs hal volume monitor is in use. Other volume monitors
 will generally be able to provide the \verb{G_VOLUME_IDENTIFIER_KIND_UNIX_DEVICE}

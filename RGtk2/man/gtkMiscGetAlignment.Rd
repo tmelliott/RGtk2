@@ -1,7 +1,7 @@
 \alias{gtkMiscGetAlignment}
 \name{gtkMiscGetAlignment}
 \title{gtkMiscGetAlignment}
-\description{Gets the X and Y alignment of the widget within its allocation. 
+\description{Gets the X and Y alignment of the widget within its allocation.
 See \code{\link{gtkMiscSetAlignment}}.}
 \usage{gtkMiscGetAlignment(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkMisc}}}}

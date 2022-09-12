@@ -13,7 +13,7 @@ conceptually the final point reached by the path so far.}
 system. If there is no defined current point or if \code{cr} is in an
 error status, \code{x} and \code{y} will both be set to 0.0. It is possible to
 check this in advance with \code{\link{cairoHasCurrentPoint}}.
-  
+
 Most path construction functions alter the current point. See the
 following for details on how they affect the current point:
 \code{\link{cairoNewPath}}, \code{\link{cairoNewSubPath}},
@@ -22,11 +22,11 @@ following for details on how they affect the current point:
 \code{\link{cairoRelMoveTo}}, \code{\link{cairoRelLineTo}}, \code{\link{cairoRelCurveTo}},
 \code{\link{cairoArc}}, \code{\link{cairoArcNegative}}, \code{\link{cairoRectangle}},
 \code{\link{cairoTextPath}}, \code{\link{cairoGlyphPath}}, \code{cairoStrokeToPath()}.
-  
+
 Some functions use and alter the current point but do not
 otherwise change current path:
 \code{\link{cairoShowText}}.
-  
+
 Some functions unset the current path and as a result, current point:
 \code{\link{cairoFill}}, \code{\link{cairoStroke}}.  }
 \author{Derived by RGtkGen from GTK+ documentation}

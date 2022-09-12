@@ -1,7 +1,7 @@
 \alias{gtkStatusIconGetBlinking}
 \name{gtkStatusIconGetBlinking}
 \title{gtkStatusIconGetBlinking}
-\description{Returns whether the icon is blinking, see 
+\description{Returns whether the icon is blinking, see
 \code{\link{gtkStatusIconSetBlinking}}.}
 \usage{gtkStatusIconGetBlinking(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkStatusIcon}}}}

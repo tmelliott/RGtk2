@@ -3,7 +3,7 @@
 \title{gtkPaintVline}
 \description{Draws a vertical line from (\code{x}, \code{y1.}) to (\code{x}, \code{y2.}) in \code{window}
 using the given style and state.}
-\usage{gtkPaintVline(object, window, state.type, area = NULL, widget = NULL, 
+\usage{gtkPaintVline(object, window, state.type, area = NULL, widget = NULL,
     detail = NULL, y1, y2, x)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GtkStyle}}}

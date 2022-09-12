@@ -17,11 +17,11 @@ GObject
    +----GFileMonitor
 }}
 \section{Detailed Description}{Monitors a file or directory for changes.
-  
+
 To obtain a \code{\link{GFileMonitor}} for a file or directory, use
 \code{\link{gFileMonitor}}, \code{\link{gFileMonitorFile}}, or
 \code{\link{gFileMonitorDirectory}}.
-  
+
 To get informed about changes to the file or directory you are
 monitoring, connect to the \verb{"changed"} signal. The
 signal will be emitted in the thread-default main

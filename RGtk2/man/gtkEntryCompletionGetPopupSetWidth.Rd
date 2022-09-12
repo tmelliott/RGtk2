@@ -1,7 +1,7 @@
 \alias{gtkEntryCompletionGetPopupSetWidth}
 \name{gtkEntryCompletionGetPopupSetWidth}
 \title{gtkEntryCompletionGetPopupSetWidth}
-\description{Returns whether the  completion popup window will be resized to the 
+\description{Returns whether the  completion popup window will be resized to the
 width of the entry.}
 \usage{gtkEntryCompletionGetPopupSetWidth(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkEntryCompletion}}}}

@@ -1,8 +1,7 @@
-update_preview_cb <- function(file_chooser, preview)
-{
+update_preview_cb <- function(file_chooser, preview) {
   filename <- file_chooser$getPreviewFilename()
 
-  pixbuf <- gdkPixbuf(file=filename, w=128, h=128)[[1]]
+  pixbuf <- gdkPixbuf(file = filename, w = 128, h = 128)[[1]]
   have_preview <- !is.null(pixbuf)
 
   preview$setFromPixbuf(pixbuf)

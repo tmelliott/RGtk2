@@ -10,8 +10,8 @@ at the specified position.}
 \item{\verb{tooltip}}{the contents of the tooltip for the icon, or \code{NULL}. \emph{[  \acronym{allow-none}  ]}}
 }
 \details{Use \code{NULL} for \code{tooltip} to remove an existing tooltip.
-  
-See also \code{\link{gtkWidgetSetTooltipText}} and 
+
+See also \code{\link{gtkWidgetSetTooltipText}} and
 \code{\link{gtkEntrySetIconTooltipMarkup}}.
   Since 2.16}
 \author{Derived by RGtkGen from GTK+ documentation}

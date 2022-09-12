@@ -1,10 +1,10 @@
 \alias{gtkCellRendererActivate}
 \name{gtkCellRendererActivate}
 \title{gtkCellRendererActivate}
-\description{Passes an activate event to the cell renderer for possible processing.  
-Some cell renderers may use events; for example, \code{\link{GtkCellRendererToggle}} 
+\description{Passes an activate event to the cell renderer for possible processing.
+Some cell renderers may use events; for example, \code{\link{GtkCellRendererToggle}}
 toggles when it gets a mouse click.}
-\usage{gtkCellRendererActivate(object, event, widget, path, background.area, 
+\usage{gtkCellRendererActivate(object, event, widget, path, background.area,
     cell.area, flags)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GtkCellRenderer}}}

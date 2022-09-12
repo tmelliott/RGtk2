@@ -2,7 +2,7 @@
 \name{gtkPageSetupSetPaperSize}
 \title{gtkPageSetupSetPaperSize}
 \description{Sets the paper size of the \code{\link{GtkPageSetup}} without
-changing the margins. See 
+changing the margins. See
 \code{\link{gtkPageSetupSetPaperSizeAndDefaultMargins}}.}
 \usage{gtkPageSetupSetPaperSize(object, size)}
 \arguments{

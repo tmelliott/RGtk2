@@ -36,7 +36,7 @@ can use all of the methods available there.  It also implements the
 \code{\link{GtkTreeSortable}} interface so it can be sorted by the view.
 Finally, it also implements the tree drag and
 drop interfaces.
-  
+
 The \code{\link{GtkListStore}} can accept most GObject types as a column type, though
 it can't accept all custom types.  Internally, it will keep a copy of
 data passed in (such as a string or a boxed pointer).  Columns that
@@ -46,7 +46,7 @@ value.  As a result, if the object is modified, it is up to the
 application writer to call \code{gtk.tree.model.row.changed} to emit the
 "row_changed" signal.  This most commonly affects lists with
 \code{\link{GdkPixbuf}}s stored.
-  
+
  \emph{Creating a simple list store.}
 \preformatted{
 list_store <- gtk_list_store_new ("character", "integer", "logical")
@@ -71,7 +71,7 @@ insertion and deletion, and not fast at random data access.  The
 that \code{\link{GtkTreeIter}}s can be cached while the row exists.  Thus, if
 access to a particular row is needed often and your code is expected to
 run on older versions of GTK+, it is worth keeping the iter around.
-  
+
 It is important to note that only the methods
 \code{\link{gtkListStoreInsertWithValues}} and \code{\link{gtkListStoreInsertWithValuesv}}
 are atomic, in the sense that the row is being appended to the store and the
@@ -90,20 +90,20 @@ function must be prepared for that.}
 to specify the model columns with a <columns> element that may
 contain multiple <column> elements, each specifying one model
 column. The "type" attribute specifies the data type for the column.
-  
+
 Additionally, it is possible to specify content for the list store
 in the UI definition, with the <data> element. It can contain
 multiple <row> elements, each specifying to content for one
 row of the list model. Inside a <row>, the <col> elements
 specify the content for individual cells.
-  
+
 Note that it is probably more common to define your models
 in the code, and one might consider it a layering violation
 to specify the content of a list store in a UI definition,
 \emph{data}, not \emph{presentation},
 and common wisdom is to separate the two, as far as possible.
 
-  
+
  \emph{A UI Definition fragment for a list store}\preformatted{<object class="GtkListStore">
   <columns>
     <column type="gchararray"/>

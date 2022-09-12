@@ -31,7 +31,7 @@ success or the reason for the failure of the grab attempt.
 \describe{
 \item{\verb{success}}{the resource was successfully grabbed.}
 \item{\verb{already-grabbed}}{the resource is actively grabbed by another client.}
-\item{\verb{invalid-time}}{the resource was grabbed more recently than the 
+\item{\verb{invalid-time}}{the resource was grabbed more recently than the
   specified time.}
 \item{\verb{not-viewable}}{the grab window or the \code{confine.to} window are not
   viewable.}

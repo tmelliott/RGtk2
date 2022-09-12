@@ -9,12 +9,12 @@ primarily for performance reasons.}
 \item{\verb{object}}{A \code{\link{GtkTreeModel}}.}
 \item{\verb{iter}}{The \code{\link{GtkTreeIter}}.}
 }
-\details{This function is primarily meant as a way for views to let caching model 
+\details{This function is primarily meant as a way for views to let caching model
 know when nodes are being displayed (and hence, whether or not to cache that
 node.)  For example, a file-system based model would not want to keep the
 entire file-hierarchy in memory, just the sections that are currently being
 displayed by every current view.
-  
+
 A model should be expected to be able to get an iter independent of its
 reffed state.}
 \author{Derived by RGtkGen from GTK+ documentation}

@@ -1,7 +1,7 @@
 \alias{gtkTreePathPrev}
 \name{gtkTreePathPrev}
 \title{gtkTreePathPrev}
-\description{Moves the \code{path} to point to the previous node at the current depth, 
+\description{Moves the \code{path} to point to the previous node at the current depth,
 if it exists.}
 \usage{gtkTreePathPrev(object)}
 \arguments{\item{\verb{object}}{A \code{\link{GtkTreePath}}.}}

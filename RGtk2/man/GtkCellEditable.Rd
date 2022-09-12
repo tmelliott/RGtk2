@@ -22,7 +22,7 @@ to be usable when editing the contents of a \code{\link{GtkTreeView}} cell.}
 \item{\code{editing-done(cell.editable, user.data)}}{
 This signal is a sign for the cell renderer to update its
 value from the \code{cell.editable}.
-  
+
 Implementations of \code{\link{GtkCellEditable}} are responsible for
 emitting this signal when they are done editing, e.g.
 \code{\link{GtkEntry}} is emitting it when the user presses Enter.
@@ -39,7 +39,7 @@ for emitting ::editing-done.
 \item{\code{remove-widget(cell.editable, user.data)}}{
 This signal is meant to indicate that the cell is finished
 editing, and the widget may now be destroyed.
-  
+
 Implementations of \code{\link{GtkCellEditable}} are responsible for
 emitting this signal when they are done editing. It must
 be emitted after the \code{\link{gtkCellEditableEditingDone}} signal,

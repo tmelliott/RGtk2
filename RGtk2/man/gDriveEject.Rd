@@ -5,7 +5,7 @@
 Asynchronously ejects a drive.
 \strong{WARNING: \code{g_drive_eject} has been deprecated since version 2.22 and should not be used in newly-written code. Use \code{\link{gDriveEjectWithOperation}} instead.}
 }
-\usage{gDriveEject(object, flags = "G_MOUNT_UNMOUNT_NONE", cancellable = NULL, 
+\usage{gDriveEject(object, flags = "G_MOUNT_UNMOUNT_NONE", cancellable = NULL,
     callback, user.data = NULL)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GDrive}}.}

@@ -122,11 +122,11 @@
 \section{Interfaces}{GtkTreeView implements
  AtkImplementorIface and  \code{\link{GtkBuildable}}.}
 \section{Detailed Description}{Widget that displays any object that implements the \code{\link{GtkTreeModel}} interface.
-  
+
 Please refer to the tree widget conceptual
 overview for an overview of all the objects and data types related
 to the tree widget and how they work together.
-  
+
 Several different coordinate systems are exposed in the GtkTreeView API.
 These are:
 
@@ -139,7 +139,7 @@ These are:
     area of GtkTreeView.  These coordinates start at (0, 0) for row 0 of the
     tree.
 }
-  
+
 Several functions are available for converting between the different
 coordinate systems.  The most common translations are between widget and bin
 window coordinates and between bin window and tree coordinates.  For the
@@ -148,7 +148,7 @@ former you can use \code{\link{gtkTreeViewConvertWidgetToBinWindowCoords}}
 (and vice versa).}
 \section{GtkTreeView as GtkBuildable}{The GtkTreeView implementation of the GtkBuildable interface accepts
 GtkTreeViewColumn objects as <child> elements in UI definitions.
-  
+
  \emph{A UI definition fragment with GtkTreeView}\preformatted{<object class="GtkTreeView" id="treeview">
   <property name="model">liststore1</property>
   <child>
@@ -326,7 +326,7 @@ The "row-activated" signal is emitted when the method
 a treeview row. It is also emitted when a non-editable row is
 selected and one of the keys: Space, Shift+Space, Return or
 Enter is pressed.
-  
+
 For selection handling refer to the tree
 widget conceptual overview as well as \code{\link{GtkTreeSelection}}.
 
@@ -522,7 +522,7 @@ Show the column header buttons.  Default value: TRUE
 Enables of disables the hover expansion mode of \code{tree.view}.
 Hover expansion makes rows expand or collapse if the pointer moves
 over them.
-  
+
 This mode is primarily intended for treeviews in popups, e.g.
 in \code{\link{GtkComboBox}} or \code{\link{GtkEntryCompletion}}.
   Default value: FALSE  Since 2.6
@@ -534,7 +534,7 @@ Enables of disables the hover selection mode of \code{tree.view}.
 Hover selection makes the selected row follow the pointer.
 Currently, this works only for the selection modes
 \code{GTK_SELECTION_SINGLE} and \code{GTK_SELECTION_BROWSE}.
-  
+
 This mode is primarily intended for treeviews in popups, e.g.
 in \code{\link{GtkComboBox}} or \code{\link{GtkEntryCompletion}}.
   Default value: FALSE  Since 2.6

@@ -3,7 +3,7 @@
 \alias{gtkRemoveIdle}
 \title{Control a background/idle function}
 \description{
-\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)} 
+\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)}
 
   These functions allow one to register and
   remove a function that is called whenever

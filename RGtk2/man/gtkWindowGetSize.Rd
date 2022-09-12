@@ -21,12 +21,12 @@ get the size and the time that you perform some action assuming
 that size is the current size. To avoid race conditions, connect to
 "configure-event" on the window and adjust your size-dependent
 state to match the size delivered in the \code{\link{GdkEventConfigure}}.
-  
+
 Note 2: The returned size does \emph{not} include the
 size of the window manager decorations (aka the window frame or
 border). Those are not drawn by GTK+ and GTK+ has no reliable
 method of determining their size.
-  
+
 Note 3: If you are getting a window size in order to position
 the window onscreen, there may be a better way. The preferred
 way is to simply set the window's semantic type with
@@ -40,7 +40,7 @@ behave consistently and according to user prefs if the window
 manager handles it. Also, the window manager can take the size
 of the window decorations/border into account, while your
 application cannot.
-  
+
 In any case, if you insist on application-specified window
 positioning, there's \emph{still} a better way than
 doing it yourself - \code{\link{gtkWindowSetPosition}} will frequently

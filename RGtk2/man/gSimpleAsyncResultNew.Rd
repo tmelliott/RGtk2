@@ -2,7 +2,7 @@
 \name{gSimpleAsyncResultNew}
 \title{gSimpleAsyncResultNew}
 \description{Creates a \code{\link{GSimpleAsyncResult}}.}
-\usage{gSimpleAsyncResultNew(source.object, callback, user.data = NULL, 
+\usage{gSimpleAsyncResultNew(source.object, callback, user.data = NULL,
     source.tag)}
 \arguments{
 \item{\verb{source.object}}{a \code{\link{GObject}} the asynchronous function was called with,

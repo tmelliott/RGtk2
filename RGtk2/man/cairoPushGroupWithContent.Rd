@@ -15,7 +15,7 @@ provide the result of any drawing to the group as a pattern,
 \details{The group will have a content type of \code{content}. The ability to
 control this content type is the only distinction between this
 function and \code{\link{cairoPushGroup}} which you should see for a more
-detailed description of group rendering.  
+detailed description of group rendering.
   Since 1.2}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

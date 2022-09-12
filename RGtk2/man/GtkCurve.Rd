@@ -24,13 +24,13 @@
 \section{Detailed Description}{The \code{\link{GtkCurve}} widget allows the user to edit a curve covering a range of
 values. It is typically used to fine-tune color balances in graphics
 applications like the Gimp.
-  
+
 The \code{\link{GtkCurve}} widget has 3 modes of operation - spline, linear and free.
 In spline mode the user places points on the curve which are automatically
 connected together into a smooth curve. In linear mode the user places points
 on the curve which are connected by straight lines. In free mode the user can
 draw the points of the curve freely, and they are not connected at all.
-  
+
 As of GTK+ 2.20, \code{\link{GtkCurve}} has been deprecated since it is too specialized.}
 \section{Structures}{\describe{\item{\verb{GtkCurve}}{
 \strong{WARNING: \code{GtkCurve} is deprecated and should not be used in newly-written code.}

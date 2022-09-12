@@ -1,7 +1,7 @@
 \alias{gtkPrintSettingsGetPaperSize}
 \name{gtkPrintSettingsGetPaperSize}
 \title{gtkPrintSettingsGetPaperSize}
-\description{Gets the value of \code{GTK_PRINT_SETTINGS_PAPER_FORMAT}, 
+\description{Gets the value of \code{GTK_PRINT_SETTINGS_PAPER_FORMAT},
 converted to a \code{\link{GtkPaperSize}}.}
 \usage{gtkPrintSettingsGetPaperSize(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkPrintSettings}}}}

@@ -2,8 +2,8 @@
 \name{gdkRectangleIntersect}
 \title{gdkRectangleIntersect}
 \description{Calculates the intersection of two rectangles. It is allowed for
-\code{dest} to be the same as either \code{src1} or \code{src2}. If the rectangles 
-do not intersect, \code{dest}'s width and height is set to 0 and its x 
+\code{dest} to be the same as either \code{src1} or \code{src2}. If the rectangles
+do not intersect, \code{dest}'s width and height is set to 0 and its x
 and y values are undefined. If you are only interested in whether
 the rectangles intersect, but not in the intersecting area itself,
 pass \code{NULL} for \code{dest}.}

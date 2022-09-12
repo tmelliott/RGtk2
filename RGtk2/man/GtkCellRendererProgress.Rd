@@ -14,7 +14,7 @@
                      +----GtkCellRendererProgress}}
 \section{Detailed Description}{\code{\link{GtkCellRendererProgress}} renders a numeric value as a progress par in a cell.
 Additionally, it can display a text on top of the progress bar.
-  
+
 The \code{\link{GtkCellRendererProgress}} cell renderer was added in GTK+ 2.6.}
 \section{Structures}{\describe{\item{\verb{GtkCellRendererProgress}}{
 \emph{undocumented
@@ -37,10 +37,10 @@ Setting this to a non-negative value causes the cell renderer to
 enter "activity mode", where a block bounces back and forth to
 indicate that some progress is made, without specifying exactly how
 much.
-  
+
 Each increment of the property causes the block to move by a little
 bit.
-  
+
 To indicate that the activity has not started yet, set the property
 to zero. To indicate completion, set the property to \code{G_MAXINT}.
   Allowed values: >= -1  Default value: -1  Since 2.12

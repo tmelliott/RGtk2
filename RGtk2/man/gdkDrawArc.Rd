@@ -2,7 +2,7 @@
 \name{gdkDrawArc}
 \title{gdkDrawArc}
 \description{Draws an arc or a filled 'pie slice'. The arc is defined by the bounding
-rectangle of the entire ellipse, and the start and end angles of the part 
+rectangle of the entire ellipse, and the start and end angles of the part
 of the ellipse to be drawn.}
 \usage{gdkDrawArc(object, gc, filled, x, y, width, height, angle1, angle2)}
 \arguments{

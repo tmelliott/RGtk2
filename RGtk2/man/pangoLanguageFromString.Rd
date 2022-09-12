@@ -10,7 +10,7 @@ pointer.)}
 \details{This function first canonicalizes the string by converting it to
 lowercase, mapping '_' to '-', and stripping all characters other
 than letters and '-'.
-  
+
 Use \code{\link{pangoLanguageGetDefault}} if you want to get the \code{\link{PangoLanguage}} for
 the current locale of the process.  }
 \value{[\code{\link{PangoLanguage}}]  an opaque pointer to a \code{\link{PangoLanguage}} structure, or \code{NULL}

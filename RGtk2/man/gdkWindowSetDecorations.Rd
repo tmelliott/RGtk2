@@ -16,7 +16,7 @@ the \code{\link{GdkWMDecoration}} enumeration. If \verb{GDK_DECOR_ALL} is includ
 mask, the other bits indicate which decorations should be turned off.
 If \verb{GDK_DECOR_ALL} is not included, then the other bits indicate
 which decorations should be turned on.
-  
+
 Most window managers honor a decorations hint of 0 to disable all decorations,
 but very few honor all possible combinations of bits.}
 \author{Derived by RGtkGen from GTK+ documentation}

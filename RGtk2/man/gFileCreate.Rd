@@ -3,7 +3,7 @@
 \title{gFileCreate}
 \description{Creates a new file and returns an output stream for writing to it.
 The file must not already exist.}
-\usage{gFileCreate(object, flags = "G_FILE_CREATE_NONE", cancellable = NULL, 
+\usage{gFileCreate(object, flags = "G_FILE_CREATE_NONE", cancellable = NULL,
     .errwarn = TRUE)}
 \arguments{
 \item{\verb{object}}{input \code{\link{GFile}}.}
@@ -15,11 +15,11 @@ The file must not already exist.}
 but if you pass \verb{G_FILE_CREATE_PRIVATE} in \code{flags} the file
 will be made readable only to the current user, to the level that
 is supported on the target filesystem.
-  
+
 If \code{cancellable} is not \code{NULL}, then the operation can be cancelled by
 triggering the cancellable object from another thread. If the operation
-was cancelled, the error \code{G_IO_ERROR_CANCELLED} will be returned. 
-  
+was cancelled, the error \code{G_IO_ERROR_CANCELLED} will be returned.
+
 If a file or directory with this name already exists the G_IO_ERROR_EXISTS
 error will be returned.
 Some file systems don't allow all file names, and may

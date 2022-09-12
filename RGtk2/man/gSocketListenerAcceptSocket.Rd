@@ -12,11 +12,11 @@ to the listener. Returns the \code{\link{GSocket}} that was accepted.}
 \details{If you want to accept the high-level \code{\link{GSocketConnection}}, not a \code{\link{GSocket}},
 which is often the case, then you should use \code{\link{gSocketListenerAccept}}
 instead.
-  
+
 If \code{source.object} is not \code{NULL} it will be filled out with the source
 object specified when the corresponding socket or address was added
 to the listener.
-  
+
 If \code{cancellable} is not \code{NULL}, then the operation can be cancelled by
 triggering the cancellable object from another thread. If the operation
 was cancelled, the error \code{G_IO_ERROR_CANCELLED} will be returned.

@@ -8,7 +8,7 @@ want to get an empty page after the emission.}
 \usage{cairoSurfaceCopyPage(surface)}
 \arguments{\item{\verb{surface}}{[\code{\link{CairoSurface}}]  a \code{\link{CairoSurface}}}}
 \details{There is a convenience function for this that takes a \code{\link{Cairo}},
-namely \code{\link{cairoCopyPage}}.  
+namely \code{\link{cairoCopyPage}}.
   Since 1.6}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

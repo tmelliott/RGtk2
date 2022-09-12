@@ -1,7 +1,7 @@
 \alias{gtkPrintContextGetPangoFontmap}
 \name{gtkPrintContextGetPangoFontmap}
 \title{gtkPrintContextGetPangoFontmap}
-\description{Returns a \code{\link{PangoFontMap}} that is suitable for use 
+\description{Returns a \code{\link{PangoFontMap}} that is suitable for use
 with the \code{\link{GtkPrintContext}}.}
 \usage{gtkPrintContextGetPangoFontmap(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkPrintContext}}}}

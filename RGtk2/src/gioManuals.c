@@ -11,7 +11,7 @@ S_g_input_stream_read(USER_OBJECT_ s_object, USER_OBJECT_ s_count,
   gsize count = ((gsize)asCNumeric(s_count));
   GCancellable* cancellable = GET_LENGTH(s_cancellable) == 0 ? NULL :
     G_CANCELLABLE(getPtrValue(s_cancellable));
-                                                        
+
   gssize ans;
   guchar* buffer = R_alloc(count, sizeof(guchar));
   GError* error = NULL;
@@ -57,7 +57,7 @@ S_g_input_stream_read_all(USER_OBJECT_ s_object, USER_OBJECT_ s_count,
 		     "buffer", PROTECT(asRRawArrayWithSize(buffer, count)),
                      "bytes.read", PROTECT(asRNumeric(bytes_read)),
                      "error", PROTECT(asRGError(error)), NULL);
-  
+
   UNPROTECT(3);
   CLEANUP(g_error_free, error);;
 #else
@@ -80,19 +80,19 @@ S_g_input_stream_read_async(USER_OBJECT_ s_object,
   USER_OBJECT_ _result = NULL_USER_OBJECT;
 #if GIO_CHECK_VERSION(2, 16, 0)
   GAsyncReadyCallback callback = ((GAsyncReadyCallback)S_GAsyncReadyCallback);
-  R_CallbackData* user_data = R_createCBData(s_callback, s_user_data); 
+  R_CallbackData* user_data = R_createCBData(s_callback, s_user_data);
   GInputStream* object = G_INPUT_STREAM(getPtrValue(s_object));
   gsize count = ((gsize)asCNumeric(s_count));
   guchar* buffer = g_new(guchar, count);
   int io_priority = ((int)asCInteger(s_io_priority));
   GCancellable* cancellable = GET_LENGTH(s_cancellable) == 0 ? NULL :
     G_CANCELLABLE(getPtrValue(s_cancellable));
-  
+
   user_data->extra = buffer;
-  
+
   g_input_stream_read_async(object, buffer, count, io_priority, cancellable,
                             callback, user_data);
-  
+
 #else
   error("g_input_stream_read_async exists only in gio >= 2.16.0");
 #endif
@@ -108,7 +108,7 @@ S_g_input_stream_read_finish(USER_OBJECT_ s_object, USER_OBJECT_ s_result)
   GAsyncResult* result = G_ASYNC_RESULT(getPtrValue(s_result));
   R_CallbackData* user_data =
     (R_CallbackData *)g_async_result_get_user_data(result);
-  
+
   gssize ans;
   GError* error = NULL;
   guchar *buffer = (guchar *)user_data->extra;
@@ -257,10 +257,10 @@ S_g_initable_new(USER_OBJECT_ s_object_type, USER_OBJECT_ s_cancellable,
   GObjectClass *object_class = G_OBJECT_CLASS(g_type_class_ref(object_type));
   GCancellable* cancellable = GET_LENGTH(s_cancellable) == 0 ? NULL :
     G_CANCELLABLE(getPtrValue(s_cancellable));
-  
+
   gpointer ans;
   GError* error = NULL;
-  
+
   int i, n = GET_LENGTH(s_properties);
   GParameter *params = g_new0(GParameter, n);
   USER_OBJECT_ propNames = PROTECT(GET_NAMES(s_properties));
@@ -344,7 +344,7 @@ S_g_socket_receive_from(USER_OBJECT_ s_object, USER_OBJECT_ s_size,
                      "buffer", PROTECT(asRRawArrayWithSize(buffer, size)),
                      "error", PROTECT(asRGError(error)),
                      NULL);
-  
+
   UNPROTECT(4);
   CLEANUP(g_error_free, error);;
 #else
@@ -393,7 +393,7 @@ S_g_socket_receive_message(USER_OBJECT_ s_object, USER_OBJECT_ s_num_vectors,
                      "num.messages", PROTECT(asRInteger(num_messages)),
                      "flags", PROTECT(asRInteger(flags)),
                      "error", PROTECT(asRGError(error)), NULL);
-  
+
   UNPROTECT(7);
   CLEANUP(g_free, messages);;
   ;

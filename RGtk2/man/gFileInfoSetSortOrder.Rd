@@ -1,7 +1,7 @@
 \alias{gFileInfoSetSortOrder}
 \name{gFileInfoSetSortOrder}
 \title{gFileInfoSetSortOrder}
-\description{Sets the sort order attribute in the file info structure. See 
+\description{Sets the sort order attribute in the file info structure. See
 \code{G_FILE_ATTRIBUTE_STANDARD_SORT_ORDER}.}
 \usage{gFileInfoSetSortOrder(object, sort.order)}
 \arguments{

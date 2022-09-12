@@ -18,7 +18,7 @@
 handles launching an application in a graphical context. It provides
 startup notification and allows to launch applications on a specific
 screen or workspace.
-  
+
  \emph{Launching an application}
 \preformatted{
 context <- gdkAppLaunchContext()

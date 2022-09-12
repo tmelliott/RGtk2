@@ -1,7 +1,7 @@
 \alias{gtkButtonSetAlignment}
 \name{gtkButtonSetAlignment}
 \title{gtkButtonSetAlignment}
-\description{Sets the alignment of the child. This property has no effect unless 
+\description{Sets the alignment of the child. This property has no effect unless
 the child is a \code{\link{GtkMisc}} or a \verb{GtkAligment}.}
 \usage{gtkButtonSetAlignment(object, xalign, yalign)}
 \arguments{

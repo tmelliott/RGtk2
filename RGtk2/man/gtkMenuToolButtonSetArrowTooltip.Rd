@@ -8,7 +8,7 @@ a tooltip on the whole \code{\link{GtkMenuToolButton}}.
 \strong{WARNING: \code{gtk_menu_tool_button_set_arrow_tooltip} has been deprecated since version 2.12 and should not be used in newly-written code. Use \code{\link{gtkMenuToolButtonSetArrowTooltipText}}
 instead.}
 }
-\usage{gtkMenuToolButtonSetArrowTooltip(object, tooltips, tip.text = NULL, 
+\usage{gtkMenuToolButtonSetArrowTooltip(object, tooltips, tip.text = NULL,
     tip.private = NULL)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GtkMenuToolButton}}}

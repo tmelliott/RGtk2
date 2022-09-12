@@ -17,13 +17,13 @@ struct _RGtkDataFrame
   /*< private >*/
   gint stamp;
   USER_OBJECT_ frame;
-  
+
   USER_OBJECT_ sort_closure;
   USER_OBJECT_ factors;
-  
+
   gint            sort_id;
   GtkSortType     sort_order;
-  
+
   gint nrows;
 };
 

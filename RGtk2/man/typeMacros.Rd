@@ -59,7 +59,7 @@
 \alias{gtkAssistantPageTypeGetType}
 \alias{gtkCellRendererAccelGetType}
 \alias{gtkCellRendererAccelModeGetType}
-\alias{gtkCellRendererSpinGetType} 
+\alias{gtkCellRendererSpinGetType}
 \alias{gtkLinkButtonGetType}
 \alias{gtkBinGetType}
 \alias{gtkBorderGetType}
@@ -156,8 +156,8 @@
 \alias{gtkPageSetupGetType}
 \alias{gtkPaperSizeGetType}
 \alias{gtkPrintContextGetType}
-\alias{gtkPrintDuplexGetType} 
-\alias{gtkPrintOperationActionGetType} 
+\alias{gtkPrintDuplexGetType}
+\alias{gtkPrintOperationActionGetType}
 \alias{gtkPrintOperationGetType}
 \alias{gtkPrintOperationPreviewGetType}
 \alias{gtkPrintPagesGetType}
@@ -170,14 +170,14 @@
 \alias{gtkRecentChooserWidgetGetType}
 \alias{gtkRecentFilterFlagsGetType}
 \alias{gtkRecentFilterGetType}
-\alias{gtkRecentInfoGetType} 
+\alias{gtkRecentInfoGetType}
 \alias{gtkRecentManagerErrorGetType}
 \alias{gtkRecentManagerGetType}
-\alias{gtkRecentSortTypeGetType} 
-\alias{gtkSensitivityTypeGetType} 
+\alias{gtkRecentSortTypeGetType}
+\alias{gtkSensitivityTypeGetType}
 \alias{gtkStatusIconGetType}
 \alias{gtkTargetListGetType}
-\alias{gtkTextBufferTargetInfoGetType} 
+\alias{gtkTextBufferTargetInfoGetType}
 \alias{gtkProgressBarGetType}
 \alias{gtkProgressGetType}
 \alias{gtkRadioActionGetType}
@@ -232,7 +232,7 @@
 \alias{gtkTreeViewColumnGetType}
 \alias{gtkTreeViewGetType}
 \alias{gtkTreeViewGridLinesGetType}
-\alias{gtkUnitGetType} 
+\alias{gtkUnitGetType}
 \alias{gtkUIManagerGetType}
 \alias{gtkVBoxGetType}
 \alias{gtkVButtonBoxGetType}
@@ -260,7 +260,7 @@
 \alias{pangoTabArrayGetType}
 \alias{gtkBuildableGetType}
 \alias{gtkBuilderGetType}
-\alias{gtkRecentActionGetType} 
+\alias{gtkRecentActionGetType}
 \alias{gtkScaleButtonGetType}
 \alias{gtkTooltipGetType}
 \alias{gtkVolumeButtonGetType}

@@ -14,7 +14,7 @@ the emission of the "changed" signal is tied to the emission of the
 to compress the "changed" signals into one by calling
 \code{gObjectFreezeNotify()} and \code{gObjectThawNotify()} around the
 calls to the individual setters.
-  
+
 Alternatively, using a single \code{\link{gObjectSet}} for all the properties
 to change, or using \code{\link{gtkAdjustmentConfigure}} has the same effect
 of compressing "changed" emissions.

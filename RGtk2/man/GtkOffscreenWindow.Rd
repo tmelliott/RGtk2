@@ -27,7 +27,7 @@ want to get a snapshot of need not be displayed on the user's screen
 as a part of a widget hierarchy.  However, since \code{\link{GtkOffscreenWindow}}
 is a toplevel widget you cannot obtain snapshots of a full window
 with it since you cannot pack a toplevel widget in another toplevel.
-  
+
 The idea is to take a widget and manually set the state of it,
 add it to a \code{\link{GtkOffscreenWindow}} and then retrieve the snapshot
 as a \code{\link{GdkPixmap}} or \code{\link{GdkPixbuf}}.
@@ -35,7 +35,7 @@ as a \code{\link{GdkPixmap}} or \code{\link{GdkPixbuf}}.
 detail.  Applications should not use any API specific to \code{\link{GtkWindow}}
 to operate on this object.  It should be treated as a \code{\link{GtkBin}} that
 has no parent widget.
-  
+
 When contained offscreen widgets are redrawn, \code{\link{GtkOffscreenWindow}}
 will emit a \verb{"damage-event"} signal.}
 \section{Structures}{\describe{\item{\verb{GtkOffscreenWindow}}{

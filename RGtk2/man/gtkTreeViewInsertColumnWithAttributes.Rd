@@ -6,7 +6,7 @@
 the end.  The column is initialized with the attributes given. If \code{tree.view}
 has "fixed_height" mode enabled, then the new column will have its sizing
 property set to be GTK_TREE_VIEW_COLUMN_FIXED.}
-\usage{gtkTreeViewInsertColumnWithAttributes(object, position, title, 
+\usage{gtkTreeViewInsertColumnWithAttributes(object, position, title,
     cell, ...)}
 \arguments{
 \item{\verb{object}}{A \code{\link{GtkTreeView}}}

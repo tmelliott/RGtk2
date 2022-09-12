@@ -1,9 +1,9 @@
 \alias{gtkBuilderValueFromStringType}
 \name{gtkBuilderValueFromStringType}
 \title{gtkBuilderValueFromStringType}
-\description{Like \code{\link{gtkBuilderValueFromString}}, this function demarshals 
+\description{Like \code{\link{gtkBuilderValueFromString}}, this function demarshals
 a value from a string, but takes a \code{\link{GType}} instead of \code{\link{GParamSpec}}.
-This function calls \code{gValueInit()} on the \code{value} argument, so it 
+This function calls \code{gValueInit()} on the \code{value} argument, so it
 need not be initialised beforehand.}
 \usage{gtkBuilderValueFromStringType(object, type, string, .errwarn = TRUE)}
 \arguments{

@@ -3,7 +3,7 @@
 \title{gtkClipboardWaitForTargets}
 \description{Returns a list of targets that are present on the clipboard, or \code{NULL}
 if there aren't any targets available.
-This function waits for the data to be received using the main 
+This function waits for the data to be received using the main
 loop, so events, timeouts, etc, may be dispatched during the wait.}
 \usage{gtkClipboardWaitForTargets(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkClipboard}}}}

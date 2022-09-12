@@ -13,7 +13,7 @@ S_gdk_bitmap_class_init(GdkDrawableClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GdkColormap_symbol;
 void
@@ -29,7 +29,7 @@ S_gdk_colormap_class_init(GdkColormapClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GdkDisplay_symbol;
 
@@ -268,7 +268,7 @@ S_gdk_display_class_closed(USER_OBJECT_ s_object_class, USER_OBJECT_ s_object, U
 
   return(_result);
 }
- 
+
 
 static SEXP S_GdkDisplayManager_symbol;
 
@@ -328,7 +328,7 @@ S_gdk_display_manager_class_display_opened(USER_OBJECT_ s_object_class, USER_OBJ
 
   return(_result);
 }
- 
+
 
 static SEXP S_GdkDragContext_symbol;
 void
@@ -344,7 +344,7 @@ S_gdk_drag_context_class_init(GdkDragContextClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GdkDrawable_symbol;
 
@@ -1729,7 +1729,7 @@ S_gdk_drawable_class_ref_cairo_surface(USER_OBJECT_ s_object_class, USER_OBJECT_
 
   return(_result);
 }
- 
+
 
 static SEXP S_GdkWindow_symbol;
 void
@@ -1745,7 +1745,7 @@ S_gdk_window_class_init(GdkWindowClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GdkPixmap_symbol;
 void
@@ -1761,7 +1761,7 @@ S_gdk_pixmap_class_init(GdkPixmapObjectClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GdkGC_symbol;
 
@@ -1909,7 +1909,7 @@ S_gdk_gcclass_set_dashes(USER_OBJECT_ s_object_class, USER_OBJECT_ s_object, USE
 
   return(_result);
 }
- 
+
 
 static SEXP S_GdkImage_symbol;
 void
@@ -1925,7 +1925,7 @@ S_gdk_image_class_init(GdkImageClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GdkKeymap_symbol;
 
@@ -2023,7 +2023,7 @@ S_gdk_keymap_class_keys_changed(USER_OBJECT_ s_object_class, USER_OBJECT_ s_obje
 
   return(_result);
 }
- 
+
 
 static SEXP S_GdkPixbufAnimation_symbol;
 
@@ -2224,7 +2224,7 @@ S_gdk_pixbuf_animation_class_get_iter(USER_OBJECT_ s_object_class, USER_OBJECT_ 
 
   return(_result);
 }
- 
+
 
 static SEXP S_GdkPixbufAnimationIter_symbol;
 
@@ -2419,7 +2419,7 @@ S_gdk_pixbuf_animation_iter_class_advance(USER_OBJECT_ s_object_class, USER_OBJE
 
   return(_result);
 }
- 
+
 
 static SEXP S_GdkPixbufLoader_symbol;
 
@@ -2617,7 +2617,7 @@ S_gdk_pixbuf_loader_class_closed(USER_OBJECT_ s_object_class, USER_OBJECT_ s_obj
 
   return(_result);
 }
- 
+
 
 static SEXP S_GdkPangoRenderer_symbol;
 void
@@ -2633,7 +2633,7 @@ S_gdk_pango_renderer_class_init(GdkPangoRendererClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_GdkScreen_symbol;
 
@@ -2737,7 +2737,7 @@ S_gdk_screen_class_composited_changed(USER_OBJECT_ s_object_class, USER_OBJECT_ 
 
   return(_result);
 }
- 
+
 
 #if GDK_CHECK_VERSION(2, 14, 0)
 static SEXP S_GdkAppLaunchContext_symbol;
@@ -2755,5 +2755,4 @@ S_gdk_app_launch_context_class_init(GdkAppLaunchContextClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
-
+#endif

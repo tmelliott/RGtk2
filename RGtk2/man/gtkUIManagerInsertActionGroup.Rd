@@ -1,8 +1,8 @@
 \alias{gtkUIManagerInsertActionGroup}
 \name{gtkUIManagerInsertActionGroup}
 \title{gtkUIManagerInsertActionGroup}
-\description{Inserts an action group into the list of action groups associated 
-with \code{self}. Actions in earlier groups hide actions with the same 
+\description{Inserts an action group into the list of action groups associated
+with \code{self}. Actions in earlier groups hide actions with the same
 name in later groups.}
 \usage{gtkUIManagerInsertActionGroup(object, action.group, pos)}
 \arguments{

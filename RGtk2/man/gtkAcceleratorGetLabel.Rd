@@ -1,7 +1,7 @@
 \alias{gtkAcceleratorGetLabel}
 \name{gtkAcceleratorGetLabel}
 \title{gtkAcceleratorGetLabel}
-\description{Converts an accelerator keyval and modifier mask into a string 
+\description{Converts an accelerator keyval and modifier mask into a string
 which can be used to represent the accelerator to the user.}
 \usage{gtkAcceleratorGetLabel(accelerator.key, accelerator.mods)}
 \arguments{

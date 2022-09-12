@@ -2,7 +2,7 @@
 \name{gtkTreeViewSetHoverExpand}
 \title{gtkTreeViewSetHoverExpand}
 \description{Enables of disables the hover expansion mode of \code{tree.view}.
-Hover expansion makes rows expand or collapse if the pointer 
+Hover expansion makes rows expand or collapse if the pointer
 moves over them.}
 \usage{gtkTreeViewSetHoverExpand(object, expand)}
 \arguments{

@@ -32,11 +32,11 @@ GObject
 \section{Detailed Description}{\code{\link{GSocketConnection}} is a \code{\link{GIOStream}} for a connected socket. They
 can be created either by \code{\link{GSocketClient}} when connecting to a host,
 or by \code{\link{GSocketListener}} when accepting a new client.
-  
+
 The type of the \code{\link{GSocketConnection}} object returned from these calls
 depends on the type of the underlying socket that is in use. For
 instance, for a TCP/IP connection it will be a \code{\link{GTcpConnection}}.
-  
+
 Chosing what type of object to construct is done with the socket
 connection factory, and it is possible for 3rd parties to register
 custom socket connection types for specific combination of socket

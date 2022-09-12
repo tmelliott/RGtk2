@@ -82,7 +82,7 @@ it from the an empty translation.}
 Used for button press and button release events. The
 \code{type} field will be one of \code{GDK_BUTTON_PRESS},
 \code{GDK_2BUTTON_PRESS}, \code{GDK_3BUTTON_PRESS}, and \code{GDK_BUTTON_RELEASE}.
-  
+
 Double and triple-clicks result in a sequence of events being received.
 For double-clicks the order of events will be:
 \enumerate{
@@ -95,7 +95,7 @@ For double-clicks the order of events will be:
 Note that the first click is received just like a normal
 button press, while the second click results in a \code{GDK_2BUTTON_PRESS} being
 received just after the \code{GDK_BUTTON_PRESS}.
-  
+
 Triple-clicks are very similar to double-clicks, except that \code{GDK_3BUTTON_PRESS}
 is inserted after the third click. The order of the events is:
 \enumerate{
@@ -108,7 +108,7 @@ is inserted after the third click. The order of the events is:
 \item \code{GDK_3BUTTON_PRESS}
 \item \code{GDK_BUTTON_RELEASE}
 }
-  
+
 For a double click to occur, the second button press must occur within 1/4 of
 a second of the first. For a triple click to occur, the third button press
 must also occur within 1/2 second of the first button press.
@@ -334,7 +334,7 @@ application.}
 \item{\verb{GdkEventNoExpose}}{
 Generated when the area of a \code{\link{GdkDrawable}} being copied, with \code{\link{gdkDrawDrawable}}
 or \code{gdkWindowCopyArea()}, was completely available.
-  
+
 FIXME: add more here.
 
 \describe{
@@ -443,20 +443,20 @@ Specifies the crossing mode for \code{\link{GdkEventCrossing}}.
 }
 \item{\verb{GdkNotifyType}}{
 Specifies the kind of crossing for \code{\link{GdkEventCrossing}}.
-  
+
 See the X11 protocol specification of \verb{LeaveNotify} for
 full details of crossing event generation.
 
 \describe{
-\item{\verb{ancestor}}{the window is entered from an ancestor or 
+\item{\verb{ancestor}}{the window is entered from an ancestor or
    left towards an ancestor.}
-\item{\verb{virtual}}{the pointer moves between an ancestor and an 
+\item{\verb{virtual}}{the pointer moves between an ancestor and an
     inferior of the window.}
-\item{\verb{inferior}}{the window is entered from an inferior or 
+\item{\verb{inferior}}{the window is entered from an inferior or
    left towards an inferior.}
-\item{\verb{nonlinear}}{ the window is entered from or left towards 
+\item{\verb{nonlinear}}{ the window is entered from or left towards
    a window which is neither an ancestor nor an inferior.}
-\item{\verb{nonlinear-virtual}}{the pointer moves between two windows 
+\item{\verb{nonlinear-virtual}}{the pointer moves between two windows
    which are not ancestors of each other and the window is part of
    the ancestor chain between one of these windows and their least
    common ancestor.}

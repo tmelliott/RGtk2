@@ -20,7 +20,7 @@
 \section{Detailed Description}{A GtkSpinner widget displays an icon-size spinning animation.
 It is often used as an alternative to a \code{\link{GtkProgressBar}} for
 displaying indefinite activity, instead of actual progress.
-  
+
 To start the animation, use \code{\link{gtkSpinnerStart}}, to stop it
 use \code{\link{gtkSpinnerStop}}.}
 \section{Structures}{\describe{\item{\verb{GtkSpinner}}{

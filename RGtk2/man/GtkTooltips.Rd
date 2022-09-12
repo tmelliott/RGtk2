@@ -22,23 +22,23 @@
                +----GtkTooltips}}
 \section{Detailed Description}{\code{\link{GtkTooltips}} has been deprecated in GTK+ 2.12, in favor of the new
 \code{\link{GtkTooltip}} API.
-  
+
 Tooltips are the messages that appear next to a widget when the mouse pointer is held over it for a short amount of time. They are especially helpful for adding more verbose descriptions of things such as buttons in a toolbar.
-  
+
 An individual tooltip belongs to a group of tooltips. A group is created with a call to \code{\link{gtkTooltipsNew}}. Every tooltip in the group can then be turned off with a call to \code{\link{gtkTooltipsDisable}} and enabled with \code{\link{gtkTooltipsEnable}}.
-  
+
 The length of time the user must keep the mouse over a widget before the tip is shown, can be altered with \code{\link{gtkTooltipsSetDelay}}. This is set on a 'per group of tooltips' basis.
-  
+
 To assign a tip to a particular \code{\link{GtkWidget}}, \code{\link{gtkTooltipsSetTip}} is used.
   \strong{PLEASE NOTE:} Tooltips can only be set on widgets which have their own X window and
 receive enter and leave events.
 To check if a widget has its own window use \code{gtkWidgetNoWindow()}.
 To add a tooltip to a widget that doesn't have its own window, place the
-widget inside a \code{\link{GtkEventBox}} and add a tooltip to that instead.  
+widget inside a \code{\link{GtkEventBox}} and add a tooltip to that instead.
 The default appearance of all tooltips in a program is determined by the current GTK+ theme that the user has selected.
-  
+
 Information about the tooltip (if any) associated with an arbitrary widget can be retrieved using \code{\link{gtkTooltipsDataGet}}.
-  
+
  \emph{Adding tooltips to buttons.}
 \preformatted{
 ## Let's add some tooltips to some buttons
@@ -46,13 +46,13 @@ button_bar_tips <- gtkTooltips()
 
 ## Create the buttons and pack them into a GtkHBox
 hbox <- gtkHBox(TRUE, 2)
-   
+
 load_button <- gtkButton("Load a file")
 hbox$packStart(load_button, TRUE, TRUE, 2)
-   
+
 save_button <- gtkButton("Save a file")
 hbox$packStart(save_button, TRUE, TRUE, 2)
-   
+
 ## Add the tips
 button_bar_tips$setTip(load_button,
                        "Load a new document into this window",
@@ -65,7 +65,7 @@ button_bar_tips$setTip(save_button,
                        paste("If you have saved the document previously,",
                              "then the new version will be saved over the",
                              "old one. Otherwise, you will be prompted for",
-                             "a filename.")) 
+                             "a filename."))
 }}
 \section{Structures}{\describe{
 \item{\verb{GtkTooltips}}{

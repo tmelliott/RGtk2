@@ -24,7 +24,7 @@
  widget does work and is useful in some applications; it's just not
  of general interest. However, we are not accepting new features for
  the widget, and it will eventually move out of the GTK+
- distribution.  
+ distribution.
 The GTKRuler widget is a base class for horizontal and vertical rulers. Rulers
 are used to show the mouse pointer's location in a window. The ruler can either
 be horizontal or vertical on the window. Within the ruler a small triangle

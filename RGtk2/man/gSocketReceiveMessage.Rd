@@ -4,7 +4,7 @@
 \description{Receive data from a socket.  This is the most complicated and
 fully-featured version of this call. For easier use, see
 \code{\link{gSocketReceive}} and \code{\link{gSocketReceiveFrom}}.}
-\usage{gSocketReceiveMessage(object, flags = 0, cancellable = NULL, 
+\usage{gSocketReceiveMessage(object, flags = 0, cancellable = NULL,
     .errwarn = TRUE)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GSocket}}}
@@ -19,7 +19,7 @@ source the received packet.
 describe the buffers that received data will be scattered into.
 If \code{num.vectors} is -1, then \code{vectors} is assumed to be terminated
 by a \verb{GInputVector} with a \code{NULL} buffer pointer.
-  
+
 As a special case, if \code{num.vectors} is 0 (in which case, \code{vectors}
 may of course be \code{NULL}), then a single byte is received and
 discarded. This is to facilitate the common practice of sending a
@@ -32,7 +32,7 @@ control messages received from the kernel, one
 discarded.
   \code{num.messages}, if non-\code{NULL}, will be set to the number of control
 messages received.
-  
+
 If both \code{messages} and \code{num.messages} are non-\code{NULL}, then
 \code{num.messages} gives the number of \code{\link{GSocketControlMessage}} instances
 in \code{messages} (ie: not including the \code{NULL} terminator).
@@ -41,7 +41,7 @@ for this are available in the \verb{GSocketMsgFlags} enum, but the
 values there are the same as the system values, and the flags
 are passed in as-is, so you can pass in system-specific flags too
 (and \code{\link{gSocketReceiveMessage}} may pass system-specific flags out).
-  
+
 As with \code{\link{gSocketReceive}}, data may be discarded if \code{socket} is
 \code{G_SOCKET_TYPE_DATAGRAM} or \code{G_SOCKET_TYPE_SEQPACKET} and you do not
 provide enough buffer space to read a complete message. You can pass
@@ -49,13 +49,13 @@ provide enough buffer space to read a complete message. You can pass
 removing it from the receive queue, but there is no portable way to find
 out the length of the message other than by reading it into a
 sufficiently-large buffer.
-  
+
 If the socket is in blocking mode the call will block until there
 is some data to receive or there is an error. If there is no data
 available and the socket is in non-blocking mode, a
 \code{G_IO_ERROR_WOULD_BLOCK} error will be returned. To be notified when
 data is available, wait for the \code{G_IO_IN} condition.
-  
+
 On error -1 is returned and \code{error} is set accordingly.
   Since 2.22}
 \value{

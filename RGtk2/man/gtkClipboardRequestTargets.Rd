@@ -1,7 +1,7 @@
 \alias{gtkClipboardRequestTargets}
 \name{gtkClipboardRequestTargets}
 \title{gtkClipboardRequestTargets}
-\description{Requests the contents of the clipboard as list of supported targets. 
+\description{Requests the contents of the clipboard as list of supported targets.
 When the list is later received, \code{callback} will be called. }
 \usage{gtkClipboardRequestTargets(object, callback, user.data = NULL)}
 \arguments{

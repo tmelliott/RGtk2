@@ -73,22 +73,22 @@ Callbacks Also, Gtk provides a way to associate handlers or actions with
 When developing a GUI, typically one first creates the visible part, i.e.
  the collection of different widgets.
  We do this by creating instances of the different Gtk widget classes, creating
- the basic elements and 
+ the basic elements and
 \begin_inset Quotes eld
-\end_inset 
+\end_inset
 
 adding
 \begin_inset Quotes erd
-\end_inset 
+\end_inset
 
  them to the desired container widget.
- Having created the elements, we then display or 
+ Having created the elements, we then display or
 \begin_inset Quotes eld
-\end_inset 
+\end_inset
 
 show
 \begin_inset Quotes erd
-\end_inset 
+\end_inset
 
  the top-level element, be it a top-level window or merely a container to
  be added to an existing top-level container.
@@ -133,82 +133,82 @@ Creating GTK Objects
 
 As we saw above, one starts creating a GUI by instantiating different GTK
  objects.
- A GTK object is derived from the generic 
-\emph on 
+ A GTK object is derived from the generic
+\emph on
 GObject
-\emph default 
+\emph default
 .
  The GObject API is mostly hidden from the RGtk user, except for those functions
- involved in registering callbacks against object 
+ involved in registering callbacks against object
 \begin_inset Quotes eld
-\end_inset 
+\end_inset
 
 signals
 \begin_inset Quotes erd
-\end_inset 
+\end_inset
 
  (user events in the case of GTK objects) and getting/setting object properties
  (less frequently used).
- 
+
 \layout Standard
 
-In the case of the 
+In the case of the
 \begin_inset Quotes eld
-\end_inset 
+\end_inset
 
 Hello world
 \begin_inset Quotes erd
-\end_inset 
+\end_inset
 
  application, we need to create i) the top-level window, and ii) the button
  which the user clicks.
- We create the window using the 
-\emph on 
+ We create the window using the
+\emph on
 gtkWindow()
-\emph default 
+\emph default
  function
 \layout LyX-Code
 
 win <- gtkWindow(show = FALSE)
 \layout Standard
 
-This creates an instance of the 
-\emph on 
+This creates an instance of the
+\emph on
 GtkWindow
-\emph default 
+\emph default
  class.
- Generally, the S language constructor function for a Gtk class named 
-\emph on 
+ Generally, the S language constructor function for a Gtk class named
+\emph on
 Gtk<Class>
-\emph default 
- is given by 
-\emph on 
+\emph default
+ is given by
+\emph on
 gtk<Class>()
-\emph default 
+\emph default
 , i.e.
- replace the capital G starting the word with a lower case 
+ replace the capital G starting the word with a lower case
 \begin_inset Quotes eld
-\end_inset 
+\end_inset
 
 g
 \begin_inset Quotes erd
-\end_inset 
+\end_inset
 
 .
 \layout Standard
 
-Note that the constructor functions for each class that extends 
-\emph on 
+Note that the constructor functions for each class that extends
+\emph on
 GtkWidget
-\emph default 
+\emph default
  have an optional show argument.
  This controls whether the widget is made ready for showing immediately
  or if this must be done by the programmer at a later time.
  The advantage of deferring this is usually a marginal gain in efficiency.
- Hence, the default is 
-\emph on 
+ Hence, the default is
+\emph on
 TRUE
-\emph default 
+\emph default
 .
  One need only prohibit the top-level container, e.g.
  the window in this example, from being shown and then none of the sub-widgets
@@ -217,10 +217,10 @@ TRUE
 
 We can invoke methods on the Gtk objects to query or modify their state.
  For example, we can set thetitle for the frame of the window using the
- underlying C-level routine 
-\emph on 
-gtk_window_set_title() 
-\emph default 
+ underlying C-level routine
+\emph on
+gtk_window_set_title()
+\emph default
 provided by the Gtk libraries.
  We do this in S via the command
 \layout LyX-Code
@@ -240,37 +240,37 @@ There are several things to note here.
  This corresponds to a character vector of length 1 in S.
 \layout Standard
 
-The case of 
-\emph on 
+The case of
+\emph on
 gtkWindowSetTitle()
-\emph default 
+\emph default
  is quite simple.
- We started with an object of class 
-\emph on 
+ We started with an object of class
+\emph on
 GtkWindow
-\emph default 
+\emph default
  in R (created using the S constructor) and then invoked the function gtkWindowS
 etTitle() for that same class.
  But what about, for example, the general functions to show or hide a widget,
  get its parent widget, etc.
- These apply to all 
-\emph on 
+ These apply to all
+\emph on
 GtkWidget
-\emph default 
- objects, and not just the 
-\emph on 
-GtkWindow 
-\emph default 
+\emph default
+ objects, and not just the
+\emph on
+GtkWindow
+\emph default
 objects.
  Accordingly, the S interface uses the names that correspond to the C-level
- API and are prefixed by 
-\emph on 
+ API and are prefixed by
+\emph on
 gtkWidget...()
-\emph default 
-, rather than 
-\emph on 
+\emph default
+, rather than
+\emph on
 gtkWindow...()
-\emph default 
+\emph default
 .
  This makes it hard to remember the precise name of the function one wants
  to call since it depends on the inheritance or class hierarchy of the Gtk
@@ -283,10 +283,10 @@ To make things simpler, we allow one to use a more Java/C++ style that allows
  Specifically, we use the $ operator on the object followed by the name
  of the method to identify the function.
  Specifically, one can invoke from S a method on an underlying Gtk object,
- say 
-\emph on 
+ say
+\emph on
 g
-\emph default 
+\emph default
  using the form
 \layout LyX-Code
 
@@ -295,20 +295,20 @@ g$MethodName(arg1, arg2)
 
 This eliminates the need to remember for which class the method is defined
  and hence the prefix.
- Also this form of invocations inserts the target object, 
-\emph on 
+ Also this form of invocations inserts the target object,
+\emph on
 g
-\emph default 
+\emph default
 , as the first argument in the call to the real S function being called
  and so reduces typing.
 \layout Standard
 
 An example will make things clear.
  Consider again setting the title of the window.
- Rather than using 
-\emph on 
+ Rather than using
+\emph on
 gtkWindowSetTitle()
-\emph default 
+\emph default
 , we can use the command
 \layout LyX-Code
 
@@ -316,17 +316,17 @@ win$SetTitle("Hello world test")
 \layout Standard
 
 This looks for the appropriate function given the class and parent classes
- of 
-\emph on 
+ of
+\emph on
 win
-\emph default 
-and then invokes the 
+\emph default
+and then invokes the
 \begin_inset Quotes eld
-\end_inset 
+\end_inset
 
 nearest
 \begin_inset Quotes erd
-\end_inset 
+\end_inset
 
  function.
  This corresponds to the command
@@ -344,22 +344,22 @@ There is a marginal penalty in computational performance, but this may disappear
  the GUI and b) given the overhead in setting up callbacks to S functions.
 \layout Standard
 
-We can now continue with our 
+We can now continue with our
 \begin_inset Quotes erd
-\end_inset 
+\end_inset
 
 Hello world
 \begin_inset Quotes erd
-\end_inset 
+\end_inset
 
  example.
  We have created the window and set its title and hence seen how to create
  Gtk objects and invoke methods.
  And so creating the button becomes quite simple.
- We choose the appropriate Gtk class - 
-\emph on 
+ We choose the appropriate Gtk class -
+\emph on
 GtkButton
-\emph default 
+\emph default
  - and find the appropriate constructor.
 \layout Standard
 
@@ -367,10 +367,10 @@ There are two constructors in the C-level API for this class: one that takes
  no arguments and another that takes a string to display as the text in
  the button.
  In S, these two constructors map to a single constructor function, whose
- name is the name of the class suitably (de-)capitalized, 
-\emph on 
+ name is the name of the class suitably (de-)capitalized,
+\emph on
 gtkButton()
-\emph default 
+\emph default
 .
  If one calls it with no arguments, the first C-level constructor is called.
  Alternatively, if one gives a character vector of length 1 as the first
@@ -388,17 +388,17 @@ btn <- gtkButton("Say 'Hello World'")
 \layout Standard
 
 Next we put the button into the top-level window.
- The latter is a 
-\emph on 
+ The latter is a
+\emph on
 GtkContainer
-\emph default 
+\emph default
  object and has a default mechanism for placing children widgets.
  Since this is the only widget we will display in the window, we don't have
  to worry about how to aportion space between different widgets, etc.
- All we need do is invoke the 
-\emph on 
+ All we need do is invoke the
+\emph on
 add()
-\emph default 
+\emph default
  method on the window, giving it the child widget which is the button.
 \layout LyX-Code
 
@@ -409,10 +409,10 @@ When we create the button, we did not provide a value for the show argument
  and so the button is potentially visible.
  To actually see it, however, we need to show the top-level widget, i.e.
  the window.
- We do this by explicitly calling its 
-\emph on 
+ We do this by explicitly calling its
+\emph on
 show()
-\emph default 
+\emph default
  method.
 \layout LyX-Code
 
@@ -434,13 +434,13 @@ The usual types of events are user interactions such as clicking on a button,
  being pushed or popped onto a status bar, a new data set being created,
  and so on.
  Basically, each type of event is associated with a Gtk object in which
- it 
+ it
 \begin_inset Quotes eld
-\end_inset 
+\end_inset
 
 occurs
 \begin_inset Quotes erd
-\end_inset 
+\end_inset
 
 .
  A Gtk object can support different types of events, and events in different
@@ -453,16 +453,16 @@ occurs
 In our example, we want to execute a simple piece of S code that is executed
  when the user clicks on the button.
  The code simply writes the string "Saying hello from the button" to the
- console via the 
-\emph on 
+ console via the
+\emph on
 cat()
-\emph default 
+\emph default
  function.
  To arrange this, we can look at the different signals that the button supports.
- (Of course, we chose the 
-\emph on 
+ (Of course, we chose the
+\emph on
 GtkButton
-\emph default 
+\emph default
  class because it provided the appropriate signal, so this seems like we
  are going around in circles.
  In general, knowing the widget to use and appropriate signal is the trick
@@ -472,70 +472,70 @@ GtkButton
 Using the help pages for RGtk, we can find out that the button supports
  6 diffferent types of signals itself, and inherits many others from its
  ancestor classes (
-\emph on 
+\emph on
 GtkBin
-\emph default 
-, 
-\emph on 
+\emph default
+,
+\emph on
 GtkContainer
-\emph default 
+\emph default
 ,
 \layout Standard
 
 
-\emph on 
+\emph on
 GtkWidget
-\emph default 
-, 
-\emph on 
+\emph default
+,
+\emph on
 GtkObject
-\emph default 
-, and 
-\emph on 
+\emph default
+, and
+\emph on
 GObject
-\emph default 
+\emph default
 ).
- These signal names are 
-\emph on 
+ These signal names are
+\emph on
 activate
-\emph default 
-, 
-\emph on 
+\emph default
+,
+\emph on
 pressed
-\emph default 
-, 
-\emph on 
+\emph default
+,
+\emph on
 released
-\emph default 
-, 
-\emph on 
+\emph default
+,
+\emph on
 clicked
-\emph default 
-, 
-\emph on 
+\emph default
+,
+\emph on
 enter
-\emph default 
- and 
-\emph on 
+\emph default
+ and
+\emph on
 leave
-\emph default 
+\emph default
 .
  The one we are interested in is clicked.
- We specify our callback for the particular button using the method 
-\emph on 
+ We specify our callback for the particular button using the method
+\emph on
 gSignalConnect()
-\emph default 
+\emph default
 .
  We specify the name of the signal (i.e.
- 
-\emph on 
+
+\emph on
 clicked
-\emph default 
+\emph default
 ) and an invokable S object which will be called when the signal occurs:
 \layout LyX-Code
 
 gSignalConnect(btn, "clicked", quote(cat("Saying hello from the button
-\backslash 
+\backslash
 n")))
 \layout Standard
 
@@ -575,19 +575,19 @@ Note that we added the callback after the button was created and visible.
  time.
  Indeed, we can add multiple callbacks to the same Gtk object, and even
  for the same signal.
- For example, let's add a second that prints 
+ For example, let's add a second that prints
 \begin_inset Quotes eld
-\end_inset 
+\end_inset
 
 And again
 \begin_inset Quotes erd
-\end_inset 
+\end_inset
 
 .
 \layout LyX-Code
 
 id <- gSignalConnect(btn, "clicked", quote(cat("And again
-\backslash 
+\backslash
 n")))
 \layout Standard
 
@@ -597,20 +597,20 @@ Go ahead and click on the button now and see that two lines of output are
 
 And, of course, if we can dynamically add callbacks, we must also be able
  to remove them at any time.
- To do this, we use the 
-\emph on 
+ To do this, we use the
+\emph on
 gSignalHandlerDisconnect()
-\emph default 
- method for the 
-\emph on 
+\emph default
+ method for the
+\emph on
 GObject
-\emph default 
+\emph default
 .
  We give it the identifier for the registered callback that we received
- from 
-\emph on 
+ from
+\emph on
 gSignalConnect
-\emph default 
+\emph default
 .
  So to un-register the second callback, we issue the S command
 \layout LyX-Code
@@ -619,13 +619,13 @@ gSignalHandlerDisconnect(btn, id)
 \layout Standard
 
 Again, click on the button and you should get only one line of output, specifica
-lly saying 
+lly saying
 \begin_inset Quotes eld
-\end_inset 
+\end_inset
 
 hello
 \begin_inset Quotes erd
-\end_inset 
+\end_inset
 
  from the button.
 \layout Section
@@ -641,14 +641,14 @@ Enumerated types and flags are symbolic constants that are used to identify
  In R, we represent these as named integers.
  The intent is that the user will provide the name (or names for flags)
  and not a simple integer value.
- So, for example, when specifying the type of window in a call to 
-\emph on 
+ So, for example, when specifying the type of window in a call to
+\emph on
 gtkWindowNew()
-\emph default 
- we can use any of the names from the 
-\emph on 
+\emph default
+ we can use any of the names from the
+\emph on
 GtkWindowType
-\emph default 
+\emph default
  vector representing the
 \layout Standard
 
@@ -674,15 +674,15 @@ When a flag value is expected, we can combine different values together.
  Since we can OR (|) names together, we need an alternative syntax.
  For this, we use a simple character vector containing the names of the
  flag elements.
- 
+
 \layout Standard
 
 As an example, consider the display options for controlling the appearance
  of the calendar widget.
- The 
-\emph on 
+ The
+\emph on
 GtkCalendarDisplayOptions
-\emph default 
+\emph default
  is a named integer vector giving the different names for the flag values.
  If we want to have weeks start on a monday and also show week numbers,
  we can do this as
@@ -719,40 +719,40 @@ Using names guarantees the validity of the value as it is resolved and checked
  an object representing that symbolic value.
 \layout Standard
 
-One can note the fact that the name toplevel is converted to 
-\emph on 
+One can note the fact that the name toplevel is converted to
+\emph on
 GTK_WINDOW_TOPLEVEL
-\emph default 
+\emph default
  in the value returned by the enumeraton.
  This is the C-level name for the enumeration.
  It can be used as a synonym for the value.
- In other words, 
-\emph on 
+ In other words,
+\emph on
 toplevel
-\emph default 
- and 
-\emph on 
+\emph default
+ and
+\emph on
 GTK_WINDOW_TOPLEVEL
-\emph default 
+\emph default
  are the same.
  And indeed, for every enumeration or flag we have both a sets of element
  names available.
  The local version is available as described above by giving the name of
  type, e.g.
- 
-\emph on 
+
+\emph on
 GtkWindowType
-\emph default 
- and 
-\emph on 
+\emph default
+ and
+\emph on
 GtkCalendarDisplayOptions
-\emph default 
+\emph default
 .
  Prefixing the name with a
-\emph on 
+\emph on
  .
 
-\emph default 
+\emph default
  gives the alternative version with the longer, internal names.
  Use whichever form you desire.
  Those who write Gtk code in other languages may be familiar with the internal
@@ -763,15 +763,15 @@ GtkCalendarDisplayOptions
 Accessing Object Properties
 \layout Standard
 
-Each 
-\emph on 
+Each
+\emph on
 GObject
-\emph default 
+\emph default
  instance supports values that are accessible by name.
- The collection of properties can be accessed via the 
-\emph on 
+ The collection of properties can be accessed via the
+\emph on
 names()
-\emph default 
+\emph default
  function and this makes the object look like a list of named values.
  Properties are inherited through the type hierarchy.
 \layout Standard
@@ -780,10 +780,10 @@ Each property has a specific type that can be assigned to it.
  Some of these values are are writeable, while most are readable.
  Additionally, the collection for a given instance is made up of combining
  the properties from the different classes from which the instance is derived.
- One can discover all this information using the function 
-\emph on 
+ One can discover all this information using the function
+\emph on
 gObjectGetPropInfo()
-\emph default 
+\emph default
 .
 \layout LyX-Code
 
@@ -811,48 +811,48 @@ Timers & Idle Tasks
 
 The RGtk2 binding to the GLib library allows one to interact with the core
  event loop (
-\emph on 
+\emph on
 GMainLoop
-\emph default 
+\emph default
 ) that drives GTK.
- 
-\emph on 
+
+\emph on
 gTimeoutAdd()
-\emph default 
+\emph default
  provides a convenient way to register S functions to be called after a
  specified interval of time.
- If the function returns 
-\emph on 
+ If the function returns
+\emph on
 T
-\emph default 
+\emph default
 , the task is rescheduled to run after the same interval.
- Alternatively, returning 
-\emph on 
+ Alternatively, returning
+\emph on
 F
-\emph default 
+\emph default
  discards the timer.
- One can programmatically remove the timer using 
-\emph on 
+ One can programmatically remove the timer using
+\emph on
 gSourceRemove()
-\emph default 
-, passing the value returned from 
-\emph on 
+\emph default
+, passing the value returned from
+\emph on
 gTimeoutAdd()
-\emph default 
+\emph default
 .
 \layout Standard
 
 By default, the function is called with no arguments.
  However, one can arrange to have it passed a value by specifying the object
- as the data argument in the call to 
-\emph on 
+ as the data argument in the call to
+\emph on
 gTimeoutAdd()
-\emph default 
+\emph default
 .
- This is similar to the data argument for 
-\emph on 
+ This is similar to the data argument for
+\emph on
 gSignalConnect()
-\emph default 
+\emph default
 .
 \layout Standard
 
@@ -860,15 +860,15 @@ Idle tasks are run when there are no other events to process in the GLib
  event queue.
  These can be used to perform non-urgent background tasks.
  The interface is very similar to timeout functions.
- One registers an idle task with 
-\emph on 
+ One registers an idle task with
+\emph on
 gIdleAdd()
-\emph default 
+\emph default
  and this returns an identifier for the tasks.
- One can remove the task using 
-\emph on 
+ One can remove the task using
+\emph on
 gSourceRemove()
-\emph default 
+\emph default
  (the same as with timers).
 \layout Subsection
 
@@ -884,11 +884,11 @@ ity, when allowed, is very rarely required).
 
 obj[[
 \begin_inset Quotes eld
-\end_inset 
+\end_inset
 
 fieldName
 \begin_inset Quotes erd
-\end_inset 
+\end_inset
 
 ]]
 \layout Subsection
@@ -904,13 +904,13 @@ Conversion of primitive types between R and the libraries is fairly simple.
  First, a function could be added that serves as a constructor for the structure.
  Unfortunately, this would break the strict adherence to the API, since
  a new function is introduced.
- Also, this solution violates the 
+ Also, this solution violates the
 \begin_inset Quotes eld
-\end_inset 
+\end_inset
 
 spirit
 \begin_inset Quotes erd
-\end_inset 
+\end_inset
 
  of the API's design.
  The simple structures are meant to be initialized and manipulated without
@@ -924,20 +924,20 @@ spirit
 
 For example, suppose a user wished to construct an instance of GdkColor,
  a structure describing an RGB color with fields red, green, and blue.
- The following code would yield the color red: 
-\emph on 
+ The following code would yield the color red:
+\emph on
 c(65535, 0, 0)
-\emph default 
+\emph default
 .
  Here the fields for red, green, blue must be specified in the same order
  as they occur in the C structure definition.
  If the user desires an alternative order or does not wish to specify all
  of the fields (they default to zero), then the list should be named according
  to the field names in the C structure.
- For example, red could be specified as 
-\emph on 
+ For example, red could be specified as
+\emph on
 c(red=65535)
-\emph default 
+\emph default
 .
 \layout Subsection
 
@@ -946,23 +946,23 @@ Special Constants
 
 Special constants like the GDK keycodes and GTK stock id's are available
  in RGtk2.
- For the GDK keycodes, the C 
-\emph on 
+ For the GDK keycodes, the C
+\emph on
 GDK_ESCAPE
-\emph default 
- becomes 
-\emph on 
+\emph default
+ becomes
+\emph on
 .gdkEscape
-\emph default 
+\emph default
  in R.
- For the stock id's, there is no difference between R and C, so 
-\emph on 
+ For the stock id's, there is no difference between R and C, so
+\emph on
 GTK_CLOSE
-\emph default 
- is 
-\emph on 
+\emph default
+ is
+\emph on
 GTK_CLOSE
-\emph default 
+\emph default
 .
  The inconsistency is due to my uncertainty as to which form is better.
 \layout Section

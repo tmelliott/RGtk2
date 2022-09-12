@@ -3,11 +3,11 @@
 \title{gdkDrawPixbuf}
 \description{Renders a rectangular portion of a pixbuf to a drawable.  The destination
 drawable must have a colormap. All windows have a colormap, however, pixmaps
-only have colormap by default if they were created with a non-\code{NULL} window 
-argument. Otherwise a colormap must be set on them with 
+only have colormap by default if they were created with a non-\code{NULL} window
+argument. Otherwise a colormap must be set on them with
 \code{\link{gdkDrawableSetColormap}}.}
-\usage{gdkDrawPixbuf(object, gc = NULL, pixbuf, src.x, src.y, dest.x, 
-    dest.y, width = -1, height = -1, dither = "GDK_RGB_DITHER_NORMAL", 
+\usage{gdkDrawPixbuf(object, gc = NULL, pixbuf, src.x, src.y, dest.x,
+    dest.y, width = -1, height = -1, dither = "GDK_RGB_DITHER_NORMAL",
     x.dither = 0, y.dither = 0)}
 \arguments{
 \item{\verb{object}}{Destination drawable.}
@@ -23,9 +23,9 @@ argument. Otherwise a colormap must be set on them with
 \item{\verb{x.dither}}{X offset for dither.}
 \item{\verb{y.dither}}{Y offset for dither.}
 }
-\details{On older X servers, rendering pixbufs with an alpha channel involves round 
+\details{On older X servers, rendering pixbufs with an alpha channel involves round
 trips to the X server, and may be somewhat slow.
-  
+
 If GDK is built with the Sun mediaLib library, the gdk_draw_pixbuf
 function is accelerated using mediaLib, which provides hardware
 acceleration on Intel, AMD, and Sparc chipsets.  If desired, mediaLib

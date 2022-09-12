@@ -129,9 +129,9 @@ contains. (See also: \code{\link{GtkVButtonBox}} and \code{\link{GtkHButtonBox}}
 \item{\verb{default-style}}{Default packing.}
 \item{\verb{spread}}{Buttons are evenly spread across the box.}
 \item{\verb{edge}}{Buttons are placed at the edges of the box.}
-\item{\verb{start}}{Buttons are grouped towards the start of the box, 
+\item{\verb{start}}{Buttons are grouped towards the start of the box,
   (on the left for a HBox, or the top for a VBox).}
-\item{\verb{end}}{Buttons are grouped towards the end of the box, 
+\item{\verb{end}}{Buttons are grouped towards the end of the box,
   (on the right for a HBox, or the bottom for a VBox).}
 }
 
@@ -503,7 +503,7 @@ Used to control what selections users are allowed to make.
   to be selected with \code{GTK_SELECTION_BROWSE}. What is really enforced is that
   the user can't deselect a currently selected element except by selecting
   another element.}
-\item{\verb{multiple}}{Any number of elements may be selected. 
+\item{\verb{multiple}}{Any number of elements may be selected.
    Clicks toggle the state of an item. Any number of elements may be selected.
    The Ctrl key may be used to enlarge the selection, and Shift key to select
    between the focus and the child pointed to. Some widgets may also allow

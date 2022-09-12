@@ -11,16 +11,16 @@ static const char *getFilenameForGInputStream(GFileInputStream *istream) {
   GFileInfo *info;
   const char *filename;
   GError *err = NULL;
-  
+
   info = g_file_input_stream_query_info(G_FILE_INPUT_STREAM(istream),
                                         G_FILE_ATTRIBUTE_STANDARD_DISPLAY_NAME,
                                         NULL, &err);
   if (err != NULL) {
     error("Failed to get file name for GInputStream: %s", err->message);
   }
-  
+
   filename = g_file_info_get_display_name(info);
-  
+
   g_object_unref(G_OBJECT(info));
   return filename;
 }
@@ -29,16 +29,16 @@ static const char *getFilenameForGOutputStream(GFileOutputStream *ostream) {
   GFileInfo *info;
   const char *filename;
   GError *err = NULL;
-  
+
   info = g_file_output_stream_query_info(G_FILE_OUTPUT_STREAM(ostream),
                                          G_FILE_ATTRIBUTE_STANDARD_DISPLAY_NAME,
                                          NULL, &err);
   if (err != NULL) {
     error("Failed to get file name for GOutputStream: %s", err->message);
   }
-  
+
   filename = g_file_info_get_display_name(info);
-  
+
   g_object_unref(G_OBJECT(info));
   return filename;
 }
@@ -47,16 +47,16 @@ static const char *getFilenameForGIOStream(GFileIOStream *iostream) {
   GFileInfo *info;
   const char *filename;
   GError *err = NULL;
-  
+
   info = g_file_io_stream_query_info(G_FILE_IO_STREAM(iostream),
                                      G_FILE_ATTRIBUTE_STANDARD_DISPLAY_NAME,
                                      NULL, &err);
   if (err != NULL) {
     error("Failed to get file name for GIOStream: %s", err->message);
   }
-  
+
   filename = g_file_info_get_display_name(info);
-  
+
   g_object_unref(G_OBJECT(info));
   return filename;
 }
@@ -95,13 +95,13 @@ static size_t ginput_read(GInputStream *istream, void *ptr, size_t size,
                           size_t nitems, Rboolean blocking) {
   GError *err = NULL;
   gssize numread;
-  
+
   if (blocking) {
     g_input_stream_read_all(istream, ptr, size*nitems, &numread, NULL, &err);
   } else {
     numread = g_input_stream_read(istream, ptr, size*nitems, NULL, &err);
   }
-  
+
   if (err != NULL) {
     error("Failed to read from GInputStream: %s", err->message);
   }
@@ -133,7 +133,7 @@ static int ginput_fgetc_internal(GInputStream *istream) {
   } else {
     numread = g_input_stream_read(istream, &c, 1, NULL, &err);
   }
-  
+
   if (err != NULL) {
     error("Failed to read byte from GInputStream: %s", err->message);
   }
@@ -160,7 +160,7 @@ static double gseekable_seek(GSeekable *seekable, double where, int origin,
   goffset pos;
 
   pos = g_seekable_tell(seekable);
-  
+
   switch(origin) {
   case 2: type = G_SEEK_CUR; break;
   case 3: type = G_SEEK_END;
@@ -168,7 +168,7 @@ static double gseekable_seek(GSeekable *seekable, double where, int origin,
   }
 
   if(ISNA(where)) return (double) pos;
-  
+
   g_seekable_seek(seekable, where, type, NULL, &err);
 
   if (err != NULL) {
@@ -195,9 +195,9 @@ static double R_gio_seek(Rconnection con, double where, int origin, int rw) {
 
 static void gseekable_truncate(GSeekable *seekable) {
   GError *err = NULL;
-  
+
   g_seekable_truncate(seekable, 0, NULL, &err);
-  
+
   if (err != NULL) {
     error("Failed to truncate GOutputStream: %s", err->message);
   }
@@ -215,7 +215,7 @@ static void R_gio_truncate(Rconnection con) {
 
 static int goutput_fflush(GOutputStream *ostream) {
   GError *err = NULL;
-  
+
   gboolean success = g_output_stream_flush(ostream, NULL, &err);
 
   if (err != NULL) {
@@ -236,18 +236,18 @@ static size_t goutput_write(GOutputStream *ostream, const void *ptr,
                             size_t size, size_t nitems, Rboolean blocking) {
   GError *err = NULL;
   gsize numout;
-  
+
   if (blocking) {
     g_output_stream_write_all(ostream, ptr, size * nitems, &numout, NULL, &err);
   } else {
     numout = g_output_stream_write(ostream, ptr, size * nitems, NULL, &err);
   }
-  
+
   if (err != NULL) {
     error("Failed to write to GOutputStream: %s", err->message);
   }
-  
-  return numout / size;  
+
+  return numout / size;
 }
 
 static size_t R_goutput_write(const void *ptr, size_t size, size_t nitems,
@@ -274,7 +274,7 @@ static void init_gstream(Rconnection con, GObject *stream, gboolean binary,
   con->canread = G_IS_INPUT_STREAM(stream) || G_IS_IO_STREAM(stream);
   con->text = !binary;
   con->blocking = blocking;
-  con->destroy = R_gstream_destroy;  
+  con->destroy = R_gstream_destroy;
 }
 
 SEXP R_giocon_GInputStream(SEXP s_istream, SEXP s_binary, SEXP s_blocking) {
@@ -284,11 +284,11 @@ SEXP R_giocon_GInputStream(SEXP s_istream, SEXP s_binary, SEXP s_blocking) {
   gboolean blocking = asLogical(s_blocking);
   Rconnection con;
   const char *desc = "<GInputStream>";
-  
+
   if (G_IS_FILE_INPUT_STREAM(istream)) {
     desc = getFilenameForGInputStream(G_FILE_INPUT_STREAM(istream));
   }
-  
+
   SEXP rc = R_new_custom_connection(desc, mode, "GInputStreamConnection", &con);
 
   init_gstream(con, G_OBJECT(istream), binary, blocking);
@@ -307,11 +307,11 @@ SEXP R_giocon_GOutputStream(SEXP s_ostream, SEXP s_binary, SEXP s_blocking) {
   gboolean blocking = asLogical(s_blocking);
   Rconnection con;
   const char *desc = "<GOutputStream>";
-  
+
   if (G_IS_FILE_OUTPUT_STREAM(ostream)) {
     desc = getFilenameForGOutputStream(G_FILE_OUTPUT_STREAM(ostream));
   }
-  
+
   SEXP rc = R_new_custom_connection(desc, mode, "GOutputStreamConnection", &con);
 
   init_gstream(con, G_OBJECT(ostream), binary, blocking);
@@ -322,8 +322,8 @@ SEXP R_giocon_GOutputStream(SEXP s_ostream, SEXP s_binary, SEXP s_blocking) {
   }
   con->fflush = R_goutput_fflush;
   con->write = R_goutput_write;
-  
-  return rc;  
+
+  return rc;
 }
 
 SEXP R_giocon_GIOStream(SEXP s_iostream, SEXP s_binary, SEXP s_blocking) {
@@ -333,11 +333,11 @@ SEXP R_giocon_GIOStream(SEXP s_iostream, SEXP s_binary, SEXP s_blocking) {
   gboolean blocking = asLogical(s_blocking);
   Rconnection con;
   const char *desc = "<GIOStream>";
-  
+
   if (G_IS_FILE_IO_STREAM(iostream)) {
     desc = getFilenameForGIOStream(G_FILE_IO_STREAM(iostream));
   }
-  
+
   SEXP rc = R_new_custom_connection(desc, mode, "GIOStreamConnection", &con);
 
   init_gstream(con, G_OBJECT(iostream), binary, blocking);
@@ -353,6 +353,6 @@ SEXP R_giocon_GIOStream(SEXP s_iostream, SEXP s_binary, SEXP s_blocking) {
   }
   con->fflush = R_gio_fflush;
   con->write = R_gio_write;
-  
+
   return rc;
 }

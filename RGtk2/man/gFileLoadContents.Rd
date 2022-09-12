@@ -1,7 +1,7 @@
 \alias{gFileLoadContents}
 \name{gFileLoadContents}
 \title{gFileLoadContents}
-\description{Loads the content of the file into memory. The data is always 
+\description{Loads the content of the file into memory. The data is always
 zero-terminated, but this is not included in the resultant \code{length}.}
 \usage{gFileLoadContents(object, cancellable = NULL, .errwarn = TRUE)}
 \arguments{

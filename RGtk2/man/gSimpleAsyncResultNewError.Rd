@@ -2,7 +2,7 @@
 \name{gSimpleAsyncResultNewError}
 \title{gSimpleAsyncResultNewError}
 \description{Creates a new \code{\link{GSimpleAsyncResult}} with a set error.}
-\usage{gSimpleAsyncResultNewError(source.object, callback, user.data, 
+\usage{gSimpleAsyncResultNewError(source.object, callback, user.data,
     domain, code, format, ...)}
 \arguments{
 \item{\verb{source.object}}{a \code{\link{GObject}}, or \code{NULL}.}

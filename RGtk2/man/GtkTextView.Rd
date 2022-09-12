@@ -130,7 +130,7 @@ multiple views.
 The ::backspace signal is a
 keybinding signal
 which gets emitted when the user asks for it.
-  
+
 The default bindings for this signal are
 Backspace and Shift-Backspace.
 
@@ -145,7 +145,7 @@ Backspace and Shift-Backspace.
 The ::copy-clipboard signal is a
 keybinding signal
 which gets emitted to copy the selection to the clipboard.
-  
+
 The default bindings for this signal are
 Ctrl-c and Ctrl-Insert.
 
@@ -160,7 +160,7 @@ Ctrl-c and Ctrl-Insert.
 The ::cut-clipboard signal is a
 keybinding signal
 which gets emitted to cut the selection to the clipboard.
-  
+
 The default bindings for this signal are
 Ctrl-x and Shift-Delete.
 
@@ -175,11 +175,11 @@ Ctrl-x and Shift-Delete.
 The ::delete-from-cursor signal is a
 keybinding signal
 which gets emitted when the user initiates a text deletion.
-  
+
 If the \code{type} is \code{GTK_DELETE_CHARS}, GTK+ deletes the selection
 if there is one, otherwise it deletes the requested number
 of characters.
-  
+
 The default bindings for this signal are
 Delete for deleting a character, Ctrl-Delete for
 deleting a word and Ctrl-Backspace for deleting a word
@@ -199,7 +199,7 @@ The ::insert-at-cursor signal is a
 keybinding signal
 which gets emitted when the user initiates the insertion of a
 fixed string at the cursor.
-  
+
 This signal has no default bindings.
 
 \describe{
@@ -216,21 +216,21 @@ keybinding signal
 which gets emitted when the user initiates a cursor movement.
 If the cursor is not visible in \code{text.view}, this signal causes
 the viewport to be moved instead.
-  
+
 Applications should not connect to it, but may emit it with
 \code{gSignalEmitByName()} if they need to control the cursor
 programmatically.
-  
+
 The default bindings for this signal come in two variants,
 the variant with the Shift modifier extends the selection,
 the variant without the Shift modifer does not.
 There are too many key combinations to list them all here.
 \itemize{
-\item 
-\item 
-\item 
-\item 
-\item 
+\item
+\item
+\item
+\item
+\item
 }
 
 \describe{
@@ -249,7 +249,7 @@ keybinding signal
 which can be bound to key combinations to allow the user
 to move the viewport, i.e. change what part of the text view
 is visible in a containing scrolled window.
-  
+
 There are no default bindings for this signal.
 
 \describe{
@@ -266,7 +266,7 @@ The ::page-horizontally signal is a
 keybinding signal
 which can be bound to key combinations to allow the user
 to initiate horizontal cursor movement by pages.
-  
+
 This signal should not be used anymore, instead use the
 \verb{"move-cursor"} signal with the \verb{GTK_MOVEMENT_HORIZONTAL_PAGES}
 granularity.
@@ -285,7 +285,7 @@ The ::paste-clipboard signal is a
 keybinding signal
 which gets emitted to paste the contents of the clipboard
 into the text view.
-  
+
 The default bindings for this signal are
 Ctrl-v and Shift-Insert.
 
@@ -299,7 +299,7 @@ Ctrl-v and Shift-Insert.
 \item{\code{populate-popup(entry, menu, user.data)}}{
 The ::populate-popup signal gets emitted before showing the
 context menu of the text view.
-  
+
 If you need to add items to the context menu, connect
 to this signal and append your menuitems to the \code{menu}.
 
@@ -315,7 +315,7 @@ to this signal and append your menuitems to the \code{menu}.
 If an input method is used, the typed text will not immediately
 be committed to the buffer. So if you are interested in the text,
 connect to this signal.
-  
+
 This signal is only emitted if the text at the given position
 is actually editable.
   Since 2.20
@@ -333,7 +333,7 @@ The ::select-all signal is a
 keybinding signal
 which gets emitted to select or unselect the complete
 contents of the text view.
-  
+
 The default bindings for this signal are Ctrl-a and Ctrl-/
 for selecting and Shift-Ctrl-a and Ctrl-\\ for unselecting.
 
@@ -351,7 +351,7 @@ keybinding signal
 which gets emitted when the user initiates setting the "anchor"
 mark. The "anchor" mark gets placed at the same position as the
 "insert" mark.
-  
+
 This signal has no default bindings.
 
 \describe{
@@ -378,7 +378,7 @@ of \code{\link{GtkScrollbar}} to the scroll directions of the \code{\link{GtkTex
 The ::toggle-cursor-visible signal is a
 keybinding signal
 which gets emitted to toggle the visibility of the cursor.
-  
+
 The default binding for this signal is F7.
 
 \describe{
@@ -392,7 +392,7 @@ The default binding for this signal is F7.
 The ::toggle-overwrite signal is a
 keybinding signal
 which gets emitted to toggle the overwrite mode of the text view.
-  
+
 The default bindings for this signal is Insert.
 
 \describe{
@@ -428,7 +428,7 @@ Whether the text can be modified by the user.  Default value: TRUE
 
 Which IM (input method) module should be used for this entry.
 See \code{\link{GtkIMContext}}.
-  
+
 Setting this to a non-\code{NULL} value overrides the
 system-wide IM module setting. See the GtkSettings
 \verb{"gtk-im-module"} property.

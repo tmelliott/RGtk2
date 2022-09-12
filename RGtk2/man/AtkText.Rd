@@ -59,7 +59,7 @@ The AtkText structure does not contain any fields.
 
 }
 \item{\verb{AtkTextRange}}{
-A structure used to describe a text range.  
+A structure used to describe a text range.
 \strong{\verb{AtkTextRange} is a \link{transparent-type}.}
 
 \describe{
@@ -71,7 +71,7 @@ A structure used to describe a text range.
 
 }
 \item{\verb{AtkTextRectangle}}{
-A structure used to store a rectangle used by AtkText.  
+A structure used to store a rectangle used by AtkText.
 \strong{\verb{AtkTextRectangle} is a \link{transparent-type}.}
 
 \describe{
@@ -83,14 +83,14 @@ A structure used to store a rectangle used by AtkText.
 
 }
 \item{\verb{AtkAttribute}}{
-A string name/value pair representing a text attribute.  
+A string name/value pair representing a text attribute.
 \strong{\verb{AtkAttribute} is a \link{transparent-type}.}
 
 \describe{
 \item{\code{name}}{[character]  The attribute name. Call \code{atkTextAttrGetName()}}
-\item{\code{value}}{[character]  the value of the attribute, represented as a string. 
+\item{\code{value}}{[character]  the value of the attribute, represented as a string.
 Call \code{atkTextAttrGetValue()} for those which are strings.
-For values which are numbers, the string representation of the number 
+For values which are numbers, the string representation of the number
 is in value.}
 }
 
@@ -98,25 +98,25 @@ is in value.}
 }}
 \section{Enums and Flags}{\describe{
 \item{\verb{AtkTextBoundary}}{
-Text boundary types used for specifying boundaries for regions of text  
+Text boundary types used for specifying boundaries for regions of text
 
 \describe{
-\item{\verb{char}}{ Boundary is the boundary between characters 
+\item{\verb{char}}{ Boundary is the boundary between characters
 (including non-printing characters)}
 \item{\verb{word-start}}{ Boundary is the start (i.e. first character) of a word. }
 \item{\verb{word-end}}{ Boundary is the end (i.e. last character) of a word.}
 \item{\verb{sentence-start}}{ Boundary is the first character in a sentence.}
-\item{\verb{sentence-end}}{ Boundary is the last (terminal) character in a sentence; 
+\item{\verb{sentence-end}}{ Boundary is the last (terminal) character in a sentence;
 in languages which use "sentence stop" punctuation such as English, the boundary is thus the
 '.', '?', or similar terminal punctuation character.}
-\item{\verb{line-start}}{ Boundary is the initial character of the content or a 
+\item{\verb{line-start}}{ Boundary is the initial character of the content or a
 character immediately following a newline, linefeed, or return character.}
 \item{\verb{line-end}}{ Boundary is the linefeed, or return character.}
 }
 
 }
 \item{\verb{AtkTextClipType}}{
-Describes the type of clipping required.  
+Describes the type of clipping required.
 
 \describe{
 \item{\verb{none}}{ No clipping to be done}
@@ -127,7 +127,7 @@ Describes the type of clipping required.
 
 }
 \item{\verb{AtkTextAttribute}}{
-Describes the text attributes supported  
+Describes the text attributes supported
 
 \describe{
 \item{\verb{invalid}}{ Invalid attribute}

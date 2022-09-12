@@ -50,14 +50,14 @@
 onto what are called 'drawables'. Drawables, as the name suggests, are things
 which support drawing onto them, and are either \code{\link{GdkWindow}} or \code{\link{GdkPixmap}}
 objects.
-  
+
 Many of the drawing operations take a \code{\link{GdkGC}} argument, which represents a
 graphics context. This \code{\link{GdkGC}} contains a number of drawing attributes such
 as foreground color, background color and line width, and is used to reduce
 the number of arguments needed for each drawing operation. See the
 Graphics Contexts section for
 more information.
-  
+
 Some of the drawing operations take Pango data structures like \code{\link{PangoContext}},
 \code{\link{PangoLayout}} or \code{\link{PangoLayoutLine}} as arguments. If you're using GTK+, the ususal
 way to obtain these structures is via \code{\link{gtkWidgetCreatePangoContext}} or

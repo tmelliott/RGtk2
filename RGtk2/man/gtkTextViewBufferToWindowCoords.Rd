@@ -10,7 +10,7 @@
 \item{\verb{buffer.x}}{buffer x coordinate}
 \item{\verb{buffer.y}}{buffer y coordinate}
 }
-\details{Note that you can't convert coordinates for a nonexisting window (see 
+\details{Note that you can't convert coordinates for a nonexisting window (see
 \code{\link{gtkTextViewSetBorderWindowSize}}).}
 \value{
 A list containing the following elements:

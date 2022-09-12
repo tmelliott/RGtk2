@@ -9,7 +9,7 @@ Accelerators added through this function are not user changeable during
 runtime. If you want to support accelerators that can be changed by the
 user, use \code{\link{gtkAccelMapAddEntry}} and \code{\link{gtkWidgetSetAccelPath}} or
 \code{\link{gtkMenuItemSetAccelPath}} instead.}
-\usage{gtkWidgetAddAccelerator(object, accel.signal, accel.group, accel.key, 
+\usage{gtkWidgetAddAccelerator(object, accel.signal, accel.group, accel.key,
     accel.mods, accel.flags)}
 \arguments{
 \item{\verb{object}}{widget to install an accelerator on}

@@ -1,8 +1,8 @@
 \alias{gFileInfoGetAttributeInt64}
 \name{gFileInfoGetAttributeInt64}
 \title{gFileInfoGetAttributeInt64}
-\description{Gets a signed 64-bit integer contained within the attribute. If the 
-attribute does not contain an signed 64-bit integer, or is invalid, 
+\description{Gets a signed 64-bit integer contained within the attribute. If the
+attribute does not contain an signed 64-bit integer, or is invalid,
 0 will be returned.}
 \usage{gFileInfoGetAttributeInt64(object, attribute)}
 \arguments{

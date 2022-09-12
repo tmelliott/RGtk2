@@ -18,7 +18,7 @@ to installing default handlers for the widget's drag-and-drop signals
 for convenience. When passing \verb{GTK_DEST_DEFAULT_ALL} for instance it is
 sufficient to connect to the widget's \verb{"drag-data-received"}
 signal to get primitive, but consistent drag-and-drop support.
-  
+
 Things become more complicated when you try to preview the dragged data,
 as described in the documentation for \verb{"drag-motion"}. The default
 behaviors described by \code{flags} make some assumptions, that can conflict
@@ -27,7 +27,7 @@ invokations of \code{\link{gdkDragStatus}} in the context of \verb{"drag-motion"
 and invokations of \code{\link{gtkDragFinish}} in \verb{"drag-data-received"}.
 Especially the later is dramatic, when your own \verb{"drag-motion"}
 handler calls \code{\link{gtkDragGetData}} to inspect the dragged data.
-  
+
 There's no way to set a default action here, you can use the
 \verb{"drag-motion"} callback for that. Here's an example which selects
 the action to use depending on whether the control key is pressed or not:

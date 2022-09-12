@@ -1,9 +1,9 @@
 \alias{gtkActionSetSensitive}
 \name{gtkActionSetSensitive}
 \title{gtkActionSetSensitive}
-\description{Sets the ::sensitive property of the action to \code{sensitive}. Note that 
-this doesn't necessarily mean effective sensitivity. See 
-\code{\link{gtkActionIsSensitive}} 
+\description{Sets the ::sensitive property of the action to \code{sensitive}. Note that
+this doesn't necessarily mean effective sensitivity. See
+\code{\link{gtkActionIsSensitive}}
 for that.}
 \usage{gtkActionSetSensitive(object, sensitive)}
 \arguments{

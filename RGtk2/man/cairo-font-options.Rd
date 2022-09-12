@@ -30,20 +30,20 @@ output on a particular display.}
 \section{Structures}{\describe{\item{\verb{CairoFontOptions}}{
 An opaque structure holding all options that are used when
 rendering fonts.
-  
+
 Individual features of a \code{\link{CairoFontOptions}} can be set or
 accessed using functions named
 cairo_font_options_set_\emph{feature_name} and
 cairo_font_options_get_\emph{feature_name}, like
 \code{\link{cairoFontOptionsSetAntialias}} and
 \code{\link{cairoFontOptionsGetAntialias}}.
-  
+
 New features may be added to a \code{\link{CairoFontOptions}} in the
 future.  For this reason, \code{\link{cairoFontOptionsCopy}},
 \code{\link{cairoFontOptionsEqual}}, \code{\link{cairoFontOptionsMerge}}, and
 \code{cairoFontOptionsHash()} should be used to copy, check
 for equality, merge, or compute a hash value of
-\code{\link{CairoFontOptions}} objects.  
+\code{\link{CairoFontOptions}} objects.
 
 }}}
 \section{Convenient Construction}{\code{cairoFontOptions} is the equivalent of \code{\link{cairoFontOptionsCreate}}.}
@@ -51,7 +51,7 @@ for equality, merge, or compute a hash value of
 \item{\verb{CairoSubpixelOrder}}{
 The subpixel order specifies the order of color elements within
 each pixel on the display device when rendering with an
-antialiasing mode of \code{CAIRO_ANTIALIAS_SUBPIXEL}.  
+antialiasing mode of \code{CAIRO_ANTIALIAS_SUBPIXEL}.
 
 \describe{
 \item{\verb{default}}{ Use the default subpixel order for
@@ -74,8 +74,8 @@ to improve the appearance of the result. Since hinting outlines
 involves distorting them, it also reduces the faithfulness
 to the original outline shapes. Not all of the outline hinting
 styles are supported by all font backends.
-  
-New entries may be added in future versions.  
+
+New entries may be added in future versions.
 
 \describe{
 \item{\verb{default}}{ Use the default hint style for
@@ -96,7 +96,7 @@ Specifies whether to hint font metrics; hinting font metrics
 means quantizing them so that they are integer values in
 device space. Doing this improves the consistency of
 letter and line spacing, however it also means that text
-will be laid out differently at different zoom factors.  
+will be laid out differently at different zoom factors.
 
 \describe{
 \item{\verb{default}}{ Hint metrics in the default

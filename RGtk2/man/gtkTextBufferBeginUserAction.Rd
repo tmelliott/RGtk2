@@ -8,9 +8,9 @@ user-visible operation. The operations between
 \code{\link{gtkTextBufferEndUserAction}} can then be grouped when creating
 an undo stack. \code{\link{GtkTextBuffer}} maintains a count of calls to
 \code{\link{gtkTextBufferBeginUserAction}} that have not been closed with
-a call to \code{\link{gtkTextBufferEndUserAction}}, and emits the 
-"begin-user-action" and "end-user-action" signals only for the 
-outermost pair of calls. This allows you to build user actions 
+a call to \code{\link{gtkTextBufferEndUserAction}}, and emits the
+"begin-user-action" and "end-user-action" signals only for the
+outermost pair of calls. This allows you to build user actions
 from other user actions.}
 \usage{gtkTextBufferBeginUserAction(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkTextBuffer}}}}

@@ -32,10 +32,10 @@ and upper bound, together with step and page increments, and a page size.
 It is used within several GTK+ widgets, including
 \code{\link{GtkSpinButton}}, \code{\link{GtkViewport}}, and \code{\link{GtkRange}} (which is a base class for
 \code{\link{GtkHScrollbar}}, \code{\link{GtkVScrollbar}}, \code{\link{GtkHScale}}, and \code{\link{GtkVScale}}).
-  
+
 The \code{\link{GtkAdjustment}} object does not update the value itself. Instead
 it is left up to the owner of the \code{\link{GtkAdjustment}} to control the value.
-  
+
 The owner of the \code{\link{GtkAdjustment}} typically calls the
 \code{\link{gtkAdjustmentValueChanged}} and \code{\link{gtkAdjustmentChanged}} functions
 after changing the value and its bounds. This results in the emission of the

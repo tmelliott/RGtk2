@@ -31,7 +31,7 @@ the dialog, and one for saving the changes.
 No actions are bound to these by default.
 The changes that the user makes take effect
 immediately.
-  
+
 As of GTK+ 2.20, \code{\link{GtkInputDialog}} has been deprecated since it is too specialized.}
 \section{Structures}{\describe{\item{\verb{GtkInputDialog}}{
 \strong{WARNING: \code{GtkInputDialog} is deprecated and should not be used in newly-written code.}

@@ -10,7 +10,7 @@
 \details{Note that values will be restricted by
 \code{upper - page-size} if the page-size
 property is nonzero.
-  
+
 See \code{\link{gtkAdjustmentSetLower}} about how to compress multiple
 emissions of the "changed" signal when setting multiple adjustment
 properties.

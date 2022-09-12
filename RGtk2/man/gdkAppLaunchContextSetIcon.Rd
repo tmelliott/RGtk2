@@ -10,7 +10,7 @@ context.}
 }
 \details{Window Managers can use this information when displaying startup
 notification.
-  
+
 See also \code{\link{gdkAppLaunchContextSetIconName}}.
   Since 2.14}
 \author{Derived by RGtkGen from GTK+ documentation}

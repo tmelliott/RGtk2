@@ -34,7 +34,7 @@ destinations can be created.}
 \section{Structures}{\describe{\item{\verb{PangoRenderer}}{
 \code{\link{PangoRenderer}} is a base class for objects that are used to
 render Pango objects such as \code{\link{PangoGlyphString}} and
-\code{\link{PangoLayout}}.  
+\code{\link{PangoLayout}}.
   Since 1.8
 
 \describe{\item{\code{matrix}}{[\code{\link{PangoMatrix}}]  the current transformation matrix for the Renderer; may
@@ -43,7 +43,7 @@ render Pango objects such as \code{\link{PangoGlyphString}} and
 }}}
 \section{Enums and Flags}{\describe{\item{\verb{PangoRenderPart}}{
 \code{\link{PangoRenderPart}} defines different items to render for such
-purposes as setting colors.  
+purposes as setting colors.
   Since 1.8
 
 \describe{

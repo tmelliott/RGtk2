@@ -5,7 +5,7 @@
 window in the rectangle specified by \code{src.x}, \code{src.y},
 \code{width} and \code{height} is also drawn into \code{drawable} at
 \code{dest.x}, \code{dest.y}.}
-\usage{gdkWindowRedirectToDrawable(object, drawable, src.x, src.y, dest.x, 
+\usage{gdkWindowRedirectToDrawable(object, drawable, src.x, src.y, dest.x,
     dest.y, width, height)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GdkWindow}}}
@@ -20,7 +20,7 @@ window in the rectangle specified by \code{src.x}, \code{src.y},
 \details{Only drawing between \code{\link{gdkWindowBeginPaintRegion}} or
 \code{\link{gdkWindowBeginPaintRect}} and \code{\link{gdkWindowEndPaint}} is
 redirected.
-  
+
 Redirection is active until \code{\link{gdkWindowRemoveRedirection}}
 is called.
   Since 2.14}

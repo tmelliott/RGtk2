@@ -38,11 +38,11 @@ It can be used for authenticating mountable operations, such as loop
 mounting files, hard drive partitions or server locations. It can
 also be used to ask the user questions or show a list of applications
 preventing unmount or eject operations from completing.
-  
+
 Note that \code{\link{GMountOperation}} is used for more than just \code{\link{GMount}}
 objects – for example it is also used in \code{\link{gDriveStart}} and
 \code{\link{gDriveStop}}.
-  
+
 Users should instantiate a subclass of this that implements all the
 various callbacks to show the required dialogs, such as
 \code{\link{GtkMountOperation}}. If no user interaction is desired (for example
@@ -100,7 +100,7 @@ information is send by the mounting operation.
 \item{\code{aborted(user.data)}}{
 Emitted by the backend when e.g. a device becomes unavailable
 while a mount operation is in progress.
-  
+
 Implementations of GMountOperation should handle this signal
 by dismissing open password dialogs.
   Since 2.20
@@ -111,7 +111,7 @@ by dismissing open password dialogs.
 }
 \item{\code{ask-password(op, message, default.user, default.domain, flags, user.data)}}{
 Emitted when a mount operation asks the user for a password.
-  
+
 If the message contains a line break, the first line should be
 presented as a heading. For example, it may be used as the
 primary text in a \code{\link{GtkMessageDialog}}.
@@ -130,7 +130,7 @@ primary text in a \code{\link{GtkMessageDialog}}.
 \item{\code{ask-question(op, message, choices, user.data)}}{
 Emitted when asking the user a question and gives a list of
 choices for the user to choose from.
-  
+
 If the message contains a line break, the first line should be
 presented as a heading. For example, it may be used as the
 primary text in a \code{\link{GtkMessageDialog}}.
@@ -158,13 +158,13 @@ Emitted when the user has replied to the mount operation.
 \item{\code{show-processes(op, message, processes, choices, user.data)}}{
 Emitted when one or more processes are blocking an operation
 e.g. unmounting/ejecting a \code{\link{GMount}} or stopping a \code{\link{GDrive}}.
-  
+
 Note that this signal may be emitted several times to update the
 list of blocking processes as processes close files. The
 application should only respond with \code{\link{gMountOperationReply}} to
 the latest signal (setting \verb{"choice"} to the choice
 the user made).
-  
+
 If the message contains a line break, the first line should be
 presented as a heading. For example, it may be used as the
 primary text in a \code{\link{GtkMessageDialog}}.

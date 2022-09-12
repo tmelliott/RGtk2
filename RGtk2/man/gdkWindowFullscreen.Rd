@@ -7,7 +7,7 @@ or task bars.}
 \usage{gdkWindowFullscreen(object)}
 \arguments{\item{\verb{object}}{a toplevel \code{\link{GdkWindow}}}}
 \details{If the window was already fullscreen, then this function does nothing.
-  
+
 On X11, asks the window manager to put \code{window} in a fullscreen
 state, if the window manager supports this operation. Not all
 window managers support this, and some deliberately ignore it or

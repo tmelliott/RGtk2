@@ -22,5 +22,3 @@ gtkWidgetUnsetFlags(wid, flags)
 \author{Michael Lawrence}
 \keyword{interface}
 \keyword{internal}
-
-

@@ -109,7 +109,7 @@ S_gdk_drawable_class_create_gc(USER_OBJECT_ s_object_class, USER_OBJECT_ s_objec
   GdkDrawable* object = GDK_DRAWABLE(getPtrValue(s_object));
   GdkGCValuesMask mask;
   GdkGCValues* values = asCGdkGCValuesWithMask(s_values, &mask);
-  
+
   GdkGC* ans;
   USER_OBJECT_ _result = NULL_USER_OBJECT;
 
@@ -126,7 +126,7 @@ S_gdk_gcclass_set_values(USER_OBJECT_ s_object_class, USER_OBJECT_ s_object, USE
   GdkGC* object = GDK_GC(getPtrValue(s_object));
   GdkGCValuesMask mask;
   GdkGCValues* values = asCGdkGCValuesWithMask(s_values, &mask);
-  
+
   USER_OBJECT_ _result = NULL_USER_OBJECT;
 
   object_class->set_values(object, values, mask);
@@ -272,7 +272,7 @@ S_gdk_window_new(USER_OBJECT_ s_parent, USER_OBJECT_ s_attributes)
         GdkWindow* parent = GDK_WINDOW(getPtrValue(s_parent));
 		GdkWindowAttributesType attributes_mask;
         GdkWindowAttr* attributes = asCGdkWindowAttr(s_attributes, &attributes_mask);
-        
+
         GdkWindow* ans;
         USER_OBJECT_ _result = NULL_USER_OBJECT;
 
@@ -303,7 +303,7 @@ S_gdk_pixbuf_get_from_drawable(USER_OBJECT_ s_dest, USER_OBJECT_ s_src, USER_OBJ
         USER_OBJECT_ _result = NULL_USER_OBJECT;
 
         ans = gdk_pixbuf_get_from_drawable(dest, src, cmap, src_x, src_y, dest_x, dest_y, width, height);
-        
+
         if (!dest)
           _result = toRPointerWithFinalizer(ans, "GdkPixbuf", (RPointerFinalizer)g_object_unref);
         else _result = toRPointerWithRef(ans, "GdkPixbuf");
@@ -441,7 +441,7 @@ S_gdk_rgb_find_color(USER_OBJECT_ s_colormap, USER_OBJECT_ s_color)
         gdk_rgb_find_color(colormap, color);
 
 		_result = asRGdkColor(color);
-		
+
         return(_result);
 }
 
@@ -509,14 +509,14 @@ S_gdk_pixbuf_save_to_bufferv(USER_OBJECT_ s_object, USER_OBJECT_ s_type, USER_OB
         gdk_pixbuf_save_to_bufferv(object, &buffer, &buffer_size, type, option_keys, option_values, &error);
 
 		PROTECT(_result = allocVector(RAWSXP, buffer_size));
-		
+
 		for (i = 0; i < buffer_size; i++)
 			RAW(_result)[i] = (Rbyte)buffer[i];
-		
+
 		_result = retByVal(NULL_USER_OBJECT, "buffer", _result, "buffer.size", PROTECT(asRNumeric(buffer_size)), "error", PROTECT(asRGError(error)), NULL);
         CLEANUP(g_error_free, error);
 		CLEANUP(g_free, buffer);
-		
+
 		UNPROTECT(3);
         return(_result);
 }
@@ -534,4 +534,3 @@ S_gdk_pixbuf_error_quark()
 
 	return(_result);
 }
-

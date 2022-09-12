@@ -4,9 +4,9 @@
 \description{Begins a window resize operation (for a toplevel window).
 You might use this function to implement a "window resize grip," for
 example; in fact \code{\link{GtkStatusbar}} uses it. The function works best
-with window managers that support the Extended Window Manager Hints (\url{http://www.freedesktop.org/Standards/wm-spec}), but has a 
+with window managers that support the Extended Window Manager Hints (\url{http://www.freedesktop.org/Standards/wm-spec}), but has a
 fallback implementation for other window managers.}
-\usage{gdkWindowBeginResizeDrag(object, edge, button, root.x, root.y, 
+\usage{gdkWindowBeginResizeDrag(object, edge, button, root.x, root.y,
     timestamp)}
 \arguments{
 \item{\verb{object}}{a toplevel \code{\link{GdkWindow}}}

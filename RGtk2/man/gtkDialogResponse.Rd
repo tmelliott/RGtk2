@@ -1,7 +1,7 @@
 \alias{gtkDialogResponse}
 \name{gtkDialogResponse}
 \title{gtkDialogResponse}
-\description{Emits the \code{\link{gtkDialogResponse}} signal with the given response ID. 
+\description{Emits the \code{\link{gtkDialogResponse}} signal with the given response ID.
 Used to indicate that the user has responded to the dialog in some way;
 typically either you or \code{\link{gtkDialogRun}} will be monitoring the
 ::response signal and take appropriate action.}

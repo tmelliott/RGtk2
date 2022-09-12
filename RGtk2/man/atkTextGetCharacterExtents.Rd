@@ -1,7 +1,7 @@
 \alias{atkTextGetCharacterExtents}
 \name{atkTextGetCharacterExtents}
 \title{atkTextGetCharacterExtents}
-\description{Get the bounding box containing the glyph representing the character at 
+\description{Get the bounding box containing the glyph representing the character at
     a particular text offset.}
 \usage{atkTextGetCharacterExtents(object, offset, coords)}
 \arguments{

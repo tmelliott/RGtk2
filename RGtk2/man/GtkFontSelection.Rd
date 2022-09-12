@@ -34,12 +34,12 @@
 allowing the user to select a font.
 It is used in the \code{\link{GtkFontSelectionDialog}} widget to provide a dialog box for
 selecting fonts.
-  
+
 To set the font which is initially selected, use
 \code{\link{gtkFontSelectionSetFontName}}.
-  
+
 To get the selected font use \code{\link{gtkFontSelectionGetFontName}}.
-  
+
 To change the text which is shown in the preview area, use
 \code{\link{gtkFontSelectionSetPreviewText}}.}
 \section{Structures}{\describe{\item{\verb{GtkFontSelection}}{

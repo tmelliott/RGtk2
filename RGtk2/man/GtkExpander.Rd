@@ -31,7 +31,7 @@
  AtkImplementorIface and  \code{\link{GtkBuildable}}.}
 \section{Detailed Description}{A \code{\link{GtkExpander}} allows the user to hide or show its child by clicking
 on an expander triangle similar to the triangles used in a \code{\link{GtkTreeView}}.
-  
+
 Normally you use an expander as you would use any other descendant
 of \code{\link{GtkBin}}; you create the child widget and use \code{\link{gtkContainerAdd}}
 to add it to the expander. When the expander is toggled, it will take
@@ -69,7 +69,7 @@ supports placing a child in the label position by specifying
 "label" as the "type" attribute of a <child> element.
 A normal content child can be specified without specifying
 a <child> type attribute.
-  
+
  \emph{A UI definition fragment with GtkExpander}
 \preformatted{
 expander <- gtkExpanderNewWithMnemonic("_More Options")

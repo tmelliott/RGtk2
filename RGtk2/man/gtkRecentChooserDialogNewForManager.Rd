@@ -2,7 +2,7 @@
 \name{gtkRecentChooserDialogNewForManager}
 \title{gtkRecentChooserDialogNewForManager}
 \description{Creates a new \code{\link{GtkRecentChooserDialog}} with a specified recent manager.}
-\usage{gtkRecentChooserDialogNewForManager(title = NULL, parent = NULL, 
+\usage{gtkRecentChooserDialogNewForManager(title = NULL, parent = NULL,
     manager, ..., show = TRUE)}
 \arguments{
 \item{\verb{title}}{Title of the dialog, or \code{NULL}. \emph{[  \acronym{allow-none}  ]}}

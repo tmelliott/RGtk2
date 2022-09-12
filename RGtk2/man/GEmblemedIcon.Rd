@@ -16,8 +16,8 @@
  \code{\link{GIcon}}.}
 \section{Detailed Description}{\code{\link{GEmblemedIcon}} is an implementation of \code{\link{GIcon}} that supports
 adding an emblem to an icon. Adding multiple emblems to an
-icon is ensured via \code{\link{gEmblemedIconAddEmblem}}. 
-  
+icon is ensured via \code{\link{gEmblemedIconAddEmblem}}.
+
 Note that \code{\link{GEmblemedIcon}} allows no control over the position
 of the emblems. See also \code{\link{GEmblem}} for more information.}
 \section{Structures}{\describe{\item{\verb{GEmblemedIcon}}{

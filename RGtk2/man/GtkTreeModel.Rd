@@ -77,7 +77,7 @@ the \code{\link{GtkTreeView}} widget.  It is an abstract interface, and is desig
 to be usable with any appropriate data structure.  The programmer just
 has to implement this interface on their own data type for it to be
 viewable by a \code{\link{GtkTreeView}} widget.
-  
+
 The model is represented as a hierarchical tree of strongly-typed,
 columned data.  In other words, the model can be seen as a tree where
 every node has different values depending on which column is being
@@ -87,7 +87,7 @@ The types are homogeneous per column across all nodes.  It is important
 to note that this interface only provides a way of examining a model and
 observing changes.  The implementation of each individual model decides
 how and if changes are made.
-  
+
 In order to make life simpler for programmers who do not need to write
 their own specialized model, two generic models are provided -- the
 \code{\link{GtkTreeStore}} and the \code{\link{GtkListStore}}.  To use these, the developer simply
@@ -95,14 +95,14 @@ pushes data into these models as necessary.  These models provide the
 data structure as well as all appropriate tree interfaces.  As a result,
 implementing drag and drop, sorting, and storing data is trivial.  For
 the vast majority of trees and lists, these two models are sufficient.
-  
+
 Models are accessed on a node/column level of granularity.  One can
 query for the value of a model at a certain node and a certain column
 on that node.  There are two structures used to reference a particular
 node in a model.  They are the \code{\link{GtkTreePath}} and the \code{\link{GtkTreeIter}}
 \strong{PLEASE NOTE:} Here, \emph{iter} is short for \dQuote{iterator}
 Most of the interface consists of operations on a \code{\link{GtkTreeIter}}.
-  
+
 A path is essentially a potential node.  It is a location on a model
 that may or may not actually correspond to a node on a specific model.
 The \code{\link{GtkTreePath}} struct can be converted into either a list of
@@ -110,7 +110,7 @@ unsigned integers or a string.  The string form is a list of numbers
 separated by a colon.  Each number refers to the offset at that level.
 Thus, the path \dQuote{0} refers to the root node and the path
 \dQuote{2:4} refers to the fifth child of the third node.
-  
+
 By contrast, a \code{\link{GtkTreeIter}} is a reference to a specific node on a
 specific model.  It is a generic struct with an integer and three
 generic pointers.  These are filled in by the model in a model-specific
@@ -120,7 +120,7 @@ accessing a model and are similar to the iterators used by
 \code{\link{GtkTextBuffer}}.  They are generally statically allocated on the stack and
 only used for a short time.  The model interface defines a set of
 operations using them for navigating the model.
-  
+
 It is expected that models fill in the iterator with private data.  For
 example, the \code{\link{GtkListStore}} model, which is internally a simple linked
 list, stores a list node in one of the pointers.  The \code{\link{GtkTreeModelSort}}
@@ -128,7 +128,7 @@ stores a list and an offset in two of the pointers.  Additionally,
 there is an integer field.  This field is generally filled with a unique
 stamp per model.  This stamp is for catching errors resulting from using
 invalid iterators with a model.
-  
+
 The lifecycle of an iterator can be a little confusing at first.
 Iterators are expected to always be valid for as long as the model is
 unchanged (and doesn't emit a signal).  The model is considered to own
@@ -140,19 +140,19 @@ uninteresting, as one always has to allow for the case where iterators
 do not persist beyond a signal, some very important performance
 enhancements were made in the sort model.  As a result, the
 \verb{GTK_TREE_MODEL_ITERS_PERSIST} flag was added to indicate this behavior.
-  
+
 To help show some common operation of a model, some examples are
 provided.  The first example shows three ways of getting the iter at the
 location \dQuote{3:2:5}.  While the first method shown is easier,
 the second is much more common, as you often get paths from callbacks.
-  
+
  \emph{Acquiring a   \code{GtkTreeIter}}
 \preformatted{
 ## Acquiring a GtkTreeIter
 
 ## Three ways of getting the iter pointing to the location
 
-## get the iterator from a string 
+## get the iterator from a string
 model$getIterFromString("3:2:5")$iter
 
 ## get the iterator from a path
@@ -163,7 +163,7 @@ model$getIter(path)$iter
 parent_iter <- model$iterNthChild(NULL, 3)$iter
 parent_iter <- model$iterNthChild(parent_iter, 2)$iter
 model$iterNthChild(parent_iter, 5)$iter
-}  
+}
 This second example shows a quick way of iterating through a list and
 getting a string and an integer from each row.  The
 \code{populateModel} function used below is not shown, as
@@ -180,18 +180,18 @@ list_store <- gtkListStore("character", "integer")
 ## Fill the list store with data
 populate_model(list_store)
 
-## Get the first iter in the list 
+## Get the first iter in the list
 result <- list_store$getIterFirst()
 
 row_count <- 1
 while(result[[1]]) {
   ## Walk through the list, reading each row
-      
+
   data <- list_store$get(result$iter, 0, 1)
-  
+
   ## Do something with the data
   print(paste("Row ", row_count, ": (", data[[1]], ",", data[[2]], ")", sep=""))
-  
+
   row_count <- row_count + 1
   result <- list_store$iterNext()
 }
@@ -262,10 +262,10 @@ This signal is emitted when a row in the model has changed.
 }
 \item{\code{row-deleted(tree.model, path, user.data)}}{
 This signal is emitted when a row has been deleted.
-  
+
 Note that no iterator is passed to the signal handler,
 since the row is already deleted.
-  
+
 Implementations of GtkTreeModel must emit row-deleted
 \emph{before} removing the node from its
 internal data structures.  This is because models and
@@ -296,7 +296,7 @@ its last child row.
 }
 \item{\code{row-inserted(tree.model, path, iter, user.data)}}{
 This signal is emitted when a new row has been inserted in the model.
-  
+
 Note that the row may still be empty at this point, since
 it is a common pattern to first insert an empty row, and
 then fill it with the desired values.
@@ -313,7 +313,7 @@ then fill it with the desired values.
 \item{\code{rows-reordered(tree.model, path, iter, new.order, user.data)}}{
 This signal is emitted when the children of a node in the \code{\link{GtkTreeModel}}
 have been reordered.
-  
+
 Note that this signal is \emph{not} emitted
 when rows are reordered by DND, since this is implemented
 by removing and then reinserting the row.

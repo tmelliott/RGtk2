@@ -1,7 +1,7 @@
 \alias{gFileQueryInfoFinish}
 \name{gFileQueryInfoFinish}
 \title{gFileQueryInfoFinish}
-\description{Finishes an asynchronous file info query. 
+\description{Finishes an asynchronous file info query.
 See \code{\link{gFileQueryInfoAsync}}.}
 \usage{gFileQueryInfoFinish(object, res, .errwarn = TRUE)}
 \arguments{

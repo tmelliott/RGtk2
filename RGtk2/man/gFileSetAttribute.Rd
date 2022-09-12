@@ -2,7 +2,7 @@
 \name{gFileSetAttribute}
 \title{gFileSetAttribute}
 \description{Sets an attribute in the file with attribute name \code{attribute} to \code{value}.}
-\usage{gFileSetAttribute(object, attribute, type, value.p, flags = "G_FILE_QUERY_INFO_NONE", 
+\usage{gFileSetAttribute(object, attribute, type, value.p, flags = "G_FILE_QUERY_INFO_NONE",
     cancellable = NULL, .errwarn = TRUE)}
 \arguments{
 \item{\verb{object}}{input \code{\link{GFile}}.}

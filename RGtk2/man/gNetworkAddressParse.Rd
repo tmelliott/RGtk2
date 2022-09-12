@@ -16,10 +16,10 @@ lookup is performed). Quoting with [] is supported for all address
 types. A port override may be specified in the usual way with a
 colon. Ports may be given as decimal numbers or symbolic names (in
 which case an /etc/services lookup is performed).
-  
+
 If no port is specified in \code{host.and.port} then \code{default.port} will be
 used as the port number to connect to.
-  
+
 In general, \code{host.and.port} is expected to be provided by the user
 (allowing them to give the hostname, and a port overide if necessary)
 and \code{default.port} is expected to be provided by the application.

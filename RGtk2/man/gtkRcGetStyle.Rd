@@ -2,9 +2,9 @@
 \name{gtkRcGetStyle}
 \title{gtkRcGetStyle}
 \description{Finds all matching RC styles for a given widget,
-composites them together, and then creates a 
+composites them together, and then creates a
 \code{\link{GtkStyle}} representing the composite appearance.
-(GTK+ actually keeps a cache of previously 
+(GTK+ actually keeps a cache of previously
 created styles, so a new style may not be
 created.)}
 \usage{gtkRcGetStyle(object)}

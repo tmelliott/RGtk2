@@ -18,22 +18,22 @@
 provided to the network or over local sockets.  When a new
 connection is made to the service the \verb{"incoming"}
 signal is emitted.
-  
+
 A \code{\link{GSocketService}} is a subclass of \code{\link{GSocketListener}} and you need
 to add the addresses you want to accept connections on to the
 with the \code{\link{GSocketListener}} APIs.
-  
+
 There are two options for implementing a network service based on
 \code{\link{GSocketService}}. The first is to create the service using
 \code{\link{gSocketServiceNew}} and to connect to the \verb{"incoming"}
 signal. The second is to subclass \code{\link{GSocketService}} and override the
 default signal handler implementation.
-  
+
 In either case, the handler must immediately return, or else it
 will block additional incoming connections from being serviced.
 If you are interested in writing connection handlers that contain
 blocking code then see \code{\link{GThreadedSocketService}}.
-  
+
 The socket service runs on the main loop in the main thread, and is
 not threadsafe in general. However, the calls to start and stop
 the service are threadsafe so these can be used from threads that

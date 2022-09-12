@@ -1,7 +1,7 @@
 \alias{gtkMountOperationGetScreen}
 \name{gtkMountOperationGetScreen}
 \title{gtkMountOperationGetScreen}
-\description{Gets the screen on which windows of the \code{\link{GtkMountOperation}} 
+\description{Gets the screen on which windows of the \code{\link{GtkMountOperation}}
 will be shown.}
 \usage{gtkMountOperationGetScreen(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkMountOperation}}}}

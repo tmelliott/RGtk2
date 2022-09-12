@@ -1,8 +1,8 @@
 \alias{gtkIconViewSetSpacing}
 \name{gtkIconViewSetSpacing}
 \title{gtkIconViewSetSpacing}
-\description{Sets the ::spacing property which specifies the space 
-which is inserted between the cells (i.e. the icon and 
+\description{Sets the ::spacing property which specifies the space
+which is inserted between the cells (i.e. the icon and
 the text) of an item.}
 \usage{gtkIconViewSetSpacing(object, spacing)}
 \arguments{

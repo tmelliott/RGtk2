@@ -10,7 +10,7 @@ file descriptors}
 It may be sent using \code{\link{gSocketSendMessage}} and received using
 \code{\link{gSocketReceiveMessage}} over UNIX sockets (ie: sockets in the
 \code{G_SOCKET_ADDRESS_UNIX} family).
-  
+
 For an easier way to send and receive file descriptors over
 stream-oriented UNIX sockets, see \code{gUnixConnectionSendFd()} and
 \code{gUnixConnectionReceiveFd()}.}

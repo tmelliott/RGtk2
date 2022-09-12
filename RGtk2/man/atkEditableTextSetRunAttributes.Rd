@@ -2,10 +2,10 @@
 \name{atkEditableTextSetRunAttributes}
 \title{atkEditableTextSetRunAttributes}
 \description{Sets the attributes for a specified range. See the ATK_ATTRIBUTE
-functions (such as \verb{ATK_ATTRIBUTE_LEFT_MARGIN}) for examples of attributes 
+functions (such as \verb{ATK_ATTRIBUTE_LEFT_MARGIN}) for examples of attributes
 that can be set. Note that other attributes that do not have corresponding
 ATK_ATTRIBUTE functions may also be set for certain text widgets.}
-\usage{atkEditableTextSetRunAttributes(object, attrib.set, start.offset, 
+\usage{atkEditableTextSetRunAttributes(object, attrib.set, start.offset,
     end.offset)}
 \arguments{
 \item{\verb{object}}{[\code{\link{AtkEditableText}}]  an \code{\link{AtkEditableText}}}

@@ -3,7 +3,7 @@
 \title{cairoPdfSurfaceCreateForStream}
 \description{Creates a PDF surface of the specified size in points to be written
 incrementally to the stream represented by \code{write.func} and \code{closure}.}
-\usage{cairoPdfSurfaceCreateForStream(write.func, closure, width.in.points, 
+\usage{cairoPdfSurfaceCreateForStream(write.func, closure, width.in.points,
     height.in.points)}
 \arguments{
 \item{\verb{write.func}}{[\code{\link{CairoWriteFunc}}]  a \code{\link{CairoWriteFunc}} to accept the output data, may be \code{NULL}

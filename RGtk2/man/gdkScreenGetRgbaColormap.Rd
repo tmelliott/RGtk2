@@ -12,7 +12,7 @@ must be running to provide appropriate display.}
 \usage{gdkScreenGetRgbaColormap(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GdkScreen}}.}}
 \details{This functionality is not implemented in the Windows backend.
-  
+
 For setting an overall opacity for a top-level window, see
 \code{\link{gdkWindowSetOpacity}}.
   Since 2.8}

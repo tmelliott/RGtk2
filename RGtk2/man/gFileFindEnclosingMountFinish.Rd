@@ -1,7 +1,7 @@
 \alias{gFileFindEnclosingMountFinish}
 \name{gFileFindEnclosingMountFinish}
 \title{gFileFindEnclosingMountFinish}
-\description{Finishes an asynchronous find mount request. 
+\description{Finishes an asynchronous find mount request.
 See \code{\link{gFileFindEnclosingMountAsync}}.}
 \usage{gFileFindEnclosingMountFinish(object, res, .errwarn = TRUE)}
 \arguments{

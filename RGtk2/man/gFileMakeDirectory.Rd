@@ -2,11 +2,11 @@
 \name{gFileMakeDirectory}
 \title{gFileMakeDirectory}
 \description{Creates a directory. Note that this will only create a child directory of
-the immediate parent directory of the path or URI given by the \code{\link{GFile}}. To 
+the immediate parent directory of the path or URI given by the \code{\link{GFile}}. To
 recursively create directories, see \code{\link{gFileMakeDirectoryWithParents}}.
-This function will fail if the parent directory does not exist, setting 
+This function will fail if the parent directory does not exist, setting
 \code{error} to \code{G_IO_ERROR_NOT_FOUND}. If the file system doesn't support creating
-directories, this function will fail, setting \code{error} to 
+directories, this function will fail, setting \code{error} to
 \code{G_IO_ERROR_NOT_SUPPORTED}.}
 \usage{gFileMakeDirectory(object, cancellable = NULL, .errwarn = TRUE)}
 \arguments{
@@ -16,7 +16,7 @@ directories, this function will fail, setting \code{error} to
 }
 \details{For a local \code{\link{GFile}} the newly created directory will have the default
 (current) ownership and permissions of the current process.
-  
+
 If \code{cancellable} is not \code{NULL}, then the operation can be cancelled by
 triggering the cancellable object from another thread. If the operation
 was cancelled, the error \code{G_IO_ERROR_CANCELLED} will be returned.}

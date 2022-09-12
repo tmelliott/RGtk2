@@ -18,17 +18,17 @@ is finalized by the reference counting functions If you have a
 chunk of static data compiled into your application, you can pass
 in \code{NULL} as the destroy notification function so that the data
 will not be freed.
-  
+
 The \code{\link{gdkPixbufNew}} function can be used as a convenience to
 create a pixbuf with an empty buffer.  This is equivalent to
-allocating a data buffer using \code{malloc()} and 
-then wrapping it with \code{\link{gdkPixbufNewFromData}}. The \code{\link{gdkPixbufNew}} 
-function will compute an optimal rowstride so that rendering can be 
+allocating a data buffer using \code{malloc()} and
+then wrapping it with \code{\link{gdkPixbufNewFromData}}. The \code{\link{gdkPixbufNew}}
+function will compute an optimal rowstride so that rendering can be
 performed with an efficient algorithm.
-  
+
 As a special case, you can use the \code{\link{gdkPixbufNewFromXpmData}}
 function to create a pixbuf from inline XPM image data.
-  
+
 You can also copy an existing pixbuf with the \code{\link{gdkPixbufCopy}}
 function.  This is not the same as just doing a \code{gObjectRef()}
 on the old pixbuf; the copy function will actually duplicate the

@@ -30,7 +30,7 @@ possible, handling issues such as colormaps, visuals, dithering,
 temporary buffers, and so on. Most code should use the higher-level
 \code{\link{GdkPixbuf}} features in place of this module; for example,
 \code{\link{gdkDrawPixbuf}} uses GdkRGB in its implementation.
-  
+
 GdkRGB allocates a color cube to use when rendering images.  You can
 set the threshold for installing colormaps with
 \code{\link{gdkRgbSetMinColors}}. The default is 5x5x5 (125). If a colorcube
@@ -47,12 +47,12 @@ of GdkRGB. Note, however, that setting it to 0 doesn't let you get
 away with ignoring the colormap and visual - a colormap is always
 created in grayscale and direct color modes, and the visual is changed
 in cases where a "better" visual than the default is available.
-  
+
 If GDK is built with the Sun mediaLib library, the GdkRGB functions are
 accelerated using mediaLib, which provides hardware acceleration on Intel,
 AMD, and Sparc chipsets.  If desired, mediaLib support can be turned off
 by setting the GDK_DISABLE_MEDIALIB environment variable.
-  
+
  \emph{A simple example program using GdkRGB}
 \preformatted{
 # Simple example of using GdkRGB with RGtk2
@@ -67,7 +67,7 @@ rgb_example <- function()
   darea <- gtkDrawingArea()
   darea$setSizeRequest(IMAGE_WIDTH, IMAGE_HEIGHT)
   window$add(darea)
-  
+
   # Set up the RGB buffer.
   x <- rep(0:(IMAGE_WIDTH-1), IMAGE_HEIGHT)
   y <- rep(0:(IMAGE_HEIGHT-1), IMAGE_WIDTH, each = T)
@@ -75,10 +75,10 @@ rgb_example <- function()
   green <- (x / 32) * 4 + y - y \%% 32
   blue <- y - y \%% 32
   buf <- rbind(red, green, blue)
-  
+
   # connect to expose event
   gSignalConnect(darea, "expose-event", on_darea_expose, buf)
-  
+
   window$showAll()
 }
 
@@ -104,7 +104,7 @@ colors. This is used only for \code{\link{gdkDrawIndexedImage}}.
 \section{Enums and Flags}{\describe{\item{\verb{GdkRgbDither}}{
 Selects whether or not GdkRGB applies dithering
 to the image on display.
-  
+
 Since GdkRGB currently only handles images with 8 bits per component,
 dithering on 24 bit per pixel displays is a moot point.
 

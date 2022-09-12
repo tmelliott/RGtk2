@@ -1,8 +1,8 @@
 \alias{gtkActionActivate}
 \name{gtkActionActivate}
 \title{gtkActionActivate}
-\description{Emits the "activate" signal on the specified action, if it isn't 
-insensitive. This gets called by the proxy widgets when they get 
+\description{Emits the "activate" signal on the specified action, if it isn't
+insensitive. This gets called by the proxy widgets when they get
 activated.}
 \usage{gtkActionActivate(object)}
 \arguments{\item{\verb{object}}{the action object}}

@@ -20,52 +20,52 @@ GFlags
 GEnum
    +----GFileAttributeStatus
 }}
-\section{Detailed Description}{File attributes in GIO consist of a list of key-value pairs. 
-  
+\section{Detailed Description}{File attributes in GIO consist of a list of key-value pairs.
+
 Keys are strings that contain a key namespace and a key name, separated
 by a colon, e.g. "namespace:keyname". Namespaces are included to sort
-key-value pairs by namespaces for relevance. Keys can be retrived 
-using wildcards, e.g. "standard::*" will return all of the keys in the 
+key-value pairs by namespaces for relevance. Keys can be retrived
+using wildcards, e.g. "standard::*" will return all of the keys in the
 "standard" namespace.
-  
+
 Values are stored within the list in \verb{GFileAttributeValue} structures.
 Values can store different types, listed in the enum \code{\link{GFileAttributeType}}.
-Upon creation of a \verb{GFileAttributeValue}, the type will be set to 
-\code{G_FILE_ATTRIBUTE_TYPE_INVALID}. 
-  
+Upon creation of a \verb{GFileAttributeValue}, the type will be set to
+\code{G_FILE_ATTRIBUTE_TYPE_INVALID}.
+
 The list of possible attributes for a filesystem (pointed to by a \code{\link{GFile}}) is
-availible as a \code{\link{GFileAttributeInfoList}}. This list is queryable by key names 
+availible as a \code{\link{GFileAttributeInfoList}}. This list is queryable by key names
 as indicated earlier.
-  
-Classes that implement \verb{GFileIface} will create a \code{\link{GFileAttributeInfoList}} and 
-install default keys and values for their given file system, architecture, 
-and other possible implementation details (e.g., on a UNIX system, a file 
+
+Classes that implement \verb{GFileIface} will create a \code{\link{GFileAttributeInfoList}} and
+install default keys and values for their given file system, architecture,
+and other possible implementation details (e.g., on a UNIX system, a file
 attribute key will be registered for the user id for a given file).
   \tabular{ll}{
 "standard" \tab The "Standard" namespace. General file
-information that any application may need should be put in this namespace. 
+information that any application may need should be put in this namespace.
 Examples include the file's name, type, and size. \cr
-"etag" \tab The   "Entity Tag"   
-namespace. Currently, the only key in this namespace is "value", which contains 
+"etag" \tab The   "Entity Tag"
+namespace. Currently, the only key in this namespace is "value", which contains
 the value of the current entity tag. \cr
-"id" \tab The "Identification" namespace. This 
+"id" \tab The "Identification" namespace. This
 namespace is used by file managers and applications that list directories
 to check for loops and to uniquely identify files. \cr
 "access" \tab The "Access" namespace. Used to check
 if a user has the proper privilidges to access files and perform
-file operations. Keys in this namespace are made to be generic 
-and easily understood, e.g. the "can_read" key is   \code{TRUE}   if 
+file operations. Keys in this namespace are made to be generic
+and easily understood, e.g. the "can_read" key is   \code{TRUE}   if
 the current user has permission to read the file. UNIX permissions and
 NTFS ACLs in Windows should be mapped to these values. \cr
-"mountable" \tab The "Mountable" namespace. Includes 
+"mountable" \tab The "Mountable" namespace. Includes
 simple boolean keys for checking if a file or path supports mount operations, e.g.
 mount, unmount, eject. These are used for files of type   \code{G_FILE_TYPE_MOUNTABLE}  . \cr
-"time" \tab The "Time" namespace. Includes file 
+"time" \tab The "Time" namespace. Includes file
 access, changed, created times.  \cr
 "unix" \tab The "Unix" namespace. Includes UNIX-specific
-information and may not be available for all files. Examples include 
+information and may not be available for all files. Examples include
 the UNIX "UID", "GID", etc. \cr
-"dos" \tab The "DOS" namespace. Includes DOS-specific 
+"dos" \tab The "DOS" namespace. Includes DOS-specific
 information and may not be available for all files. Examples include
 "is_system" for checking if a file is marked as a system file, and "is_archive"
 for checking if a file is marked as an archive file. \cr
@@ -73,8 +73,8 @@ for checking if a file is marked as an archive file. \cr
 about who owns a file. May not be available for all file systems. Examples include
 "user" for getting the user name of the file owner. This information is often mapped from
 some backend specific data such as a unix UID. \cr
-"thumbnail" \tab The "Thumbnail" namespace. Includes 
-information about file thumbnails and their location within the file system. Exaples of 
+"thumbnail" \tab The "Thumbnail" namespace. Includes
+information about file thumbnails and their location within the file system. Exaples of
 keys in this namespace include "path" to get the location of a thumbnail, and "failed"
 to check if thumbnailing of the file failed. \cr
 "filesystem" \tab The "Filesystem" namespace. Gets information
@@ -82,22 +82,22 @@ about the file system where a file is located, such as its type, how much
 space is left available, and the overall size of the file system. \cr
 "gvfs" \tab The "GVFS" namespace. Keys in this namespace
 contain information about the current GVFS backend in use.  \cr
-"xattr" \tab The "xattr" namespace. Gets information 
+"xattr" \tab The "xattr" namespace. Gets information
 about extended user attributes. See attr(5). The "user." prefix of the
 extended user attribute name is stripped away when constructing keys in
-this namespace, e.g. "xattr::mime_type" for the extended attribute with 
+this namespace, e.g. "xattr::mime_type" for the extended attribute with
 the name "user.mime_type". Note that this information is only available
 if GLib has been built with extended attribute support. \cr
-"xattr-sys" \tab The "xattr-sys" namespace. 
-Gets information about extended attributes which are not user-specific. 
+"xattr-sys" \tab The "xattr-sys" namespace.
+Gets information about extended attributes which are not user-specific.
 See attr(5). Note that this information is only available if GLib
 has been built with extended attribute support. \cr
 "selinux" \tab The "SELinux" namespace. Includes
 information about the SELinux context of files. Note that this information
 is only available if GLib has been built with SELinux support. \cr
-}  
+}
 Please note that these are not all of the possible namespaces.
-More namespaces can be added from GIO modules or by individual applications. 
+More namespaces can be added from GIO modules or by individual applications.
 For more information about writing GIO modules, see \code{\link{GIOModule}}.
     \tabular{lll}{
 \code{G_FILE_ATTRIBUTE_STANDARD_TYPE} \tab standard::type \tab uint32 (  \code{\link{GFileType}}  ) \cr
@@ -164,11 +164,11 @@ For more information about writing GIO modules, see \code{\link{GIOModule}}.
 \code{G_FILE_ATTRIBUTE_GVFS_BACKEND} \tab gvfs::backend \tab string \cr
 \code{G_FILE_ATTRIBUTE_SELINUX_CONTEXT} \tab selinux::context \tab string \cr
 }
- 
-Note that there are no predefined keys in the "xattr" and "xattr-sys" 
+
+Note that there are no predefined keys in the "xattr" and "xattr-sys"
 namespaces. Keys for the "xattr" namespace are constructed by stripping
 away the "user." prefix from the extended user attribute, and prepending
-"xattr::". Keys for the "xattr-sys" namespace are constructed by 
+"xattr::". Keys for the "xattr-sys" namespace are constructed by
 concatenating "xattr-sys::" with the extended attribute name. All extended
 attribute values are returned as hex-encoded strings in which bytes outside
 the ASCII range are encoded as hexadecimal escape sequences of the form

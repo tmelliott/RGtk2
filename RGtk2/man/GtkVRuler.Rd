@@ -21,7 +21,7 @@
  widget does work and is useful in some applications; it's just not
  of general interest. However, we are not accepting new features for
  the widget, and it will eventually move out of the GTK+
- distribution.  
+ distribution.
 The VRuler widget is a widget arranged vertically creating a ruler that is
 utilized around other widgets such as a text widget. The ruler is used to show
 the location of the mouse on the window and to show the size of the window in

@@ -2,7 +2,7 @@
 \name{gDataOutputStreamPutUint16}
 \title{gDataOutputStreamPutUint16}
 \description{Puts an unsigned 16-bit integer into the output stream.}
-\usage{gDataOutputStreamPutUint16(object, data, cancellable = NULL, 
+\usage{gDataOutputStreamPutUint16(object, data, cancellable = NULL,
     .errwarn = TRUE)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GDataOutputStream}}.}

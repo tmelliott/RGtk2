@@ -1,7 +1,7 @@
 \alias{gtkIconViewSetColumnSpacing}
 \name{gtkIconViewSetColumnSpacing}
 \title{gtkIconViewSetColumnSpacing}
-\description{Sets the ::column-spacing property which specifies the space 
+\description{Sets the ::column-spacing property which specifies the space
 which is inserted between the columns of the icon view.}
 \usage{gtkIconViewSetColumnSpacing(object, column.spacing)}
 \arguments{

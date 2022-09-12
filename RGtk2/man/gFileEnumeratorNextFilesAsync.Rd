@@ -4,7 +4,7 @@
 \description{Request information for a number of files from the enumerator asynchronously.
 When all i/o for the operation is finished the \code{callback} will be called with
 the requested information. }
-\usage{gFileEnumeratorNextFilesAsync(object, num.files, io.priority = 0, 
+\usage{gFileEnumeratorNextFilesAsync(object, num.files, io.priority = 0,
     cancellable = NULL, callback, user.data = NULL)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GFileEnumerator}}.}
@@ -20,10 +20,10 @@ or at the end of the enumerator. In case of a partial error the callback will
 be called with any succeeding items and no error, and on the next request the
 error will be reported. If a request is cancelled the callback will be called
 with \code{G_IO_ERROR_CANCELLED}.
-  
+
 During an async request no other sync and async calls are allowed, and will
-result in \code{G_IO_ERROR_PENDING} errors. 
-  
+result in \code{G_IO_ERROR_PENDING} errors.
+
 Any outstanding i/o request with higher priority (lower numerical value) will
 be executed before an outstanding request with lower priority. Default
 priority is \code{G_PRIORITY_DEFAULT}.}

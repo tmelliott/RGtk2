@@ -11,7 +11,7 @@ support this, and some deliberately ignore it or don't have a
 concept of "maximized"; so you can't rely on the unmaximization
 actually happening. But it will happen with most standard window
 managers, and GDK makes a best effort to get it to happen.
-  
+
 On Windows, reliably unmaximizes the window.}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

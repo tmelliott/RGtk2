@@ -2,7 +2,7 @@
 \name{gDriveStop}
 \title{gDriveStop}
 \description{Asynchronously stops a drive.}
-\usage{gDriveStop(object, flags, mount.operation, cancellable = NULL, 
+\usage{gDriveStop(object, flags, mount.operation, cancellable = NULL,
     callback, user.data = NULL)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GDrive}}.}

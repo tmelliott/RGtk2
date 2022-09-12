@@ -17,7 +17,7 @@ scrolling has occurred, using the current API; a possible hack
 would be to update all child positions when the scroll adjustments
 change or the text buffer changes. See bug 64518 on
 bugzilla.gnome.org for status of fixing this issue.}
-\usage{gtkTextViewAddChildInWindow(object, child, which.window, xpos, 
+\usage{gtkTextViewAddChildInWindow(object, child, which.window, xpos,
     ypos)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GtkTextView}}}

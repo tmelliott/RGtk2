@@ -16,21 +16,21 @@
  \code{\link{GSeekable}}.}
 \section{Detailed Description}{GFileIOStream provides io streams that both read and write to the same
 file handle.
-  
+
 GFileIOStream implements \code{\link{GSeekable}}, which allows the io
 stream to jump to arbitrary positions in the file and to truncate
 the file, provided the filesystem of the file supports these
 operations.
-  
+
 To find the position of a file io stream, use
 \code{\link{gSeekableTell}}.
-  
+
 To find out if a file io stream supports seeking, use \code{\link{gSeekableCanSeek}}.
 To position a file io stream, use \code{\link{gSeekableSeek}}.
 To find out if a file io stream supports truncating, use
 \code{\link{gSeekableCanTruncate}}. To truncate a file io
 stream, use \code{\link{gSeekableTruncate}}.
-  
+
 The default implementation of all the \code{\link{GFileIOStream}} operations
 and the implementation of \code{\link{GSeekable}} just call into the same operations
 on the output stream.}

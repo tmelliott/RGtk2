@@ -1,10 +1,10 @@
 \alias{gMountRemount}
 \name{gMountRemount}
 \title{gMountRemount}
-\description{Remounts a mount. This is an asynchronous operation, and is 
-finished by calling \code{\link{gMountRemountFinish}} with the \code{mount} 
+\description{Remounts a mount. This is an asynchronous operation, and is
+finished by calling \code{\link{gMountRemountFinish}} with the \code{mount}
 and \verb{GAsyncResults} data returned in the \code{callback}.}
-\usage{gMountRemount(object, flags, mount.operation, cancellable = NULL, 
+\usage{gMountRemount(object, flags, mount.operation, cancellable = NULL,
     callback, user.data = NULL)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GMount}}.}

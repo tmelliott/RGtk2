@@ -12,8 +12,8 @@ be changed with \code{\link{gdkGCSetLineAttributes}}.)}
 \item{\verb{object}}{a \code{\link{GdkGC}}.}
 \item{\verb{dash.list}}{a list of dash lengths.}
 }
-\details{The \code{dash.offset} defines the phase of the pattern, 
-specifying how many pixels into the dash-list the pattern 
+\details{The \code{dash.offset} defines the phase of the pattern,
+specifying how many pixels into the dash-list the pattern
 should actually begin.}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

@@ -11,8 +11,8 @@ the Pango text markup language.}
 \item{\verb{tooltip}}{the contents of the tooltip for the icon, or \code{NULL}. \emph{[  \acronym{allow-none}  ]}}
 }
 \details{Use \code{NULL} for \code{tooltip} to remove an existing tooltip.
-  
-See also \code{\link{gtkWidgetSetTooltipMarkup}} and 
+
+See also \code{\link{gtkWidgetSetTooltipMarkup}} and
 \code{gtkEntySetIconTooltipText()}.
   Since 2.16}
 \author{Derived by RGtkGen from GTK+ documentation}

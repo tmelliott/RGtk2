@@ -32,7 +32,7 @@ added to the panes of the widget with
 beween the two children is set by default from the
 size requests of the children, but it can be adjusted
 by the user.
-  
+
 A paned widget draws a separator between the two
 child widgets and a small handle that the user
 can drag to adjust the division. It does not
@@ -43,7 +43,7 @@ to put each child inside a \code{\link{GtkFrame}} with the
 shadow type set to \code{GTK_SHADOW_IN} so that the
 gutter appears as a ridge. No separator is drawn
 if one of the children is missing.
-  
+
 Each child has two options that can be set,
 \code{resize} and \code{shrink}. If \code{resize} is true, then when the
 \code{\link{GtkPaned}} is resized, that child will expand
@@ -54,11 +54,11 @@ to \code{FALSE} allows the application to set a minimum
 size. If \code{resize} is false for both children, then
 this is treated as if \code{resize} is true for both
 children.
-  
+
 The application can set the position of the slider
 as if it were set by the user, by calling
 \code{\link{gtkPanedSetPosition}}.
-  
+
  \emph{Creating a paned widget with minimum sizes.}
 \preformatted{
 hpaned <- gtkHPaned()
@@ -87,7 +87,7 @@ The ::accept-position signal is a
 keybinding signal
 which gets emitted to accept the current position of the handle when
 moving it using key bindings.
-  
+
 The default binding for this signal is Return or Space.
   Since 2.0
 
@@ -104,7 +104,7 @@ keybinding signal
 which gets emitted to cancel moving the position of the handle using key
 bindings. The position of the handle will be reset to the value prior to
 moving it.
-  
+
 The default binding for this signal is Escape.
   Since 2.0
 
@@ -119,7 +119,7 @@ The default binding for this signal is Escape.
 The ::cycle-child-focus signal is a
 keybinding signal
 which gets emitted to cycle the focus between the children of the paned.
-  
+
 The default binding is f6.
   Since 2.0
 
@@ -136,7 +136,7 @@ The ::cycle-handle-focus signal is a
 keybinding signal
 which gets emitted to cycle whether the paned should grab focus to allow
 the user to change position of the handle by using key bindings.
-  
+
 The default binding for this signal is f8.
   Since 2.0
 
@@ -168,7 +168,7 @@ The ::toggle-handle-focus is a
 keybinding signal
 which gets emitted to accept the current position of the handle and then
 move focus to the next widget in the focus chain.
-  
+
 The default binding is Tab.
   Since 2.0
 

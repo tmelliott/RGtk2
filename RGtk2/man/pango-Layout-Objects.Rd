@@ -106,12 +106,12 @@ set of formatted lines can be extracted from the object,
 the layout can be rendered, and conversion between logical
 character positions within the layout's text, and the physical
 position of the resulting glyphs can be made.
-  
+
 There are also a number of parameters to adjust the formatting
 of a \code{\link{PangoLayout}}, which are illustrated in .
 It is possible, as well, to ignore the 2-D setup, and simply
 treat the results of a \code{\link{PangoLayout}} as a list of lines.
-  
+
 The \code{\link{PangoLayout}} structure is opaque, and has no user-visible
 fields.
 
@@ -119,7 +119,7 @@ fields.
 \item{\verb{PangoLayoutIter}}{
 A \code{\link{PangoLayoutIter}} structure can be used to
 iterate over the visual extents of a \code{\link{PangoLayout}}.
-  
+
 The \code{\link{PangoLayoutIter}} structure is opaque, and
 has no user-visible fields.
 
@@ -130,7 +130,7 @@ from laying out a paragraph via \code{\link{PangoLayout}}. \code{\link{PangoLayo
 structures are obtained by calling \code{\link{pangoLayoutGetLine}} and
 are only valid until the text, attributes, or settings of the
 parent \code{\link{PangoLayout}} are modified.
-  
+
 Routines for rendering PangoLayout objects are provided in
 code specific to each rendering system.
 
@@ -161,7 +161,7 @@ The \code{\link{PangoEllipsizeMode}} type describes what sort of (if any)
 ellipsization should be applied to a line of text. In
 the ellipsization process characters are removed from the
 text in order to make it fit to a given width and replaced
-with an ellipsis.  
+with an ellipsis.
 
 \describe{
 \item{\verb{none}}{ No ellipsization}

@@ -45,7 +45,7 @@ A list of icon names.
 Whether to use the default fallbacks found by shortening the icon name
 at '-' characters. If the "names" list has more than one element,
 ignores any past the first.
-  
+
 For example, if the icon name was "gnome-dev-cdrom-audio", the list
 would become
 \preformatted{

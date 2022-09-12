@@ -12,7 +12,7 @@ This is required for non-native windows since a direct call to
 \code{\link{cairoResetClip}} would unset the clip region inherited from the
 drawable (i.e. the window clip region), and thus let you e.g.
 draw outside your window.
-  
+
 This is rarely needed though, since most code just create a new cairo_t
 using \code{\link{gdkCairoCreate}} each time they want to draw something.
   Since 2.18}

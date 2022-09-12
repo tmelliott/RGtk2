@@ -17,7 +17,7 @@ realized as subclasses of a common base class (e.g \code{\link{GtkBox}}/\code{\l
 and \code{\link{GtkScale}}/\code{\link{GtkHScale}}/\code{\link{GtkVScale}}). GtkOrientable is more flexible in that
 it allows the orientation to be changed at runtime, allowing the widgets
 to 'flip'.
-  
+
 GtkOrientable was introduced in GTK+ 2.16.}
 \section{Structures}{\describe{\item{\verb{GtkOrientable}}{
 \emph{undocumented

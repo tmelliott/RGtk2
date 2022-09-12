@@ -2,7 +2,7 @@
 #ifndef RSCOMMON_H
 #define RSCOMMON_H
 
-#ifdef __cplusplus 
+#ifdef __cplusplus
 extern "C" {
 #endif
 
@@ -81,7 +81,7 @@ extern "C" {
   #endif
 
 
-  
+
   #if defined(_S4_) /* redefine vector and declare routines with  S_evaluator */
 
   #ifdef vector
@@ -125,7 +125,7 @@ extern "C" {
 
 
   #define SET_VECTOR_ELT(v, pos, val) LIST_POINTER((v))[(pos)]=(val)
-  #define SET_STRING_ELT(v, pos, val) CHARACTER_DATA((v))[(pos)]=(val)   
+  #define SET_STRING_ELT(v, pos, val) CHARACTER_DATA((v))[(pos)]=(val)
 
 
   #endif /* end of this S4 */
@@ -140,10 +140,8 @@ extern "C" {
    /* SET_CLASS and SET_NAMES have been moved to Rdefines.h in the R distribution.*/
   #endif  /* of defined(_R_) */
 
-#ifdef __cplusplus 
+#ifdef __cplusplus
 }
 #endif
 
 #endif /* end of RSCOMMON_H*/
-
-

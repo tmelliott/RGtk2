@@ -27,11 +27,11 @@
          +----GUnixInputStream}}
 \section{Detailed Description}{GInputStream has functions to read from a stream (\code{\link{gInputStreamRead}}),
 to close a stream (\code{\link{gInputStreamClose}}) and to skip some content
-(\code{\link{gInputStreamSkip}}). 
-  
-To copy the content of an input stream to an output stream without 
-manually handling the reads and writes, use \code{\link{gOutputStreamSplice}}. 
-  
+(\code{\link{gInputStreamSkip}}).
+
+To copy the content of an input stream to an output stream without
+manually handling the reads and writes, use \code{\link{gOutputStreamSplice}}.
+
 All of these functions have async variants too.}
 \section{Structures}{\describe{\item{\verb{GInputStream}}{
 Base class for streaming input operations.

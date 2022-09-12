@@ -1,7 +1,7 @@
 \alias{gFileInfoGetAttributeObject}
 \name{gFileInfoGetAttributeObject}
 \title{gFileInfoGetAttributeObject}
-\description{Gets the value of a \code{\link{GObject}} attribute. If the attribute does 
+\description{Gets the value of a \code{\link{GObject}} attribute. If the attribute does
 not contain a \code{\link{GObject}}, \code{NULL} will be returned.}
 \usage{gFileInfoGetAttributeObject(object, attribute)}
 \arguments{

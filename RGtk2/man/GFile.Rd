@@ -134,19 +134,19 @@ GFlags
 GEnum
    +----GFilesystemPreviewType
 }}
-\section{Detailed Description}{\code{\link{GFile}} is a high level abstraction for manipulating files on a 
-virtual file system. \code{\link{GFile}}s are lightweight, immutable 
+\section{Detailed Description}{\code{\link{GFile}} is a high level abstraction for manipulating files on a
+virtual file system. \code{\link{GFile}}s are lightweight, immutable
 objects that do no I/O upon creation. It is necessary to understand that
 \code{\link{GFile}} objects do not represent files, merely an identifier for a file. All
-file content I/O is implemented as streaming operations (see \code{\link{GInputStream}} and 
+file content I/O is implemented as streaming operations (see \code{\link{GInputStream}} and
 \code{\link{GOutputStream}}).
-  
-To construct a \code{\link{GFile}}, you can use: 
+
+To construct a \code{\link{GFile}}, you can use:
 \code{\link{gFileNewForPath}} if you have a path.
 \code{\link{gFileNewForUri}} if you have a URI.
 \code{\link{gFileNewForCommandlineArg}} for a command line argument.
 \code{\link{gFileParseName}} from a utf8 string gotten from \code{\link{gFileGetParseName}}.
-  
+
 One way to think of a \code{\link{GFile}} is as an abstraction of a pathname. For normal
 files the system pathname is what is stored internally, but as \code{\link{GFile}}s
 are extensible it could also be something else that corresponds to a pathname
@@ -158,7 +158,7 @@ to get a child within a directory, \code{\link{gFileResolveRelativePath}} to res
 path between two \code{\link{GFile}}s. There can be multiple hierarchies, so you may not
 end up at the same root if you repeatedly call \code{\link{gFileGetParent}} on two different
 files.
-  
+
 All \code{\link{GFile}}s have a basename (get with \code{\link{gFileGetBasename}}). These names
 are byte strings that are used to identify the file on the filesystem (relative to
 its parent directory) and there is no guarantees that they have any particular charset
@@ -168,7 +168,7 @@ interface you should use the display name that you can get by requesting the
 This is guaranteed to be in utf8 and can be used in a user interface. But always
 store the real basename or the \code{\link{GFile}} to use to actually access the file, because
 there is no way to go from a display name to the actual name.
-  
+
 Using \code{\link{GFile}} as an identifier has the same weaknesses as using a path in that
 there may be multiple aliases for the same file. For instance, hard or
 soft links may cause two different \code{\link{GFile}}s to refer to the same file.
@@ -179,25 +179,25 @@ two \code{\link{GFile}}s point to the same file you can query for the
 canonicalization of pathnames passed in, so that trivial differences in the
 path string used at creation (duplicated slashes, slash at end of path, "."
 or ".." path segments, etc) does not create different \code{\link{GFile}}s.
-  
-Many \code{\link{GFile}} operations have both synchronous and asynchronous versions 
-to suit your application. Asynchronous versions of synchronous functions 
-simply have \code{async()} appended to their function names. The asynchronous 
-I/O functions call a \code{\link{GAsyncReadyCallback}} which is then used to finalize 
-the operation, producing a GAsyncResult which is then passed to the 
-function's matching \code{finish()} operation. 
-  
+
+Many \code{\link{GFile}} operations have both synchronous and asynchronous versions
+to suit your application. Asynchronous versions of synchronous functions
+simply have \code{async()} appended to their function names. The asynchronous
+I/O functions call a \code{\link{GAsyncReadyCallback}} which is then used to finalize
+the operation, producing a GAsyncResult which is then passed to the
+function's matching \code{finish()} operation.
+
 Some \code{\link{GFile}} operations do not have synchronous analogs, as they may
 take a very long time to finish, and blocking may leave an application
 unusable. Notable cases include:
 \code{\link{gFileMountMountable}} to mount a mountable file.
 \code{\link{gFileUnmountMountableWithOperation}} to unmount a mountable file.
 \code{\link{gFileEjectMountableWithOperation}} to eject a mountable file.
-  
-One notable feature of \code{\link{GFile}}s are entity tags, or "etags" for 
-short. Entity tags are somewhat like a more abstract version of the 
+
+One notable feature of \code{\link{GFile}}s are entity tags, or "etags" for
+short. Entity tags are somewhat like a more abstract version of the
 traditional mtime, and can be used to quickly determine if the file has
-been modified from the version on the file system. See the HTTP 1.1 
+been modified from the version on the file system. See the HTTP 1.1
 specification (\url{http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html})
 for HTTP Etag headers, which are a very similar concept.}
 \section{Structures}{\describe{\item{\verb{GFile}}{

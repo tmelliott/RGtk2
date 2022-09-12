@@ -35,14 +35,14 @@ A data structure for holding a path. This data structure serves as
 the return value for \code{\link{cairoCopyPath}} and
 \code{\link{cairoCopyPathFlat}} as well the input value for
 \code{\link{cairoAppendPath}}.
-  
+
 See \code{\link{CairoPathData}} for hints on how to iterate over the
 actual data within the path.
-  
+
 The num_data member gives the number of elements in the data
 array. This number is larger than the number of independent path
 portions (defined in \code{\link{CairoPathDataType}}), since the data
-includes both headers and coordinates for each portion.  
+includes both headers and coordinates for each portion.
 \strong{\verb{CairoPath} is a \link{transparent-type}.}
 
 \describe{
@@ -55,11 +55,11 @@ includes both headers and coordinates for each portion.
 \item{\verb{CairoPathData}}{
 \code{\link{CairoPathData}} is used to represent the path data inside a
 \code{\link{CairoPath}}.
-  
+
 The data structure is designed to try to balance the demands of
 efficiency and ease-of-use. A path is represented as a list of
 \code{\link{CairoPathData}}, which is a union of headers and points.
-  
+
 Each portion of the path is represented by one or more elements in
 the list, (one header followed by 0 or more points). The length
 value of the header is the number of list elements for the current
@@ -69,11 +69,11 @@ where the number of points for each element type is as follows:
     \%CAIRO_PATH_LINE_TO:     1 point
     \%CAIRO_PATH_CURVE_TO:    3 points
     \%CAIRO_PATH_CLOSE_PATH:  0 points
-}  
+}
 The semantics and ordering of the coordinate values are consistent
 with \code{\link{cairoMoveTo}}, \code{\link{cairoLineTo}}, \code{\link{cairoCurveTo}}, and
 \code{\link{cairoClosePath}}.
-  
+
 Here is sample code for iterating through a \verb{""}
   \preformatted{
 path <- cr$copyPath()$data
@@ -86,14 +86,14 @@ for (data in path) {
            data[5], data[6]),
          "close-path" = do_close_path_things())
 }
-}  
+}
 As of cairo 1.4, cairo does not mind if there are more elements in
 a portion of the path than needed.  Such elements can be used by
 users of the cairo API to hold extra values in the path data
 structure.  For this reason, it is recommended that applications
 always use \code{data->header.length} to
 iterate over the path data, instead of hardcoding the number of
-elements for each element type.  
+elements for each element type.
 \strong{\verb{CairoPathData} is a \link{transparent-type}.}
 
 }
@@ -101,7 +101,7 @@ elements for each element type.
 \section{Enums and Flags}{\describe{\item{\verb{CairoPathDataType}}{
 \code{\link{CairoPathData}} is used to describe the type of one portion
 of a path when represented as a \code{\link{CairoPath}}.
-See \code{\link{CairoPathData}} for details.  
+See \code{\link{CairoPathData}} for details.
 
 \describe{
 \item{\verb{move-to}}{ A move-to operation}

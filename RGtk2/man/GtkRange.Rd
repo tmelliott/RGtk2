@@ -45,7 +45,7 @@
  AtkImplementorIface,  \code{\link{GtkBuildable}} and  \code{\link{GtkOrientable}}.}
 \section{Detailed Description}{\code{\link{GtkRange}} is the common base class for widgets which visualize an
 adjustment, e.g scales or scrollbars.
-  
+
 Apart from signals for monitoring the parameters of the adjustment,
 GtkRange provides properties and methods for influencing the sensitivity
 of the "steppers". It also provides properties and methods for setting a
@@ -87,12 +87,12 @@ The application can handle the event itself and return \code{TRUE} to
 prevent further processing.  Or, by returning \code{FALSE}, it can pass
 the event to other handlers until the default GTK+ handler is
 reached.
-  
+
 The value parameter is unrounded.  An application that overrides
 the ::change-value signal is responsible for clamping the value to
 the desired number of decimal digits; the default GTK+ handler
 clamps the value based on \code{range->round.digits}.
-  
+
 It is not possible to use delayed update policies in an overridden
 ::change-value handler.
   Since 2.6

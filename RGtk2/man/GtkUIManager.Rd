@@ -32,7 +32,7 @@ one or more UI definitions, which reference actions from one or more
 action groups.}
 \section{UI Definitions}{The UI definitions are specified in an XML format which can be
 roughly described by the following DTD.
-  
+
 Do not confuse the GtkUIManager UI Definitions described here with
 the similarly named GtkBuilder UI
 Definitions.
@@ -76,14 +76,14 @@ DTD, e.g. every toolitem must have a toolbar in its anchestry and
 every menuitem must have a menubar or popup in its anchestry. Since
 a \verb{GMarkup} parser is used to parse the UI description, it must not only
 be valid XML, but valid \verb{GMarkup}.
-  
+
 If a name is not specified, it defaults to the action. If an action is
 not specified either, the element name is used. The name and action
 attributes must not contain '/' characters after parsing (since that
 would mess up path lookup) and must be usable as XML attributes when
 enclosed in doublequotes, thus they must not '"' characters or references
 to the &quot; entity.
-  
+
  \emph{A UI definition}\preformatted{<ui>
   <menubar>
     <menu name="FileMenu" action="FileMenuAction">
@@ -108,7 +108,7 @@ to the &quot; entity.
     </placeholder>
   </toolbar>
 </ui>
-}  
+}
 The constructed widget hierarchy is very similar to the element tree
 of the XML, with the exception that placeholders are merged into their
 parents. The correspondence of XML elements to widgets should be
@@ -127,13 +127,13 @@ if their associated action specifies a \code{\link{GtkMenuToolButton}} as proxy.
 \code{\link{GtkSeparatorToolItem}}}
 \item{accelerator}{a keyboard accelerator}
 }
-  
+
 The "position" attribute determines where a constructed widget is positioned
 wrt. to its siblings in the partially constructed tree. If it is
 "top", the widget is prepended, otherwise it is appended.}
 \section{UI Merging}{The most remarkable feature of \code{\link{GtkUIManager}} is that it can overlay a set
 of menuitems and toolitems over another one, and demerge them later.
-  
+
 Merging is done based on the names of the XML elements. Each element is
 identified by a path which consists of the names of its anchestors, separated
 by slashes. For example, the menuitem named "Left" in the example above
@@ -151,7 +151,7 @@ containing them, or multiple separators next to each other, are hidden. This
 is a useful feature, since the merging of UI elements from multiple sources
 can make it hard or impossible to determine in advance whether a separator
 will end up in such an unfortunate position.
-  
+
 For separators in toolbars, you can set \code{expand="true"} to
 turn them from a small, visible separator to an expanding, invisible one.
 Toolitems following an expanding separator are effectively right-aligned.}
@@ -166,14 +166,14 @@ The behaviour is chosen based on the "hide_if_empty" property of the action
 to which the submenu is associated.}
 \section{GtkUIManager as GtkBuildable}{The GtkUIManager implementation of the GtkBuildable interface accepts
 GtkActionGroup objects as <child> elements in UI definitions.
-  
+
 A GtkUIManager UI definition as described above can be embedded in
 an GtkUIManager <object> element in a GtkBuilder UI definition.
-  
+
 The widgets that are constructed by a GtkUIManager can be embedded in
 other parts of the constructed user interface with the help of the
 "constructor" attribute. See the example below.
-  
+
  \emph{An embedded GtkUIManager UI definition}\preformatted{<object class="GtkUIManager" id="uiman">
   <child>
     <object class="GtkActionGroup" id="actiongroup">
@@ -251,7 +251,7 @@ It is not emitted for generated popup menus, which can be obtained by
 \item{\code{connect-proxy(uimanager, action, proxy, user.data)}}{
 The connect_proxy signal is emitted after connecting a proxy to
 an action in the group.
-  
+
 This is intended for simple customizations for which a custom action
 class would be too clumsy, e.g. showing tooltips for menuitems in the
 statusbar.
@@ -283,7 +283,7 @@ from an action in the group.
 \item{\code{post-activate(uimanager, action, user.data)}}{
 The post_activate signal is emitted just after the \code{action}
 is activated.
-  
+
 This is intended for applications to get notification
 just after any action is activated.
   Since 2.4
@@ -299,7 +299,7 @@ just after any action is activated.
 \item{\code{pre-activate(uimanager, action, user.data)}}{
 The pre_activate signal is emitted just before the \code{action}
 is activated.
-  
+
 This is intended for applications to get notification
 just before any action is activated.
   Since 2.4
@@ -318,7 +318,7 @@ just before any action is activated.
 
 The "add-tearoffs" property controls whether generated menus
 have tearoff menu items.
-  
+
 Note that this only affects regular menus. Generated popup
 menus never have tearoff menu items.
   Default value: FALSE  Since 2.4

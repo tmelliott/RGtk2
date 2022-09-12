@@ -15,7 +15,7 @@ a new source pattern is set.}
 \details{The color and alpha components are floating point numbers in the
 range 0 to 1. If the values passed in are outside that range, they
 will be clamped.
-  
+
 The default source pattern is opaque black, (that is, it is
 equivalent to cairo_set_source_rgba(cr, 0.0, 0.0, 0.0, 1.0)).  }
 \author{Derived by RGtkGen from GTK+ documentation}

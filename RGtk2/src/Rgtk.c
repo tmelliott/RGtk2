@@ -18,7 +18,7 @@ R_gtk_eventHandler(void *userData)
 {
   // FIXME: this is an infinite loop when there are idle tasks, do we
   // still need the gtk_events_pending()?
-  
+
   // It seems we do; if the events are not flushed, this handler is
   // continually invoked.
   while (gtk_events_pending())
@@ -112,7 +112,7 @@ R_gtkInit(long *rargc, char **rargv, Rboolean *success)
   int argc;
 
   argc = (int) *rargc;
-  
+
   if (!gdk_display_get_default()) {
     gtk_disable_setlocale();
     if (!gtk_init_check(&argc, &rargv)) {
@@ -161,7 +161,7 @@ R_gtkInit(long *rargc, char **rargv, Rboolean *success)
 #if R_VERSION < R_Version(2,8,0)
   R_tcldo = R_gtk_handle_events;
 #else
-  
+
   /* Create a dummy window for receiving messages */
   LPCTSTR class = "RGtk2";
   HINSTANCE instance = GetModuleHandle(NULL);
@@ -176,14 +176,14 @@ R_gtkInit(long *rargc, char **rargv, Rboolean *success)
 #endif // Windows
 
   R_GTK_TYPE_PARAM_SEXP;
-  
+
   g_value_register_transform_func(G_TYPE_DOUBLE, G_TYPE_STRING,
                                   transformDoubleString);
   g_value_register_transform_func(G_TYPE_INT, G_TYPE_STRING,
                                   transformIntString);
   g_value_register_transform_func(G_TYPE_BOOLEAN, G_TYPE_STRING,
                                   transformBooleanString);
-  
+
   *success = TRUE;
 }
 

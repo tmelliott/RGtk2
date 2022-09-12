@@ -6,7 +6,7 @@ detected automatically. If \code{NULL} is returned, then \code{error} will be se
 Possible errors are in the \verb{GDK_PIXBUF_ERROR} and \verb{G_FILE_ERROR} domains.
 The image will be scaled to fit in the requested size, optionally preserving
 the image's aspect ratio. }
-\usage{gdkPixbufNewFromFileAtScale(filename, width, height, preserve.aspect.ratio, 
+\usage{gdkPixbufNewFromFileAtScale(filename, width, height, preserve.aspect.ratio,
     .errwarn = TRUE)}
 \arguments{
 \item{\verb{filename}}{Name of file to load, in the GLib file name encoding}
@@ -18,8 +18,8 @@ the image's aspect ratio. }
 \details{When preserving the aspect ratio, a \code{width} of -1 will cause the image
 to be scaled to the exact given height, and a \code{height} of -1 will cause
 the image to be scaled to the exact given width. When not preserving
-aspect ratio, a \code{width} or \code{height} of -1 means to not scale the image 
-at all in that dimension. Negative values for \code{width} and \code{height} are 
+aspect ratio, a \code{width} or \code{height} of -1 means to not scale the image
+at all in that dimension. Negative values for \code{width} and \code{height} are
 allowed since 2.8.
   Since 2.6}
 \value{

@@ -13,9 +13,9 @@ font API.}
 \details{If \code{family} is the zero-length string "", the platform-specific default
 family is assumed.  The default family then can be queried using
 \code{\link{cairoToyFontFaceGetFamily}}.
-  
+
 The \code{\link{cairoSelectFontFace}} function uses this to create font faces.
-See that function for limitations of toy font faces.  
+See that function for limitations of toy font faces.
   Since 1.8}
 \value{[\code{\link{CairoFontFace}}]  a newly created \code{\link{CairoFontFace}}.}
 \author{Derived by RGtkGen from GTK+ documentation}

@@ -18,12 +18,12 @@ user sees as the clipboard.}
 to use.}
 }
 \details{(Passing \verb{GDK_NONE} is the same as using \code{gdk_atom_intern
-("CLIPBOARD", FALSE)}. See 
+("CLIPBOARD", FALSE)}. See
 http://www.freedesktop.org/Standards/clipboards-spec (\url{http://www.freedesktop.org/Standards/clipboards-spec})
 for a detailed discussion of the "CLIPBOARD" vs. "PRIMARY"
 selections under the X window system. On Win32 the
 \verb{GDK_SELECTION_PRIMARY} clipboard is essentially ignored.)
-  
+
 It's possible to have arbitrary named clipboards; if you do invent
 new clipboards, you should prefix the selection name with an
 underscore (because the ICCCM requires that nonstandard atoms are

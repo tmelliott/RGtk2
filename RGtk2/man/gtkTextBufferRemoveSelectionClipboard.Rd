@@ -1,7 +1,7 @@
 \alias{gtkTextBufferRemoveSelectionClipboard}
 \name{gtkTextBufferRemoveSelectionClipboard}
 \title{gtkTextBufferRemoveSelectionClipboard}
-\description{Removes a \code{\link{GtkClipboard}} added with 
+\description{Removes a \code{\link{GtkClipboard}} added with
 \code{\link{gtkTextBufferAddSelectionClipboard}}.}
 \usage{gtkTextBufferRemoveSelectionClipboard(object, clipboard)}
 \arguments{

@@ -3,7 +3,7 @@
 \title{gtkIconViewGetPathAtPos}
 \description{Finds the path at the point (\code{x}, \code{y}), relative to bin_window coordinates.
 See \code{\link{gtkIconViewGetItemAtPos}}, if you are also interested in
-the cell at the specified position. 
+the cell at the specified position.
 See \code{\link{gtkIconViewConvertWidgetToBinWindowCoords}} for converting
 widget coordinates to bin_window coordinates.}
 \usage{gtkIconViewGetPathAtPos(object, x, y)}

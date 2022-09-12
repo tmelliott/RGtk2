@@ -1,7 +1,7 @@
 \alias{gtkMenuBarGetPackDirection}
 \name{gtkMenuBarGetPackDirection}
 \title{gtkMenuBarGetPackDirection}
-\description{Retrieves the current pack direction of the menubar. 
+\description{Retrieves the current pack direction of the menubar.
 See \code{\link{gtkMenuBarSetPackDirection}}.}
 \usage{gtkMenuBarGetPackDirection(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkMenuBar}}}}

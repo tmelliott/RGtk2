@@ -3,7 +3,7 @@
 \title{gFileReplaceAsync}
 \description{Asynchronously overwrites the file, replacing the contents, possibly
 creating a backup copy of the file first.}
-\usage{gFileReplaceAsync(object, etag, make.backup, flags = "G_FILE_CREATE_NONE", 
+\usage{gFileReplaceAsync(object, etag, make.backup, flags = "G_FILE_CREATE_NONE",
     io.priority = 0, cancellable = NULL, callback, user.data = NULL)}
 \arguments{
 \item{\verb{object}}{input \code{\link{GFile}}.}
@@ -19,7 +19,7 @@ of the request.}
 }
 \details{For more details, see \code{\link{gFileReplace}} which is
 the synchronous version of this call.
-  
+
 When the operation is finished, \code{callback} will be called. You can then call
 \code{\link{gFileReplaceFinish}} to get the result of the operation.}
 \author{Derived by RGtkGen from GTK+ documentation}

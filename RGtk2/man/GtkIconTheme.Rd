@@ -46,8 +46,8 @@ Theme Specification (\url{http://www.freedesktop.org/Standards/icon-theme-spec})
 named \code{hicolor} where applications should install
 their icons, but more additional application themes can be
 installed as operating system vendors and users choose.
-  
-Named icons are similar to the 
+
+Named icons are similar to the
 facility, and the distinction between the two may be a bit confusing.
 A few things to keep in mind:
   \itemize{
@@ -64,7 +64,7 @@ and any pixel size can be specified.
 to actions in the user interface, stock images may come in
 multiple variants for different widget states or writing
 directions.
-}  
+}
 A good rule of thumb is that if there is a stock image for what
 you want to use, use it, otherwise use a named icon. It turns
 out that internally stock images are generally defined in
@@ -72,7 +72,7 @@ terms of one or more named icons. (An example of the
 more than one case is icons that depend on writing direction;
 GTK_STOCK_GO_FORWARD uses the two themed icons
 "gtk-stock-go-forward-ltr" and "gtk-stock-go-forward-rtl".)
-  
+
 In many cases, named themes are used indirectly, via \code{\link{GtkImage}}
 or stock items, rather than directly, but looking up icons
 directly is also simple. The \code{\link{GtkIconTheme}} object acts

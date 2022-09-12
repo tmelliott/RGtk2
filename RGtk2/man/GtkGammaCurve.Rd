@@ -20,13 +20,13 @@
 \section{Detailed Description}{The \code{\link{GtkGammaCurve}} widget is a variant of \code{\link{GtkCurve}} specifically for
 editing gamma curves, which are used in graphics applications such as the
 Gimp.
-  
+
 The \code{\link{GtkGammaCurve}} widget shows a curve which the user can edit with the
 mouse just like a \code{\link{GtkCurve}} widget. On the right of the curve it also displays
 5 buttons, 3 of which change between the 3 curve modes (spline, linear and
 free), and the other 2 set the curve to a particular gamma value, or reset it
 to a straight line.
-  
+
 As of GTK+ 2.20, \code{\link{GtkGammaCurve}} has been deprecated since it is too specialized.}
 \section{Structures}{\describe{\item{\verb{GtkGammaCurve}}{
 \strong{WARNING: \code{GtkGammaCurve} is deprecated and should not be used in newly-written code.}

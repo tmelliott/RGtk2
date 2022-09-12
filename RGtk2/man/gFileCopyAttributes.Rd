@@ -2,7 +2,7 @@
 \name{gFileCopyAttributes}
 \title{gFileCopyAttributes}
 \description{Copies the file attributes from \code{source} to \code{destination}. }
-\usage{gFileCopyAttributes(object, destination, flags = "G_FILE_COPY_NONE", 
+\usage{gFileCopyAttributes(object, destination, flags = "G_FILE_COPY_NONE",
     cancellable = NULL, .errwarn = TRUE)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GFile}} with attributes.}

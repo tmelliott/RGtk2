@@ -3,7 +3,7 @@
 \title{gdkDrawTextWc}
 \description{
 Draws a number of wide characters using the given font of fontset.
-If the font is a 1-byte font, the string is converted into 1-byte 
+If the font is a 1-byte font, the string is converted into 1-byte
 characters (discarding the high bytes) before output.
 \strong{WARNING: \code{gdk_draw_text_wc} has been deprecated since version 2.4 and should not be used in newly-written code. Use \code{\link{gdkDrawLayout}} instead.}
 }

@@ -39,17 +39,17 @@ and then pass it to the \code{\link{GtkPrintOperation}} when printing.
 The benefit of splitting this out of the \code{\link{GtkPrintSettings}} is that
 these affect the actual layout of the page, and thus need to be set
 long before user prints.
-  
+
 The margins specified in this object are the "print margins", i.e. the
 parts of the page that the printer cannot print on. These are different
 from the layout margins that a word processor uses; they are typically
 used to determine the \emph{minimal} size for the layout
 margins.
-  
+
 To obtain a \code{\link{GtkPageSetup}} use \code{\link{gtkPageSetupNew}}
 to get the defaults, or use \code{\link{gtkPrintRunPageSetupDialog}} to show
 the page setup dialog and receive the resulting page setup.
-  
+
  \emph{A page setup dialog}
 \preformatted{
 do_page_setup <- function()
@@ -63,7 +63,7 @@ do_page_setup <- function()
   page_setup <- new_page_setup
 }
 
-}  
+}
 Printing support was added in GTK+ 2.10.}
 \section{Structures}{\describe{\item{\verb{GtkPageSetup}}{
 \emph{undocumented

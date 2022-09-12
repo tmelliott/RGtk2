@@ -4,12 +4,11 @@ RADIUS <- 150
 N.WORDS <- 10
 FONT <- "Sans Bold 27"
 
-rotated.text.expose.event <- function(widget, event, data)
-{
+rotated.text.expose.event <- function(widget, event, data) {
 
   ## matrix describing font transformation, initialize to identity
   matrix <- pangoMatrixInit()
-  
+
   width <- widget[["allocation"]][["width"]]
   height <- widget[["allocation"]][["height"]]
 
@@ -22,8 +21,10 @@ rotated.text.expose.event <- function(widget, event, data)
   ## the centered square where we draw are [-RADIUS, RADIUS], [-RADIUS, RADIUS]
   ## We first center, then change the scale
   device.radius <- min(width, height) / 2.
-  matrix$translate(device.radius + (width - 2 * device.radius) / 2,
-                   device.radius + (height - 2 * device.radius) / 2)
+  matrix$translate(
+    device.radius + (width - 2 * device.radius) / 2,
+    device.radius + (height - 2 * device.radius) / 2
+  )
   matrix$scale(device.radius / RADIUS, device.radius / RADIUS)
 
   ## Create a PangoLayout, set the font and text
@@ -37,26 +38,26 @@ rotated.text.expose.event <- function(widget, event, data)
   for (i in 1:N.WORDS) {
     rotated.matrix <- matrix$copy()
     angle <- (360 * i) / N.WORDS
-    
+
     color <- list()
     ## Gradient from red at angle 60 to blue at angle 300
     color$red <- 65535 * (1 + cos((angle - 60) * pi / 180)) / 2
     color$green <- 0
     color$blue <- 65535 - color$red
-    
+
     renderer$setOverrideColor("foreground", color)
-    
+
     rotated.matrix$rotate(angle)
-    
+
     context$setMatrix(rotated.matrix)
-    
+
     ## Inform Pango to re-layout the text with the new transformation matrix
     layout$contextChanged()
-    
+
     size <- layout$getSize()
-    renderer$drawLayout(layout, - size$width / 2, - RADIUS * 1024)
+    renderer$drawLayout(layout, -size$width / 2, -RADIUS * 1024)
   }
-  
+
   ## Clean up default renderer, since it is shared
   renderer$setOverrideColor("foreground", NULL)
   renderer$setDrawable(NULL)
@@ -66,7 +67,7 @@ rotated.text.expose.event <- function(widget, event, data)
 }
 
 
-white <- c( 0, "0xffff", "0xffff", "0xffff" )
+white <- c(0, "0xffff", "0xffff", "0xffff")
 
 window <- gtkWindowNew("toplevel")
 window$setTitle("Rotated Text")

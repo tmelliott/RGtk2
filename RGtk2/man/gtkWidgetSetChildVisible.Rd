@@ -13,13 +13,13 @@ a container with \code{\link{gtkWidgetSetParent}}, to avoid mapping
 children unnecessary before immediately unmapping them. However
 it will be reset to its default state of \code{TRUE} when the widget
 is removed from a container.
-  
+
 Note that changing the child visibility of a widget does not
 queue a resize on the widget. Most of the time, the size of
 a widget is computed from all visible children, whether or
 not they are mapped. If this is not the case, the container
 can queue a resize itself.
-  
+
 This function is only useful for container implementations and
 never should be called by an application.}
 \author{Derived by RGtkGen from GTK+ documentation}

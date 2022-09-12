@@ -3,7 +3,7 @@
 \title{pangoRendererDrawTrapezoid}
 \description{Draws a trapezoid with the parallel sides aligned with the X axis
 using the given \code{\link{PangoRenderer}}; coordinates are in device space.}
-\usage{pangoRendererDrawTrapezoid(object, part, y1., x11, x21, y2, x12, 
+\usage{pangoRendererDrawTrapezoid(object, part, y1., x11, x21, y2, x12,
     x22)}
 \arguments{
 \item{\verb{object}}{[\code{\link{PangoRenderer}}]  a \code{\link{PangoRenderer}}}

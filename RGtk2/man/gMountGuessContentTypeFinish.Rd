@@ -3,8 +3,8 @@
 \title{gMountGuessContentTypeFinish}
 \description{Finishes guessing content types of \code{mount}. If any errors occured
 during the operation, \code{error} will be set to contain the errors and
-\code{FALSE} will be returned. In particular, you may get an 
-\code{G_IO_ERROR_NOT_SUPPORTED} if the mount does not support content 
+\code{FALSE} will be returned. In particular, you may get an
+\code{G_IO_ERROR_NOT_SUPPORTED} if the mount does not support content
 guessing.}
 \usage{gMountGuessContentTypeFinish(object, result, .errwarn = TRUE)}
 \arguments{

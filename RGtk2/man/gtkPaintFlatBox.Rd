@@ -2,7 +2,7 @@
 \name{gtkPaintFlatBox}
 \title{gtkPaintFlatBox}
 \description{Draws a flat box on \code{window} with the given parameters.}
-\usage{gtkPaintFlatBox(object, window, state.type, shadow.type, area = NULL, 
+\usage{gtkPaintFlatBox(object, window, state.type, shadow.type, area = NULL,
     widget = NULL, detail = NULL, x, y, width, height)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GtkStyle}}}

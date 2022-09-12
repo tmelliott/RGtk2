@@ -10,16 +10,16 @@ language uses most and continues to the one it uses least.}
 \arguments{\item{\verb{object}}{[\code{\link{PangoLanguage}}]  a \code{\link{PangoLanguage}}, or \code{NULL}}}
 \details{The value \code{num.script} points at will be set to the number
 of scripts in the returned list (or zero if \code{NULL} is returned).
-  
+
 Most languages use only one script for writing, but there are
 some that use two (Latin and Cyrillic for example), and a few
 use three (Japanese for example).  Applications should not make
 any assumptions on the maximum number of scripts returned
 though, except that it is positive if the return value is not
 \code{NULL}, and it is a small number.
-  
+
 The \code{\link{pangoLanguageIncludesScript}} function uses this function
-internally.  
+internally.
   Since 1.22}
 \value{
 A list containing the following elements:

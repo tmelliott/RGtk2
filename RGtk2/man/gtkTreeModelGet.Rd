@@ -7,7 +7,7 @@ each column number followed by a place to store the value being
 retrieved.  The list is terminated by a -1. For example, to get a
 value from column 0 with type \code{G_TYPE_STRING}, you would
 write: \code{gtk_tree_model_get (model, iter, 0, &place_string_here, -1)},
-where \code{place_string_here} is a \verb{character} to be 
+where \code{place_string_here} is a \verb{character} to be
 filled with the string.
 If appropriate,}
 \usage{gtkTreeModelGet(object, iter, ...)}

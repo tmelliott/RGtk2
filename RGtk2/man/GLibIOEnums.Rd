@@ -20,7 +20,7 @@
     }
     \item{\verb{GIOCondition}}{
       A bitwise combination representing a condition to watch for on an
-      event source. 
+      event source.
       \describe{
         \item{\verb{in}}{There is data to read. }
         \item{\verb{out}}{Data can be written (unblocked).}

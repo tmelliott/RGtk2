@@ -34,53 +34,56 @@ images <- list(N.IMAGES)
 da <- NULL
 
 # Loads the images for the demo, throwing an error if there's a problem
-load.pixbufs <- function()
-{
-  if (!is.null(background))
-    return() # already loaded earlier
+load.pixbufs <- function() {
+  if (!is.null(background)) {
+    return()
+  } # already loaded earlier
 
   filename <- imagefile(BACKGROUND.NAME)
-  if (!file.exists(filename))
+  if (!file.exists(filename)) {
     stop("Could not find background image file:", filename)
+  }
 
   background.result <- gdkPixbufNewFromFile(filename)
 
-  if (is.null(background.result[[1]]))
+  if (is.null(background.result[[1]])) {
     stop("Could not load background image:", background.result$error$message)
+  }
   background <<- background.result[[1]]
 
   back.width <<- background$getWidth()
   back.height <<- background$getHeight()
 
   for (i in 1:N.IMAGES)
-    {
-      filename <- imagefile(image.names[i])
-      if (!file.exists(filename))
-          stop("Could not find image file:", image.names[i])
-
-      image.result <- gdkPixbufNewFromFile(filename)
-
-      if (is.null(image.result[[1]]))
-          stop("Could not load image", image.names[i], ":", image.result$error$message)
-      images[[i]] <<- image.result[[1]]
+  {
+    filename <- imagefile(image.names[i])
+    if (!file.exists(filename)) {
+      stop("Could not find image file:", image.names[i])
     }
+
+    image.result <- gdkPixbufNewFromFile(filename)
+
+    if (is.null(image.result[[1]])) {
+      stop("Could not load image", image.names[i], ":", image.result$error$message)
+    }
+    images[[i]] <<- image.result[[1]]
+  }
 
   return()
 }
 
 # Expose callback for the drawing area
-expose.cb <- function(widget, event, data)
-{
-  #rowstride <- frame$getRowstride()
+expose.cb <- function(widget, event, data) {
+  # rowstride <- frame$getRowstride()
 
-  #pixels <- frame$getPixels() # get the image data that was exposed
-  #pixels <- pixels[(rowstride * event[["area"]][["y"]] + event[["area"]][["x"]] * 3):length(pixels)]
+  # pixels <- frame$getPixels() # get the image data that was exposed
+  # pixels <- pixels[(rowstride * event[["area"]][["y"]] + event[["area"]][["x"]] * 3):length(pixels)]
 
   cr <- gdkCairoCreate(widget[["window"]])
   gdkCairoSetSourcePixbuf(cr, frame, 0, 0)
   gdkCairoRectangle(cr, event[["area"]])
   cr$fill()
-  
+
   return(TRUE)
 }
 
@@ -89,8 +92,7 @@ CYCLE.LEN <- 60
 frame.num <- 0
 
 # Timeout handler to regenerate the frame
-timeout <- function(data)
-{
+timeout <- function(data) {
   background$copyArea(0, 0, back.width, back.height, frame, 0, 0)
 
   f <- (frame.num %% CYCLE.LEN) / CYCLE.LEN
@@ -101,36 +103,36 @@ timeout <- function(data)
   radius <- min(xmid, ymid) / 2
 
   for (i in 1:N.IMAGES)
-    {
-      ang <- 2 * pi * i / N.IMAGES - f * 2 * pi
+  {
+    ang <- 2 * pi * i / N.IMAGES - f * 2 * pi
 
-      iw <- images[[i]]$getWidth()
-      ih <- images[[i]]$getHeight()
+    iw <- images[[i]]$getWidth()
+    ih <- images[[i]]$getHeight()
 
-      r <- radius + (radius / 3) * sin(f * 2.0 * pi)
+    r <- radius + (radius / 3) * sin(f * 2.0 * pi)
 
-      xpos <- floor(xmid + r * cos(ang) - iw / 2 + 0.5)
-      ypos <- floor(ymid + r * sin(ang) - ih / 2 + 0.5)
+    xpos <- floor(xmid + r * cos(ang) - iw / 2 + 0.5)
+    ypos <- floor(ymid + r * sin(ang) - ih / 2 + 0.5)
 
-      k <- sin(f * 2.0 * pi)
-      alpha <- max(127, abs(255 * sin(f * 2.0 * pi)))
-      if (i %% 2 == 0) {
-          k <- cos(f * 2.0 * pi)
-          alpha <- max(127, abs(255 * cos(f * 2.0 * pi)))
-      }
-      k <- 2.0 * k * k
-      k <- max(0.25, k)
-
-      r1 <- c(xpos, ypos, iw * k, ih * k)
-
-      r2 <- c(0, 0, back.width, back.height)
-
-      inter <- gdkRectangleIntersect(r1, r2)
-      if (inter[[1]]) {
-          dest <- inter$dest
-          images[[i]]$composite(frame, dest$x, dest$y, dest$width, dest$height, xpos, ypos, k, k, "nearest", alpha)
-      }
+    k <- sin(f * 2.0 * pi)
+    alpha <- max(127, abs(255 * sin(f * 2.0 * pi)))
+    if (i %% 2 == 0) {
+      k <- cos(f * 2.0 * pi)
+      alpha <- max(127, abs(255 * cos(f * 2.0 * pi)))
     }
+    k <- 2.0 * k * k
+    k <- max(0.25, k)
+
+    r1 <- c(xpos, ypos, iw * k, ih * k)
+
+    r2 <- c(0, 0, back.width, back.height)
+
+    inter <- gdkRectangleIntersect(r1, r2)
+    if (inter[[1]]) {
+      dest <- inter$dest
+      images[[i]]$composite(frame, dest$x, dest$y, dest$width, dest$height, xpos, ypos, k, k, "nearest", alpha)
+    }
+  }
 
   da$queueDraw()
 
@@ -140,8 +142,7 @@ timeout <- function(data)
 
 timeout.id <- NULL
 
-cleanup.callback <- function(object, data)
-{
+cleanup.callback <- function(object, data) {
   gSourceRemove(timeout.id)
   timeout.id <<- NULL
 }
@@ -153,26 +154,26 @@ window$setResizable(FALSE)
 gSignalConnect(window, "destroy", cleanup.callback)
 
 error <- try(load.pixbufs())
-if (inherits(error, "try-error"))
-{
-      dialog <- gtkMessageDialogNew(window, "destroy-with-parent", "error", "close",
-                       "Problem loading images:", error)
-      gSignalConnect(dialog, "response", gtkWidgetDestroy)
+if (inherits(error, "try-error")) {
+  dialog <- gtkMessageDialogNew(
+    window, "destroy-with-parent", "error", "close",
+    "Problem loading images:", error
+  )
+  gSignalConnect(dialog, "response", gtkWidgetDestroy)
 } else {
-      window$setSizeRequest(back.width, back.height)
+  window$setSizeRequest(back.width, back.height)
 
-      frame <- gdkPixbufNew("rgb", FALSE, 8, back.width, back.height)
+  frame <- gdkPixbufNew("rgb", FALSE, 8, back.width, back.height)
 
-      da <- gtkDrawingAreaNew()
+  da <- gtkDrawingAreaNew()
 
-      gSignalConnect(da, "expose_event", expose.cb)
+  gSignalConnect(da, "expose_event", expose.cb)
 
-      window$add(da)
+  window$add(da)
 
-      timeout.id <- gTimeoutAdd(FRAME.DELAY, timeout)
+  timeout.id <- gTimeoutAdd(FRAME.DELAY, timeout)
 
-      window$showAll()
-	  
-	  print("TIP: Hold down the spacebar for the objects to move")
+  window$showAll()
+
+  print("TIP: Hold down the spacebar for the objects to move")
 }
-

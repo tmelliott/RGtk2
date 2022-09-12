@@ -2,7 +2,7 @@
 \name{gFileEnumeratorCloseAsync}
 \title{gFileEnumeratorCloseAsync}
 \description{Asynchronously closes the file enumerator. }
-\usage{gFileEnumeratorCloseAsync(object, io.priority = 0, cancellable = NULL, 
+\usage{gFileEnumeratorCloseAsync(object, io.priority = 0, cancellable = NULL,
     callback, user.data = NULL)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GFileEnumerator}}.}
@@ -14,7 +14,7 @@ of the request.}
 }
 \details{If \code{cancellable} is not \code{NULL}, then the operation can be cancelled by
 triggering the cancellable object from another thread. If the operation
-was cancelled, the error \code{G_IO_ERROR_CANCELLED} will be returned in 
+was cancelled, the error \code{G_IO_ERROR_CANCELLED} will be returned in
 \code{\link{gFileEnumeratorCloseFinish}}.}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

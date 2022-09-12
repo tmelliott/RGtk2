@@ -13,9 +13,9 @@ similar to \code{\link{pangoCairoShowGlyphString}}.}
 }
 \details{The origin of the glyphs (the left edge of the baseline) will
 be drawn at the current point of the cairo context.
-  
+
 Note that \code{text} is the start of the text for layout, which is then
-indexed by \code{glyph_item->item->offset}.  
+indexed by \code{glyph_item->item->offset}.
   Since 1.22}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

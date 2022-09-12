@@ -1,10 +1,10 @@
 \alias{gFileSetAttributeByteString}
 \name{gFileSetAttributeByteString}
 \title{gFileSetAttributeByteString}
-\description{Sets \code{attribute} of type \code{G_FILE_ATTRIBUTE_TYPE_BYTE_STRING} to \code{value}. 
-If \code{attribute} is of a different type, this operation will fail, 
+\description{Sets \code{attribute} of type \code{G_FILE_ATTRIBUTE_TYPE_BYTE_STRING} to \code{value}.
+If \code{attribute} is of a different type, this operation will fail,
 returning \code{FALSE}. }
-\usage{gFileSetAttributeByteString(object, attribute, value, flags = "G_FILE_QUERY_INFO_NONE", 
+\usage{gFileSetAttributeByteString(object, attribute, value, flags = "G_FILE_QUERY_INFO_NONE",
     cancellable = NULL, .errwarn = TRUE)}
 \arguments{
 \item{\verb{object}}{input \code{\link{GFile}}.}

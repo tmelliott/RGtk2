@@ -29,7 +29,7 @@
 \section{Detailed Description}{The \code{\link{GtkBin}} widget is a container with just one child.
 It is not very useful itself, but it is useful for deriving subclasses,
 since it provides common code needed for handling a single child widget.
-  
+
 Many GTK+ widgets are subclasses of \code{\link{GtkBin}}, including \code{\link{GtkWindow}}, \code{\link{GtkButton}},
 \code{\link{GtkFrame}}, \code{\link{GtkHandleBox}}, and \code{\link{GtkScrolledWindow}}.}
 \section{Structures}{\describe{\item{\verb{GtkBin}}{

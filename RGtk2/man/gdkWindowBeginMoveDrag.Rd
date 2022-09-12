@@ -4,7 +4,7 @@
 \description{Begins a window move operation (for a toplevel window).  You might
 use this function to implement a "window move grip," for
 example. The function works best with window managers that support
-the Extended 
+the Extended
 Window Manager Hints (\url{http://www.freedesktop.org/Standards/wm-spec}), but has a fallback implementation for
 other window managers.}
 \usage{gdkWindowBeginMoveDrag(object, button, root.x, root.y, timestamp)}

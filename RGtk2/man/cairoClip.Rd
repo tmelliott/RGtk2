@@ -8,11 +8,11 @@ and according to the current fill rule (see \code{\link{cairoSetFillRule}}).}
 \arguments{\item{\verb{cr}}{[\code{\link{Cairo}}]  a cairo context}}
 \details{After \code{\link{cairoClip}}, the current path will be cleared from the cairo
 context.
-  
+
 The current clip region affects all drawing operations by
 effectively masking out any changes to the surface that are outside
 the current clip region.
-  
+
 Calling \code{\link{cairoClip}} can only make the clip region smaller, never
 larger. But the current clip is part of the graphics state, so a
 temporary restriction of the clip region can be achieved by

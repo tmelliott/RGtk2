@@ -11,7 +11,7 @@ using double buffered rendering are keep on a pixmap until the last
 window has been exposed. It also delays window moves/scrolls until
 as long as possible until next update to avoid tearing when moving
 windows.
-  
+
 Normally this should be completely invisible to applications, as
 we automatically flush the windows when required, but this might
 be needed if you for instance mix direct native drawing with

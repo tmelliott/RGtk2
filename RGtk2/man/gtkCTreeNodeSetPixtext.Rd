@@ -5,7 +5,7 @@
 FIXME
 \strong{WARNING: \code{gtk_ctree_node_set_pixtext} is deprecated and should not be used in newly-written code.}
 }
-\usage{gtkCTreeNodeSetPixtext(object, node, column, text, spacing, pixmap, 
+\usage{gtkCTreeNodeSetPixtext(object, node, column, text, spacing, pixmap,
     mask = NULL)}
 \arguments{
 \item{\verb{object}}{. \emph{[  \acronym{allow-none}  ]}}

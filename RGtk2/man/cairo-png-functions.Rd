@@ -20,7 +20,7 @@ closure which was specified by the user at the time the read
 function was registered, the buffer to read the data into and the
 length of the data in bytes.  The read function should return
 \code{CAIRO_STATUS_SUCCESS} if all the data was successfully read,
-\code{CAIRO_STATUS_READ_ERROR} otherwise.  
+\code{CAIRO_STATUS_READ_ERROR} otherwise.
 
 \describe{
 \item{\code{closure}}{[R object]  the input closure}
@@ -38,7 +38,7 @@ closure which was specified by the user at the time the write
 function was registered, the data to write and the length of the
 data in bytes.  The write function should return
 \code{CAIRO_STATUS_SUCCESS} if all the data was successfully written,
-\code{CAIRO_STATUS_WRITE_ERROR} otherwise.  
+\code{CAIRO_STATUS_WRITE_ERROR} otherwise.
 
 \describe{
 \item{\code{closure}}{[R object]  the output closure}

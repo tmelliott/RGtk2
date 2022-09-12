@@ -4,7 +4,7 @@
 \alias{gtkObjectGetTypeName}
 \title{Dynamically Computes class information}
 \description{
-\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)} 
+\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)}
 
   These functions dynamically compute information
   about the class hierarchy for a given Gtk object
@@ -92,4 +92,3 @@ THIS STUFF IS VERY OLD AND DEPRECATED (compatibility wrappers for RGtk 1)
 
 \keyword{interface}
 \keyword{internal}
-

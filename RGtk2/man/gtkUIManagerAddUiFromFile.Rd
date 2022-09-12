@@ -1,7 +1,7 @@
 \alias{gtkUIManagerAddUiFromFile}
 \name{gtkUIManagerAddUiFromFile}
 \title{gtkUIManagerAddUiFromFile}
-\description{Parses a file containing a UI definition and 
+\description{Parses a file containing a UI definition and
 merges it with the current contents of \code{self}.}
 \usage{gtkUIManagerAddUiFromFile(object, filename, .errwarn = TRUE)}
 \arguments{

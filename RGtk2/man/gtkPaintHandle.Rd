@@ -2,7 +2,7 @@
 \name{gtkPaintHandle}
 \title{gtkPaintHandle}
 \description{Draws a handle as used in \code{\link{GtkHandleBox}} and \code{\link{GtkPaned}}.}
-\usage{gtkPaintHandle(object, window, state.type, shadow.type, area = NULL, 
+\usage{gtkPaintHandle(object, window, state.type, shadow.type, area = NULL,
     widget = NULL, detail = NULL, x, y, width, height, orientation)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GtkStyle}}}

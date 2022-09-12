@@ -12,7 +12,7 @@
          +----GIOModule}}
 \section{Interfaces}{GIOModule implements
  GTypePlugin.}
-\section{Detailed Description}{Provides an interface and default functions for loading and unloading 
+\section{Detailed Description}{Provides an interface and default functions for loading and unloading
 modules. This is used internally to make GIO extensible, but can also
 be used by others to implement module loading.}
 \section{Structures}{\describe{\item{\verb{GIOModule}}{

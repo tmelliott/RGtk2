@@ -36,7 +36,7 @@
 \section{Detailed Description}{\code{\link{CairoPattern}} is the paint with which cairo draws.
 The primary use of patterns is as the source for all cairo drawing operations,
 although they can also be used as masks, that is, as the brush too.
-  
+
 A cairo pattern is created by using one of the many constructors,
 of the form cairo_pattern_create_\emph{type}()
 or implicitly through
@@ -47,16 +47,16 @@ surface. There are different subtypes of \code{\link{CairoPattern}},
 for different types of sources; for example,
 \code{\link{cairoPatternCreateRgb}} creates a pattern for a solid
 opaque color.
-  
+
 Other than various cairo_pattern_create_\emph{type}()
 functions, some of the pattern types can be implicitly created
 using various cairo_set_source_\emph{type}() functions;
 for example \code{\link{cairoSetSourceRgb}}.
-  
+
 The type of a pattern can be queried with \code{\link{cairoPatternGetType}}.
-  
+
 Memory management of \code{\link{CairoPattern}} is done with
-\code{cairoPatternReference()} and \code{cairoPatternDestroy()}.  
+\code{cairoPatternReference()} and \code{cairoPatternDestroy()}.
 
 }}}
 \section{Convenient Construction}{\code{cairoPattern} is the result of collapsing the constructors of \code{cairo_pattern_t} (\code{\link{cairoPatternCreateRgb}}, \code{\link{cairoPatternCreateRgba}}, \code{\link{cairoPatternCreateForSurface}}, \code{\link{cairoPatternCreateLinear}}, \code{\link{cairoPatternCreateRadial}}) and accepts a subset of its arguments matching the required arguments of one of its delegate constructors.}
@@ -66,11 +66,11 @@ Memory management of \code{\link{CairoPattern}} is done with
 determined for areas "outside" the pattern's natural area, (for
 example, outside the surface bounds or outside the gradient
 geometry).
-  
+
 The default extend mode is \code{CAIRO_EXTEND_NONE} for surface patterns
 and \code{CAIRO_EXTEND_PAD} for gradient patterns.
-  
-New entries may be added in future versions.  
+
+New entries may be added in future versions.
 
 \describe{
 \item{\verb{none}}{ pixels outside of the source pattern
@@ -85,7 +85,7 @@ New entries may be added in future versions.
 \code{\link{CairoFilter}} is used to indicate what filtering should be
 applied when reading pixel values from patterns. See
 \code{cairoPatternSetSource()} for indicating the desired filter to be
-used with a particular pattern.  
+used with a particular pattern.
 
 \describe{
 \item{\verb{fast}}{ A high-performance filter, with quality similar
@@ -103,15 +103,15 @@ used with a particular pattern.
 }
 \item{\verb{CairoPatternType}}{
 \code{\link{CairoPatternType}} is used to describe the type of a given pattern.
-  
+
 The type of a pattern is determined by the function used to create
 it. The \code{\link{cairoPatternCreateRgb}} and \code{\link{cairoPatternCreateRgba}}
 functions create SOLID patterns. The remaining
 cairo_pattern_create functions map to pattern types in obvious
 ways.
-  
+
 The pattern type can be queried with \code{\link{cairoPatternGetType}}
-  
+
 Most \code{\link{CairoPattern}} functions can be called with a pattern of any
 type, (though trying to change the extend or filter for a solid
 pattern will have no effect). A notable exception is
@@ -119,8 +119,8 @@ pattern will have no effect). A notable exception is
 \code{\link{cairoPatternAddColorStopRgba}} which must only be called with
 gradient patterns (either LINEAR or RADIAL). Otherwise the pattern
 will be shutdown and put into an error state.
-  
-New entries may be added in future versions.  
+
+New entries may be added in future versions.
   Since 1.2
 
 \describe{

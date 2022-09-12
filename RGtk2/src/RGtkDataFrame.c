@@ -48,7 +48,7 @@ static void r_gtk_data_frame_set_sort_func (GtkTreeSortable        *sortable,
 									   gint                    sort_col_id,
                                       GtkTreeIterCompareFunc  sort_func,
                                       gpointer                user_data,
-                                      GtkDestroyNotify        destroy_func);							
+                                      GtkDestroyNotify        destroy_func);
 static void r_gtk_data_frame_set_sort_column_id (GtkTreeSortable *sortable,
 									   gint             sort_col_id,
 									   GtkSortType      order);
@@ -231,10 +231,10 @@ static void
 r_gtk_data_frame_finalize (GObject *object)
 {
 	RGtkDataFrame *data_frame = R_GTK_DATA_FRAME (object);
-	
+
 	R_ReleaseObject(data_frame->frame);
 	R_ReleaseObject(data_frame->sort_closure);
-	
+
    /* must chain up */
    (* parent_class->finalize) (object);
 }
@@ -264,7 +264,7 @@ r_gtk_data_frame_get_column_type (GtkTreeModel *tree_model,
 {
   RGtkDataFrame *data_frame = (RGtkDataFrame *) tree_model;
   GType type;
-  
+
   g_return_val_if_fail (R_GTK_IS_DATA_FRAME (tree_model), G_TYPE_INVALID);
   g_return_val_if_fail (index < GET_LENGTH (R_GTK_DATA_FRAME (tree_model)->frame) &&
 			index >= 0, G_TYPE_INVALID);
@@ -279,7 +279,7 @@ r_gtk_data_frame_get_iter (GtkTreeModel *tree_model,
 {
   RGtkDataFrame *data_frame = (RGtkDataFrame *) tree_model;
   gint i;
-  
+
   g_return_val_if_fail (R_GTK_IS_DATA_FRAME (tree_model), FALSE);
   g_return_val_if_fail (gtk_tree_path_get_depth (path) > 0, FALSE);
 
@@ -290,7 +290,7 @@ r_gtk_data_frame_get_iter (GtkTreeModel *tree_model,
 
   iter->stamp = data_frame->stamp;
   iter->user_data = GINT_TO_POINTER(i);
-  
+
   return TRUE;
 }
 
@@ -305,13 +305,13 @@ r_gtk_data_frame_get_path (GtkTreeModel *tree_model,
   g_return_val_if_fail (iter->stamp == R_GTK_DATA_FRAME (tree_model)->stamp, NULL);
 
   row = GPOINTER_TO_INT(iter->user_data);
-  
+
   if (row >= r_gtk_data_frame_get_n_rows(R_GTK_DATA_FRAME(tree_model)))
 	  return(NULL);
-  
+
   path = gtk_tree_path_new ();
   gtk_tree_path_append_index (path, row);
-  
+
   return path;
 }
 
@@ -322,7 +322,7 @@ r_gtk_data_frame_get_value (GtkTreeModel *tree_model,
 			  GValue       *value)
 {
   RGtkDataFrame *data_frame = (RGtkDataFrame*)tree_model;
-  
+
   /*if (!VALID_ITER (iter, R_GTK_DATA_FRAME(tree_model)))
 	  g_debug("row: %d", GPOINTER_TO_INT(iter->user_data));*/
   g_return_if_fail (R_GTK_IS_DATA_FRAME (tree_model));
@@ -349,7 +349,7 @@ r_gtk_data_frame_iter_children (GtkTreeModel *tree_model,
 			      GtkTreeIter  *parent)
 {
   RGtkDataFrame *data_frame;
-  
+
   /* this is a list, nodes have no children */
   if (parent)
     return FALSE;
@@ -382,7 +382,7 @@ r_gtk_data_frame_iter_n_children (GtkTreeModel *tree_model,
   g_return_val_if_fail (R_GTK_IS_DATA_FRAME (tree_model), -1);
 
   data_frame = R_GTK_DATA_FRAME (tree_model);
-  
+
   if (iter == NULL)
     return r_gtk_data_frame_get_n_rows(data_frame);
 
@@ -397,11 +397,11 @@ r_gtk_data_frame_iter_nth_child (GtkTreeModel *tree_model,
 			       gint          n)
 {
   RGtkDataFrame *data_frame;
-  
+
   g_return_val_if_fail (R_GTK_IS_DATA_FRAME (tree_model), FALSE);
 
   data_frame = R_GTK_DATA_FRAME (tree_model);
-  
+
   if (parent)
     return FALSE;
 
@@ -442,9 +442,9 @@ R_r_gtk_data_frame_set (USER_OBJECT_ s_data_frame, USER_OBJECT_ s_frame, USER_OB
 	gint *changed_rows = asCArray(s_changed_rows, gint, asCInteger);
 	gint nrows = GET_LENGTH(s_changed_rows);
 	gboolean resort = asCLogical(s_resort);
-	
+
 	r_gtk_data_frame_set(data_frame, s_frame, changed_rows, nrows, resort);
-	
+
 	return NULL_USER_OBJECT;
 }
 
@@ -456,19 +456,19 @@ r_gtk_data_frame_set (RGtkDataFrame *data_frame,
 	gint i, old_nrows;
   gint frame_nrows = GET_LENGTH(getAttrib(frame, install("row.names")));
 	GtkTreeIter iter;
-	
+
 	g_return_if_fail (R_GTK_IS_DATA_FRAME (data_frame));
 	g_return_if_fail (frame != NULL);
-	
+
 	old_nrows = r_gtk_data_frame_get_n_rows(data_frame);
-	
+
 	R_ReleaseObject(data_frame->frame);
 	R_PreserveObject(frame);
-	
+
 	data_frame->frame = frame;
 	data_frame->stamp = data_frame->stamp + 1;
         data_frame->nrows = frame_nrows;
-        
+
 	for (i = 0; i < nrows; i++) {
 		gint row = changed_rows[i];
 		GtkTreePath *path = gtk_tree_path_new_from_indices(row, -1);
@@ -504,13 +504,13 @@ r_gtk_data_frame_remove (RGtkDataFrame *data_frame,
 			gint *deleted_rows, gint nrows)
 {
 	gint i;
-	
+
 	g_return_if_fail (R_GTK_IS_DATA_FRAME (data_frame));
 	g_return_if_fail (frame != NULL);
-	
+
 	data_frame->frame = frame;
 	data_frame->stamp = data_frame->stamp + 1;
-	
+
 	for (i = 0; i < nrows; i++) {
 		GtkTreePath *path = gtk_tree_path_new_from_indices(deleted_rows[i], -1);
 		gtk_tree_model_row_deleted(GTK_TREE_MODEL (data_frame), path);
@@ -551,7 +551,7 @@ r_gtk_data_frame_get_sort_column_id (GtkTreeSortable *sortable,
 
     return TRUE;
 }
-  
+
 static void
 r_gtk_data_frame_set_sort_column_id (GtkTreeSortable *sortable,
 									   gint             sort_col_id,
@@ -580,7 +580,7 @@ r_gtk_data_frame_set_sort_column_id (GtkTreeSortable *sortable,
 
     gtk_tree_sortable_sort_column_changed(sortable);
 }
-  
+
 static void
 r_gtk_data_frame_set_sort_func (GtkTreeSortable        *sortable,
 									   gint                    sort_col_id,
@@ -612,10 +612,10 @@ static void
 r_gtk_data_frame_resort(RGtkDataFrame *frame) {
 	USER_OBJECT_ e, val, tmp, envir = R_GlobalEnv;
 	int errorOccurred = 0;
-	
+
 	g_return_if_fail (frame->sort_id != -1);
 	g_return_if_fail (R_GTK_IS_DATA_FRAME (frame));
-	
+
 	PROTECT(e = allocVector(LANGSXP, 4));
 	SETCAR(e, frame->sort_closure);
 	tmp = CDR(e);
@@ -624,16 +624,15 @@ r_gtk_data_frame_resort(RGtkDataFrame *frame) {
 	SETCAR(tmp, asRInteger(frame->sort_id));
 	tmp = CDR(tmp);
 	SETCAR(tmp, asRLogical(frame->sort_order == GTK_SORT_DESCENDING));
-	
+
 	val = R_tryEval(e, envir, &errorOccurred);
-	
+
 	if (!errorOccurred) {
 		GtkTreePath *path = gtk_tree_path_new ();
 		r_gtk_data_frame_set(frame, VECTOR_ELT(val,0), NULL, 0, 0);
 		gtk_tree_model_rows_reordered (GTK_TREE_MODEL (frame),
 				 path, NULL, INTEGER_DATA(VECTOR_ELT(val,1)));
 	}
-	
+
 	UNPROTECT(1);
 }
-

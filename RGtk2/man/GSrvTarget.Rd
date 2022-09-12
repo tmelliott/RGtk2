@@ -21,7 +21,7 @@ rather than connecting directly to "example.com" or assuming a
 specific server hostname like "xmpp.example.com", an XMPP client
 would look up the "xmpp-client" SRV record for "example.com", and
 then connect to whatever host was pointed to by that record.
-  
+
 You can use \code{\link{gResolverLookupService}} or
 \code{\link{gResolverLookupServiceAsync}} to find the \code{\link{GSrvTarget}}s
 for a given service. However, if you are simply planning to connect

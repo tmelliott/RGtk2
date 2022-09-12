@@ -3,7 +3,7 @@
 \title{gtkListStoreSetValuesv}
 \description{A variant of \code{gtkListStoreSetValist()} which
 takes the columns and values as two lists, instead of
-varargs. This function is mainly intended for 
+varargs. This function is mainly intended for
 language-bindings and in case the number of columns to
 change is not known until run-time.}
 \usage{gtkListStoreSetValuesv(object, iter, columns, values)}

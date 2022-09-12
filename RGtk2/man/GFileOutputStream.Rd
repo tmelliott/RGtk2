@@ -16,12 +16,12 @@
  \code{\link{GSeekable}}.}
 \section{Detailed Description}{GFileOutputStream provides output streams that write their
 content to a file.
-  
-GFileOutputStream implements \code{\link{GSeekable}}, which allows the output 
+
+GFileOutputStream implements \code{\link{GSeekable}}, which allows the output
 stream to jump to arbitrary positions in the file and to truncate
-the file, provided the filesystem of the file supports these 
+the file, provided the filesystem of the file supports these
 operations.
-  
+
 To find the position of a file output stream, use \code{\link{gSeekableTell}}.
 To find out if a file output stream supports seeking, use
 \code{\link{gSeekableCanSeek}}.To position a file output stream, use

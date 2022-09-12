@@ -2,9 +2,9 @@
 \name{gtkWidgetInputShapeCombineMask}
 \title{gtkWidgetInputShapeCombineMask}
 \description{Sets an input shape for this widget's GDK window. This allows for
-windows which react to mouse click in a nonrectangular region, see 
+windows which react to mouse click in a nonrectangular region, see
 \code{\link{gdkWindowInputShapeCombineMask}} for more information.}
-\usage{gtkWidgetInputShapeCombineMask(object, shape.mask = NULL, offset.x, 
+\usage{gtkWidgetInputShapeCombineMask(object, shape.mask = NULL, offset.x,
     offset.y)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GtkWidget}}}

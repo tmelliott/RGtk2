@@ -2,7 +2,7 @@
 \name{gtkAspectFrameNew}
 \title{gtkAspectFrameNew}
 \description{Create a new \code{\link{GtkAspectFrame}}.}
-\usage{gtkAspectFrameNew(label = NULL, xalign = NULL, yalign = NULL, 
+\usage{gtkAspectFrameNew(label = NULL, xalign = NULL, yalign = NULL,
     ratio = NULL, obey.child = NULL, show = TRUE)}
 \arguments{
 \item{\verb{label}}{Label text.}

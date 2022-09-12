@@ -3,7 +3,7 @@
 \title{cairoSvgSurfaceCreateForStream}
 \description{Creates a SVG surface of the specified size in points to be written
 incrementally to the stream represented by \code{write.func} and \code{closure}.}
-\usage{cairoSvgSurfaceCreateForStream(write.func, closure, width.in.points, 
+\usage{cairoSvgSurfaceCreateForStream(write.func, closure, width.in.points,
     height.in.points)}
 \arguments{
 \item{\verb{write.func}}{[\code{\link{CairoWriteFunc}}]  a \code{\link{CairoWriteFunc}} to accept the output data, may be \code{NULL}

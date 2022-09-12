@@ -2,7 +2,7 @@
 \name{gFileFindEnclosingMountAsync}
 \title{gFileFindEnclosingMountAsync}
 \description{Asynchronously gets the mount for the file.}
-\usage{gFileFindEnclosingMountAsync(object, io.priority = 0, cancellable = NULL, 
+\usage{gFileFindEnclosingMountAsync(object, io.priority = 0, cancellable = NULL,
     callback, user.data = NULL)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GFile}}}
@@ -14,7 +14,7 @@ of the request.}
 }
 \details{For more details, see \code{\link{gFileFindEnclosingMount}} which is
 the synchronous version of this call.
-  
+
 When the operation is finished, \code{callback} will be called. You can then call
 \code{\link{gFileFindEnclosingMountFinish}} to get the result of the operation.}
 \author{Derived by RGtkGen from GTK+ documentation}

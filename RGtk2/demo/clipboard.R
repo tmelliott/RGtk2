@@ -1,25 +1,22 @@
 window <- NULL
 
-copy.button.clicked <- function(button, user.data)
-{
+copy.button.clicked <- function(button, user.data) {
   checkPtrType(user.data, "GtkWidget")
   entry <- user.data
 
- clipboard <- entry$getClipboard(GDK_SELECTION_CLIPBOARD)
-  
- clipboard$setText(entry$getText()) # copy all the text to the clipboard
+  clipboard <- entry$getClipboard(GDK_SELECTION_CLIPBOARD)
+
+  clipboard$setText(entry$getText()) # copy all the text to the clipboard
 }
 
-paste.received <- function(clipboard, text, user.data)
-{
+paste.received <- function(clipboard, text, user.data) {
   checkPtrType(user.data, "GtkWidget")
   entry <- user.data
 
   entry$setText(text)
 }
 
-paste.button.clicked <- function(button, user.data)
-{
+paste.button.clicked <- function(button, user.data) {
   checkPtrType(user.data, "GtkWidget")
   entry <- user.data
 
@@ -32,7 +29,7 @@ paste.button.clicked <- function(button, user.data)
 }
 
 
-window <- gtkWindowNew("toplevel", show=F)
+window <- gtkWindowNew("toplevel", show = F)
 vbox <- gtkVBoxNew(FALSE, 0)
 vbox$setBorderWidth(8)
 

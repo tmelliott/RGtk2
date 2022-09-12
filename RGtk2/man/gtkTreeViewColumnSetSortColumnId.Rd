@@ -1,7 +1,7 @@
 \alias{gtkTreeViewColumnSetSortColumnId}
 \name{gtkTreeViewColumnSetSortColumnId}
 \title{gtkTreeViewColumnSetSortColumnId}
-\description{Sets the logical \code{sort.column.id} that this column sorts on when this column 
+\description{Sets the logical \code{sort.column.id} that this column sorts on when this column
 is selected for sorting.  Doing so makes the column header clickable.}
 \usage{gtkTreeViewColumnSetSortColumnId(object, sort.column.id)}
 \arguments{

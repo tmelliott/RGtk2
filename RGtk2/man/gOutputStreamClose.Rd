@@ -10,24 +10,24 @@
 }
 \details{Once the stream is closed, all other operations will return \code{G_IO_ERROR_CLOSED}.
 Closing a stream multiple times will not return an error.
-  
+
 Closing a stream will automatically flush any outstanding buffers in the
 stream.
-  
+
 Streams will be automatically closed when the last reference
-is dropped, but you might want to call this function to make sure 
+is dropped, but you might want to call this function to make sure
 resources are released as early as possible.
-  
+
 Some streams might keep the backing store of the stream (e.g. a file descriptor)
 open after the stream is closed. See the documentation for the individual
 stream for details.
-  
+
 On failure the first error that happened will be reported, but the close
 operation will finish as much as possible. A stream that failed to
 close will still return \code{G_IO_ERROR_CLOSED} for all operations. Still, it
 is important to check and report the error to the user, otherwise
 there might be a loss of data as all data might not be written.
-  
+
 If \code{cancellable} is not NULL, then the operation can be cancelled by
 triggering the cancellable object from another thread. If the operation
 was cancelled, the error \code{G_IO_ERROR_CANCELLED} will be returned.

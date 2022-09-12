@@ -1,7 +1,7 @@
 \alias{atkEditableTextCopyText}
 \name{atkEditableTextCopyText}
 \title{atkEditableTextCopyText}
-\description{Copy text from \code{start.pos} up to, but not including \code{end.pos} 
+\description{Copy text from \code{start.pos} up to, but not including \code{end.pos}
 to the clipboard.}
 \usage{atkEditableTextCopyText(object, start.pos, end.pos)}
 \arguments{

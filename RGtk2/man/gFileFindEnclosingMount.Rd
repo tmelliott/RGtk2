@@ -8,10 +8,10 @@
 \item{\verb{cancellable}}{optional \code{\link{GCancellable}} object, \code{NULL} to ignore.}
 \item{.errwarn}{Whether to issue a warning on error or fail silently}
 }
-\details{If the \verb{GFileIface} for \code{file} does not have a mount (e.g. possibly a 
+\details{If the \verb{GFileIface} for \code{file} does not have a mount (e.g. possibly a
 remote share), \code{error} will be set to \code{G_IO_ERROR_NOT_FOUND} and \code{NULL}
 will be returned.
-  
+
 If \code{cancellable} is not \code{NULL}, then the operation can be cancelled by
 triggering the cancellable object from another thread. If the operation
 was cancelled, the error \code{G_IO_ERROR_CANCELLED} will be returned.}

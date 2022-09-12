@@ -25,7 +25,7 @@ and of ranges within a larger text string.}
 \section{Structures}{\describe{
 \item{\verb{PangoScriptIter}}{
 A \code{\link{PangoScriptIter}} is used to iterate through a string
-and identify ranges in different scripts.  
+and identify ranges in different scripts.
 
 }
 \item{\verb{PangoLanguage}}{

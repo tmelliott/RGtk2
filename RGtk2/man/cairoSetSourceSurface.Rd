@@ -15,7 +15,7 @@ the surface origin should appear. (The surface origin is its
 upper-left corner before any transformation has been applied.) The
 \code{x} and \code{y} patterns are negated and then set as translation values
 in the pattern matrix.
-  
+
 Other than the initial translation pattern matrix, as described
 above, all other pattern attributes, (such as its extend mode), are
 set to the default values as in \code{\link{cairoPatternCreateForSurface}}.

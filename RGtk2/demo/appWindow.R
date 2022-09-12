@@ -4,37 +4,34 @@ window <- NULL
 
 # define some callbacks
 
-activate.radio.action <- function(action, current)
-{
+activate.radio.action <- function(action, current) {
     name <- action$getName()
     typename <- class(action)[1]
     value <- current$getCurrentValue()
     if (current$getActive()) {
-       text <- sprintf("You activated radio action: \"%s\" of type \"%s\".\nCurrent value: %d", name, typename, value)
-       messagelabel$setText(text)
-       infobar$setMessageType(value)
-       infobar$show()
+        text <- sprintf("You activated radio action: \"%s\" of type \"%s\".\nCurrent value: %d", name, typename, value)
+        messagelabel$setText(text)
+        infobar$setMessageType(value)
+        infobar$show()
     }
 }
 
-activate.action <- function(action, w)
-{
+activate.action <- function(action, w) {
     name <- action$getName()
     typename <- class(action)[1] # parent, dialog mode, message type, buttons, message
-    dialog <- gtkMessageDialogNew(window, "destroy-with-parent", "info", "close",
-        "You activated action:", name, "of type", typename)
+    dialog <- gtkMessageDialogNew(
+        window, "destroy-with-parent", "info", "close",
+        "You activated action:", name, "of type", typename
+    )
     gSignalConnect(dialog, "response", gtkWidgetDestroy)
 }
-activate.email <- function(about, link, data)
-{
+activate.email <- function(about, link, data) {
     print(paste("send mail to", link))
 }
-activate.url <- function(about, link, data)
-{
+activate.url <- function(about, link, data) {
     print(paste("show url", link))
 }
-about.cb <- function(action, window)
-{
+about.cb <- function(action, window) {
     filename <- imagefile("rgtk-logo.gif")
     if (file.exists(filename)) {
         pixbuf <- gdkPixbufNewFromFile(filename)[[1]]
@@ -45,17 +42,17 @@ about.cb <- function(action, window)
     gtkAboutDialogSetEmailHook(activate.email)
     gtkAboutDialogSetUrlHook(activate.url)
 
-    gtkShowAboutDialog(window, program_name="RGtk Example", version="2.0",
-                       copyright="(C) M. Lawrence and D. Temple Lang",
-                       license="GPL",
-                       website="http://www.omegahat.net/RGtk/",
-                       comments="An example of RGtk2",
-                       authors=c("Michael <mflawren@fhcrc.org>", "Duncan"),
-                       documenters="See authors", logo=transparent)
-    
+    gtkShowAboutDialog(window,
+        program_name = "RGtk Example", version = "2.0",
+        copyright = "(C) M. Lawrence and D. Temple Lang",
+        license = "GPL",
+        website = "http://www.omegahat.net/RGtk/",
+        comments = "An example of RGtk2",
+        authors = c("Michael <mflawren@fhcrc.org>", "Duncan"),
+        documenters = "See authors", logo = transparent
+    )
 }
-update.statusbar <- function(buffer, statusbar)
-{
+update.statusbar <- function(buffer, statusbar) {
     statusbar$pop(0)
     count <- buffer$getCharCount()
     # get an "iter" describing the position of the cursor
@@ -67,26 +64,23 @@ update.statusbar <- function(buffer, statusbar)
     statusbar$push(0, msg)
 }
 
-mark.set.callback <- function(buffer, new.location, mark, data)
-{
+mark.set.callback <- function(buffer, new.location, mark, data) {
     update.statusbar(buffer, data)
 }
 
-update.resize.grip <- function(widget, event, statusbar)
-{
-  max_full_mask <- GdkWindowState["maximized"] | GdkWindowState["fullscreen"]
-  if (event[["changedMask"]] & max_full_mask)
-  {
-      statusbar$setHasResizeGrip(!(event[["newWindowState"]] & max_full_mask))
-  }
-  return(FALSE)
+update.resize.grip <- function(widget, event, statusbar) {
+    max_full_mask <- GdkWindowState["maximized"] | GdkWindowState["fullscreen"]
+    if (event[["changedMask"]] & max_full_mask) {
+        statusbar$setHasResizeGrip(!(event[["newWindowState"]] & max_full_mask))
+    }
+    return(FALSE)
 }
 
 registered <- FALSE
-register.stock.icons <- function()
-{
-    if (registered)
+register.stock.icons <- function() {
+    if (registered) {
         return
+    }
 
     item <- list(c("rgtk-logo", "_RGtk!", 0, 0, NULL))
 
@@ -104,9 +98,11 @@ register.stock.icons <- function()
         # make an icon from the image and add it to factory using stock id
         icon.set <- gtkIconSetNewFromPixbuf(transparent)
         factory$add("rgtk-logo", icon.set)
-    } else warning("Could not load the RGtk logo")
+    } else {
+        warning("Could not load the RGtk logo")
+    }
 
-    registered = TRUE
+    registered <- TRUE
 }
 
 # create the actions
@@ -173,40 +169,42 @@ window$addAccelGroup(manager$getAccelGroup())
 
 # Define some XML
 uistr <- paste(
-"<ui>",
-"  <menubar name='MenuBar'>",
-"    <menu action='FileMenu'>",
-"      <menuitem action='New'/>",
-"      <menuitem action='Open'/>",
-"      <menuitem action='Save'/>",
-"      <menuitem action='SaveAs'/>",
-"      <separator/>",
-"      <menuitem action='Quit'/>",
-"    </menu>",
-"    <menu action='PreferencesMenu'>",
-"      <menu action='ColorMenu'>",
-"	<menuitem action='Red'/>",
-"	<menuitem action='Green'/>",
-"	<menuitem action='Blue'/>",
-"      </menu>",
-"      <menu action='ShapeMenu'>",
-"        <menuitem action='Square'/>",
-"        <menuitem action='Rectangle'/>",
-"        <menuitem action='Oval'/>",
-"      </menu>",
-"      <menuitem action='Bold'/>",
-"    </menu>",
-"    <menu action='HelpMenu'>",
-"      <menuitem action='About'/>",
-"    </menu>",
-"  </menubar>",
-"  <toolbar  name='ToolBar'>",
-"    <toolitem action='Open'/>",
-"    <toolitem action='Quit'/>",
-"    <separator action='Sep1'/>",
-"    <toolitem action='Logo'/>",
-"  </toolbar>",
-"</ui>", sep="\n")
+    "<ui>",
+    "  <menubar name='MenuBar'>",
+    "    <menu action='FileMenu'>",
+    "      <menuitem action='New'/>",
+    "      <menuitem action='Open'/>",
+    "      <menuitem action='Save'/>",
+    "      <menuitem action='SaveAs'/>",
+    "      <separator/>",
+    "      <menuitem action='Quit'/>",
+    "    </menu>",
+    "    <menu action='PreferencesMenu'>",
+    "      <menu action='ColorMenu'>",
+    "	<menuitem action='Red'/>",
+    "	<menuitem action='Green'/>",
+    "	<menuitem action='Blue'/>",
+    "      </menu>",
+    "      <menu action='ShapeMenu'>",
+    "        <menuitem action='Square'/>",
+    "        <menuitem action='Rectangle'/>",
+    "        <menuitem action='Oval'/>",
+    "      </menu>",
+    "      <menuitem action='Bold'/>",
+    "    </menu>",
+    "    <menu action='HelpMenu'>",
+    "      <menuitem action='About'/>",
+    "    </menu>",
+    "  </menubar>",
+    "  <toolbar  name='ToolBar'>",
+    "    <toolitem action='Open'/>",
+    "    <toolitem action='Quit'/>",
+    "    <separator action='Sep1'/>",
+    "    <toolitem action='Logo'/>",
+    "  </toolbar>",
+    "</ui>",
+    sep = "\n"
+)
 
 manager$addUiFromString(uistr)
 menubar <- manager$getWidget("/MenuBar")

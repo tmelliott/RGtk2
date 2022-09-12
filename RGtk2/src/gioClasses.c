@@ -181,7 +181,7 @@ S_gapp_launch_context_class_launch_failed(USER_OBJECT_ s_object_class, USER_OBJE
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GCancellable_symbol;
@@ -199,7 +199,7 @@ S_gcancellable_class_init(GCancellableClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GFilenameCompleter_symbol;
@@ -217,7 +217,7 @@ S_gfilename_completer_class_init(GFilenameCompleterClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GFileEnumerator_symbol;
@@ -593,7 +593,7 @@ S_gfile_enumerator_class_close_finish(USER_OBJECT_ s_object_class, USER_OBJECT_ 
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GFileMonitor_symbol;
@@ -661,7 +661,7 @@ S_gfile_monitor_class_cancel(USER_OBJECT_ s_object_class, USER_OBJECT_ s_object)
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GInputStream_symbol;
@@ -1098,7 +1098,7 @@ S_ginput_stream_class_close_finish(USER_OBJECT_ s_object_class, USER_OBJECT_ s_o
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GFileInputStream_symbol;
@@ -1299,7 +1299,7 @@ S_gfile_input_stream_class_query_info_finish(USER_OBJECT_ s_object_class, USER_O
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GFilterInputStream_symbol;
@@ -1317,7 +1317,7 @@ S_gfilter_input_stream_class_init(GFilterInputStreamClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GBufferedInputStream_symbol;
@@ -1518,7 +1518,7 @@ S_gbuffered_input_stream_class_fill_finish(USER_OBJECT_ s_object_class, USER_OBJ
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GDataInputStream_symbol;
@@ -1536,7 +1536,7 @@ S_gdata_input_stream_class_init(GDataInputStreamClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GMemoryInputStream_symbol;
@@ -1554,7 +1554,7 @@ S_gmemory_input_stream_class_init(GMemoryInputStreamClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GMountOperation_symbol;
@@ -1572,7 +1572,7 @@ S_gmount_operation_class_init(GMountOperationClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GOutputStream_symbol;
@@ -2322,7 +2322,7 @@ S_goutput_stream_class_close_finish(USER_OBJECT_ s_object_class, USER_OBJECT_ s_
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GMemoryOutputStream_symbol;
@@ -2340,7 +2340,7 @@ S_gmemory_output_stream_class_init(GMemoryOutputStreamClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GFilterOutputStream_symbol;
@@ -2358,7 +2358,7 @@ S_gfilter_output_stream_class_init(GFilterOutputStreamClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GBufferedOutputStream_symbol;
@@ -2376,7 +2376,7 @@ S_gbuffered_output_stream_class_init(GBufferedOutputStreamClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GDataOutputStream_symbol;
@@ -2394,7 +2394,7 @@ S_gdata_output_stream_class_init(GDataOutputStreamClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GFileOutputStream_symbol;
@@ -2646,7 +2646,7 @@ S_gfile_output_stream_class_get_etag(USER_OBJECT_ s_object_class, USER_OBJECT_ s
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GVfs_symbol;
@@ -2923,7 +2923,7 @@ S_gvfs_class_get_supported_uri_schemes(USER_OBJECT_ s_object_class, USER_OBJECT_
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GVolumeMonitor_symbol;
@@ -3200,7 +3200,7 @@ S_gvolume_monitor_class_get_mount_for_uuid(USER_OBJECT_ s_object_class, USER_OBJ
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GNativeVolumeMonitor_symbol;
@@ -3218,7 +3218,7 @@ S_gnative_volume_monitor_class_init(GNativeVolumeMonitorClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 22, 0)
 static SEXP S_GFileIOStream_symbol;
@@ -3470,7 +3470,7 @@ S_gfile_iostream_class_get_etag(USER_OBJECT_ s_object_class, USER_OBJECT_ s_obje
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 22, 0)
 static SEXP S_GInetAddress_symbol;
@@ -3589,7 +3589,7 @@ S_ginet_address_class_to_bytes(USER_OBJECT_ s_object_class, USER_OBJECT_ s_objec
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 22, 0)
 static SEXP S_GNetworkAddress_symbol;
@@ -3607,7 +3607,7 @@ S_gnetwork_address_class_init(GNetworkAddressClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 22, 0)
 static SEXP S_GNetworkService_symbol;
@@ -3625,7 +3625,7 @@ S_gnetwork_service_class_init(GNetworkServiceClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 22, 0)
 static SEXP S_GResolver_symbol;
@@ -4189,7 +4189,7 @@ S_gresolver_class_lookup_service_finish(USER_OBJECT_ s_object_class, USER_OBJECT
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 22, 0)
 static SEXP S_GSocket_symbol;
@@ -4207,7 +4207,7 @@ S_gsocket_class_init(GSocketClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 22, 0)
 static SEXP S_GSocketAddress_symbol;
@@ -4387,7 +4387,7 @@ S_gsocket_address_class_get_native_size(USER_OBJECT_ s_object_class, USER_OBJECT
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 22, 0)
 static SEXP S_GSocketAddressEnumerator_symbol;
@@ -4579,7 +4579,7 @@ S_gsocket_address_enumerator_class_next_finish(USER_OBJECT_ s_object_class, USER
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 22, 0)
 static SEXP S_GSocketClient_symbol;
@@ -4597,7 +4597,7 @@ S_gsocket_client_class_init(GSocketClientClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 22, 0)
 static SEXP S_GSocketConnection_symbol;
@@ -4615,7 +4615,7 @@ S_gsocket_connection_class_init(GSocketConnectionClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 22, 0)
 static SEXP S_GSocketControlMessage_symbol;
@@ -4833,7 +4833,7 @@ S_gsocket_control_message_class_serialize(USER_OBJECT_ s_object_class, USER_OBJE
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 22, 0)
 static SEXP S_GSocketListener_symbol;
@@ -4898,7 +4898,7 @@ S_gsocket_listener_class_changed(USER_OBJECT_ s_object_class, USER_OBJECT_ s_obj
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 22, 0)
 static SEXP S_GSocketService_symbol;
@@ -4916,7 +4916,7 @@ S_gsocket_service_class_init(GSocketServiceClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 22, 0)
 static SEXP S_GTcpConnection_symbol;
@@ -4934,7 +4934,7 @@ S_gtcp_connection_class_init(GTcpConnectionClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 22, 0)
 static SEXP S_GThreadedSocketService_symbol;
@@ -4952,7 +4952,7 @@ S_gthreaded_socket_service_class_init(GThreadedSocketServiceClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 22, 0)
 static SEXP S_GIOStream_symbol;
@@ -5247,7 +5247,7 @@ S_giostream_class_close_finish(USER_OBJECT_ s_object_class, USER_OBJECT_ s_objec
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 22, 0)
 static SEXP S_GInetSocketAddress_symbol;
@@ -5265,7 +5265,7 @@ S_ginet_socket_address_class_init(GInetSocketAddressClass * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GAppInfo_symbol;
@@ -6247,7 +6247,7 @@ S_gapp_info_iface_get_commandline(USER_OBJECT_ s_object_class, USER_OBJECT_ s_ob
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GAsyncResult_symbol;
@@ -6363,7 +6363,7 @@ S_gasync_result_iface_get_source_object(USER_OBJECT_ s_object_class, USER_OBJECT
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GDrive_symbol;
@@ -7732,7 +7732,7 @@ S_gdrive_iface_eject_with_operation_finish(USER_OBJECT_ s_object_class, USER_OBJ
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GFile_symbol;
@@ -12788,7 +12788,7 @@ S_gfile_iface_unmount_mountable_with_operation_finish(USER_OBJECT_ s_object_clas
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GIcon_symbol;
@@ -12907,7 +12907,7 @@ S_gicon_iface_equal(USER_OBJECT_ s_object_class, USER_OBJECT_ s_object, USER_OBJ
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GLoadableIcon_symbol;
@@ -13108,7 +13108,7 @@ S_gloadable_icon_iface_load_finish(USER_OBJECT_ s_object_class, USER_OBJECT_ s_o
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GMount_symbol;
@@ -14305,7 +14305,7 @@ S_gmount_iface_eject_with_operation_finish(USER_OBJECT_ s_object_class, USER_OBJ
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GSeekable_symbol;
@@ -14598,7 +14598,7 @@ S_gseekable_iface_truncate_fn(USER_OBJECT_ s_object_class, USER_OBJECT_ s_object
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 static SEXP S_GVolume_symbol;
@@ -15530,7 +15530,7 @@ S_gvolume_iface_eject_with_operation_finish(USER_OBJECT_ s_object_class, USER_OB
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 22, 0)
 static SEXP S_GAsyncInitable_symbol;
@@ -15664,7 +15664,7 @@ S_gasync_initable_iface_init_finish(USER_OBJECT_ s_object_class, USER_OBJECT_ s_
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 22, 0)
 static SEXP S_GInitable_symbol;
@@ -15739,7 +15739,7 @@ S_ginitable_iface_init(USER_OBJECT_ s_object_class, USER_OBJECT_ s_object, USER_
 
   return(_result);
 }
- 
+
 
 #if GIO_CHECK_VERSION(2, 22, 0)
 static SEXP S_GSocketConnectable_symbol;
@@ -15805,5 +15805,3 @@ S_gsocket_connectable_iface_enumerate(USER_OBJECT_ s_object_class, USER_OBJECT_ 
 
   return(_result);
 }
- 
-

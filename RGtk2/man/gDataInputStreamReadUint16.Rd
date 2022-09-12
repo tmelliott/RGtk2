@@ -8,7 +8,7 @@
 \item{\verb{cancellable}}{optional \code{\link{GCancellable}} object, \code{NULL} to ignore.}
 \item{.errwarn}{Whether to issue a warning on error or fail silently}
 }
-\details{In order to get the correct byte order for this read operation, 
+\details{In order to get the correct byte order for this read operation,
 see \code{gDataStreamGetByteOrder()} and \code{gDataStreamSetByteOrder()}.}
 \value{
 A list containing the following elements:

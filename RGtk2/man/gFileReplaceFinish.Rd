@@ -1,7 +1,7 @@
 \alias{gFileReplaceFinish}
 \name{gFileReplaceFinish}
 \title{gFileReplaceFinish}
-\description{Finishes an asynchronous file replace operation started with 
+\description{Finishes an asynchronous file replace operation started with
 \code{\link{gFileReplaceAsync}}.}
 \usage{gFileReplaceFinish(object, res, .errwarn = TRUE)}
 \arguments{

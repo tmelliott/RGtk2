@@ -10,8 +10,8 @@ and to get those strings from \code{column} in the model of \code{completion}.}
 \item{\verb{object}}{A \code{\link{GtkEntryCompletion}}.}
 \item{\verb{column}}{The column in the model of \code{completion} to get strings from.}
 }
-\details{This functions creates and adds a \code{\link{GtkCellRendererText}} for the selected 
-column. If you need to set the text column, but don't want the cell 
+\details{This functions creates and adds a \code{\link{GtkCellRendererText}} for the selected
+column. If you need to set the text column, but don't want the cell
 renderer, use \code{\link{gObjectSet}} to set the ::text_column property directly.
   Since 2.4}
 \author{Derived by RGtkGen from GTK+ documentation}

@@ -8,7 +8,7 @@ or \code{path} need to be non-\code{NULL}.  \code{row.align} determines where th
 placed, and \code{col.align} determines where \code{column} is placed.  Both are expected
 to be between 0.0 and 1.0. 0.0 means left/top alignment, 1.0 means
 right/bottom alignment, 0.5 means center.}
-\usage{gtkTreeViewScrollToCell(object, path, column = NULL, use.align = FALSE, 
+\usage{gtkTreeViewScrollToCell(object, path, column = NULL, use.align = FALSE,
     row.align = 0, col.align = 0)}
 \arguments{
 \item{\verb{object}}{A \code{\link{GtkTreeView}}.}
@@ -22,7 +22,7 @@ right/bottom alignment, 0.5 means center.}
 tree does the minimum amount of work to scroll the cell onto the screen.
 This means that the cell will be scrolled to the edge closest to its current
 position.  If the cell is currently visible on the screen, nothing is done.
-  
+
 This function only works if the model is set, and \code{path} is a valid row on the
 model.  If the model changes before the \code{tree.view} is realized, the centered
 path will be modified to reflect this change.}

@@ -14,7 +14,7 @@ S_CairoMatrixGetXx (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_CairoMatrixGetYx (USER_OBJECT_ s_obj)
 {
@@ -28,7 +28,7 @@ S_CairoMatrixGetYx (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_CairoMatrixGetXy (USER_OBJECT_ s_obj)
 {
@@ -42,7 +42,7 @@ S_CairoMatrixGetXy (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_CairoMatrixGetYy (USER_OBJECT_ s_obj)
 {
@@ -56,7 +56,7 @@ S_CairoMatrixGetYy (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_CairoMatrixGetX0 (USER_OBJECT_ s_obj)
 {
@@ -70,7 +70,7 @@ S_CairoMatrixGetX0 (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_CairoMatrixGetY0 (USER_OBJECT_ s_obj)
 {
@@ -84,7 +84,7 @@ S_CairoMatrixGetY0 (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_CairoTextExtentsGetXBearing (USER_OBJECT_ s_obj)
 {
@@ -98,7 +98,7 @@ S_CairoTextExtentsGetXBearing (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_CairoTextExtentsGetYBearing (USER_OBJECT_ s_obj)
 {
@@ -112,7 +112,7 @@ S_CairoTextExtentsGetYBearing (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_CairoTextExtentsGetWidth (USER_OBJECT_ s_obj)
 {
@@ -126,7 +126,7 @@ S_CairoTextExtentsGetWidth (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_CairoTextExtentsGetHeight (USER_OBJECT_ s_obj)
 {
@@ -140,7 +140,7 @@ S_CairoTextExtentsGetHeight (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_CairoTextExtentsGetXAdvance (USER_OBJECT_ s_obj)
 {
@@ -154,7 +154,7 @@ S_CairoTextExtentsGetXAdvance (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}
 USER_OBJECT_
 S_CairoTextExtentsGetYAdvance (USER_OBJECT_ s_obj)
 {
@@ -168,4 +168,4 @@ S_CairoTextExtentsGetYAdvance (USER_OBJECT_ s_obj)
    _result = asRNumeric(val);
 
    return(_result);
-} 
+}

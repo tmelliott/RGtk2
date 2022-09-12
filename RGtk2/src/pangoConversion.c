@@ -25,7 +25,7 @@ toRPangoAttribute(PangoAttribute *attr, gboolean owns)
 
     if (!attr)
       return NULL_USER_OBJECT;
-    
+
     switch(attr->klass->type) {
          case PANGO_ATTR_LANGUAGE:
             type = "PangoAttrLanguage";
@@ -60,7 +60,7 @@ toRPangoAttribute(PangoAttribute *attr, gboolean owns)
 		 case PANGO_ATTR_UNDERLINE_COLOR:
 		 case PANGO_ATTR_STRIKETHROUGH_COLOR:
             type = "PangoAttrColor";
-         break;		 
+         break;
 		 case PANGO_ATTR_SHAPE:
             type = "PangoAttrShape";
          break;
@@ -73,18 +73,18 @@ toRPangoAttribute(PangoAttribute *attr, gboolean owns)
 		 default:
 		     Rf_error("Error converting PangoAttribute: unknown type %d", attr->klass->type);
 	}
-	
+
 	classes[0] = type;
-  
+
   if (!owns)
     attr = pango_attribute_copy(attr);
-  
+
 	PROTECT(result = toRPointerWithFinalizer(attr, NULL, (RPointerFinalizer)pango_attribute_destroy));
-	
+
 	SET_CLASS(result, asRStringArray(classes));
-	
+
 	UNPROTECT(1);
-	
+
 	return(result);
 }
 

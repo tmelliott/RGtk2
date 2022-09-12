@@ -11,8 +11,8 @@ will have no data (\code{data==  NULL} and
 \code{num_data==0}), if either of the following
 conditions hold:
   \enumerate{
-\item 
-\item 
+\item
+\item
 }  }
 \value{[\code{\link{CairoPath}}]  the copy of the current path.}
 \author{Derived by RGtkGen from GTK+ documentation}

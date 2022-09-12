@@ -3,7 +3,7 @@
 \title{gdkPixbufGetFromImage}
 \description{Same as \code{\link{gdkPixbufGetFromDrawable}} but gets the pixbuf from
 an image.}
-\usage{gdkPixbufGetFromImage(src, cmap, src.x, src.y, dest.x, dest.y, 
+\usage{gdkPixbufGetFromImage(src, cmap, src.x, src.y, dest.x, dest.y,
     width, height)}
 \arguments{
 \item{\verb{src}}{Source \code{\link{GdkImage}}.}

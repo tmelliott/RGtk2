@@ -15,7 +15,7 @@ initialised beforehand.}
 ulong, enum, flags, float, double, string, \code{\link{GdkColor}} and
 \code{\link{GtkAdjustment}} type values. Support for \code{\link{GtkWidget}} type values is
 still to come.
-  
+
 Upon errors \code{FALSE} will be returned and \code{error} will be assigned a
 \code{\link{GError}} from the \verb{GTK_BUILDER_ERROR} domain.
   Since 2.12}

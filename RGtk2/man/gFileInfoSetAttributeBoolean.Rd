@@ -1,7 +1,7 @@
 \alias{gFileInfoSetAttributeBoolean}
 \name{gFileInfoSetAttributeBoolean}
 \title{gFileInfoSetAttributeBoolean}
-\description{Sets the \code{attribute} to contain the given \code{attr.value}, 
+\description{Sets the \code{attribute} to contain the given \code{attr.value},
 if possible.}
 \usage{gFileInfoSetAttributeBoolean(object, attribute, attr.value)}
 \arguments{

@@ -2,7 +2,7 @@
 \name{gdkFontFromDescriptionForDisplay}
 \title{gdkFontFromDescriptionForDisplay}
 \description{
-Loads a \code{\link{GdkFont}} based on a Pango font description for use on \code{display}. 
+Loads a \code{\link{GdkFont}} based on a Pango font description for use on \code{display}.
 This font will only be an approximation of the Pango font, and
 internationalization will not be handled correctly. This function
 should only be used for legacy code that cannot be easily converted

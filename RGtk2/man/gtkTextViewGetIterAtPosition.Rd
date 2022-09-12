@@ -1,11 +1,11 @@
 \alias{gtkTextViewGetIterAtPosition}
 \name{gtkTextViewGetIterAtPosition}
 \title{gtkTextViewGetIterAtPosition}
-\description{Retrieves the iterator pointing to the character at buffer 
-coordinates \code{x} and \code{y}. Buffer coordinates are coordinates for 
-the entire buffer, not just the currently-displayed portion.  
-If you have coordinates from an event, you have to convert 
-those to buffer coordinates with 
+\description{Retrieves the iterator pointing to the character at buffer
+coordinates \code{x} and \code{y}. Buffer coordinates are coordinates for
+the entire buffer, not just the currently-displayed portion.
+If you have coordinates from an event, you have to convert
+those to buffer coordinates with
 \code{\link{gtkTextViewWindowToBufferCoords}}.}
 \usage{gtkTextViewGetIterAtPosition(object, x, y)}
 \arguments{

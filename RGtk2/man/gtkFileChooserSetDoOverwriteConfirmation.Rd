@@ -11,7 +11,7 @@ is \code{FALSE} by default.}
 }
 \details{Regardless of this setting, the \code{chooser} will emit the
 \verb{"confirm-overwrite"} signal when appropriate.
-  
+
 If all you need is the stock confirmation dialog, set this property to \code{TRUE}.
 You can override the way confirmation is done by actually handling the
 \verb{"confirm-overwrite"} signal; please refer to its documentation

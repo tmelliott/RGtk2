@@ -2,7 +2,7 @@
 \name{gFileGetChildForDisplayName}
 \title{gFileGetChildForDisplayName}
 \description{Gets the child of \code{file} for a given \code{display.name} (i.e. a UTF8
-version of the name). If this function fails, it returns \code{NULL} and \code{error} will be 
+version of the name). If this function fails, it returns \code{NULL} and \code{error} will be
 set. This is very useful when constructing a GFile for a new file
 and the user entered the filename in the user interface, for instance
 when you select a directory and type a filename in the file selector.}

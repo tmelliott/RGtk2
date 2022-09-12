@@ -2,7 +2,7 @@
 \name{gtkActionConnectAccelerator}
 \title{gtkActionConnectAccelerator}
 \description{Installs the accelerator for \code{action} if \code{action} has an
-accel path and group. See \code{\link{gtkActionSetAccelPath}} and 
+accel path and group. See \code{\link{gtkActionSetAccelPath}} and
 \code{\link{gtkActionSetAccelGroup}}}
 \usage{gtkActionConnectAccelerator(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkAction}}}}

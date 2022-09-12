@@ -10,7 +10,7 @@ accelerators are consistent.}
 \item{\verb{accel.path}}{the accelerator path}
 }
 \details{Note that \code{accel.path} string will be stored in a \code{\link{GQuark}}. Therefore, if you
-pass a static string, you can save some memory by interning it first with 
+pass a static string, you can save some memory by interning it first with
 \code{gInternStaticString()}.
   Since 2.4}
 \author{Derived by RGtkGen from GTK+ documentation}

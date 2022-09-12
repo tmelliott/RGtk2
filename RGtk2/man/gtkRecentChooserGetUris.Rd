@@ -6,7 +6,7 @@
 \arguments{\item{\verb{object}}{a \code{\link{GtkRecentChooser}}}}
 \details{The return value of this function is affected by the "sort-type" and "limit"
 properties of \code{chooser}.
-  
+
 Since the returned list is \code{NULL} terminated, \code{length} may be \code{NULL}.
   Since 2.10}
 \value{

@@ -2,10 +2,10 @@
 make_toggles <- function() {
   dialog <- gtkDialog(show = F)
   toggle1 <- gtkToggleButton("Hi, i'm a toggle button.")
-  
+
   ## Makes this toggle button invisible
   toggle1$setMode(TRUE)
-   
+
   gSignalConnect(toggle1, "toggled", output_state)
   dialog[["actionArea"]]$packStart(toggle1, FALSE, FALSE, 2)
 

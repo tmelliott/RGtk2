@@ -156,21 +156,21 @@ window onto its parent window. This mechanism can be intercepted by calling
 \code{\link{gdkWindowSetComposited}} on the child window. For a
 \dfn{composited} window it is the responsibility of the
 application to render the window contents at the right spot.
-  
+
  \emph{Composited windows}
 \preformatted{
 # The expose event handler for the event box.
-# 
+#
 # This function simply draws a transparency onto a widget on the area
 # for which it receives expose events.  This is intended to give the
 # event box a "transparent" background.
-# 
+#
 # In order for this to work properly, the widget must have an RGBA
 # colormap.  The widget should also be set as app-paintable since it
 # doesn't make sense for GTK+ to draw a background if we are drawing it
 # (and because GTK+ might actually replace our transparency with its
 # default background color).
-# 
+#
 transparent_expose <- function(widget, event)
 {
   cr <- gdkCairoCreate(widget$window)
@@ -182,30 +182,30 @@ transparent_expose <- function(widget, event)
 }
 
 # The expose event handler for the window.
-# 
+#
 # This function performs the actual compositing of the event box onto
 # the already-existing background of the window at 50\% normal opacity.
-# 
+#
 # In this case we do not want app-paintable to be set on the widget
 # since we want it to draw its own (red) background. Because of this,
 # however, we must ensure that we set after = TRUE when connecting to the signal
 # so that this handler is called after the red has been drawn. If it was
 # called before then GTK would just blindly paint over our work.
-# 
+#
 # Note: if the child window has children, then you need a cairo 1.16
 # feature to make this work correctly.
-# 
+#
 
 window_expose_event <- function(widget, event)
 {
-  # get our child (in this case, the event box) 
+  # get our child (in this case, the event box)
   child <- widget$getChild()
 
-  # create a cairo context to draw to the window 
+  # create a cairo context to draw to the window
   cr <- gdkCairoCreate(widget$window)
 
   # the source data is the (composited) event box
-  gdkCairoSetSourcePixmap(cr, child$window, child$allocation$x, 
+  gdkCairoSetSourcePixmap(cr, child$window, child$allocation$x,
                           child$allocation$y)
 
   # draw no more than our expose event intersects our child
@@ -259,25 +259,25 @@ event$window$setComposited(TRUE)
 # by gtk before our compositing occurs.
 #
 gSignalConnect(window, "expose-event", window_expose_event, after = TRUE)
-}  
+}
 In the example , a button is
 placed inside of an event box inside of a window. The event box is
 set as composited and therefore is no longer automatically drawn to
 the screen.
-  
+
 When the contents of the event box change, an expose event is
 generated on its parent window (which, in this case, belongs to
 the toplevel \code{\link{GtkWindow}}). The expose handler for this widget is
 responsible for merging the changes back on the screen in the way
 that it wishes.
-  
+
 In our case, we merge the contents with a 50\% transparency. We
 also set the background colour of the window to red. The effect is
 that the background shows through the button.}
 \section{Offscreen Windows}{Offscreen windows are more general than composited windows, since they
 allow not only to modify the rendering of the child window onto its parent,
 but also to apply coordinate transformations.
-  
+
 To integrate an offscreen window into a window hierarchy, one has to call
 \code{gdkWindowSetEmbedder()} and handle a number of signals. The
 \code{\link{gdkOffscreenWindowSetEmbedder}} and handle a number of signals. The
@@ -285,7 +285,7 @@ To integrate an offscreen window into a window hierarchy, one has to call
 select an offscreen child at given coordinates, and the \verb{"to-embedder"}
 and \verb{"from-embedder"} signals on the offscreen window are used to
 translate coordinates between the embedder and the offscreen window.
-  
+
 For rendering an offscreen window onto its embedder, the contents of the
 offscreen window are available as a pixmap, via
 \code{\link{gdkOffscreenWindowGetPixmap}}.}
@@ -314,7 +314,7 @@ the minimum size hint is not provided, \code{\link{GtkWindow}} will use its requ
 the minimum size.  If the minimum size is provided and a geometry widget is set,
 \code{\link{GtkWindow}} will take the minimum size as the minimum size of the geometry widget
 rather than the entire window. The base size is treated similarly.
-  
+
 The canonical use-case for \code{\link{gtkWindowSetGeometryHints}} is to get a terminal
 widget to resize properly. Here, the terminal text area should be the geometry
 widget; \code{\link{GtkWindow}} will then automatically set the base size to the size of
@@ -324,7 +324,7 @@ in the terminal. Finally, the base size should be set to the size of one
 character. The net effect is that the minimum size of the terminal
 will have a 1x1 character terminal area, and only terminal sizes on
 the "character grid" will be allowed.
-  
+
 Here's an example of how the terminal example would be implemented, assuming
 a terminal area widget called "terminal" and a toplevel window "toplevel":
 \preformatted{
@@ -333,7 +333,7 @@ fields <- c("base.width", "base.height", "min.width", "min.height", "width.inc",
 hints[fields] <- char_width
 toplevel$setGeometryHints(terminal, hints)
 }
-  
+
 The other useful fields are the \code{min.aspect} and \code{max.aspect} fields; these
 contain a width/height ratio as a floating point number. If a geometry widget is
 set, the aspect applies to the geometry widget rather than the entire window.
@@ -453,7 +453,7 @@ Window Manager Hints (\url{http://www.freedesktop.org/Standards/wm-spec}) specif
 \item{\verb{south-west}}{the reference point is at the lower left corner.}
 \item{\verb{south}}{the reference point is at the middle of the lower edge.}
 \item{\verb{south-east}}{the reference point is at the lower right corner.}
-\item{\verb{static}}{the reference point is at the top left corner of the 
+\item{\verb{static}}{the reference point is at the top left corner of the
    window itself, ignoring window manager decorations.}
 }
 
@@ -477,7 +477,7 @@ Determines a window edge or corner.
 These are hints for the window manager that indicate what type of function
 the window has. The window manager can use this when determining decoration
 and behaviour of the window. The hint must be set before mapping the window.
-  
+
 See the
 Extended
 Window Manager Hints (\url{http://www.freedesktop.org/Standards/wm-spec}) specification for more details about
@@ -486,15 +486,15 @@ window types.
 \describe{
 \item{\verb{normal}}{Normal toplevel window.}
 \item{\verb{dialog}}{Dialog window.}
-\item{\verb{menu}}{Window used to implement a menu; GTK+ uses 
+\item{\verb{menu}}{Window used to implement a menu; GTK+ uses
   this hint only for torn-off menus, see \code{\link{GtkTearoffMenuItem}}.}
 \item{\verb{toolbar}}{Window used to implement toolbars.}
-\item{\verb{splashscreen}}{Window used to display a splash 
+\item{\verb{splashscreen}}{Window used to display a splash
   screen during application startup.}
-\item{\verb{utility}}{Utility windows which are not detached 
+\item{\verb{utility}}{Utility windows which are not detached
   toolbars or dialogs.}
 \item{\verb{dock}}{Used for creating dock or panel windows.}
-\item{\verb{desktop}}{Used for creating the desktop background 
+\item{\verb{desktop}}{Used for creating the desktop background
 window.}
 }
 
@@ -534,28 +534,28 @@ Specifies the result of applying a \code{\link{GdkFilterFunc}} to a native event
 A set of bit-flags to indicate the state of modifier keys and mouse buttons
 in various event types. Typical modifier keys are Shift, Control, Meta, Super,
 Hyper, Alt, Compose, Apple, CapsLock or ShiftLock.
-  
+
 Like the X Window System, GDK supports 8 modifier keys and 5 mouse buttons.
-  
+
 Since 2.10, GDK recognizes which of the Meta, Super or Hyper keys are mapped
 to Mod2 - Mod5, and indicates this by setting \code{GDK_SUPER_MASK}, \code{GDK_HYPER_MASK}
 or \code{GDK_META_MASK} in the state field of key events.
 
 \describe{
 \item{\verb{shift-mask}}{the Shift key.}
-\item{\verb{lock-mask}}{a Lock key (depending on the modifier mapping of the 
+\item{\verb{lock-mask}}{a Lock key (depending on the modifier mapping of the
   X server this may either be CapsLock or ShiftLock).}
 \item{\verb{control-mask}}{the Control key.}
-\item{\verb{mod1-mask}}{the fourth modifier key (it depends on the modifier 
+\item{\verb{mod1-mask}}{the fourth modifier key (it depends on the modifier
   mapping of the X server which key is interpreted as this modifier, but
   normally it is the Alt key).}
-\item{\verb{mod2-mask}}{the fifth modifier key (it depends on the modifier 
+\item{\verb{mod2-mask}}{the fifth modifier key (it depends on the modifier
   mapping of the X server which key is interpreted as this modifier).}
-\item{\verb{mod3-mask}}{the sixth modifier key (it depends on the modifier 
+\item{\verb{mod3-mask}}{the sixth modifier key (it depends on the modifier
   mapping of the X server which key is interpreted as this modifier).}
-\item{\verb{mod4-mask}}{the seventh modifier key (it depends on the modifier 
+\item{\verb{mod4-mask}}{the seventh modifier key (it depends on the modifier
   mapping of the X server which key is interpreted as this modifier).}
-\item{\verb{mod5-mask}}{the eighth modifier key (it depends on the modifier 
+\item{\verb{mod5-mask}}{the eighth modifier key (it depends on the modifier
   mapping of the X server which key is interpreted as this modifier).}
 \item{\verb{button1-mask}}{the first mouse button.}
 \item{\verb{button2-mask}}{the second mouse button.}
@@ -603,7 +603,7 @@ The hint must be set before mapping the window.
 \section{User Functions}{\describe{\item{\code{GdkFilterFunc(xevent, event, data)}}{
 Specifies the type of function used to filter native events before they are
 converted to GDK events.
-  
+
 When a filter is called, \code{event} is unpopulated, except for
 \code{event->window}. The filter may translate the native
 event to a GDK event and store the result in \code{event}, or handle it without
@@ -623,7 +623,7 @@ continue, it should return \code{GDK_FILTER_TRANSLATE}.
 \item{\code{from-embedder(window, embedder-x, embedder-y, offscreen-x, offscreen-y, user.data)}}{
 The ::from-embedder signal is emitted to translate coordinates
 in the embedder of an offscreen window to the offscreen window.
-  
+
 See also \verb{"to-embedder"}.
   Since 2.18
 
@@ -656,7 +656,7 @@ child at the given position.
 \item{\code{to-embedder(window, offscreen-x, offscreen-y, embedder-x, embedder-y, user.data)}}{
 The ::to-embedder signal is emitted to translate coordinates
 in an offscreen window to its embedder.
-  
+
 See also \verb{"from-embedder"}.
   Since 2.18
 

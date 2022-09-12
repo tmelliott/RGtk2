@@ -10,14 +10,14 @@
 \item{\verb{cancellable}}{optional \code{\link{GCancellable}} object, \code{NULL} to ignore}
 \item{.errwarn}{Whether to issue a warning on error or fail silently}
 }
-\details{Supported file formats are currently "jpeg", "tiff", "png", "ico" or 
+\details{Supported file formats are currently "jpeg", "tiff", "png", "ico" or
 "bmp". See \code{\link{gdkPixbufSaveToBuffer}} for more details.
-  
-The \code{cancellable} can be used to abort the operation from another 
-thread. If the operation was cancelled, the error \code{GIO_ERROR_CANCELLED} 
-will be returned. Other possible errors are in the \verb{GDK_PIXBUF_ERROR} 
-and \code{G_IO_ERROR} domains. 
-  
+
+The \code{cancellable} can be used to abort the operation from another
+thread. If the operation was cancelled, the error \code{GIO_ERROR_CANCELLED}
+will be returned. Other possible errors are in the \verb{GDK_PIXBUF_ERROR}
+and \code{G_IO_ERROR} domains.
+
 The stream is not closed.
   Since 2.14}
 \value{

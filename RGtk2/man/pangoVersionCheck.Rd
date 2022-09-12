@@ -19,8 +19,8 @@ of the running library is newer than the version
 the running library must be binary compatible with the
 version \code{required.major.required.minor}.\code{required.micro}
 (same major version.)
-  
-For compile-time version checking use \code{pangoVersionCheck()}.  
+
+For compile-time version checking use \code{pangoVersionCheck()}.
   Since 1.16}
 \value{[char] \code{NULL} if the Pango library is compatible with the
   given version, or a string describing the version mismatch.}

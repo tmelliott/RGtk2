@@ -26,7 +26,7 @@ this child model, and the changes in the child are propagated.  The
 primary purpose of this model is to provide a way to sort a different
 model without modifying it. Note that the sort function used by
 \code{\link{GtkTreeModelSort}} is not guaranteed to be stable.
-  
+
 The use of this is best demonstrated through an example.  In the
 following sample code we create two \code{\link{GtkTreeView}} widgets each with a
 view of the same data.  As the model is wrapped here by a
@@ -34,7 +34,7 @@ view of the same data.  As the model is wrapped here by a
 view of the data without affecting the other.  By contrast, if we
 simply put the same model in each widget, then sorting the first would
 sort the second.
-  
+
  \emph{Using a   \code{GtkTreeModelSort}}
 \preformatted{
 ## Using a GtkTreeModel sort
@@ -42,7 +42,7 @@ sort the second.
 ## get the child model
 child_model <- get_my_model()
 
-## Create the first tree 
+## Create the first tree
 sort_model1 <- gtkTreeModelSort(child_model)
 tree_view1 <- gtkTreeView(sort_model1)
 
@@ -53,13 +53,13 @@ tree_view2 <- gtkTreeView(sort_model2)
 ## Now we can sort the two models independently
 sort_model1$setSortColumnId(0, "ascending")
 sort_model2$setSortColumnId(0, "descending")
-}  
+}
 To demonstrate how to access the underlying child model from the sort
 model, the next example will be a callback for the \code{\link{GtkTreeSelection}}
 "changed" signal.  In this callback, we get a string from COLUMN_1 of
 the model.  We then modify the string, find the same selected row on the
 child model, and change the row there.
-  
+
  \emph{Accessing the child model of in a selection changed callback}
 \preformatted{
 # Accessing the child model in a selection changed callback
@@ -74,7 +74,7 @@ selection_changed <- function(selection, data)
   ## Look up the current value on the selected row and get a new value
   ## to change it to.
   some_data <- selected$model$get(selected$iter, COLUMN_1)
-  
+
   modified_data <- change_the_data(some_data)
 
   ## Get an iterator on the child model, instead of the sort model.

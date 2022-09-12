@@ -17,17 +17,17 @@
 \section{Detailed Description}{\code{\link{GIcon}} is a very minimal interface for icons. It provides functions
 for checking the equality of two icons, hashing of icons and
 serializing an icon to and from strings.
-  \code{\link{GIcon}} does not provide the actual pixmap for the icon as this is out 
-of GIO's scope, however implementations of \code{\link{GIcon}} may contain the name 
-of an icon (see \code{\link{GThemedIcon}}), or the path to an icon (see \code{\link{GLoadableIcon}}). 
-  
+  \code{\link{GIcon}} does not provide the actual pixmap for the icon as this is out
+of GIO's scope, however implementations of \code{\link{GIcon}} may contain the name
+of an icon (see \code{\link{GThemedIcon}}), or the path to an icon (see \code{\link{GLoadableIcon}}).
+
 To obtain a hash of a \code{\link{GIcon}}, see \code{\link{gIconHash}}.
-  
+
 To check if two \verb{GIcons} are equal, see \code{\link{gIconEqual}}.
-  
+
 For serializing a \code{\link{GIcon}}, use \code{\link{gIconToString}} and
 \code{\link{gIconNewForString}}.
-  
+
 If your application or library provides one or more \code{\link{GIcon}}
 implementations you need to ensure that each \code{\link{GType}} is registered
 with the type system prior to calling \code{\link{gIconNewForString}}.}

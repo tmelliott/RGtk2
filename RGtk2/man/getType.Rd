@@ -3,7 +3,7 @@
 \alias{gtkObjectGetType}
 \title{Get the GtkType object from a Gtk object or name}
 \description{
-\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)} 
+\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)}
 
   This retrieves the \code{GtkType} object  for a given
   \code{GtkObject} or directly by name.
@@ -36,8 +36,8 @@ gtkObjectGetType(w, check=TRUE)
   called.
   This can be done using the \code{\link[base]{.C}}
   function as in \code{.C("gtk_button_get_type", PACKAGE= "RGtk")}.
-  
-  
+
+
 }
 \value{
   A single real value giving the internal
@@ -58,7 +58,7 @@ THIS STUFF IS VERY OLD AND DEPRECATED (compatibility wrappers for RGtk 1)
 
 \seealso{
   \code{\link{gtkObjectGetClasses}}
-  \code{\link{gtkTypeGetClasses}}  
+  \code{\link{gtkTypeGetClasses}}
 }
 
 

@@ -2,7 +2,7 @@
 \name{gAppLaunchContextGetDisplay}
 \title{gAppLaunchContextGetDisplay}
 \description{Gets the display string for the display. This is used to ensure new
-applications are started on the same display as the launching 
+applications are started on the same display as the launching
 application.}
 \usage{gAppLaunchContextGetDisplay(object, info, files)}
 \arguments{

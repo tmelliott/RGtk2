@@ -4,7 +4,7 @@
 \description{Returns an output stream for overwriting the file, possibly
 creating a backup copy of the file first. If the file doesn't exist,
 it will be created.}
-\usage{gFileReplace(object, etag, make.backup, flags = "G_FILE_CREATE_NONE", 
+\usage{gFileReplace(object, etag, make.backup, flags = "G_FILE_CREATE_NONE",
     cancellable = NULL, .errwarn = TRUE)}
 \arguments{
 \item{\verb{object}}{input \code{\link{GFile}}.}
@@ -20,16 +20,16 @@ that any errors during the writing will not affect an already
 existing copy of the file. For instance, for local files it
 may write to a temporary file and then atomically rename over
 the destination when the stream is closed.
-  
+
 By default files created are generally readable by everyone,
 but if you pass \verb{G_FILE_CREATE_PRIVATE} in \code{flags} the file
 will be made readable only to the current user, to the level that
 is supported on the target filesystem.
-  
+
 If \code{cancellable} is not \code{NULL}, then the operation can be cancelled by
 triggering the cancellable object from another thread. If the operation
-was cancelled, the error \code{G_IO_ERROR_CANCELLED} will be returned. 
-  
+was cancelled, the error \code{G_IO_ERROR_CANCELLED} will be returned.
+
 If you pass in a non-\verb{NULL} \code{etag} value, then this value is
 compared to the current entity tag of the file, and if they differ
 an G_IO_ERROR_WRONG_ETAG error is returned. This generally means
@@ -38,12 +38,12 @@ the new etag from \code{\link{gFileOutputStreamGetEtag}} after you've
 finished writing and closed the \code{\link{GFileOutputStream}}. When you load
 a new file you can use \code{\link{gFileInputStreamQueryInfo}} to get
 the etag of the file.
-  
+
 If \code{make.backup} is \code{TRUE}, this function will attempt to make a backup
 of the current file before overwriting it. If this fails a G_IO_ERROR_CANT_CREATE_BACKUP
 error will be returned. If you want to replace anyway, try again with
 \code{make.backup} set to \code{FALSE}.
-  
+
 If the file is a directory the G_IO_ERROR_IS_DIRECTORY error will be returned,
 and if the file is some other form of non-regular file then a
 G_IO_ERROR_NOT_REGULAR_FILE error will be returned.

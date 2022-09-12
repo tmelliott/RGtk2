@@ -2,9 +2,9 @@
 \name{gtkComboBoxGetActive}
 \title{gtkComboBoxGetActive}
 \description{Returns the index of the currently active item, or -1 if there's no
-active item. If the model is a non-flat treemodel, and the active item 
-is not an immediate child of the root of the tree, this function returns 
-\code{gtk_tree_path_get_indices (path)[0]}, where 
+active item. If the model is a non-flat treemodel, and the active item
+is not an immediate child of the root of the tree, this function returns
+\code{gtk_tree_path_get_indices (path)[0]}, where
 \code{path} is the \code{\link{GtkTreePath}} of the active item.}
 \usage{gtkComboBoxGetActive(object)}
 \arguments{\item{\verb{object}}{A \code{\link{GtkComboBox}}}}

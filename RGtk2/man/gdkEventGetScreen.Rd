@@ -5,7 +5,7 @@
 typically the screen for \code{event->any.window}, but
 for events such as mouse events, it is the screen
 where the pointer was when the event occurs -
-that is, the screen which has the root window 
+that is, the screen which has the root window
 to which \code{event->motion.x_root} and
 \code{event->motion.y_root} are relative.}
 \usage{gdkEventGetScreen(object)}

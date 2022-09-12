@@ -9,7 +9,7 @@ if you aren't interested in getting the value of that field.}
 of \code{window}, which for toplevels usually means relative to the
 window decorations (titlebar, etc.) rather than relative to the
 root window (screen-size background window).
-  
+
 On the X11 platform, the geometry is obtained from the X server,
 so reflects the latest position of \code{window}; this may be out-of-sync
 with the position of \code{window} delivered in the most-recently-processed

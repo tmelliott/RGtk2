@@ -9,7 +9,7 @@ filter are displayed. }
 \item{\verb{object}}{a \code{\link{GtkFileChooser}}}
 \item{\verb{filter}}{a \code{\link{GtkFileFilter}}}
 }
-\details{Note that the \code{chooser} takes ownership of the filter, so you have to 
+\details{Note that the \code{chooser} takes ownership of the filter, so you have to
 ref and sink it if you want to keep a reference.
   Since 2.4}
 \author{Derived by RGtkGen from GTK+ documentation}

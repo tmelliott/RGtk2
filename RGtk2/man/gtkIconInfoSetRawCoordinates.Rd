@@ -18,7 +18,7 @@ icons, they are in a 1000x1000 coordinate space that is scaled
 to the final size of the icon.  You can determine if the icon is an SVG
 icon by using \code{\link{gtkIconInfoGetFilename}}, and seeing if it is non-\code{NULL}
 and ends in '.svg'.
-  
+
 This function is provided primarily to allow compatibility wrappers
 for older API's, and is not expected to be useful for applications.
   Since 2.4}

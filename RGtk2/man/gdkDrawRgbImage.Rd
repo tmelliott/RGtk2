@@ -3,7 +3,7 @@
 \title{gdkDrawRgbImage}
 \description{Draws an RGB image in the drawable. This is the core GdkRGB
 function, and likely the only one you will need to use.}
-\usage{gdkDrawRgbImage(object, gc, x, y, width, height, dith, rgb.buf, 
+\usage{gdkDrawRgbImage(object, gc, x, y, width, height, dith, rgb.buf,
     rowstride)}
 \arguments{
 \item{\verb{object}}{The \code{\link{GdkDrawable}} to draw in (usually a \code{\link{GdkWindow}}).}
@@ -24,7 +24,7 @@ even if the width of the rectangle is odd. Rowstride is also useful
 when drawing a subrectangle of a larger image in memory. Finally, to
 replicate the same line a number of times, the trick of setting
 \code{rowstride} to 0 is allowed.
-  
+
 In general, for 0 <= i < \code{width} and 0 <= j < height,
 the pixel (x + i, y + j) is colored with red value \code{rgb.buf}[\code{j} *
 \code{rowstride} + \code{i} * 3], green value \code{rgb.buf}[\code{j} * \code{rowstride} + \code{i} * 3 +

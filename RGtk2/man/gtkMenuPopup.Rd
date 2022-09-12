@@ -3,10 +3,10 @@
 \title{gtkMenuPopup}
 \description{Displays a menu and makes it available for selection.  Applications can use
 this function to display context-sensitive menus, and will typically supply
-\code{NULL} for the \code{parent.menu.shell}, \code{parent.menu.item}, \code{func} and \code{data} 
+\code{NULL} for the \code{parent.menu.shell}, \code{parent.menu.item}, \code{func} and \code{data}
 parameters. The default menu positioning function will position the menu
 at the current mouse cursor position.}
-\usage{gtkMenuPopup(object, parent.menu.shell = NULL, parent.menu.item = NULL, 
+\usage{gtkMenuPopup(object, parent.menu.shell = NULL, parent.menu.item = NULL,
     func = NULL, data = NULL, button, activate.time)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GtkMenu}}.}
@@ -21,7 +21,7 @@ at the current mouse cursor position.}
 the menu popup. If the menu popup was initiated by something other than
 a mouse button press, such as a mouse button release or a keypress,
 \code{button} should be 0.
-  
+
 The \code{activate.time} parameter is used to conflict-resolve initiation of
 concurrent requests for mouse/keyboard grab requests. To function
 properly, this needs to be the time stamp of the user event (such as

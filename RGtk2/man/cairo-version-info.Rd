@@ -15,7 +15,7 @@ or as a "snapshot" tar file as opposed to a "release" tar file).
 | /  _ Micro. Even/Odd = Tar-file/git
 | | /
 1.0.0
-}  
+}
 Here are a few examples of versions that one might see.
 \preformatted{Releases
 --------
@@ -35,14 +35,14 @@ follows. First, let's assume some cairo-using application code that is
 successfully using the API/ABI "from" one version of cairo. Then let's
 ask the question whether this same code can be moved "to" the API/ABI
 of another version of cairo.
-  
+
 Moving from a release to any later version (release, snapshot,
 development) is always guaranteed to provide compatibility.
-  
+
 Moving from a snapshot to any later version is not guaranteed to
 provide compatibility, since snapshots may introduce new API that ends
 up being removed before the next release.
-  
+
 Moving from an in-development version (odd micro component) to any
 later version is not guaranteed to provide compatibility. In fact,
 there's not even a guarantee that the code will even continue to work
@@ -62,7 +62,7 @@ Run-time
 --------
 cairoVersionString()	Human-readable, use compareVersion() for comparison
 cairoVersion()		Encoded, not very useful in R
-}  
+}
 For example, checking that the cairo version is greater than or equal
 to 1.0.0 could be achieved at compile-time or run-time as follows:
 \preformatted{

@@ -2,7 +2,7 @@
 \name{gtkPaintLayout}
 \title{gtkPaintLayout}
 \description{Draws a layout on \code{window} using the given parameters.}
-\usage{gtkPaintLayout(object, window, state.type, use.text, area = NULL, 
+\usage{gtkPaintLayout(object, window, state.type, use.text, area = NULL,
     widget = NULL, detail = NULL, x, y, layout)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GtkStyle}}}

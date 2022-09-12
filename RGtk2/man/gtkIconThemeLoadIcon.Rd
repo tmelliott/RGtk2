@@ -15,11 +15,11 @@ exactly this size; see \code{\link{gtkIconInfoLoadIcon}}.}
 \item{.errwarn}{Whether to issue a warning on error or fail silently}
 }
 \details{Note that you probably want to listen for icon theme changes and
-update the icon. This is usually done by connecting to the 
+update the icon. This is usually done by connecting to the
 GtkWidget::style-set signal. If for some reason you do not want to
 update the icon when the icon theme changes, you should consider
 using \code{\link{gdkPixbufCopy}} to make a private copy of the pixbuf
-returned by this function. Otherwise GTK+ may need to keep the old 
+returned by this function. Otherwise GTK+ may need to keep the old
 icon theme loaded, which would be a waste of memory.
   Since 2.4}
 \value{

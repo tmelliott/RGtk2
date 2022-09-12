@@ -12,7 +12,7 @@ until the end of the text are deleted.}
 }
 \details{If \code{position} or \code{n.chars} are out of bounds, then they are coerced to sane
 values.
-  
+
 Note that the positions are specified in characters, not bytes.
   Since 2.18}
 \value{[numeric] The number of characters deleted.}

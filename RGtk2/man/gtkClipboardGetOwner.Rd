@@ -1,9 +1,9 @@
 \alias{gtkClipboardGetOwner}
 \name{gtkClipboardGetOwner}
 \title{gtkClipboardGetOwner}
-\description{If the clipboard contents callbacks were set with 
-\code{\link{gtkClipboardSetWithOwner}}, and the \code{\link{gtkClipboardSetWithData}} or 
-\code{\link{gtkClipboardClear}} has not subsequently called, returns the owner set 
+\description{If the clipboard contents callbacks were set with
+\code{\link{gtkClipboardSetWithOwner}}, and the \code{\link{gtkClipboardSetWithData}} or
+\code{\link{gtkClipboardClear}} has not subsequently called, returns the owner set
 by \code{\link{gtkClipboardSetWithOwner}}.}
 \usage{gtkClipboardGetOwner(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkClipboard}}}}

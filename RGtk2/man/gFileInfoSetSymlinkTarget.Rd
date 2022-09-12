@@ -1,7 +1,7 @@
 \alias{gFileInfoSetSymlinkTarget}
 \name{gFileInfoSetSymlinkTarget}
 \title{gFileInfoSetSymlinkTarget}
-\description{Sets the \code{G_FILE_ATTRIBUTE_STANDARD_SYMLINK_TARGET} attribute in the file info 
+\description{Sets the \code{G_FILE_ATTRIBUTE_STANDARD_SYMLINK_TARGET} attribute in the file info
 to the given symlink target.}
 \usage{gFileInfoSetSymlinkTarget(object, symlink.target)}
 \arguments{

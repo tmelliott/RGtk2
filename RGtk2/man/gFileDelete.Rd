@@ -1,7 +1,7 @@
 \alias{gFileDelete}
 \name{gFileDelete}
 \title{gFileDelete}
-\description{Deletes a file. If the \code{file} is a directory, it will only be deleted if it 
+\description{Deletes a file. If the \code{file} is a directory, it will only be deleted if it
 is empty.}
 \usage{gFileDelete(object, cancellable = NULL, .errwarn = TRUE)}
 \arguments{

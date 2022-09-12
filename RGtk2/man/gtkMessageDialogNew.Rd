@@ -6,7 +6,7 @@ indicating the dialog type (error, warning, etc.) and some text the
 user may want to see. When the user clicks a button a "response"
 signal is emitted with response IDs from \code{\link{GtkResponseType}}. See
 \code{\link{GtkDialog}} for more details.}
-\usage{gtkMessageDialogNew(parent = NULL, flags, type, buttons, ..., 
+\usage{gtkMessageDialogNew(parent = NULL, flags, type, buttons, ...,
     show = TRUE)}
 \arguments{
 \item{\verb{parent}}{transient parent, or \code{NULL} for none. \emph{[  \acronym{allow-none}  ]}}

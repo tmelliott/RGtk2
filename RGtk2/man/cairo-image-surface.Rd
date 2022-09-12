@@ -19,8 +19,8 @@ image formats are those defined in \code{\link{CairoFormat}}.}
 \section{Enums and Flags}{\describe{\item{\verb{CairoFormat}}{
 \code{\link{CairoFormat}} is used to identify the memory format of
 image data.
-  
-New entries may be added in future versions.  
+
+New entries may be added in future versions.
 
 \describe{
 \item{\verb{argb32}}{ each pixel is a 32-bit quantity, with

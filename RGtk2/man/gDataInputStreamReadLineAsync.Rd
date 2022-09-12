@@ -3,7 +3,7 @@
 \title{gDataInputStreamReadLineAsync}
 \description{The asynchronous version of \code{\link{gDataInputStreamReadLine}}.  It is
 an error to have two outstanding calls to this function.}
-\usage{gDataInputStreamReadLineAsync(object, io.priority, cancellable = NULL, 
+\usage{gDataInputStreamReadLineAsync(object, io.priority, cancellable = NULL,
     callback, user.data = NULL)}
 \arguments{
 \item{\verb{object}}{a given \code{\link{GDataInputStream}}.}

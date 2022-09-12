@@ -17,7 +17,7 @@ area will be set to the full area covered by \code{column}.  See also
 containing the expander, the tooltip might not show and hide at the correct
 position.  In such cases \code{path} must be set to the current node under the
 mouse cursor for this function to operate correctly.
-  
+
 See also \code{\link{gtkTreeViewSetTooltipColumn}} for a simpler alternative.
   Since 2.12}
 \author{Derived by RGtkGen from GTK+ documentation}

@@ -3,15 +3,15 @@
 \alias{as.struct}
 \title{Transparent types in RGtk2}
 \description{
-A \emph{transparent type} in RGtk2 is a non-primitive type passed between 
+A \emph{transparent type} in RGtk2 is a non-primitive type passed between
 the user and the API as an ordinary R object (usually a list with a defined structure).
 }
 \details{
-The RGtk2 documentation defines the public structure of every object. 
-Some of these have been tagged as being \emph{transparent}, indicating that 
-the R programmer need not obtain an external object but rather simply create 
-the analagous structure in R. \emph{Transparent types} are usually simple types 
-that would be created inline in C code for convenience, instead of 
+The RGtk2 documentation defines the public structure of every object.
+Some of these have been tagged as being \emph{transparent}, indicating that
+the R programmer need not obtain an external object but rather simply create
+the analagous structure in R. \emph{Transparent types} are usually simple types
+that would be created inline in C code for convenience, instead of
 invoking a function with a large number of arguments. RGtk2 emulates this in R.
 
 Usually these structures are constructed as R lists, with optionally named elements.
@@ -64,5 +64,3 @@ logic as function calls to function definitions (see \code{\link{match.call}}).
  \code{\link{GdkTimeCoord}}
 }
 \keyword{interface}
-
-

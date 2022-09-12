@@ -1,7 +1,7 @@
 \alias{gtkPrintOperationGetDefaultPageSetup}
 \name{gtkPrintOperationGetDefaultPageSetup}
 \title{gtkPrintOperationGetDefaultPageSetup}
-\description{Returns the default page setup, see 
+\description{Returns the default page setup, see
 \code{\link{gtkPrintOperationSetDefaultPageSetup}}.}
 \usage{gtkPrintOperationGetDefaultPageSetup(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkPrintOperation}}}}

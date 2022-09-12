@@ -17,11 +17,11 @@ Pops up the menu constructed from the item factory at (\code{x}, \code{y}).
 the menu popup. If the menu popup was initiated by something other than
 a mouse button press, such as a mouse button release or a keypress,
 \code{mouse.button} should be 0.
-  
+
 The \code{time.} parameter should be the time stamp of the event that
 initiated the popup. If such an event is not available, use
 \code{\link{gtkGetCurrentEventTime}} instead.
-  
+
 The operation of the \code{mouse.button} and the \code{time.} parameter is the same
 as the \code{button} and \code{activation.time} parameters for \code{\link{gtkMenuPopup}}.}
 \author{Derived by RGtkGen from GTK+ documentation}

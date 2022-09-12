@@ -13,7 +13,7 @@ functions in GTK+ will sometimes call
 \item{\verb{parent}}{parent window, or \code{NULL}. \emph{[  \acronym{allow-none}  ]}}
 }
 \details{Passing \code{NULL} for \code{parent} unsets the current transient window.
-  
+
 On Windows, this function puts the child window on top of the parent,
 much as the window manager would have done on X.}
 \author{Derived by RGtkGen from GTK+ documentation}

@@ -3,7 +3,7 @@
 \title{gResolverLookupByAddress}
 \description{Synchronously reverse-resolves \code{address} to determine its
 associated hostname.}
-\usage{gResolverLookupByAddress(object, address, cancellable = NULL, 
+\usage{gResolverLookupByAddress(object, address, cancellable = NULL,
     .errwarn = TRUE)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GResolver}}}
@@ -13,7 +13,7 @@ associated hostname.}
 }
 \details{If the DNS resolution fails, \code{error} (if non-\code{NULL}) will be set to
 a value from \verb{GResolverError}.
-  
+
 If \code{cancellable} is non-\code{NULL}, it can be used to cancel the
 operation, in which case \code{error} (if non-\code{NULL}) will be set to
 \code{G_IO_ERROR_CANCELLED}.

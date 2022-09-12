@@ -3,7 +3,7 @@
 \title{gOutputStreamWriteAll}
 \description{Tries to write \code{count} bytes from \code{buffer} into the stream. Will block
 during the operation.}
-\usage{gOutputStreamWriteAll(object, buffer, bytes.written, cancellable = NULL, 
+\usage{gOutputStreamWriteAll(object, buffer, bytes.written, cancellable = NULL,
     .errwarn = TRUE)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GOutputStream}}.}
@@ -15,10 +15,10 @@ written to the stream}
 }
 \details{This function is similar to \code{\link{gOutputStreamWrite}}, except it tries to
 write as many bytes as requested, only stopping on an error.
-  
+
 On a successful write of \code{count} bytes, \code{TRUE} is returned, and \code{bytes.written}
 is set to \code{count}.
-  
+
 If there is an error during the operation FALSE is returned and \code{error}
 is set to indicate the error status, \code{bytes.written} is updated to contain
 the number of bytes written into the stream before the error occurred.}

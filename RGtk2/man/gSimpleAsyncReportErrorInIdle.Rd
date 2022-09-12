@@ -1,10 +1,10 @@
 \alias{gSimpleAsyncReportErrorInIdle}
 \name{gSimpleAsyncReportErrorInIdle}
 \title{gSimpleAsyncReportErrorInIdle}
-\description{Reports an error in an asynchronous function in an idle function by 
+\description{Reports an error in an asynchronous function in an idle function by
 directly setting the contents of the \code{\link{GAsyncResult}} with the given error
 information.}
-\usage{gSimpleAsyncReportErrorInIdle(object, callback, user.data, domain, 
+\usage{gSimpleAsyncReportErrorInIdle(object, callback, user.data, domain,
     code, format, ...)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GObject}}.}

@@ -19,12 +19,12 @@ all regions that have been invalidated.}
 implementations. You might also use it, or
 \code{\link{gdkWindowInvalidateRect}} directly, to schedule a redraw of a
 \code{\link{GtkDrawingArea}} or some portion thereof.
-  
+
 Frequently you can just call \code{\link{gdkWindowInvalidateRect}} or
 \code{\link{gdkWindowInvalidateRegion}} instead of this function. Those
 functions will invalidate only a single window, instead of the
 widget and all its children.
-  
+
 The advantage of adding to the invalidated region compared to
 simply drawing immediately is efficiency; using an invalid region
 ensures that you only have to redraw one time.}

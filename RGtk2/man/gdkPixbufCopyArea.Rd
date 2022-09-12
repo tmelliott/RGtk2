@@ -3,7 +3,7 @@
 \title{gdkPixbufCopyArea}
 \description{Copies a rectangular area from \code{src.pixbuf} to \code{dest.pixbuf}.  Conversion of
 pixbuf formats is done automatically.}
-\usage{gdkPixbufCopyArea(object, src.x, src.y, width, height, dest.pixbuf, 
+\usage{gdkPixbufCopyArea(object, src.x, src.y, width, height, dest.pixbuf,
     dest.x, dest.y)}
 \arguments{
 \item{\verb{object}}{Source pixbuf.}

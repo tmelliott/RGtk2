@@ -47,7 +47,7 @@
 displaying the list of recently used files.  In GTK+, the main objects
 that implement this interface are \code{\link{GtkRecentChooserWidget}},
 \code{\link{GtkRecentChooserDialog}} and \code{\link{GtkRecentChooserMenu}}.
-  
+
 Recently used files are supported since GTK+ 2.10.}
 \section{Structures}{\describe{\item{\verb{GtkRecentChooser}}{
 \emph{undocumented

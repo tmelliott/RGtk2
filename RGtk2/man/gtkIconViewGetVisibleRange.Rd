@@ -1,7 +1,7 @@
 \alias{gtkIconViewGetVisibleRange}
 \name{gtkIconViewGetVisibleRange}
 \title{gtkIconViewGetVisibleRange}
-\description{Sets \code{start.path} and \code{end.path} to be the first and last visible path. 
+\description{Sets \code{start.path} and \code{end.path} to be the first and last visible path.
 Note that there may be invisible paths in between.}
 \usage{gtkIconViewGetVisibleRange(object)}
 \arguments{\item{\verb{object}}{A \code{\link{GtkIconView}}}}

@@ -3,7 +3,7 @@
 \title{gDataInputStreamReadUntil}
 \description{Reads a string from the data input stream, up to the first
 occurrence of any of the stop characters.}
-\usage{gDataInputStreamReadUntil(object, stop.chars, cancellable = NULL, 
+\usage{gDataInputStreamReadUntil(object, stop.chars, cancellable = NULL,
     .errwarn = TRUE)}
 \arguments{
 \item{\verb{object}}{a given \code{\link{GDataInputStream}}.}

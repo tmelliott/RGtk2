@@ -70,7 +70,7 @@
  AtkImplementorIface and  \code{\link{GtkBuildable}}.}
 \section{Detailed Description}{The \code{\link{GtkNotebook}} widget is a \code{\link{GtkContainer}} whose children are pages that
 can be switched between using tab labels along one edge.
-  
+
 There are many configuration options for \code{\link{GtkNotebook}}. Among other
 things, you can choose on which edge the tabs appear
 (see \code{\link{gtkNotebookSetTabPos}}), whether, if there are too many
@@ -84,11 +84,11 @@ supports placing children into tabs by specifying "tab" as the
 of the tab must be created before the tab can be filled.
 A tab child can be specified without specifying a <child>
 type attribute.
-  
+
 To add a child widget in the notebooks action area, specify
 "action-start" or "action-end" as the "type" attribute of the <child>
 element.
-  
+
  \emph{A UI definition fragment with GtkNotebook}\preformatted{<object class="GtkNotebook">
   <child>
     <object class="GtkLabel" id="notebook-content">
@@ -144,13 +144,13 @@ If the function returns \code{NULL}, the drag will be cancelled.
 \item{\code{create-window(notebook, page, x, y, user.data)}}{
 The ::create-window signal is emitted when a detachable
 tab is dropped on the root window.
-  
+
 A handler for this signal can create a window containing
 a notebook where the tab will be attached. It is also
 responsible for moving/resizing the window and adding the
 necessary properties to the notebook (e.g. the
 \verb{"group-id"} ).
-  
+
 The default handler uses the global window creation hook,
 if one has been set with \code{\link{gtkNotebookSetWindowCreationHook}}.
   Since 2.12

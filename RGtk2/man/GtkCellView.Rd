@@ -54,7 +54,7 @@ Whether this tag affects the background color.  Default value: FALSE
 \item{\verb{model} [\code{\link{GtkTreeModel}} : *         : Read / Write]}{
 
 The model for cell view
-  
+
 since 2.10
 
 }

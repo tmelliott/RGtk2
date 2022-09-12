@@ -3,7 +3,7 @@
 \title{gdkDisplayGetWindowAtPointer}
 \description{Obtains the window underneath the mouse pointer, returning the location
 of the pointer in that window in \code{win.x}, \code{win.y} for \code{screen}. Returns \code{NULL}
-if the window under the mouse pointer is not known to GDK (for example, 
+if the window under the mouse pointer is not known to GDK (for example,
 belongs to another application).}
 \usage{gdkDisplayGetWindowAtPointer(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GdkDisplay}}}}

@@ -2,7 +2,7 @@
 \name{gtkWindowPresentWithTime}
 \title{gtkWindowPresentWithTime}
 \description{Presents a window to the user in response to a user interaction.
-If you need to present a window without a timestamp, use 
+If you need to present a window without a timestamp, use
 \code{\link{gtkWindowPresent}}. See \code{\link{gtkWindowPresent}} for details.}
 \usage{gtkWindowPresentWithTime(object, timestamp)}
 \arguments{

@@ -5,7 +5,7 @@
 When this operation has completed, \code{callback} will be called with
 \code{user.user} data, and the operation can be finalized with
 \code{\link{gFileEjectMountableWithOperationFinish}}.}
-\usage{gFileEjectMountableWithOperation(object, flags, mount.operation, 
+\usage{gFileEjectMountableWithOperation(object, flags, mount.operation,
     cancellable = NULL, callback, user.data = NULL)}
 \arguments{
 \item{\verb{object}}{input \code{\link{GFile}}.}

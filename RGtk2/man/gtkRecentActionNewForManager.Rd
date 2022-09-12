@@ -4,7 +4,7 @@
 \description{Creates a new \code{\link{GtkRecentAction}} object. To add the action to
 a \code{\link{GtkActionGroup}} and set the accelerator for the action,
 call \code{\link{gtkActionGroupAddActionWithAccel}}.}
-\usage{gtkRecentActionNewForManager(name, label, tooltip, stock.id, 
+\usage{gtkRecentActionNewForManager(name, label, tooltip, stock.id,
     manager)}
 \arguments{
 \item{\verb{name}}{a unique name for the action}

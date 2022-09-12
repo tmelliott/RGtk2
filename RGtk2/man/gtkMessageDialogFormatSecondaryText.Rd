@@ -1,7 +1,7 @@
 \alias{gtkMessageDialogFormatSecondaryText}
 \name{gtkMessageDialogFormatSecondaryText}
 \title{gtkMessageDialogFormatSecondaryText}
-\description{Sets the secondary text of the message dialog to be \code{message.format} 
+\description{Sets the secondary text of the message dialog to be \code{message.format}
 (with \code{printf()}-style).}
 \usage{gtkMessageDialogFormatSecondaryText(object, ...)}
 \arguments{

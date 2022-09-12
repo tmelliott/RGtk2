@@ -10,30 +10,30 @@ print settings in the print dialog, and then print the document.}
 \item{\verb{parent}}{Transient parent of the dialog. \emph{[  \acronym{allow-none}  ]}}
 \item{.errwarn}{Whether to issue a warning on error or fail silently}
 }
-\details{Normally that this function does not return until the rendering of all 
-pages is complete. You can connect to the 
-\verb{"status-changed"} signal on \code{op} to obtain some 
-information about the progress of the print operation. 
+\details{Normally that this function does not return until the rendering of all
+pages is complete. You can connect to the
+\verb{"status-changed"} signal on \code{op} to obtain some
+information about the progress of the print operation.
 Furthermore, it may use a recursive mainloop to show the print dialog.
-  
-If you call \code{\link{gtkPrintOperationSetAllowAsync}} or set the 
-\verb{"allow-async"} property the operation will run 
-asynchronously if this is supported on the platform. The 
-\verb{"done"} signal will be emitted with the result of the 
-operation when the it is done (i.e. when the dialog is canceled, or when 
+
+If you call \code{\link{gtkPrintOperationSetAllowAsync}} or set the
+\verb{"allow-async"} property the operation will run
+asynchronously if this is supported on the platform. The
+\verb{"done"} signal will be emitted with the result of the
+operation when the it is done (i.e. when the dialog is canceled, or when
 the print succeeds or fails).
 \preformatted{
 if (!is.null(settings))
   op$setPrintSettings(settings)
-  
+
 if (!is.null(page_setup))
   op$setDefaultPageSetup(page_setup)
-  
+
 gSignalConnect(op, "begin-print", begin_print)
 gSignalConnect(op, "draw-page", draw_page)
- 
+
 res <- op$run("print-dialog", parent)
- 
+
 if (res[[1]] == "error") {
   error_dialog = gtkMessageDialog(parent, "destroy-with-parent", "error",
     "close", "Error printing file: ", res$error$message)
@@ -42,7 +42,7 @@ if (res[[1]] == "error") {
 } else if (res[[1]] == "apply")
   settings = op$getPrintSettings()
 }
-  
+
 Note that \code{\link{gtkPrintOperationRun}} can only be called once on a
 given \code{\link{GtkPrintOperation}}.
   Since 2.10}

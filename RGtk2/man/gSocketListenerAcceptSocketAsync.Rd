@@ -2,7 +2,7 @@
 \name{gSocketListenerAcceptSocketAsync}
 \title{gSocketListenerAcceptSocketAsync}
 \description{This is the asynchronous version of \code{\link{gSocketListenerAcceptSocket}}.}
-\usage{gSocketListenerAcceptSocketAsync(object, cancellable = NULL, 
+\usage{gSocketListenerAcceptSocketAsync(object, cancellable = NULL,
     callback, user.data = NULL)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GSocketListener}}}

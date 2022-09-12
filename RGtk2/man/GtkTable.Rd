@@ -31,15 +31,15 @@
 \section{Detailed Description}{The \code{\link{GtkTable}} functions allow the programmer to arrange widgets in rows and
 columns, making it easy to align many widgets next to each other,
 horizontally and vertically.
-  
+
 Tables are created with a call to \code{\link{gtkTableNew}}, the size of which can
 later be changed with \code{\link{gtkTableResize}}.
-  
+
 Widgets can be added to a table using \code{\link{gtkTableAttach}} or the more
 convenient (but slightly less flexible) \code{\link{gtkTableAttachDefaults}}.
-  
+
 To alter the space next to a specific row, use \code{\link{gtkTableSetRowSpacing}},
-and for a column, \code{\link{gtkTableSetColSpacing}}.  
+and for a column, \code{\link{gtkTableSetColSpacing}}.
 The gaps between \emph{all} rows or columns can be changed by calling
 \code{\link{gtkTableSetRowSpacings}} or \code{\link{gtkTableSetColSpacings}} respectively.
   \code{\link{gtkTableSetHomogeneous}}, can be used to set whether all cells in the

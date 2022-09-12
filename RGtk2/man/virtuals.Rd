@@ -999,8 +999,8 @@
 \alias{pangoRendererClassDrawGlyphItem}
 \name{virtuals}
 \title{Virtual Methods}
-\description{This function is a wrapper for a virtual method in a \code{GObject} 
-  class structure. The wrapper is normally only useful for calling virtuals in a 
+\description{This function is a wrapper for a virtual method in a \code{GObject}
+  class structure. The wrapper is normally only useful for calling virtuals in a
   parent class inside implementations of new \code{GObject} classes.
 }
 \author{Michael Lawrence}

@@ -1,7 +1,7 @@
 \alias{gAppInfoLaunchDefaultForUri}
 \name{gAppInfoLaunchDefaultForUri}
 \title{gAppInfoLaunchDefaultForUri}
-\description{Utility function that launches the default application 
+\description{Utility function that launches the default application
 registered to handle the specified uri. Synchronous I/O
 is done on the uri to detect the type of the file if
 required.}

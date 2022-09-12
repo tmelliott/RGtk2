@@ -28,7 +28,7 @@
 \section{Detailed Description}{  A \code{\link{GtkMenuToolButton}} is a \code{\link{GtkToolItem}} that contains a button and
   a small additional button with an arrow. When clicked, the arrow
   button pops up a dropdown menu.
-  
+
   Use \code{\link{gtkMenuToolButtonNew}} to create a new
   \code{\link{GtkMenuToolButton}}. Use \code{\link{gtkMenuToolButtonNewFromStock}} to
   create a new \code{\link{GtkMenuToolButton}} containing a stock item.}
@@ -40,10 +40,10 @@
 \section{Convenient Construction}{\code{gtkMenuToolButton} is the equivalent of \code{\link{gtkMenuToolButtonNew}}.}
 \section{Signals}{\describe{\item{\code{show-menu(button, user.data)}}{
 The ::show-menu signal is emitted before the menu is shown.
-  
+
 It can be used to populate the menu on demand, using
 \code{\link{gtkMenuToolButtonGetMenu}}.
-  
+
 Note that even if you populate the menu dynamically in this way,
 you must set an empty menu on the \code{\link{GtkMenuToolButton}} beforehand,
 since the arrow is made insensitive if the menu is not set.

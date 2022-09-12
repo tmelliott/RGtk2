@@ -14,7 +14,7 @@
  AtkImplementorIface,  \code{\link{GtkBuildable}} and  \code{\link{GtkOrientable}}.}
 \section{Detailed Description}{The \code{\link{GtkScrollbar}} widget is an abstract base class for \code{\link{GtkHScrollbar}} and
 \code{\link{GtkVScrollbar}}. It is not very useful in itself.
-  
+
 The position of the thumb in a scrollbar is controlled by the scroll
 adjustments. See \code{\link{GtkAdjustment}} for the fields in an adjustment - for
 \code{\link{GtkScrollbar}}, the "value" field represents the position of the

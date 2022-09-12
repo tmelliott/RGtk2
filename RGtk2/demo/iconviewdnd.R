@@ -1,33 +1,30 @@
-#source("/home/larman/research/RGtk2/RGtk2/demo/iconview-dnd.R")
+# source("/home/larman/research/RGtk2/RGtk2/demo/iconview-dnd.R")
 
 window <- NULL
 
-fill_store <- function(store)
-{
+fill_store <- function(store) {
   text <- c("Red", "Green", "Blue", "Yellow")
-  
+
   # First clear the store
   store$clear()
-  
-  sapply(text, function(color)
-    {
-      iter <- store$append()$iter
-      store$set(iter, 0, color)
-    })
+
+  sapply(text, function(color) {
+    iter <- store$append()$iter
+    store$set(iter, 0, color)
+  })
 }
 
-create_store <- function()
-{
+create_store <- function() {
   gtkListStore("character")
 }
 
-set_cell_color <- function(cell_layout, cell, tree_model, iter, data)
-{
+set_cell_color <- function(cell_layout, cell, tree_model, iter, data) {
   text <- tree_model$get(iter, 0)[[1]]
   parse <- gdkColorParse(text)
   pixel <- 0
-  if (parse[[1]])
-    pixel <- sum(unlist(parse$color)[2:4]%/%(2^8)*2^(c(24, 16, 8)))
+  if (parse[[1]]) {
+    pixel <- sum(unlist(parse$color)[2:4] %/% (2^8) * 2^(c(24, 16, 8)))
+  }
 
   pixbuf <- gdkPixbufNew("rgb", FALSE, 8, 24, 24)
   pixbuf$fill(pixel)
@@ -35,11 +32,10 @@ set_cell_color <- function(cell_layout, cell, tree_model, iter, data)
   cell["pixbuf"] <- pixbuf
 }
 
-#debug(set_cell_color)
-#debug("[<-.GObject")
+# debug(set_cell_color)
+# debug("[<-.GObject")
 
-edited <- function(cell, path_string, text, data)
-{
+edited <- function(cell, path_string, text, data) {
   model <- data$getModel()
   path <- gtkTreePathNewFromString(path_string)
 

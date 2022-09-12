@@ -6,7 +6,7 @@ indicating the dialog type (error, warning, etc.) and some text which
 is marked up with the Pango text markup language.
 When the user clicks a button a "response" signal is emitted with
 response IDs from \code{\link{GtkResponseType}}. See \code{\link{GtkDialog}} for more details.}
-\usage{gtkMessageDialogNewWithMarkup(parent, flags, type, buttons, ..., 
+\usage{gtkMessageDialogNewWithMarkup(parent, flags, type, buttons, ...,
     show = TRUE)}
 \arguments{
 \item{\verb{parent}}{transient parent, or \code{NULL} for none. \emph{[  \acronym{allow-none}  ]}}

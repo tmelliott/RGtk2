@@ -10,7 +10,7 @@
 }
 \details{This function will take care of setting \verb{"has-tooltip"} to \code{TRUE}
 and of the default handler for the \verb{"query-tooltip"} signal.
-  
+
 See also the \verb{"tooltip-markup"} property and
 \code{\link{gtkTooltipSetMarkup}}.
   Since 2.16}

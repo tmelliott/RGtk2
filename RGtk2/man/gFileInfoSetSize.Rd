@@ -1,7 +1,7 @@
 \alias{gFileInfoSetSize}
 \name{gFileInfoSetSize}
 \title{gFileInfoSetSize}
-\description{Sets the \code{G_FILE_ATTRIBUTE_STANDARD_SIZE} attribute in the file info 
+\description{Sets the \code{G_FILE_ATTRIBUTE_STANDARD_SIZE} attribute in the file info
 to the given size.}
 \usage{gFileInfoSetSize(object, size)}
 \arguments{

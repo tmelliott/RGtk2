@@ -17,7 +17,7 @@ is meant for special rich text formats like the internal one that
 is registered using \code{\link{gtkTextBufferRegisterDeserializeTagset}},
 because that format is essentially a dump of the internal structure
 of the source buffer, including its tag names.
-  
+
 You should allow creation of tags only if you know what you are
 doing, e.g. if you defined a tagset name for your application
 suite's text buffers and you know that it's fine to receive new

@@ -12,7 +12,7 @@ up iconified. Just don't write code that crashes if not.}
 \details{It's permitted to call this function before showing a window,
 in which case the window will be iconified before it ever appears
 onscreen.
-  
+
 You can track iconification via the "window-state-event" signal
 on \code{\link{GtkWidget}}.}
 \author{Derived by RGtkGen from GTK+ documentation}

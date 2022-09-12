@@ -11,7 +11,7 @@ depends on the mode of the size group. See \code{\link{gtkSizeGroupSetMode}}.}
 \item{\verb{object}}{a \code{\link{GtkSizeGroup}}}
 \item{\verb{widget}}{the \code{\link{GtkWidget}} to add}
 }
-\details{When the widget is destroyed or no longer referenced elsewhere, it will 
+\details{When the widget is destroyed or no longer referenced elsewhere, it will
 be removed from the size group.}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

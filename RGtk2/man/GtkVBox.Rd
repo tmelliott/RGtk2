@@ -22,10 +22,10 @@
 \section{Interfaces}{GtkVBox implements
  AtkImplementorIface,  \code{\link{GtkBuildable}} and  \code{\link{GtkOrientable}}.}
 \section{Detailed Description}{A \code{\link{GtkVBox}} is a container that organizes child widgets into a single column.
-  
+
 Use the \code{\link{GtkBox}} packing interface to determine the arrangement,
 spacing, height, and alignment of \code{\link{GtkVBox}} children.
-  
+
 All children are allocated the same width.}
 \section{Structures}{\describe{\item{\verb{GtkVBox}}{
 \emph{undocumented

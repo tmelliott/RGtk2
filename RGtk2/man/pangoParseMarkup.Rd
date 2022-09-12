@@ -17,7 +17,7 @@ as an accelerator will receive a \code{PANGO_UNDERLINE_LOW} attribute,
 and the first character so marked will be returned in \code{accel.char}.
 Two \code{accel.marker} characters following each other produce a single
 literal \code{accel.marker} character.
-  
+
 If any error happens, none of the output arguments are touched except
 for \code{error}.  }
 \value{

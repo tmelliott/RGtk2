@@ -11,7 +11,7 @@ resources list.}
 \details{This function automatically retrieves some of the needed
 metadata and setting other metadata to common default values; it
 then feeds the data to \code{\link{gtkRecentManagerAddFull}}.
-  
+
 See \code{\link{gtkRecentManagerAddFull}} if you want to explicitly
 define the metadata for the resource pointed by \code{uri}.
   Since 2.10}

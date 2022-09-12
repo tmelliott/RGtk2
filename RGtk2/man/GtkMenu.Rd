@@ -46,24 +46,24 @@
 \section{Detailed Description}{A \code{\link{GtkMenu}} is a \code{\link{GtkMenuShell}} that implements a drop down menu consisting of
 a list of \code{\link{GtkMenuItem}} objects which can be navigated and activated by the
 user to perform application functions.
-  
+
 A \code{\link{GtkMenu}} is most commonly dropped down by activating a \code{\link{GtkMenuItem}} in a
 \code{\link{GtkMenuBar}} or popped up by activating a \code{\link{GtkMenuItem}} in another \code{\link{GtkMenu}}.
-  
+
 A \code{\link{GtkMenu}} can also be popped up by activating a \code{\link{GtkOptionMenu}}.
 Other composite widgets such as the \code{\link{GtkNotebook}} can pop up a \code{\link{GtkMenu}}
 as well.
-  
+
 Applications can display a \code{\link{GtkMenu}} as a popup menu by calling the
 \code{\link{gtkMenuPopup}} function.  The example below shows how an application
 can pop up a menu when the 3rd mouse button is pressed.
-  
+
  \emph{Connecting the popup signal handler.}
 \preformatted{
-## connect our handler which will popup the menu 
+## connect our handler which will popup the menu
 gSignalConnect(window, "button_press_event", my_popup_handler, menu,
                user.data.first=TRUE)
-}  
+}
  \emph{Signal handler which displays a popup menu.}
 \preformatted{
 # The popup handler
@@ -73,7 +73,7 @@ my_popup_handler <- function(widget, event)
   checkPtrType(widget, "GtkMenu")
   stopifnot(event != NULL)
 
-  ## The "widget" is the menu that was supplied when 
+  ## The "widget" is the menu that was supplied when
   ## gSignalConnect() was called.
   menu <- widget
 
@@ -185,7 +185,7 @@ The monitor the menu will be popped up on.
 
 A boolean that indicates whether the menu reserves space for
 toggles and icons, regardless of their actual presence.
-  
+
 This property should only be changed from its default value
 for special-purposes such as tabular menus. Regular menus that
 are connected to a menu bar or context menus should reserve

@@ -2,7 +2,7 @@
 \alias{gtkAdd}
 \title{Add Gtk wdget to parent container}
 \description{
-\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)} 
+\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)}
 
 This adds the specified Gtk widget
 to the hierarchy defining a graphical
@@ -47,5 +47,3 @@ result will be that newly created container widget.
 
 \keyword{interface}
 \keyword{internal}
-
-

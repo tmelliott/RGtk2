@@ -1,7 +1,7 @@
 \alias{gtkTreeViewCreateRowDragIcon}
 \name{gtkTreeViewCreateRowDragIcon}
 \title{gtkTreeViewCreateRowDragIcon}
-\description{Creates a \code{\link{GdkPixmap}} representation of the row at \code{path}.  
+\description{Creates a \code{\link{GdkPixmap}} representation of the row at \code{path}.
 This image is used for a drag icon.}
 \usage{gtkTreeViewCreateRowDragIcon(object, path)}
 \arguments{

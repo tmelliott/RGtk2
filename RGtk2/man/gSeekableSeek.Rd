@@ -2,7 +2,7 @@
 \name{gSeekableSeek}
 \title{gSeekableSeek}
 \description{Seeks in the stream by the given \code{offset}, modified by \code{type}.}
-\usage{gSeekableSeek(object, offset, type = "G_SEEK_SET", cancellable = NULL, 
+\usage{gSeekableSeek(object, offset, type = "G_SEEK_SET", cancellable = NULL,
     .errwarn = TRUE)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GSeekable}}.}

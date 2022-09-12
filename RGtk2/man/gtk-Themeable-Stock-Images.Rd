@@ -56,7 +56,7 @@ GBoxed
  \code{\link{GtkBuildable}}.}
 \section{Detailed Description}{Browse the available stock icons in the list of stock IDs found here. You can also use
 the \command{gtk-demo} application for this purpose.
-  
+
  An icon factory manages a collection of \code{\link{GtkIconSet}}; a \code{\link{GtkIconSet}} manages a
  set of variants of a particular icon (i.e. a \code{\link{GtkIconSet}} contains variants for
  different sizes and widget states). Icons in an icon factory are named by a
@@ -68,7 +68,7 @@ the \command{gtk-demo} application for this purpose.
  \code{\link{gtkIconFactoryRemoveDefault}}. Applications with icons should add a default
  icon factory with their icons, which will allow themes to override the icons
  for the application.
-  
+
 To display an icon, always use \code{\link{gtkStyleLookupIconSet}} on the widget that
 will display the icon, or the convenience function
 \code{\link{gtkWidgetRenderIcon}}. These functions take the theme into account when
@@ -90,7 +90,7 @@ This attribute is optional.}
 \item{state}{State of the source, a \code{\link{GtkStateType}} enum value.
 This attribute is optional.}
 }
-  
+
  \emph{A   \code{GtkIconFactory}   UI definition fragment.}\preformatted{<object class="GtkIconFactory" id="iconfactory1">
   <sources>
     <source stock-id="apple-red" filename="apple-red.png"/>

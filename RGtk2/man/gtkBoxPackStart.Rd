@@ -2,7 +2,7 @@
 \name{gtkBoxPackStart}
 \title{gtkBoxPackStart}
 \description{Adds \code{child} to \code{box}, packed with reference to the start of \code{box}.
-The \code{child} is packed after any other child packed with reference 
+The \code{child} is packed after any other child packed with reference
 to the start of \code{box}.}
 \usage{gtkBoxPackStart(object, child, expand = TRUE, fill = TRUE, padding = 0)}
 \arguments{

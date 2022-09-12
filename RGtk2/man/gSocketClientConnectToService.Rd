@@ -2,7 +2,7 @@
 \name{gSocketClientConnectToService}
 \title{gSocketClientConnectToService}
 \description{Attempts to create a TCP connection to a service.}
-\usage{gSocketClientConnectToService(object, domain, service, cancellable = NULL, 
+\usage{gSocketClientConnectToService(object, domain, service, cancellable = NULL,
     .errwarn = TRUE)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GSocketConnection}}}
@@ -15,11 +15,11 @@
 "tcp" protocol.  It then attempts to connect, in turn, to each of
 the hosts providing the service until either a connection succeeds
 or there are no hosts remaining.
-  
+
 Upon a successful connection, a new \code{\link{GSocketConnection}} is constructed
 and returned.  The caller owns this new object and must drop their
 reference to it when finished with it.
-  
+
 In the event of any failure (DNS error, service not found, no hosts
 connectable) \code{NULL} is returned and \code{error} (if non-\code{NULL}) is set
 accordingly.}

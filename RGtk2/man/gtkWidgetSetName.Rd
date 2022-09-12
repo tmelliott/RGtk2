@@ -10,7 +10,7 @@ same page as the docs for \code{\link{GtkRcStyle}}).}
 \item{\verb{object}}{a \code{\link{GtkWidget}}}
 \item{\verb{name}}{name for the widget}
 }
-\details{Note that widget names are separated by periods in paths (see 
+\details{Note that widget names are separated by periods in paths (see
 \code{\link{gtkWidgetPath}}), so names with embedded periods may cause confusion.}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

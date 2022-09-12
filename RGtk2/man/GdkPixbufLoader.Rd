@@ -26,7 +26,7 @@
     small chunks.  For example, it should be used when reading an
     image from a (potentially) slow network connection, or when
     loading an extremely large file.
-    
+
     To use \code{\link{GdkPixbufLoader}} to load an image, just create a new one,
     and call \code{\link{gdkPixbufLoaderWrite}} to send the data to it.  When
     done, \code{\link{gdkPixbufLoaderClose}} should be called to end the stream
@@ -44,7 +44,7 @@
     pixbuf can be safely filled with any temporary graphics (or an
     initial color) as needed.  You can also call
     \code{\link{gdkPixbufLoaderGetPixbuf}} later and get the same pixbuf.
-    
+
     The last signal, "area_updated" gets
     called every time a region is updated.  This way you can update a
     partially completed image.  Note that you do not know anything

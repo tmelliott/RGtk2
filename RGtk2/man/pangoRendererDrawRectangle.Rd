@@ -13,7 +13,7 @@ specified \code{\link{PangoRenderer}}.}
 \item{\verb{height}}{[integer]  height of rectangle in Pango units in user space coordinates}
 }
 \details{This should be called while \code{renderer} is already active.  Use
-\code{\link{pangoRendererActivate}} to activate a renderer.  
+\code{\link{pangoRendererActivate}} to activate a renderer.
   Since 1.8}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

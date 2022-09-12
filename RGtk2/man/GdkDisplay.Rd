@@ -49,7 +49,7 @@
 \item To grab/ungrab keyboard focus and mouse pointer
 \item To manage and provide information about the \code{\link{GdkScreen}}(s)
 		available for this \code{\link{GdkDisplay}}
-	  
+
 }
   \code{\link{GdkDisplay}} objects are the GDK representation of the X Display which can be
   described as \emph{a workstation consisting of a keyboard a pointing

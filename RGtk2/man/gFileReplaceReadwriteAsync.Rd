@@ -3,7 +3,7 @@
 \title{gFileReplaceReadwriteAsync}
 \description{Asynchronously overwrites the file in read-write mode, replacing the
 contents, possibly creating a backup copy of the file first.}
-\usage{gFileReplaceReadwriteAsync(object, etag, make.backup, flags, 
+\usage{gFileReplaceReadwriteAsync(object, etag, make.backup, flags,
     io.priority, cancellable = NULL, callback, user.data = NULL)}
 \arguments{
 \item{\verb{object}}{input \code{\link{GFile}}.}
@@ -19,7 +19,7 @@ of the request.}
 }
 \details{For more details, see \code{\link{gFileReplaceReadwrite}} which is
 the synchronous version of this call.
-  
+
 When the operation is finished, \code{callback} will be called. You can then
 call \code{\link{gFileReplaceReadwriteFinish}} to get the result of the operation.
   Since 2.22}

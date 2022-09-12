@@ -31,7 +31,7 @@ its base class, \code{\link{GtkRange}}, in addition to the methods for \code{\li
 To set the value of a scale, you would normally use \code{\link{gtkRangeSetValue}}.
 To detect changes to the value, you would normally use the "value_changed"
 signal.
-  
+
 The \code{\link{GtkScale}} widget is an abstract class, used only for deriving the
 subclasses \code{\link{GtkHScale}} and \code{\link{GtkVScale}}. To create a scale widget,
 call \code{\link{gtkHScaleNewWithRange}} or \code{\link{gtkVScaleNewWithRange}}.}
@@ -50,7 +50,7 @@ the accessor functions.
 Signal which allows you to change how the scale value is displayed.
 Connect a signal handler which returns an allocated string representing
 \code{value}. That string will then be used to display the scale's value.
-  
+
 Here's an example signal handler which displays a value 1.0 as
 with "-->1.0<--".
 \preformatted{

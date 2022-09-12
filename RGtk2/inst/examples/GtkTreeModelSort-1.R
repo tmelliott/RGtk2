@@ -3,7 +3,7 @@
 ## get the child model
 child_model <- get_my_model()
 
-## Create the first tree 
+## Create the first tree
 sort_model1 <- gtkTreeModelSort(child_model)
 tree_view1 <- gtkTreeView(sort_model1)
 

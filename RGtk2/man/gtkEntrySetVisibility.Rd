@@ -1,9 +1,9 @@
 \alias{gtkEntrySetVisibility}
 \name{gtkEntrySetVisibility}
 \title{gtkEntrySetVisibility}
-\description{Sets whether the contents of the entry are visible or not. 
-When visibility is set to \code{FALSE}, characters are displayed 
-as the invisible char, and will also appear that way when 
+\description{Sets whether the contents of the entry are visible or not.
+When visibility is set to \code{FALSE}, characters are displayed
+as the invisible char, and will also appear that way when
 the text in the entry widget is copied elsewhere.}
 \usage{gtkEntrySetVisibility(object, visible)}
 \arguments{

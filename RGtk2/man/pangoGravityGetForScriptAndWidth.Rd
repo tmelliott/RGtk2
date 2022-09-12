@@ -4,7 +4,7 @@
 \description{Based on the script, East Asian width, base gravity, and hint,
 returns actual gravity to use in laying out a single character
 or \code{\link{PangoItem}}.}
-\usage{pangoGravityGetForScriptAndWidth(script, wide, base.gravity, 
+\usage{pangoGravityGetForScriptAndWidth(script, wide, base.gravity,
     hint)}
 \arguments{
 \item{\verb{script}}{[\code{\link{PangoScript}}] \code{\link{PangoScript}} to query}
@@ -18,9 +18,9 @@ wide/full-width characters also.  Wide/full-width characters always
 stand \emph{upright}, that is, they always take the base gravity,
 whereas narrow/full-width characters are always rotated in vertical
 context.
-  
+
 If \code{base.gravity} is \code{PANGO_GRAVITY_AUTO}, it is first replaced with the
-preferred gravity of \code{script}.  
+preferred gravity of \code{script}.
   Since 1.26}
 \value{[\code{\link{PangoGravity}}]  resolved gravity suitable to use for a run of text
 with \code{script} and \code{wide}.}

@@ -1,7 +1,7 @@
 \alias{gLoadableIconLoad}
 \name{gLoadableIconLoad}
 \title{gLoadableIconLoad}
-\description{Loads a loadable icon. For the asynchronous version of this function, 
+\description{Loads a loadable icon. For the asynchronous version of this function,
 see \code{\link{gLoadableIconLoadAsync}}.}
 \usage{gLoadableIconLoad(object, size, cancellable = NULL, .errwarn = TRUE)}
 \arguments{

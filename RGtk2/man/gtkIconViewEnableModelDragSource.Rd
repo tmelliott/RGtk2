@@ -3,7 +3,7 @@
 \title{gtkIconViewEnableModelDragSource}
 \description{Turns \code{icon.view} into a drag source for automatic DND. Calling this
 method sets \verb{"reorderable"} to \code{FALSE}.}
-\usage{gtkIconViewEnableModelDragSource(object, start.button.mask, targets, 
+\usage{gtkIconViewEnableModelDragSource(object, start.button.mask, targets,
     actions)}
 \arguments{
 \item{\verb{object}}{a \verb{GtkIconTreeView}}

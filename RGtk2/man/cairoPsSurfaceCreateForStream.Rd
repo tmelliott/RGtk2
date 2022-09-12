@@ -5,7 +5,7 @@
 written incrementally to the stream represented by \code{write.func} and
 \code{closure}. See \code{\link{cairoPsSurfaceCreate}} for a more convenient way
 to simply direct the PostScript output to a named file.}
-\usage{cairoPsSurfaceCreateForStream(write.func, closure, width.in.points, 
+\usage{cairoPsSurfaceCreateForStream(write.func, closure, width.in.points,
     height.in.points)}
 \arguments{
 \item{\verb{write.func}}{[\code{\link{CairoWriteFunc}}]  a \code{\link{CairoWriteFunc}} to accept the output data, may be \code{NULL}
@@ -17,7 +17,7 @@ to simply direct the PostScript output to a named file.}
 \item{\verb{height.in.points}}{[numeric]  height of the surface, in points (1 point == 1/72.0 inch)}
 }
 \details{Note that the size of individual pages of the PostScript
-output can vary. See \code{\link{cairoPsSurfaceSetSize}}.  
+output can vary. See \code{\link{cairoPsSurfaceSetSize}}.
   Since 1.2}
 \value{[\code{\link{CairoSurface}}]  a pointer to the newly created surface. The caller
 owns the surface and should call \code{\link{cairoSurfaceDestroy}} when done

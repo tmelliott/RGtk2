@@ -1,8 +1,8 @@
 \alias{gFileGetParent}
 \name{gFileGetParent}
 \title{gFileGetParent}
-\description{Gets the parent directory for the \code{file}. 
-If the \code{file} represents the root directory of the 
+\description{Gets the parent directory for the \code{file}.
+If the \code{file} represents the root directory of the
 file system, then \code{NULL} will be returned.}
 \usage{gFileGetParent(object)}
 \arguments{\item{\verb{object}}{input \code{\link{GFile}}.}}

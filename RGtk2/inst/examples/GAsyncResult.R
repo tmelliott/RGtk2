@@ -5,13 +5,13 @@ frobnitz_result_func <- function(source_object, res, user_data)
 
   if (success)
     message("Hurray!")
-  else 
+  else
     message("Uh oh!")
 
   ## ....
 }
 
-_theoretical_frobnitz_async (theoretical_data, 
-                             NULL, 
-                             frobnitz_result_func, 
+_theoretical_frobnitz_async (theoretical_data,
+                             NULL,
+                             frobnitz_result_func,
                              NULL)

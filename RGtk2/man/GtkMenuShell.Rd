@@ -29,7 +29,7 @@
  AtkImplementorIface and  \code{\link{GtkBuildable}}.}
 \section{Detailed Description}{A \code{\link{GtkMenuShell}} is the abstract base class used to derive the
 \code{\link{GtkMenu}} and \code{\link{GtkMenuBar}} subclasses.
-  
+
 A \code{\link{GtkMenuShell}} is a container of \code{\link{GtkMenuItem}} objects arranged in a
 list which can be navigated, selected, and activated by the user to perform
 application functions.  A \code{\link{GtkMenuItem}} can have a submenu associated with it,

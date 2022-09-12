@@ -5,8 +5,8 @@
 types for this model (which will be exposed to the parent model/view).
 The \code{func}, \code{data} and \code{destroy} parameters are for specifying the modify
 function. The modify function will get called for \emph{each}
-data access, the goal of the modify function is to return the data which 
-should be displayed at the location specified using the parameters of the 
+data access, the goal of the modify function is to return the data which
+should be displayed at the location specified using the parameters of the
 modify function.}
 \usage{gtkTreeModelFilterSetModifyFunc(object, types, func, data = NULL)}
 \arguments{

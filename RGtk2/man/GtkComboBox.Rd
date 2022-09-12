@@ -56,7 +56,7 @@ which allows the user to make a new choice. The style in which
 the selected value is displayed, and the style of the popup is
 determined by the current theme. It may be similar to a \code{\link{GtkOptionMenu}},
 or similar to a Windows-style combo box.
-  
+
 Unlike its predecessors \code{\link{GtkCombo}} and \code{\link{GtkOptionMenu}}, the \code{\link{GtkComboBox}}
 uses the model-view pattern; the list of valid choices is specified in the
 form of a tree model, and the display of the choices can be adapted to
@@ -64,7 +64,7 @@ the data in the model by using cell renderers, as you would in a tree view.
 This is possible since \code{\link{GtkComboBox}} implements the \code{\link{GtkCellLayout}} interface.
 The tree model holding the valid choices is not restricted to a flat list,
 it can be a real tree, and the popup will reflect the tree structure.
-  
+
 In addition to the model-view API, \code{\link{GtkComboBox}} offers a simple API which
 is suitable for text-only combo boxes, and hides the complexity of managing
 the data in a model. It consists of the functions \code{\link{gtkComboBoxNewText}},
@@ -112,7 +112,7 @@ which gets emitted to move the active selection.
 The ::popdown signal is a
 keybinding signal
 which gets emitted to popdown the combo box list.
-  
+
 The default bindings for this signal are Alt+Up and Escape.
   Since 2.12
 
@@ -127,7 +127,7 @@ The default bindings for this signal are Alt+Up and Escape.
 The ::popup signal is a
 keybinding signal
 which gets emitted to popup the combo box list.
-  
+
 The default binding for this signal is Alt+Down.
   Since 2.12
 
@@ -154,7 +154,7 @@ where \code{path} is the \code{\link{GtkTreePath}} of the active item.
 
 The add-tearoffs property controls whether generated menus
 have tearoff menu items.
-  
+
 Note that this only affects menu style combo boxes.
   Default value: FALSE  Since 2.6
 
@@ -170,7 +170,7 @@ the model is empty.
 
 If this is set to a non-negative value, it must be the index of a column
 of type \code{G_TYPE_INT} in the model.
-  
+
 The values of that column are used to determine how many columns a value
 in the list will span.
   Allowed values: >= -1  Default value: -1  Since 2.4
@@ -207,7 +207,7 @@ it allows you to connect to notify::popup-shown.
 
 If this is set to a non-negative value, it must be the index of a column
 of type \code{G_TYPE_INT} in the model.
-  
+
 The values of that column are used to determine how many rows a value in
 the list will span. Therefore, the values in the model column pointed to
 by this property must be greater than zero and not larger than wrap-width.

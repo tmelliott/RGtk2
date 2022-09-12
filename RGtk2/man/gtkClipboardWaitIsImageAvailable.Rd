@@ -3,8 +3,8 @@
 \title{gtkClipboardWaitIsImageAvailable}
 \description{Test to see if there is an image available to be pasted
 This is done by requesting the TARGETS atom and checking
-if it contains any of the supported image targets. This function 
-waits for the data to be received using the main loop, so events, 
+if it contains any of the supported image targets. This function
+waits for the data to be received using the main loop, so events,
 timeouts, etc, may be dispatched during the wait.}
 \usage{gtkClipboardWaitIsImageAvailable(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkClipboard}}}}

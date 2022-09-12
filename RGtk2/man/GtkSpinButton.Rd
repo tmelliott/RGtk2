@@ -45,10 +45,10 @@ attribute. Rather than having to directly type a number into a \code{\link{GtkEn
 \code{\link{GtkSpinButton}} allows the user to click on one of two arrows to increment or
 decrement the displayed value. A value can still be typed in, with the bonus
 that it can be checked to ensure it is in a given range.
-  
+
 The main properties of a \code{\link{GtkSpinButton}} are through a \code{\link{GtkAdjustment}}. See the
 \code{\link{GtkAdjustment}} section for more details about an adjustment's properties.
-  
+
  \emph{Using a   \code{GtkSpinButton}   to get an integer.}
 \preformatted{
 ## Provides a function to retrieve an integer value from a GtkSpinButton
@@ -61,17 +61,17 @@ grab_int_value <- function(a_spinner, user_data) {
 create_integer_spin_button <- function() {
 
   spinner_adj <- gtkAdjustment(50.0, 0.0, 100.0, 1.0, 5.0, 5.0)
-  
+
   window <- gtkWindow("toplevel", show = F)
   window$setBorderWidth(5)
-   
+
   ## creates the spinner, with no decimal places
   spinner <- gtkSpinner(spinner_adj, 1.0, 0)
   window$add(spinner)
-  
+
   window$showAll()
 }
-}  
+}
  \emph{Using a   \code{GtkSpinButton}   to get a floating point value.}
 \preformatted{
 # Provides a function to retrieve a floating point value from a
@@ -84,14 +84,14 @@ grab_value <- function(a_spinner, user_data) {
 create_floating_spin_button <- function() {
 
   spinner_adj <- gtkAdjustment(2.500, 0.0, 5.0, 0.001, 0.1, 0.1)
-  
+
   window <- gtkWindow("toplevel", show = F)
   window$setBorderWidth(5)
-  
+
   ## creates the spinner, with three decimal places
   spinner <- gtkSpinner(spinner_adj, 0.001, 3)
   window$add(spinner)
-  
+
   window$showAll()
 }
 }}

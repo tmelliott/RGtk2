@@ -16,11 +16,11 @@
 \alias{gResolverErrorQuark}
 \title{The GError object}
 \description{
-GLib provides a standard method of reporting errors from a called function to the calling code. 
+GLib provides a standard method of reporting errors from a called function to the calling code.
 (This is the same problem solved by exceptions in other languages.)
 }
 \details{
-As a \link{transparent-type}, a \code{GError} is returned to the user as a list 
+As a \link{transparent-type}, a \code{GError} is returned to the user as a list
 with the following elements:
 \describe{
 \item{domain}{a numeric vector with one named element that identifies the error domain}
@@ -40,4 +40,3 @@ For example, for \code{\link{GdkPixbuf}}, the error domain is provided by \code{
 \references{\url{https://developer-old.gnome.org/glib/stable/glib-Error-Reporting.html}}
 \keyword{interface}
 \keyword{internal}
-

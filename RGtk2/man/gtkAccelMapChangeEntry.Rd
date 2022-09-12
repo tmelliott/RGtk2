@@ -15,7 +15,7 @@ changes are indicated by a \code{TRUE} return value.}
 \item{\verb{replace}}{\code{TRUE} if other accelerators may be deleted upon conflicts}
 }
 \details{Note that \code{accel.path} string will be stored in a \code{\link{GQuark}}. Therefore, if you
-pass a static string, you can save some memory by interning it first with 
+pass a static string, you can save some memory by interning it first with
 \code{gInternStaticString()}.}
 \value{[logical] \code{TRUE} if the accelerator could be changed, \code{FALSE} otherwise}
 \author{Derived by RGtkGen from GTK+ documentation}

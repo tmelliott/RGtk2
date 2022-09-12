@@ -166,7 +166,7 @@ S_pango_font_map_class_load_fontset(USER_OBJECT_ s_object_class, USER_OBJECT_ s_
 
   return(_result);
 }
- 
+
 
 static SEXP S_PangoRenderer_symbol;
 
@@ -738,5 +738,3 @@ S_pango_renderer_class_draw_glyph_item(USER_OBJECT_ s_object_class, USER_OBJECT_
 
   return(_result);
 }
- 
-

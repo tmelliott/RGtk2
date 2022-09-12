@@ -19,21 +19,21 @@ until it is greater than \code{angle1}.}
 to the path to connect the current point to the beginning of the
 arc. If this initial line is undesired, it can be avoided by
 calling \code{\link{cairoNewSubPath}} before calling \code{\link{cairoArc}}.
-  
+
 Angles are measured in radians. An angle of 0.0 is in the direction
 of the positive X axis (in user space). An angle of \code{M_PI}/2.0 radians
 (90 degrees) is in the direction of the positive Y axis (in
 user space). Angles increase in the direction from the positive X
 axis toward the positive Y axis. So with the default transformation
 matrix, angles increase in a clockwise direction.
-  
+
 (To convert from degrees to radians, use \code{degrees * (M_PI /
 180.)}.)
-  
+
 This function gives the arc in the direction of increasing angles;
 see \code{\link{cairoArcNegative}} to get the arc in the direction of
 decreasing angles.
-  
+
 The arc is circular in user space. To achieve an elliptical arc,
 you can scale the current transformation matrix by different
 amounts in the X and Y directions. For example, to draw an ellipse

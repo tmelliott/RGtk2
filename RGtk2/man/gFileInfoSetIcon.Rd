@@ -1,7 +1,7 @@
 \alias{gFileInfoSetIcon}
 \name{gFileInfoSetIcon}
 \title{gFileInfoSetIcon}
-\description{Sets the icon for a given \code{\link{GFileInfo}}. 
+\description{Sets the icon for a given \code{\link{GFileInfo}}.
 See \code{G_FILE_ATTRIBUTE_STANDARD_ICON}.}
 \usage{gFileInfoSetIcon(object, icon)}
 \arguments{

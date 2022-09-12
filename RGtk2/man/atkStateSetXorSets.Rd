@@ -9,7 +9,7 @@ one of the two sets.}
 \item{\verb{object}}{[\code{\link{AtkStateSet}}]  an \code{\link{AtkStateSet}}}
 \item{\verb{compare.set}}{[\code{\link{AtkStateSet}}]  another \code{\link{AtkStateSet}}}
 }
-\value{[\code{\link{AtkStateSet}}]  a new \code{\link{AtkStateSet}} which contains the states which are 
+\value{[\code{\link{AtkStateSet}}]  a new \code{\link{AtkStateSet}} which contains the states which are
 in exactly one of the two sets.}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

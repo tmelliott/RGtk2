@@ -2,7 +2,7 @@
 \name{gtkDragSourceSetIconPixbuf}
 \title{gtkDragSourceSetIconPixbuf}
 \description{Sets the icon that will be used for drags from a particular widget
-from a \code{\link{GdkPixbuf}}. GTK+ retains a reference for \code{pixbuf} and will 
+from a \code{\link{GdkPixbuf}}. GTK+ retains a reference for \code{pixbuf} and will
 release it when it is no longer needed.}
 \usage{gtkDragSourceSetIconPixbuf(object, pixbuf)}
 \arguments{

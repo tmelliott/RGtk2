@@ -13,9 +13,9 @@ the user manually forces a specific type.}
 \item{.errwarn}{Whether to issue a warning on error or fail silently}
 }
 \details{The list of supported image formats depends on what image loaders
-are installed, but typically "png", "jpeg", "gif", "tiff" and 
+are installed, but typically "png", "jpeg", "gif", "tiff" and
 "xpm" are among the supported formats. To obtain the full list of
-supported image formats, call \code{\link{gdkPixbufFormatGetName}} on each 
+supported image formats, call \code{\link{gdkPixbufFormatGetName}} on each
 of the \code{\link{GdkPixbufFormat}} structs returned by \code{\link{gdkPixbufGetFormats}}.}
 \value{
 A list containing the following elements:

@@ -7,7 +7,7 @@
 \code{service} and \code{protocol} arguments \emph{do not}
 include the leading underscore that appears in the actual DNS
 entry.}
-\usage{gResolverLookupService(object, service, protocol, domain, cancellable = NULL, 
+\usage{gResolverLookupService(object, service, protocol, domain, cancellable = NULL,
     .errwarn = TRUE)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GResolver}}}
@@ -21,14 +21,14 @@ entry.}
 \code{\link{GSrvTarget}}, sorted in order of preference. (That is, you should
 attempt to connect to the first target first, then the second if
 the first fails, etc.)
-  
+
 If the DNS resolution fails, \code{error} (if non-\code{NULL}) will be set to
 a value from \verb{GResolverError}.
-  
+
 If \code{cancellable} is non-\code{NULL}, it can be used to cancel the
 operation, in which case \code{error} (if non-\code{NULL}) will be set to
 \code{G_IO_ERROR_CANCELLED}.
-  
+
 If you are planning to connect to the service, it is usually easier
 to create a \code{\link{GNetworkService}} and use its \code{\link{GSocketConnectable}}
 interface.

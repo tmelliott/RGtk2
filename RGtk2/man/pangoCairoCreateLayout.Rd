@@ -12,7 +12,7 @@ or target surface for \code{cr}, you need to call \code{\link{pangoCairoUpdateLa
 \details{This function is the most convenient way to use Cairo with Pango,
 however it is slightly inefficient since it creates a separate
 \code{\link{PangoContext}} object for each layout. This might matter in an
-application that was laying out large amounts of text.  
+application that was laying out large amounts of text.
   Since 1.10}
 \value{[\code{\link{PangoLayout}}]  the newly created \code{\link{PangoLayout}}.}
 \author{Derived by RGtkGen from GTK+ documentation}

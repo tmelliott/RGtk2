@@ -1,7 +1,7 @@
 \alias{gtkSelectionConvert}
 \name{gtkSelectionConvert}
 \title{gtkSelectionConvert}
-\description{Requests the contents of a selection. When received, 
+\description{Requests the contents of a selection. When received,
 a "selection-received" signal will be generated.}
 \usage{gtkSelectionConvert(object, selection, target, time = "GDK_CURRENT_TIME")}
 \arguments{

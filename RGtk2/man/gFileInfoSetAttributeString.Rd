@@ -1,7 +1,7 @@
 \alias{gFileInfoSetAttributeString}
 \name{gFileInfoSetAttributeString}
 \title{gFileInfoSetAttributeString}
-\description{Sets the \code{attribute} to contain the given \code{attr.value}, 
+\description{Sets the \code{attribute} to contain the given \code{attr.value},
 if possible.}
 \usage{gFileInfoSetAttributeString(object, attribute, attr.value)}
 \arguments{

@@ -1,8 +1,8 @@
 \alias{gdkDragDropSucceeded}
 \name{gdkDragDropSucceeded}
 \title{gdkDragDropSucceeded}
-\description{Returns whether the dropped data has been successfully 
-transferred. This function is intended to be used while 
+\description{Returns whether the dropped data has been successfully
+transferred. This function is intended to be used while
 handling a \code{GDK_DROP_FINISHED} event, its return value is
 meaningless at other times.}
 \usage{gdkDragDropSucceeded(object)}

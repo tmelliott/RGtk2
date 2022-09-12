@@ -1,7 +1,7 @@
 \alias{gtkPaperSizeGetWidth}
 \name{gtkPaperSizeGetWidth}
 \title{gtkPaperSizeGetWidth}
-\description{Gets the paper width of the \code{\link{GtkPaperSize}}, in 
+\description{Gets the paper width of the \code{\link{GtkPaperSize}}, in
 units of \code{unit}.}
 \usage{gtkPaperSizeGetWidth(object, unit)}
 \arguments{

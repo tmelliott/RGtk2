@@ -2,14 +2,14 @@
 \name{gtkStatusIconGetGeometry}
 \title{gtkStatusIconGetGeometry}
 \description{Obtains information about the location of the status icon
-on screen. This information can be used to e.g. position 
+on screen. This information can be used to e.g. position
 popups like notification bubbles. }
 \usage{gtkStatusIconGetGeometry(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkStatusIcon}}}}
-\details{See \code{\link{gtkStatusIconPositionMenu}} for a more convenient 
+\details{See \code{\link{gtkStatusIconPositionMenu}} for a more convenient
 alternative for positioning menus.
-  
-Note that some platforms do not allow GTK+ to provide 
+
+Note that some platforms do not allow GTK+ to provide
 this information, and even on platforms that do allow it,
 the information is not reliable unless the status icon
 is embedded in a notification area, see

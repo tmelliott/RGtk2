@@ -49,7 +49,7 @@
 \section{Detailed Description}{Dialog boxes are a convenient way to prompt the user for a small amount of
 input, e.g. to display a message, ask a question, or anything else that does
 not require extensive effort on the user's part.
-  
+
 GTK+ treats a dialog as a window split vertically. The top section is a
 \code{\link{GtkVBox}}, and is where widgets such as a \code{\link{GtkLabel}} or a \code{\link{GtkEntry}} should
 be packed. The bottom area is known as the
@@ -60,17 +60,17 @@ cancel, ok, or apply. The two areas are separated by a \code{\link{GtkHSeparator
 \code{\link{gtkDialogNewWithButtons}}. \code{\link{gtkDialogNewWithButtons}} is recommended; it
 allows you to set the dialog title, some convenient flags, and add simple
 buttons.
-  
+
 If 'dialog' is a newly created dialog, the two primary areas of the window
 can be accessed through \code{\link{gtkDialogGetContentArea}} and
 \code{\link{gtkDialogGetActionArea}}, as can be seen from the example, below.
-  
+
 A 'modal' dialog (that is, one which freezes the rest of the application from
 user input), can be created by calling \code{\link{gtkWindowSetModal}} on the dialog. Use
 the \code{gtkWindow()} function to cast the widget returned from \code{\link{gtkDialogNew}} into a
 \code{\link{GtkWindow}}. When using \code{\link{gtkDialogNewWithButtons}} you can also pass the
 \verb{GTK_DIALOG_MODAL} flag to make a dialog modal.
-  
+
 If you add buttons to \code{\link{GtkDialog}} using \code{\link{gtkDialogNewWithButtons}},
 \code{\link{gtkDialogAddButton}}, \code{\link{gtkDialogAddButtons}}, or
 \code{\link{gtkDialogAddActionWidget}}, clicking the button will emit a signal called
@@ -79,12 +79,12 @@ meaning to positive response IDs; these are entirely user-defined. But for
 convenience, you can use the response IDs in the \code{\link{GtkResponseType}} enumeration
 (these all have values less than zero). If a dialog receives a delete event,
 the "response" signal will be emitted with a response ID of \verb{GTK_RESPONSE_DELETE_EVENT}.
-  
+
 If you want to block waiting for a dialog to return before returning control
 flow to your code, you can call \code{\link{gtkDialogRun}}. This function enters a
 recursive main loop and waits for the user to respond to the dialog, returning the
 response ID corresponding to the button the user clicked.
-  
+
 For the simple dialog in the following example, in reality you'd probably use
 \code{\link{GtkMessageDialog}} to save yourself some effort.  But you'd need to create the
 dialog contents manually if you had more than a simple message in the dialog.
@@ -93,15 +93,15 @@ dialog contents manually if you had more than a simple message in the dialog.
 \preformatted{
 # Function to open a dialog box displaying the message provided.
 quick_message <- function(message) {
-  ## Create the widgets 
-   
+  ## Create the widgets
+
   dialog <- gtkDialog("Message", NULL, "destroy-with-parent",
                       "gtk-ok", GtkResponseType["none"],
                       show = FALSE)
   label <- gtkLabel(message)
-   
+
   ## Ensure that the dialog box is destroyed when the user responds.
-   
+
   gSignalConnect(dialog, "response", gtkWidgetDestroy)
 
   ## Add the label, and show everything we've added to the dialog.
@@ -113,12 +113,12 @@ quick_message <- function(message) {
 \section{GtkDialog as GtkBuildable}{The GtkDialog implementation of the GtkBuildable interface exposes the
 \code{vbox} and \code{action.area} as internal children with the names "vbox" and
 "action_area".
-  
+
 GtkDialog supports a custom <action-widgets> element, which
 can contain multiple <action-widget> elements. The "response"
 attribute specifies a numeric response, and the content of the element
 is the id of widget (which should be a child of the dialogs \code{action.area}).
-  
+
  \emph{A   \code{GtkDialog}   UI definition fragment.}\preformatted{<object class="GtkDialog" id="dialog1">
   <child internal-child="vbox">"
     <object class="GtkVBox" id="vbox">
@@ -159,7 +159,7 @@ as any other \code{\link{GtkHButtonBox}}.
 Flags used to influence dialog construction.
 
 \describe{
-\item{\verb{modal}}{Make the constructed dialog modal, 
+\item{\verb{modal}}{Make the constructed dialog modal,
   see \code{\link{gtkWindowSetModal}}.}
 \item{\verb{destroy-with-parent}}{Destroy the dialog when its
   parent is destroyed, see \code{\link{gtkWindowSetDestroyWithParent}}.}
@@ -174,7 +174,7 @@ All predefined values are negative, GTK+ leaves positive values for
 application-defined response ids.
 
 \describe{
-\item{\verb{none}}{Returned if an action widget has no response id, or if 
+\item{\verb{none}}{Returned if an action widget has no response id, or if
    the dialog gets programmatically hidden or destroyed.}
 \item{\verb{reject}}{Generic response id, not used by GTK+ dialogs.}
 \item{\verb{accept}}{Generic response id, not used by GTK+ dialogs.}
@@ -196,7 +196,7 @@ The ::close signal is a
 keybinding signal
 which gets emitted when the user uses a keybinding to close
 the dialog.
-  
+
 The default binding for this signal is the Escape key.
 
 \describe{\item{\code{user.data}}{user data set when the signal handler was connected.}}

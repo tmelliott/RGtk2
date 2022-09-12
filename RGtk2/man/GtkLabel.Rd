@@ -69,14 +69,14 @@ implies, most labels are used to label another widget such as a
 custom <attributes> element, which supports any number of <attribute>
 elements. the <attribute> element has attributes named name, value,
 start and end and allows you to specify \code{\link{PangoAttribute}} values for this label.
-  
+
  \emph{A UI definition fragment specifying Pango attributes}\preformatted{<object class="GtkLabel">
   <attributes>
     <attribute name="weight" value="PANGO_WEIGHT_BOLD"/>
     <attribute name="background" value="red" start="5" end="10"/>"
   </attributes>
 </object>
-}  
+}
 The start and end attributes specify the range of characters to which the
 Pango attribute applies. If start and end are not specified, the attribute is
 applied to the whole text. Note that specifying ranges does not make much
@@ -88,7 +88,7 @@ Mnemonics are created by providing a string with an underscore before
 the mnemonic character, such as \code{"_File"}, to the
 functions \code{\link{gtkLabelNewWithMnemonic}} or
 \code{\link{gtkLabelSetTextWithMnemonic}}.
-  
+
 Mnemonics automatically activate any activatable widget the label is
 inside, such as a \code{\link{GtkButton}}; if the label is not inside the
 mnemonic's target widget, you have to tell the label about the target
@@ -124,13 +124,13 @@ label$setMarkup("<small>Small text</small>")
 }
 (See complete documentation of available
 tags in the Pango manual.)
-  
+
 The markup passed to \code{\link{gtkLabelSetMarkup}} must be valid; for example,
 literal </>/& characters must be escaped as &lt;,
 &gt;, and &amp;. If you pass text obtained from the user, file,
 or a network to \code{\link{gtkLabelSetMarkup}}, you'll want to escape it with
 \code{gMarkupEscapeText()} or \code{gMarkupPrintfEscaped()}.
-  
+
 Markup strings are just a convenient way to set the \code{\link{PangoAttrList}} on
 a label; \code{\link{gtkLabelSetAttributes}} may be a simpler way to set
 attributes in some cases. Be careful though; \code{\link{PangoAttrList}} tends to
@@ -147,7 +147,7 @@ the clipboard. Only labels that contain useful-to-copy information
 performance problems if it contains more than a small number.
 Paragraphs are separated by newlines or other paragraph separators
 understood by Pango.
-  
+
 Labels can automatically wrap text if you call
 \code{\link{gtkLabelSetLineWrap}}.
   \code{\link{gtkLabelSetJustify}} sets how the lines in a label align
@@ -171,10 +171,10 @@ described below.
 \item{\code{activate-current-link(label, user.data)}}{
 A keybinding signal
 which gets emitted when the user activates a link in the label.
-  
+
 Applications may also emit the signal with \code{gSignalEmitByName()}
 if they need to control activation of URIs programmatically.
-  
+
 The default bindings for this signal are all forms of the Enter key.
   Since 2.18
 
@@ -204,7 +204,7 @@ which is to call \code{\link{gtkShowUri}}.
 The ::copy-clipboard signal is a
 keybinding signal
 which gets emitted to copy the selection to the clipboard.
-  
+
 The default binding for this signal is Ctrl-c.
 
 \describe{
@@ -220,19 +220,19 @@ keybinding signal
 which gets emitted when the user initiates a cursor movement.
 If the cursor is not visible in \code{entry}, this signal causes
 the viewport to be moved instead.
-  
+
 Applications should not connect to it, but may emit it with
 \code{gSignalEmitByName()} if they need to control the cursor
 programmatically.
-  
+
 The default bindings for this signal come in two variants,
 the variant with the Shift modifier extends the selection,
 the variant without the Shift modifer does not.
 There are too many key combinations to list them all here.
 \itemize{
-\item 
-\item 
-\item 
+\item
+\item
+\item
 }
 
 \describe{
@@ -249,7 +249,7 @@ There are too many key combinations to list them all here.
 The ::populate-popup signal gets emitted before showing the
 context menu of the label. Note that only selectable labels
 have context menus.
-  
+
 If you need to add items to the context menu, connect
 to this signal and append your menuitems to the \code{menu}.
 
@@ -287,7 +287,7 @@ The current position of the insertion cursor in chars.  Allowed values: >= 0  De
 The preferred place to ellipsize the string, if the label does
 not have enough room to display the entire string, specified as a
 \verb{PangoEllisizeMode}.
-  
+
 Note that setting this property to a value other than
 \code{PANGO_ELLIPSIZE_NONE} has the side-effect that the label requests
 only enough space to display the ellipsis "...". In particular, this

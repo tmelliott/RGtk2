@@ -2,7 +2,7 @@
 \name{gtkTreeRowReferenceNewProxy}
 \title{gtkTreeRowReferenceNewProxy}
 \description{You do not need to use this function.  Creates a row reference based on
-\code{path}.  This reference will keep pointing to the node pointed to by \code{path}, 
+\code{path}.  This reference will keep pointing to the node pointed to by \code{path},
 so long as it exists.  If \code{path} isn't a valid path in \code{model}, then \code{NULL} is
 returned.  However, unlike references created with
 \code{\link{gtkTreeRowReferenceNew}}, it does not listen to the model for changes.
@@ -22,7 +22,7 @@ objects like \code{\link{GtkTreeView}} already use this mechanism internally,
 using them as the proxy object will produce unpredictable results.
 Further more, passing the same object as \code{model} and \code{proxy}
 doesn't work for reasons of internal implementation.
-  
+
 This type of row reference is primarily meant by structures that need to
 carefully monitor exactly when a row reference updates itself, and is not
 generally needed by most applications.}

@@ -20,14 +20,14 @@ acts like the basic \code{\link{cairoShowGlyphs}} as if it had been passed
 text bytes and glyphs, and neighboring clusters cover neighboring
 areas of \code{utf8} and \code{glyphs}.  The clusters should collectively cover \code{utf8}
 and \code{glyphs} in entirety.
-  
+
 The first cluster always covers bytes from the beginning of \code{utf8}.
 If \code{cluster.flags} do not have the \code{CAIRO_TEXT_CLUSTER_FLAG_BACKWARD}
 set, the first cluster also covers the beginning
 of \code{glyphs}, otherwise it covers the end of the \code{glyphs} list and
 following clusters move backward.
-  
-See \code{\link{CairoTextCluster}} for constraints on valid clusters.  
+
+See \code{\link{CairoTextCluster}} for constraints on valid clusters.
   Since 1.8}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

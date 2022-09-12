@@ -2,7 +2,7 @@
 \name{gdkPixbufSimpleAnimAddFrame}
 \title{gdkPixbufSimpleAnimAddFrame}
 \description{Adds a new frame to \code{animation}. The \code{pixbuf} must
-have the dimensions specified when the animation 
+have the dimensions specified when the animation
 was constructed.}
 \usage{gdkPixbufSimpleAnimAddFrame(object, pixbuf)}
 \arguments{

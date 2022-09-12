@@ -11,7 +11,7 @@ have finished. The return value from the callback is ignored.}
 \item{\verb{func}}{a \verb{GSourceFunc} callback that will be called in the original thread}
 \item{\verb{user.data}}{data to pass to \code{func}}
 }
-\details{ either by passing \code{NULL} as \code{notify} to 
+\details{ either by passing \code{NULL} as \code{notify} to
 \code{gIoSchedulerPushJob()} or by using refcounting for \code{user.data}.}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

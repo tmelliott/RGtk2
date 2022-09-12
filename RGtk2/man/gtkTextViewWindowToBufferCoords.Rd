@@ -10,7 +10,7 @@ coordinates, storing the result in (\code{buffer.x},\code{buffer.y}).}
 \item{\verb{window.x}}{window x coordinate}
 \item{\verb{window.y}}{window y coordinate}
 }
-\details{Note that you can't convert coordinates for a nonexisting window (see 
+\details{Note that you can't convert coordinates for a nonexisting window (see
 \code{\link{gtkTextViewSetBorderWindowSize}}).}
 \value{
 A list containing the following elements:

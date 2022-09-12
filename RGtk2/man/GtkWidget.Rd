@@ -440,10 +440,10 @@ the children of a container, see \code{\link{gtkContainerForeach}}.
 \item{\code{button-press-event(widget, event, user.data)}}{
 The ::button-press-event signal will be emitted when a button
 (typically from a mouse) is pressed.
-  
+
 To receive this signal, the \code{\link{GdkWindow}} associated to the
 widget needs to enable the \verb{GDK_BUTTON_PRESS_MASK} mask.
-  
+
 This signal will be sent to the grab widget if there is one.
 
 \describe{
@@ -459,10 +459,10 @@ This signal will be sent to the grab widget if there is one.
 \item{\code{button-release-event(widget, event, user.data)}}{
 The ::button-release-event signal will be emitted when a button
 (typically from a mouse) is released.
-  
+
 To receive this signal, the \code{\link{GdkWindow}} associated to the
 widget needs to enable the \verb{GDK_BUTTON_RELEASE_MASK} mask.
-  
+
 This signal will be sent to the grab widget if there is one.
 
 \describe{
@@ -534,7 +534,7 @@ See \code{\link{gdkScreenIsComposited}}.
 \item{\code{configure-event(widget, event, user.data)}}{
 The ::configure-event signal will be emitted when the size, position or
 stacking of the \code{widget}'s window has changed.
-  
+
 To receive this signal, the \code{\link{GdkWindow}} associated to the widget needs
 to enable the \verb{GDK_STRUCTURE_MASK} mask. GDK will enable this mask
 automatically for all new windows.
@@ -587,7 +587,7 @@ The ::destroy-event signal is emitted when a \code{\link{GdkWindow}} is destroye
 You rarely get this signal, because most widgets disconnect themselves
 from their window before they destroy it, so no widget owns the
 window at destroy time.
-  
+
 To receive this signal, the \code{\link{GdkWindow}} associated to the widget needs
 to enable the \verb{GDK_STRUCTURE_MASK} mask. GDK will enable this mask
 automatically for all new windows.
@@ -618,7 +618,7 @@ of a widget changes.
 The ::drag-begin signal is emitted on the drag source when a drag is
 started. A typical reason to connect to this signal is to set up a
 custom drag icon with \code{\link{gtkDragSourceSetIcon}}.
-  
+
 Note that some widgets set up a drag icon in the default handler of
 this signal, so you may have to use \code{gSignalConnectAfter()} to
 override what the default handler did.
@@ -674,7 +674,7 @@ If the data was received in response to a \verb{"drag-drop"} signal
 signal is expected to process the received data and then call
 \code{\link{gtkDragFinish}}, setting the \code{success} parameter depending on whether
 the data was processed successfully.
-  
+
 The handler may inspect and modify \code{drag.context->action} before calling
 \code{\link{gtkDragFinish}}, e.g. to implement \code{GDK_ACTION_ASK} as shown in the
 following example:
@@ -797,7 +797,7 @@ If it is not in a drop zone, it returns \code{FALSE} and no further processing
 is necessary. Otherwise, the handler returns \code{TRUE}. In this case, the
 handler is responsible for providing the necessary information for
 displaying feedback to the user, by calling \code{\link{gdkDragStatus}}.
-  
+
 If the decision whether the drop will be accepted or rejected can't be
 made based solely on the cursor position and the type of the data, the
 handler may inspect the dragged data by calling \code{\link{gtkDragGetData}} and
@@ -805,7 +805,7 @@ defer the \code{\link{gdkDragStatus}} call to the \verb{"drag-data-received"}
 handler. Note that you cannot not pass \verb{GTK_DEST_DEFAULT_DROP},
 \verb{GTK_DEST_DEFAULT_MOTION} or \verb{GTK_DEST_DEFAULT_ALL} to \code{\link{gtkDragDestSet}}
 when using the drag-motion signal that way.
-  
+
 Also note that there is no drag-enter signal. The drag receiver has to
 keep track of whether he has received any drag-motion signals since the
 last \verb{"drag-leave"} and if not, treat the drag-motion signal as
@@ -815,12 +815,12 @@ the drop site with \code{\link{gtkDragHighlight}}.
 drag_motion <- function(widget, context, x, y, time)
 {
   state <- widget$getData("drag-state")
-  
+
   if (!state$drag_highlight) {
     state$drag_highlight <- T
     gtkDragHighlight(widget)
   }
-  
+
   target <- gtkDragDestFindTarget(widget, context, NULL)
   if (target == 0)
     gdkDragStatus(context, 0, time)
@@ -828,9 +828,9 @@ drag_motion <- function(widget, context, x, y, time)
     state$pending_status <- context[["suggestedAction"]]
     gtkDragGetData(widget, context, target, time)
   }
-  
+
   widget$setData("drag-state", state)
-  
+
   return(TRUE)
 }
 
@@ -838,24 +838,24 @@ drag_data_received <- function(widget, context, x, y, selection_data, info,
                                time)
 {
   state <- widget$getData("drag-state")
-  
-  if (state$pending_status) { 
+
+  if (state$pending_status) {
     ## We are getting this data due to a request in drag_motion,
     ## rather than due to a request in drag_drop, so we are just
     ## supposed to call gdk_drag_status(), not actually paste in the data.
 
     str <- gtkSelectionDataGetText(selection_data)
-    if (!data_is_acceptable (str)) 
+    if (!data_is_acceptable (str))
       gdkDragStatus(context, 0, time)
     else
       gdkDragStatus(context, state$pending_status, time)
-    
+
     state$pending_status <- 0
   }
   else {
     ## accept the drop
   }
-  
+
   widget$setData("drag-state", state)
 }
 }
@@ -875,10 +875,10 @@ drag_data_received <- function(widget, context, x, y, selection_data, info,
 \item{\code{enter-notify-event(widget, event, user.data)}}{
 The ::enter-notify-event will be emitted when the pointer enters
 the \code{widget}'s window.
-  
+
 To receive this signal, the \code{\link{GdkWindow}} associated to the widget needs
 to enable the \verb{GDK_ENTER_NOTIFY_MASK} mask.
-  
+
 This signal will be sent to the grab widget if there is one.
 
 \describe{
@@ -929,7 +929,7 @@ The ::expose-event signal is emitted when an area of a previously
 obscured \code{\link{GdkWindow}} is made visible and needs to be redrawn.
 \verb{GTK_NO_WINDOW} widgets will get a synthesized event from their parent
 widget.
-  
+
 To receive this signal, the \code{\link{GdkWindow}} associated to the widget needs
 to enable the \verb{GDK_EXPOSURE_MASK} mask.
 
@@ -958,7 +958,7 @@ to enable the \verb{GDK_EXPOSURE_MASK} mask.
 \item{\code{focus-in-event(widget, event, user.data)}}{
 The ::focus-in-event signal will be emitted when the keyboard focus
 enters the \code{widget}'s window.
-  
+
 To receive this signal, the \code{\link{GdkWindow}} associated to the widget needs
 to enable the \verb{GDK_FOCUS_CHANGE_MASK} mask.
 
@@ -975,7 +975,7 @@ to enable the \verb{GDK_FOCUS_CHANGE_MASK} mask.
 \item{\code{focus-out-event(widget, event, user.data)}}{
 The ::focus-out-event signal will be emitted when the keyboard focus
 leaves the \code{widget}'s window.
-  
+
 To receive this signal, the \code{\link{GdkWindow}} associated to the widget needs
 to enable the \verb{GDK_FOCUS_CHANGE_MASK} mask.
 
@@ -992,7 +992,7 @@ to enable the \verb{GDK_FOCUS_CHANGE_MASK} mask.
 \item{\code{grab-broken-event(widget, event, user.data)}}{
 Emitted when a pointer or keyboard grab on a window belonging
 to \code{widget} gets broken.
-  
+
 On X11, this happens when the grab window becomes unviewable
 (i.e. it or one of its ancestors is unmapped), or if the same
 application grabs the pointer or keyboard again.
@@ -1024,7 +1024,7 @@ The ::grab-notify signal is emitted when a widget becomes
 shadowed by a GTK+ grab (not a pointer or keyboard grab) on
 another widget, or when it becomes unshadowed due to a grab
 being removed.
-  
+
 A widget is shadowed by a \code{\link{gtkGrabAdd}} when the topmost
 grab widget in the grab stack of its window group is not
 its ancestor.
@@ -1067,10 +1067,10 @@ if the widget was previously unanchored. \emph{[  \acronym{allow-none}  ]}}
 }
 \item{\code{key-press-event(widget, event, user.data)}}{
 The ::key-press-event signal is emitted when a key is pressed.
-  
+
 To receive this signal, the \code{\link{GdkWindow}} associated to the widget needs
 to enable the \verb{GDK_KEY_PRESS_MASK} mask.
-  
+
 This signal will be sent to the grab widget if there is one.
 
 \describe{
@@ -1085,10 +1085,10 @@ This signal will be sent to the grab widget if there is one.
 }
 \item{\code{key-release-event(widget, event, user.data)}}{
 The ::key-release-event signal is emitted when a key is pressed.
-  
+
 To receive this signal, the \code{\link{GdkWindow}} associated to the widget needs
 to enable the \verb{GDK_KEY_RELEASE_MASK} mask.
-  
+
 This signal will be sent to the grab widget if there is one.
 
 \describe{
@@ -1120,10 +1120,10 @@ navigation attempt in its parent container(s).
 \item{\code{leave-notify-event(widget, event, user.data)}}{
 The ::leave-notify-event will be emitted when the pointer leaves
 the \code{widget}'s window.
-  
+
 To receive this signal, the \code{\link{GdkWindow}} associated to the widget needs
 to enable the \verb{GDK_LEAVE_NOTIFY_MASK} mask.
-  
+
 This signal will be sent to the grab widget if there is one.
 
 \describe{
@@ -1150,7 +1150,7 @@ This signal will be sent to the grab widget if there is one.
 \item{\code{map-event(widget, event, user.data)}}{
 The ::map-event signal will be emitted when the \code{widget}'s window is
 mapped. A window is mapped when it becomes visible on the screen.
-  
+
 To receive this signal, the \code{\link{GdkWindow}} associated to the widget needs
 to enable the \verb{GDK_STRUCTURE_MASK} mask. GDK will enable this mask
 automatically for all new windows.
@@ -1179,10 +1179,10 @@ automatically for all new windows.
 \item{\code{motion-notify-event(widget, event, user.data)}}{
 The ::motion-notify-event signal is emitted when the pointer moves
 over the widget's \code{\link{GdkWindow}}.
-  
+
 To receive this signal, the \code{\link{GdkWindow}} associated to the widget
 needs to enable the \verb{GDK_POINTER_MOTION_MASK} mask.
-  
+
 This signal will be sent to the grab widget if there is one.
 
 \describe{
@@ -1241,7 +1241,7 @@ This signal gets emitted whenever a widget should pop up a context
 menu. This usually happens through the standard key binding mechanism;
 by pressing a certain key while a widget is focused, the user can cause
 the widget to pop up a menu.  For example, the \code{\link{GtkEntry}} widget creates
-a menu with clipboard commands. See 
+a menu with clipboard commands. See
 for an example of how to use this signal.
 
 \describe{
@@ -1255,7 +1255,7 @@ for an example of how to use this signal.
 \item{\code{property-notify-event(widget, event, user.data)}}{
 The ::property-notify-event signal will be emitted when a property on
 the \code{widget}'s window has been changed or deleted.
-  
+
 To receive this signal, the \code{\link{GdkWindow}} associated to the widget needs
 to enable the \verb{GDK_PROPERTY_CHANGE_MASK} mask.
 
@@ -1272,7 +1272,7 @@ to enable the \verb{GDK_PROPERTY_CHANGE_MASK} mask.
 \item{\code{proximity-in-event(widget, event, user.data)}}{
 To receive this signal the \code{\link{GdkWindow}} associated to the widget needs
 to enable the \verb{GDK_PROXIMITY_IN_MASK} mask.
-  
+
 This signal will be sent to the grab widget if there is one.
 
 \describe{
@@ -1288,7 +1288,7 @@ This signal will be sent to the grab widget if there is one.
 \item{\code{proximity-out-event(widget, event, user.data)}}{
 To receive this signal the \code{\link{GdkWindow}} associated to the widget needs
 to enable the \verb{GDK_PROXIMITY_OUT_MASK} mask.
-  
+
 This signal will be sent to the grab widget if there is one.
 
 \describe{
@@ -1305,13 +1305,13 @@ This signal will be sent to the grab widget if there is one.
 Emitted when \verb{"has-tooltip"} is \code{TRUE} and the \verb{"gtk-tooltip-timeout"}
 has expired with the cursor hovering "above" \code{widget}; or emitted when \code{widget} got
 focus in keyboard mode.
-  
+
 Using the given coordinates, the signal handler should determine
 whether a tooltip should be shown for \code{widget}. If this is the case
 \code{TRUE} should be returned, \code{FALSE} otherwise.  Note that if
 \code{keyboard.mode} is \code{TRUE}, the values of \code{x} and \code{y} are undefined and
 should not be used.
-  
+
 The signal handler is free to manipulate \code{tooltip} with the therefore
 destined function calls.
   Since 2.12
@@ -1358,10 +1358,10 @@ widget was not associated with a screen before. \emph{[  \acronym{allow-none}  ]
 The ::scroll-event signal is emitted when a button in the 4 to 7
 range is pressed. Wheel mice are usually configured to generate
 button press events for buttons 4 and 5 when the wheel is turned.
-  
+
 To receive this signal, the \code{\link{GdkWindow}} associated to the widget needs
 to enable the \verb{GDK_BUTTON_PRESS_MASK} mask.
-  
+
 This signal will be sent to the grab widget if there is one.
 
 \describe{
@@ -1521,7 +1521,7 @@ just got its initial style. \emph{[  \acronym{allow-none}  ]}}
 \item{\code{unmap-event(widget, event, user.data)}}{
 The ::unmap-event signal will be emitted when the \code{widget}'s window is
 unmapped. A window is unmapped when it becomes invisible on the screen.
-  
+
 To receive this signal, the \code{\link{GdkWindow}} associated to the widget needs
 to enable the \verb{GDK_STRUCTURE_MASK} mask. GDK will enable this mask
 automatically for all new windows.
@@ -1550,7 +1550,7 @@ automatically for all new windows.
 \item{\code{visibility-notify-event(widget, event, user.data)}}{
 The ::visibility-notify-event will be emitted when the \code{widget}'s window
 is obscured or unobscured.
-  
+
 To receive this signal the \code{\link{GdkWindow}} associated to the widget needs
 to enable the \verb{GDK_VISIBILITY_NOTIFY_MASK} mask.
 
@@ -1567,7 +1567,7 @@ to enable the \verb{GDK_VISIBILITY_NOTIFY_MASK} mask.
 \item{\code{window-state-event(widget, event, user.data)}}{
 The ::window-state-event will be emitted when the state of the
 toplevel window associated to the \code{widget} changes.
-  
+
 To receive this signal the \code{\link{GdkWindow}} associated to the widget
 needs to enable the \verb{GDK_STRUCTURE_MASK} mask. GDK will enable
 this mask automatically for all new windows.
@@ -1636,7 +1636,7 @@ Enables or disables the emission of \verb{"query-tooltip"} on \code{widget}.
 A value of \code{TRUE} indicates that \code{widget} can have a tooltip, in this case
 the widget will be queried using \verb{"query-tooltip"} to determine
 whether it will provide a tooltip or not.
-  
+
 Note that setting this property to \code{TRUE} for the first time will change
 the event masks of the GdkWindows of this widget to include leave-notify
 and motion-notify events.  This cannot and will not be undone when the
@@ -1689,7 +1689,7 @@ The style of the widget, which contains information about how it will look (colo
 Sets the text of tooltip to be the given string, which is marked up
 with the Pango text markup language.
 Also see \code{\link{gtkTooltipSetMarkup}}.
-  
+
 This is a convenience property which will take care of getting the
 tooltip shown if the given string is not \code{NULL}: \verb{"has-tooltip"}
 will automatically be set to \code{TRUE} and there will be taken care of
@@ -1700,9 +1700,9 @@ will automatically be set to \code{TRUE} and there will be taken care of
 \item{\verb{tooltip-text} [character : *                : Read / Write]}{
 
 Sets the text of tooltip to be the given string.
-  
+
 Also see \code{\link{gtkTooltipSetText}}.
-  
+
 This is a convenience property which will take care of getting the
 tooltip shown if the given string is not \code{NULL}: \verb{"has-tooltip"}
 will automatically be set to \code{TRUE} and there will be taken care of

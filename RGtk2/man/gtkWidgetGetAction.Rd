@@ -2,7 +2,7 @@
 \name{gtkWidgetGetAction}
 \title{gtkWidgetGetAction}
 \description{
-Returns the \code{\link{GtkAction}} that \code{widget} is a proxy for. 
+Returns the \code{\link{GtkAction}} that \code{widget} is a proxy for.
 See also \code{\link{gtkActionGetProxies}}.
 \strong{WARNING: \code{gtk_widget_get_action} has been deprecated since version 2.16 and should not be used in newly-written code. Use \code{\link{gtkActivatableGetRelatedAction}} instead.}
 }

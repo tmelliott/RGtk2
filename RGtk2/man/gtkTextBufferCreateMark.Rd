@@ -17,10 +17,10 @@ side of the text you're typing).}
 \item{\verb{where}}{location to place mark}
 \item{\verb{left.gravity}}{whether the mark has left gravity}
 }
-\details{The caller of this function does \emph{not} own a 
-reference to the returned \code{\link{GtkTextMark}}, so you can ignore the 
+\details{The caller of this function does \emph{not} own a
+reference to the returned \code{\link{GtkTextMark}}, so you can ignore the
 return value if you like.
-  
+
 Emits the "mark-set" signal as notification of the mark's initial
 placement.}
 \value{[\code{\link{GtkTextMark}}] the new \code{\link{GtkTextMark}} object}

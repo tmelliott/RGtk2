@@ -39,9 +39,9 @@
  AtkImplementorIface,  \code{\link{GtkBuildable}} and  \code{\link{GtkOrientable}}.}
 \section{Detailed Description}{A \code{\link{GtkToolPalette}} allows you to add \code{\link{GtkToolItem}}s to a palette-like
 container with different categories and drag and drop support.
-  
+
 A \code{\link{GtkToolPalette}} is created with a call to \code{\link{gtkToolPaletteNew}}.
-  \code{\link{GtkToolItem}}s cannot be added directly to a \code{\link{GtkToolPalette}} - 
+  \code{\link{GtkToolItem}}s cannot be added directly to a \code{\link{GtkToolPalette}} -
 instead they are added to a \code{\link{GtkToolItemGroup}} which can than be added
 to a \code{\link{GtkToolPalette}}. To add a \code{\link{GtkToolItemGroup}} to a \code{\link{GtkToolPalette}},
 use \code{\link{gtkContainerAdd}}.
@@ -54,7 +54,7 @@ gtk_container_add (GTK_CONTAINER (palette), group);
 
 item = gtk_tool_button_new_from_stock (GTK_STOCK_OK);
 gtk_tool_item_group_insert (GTK_TOOL_ITEM_GROUP (group), item, -1);
-}  
+}
 The easiest way to use drag and drop with \code{\link{GtkToolPalette}} is to call
 \code{\link{gtkToolPaletteAddDragDest}} with the desired drag source \code{palette}
 and the desired drag target \code{widget}. Then \code{\link{gtkToolPaletteGetDragItem}}
@@ -131,7 +131,7 @@ directions of the GtkToolpalette.
 The size of the icons in a tool palette is normally determined by
 the \verb{"toolbar-icon-size"} setting. When this property is set,
 it overrides the setting.
-  
+
 This should only be used for special-purpose tool palettes, normal
 application tool palettes should respect the user preferences for the
 size of icons.

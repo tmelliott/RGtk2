@@ -4,7 +4,7 @@
 \alias{gtkObjectSetArgs}
 \title{Access properties of a Gtk object}
 \description{
-\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)} 
+\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)}
 
   These functions allow one to both read
   and set properties of a Gtk object by

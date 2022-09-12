@@ -1,7 +1,7 @@
 \alias{gFileQueryWritableNamespaces}
 \name{gFileQueryWritableNamespaces}
 \title{gFileQueryWritableNamespaces}
-\description{Obtain the list of attribute namespaces where new attributes 
+\description{Obtain the list of attribute namespaces where new attributes
 can be created by a user. An example of this is extended
 attributes (in the "xattr" namespace).}
 \usage{gFileQueryWritableNamespaces(object, cancellable = NULL, .errwarn = TRUE)}

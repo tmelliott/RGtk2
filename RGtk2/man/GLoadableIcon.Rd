@@ -11,7 +11,7 @@
    +----GLoadableIcon}}
 \section{Implementations}{GLoadableIcon is implemented by
  \code{\link{GFileIcon}}.}
-\section{Detailed Description}{Extends the \code{\link{GIcon}} interface and adds the ability to 
+\section{Detailed Description}{Extends the \code{\link{GIcon}} interface and adds the ability to
 load icons from streams.}
 \section{Structures}{\describe{\item{\verb{GLoadableIcon}}{
 Generic type for all kinds of icons that can be loaded

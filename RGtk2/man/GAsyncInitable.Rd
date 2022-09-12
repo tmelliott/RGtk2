@@ -13,9 +13,9 @@
 \section{Detailed Description}{This is the asynchronous version of \code{\link{GInitable}}, it behaves the same
 in all ways except that initialization is asynchronous. For more details
 see the descriptions on \code{\link{GInitable}}.
-  
+
 A class may implement both the \code{\link{GInitable}} and \code{\link{GAsyncInitable}} interfaces.
-  
+
 Users of objects implementing this are not intended to use the interface
 method directly, instead it will be used automatically in various ways.
 For C applications you generally just call \code{\link{gAsyncInitableNewAsync}}

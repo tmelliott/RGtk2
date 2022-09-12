@@ -2,7 +2,7 @@
 \name{gdkDisplayGetDefaultGroup}
 \title{gdkDisplayGetDefaultGroup}
 \description{Returns the default group leader window for all toplevel windows
-on \code{display}. This window is implicitly created by GDK. 
+on \code{display}. This window is implicitly created by GDK.
 See \code{\link{gdkWindowSetGroup}}.}
 \usage{gdkDisplayGetDefaultGroup(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GdkDisplay}}}}

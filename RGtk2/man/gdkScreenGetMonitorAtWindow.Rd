@@ -1,7 +1,7 @@
 \alias{gdkScreenGetMonitorAtWindow}
 \name{gdkScreenGetMonitorAtWindow}
 \title{gdkScreenGetMonitorAtWindow}
-\description{Returns the number of the monitor in which the largest area of the 
+\description{Returns the number of the monitor in which the largest area of the
 bounding rectangle of \code{window} resides.}
 \usage{gdkScreenGetMonitorAtWindow(object, window)}
 \arguments{

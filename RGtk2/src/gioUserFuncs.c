@@ -33,7 +33,7 @@ S_GIOSchedulerJobFunc(GIOSchedulerJob* s_job, GCancellable* s_cancellable, gpoin
     return(((gboolean)0));
   return(((gboolean)asCLogical(s_ans)));
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 
@@ -72,7 +72,7 @@ S_GSimpleAsyncThreadFunc(GSimpleAsyncResult* s_res, GObject* s_object, GCancella
     return(((gboolean)0));
   return(((gboolean)asCLogical(s_ans)));
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 
@@ -108,7 +108,7 @@ S_GAsyncReadyCallback(GObject* s_source_object, GSimpleAsyncResult* s_res, gpoin
   if(err)
     return;
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 
@@ -143,7 +143,7 @@ S_GFileProgressCallback(goffset s_current_num_bytes, goffset s_total_num_bytes, 
   if(err)
     return;
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 
@@ -178,7 +178,7 @@ S_GFileReadMoreCallback(const char* s_file_contents, goffset s_file_size, gpoint
   if(err)
     return;
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 
@@ -212,5 +212,4 @@ S_GReallocFunc(gpointer s_data, gsize s_size)
     return(((gpointer)0));
   return(((gpointer)asCGenericData(s_ans)));
 }
-#endif 
-
+#endif

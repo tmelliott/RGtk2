@@ -1,7 +1,7 @@
 \alias{gAppInfoAddSupportsType}
 \name{gAppInfoAddSupportsType}
 \title{gAppInfoAddSupportsType}
-\description{Adds a content type to the application information to indicate the 
+\description{Adds a content type to the application information to indicate the
 application is capable of opening files with the given content type.}
 \usage{gAppInfoAddSupportsType(object, content.type, .errwarn = TRUE)}
 \arguments{

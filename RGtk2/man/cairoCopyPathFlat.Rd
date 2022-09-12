@@ -12,14 +12,14 @@ approximations, (accurate to within the current tolerance
 value). That is, the result is guaranteed to not have any elements
 of type \code{CAIRO_PATH_CURVE_TO} which will instead be replaced by a
 series of \code{CAIRO_PATH_LINE_TO} elements.
-  
+
 This function will always return a valid pointer, but the result
 will have no data (\code{data==  NULL} and
 \code{num_data==0}), if either of the following
 conditions hold:
   \enumerate{
-\item 
-\item 
+\item
+\item
 }  }
 \value{[\code{\link{CairoPath}}]  the copy of the current path.}
 \author{Derived by RGtkGen from GTK+ documentation}

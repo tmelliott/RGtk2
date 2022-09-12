@@ -12,12 +12,12 @@ Surface dimensions and clipping are not taken into account.}
 \code{\link{cairoStrokeExtents}} will return an empty rectangle. Contrast with
 \code{\link{cairoPathExtents}} which can be used to compute the non-empty
 bounds as the line width approaches zero.
-  
+
 Note that \code{\link{cairoStrokeExtents}} must necessarily do more work to
 compute the precise inked areas in light of the stroke parameters,
 so \code{\link{cairoPathExtents}} may be more desirable for sake of
 performance if non-inked path extents are desired.
-  
+
 See \code{\link{cairoStroke}}, \code{\link{cairoSetLineWidth}}, \code{\link{cairoSetLineJoin}},
 \code{\link{cairoSetLineCap}}, \code{\link{cairoSetDash}}, and
 \code{\link{cairoStrokePreserve}}.  }

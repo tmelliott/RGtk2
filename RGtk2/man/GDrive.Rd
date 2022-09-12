@@ -41,7 +41,7 @@ the same piece of media. As such, \code{\link{GDrive}} abstracts a drive with
 (or without) removable media and provides operations for querying
 whether media is available, determing whether media change is
 automatically detected and ejecting the media.
-  
+
 If the \code{\link{GDrive}} reports that media isn't automatically detected, one
 can poll for media; typically one should not do this periodically
 as a poll for media operation is potententially expensive and may
@@ -54,7 +54,7 @@ multi-disk devices such as RAID devices. Note that the actual
 semantics and side-effects of starting/stopping a \code{\link{GDrive}} may vary
 according to implementation. To choose the correct verbs in e.g. a
 file manager, use \code{\link{gDriveGetStartStopType}}.
-  
+
 For porting from GnomeVFS note that there is no equivalent of
 \code{\link{GDrive}} in that API.}
 \section{Structures}{\describe{\item{\verb{GDrive}}{

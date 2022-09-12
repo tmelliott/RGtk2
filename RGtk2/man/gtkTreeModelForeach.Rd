@@ -1,8 +1,8 @@
 \alias{gtkTreeModelForeach}
 \name{gtkTreeModelForeach}
 \title{gtkTreeModelForeach}
-\description{Calls func on each node in model in a depth-first fashion.  
-If \code{func} returns \code{TRUE}, then the tree ceases to be walked, and 
+\description{Calls func on each node in model in a depth-first fashion.
+If \code{func} returns \code{TRUE}, then the tree ceases to be walked, and
 \code{\link{gtkTreeModelForeach}} returns.}
 \usage{gtkTreeModelForeach(object, func, user.data = NULL)}
 \arguments{

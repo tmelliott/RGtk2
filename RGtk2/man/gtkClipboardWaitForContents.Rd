@@ -2,7 +2,7 @@
 \name{gtkClipboardWaitForContents}
 \title{gtkClipboardWaitForContents}
 \description{Requests the contents of the clipboard using the given target.
-This function waits for the data to be received using the main 
+This function waits for the data to be received using the main
 loop, so events, timeouts, etc, may be dispatched during the wait.}
 \usage{gtkClipboardWaitForContents(object, target)}
 \arguments{

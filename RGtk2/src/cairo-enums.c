@@ -1772,4 +1772,3 @@ cairo_hint_metrics_get_type (void)
 #endif
 
 /* Generated data ends here */
-

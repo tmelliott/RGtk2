@@ -15,7 +15,7 @@ given drawables should use \code{\link{gdkDrawPixbuf}} and \code{\link{gdkPixbuf
 by \code{\link{gdkRgbGetColormap}}. You normally will want to instead use
 the actual colormap for a widget, and use
 \code{\link{gdkPixbufRenderPixmapAndMaskForColormap}}.
-  
+
 If the pixbuf does not have an alpha channel, then *\code{mask.return} will be set
 to \code{NULL}.}
 \value{

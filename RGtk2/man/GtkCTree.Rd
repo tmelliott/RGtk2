@@ -92,18 +92,18 @@
  AtkImplementorIface and  \code{\link{GtkBuildable}}.}
 \section{Detailed Description}{The \code{\link{GtkCTree}} widget is used for showing a hierarchical tree
 to the user, for example a directory tree.
-  
+
 The tree is internally represented as a set of \code{\link{GtkCTreeNode}} structures.
-  
+
 The interface has much in common with the \code{\link{GtkCList}} widget: rows (nodes)
 can be selected by the user etc.
-  
+
 Positions in the tree are often indicated by two arguments, a
 parent and a sibling, both \code{\link{GtkCTreeNode}} pointers. If the parent
 is \code{NULL}, the position is at the root of the tree and if the sibling
 is \code{NULL}, it will be the last child of parent, otherwise it will be
 inserted just before the sibling.
-  
+
 GtkCTree has been deprecated since GTK+ 2.0 and should not be used
 in newly written code. Use \code{\link{GtkTreeView}} instead.}
 \section{Structures}{\describe{

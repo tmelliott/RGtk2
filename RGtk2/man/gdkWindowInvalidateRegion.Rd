@@ -17,7 +17,7 @@ response to those expose events.}
 whenever your program returns to the main loop and becomes idle, so
 normally there's no need to do that manually, you just need to
 invalidate regions that you know should be redrawn.
-  
+
 The \code{invalidate.children} parameter controls whether the region of
 each child window that intersects \code{region} will also be invalidated.
 If \code{FALSE}, then the update area for child windows will remain

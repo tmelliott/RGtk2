@@ -2,11 +2,11 @@
 \name{gtkDrawCheck}
 \title{gtkDrawCheck}
 \description{
-Draws a check button indicator in the given rectangle on \code{window} with 
+Draws a check button indicator in the given rectangle on \code{window} with
 the given parameters.
 \strong{WARNING: \code{gtk_draw_check} has been deprecated since version 2.0 and should not be used in newly-written code. Use \code{\link{gtkPaintCheck}} instead.}
 }
-\usage{gtkDrawCheck(object, window, state.type, shadow.type, x, y, width, 
+\usage{gtkDrawCheck(object, window, state.type, shadow.type, x, y, width,
     height)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GtkStyle}}}

@@ -49,7 +49,7 @@ gradients. Multiple backends for Cairo are available, to allow
 rendering to images, to PDF files, and to the screen on X and on other
 windowing systems. The functions in this section allow using Pango
 to render to Cairo surfaces.
-  
+
 Using Pango with Cairo is straightforward. A \code{\link{PangoContext}} created
 with \code{\link{pangoCairoFontMapCreateContext}} can be used on any
 Cairo context (cairo_t), but needs to be updated to match the
@@ -58,7 +58,7 @@ using \code{\link{pangoCairoUpdateContext}}. The convenience functions
 \code{\link{pangoCairoCreateLayout}} and \code{\link{pangoCairoUpdateLayout}} handle
 the common case where the program doesn't need to manipulate the
 properties of the \code{\link{PangoContext}}.
-  
+
 When you get the metrics of a layout or of a piece of a layout using
 functions such as \code{\link{pangoLayoutGetExtents}}, the reported metrics
 are in user-space coordinates. If a piece of text is 10 units long,
@@ -69,7 +69,7 @@ pixel grid), so you shouldn't assume they are completely independent
 of the current transformation matrix. Note that the basic metrics
 functions in Pango report results in integer Pango units. To get
 to the floating point units used in Cairo divide by \code{PANGO_SCALE}.
-  
+
  \emph{Using Pango with Cairo}
 \preformatted{
 RADIUS <- 150
@@ -80,42 +80,42 @@ draw.text <- function(widget, event, data)
 {
   width <- widget[["allocation"]][["width"]]
   height <- widget[["allocation"]][["height"]]
-  
+
   device.radius <- min(width, height) / 2.
-  
+
   cr <- gdkCairoCreate(widget[["window"]])
-  
+
   ## Center coordinates on the middle of the region we are drawing
   cr$translate(device.radius + (width - 2 * device.radius) / 2,
                device.radius + (height - 2 * device.radius) / 2)
   cr$scale(device.radius / RADIUS, device.radius / RADIUS)
-  
+
   ## Create a PangoLayout, set the font and text
   layout <- pangoCairoCreateLayout(cr)
-  
+
   layout$setText("Text")
   desc <- pangoFontDescriptionFromString(FONT)
   layout$setFontDescription(desc)
-  
+
   ## Draw the layout N.WORDS times in a circle
   for (i in 1:N.WORDS) {
     angle <- (360 * i) / N.WORDS
-    
+
     cr$save()
-    
+
     ## Gradient from red at angle 60 to blue at angle 300
     red <- (1 + cos((angle - 60) * pi / 180)) / 2
     cr$setSourceRgb(red, 0, 1.0 - red)
-    
+
     cr$rotate(angle * pi / 180)
-    
+
     ## Inform Pango to re-layout the text with the new transformation
     pangoCairoUpdateLayout(cr, layout)
-    
+
     size <- layout$getSize()
     cr$moveTo(- (size$width / .PangoScale) / 2, - RADIUS)
     pangoCairoShowLayout(cr, layout)
-    
+
     cr$restore()
   }
   return(FALSE)
@@ -139,14 +139,14 @@ window$showAll()
 \item{\verb{PangoCairoFont}}{
 \code{\link{PangoCairoFont}} is an interface exported by fonts for
 use with Cairo. The actual type of the font will depend
-on the particular font technology Cairo was compiled to use.  
+on the particular font technology Cairo was compiled to use.
   Since 1.18
 
 }
 \item{\verb{PangoCairoFontMap}}{
 \code{\link{PangoCairoFontMap}} is an interface exported by font maps for
 use with Cairo. The actual type of the font map will depend
-on the particular font technology Cairo was compiled to use.  
+on the particular font technology Cairo was compiled to use.
   Since 1.10
 
 }

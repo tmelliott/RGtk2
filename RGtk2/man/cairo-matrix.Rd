@@ -24,8 +24,8 @@
     is given by:
     \preformatted{    x_new = xx * x + xy * y + x0;
     y_new = yx * x + yy * y + y0;
-  
-}  
+
+}
     The current transformation matrix of a \code{\link{Cairo}}, represented as a
     \code{\link{CairoMatrix}}, defines the transformation from user-space
     coordinates to device-space coordinates. See \code{\link{cairoGetMatrix}} and
@@ -37,7 +37,7 @@ rotation, shear, or a combination of those. The transformation of
 a point (x, y) is given by:
 \preformatted{    x_new = xx * x + xy * y + x0;
     y_new = yx * x + yy * y + y0;
-}  
+}
 
 \describe{
 \item{\verb{xx}}{[numeric]  xx component of the affine transformation}

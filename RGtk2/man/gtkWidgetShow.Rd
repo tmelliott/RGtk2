@@ -9,7 +9,7 @@ container, instead of individually showing the widgets.}
 \arguments{\item{\verb{object}}{a \code{\link{GtkWidget}}}}
 \details{Remember that you have to show the containers containing a widget,
 in addition to the widget itself, before it will appear onscreen.
-  
+
 When a toplevel container is shown, it is immediately realized and
 mapped; other shown widgets are realized and mapped when their
 toplevel container is realized and mapped.}

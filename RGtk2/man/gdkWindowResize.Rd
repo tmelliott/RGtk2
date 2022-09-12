@@ -11,7 +11,7 @@ use \code{\link{gtkWindowResize}} instead of this low-level GDK function.}
 \item{\verb{height}}{new height of the window}
 }
 \details{Windows may not be resized below 1x1.
-  
+
 If you're also planning to move the window, use \code{\link{gdkWindowMoveResize}}
 to both move and resize simultaneously, for a nicer visual effect.}
 \author{Derived by RGtkGen from GTK+ documentation}

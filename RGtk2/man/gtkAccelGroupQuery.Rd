@@ -1,7 +1,7 @@
 \alias{gtkAccelGroupQuery}
 \name{gtkAccelGroupQuery}
 \title{gtkAccelGroupQuery}
-\description{Queries an accelerator group for all entries matching \code{accel.key} and 
+\description{Queries an accelerator group for all entries matching \code{accel.key} and
 \code{accel.mods}.}
 \usage{gtkAccelGroupQuery(object, accel.key, accel.mods)}
 \arguments{

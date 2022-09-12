@@ -27,14 +27,14 @@ memory. For example, a piece of display hardware might support 24-bit color,
 pixel size, pixels can be in different formats; for example the "red" element
 of an RGB pixel may be in the top 8 bits of the pixel, or may be in the lower
 4 bits.
-  
+
 Usually you can avoid thinking about visuals in GTK+. Visuals are useful to
 interpret the contents of a \code{\link{GdkImage}}, but you should avoid \code{\link{GdkImage}} precisely
 because its contents depend on the display hardware; use \code{\link{GdkPixbuf}} instead, for
 all but the most low-level purposes. Also, anytime you provide a \code{\link{GdkColormap}},
 the visual is implied as part of the colormap (\code{\link{gdkColormapGetVisual}}), so
 you won't have to provide a visual in addition.
-  
+
 There are several standard visuals. The visual returned
 by \code{\link{gdkVisualGetSystem}} is the system's default
 visual. \code{\link{gdkRgbGetVisual}} return the visual most
@@ -42,7 +42,7 @@ suited to displaying full-color image data. If you
 use the calls in \verb{GdkRGB}, you should create your windows
 using this visual (and the colormap returned by
 \code{\link{gdkRgbGetColormap}}).
-  
+
 A number of functions are provided for determining
 the "best" available visual. For the purposes of
 making this determination, higher bit depths are
@@ -105,7 +105,7 @@ values for display.
 
 \describe{
 \item{\verb{static-gray}}{Each pixel value indexes a grayscale value directly.}
-\item{\verb{grayscale}}{Each pixel is an index into a color map that maps pixel 
+\item{\verb{grayscale}}{Each pixel is an index into a color map that maps pixel
    values into grayscale values. The color map can be changed by an application.}
 \item{\verb{static-color}}{Each pixel value is an index into a predefined,
    unmodifiable color map that maps pixel values into RGB values.}

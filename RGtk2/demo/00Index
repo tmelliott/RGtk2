@@ -6,7 +6,7 @@ editableCells	This demo demonstrates the use of editable cells in a GtkTreeView.
 messageDialog	Dialog widgets are used to pop up a transient window for user feedback.
 buttonBoxes	The Button Box widgets are used to arrange buttons with padding.
 entryCompletion	GtkEntryCompletion provides a mechanism for adding support for completion in GtkEntry.
-rotatedText	This demo shows how to use GDK and Pango to draw rotated and transformed text. 
+rotatedText	This demo shows how to use GDK and Pango to draw rotated and transformed text.
 clipboard	This demo shows how to copy and paste text to and from the clipboard.
 expander	GtkExpander allows to provide additional content that is initially hidden.
 sizeGroups	GtkSizeGroup provides a mechanism for grouping a number of widgets together so they all request the same amount of space.

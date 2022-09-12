@@ -152,10 +152,10 @@ data, or \code{NULL} if an error occurred
 The ::apply-tag signal is emitted to apply a tag to a
 range of text in a \code{\link{GtkTextBuffer}}.
 Applying actually occurs in the default handler.
-  
+
 Note that if your handler runs before the default handler it must not
 invalidate the \code{start} and \code{end} iters (or has to revalidate them).
-  
+
 See also:
 \code{\link{gtkTextBufferApplyTag}},
 \code{\link{gtkTextBufferInsertWithTags}},
@@ -174,7 +174,7 @@ See also:
 \item{\code{begin-user-action(textbuffer, user.data)}}{
 The ::begin-user-action signal is emitted at the beginning of a single
 user-visible operation on a \code{\link{GtkTextBuffer}}.
-  
+
 See also:
 \code{\link{gtkTextBufferBeginUserAction}},
 \code{\link{gtkTextBufferInsertInteractive}},
@@ -204,14 +204,14 @@ has changed.
 \item{\code{delete-range(textbuffer, start, end, user.data)}}{
 The ::delete-range signal is emitted to delete a range
 from a \code{\link{GtkTextBuffer}}.
-  
+
 Note that if your handler runs before the default handler it must not
 invalidate the \code{start} and \code{end} iters (or has to revalidate them).
 The default signal handler revalidates the \code{start} and \code{end} iters to
 both point point to the location where text was deleted. Handlers
 which run after the default handler (see \code{gSignalConnectAfter()})
 do not have access to the deleted text.
-  
+
 See also: \code{\link{gtkTextBufferDelete}}.
 
 \describe{
@@ -226,7 +226,7 @@ See also: \code{\link{gtkTextBufferDelete}}.
 \item{\code{end-user-action(textbuffer, user.data)}}{
 The ::end-user-action signal is emitted at the end of a single
 user-visible operation on the \code{\link{GtkTextBuffer}}.
-  
+
 See also:
 \code{\link{gtkTextBufferEndUserAction}},
 \code{\link{gtkTextBufferInsertInteractive}},
@@ -247,12 +247,12 @@ See also:
 The ::insert-child-anchor signal is emitted to insert a
 \code{\link{GtkTextChildAnchor}} in a \code{\link{GtkTextBuffer}}.
 Insertion actually occurs in the default handler.
-  
+
 Note that if your handler runs before the default handler it must
 not invalidate the \code{location} iter (or has to revalidate it).
 The default signal handler revalidates it to be placed after the
 inserted \code{anchor}.
-  
+
 See also: \code{\link{gtkTextBufferInsertChildAnchor}}.
 
 \describe{
@@ -267,12 +267,12 @@ See also: \code{\link{gtkTextBufferInsertChildAnchor}}.
 \item{\code{insert-pixbuf(textbuffer, location, pixbuf, user.data)}}{
 The ::insert-pixbuf signal is emitted to insert a \code{\link{GdkPixbuf}}
 in a \code{\link{GtkTextBuffer}}. Insertion actually occurs in the default handler.
-  
+
 Note that if your handler runs before the default handler it must not
 invalidate the \code{location} iter (or has to revalidate it).
 The default signal handler revalidates it to be placed after the
 inserted \code{pixbuf}.
-  
+
 See also: \code{\link{gtkTextBufferInsertPixbuf}}.
 
 \describe{
@@ -287,12 +287,12 @@ See also: \code{\link{gtkTextBufferInsertPixbuf}}.
 \item{\code{insert-text(textbuffer, location, text, len, user.data)}}{
 The ::insert-text signal is emitted to insert text in a \code{\link{GtkTextBuffer}}.
 Insertion actually occurs in the default handler.
-  
+
 Note that if your handler runs before the default handler it must not
 invalidate the \code{location} iter (or has to revalidate it).
 The default signal handler revalidates it to point to the end of the
 inserted text.
-  
+
 See also:
 \code{\link{gtkTextBufferInsert}},
 \code{\link{gtkTextBufferInsertRange}}.
@@ -310,7 +310,7 @@ See also:
 \item{\code{mark-deleted(textbuffer, mark, user.data)}}{
 The ::mark-deleted signal is emitted as notification
 after a \code{\link{GtkTextMark}} is deleted.
-  
+
 See also:
 \code{\link{gtkTextBufferDeleteMark}}.
 
@@ -325,7 +325,7 @@ See also:
 \item{\code{mark-set(textbuffer, location, mark, user.data)}}{
 The ::mark-set signal is emitted as notification
 after a \code{\link{GtkTextMark}} is set.
-  
+
 See also:
 \code{\link{gtkTextBufferCreateMark}},
 \code{\link{gtkTextBufferMoveMark}}.
@@ -342,7 +342,7 @@ See also:
 \item{\code{modified-changed(textbuffer, user.data)}}{
 The ::modified-changed signal is emitted when the modified bit of a
 \code{\link{GtkTextBuffer}} flips.
-  
+
 See also:
 \code{\link{gtkTextBufferSetModified}}.
 
@@ -370,10 +370,10 @@ See \code{\link{gtkTextBufferPasteClipboard}} for more details.
 The ::remove-tag signal is emitted to remove all occurrences of \code{tag} from
 a range of text in a \code{\link{GtkTextBuffer}}.
 Removal actually occurs in the default handler.
-  
+
 Note that if your handler runs before the default handler it must not
 invalidate the \code{start} and \code{end} iters (or has to revalidate them).
-  
+
 See also:
 \code{\link{gtkTextBufferRemoveTag}}.
 

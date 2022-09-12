@@ -7,4 +7,3 @@ atkRelation <- atkRelationNew
 atkRelationSet <- atkRelationSetNew
 
 atkStateSet <- atkStateSetNew
-

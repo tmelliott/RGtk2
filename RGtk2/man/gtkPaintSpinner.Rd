@@ -2,7 +2,7 @@
 \name{gtkPaintSpinner}
 \title{gtkPaintSpinner}
 \description{Draws a spinner on \code{window} using the given parameters.}
-\usage{gtkPaintSpinner(object, window, state.type, area, widget, detail, 
+\usage{gtkPaintSpinner(object, window, state.type, area, widget, detail,
     step, x, y, width, height)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GtkStyle}}}

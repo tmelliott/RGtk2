@@ -11,8 +11,8 @@ with \code{preview}.}
 }
 \details{A custom iprint preview should use this function in its ::expose
 handler to render the currently selected page.
-  
-Note that this function requires a suitable cairo context to 
+
+Note that this function requires a suitable cairo context to
 be associated with the print context.
   Since 2.10}
 \author{Derived by RGtkGen from GTK+ documentation}

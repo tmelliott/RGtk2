@@ -6,7 +6,7 @@ pages.  Use \code{\link{cairoSurfaceCopyPage}} if you don't want to clear the pa
 \usage{cairoSurfaceShowPage(surface)}
 \arguments{\item{\verb{surface}}{[\code{\link{CairoSurface}}]  a \verb{cairo_Surface_t}}}
 \details{There is a convenience function for this that takes a \code{\link{Cairo}},
-namely \code{\link{cairoShowPage}}.  
+namely \code{\link{cairoShowPage}}.
   Since 1.6}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

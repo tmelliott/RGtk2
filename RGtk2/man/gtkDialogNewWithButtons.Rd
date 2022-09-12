@@ -13,13 +13,13 @@ the list. Button text can be either a stock ID such as
 any positive number, or one of the values in the \code{\link{GtkResponseType}}
 enumeration. If the user clicks one of these dialog buttons,
 \code{\link{GtkDialog}} will emit the \code{\link{gtkDialogResponse}} signal with the corresponding
-response ID. If a \code{\link{GtkDialog}} receives the \verb{"delete-event"} signal, 
+response ID. If a \code{\link{GtkDialog}} receives the \verb{"delete-event"} signal,
 it will emit ::response with a response ID of \verb{GTK_RESPONSE_DELETE_EVENT}.
 However, destroying a dialog does not emit the ::response signal;
-so be careful relying on ::response when using the 
+so be careful relying on ::response when using the
 \verb{GTK_DIALOG_DESTROY_WITH_PARENT} flag. Buttons are from left to right,
 so the first button in the list will be the leftmost button in the dialog.}
-\usage{gtkDialogNewWithButtons(title = NULL, parent = NULL, flags = 0, 
+\usage{gtkDialogNewWithButtons(title = NULL, parent = NULL, flags = 0,
     ..., show = TRUE)}
 \arguments{
 \item{\verb{title}}{Title of the dialog, or \code{NULL}. \emph{[  \acronym{allow-none}  ]}}
@@ -32,13 +32,13 @@ so the first button in the list will be the leftmost button in the dialog.}
 # Explicit
 dialog <-
   gtkDialogNewWithButtons("My dialog", main_app_window,
-                          c("modal", "destroy-with-parent"), 
-                          "gtk-ok", GtkResponseType["accept"], 
+                          c("modal", "destroy-with-parent"),
+                          "gtk-ok", GtkResponseType["accept"],
                           "gtk-cancel", GtkResponseType["reject"])
 ## Also via collapsed constructor
 dialog <- gtkDialog("My dialog", main_app_window,
-                    c("modal", "destroy-with-parent"), 
-                    "gtk-ok", GtkResponseType["accept"], 
+                    c("modal", "destroy-with-parent"),
+                    "gtk-ok", GtkResponseType["accept"],
                     "gtk-cancel", GtkResponseType["reject"])
 
 }}

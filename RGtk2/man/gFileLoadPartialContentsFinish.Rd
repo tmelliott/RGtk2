@@ -2,7 +2,7 @@
 \name{gFileLoadPartialContentsFinish}
 \title{gFileLoadPartialContentsFinish}
 \description{Finishes an asynchronous partial load operation that was started
-with \code{gFileLoadPartialContentsAsync()}. The data is always 
+with \code{gFileLoadPartialContentsAsync()}. The data is always
 zero-terminated, but this is not included in the resultant \code{length}.}
 \usage{gFileLoadPartialContentsFinish(object, res, .errwarn = TRUE)}
 \arguments{

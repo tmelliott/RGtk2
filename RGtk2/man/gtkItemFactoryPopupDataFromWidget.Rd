@@ -2,7 +2,7 @@
 \name{gtkItemFactoryPopupDataFromWidget}
 \title{gtkItemFactoryPopupDataFromWidget}
 \description{
-Obtains the \code{popup.data} which was passed to 
+Obtains the \code{popup.data} which was passed to
 \code{\link{gtkItemFactoryPopupWithData}}. This data is available until the menu
 is popped down again.
 \strong{WARNING: \code{gtk_item_factory_popup_data_from_widget} has been deprecated since version 2.4 and should not be used in newly-written code. Use \code{\link{GtkUIManager}} instead.}

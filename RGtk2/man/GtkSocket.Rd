@@ -27,7 +27,7 @@ that widget's window ID to the other process,
 which then creates a \code{\link{GtkPlug}} with that window ID.
 Any widgets contained in the \code{\link{GtkPlug}} then will appear
 inside the first applications window.
-  
+
 The socket's window ID is obtained by using
 \code{\link{gtkSocketGetId}}. Before using this function,
 the socket must have been realized, and for hence,
@@ -43,7 +43,7 @@ parent$add(socket)
 socket$realize()
 print(paste("The ID of the sockets window is", socket$getId()))
 }
-  
+
 Note that if you pass the window ID of the socket to another
 process that will create a plug in the socket, you
 must make sure that the socket widget is not destroyed
@@ -56,19 +56,19 @@ has been created by examining the
 \code{\link{GtkSocket}} structure. If this field is non-\code{NULL},
 then the plug has been successfully created inside
 of the socket.
-  
+
 When GTK+ is notified that the embedded window has been
 destroyed, then it will destroy the socket as well. You
 should always, therefore, be prepared for your sockets
 to be destroyed at any time when the main event loop
 is running. To prevent this from happening, you can
 connect to the \verb{"plug-removed"} signal.
-  
+
 The communication between a \code{\link{GtkSocket}} and a \code{\link{GtkPlug}} follows the
 XEmbed (\url{https://specifications.freedesktop.org/xembed-spec/})
 protocol. This protocol has also been implemented in other toolkits, e.g.
 \command{Qt}, allowing the same level of integration
-when embedding a \command{Qt} widget in GTK or vice versa.  
+when embedding a \command{Qt} widget in GTK or vice versa.
 A socket can also be used to swallow arbitrary
 pre-existing top-level windows using \code{\link{gtkSocketSteal}},
 though the integration when this is done will not be as close

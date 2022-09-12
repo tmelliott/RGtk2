@@ -9,17 +9,17 @@
 function(x, i, j, value)
 {
 	frame <- as.data.frame(x)
-	
+
 	old_nrow <- nrow(frame)
 	old_ncol <- ncol(frame)
-	
+
 	if (missing(i))
 		i <- 1:old_nrow
 	if (missing(j))
 		j <- 1:old_ncol
-	
+
 	frame[i, j] <- value
-	
+
 	if (is.character(i))
 		i <- match(i, rownames(frame))
   else if (is.logical(i))
@@ -28,17 +28,17 @@ function(x, i, j, value)
 		j <- match(j, colnames(frame))
   else if (is.logical(j))
     j <- which(j)
-	
+
 	changed <- integer(0)
 	if (length(unique(j)) > ncol(frame) - old_ncol)
 		changed <- i # existing columns changed, all specified rows "changed"
 	else if (nrow(frame) > old_nrow) # otherwise, just add new rows
 		changed <- ((old_nrow+1):nrow(frame))
-	
+
 	resort <- x$getSortColumnId() %in% j
-	
+
 	.RGtkCall("R_r_gtk_data_frame_set", x, frame, as.list(as.integer(changed-1)), resort)
-	
+
 	x
 }
 
@@ -57,7 +57,7 @@ rGtkDataFrame <- rGtkDataFrameNew <- function(frame = data.frame())
     list(frame[new_order,drop=F],
          as.integer((1:length(new_order))[new_order]-1))
   }
-  
+
   w <- .RGtkCall("R_r_gtk_data_frame_new", as.data.frame(frame), sort_closure)
   w
 }

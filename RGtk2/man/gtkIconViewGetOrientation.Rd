@@ -1,7 +1,7 @@
 \alias{gtkIconViewGetOrientation}
 \name{gtkIconViewGetOrientation}
 \title{gtkIconViewGetOrientation}
-\description{Returns the value of the ::orientation property which determines 
+\description{Returns the value of the ::orientation property which determines
 whether the labels are drawn beside the icons instead of below.}
 \usage{gtkIconViewGetOrientation(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkIconView}}}}

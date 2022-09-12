@@ -11,7 +11,7 @@ from the current icon theme.}
 }
 \details{If the icon name isn't known, a "broken image" icon will be displayed
 instead.
-  
+
 If \code{icon.name} is \code{NULL}, no icon will be shown in the specified position.
   Since 2.16}
 \author{Derived by RGtkGen from GTK+ documentation}

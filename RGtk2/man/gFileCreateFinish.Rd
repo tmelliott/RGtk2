@@ -1,7 +1,7 @@
 \alias{gFileCreateFinish}
 \name{gFileCreateFinish}
 \title{gFileCreateFinish}
-\description{Finishes an asynchronous file create operation started with 
+\description{Finishes an asynchronous file create operation started with
 \code{\link{gFileCreateAsync}}.}
 \usage{gFileCreateFinish(object, res, .errwarn = TRUE)}
 \arguments{

@@ -1,7 +1,7 @@
 \alias{gtkIconThemePrependSearchPath}
 \name{gtkIconThemePrependSearchPath}
 \title{gtkIconThemePrependSearchPath}
-\description{Prepends a directory to the search path. 
+\description{Prepends a directory to the search path.
 See \code{\link{gtkIconThemeSetSearchPath}}.}
 \usage{gtkIconThemePrependSearchPath(object, path)}
 \arguments{

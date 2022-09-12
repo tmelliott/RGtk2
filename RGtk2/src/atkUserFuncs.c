@@ -29,5 +29,4 @@ S_AtkKeySnoopFunc(AtkKeyEventStruct* s_event, gpointer s_func_data)
   if(err)
     return(((gint)0));
   return(((gint)asCInteger(s_ans)));
-} 
-
+}

@@ -3,7 +3,7 @@
 \title{gtkRcPropertyParseRequisition}
 \description{A \verb{GtkRcPropertyParser} for use with \code{\link{gtkSettingsInstallPropertyParser}}
 or \code{\link{gtkWidgetClassInstallStylePropertyParser}} which parses a
-requisition in the form 
+requisition in the form
 \code{"{ width, height }"} for integers \code{width} and \code{height}.}
 \usage{gtkRcPropertyParseRequisition(pspec, gstring)}
 \arguments{

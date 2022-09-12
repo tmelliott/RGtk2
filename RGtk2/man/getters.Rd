@@ -378,7 +378,7 @@
 \name{getters}
 \title{Getters}
 \description{This function gets the \code{Field} from the \code{Structure} in its name,
-following the format \code{StructureGetField}. You should use the \code{\link{[[.RGtkObject}} function instead 
+following the format \code{StructureGetField}. You should use the \code{\link{[[.RGtkObject}} function instead
 of this one.}
 \author{Michael Lawrence}
 \keyword{interface}

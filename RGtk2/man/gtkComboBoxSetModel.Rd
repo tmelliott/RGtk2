@@ -8,8 +8,8 @@ model (if applicable). If model is \code{NULL}, then it will unset the model.}
 \item{\verb{object}}{A \code{\link{GtkComboBox}}}
 \item{\verb{model}}{A \code{\link{GtkTreeModel}}. \emph{[  \acronym{allow-none}  ]}}
 }
-\details{Note that this function does not clear the cell renderers, you have to 
-call \code{\link{gtkCellLayoutClear}} yourself if you need to set up different 
+\details{Note that this function does not clear the cell renderers, you have to
+call \code{\link{gtkCellLayoutClear}} yourself if you need to set up different
 cell renderers for the new model.
   Since 2.4}
 \author{Derived by RGtkGen from GTK+ documentation}

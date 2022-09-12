@@ -6,7 +6,7 @@ expose_event_callback <- function(widget, event, data) {
   return(TRUE)
 }
 [...]
-  
+
 drawing_area = gtkDrawingArea()
 drawing_area$setSizeRequest(100, 100)
 gSignalConnect(drawing_area, "expose_event", expose_event_callback)

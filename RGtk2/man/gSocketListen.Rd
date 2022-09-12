@@ -10,7 +10,7 @@ to accept incoming requests using \code{\link{gSocketAccept}}.}
 }
 \details{Before calling this the socket must be bound to a local address using
 \code{\link{gSocketBind}}.
-  
+
 To set the maximum amount of outstanding clients, use
 \code{\link{gSocketSetListenBacklog}}.
   Since 2.22}

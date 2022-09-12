@@ -11,10 +11,10 @@ function should return \code{TRUE} if the given row should be visible and
 \item{\verb{data}}{User data to pass to the visible function, or \code{NULL}. \emph{[  \acronym{allow-none}  ]}}
 }
 \details{If the condition calculated by the function changes over time (e.g. because
-it depends on some global parameters), you must call 
-\code{\link{gtkTreeModelFilterRefilter}} to keep the visibility information of 
+it depends on some global parameters), you must call
+\code{\link{gtkTreeModelFilterRefilter}} to keep the visibility information of
 the model uptodate.
-  
+
 Note that \code{func} is called whenever a row is inserted, when it may still be
 empty. The visible function should therefore take special care of empty
 rows, like in the example below.

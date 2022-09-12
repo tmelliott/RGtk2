@@ -15,17 +15,17 @@ on toolbar mode (small/large icons). So a single icon set would
 contain all those variants of the icon. \code{\link{GtkIconSet}} contains a list
 of \code{\link{GtkIconSource}} from which it can derive specific icon variants in
 the set.
-  
+
 In the simplest case, \code{\link{GtkIconSet}} contains one source pixbuf from
 which it derives all variants. The convenience function
 \code{\link{gtkIconSetNewFromPixbuf}} handles this case; if you only have
 one source pixbuf, just use that function.
-  
+
 If you want to use a different base pixbuf for different icon
 variants, you create multiple icon sources, mark which variants
 they'll be used to create, and add them to the icon set with
 \code{\link{gtkIconSetAddSource}}.
-  
+
 By default, the icon source has all parameters wildcarded. That is,
 the icon source will be used as the base icon for any desired text
 direction, widget state, or icon size.}

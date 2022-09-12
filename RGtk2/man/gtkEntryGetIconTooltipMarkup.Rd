@@ -1,7 +1,7 @@
 \alias{gtkEntryGetIconTooltipMarkup}
 \name{gtkEntryGetIconTooltipMarkup}
 \title{gtkEntryGetIconTooltipMarkup}
-\description{Gets the contents of the tooltip on the icon at the specified 
+\description{Gets the contents of the tooltip on the icon at the specified
 position in \code{entry}.}
 \usage{gtkEntryGetIconTooltipMarkup(object, icon.pos)}
 \arguments{

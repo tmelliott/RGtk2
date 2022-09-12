@@ -21,19 +21,19 @@
          +----GFilterInputStream
                +----GBufferedInputStream
                      +----GDataInputStream}}
-\section{Detailed Description}{Buffered input stream implements \code{\link{GFilterInputStream}} and provides 
-for buffered reads. 
-  
+\section{Detailed Description}{Buffered input stream implements \code{\link{GFilterInputStream}} and provides
+for buffered reads.
+
 By default, \code{\link{GBufferedInputStream}}'s buffer size is set at 4 kilobytes.
-  
-To create a buffered input stream, use \code{\link{gBufferedInputStreamNew}}, 
-or \code{\link{gBufferedInputStreamNewSized}} to specify the buffer's size at 
+
+To create a buffered input stream, use \code{\link{gBufferedInputStreamNew}},
+or \code{\link{gBufferedInputStreamNewSized}} to specify the buffer's size at
 construction.
-  
-To get the size of a buffer within a buffered input stream, use 
-\code{\link{gBufferedInputStreamGetBufferSize}}. To change the size of a 
+
+To get the size of a buffer within a buffered input stream, use
+\code{\link{gBufferedInputStreamGetBufferSize}}. To change the size of a
 buffered input stream's buffer, use
-\code{\link{gBufferedInputStreamSetBufferSize}}. Note that the buffer's size 
+\code{\link{gBufferedInputStreamSetBufferSize}}. Note that the buffer's size
 cannot be reduced below the size of the data within the buffer.}
 \section{Structures}{\describe{\item{\verb{GBufferedInputStream}}{
 Implements \code{\link{GFilterInputStream}} with a sized input buffer.

@@ -1,7 +1,7 @@
 \alias{gtkBuilderAddFromFile}
 \name{gtkBuilderAddFromFile}
 \title{gtkBuilderAddFromFile}
-\description{Parses a file containing a GtkBuilder 
+\description{Parses a file containing a GtkBuilder
 UI definition and merges it with the current contents of \code{builder}. }
 \usage{gtkBuilderAddFromFile(object, filename, .errwarn = TRUE)}
 \arguments{
@@ -10,7 +10,7 @@ UI definition and merges it with the current contents of \code{builder}. }
 \item{.errwarn}{Whether to issue a warning on error or fail silently}
 }
 \details{Upon errors 0 will be returned and \code{error} will be assigned a
-\code{\link{GError}} from the \verb{GTK_BUILDER_ERROR}, \verb{G_MARKUP_ERROR} or \verb{G_FILE_ERROR} 
+\code{\link{GError}} from the \verb{GTK_BUILDER_ERROR}, \verb{G_MARKUP_ERROR} or \verb{G_FILE_ERROR}
 domain.
   Since 2.12}
 \value{

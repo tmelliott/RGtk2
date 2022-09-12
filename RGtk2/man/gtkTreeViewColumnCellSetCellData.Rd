@@ -5,7 +5,7 @@
 every attribute mapping in \code{tree.column}, it will get a value from the set
 column on the \code{iter}, and use that value to set the attribute on the cell
 renderer.  This is used primarily by the \code{\link{GtkTreeView}}.}
-\usage{gtkTreeViewColumnCellSetCellData(object, tree.model, iter, is.expander, 
+\usage{gtkTreeViewColumnCellSetCellData(object, tree.model, iter, is.expander,
     is.expanded)}
 \arguments{
 \item{\verb{object}}{A \code{\link{GtkTreeViewColumn}}.}

@@ -1,7 +1,7 @@
 \alias{gtkPrintOperationSetShowProgress}
 \name{gtkPrintOperationSetShowProgress}
 \title{gtkPrintOperationSetShowProgress}
-\description{If \code{show.progress} is \code{TRUE}, the print operation will show a 
+\description{If \code{show.progress} is \code{TRUE}, the print operation will show a
 progress dialog during the print operation.}
 \usage{gtkPrintOperationSetShowProgress(object, show.progress)}
 \arguments{

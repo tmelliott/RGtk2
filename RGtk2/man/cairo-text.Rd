@@ -31,8 +31,8 @@
 }
 \section{Detailed Description}{Cairo has two sets of text rendering capabilities:
 \itemize{
-\item 
-\item 
+\item
+\item
 }}
 \section{Structures}{\describe{
 \item{\verb{CairoGlyph}}{
@@ -46,10 +46,10 @@ characters. Cairo doesn't expose any way of converting input text
 into glyphs, so in order to use the Cairo interfaces that take
 arrays of glyphs, you must directly access the appropriate
 underlying font system.
-  
+
 Note that the offsets given by \code{x} and \code{y} are not cumulative. When
 drawing or measuring text, each glyph is individually positioned
-with respect to the overall origin  
+with respect to the overall origin
 \strong{\verb{CairoGlyph} is a \link{transparent-type}.}
 
 \describe{
@@ -66,15 +66,15 @@ with respect to the overall origin
 The \code{\link{CairoTextCluster}} structure holds information about a single
 \dfn{text cluster}.  A text cluster is a minimal
 mapping of some glyphs corresponding to some UTF-8 text.
-  
+
 For a cluster to be valid, both \code{num.bytes} and \code{num.glyphs} should
 be non-negative, and at least one should be non-zero.
 Note that clusters with zero glyphs are not as well supported as
 normal clusters.  For example, PDF rendering applications typically
 ignore those clusters when PDF text is being selected.
-  
+
 See \code{\link{cairoShowTextGlyphs}} for how clusters are used in advanced
-text operations.  
+text operations.
   Since 1.8
 \strong{\verb{CairoTextCluster} is a \link{transparent-type}.}
 
@@ -87,7 +87,7 @@ text operations.
 }}
 \section{Enums and Flags}{\describe{
 \item{\verb{CairoFontSlant}}{
-Specifies variants of a font face based on their slant.  
+Specifies variants of a font face based on their slant.
 
 \describe{
 \item{\verb{normal}}{ Upright font style}
@@ -97,7 +97,7 @@ Specifies variants of a font face based on their slant.
 
 }
 \item{\verb{CairoFontWeight}}{
-Specifies variants of a font face based on their weight.  
+Specifies variants of a font face based on their weight.
 
 \describe{
 \item{\verb{normal}}{ Normal font weight}
@@ -106,7 +106,7 @@ Specifies variants of a font face based on their weight.
 
 }
 \item{\verb{CairoTextClusterFlags}}{
-Specifies properties of a text cluster mapping.  
+Specifies properties of a text cluster mapping.
   Since 1.8
 
 \describe{\item{\verb{backward}}{ The clusters in the cluster list

@@ -2,7 +2,7 @@
 \alias{gtkObjectSignalEmit}
 \title{Emit a Gtk signal from a Gtk object.}
 \description{
-\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)} 
+\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)}
 
   This allows us to emit or raise a Gtk signal
   from a Gtk object directly from R.
@@ -46,5 +46,3 @@ Duncan Temple Lang <duncan@research.bell-labs.com>
 
 \keyword{interface}
 \keyword{internal}
-
-

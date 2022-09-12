@@ -1,7 +1,7 @@
 \alias{gtkWidgetSetParent}
 \name{gtkWidgetSetParent}
 \title{gtkWidgetSetParent}
-\description{This function is useful only when implementing subclasses of 
+\description{This function is useful only when implementing subclasses of
 \code{\link{GtkContainer}}.
 Sets the container as the parent of \code{widget}, and takes care of
 some details such as updating the state and style of the child

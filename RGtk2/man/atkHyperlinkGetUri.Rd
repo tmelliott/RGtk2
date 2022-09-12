@@ -1,7 +1,7 @@
 \alias{atkHyperlinkGetUri}
 \name{atkHyperlinkGetUri}
 \title{atkHyperlinkGetUri}
-\description{Get a the URI associated with the anchor specified 
+\description{Get a the URI associated with the anchor specified
 by \code{i} of \code{link.}. }
 \usage{atkHyperlinkGetUri(object, i)}
 \arguments{

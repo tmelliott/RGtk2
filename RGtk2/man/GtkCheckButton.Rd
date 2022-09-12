@@ -22,7 +22,7 @@
 \section{Interfaces}{GtkCheckButton implements
  AtkImplementorIface,  \code{\link{GtkBuildable}} and  \code{\link{GtkActivatable}}.}
 \section{Detailed Description}{A \code{\link{GtkCheckButton}} places a discrete \code{\link{GtkToggleButton}} next to a widget, (usually a \code{\link{GtkLabel}}). See the section on \code{\link{GtkToggleButton}} widgets for more information about toggle/check buttons.
-  
+
 The important signal ('toggled') is also inherited from \code{\link{GtkToggleButton}}.}
 \section{Structures}{\describe{\item{\verb{GtkCheckButton}}{
 \code{toggle_button} is a \code{\link{GtkToggleButton}} representing the actual toggle button that composes the check button.

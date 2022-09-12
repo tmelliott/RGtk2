@@ -31,17 +31,17 @@ in a \code{\link{GtkRecentChooser}}.  Files can be filtered based on their name
 \code{\link{gtkFileFilterAddMimeType}}), on the application that has
 registered them (with \code{\link{gtkRecentFilterAddApplication}}), or by
 a custom filter function (with \code{\link{gtkRecentFilterAddCustom}}).
-  
+
 Filtering by mime type handles aliasing and subclassing of mime
 types; e.g. a filter for text/plain also matches a file with mime
 type application/rtf, since application/rtf is a subclass of text/plain.
 Note that \code{\link{GtkRecentFilter}} allows wildcards for the subtype of a
 mime type, so you can e.g. filter for image/*.
-  
+
 Normally, filters are used by adding them to a \code{\link{GtkRecentChooser}},
 see \code{\link{gtkRecentChooserAddFilter}}, but it is also possible to
 manually use a filter on a file with \code{\link{gtkRecentFilterFilter}}.
-  
+
 Recently used files are supported since GTK+ 2.10.}
 \section{Structures}{\describe{
 \item{\verb{GtkRecentFilter}}{

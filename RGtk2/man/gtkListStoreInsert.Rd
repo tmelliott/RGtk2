@@ -4,7 +4,7 @@
 \description{Creates a new row at \code{position}.  \code{iter} will be changed to point to this new
 row.  If \code{position} is larger than the number of rows on the list, then the
 new row will be appended to the list. The row will be empty after this
-function is called.  To fill in values, you need to call 
+function is called.  To fill in values, you need to call
 \code{\link{gtkListStoreSet}} or \code{\link{gtkListStoreSetValue}}.}
 \usage{gtkListStoreInsert(object, position)}
 \arguments{

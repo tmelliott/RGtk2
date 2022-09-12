@@ -5,7 +5,7 @@
 that the specified \code{file} is on. The result is a \code{\link{GFileInfo}} object
 that contains key-value attributes (such as type or size for the
 file).}
-\usage{gFileQueryFilesystemInfoAsync(object, attributes, io.priority, 
+\usage{gFileQueryFilesystemInfoAsync(object, attributes, io.priority,
     cancellable, callback, user.data = NULL)}
 \arguments{
 \item{\verb{object}}{input \code{\link{GFile}}.}
@@ -18,7 +18,7 @@ of the request.}
 }
 \details{For more details, see \code{\link{gFileQueryFilesystemInfo}} which is the
 synchronous version of this call.
-  
+
 When the operation is finished, \code{callback} will be called. You can
 then call \code{\link{gFileQueryInfoFinish}} to get the result of the
 operation.}

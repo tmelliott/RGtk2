@@ -12,10 +12,10 @@ or the retrieval fails. (It will always be called
 one way or the other.)}
 \item{\verb{user.data}}{user data to pass to \code{callback}.}
 }
-\details{The \code{pixbuf} parameter to \code{callback} will contain the resulting 
-\code{\link{GdkPixbuf}} if the request succeeded, or \code{NULL} if it failed. This 
-could happen for various reasons, in particular if the clipboard 
-was empty or if the contents of the clipboard could not be 
+\details{The \code{pixbuf} parameter to \code{callback} will contain the resulting
+\code{\link{GdkPixbuf}} if the request succeeded, or \code{NULL} if it failed. This
+could happen for various reasons, in particular if the clipboard
+was empty or if the contents of the clipboard could not be
 converted into an image.
   Since 2.6}
 \author{Derived by RGtkGen from GTK+ documentation}

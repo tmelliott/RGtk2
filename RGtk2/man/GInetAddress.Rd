@@ -31,7 +31,7 @@ look up the \code{\link{GInetAddress}} for a hostname. Use
 \code{\link{gResolverLookupByAddress}} or
 \code{\link{gResolverLookupByAddressAsync}} to look up the hostname for a
 \code{\link{GInetAddress}}.
-  
+
 To actually connect to a remote host, you will need a
 \code{\link{GInetSocketAddress}} (which includes a \code{\link{GInetAddress}} as well as a
 port number).}

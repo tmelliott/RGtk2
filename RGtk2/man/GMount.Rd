@@ -38,13 +38,13 @@ GEnum
 GFlags
    +----GMountUnmountFlags
 }}
-\section{Detailed Description}{The \code{\link{GMount}} interface represents user-visible mounts. Note, when 
+\section{Detailed Description}{The \code{\link{GMount}} interface represents user-visible mounts. Note, when
 porting from GnomeVFS, \code{\link{GMount}} is the moral equivalent of \verb{GnomeVFSVolume}.
   \code{\link{GMount}} is a "mounted" filesystem that you can access. Mounted is in
 quotes because it's not the same as a unix mount, it might be a gvfs
 mount, but you can still access the files on it if you use GIO. Might or
 might not be related to a volume object.
-  
+
 Unmounting a \code{\link{GMount}} instance is an asynchronous operation. For
 more information about asynchronous operations, see \verb{GAsyncReady}
 and \verb{GSimpleAsyncReady}. To unmount a \code{\link{GMount}} instance, first call
@@ -54,7 +54,7 @@ operation has resolved (either with success or failure), and a
 \verb{GAsyncReady} structure will be passed to the callback.  That
 callback should then call \code{\link{gMountUnmountWithOperationFinish}} with the \code{\link{GMount}}
 and the \verb{GAsyncReady} data to see if the operation was completed
-successfully.  If an \code{error} is present when \code{\link{gMountUnmountWithOperationFinish}} 
+successfully.  If an \code{error} is present when \code{\link{gMountUnmountWithOperationFinish}}
 is called, then it will be filled with any error information.}
 \section{Structures}{\describe{\item{\verb{GMount}}{
 A handle to an object implementing the \verb{GMountIface} interface.

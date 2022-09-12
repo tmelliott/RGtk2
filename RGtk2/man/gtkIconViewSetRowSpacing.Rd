@@ -1,7 +1,7 @@
 \alias{gtkIconViewSetRowSpacing}
 \name{gtkIconViewSetRowSpacing}
 \title{gtkIconViewSetRowSpacing}
-\description{Sets the ::row-spacing property which specifies the space 
+\description{Sets the ::row-spacing property which specifies the space
 which is inserted between the rows of the icon view.}
 \usage{gtkIconViewSetRowSpacing(object, row.spacing)}
 \arguments{

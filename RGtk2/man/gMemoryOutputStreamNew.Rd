@@ -6,7 +6,7 @@
 \arguments{\item{\verb{len}}{the size of \code{data}}}
 \details{If \code{data} is non-\code{NULL}, the stream  will use that for its internal storage.
 If \code{realloc.fn} is non-\code{NULL}, it will be used for resizing the internal
-storage when necessary. To construct a fixed-size output stream, 
+storage when necessary. To construct a fixed-size output stream,
 pass \code{NULL} as \code{realloc.fn}.
 \preformatted{
 ## a stream that can grow

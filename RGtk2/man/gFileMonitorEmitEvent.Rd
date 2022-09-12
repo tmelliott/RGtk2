@@ -2,7 +2,7 @@
 \name{gFileMonitorEmitEvent}
 \title{gFileMonitorEmitEvent}
 \description{Emits the \verb{"changed"} signal if a change
-has taken place. Should be called from file monitor 
+has taken place. Should be called from file monitor
 implementations only.}
 \usage{gFileMonitorEmitEvent(object, file, other.file, event.type)}
 \arguments{

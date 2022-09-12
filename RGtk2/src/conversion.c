@@ -58,10 +58,10 @@ USER_OBJECT_
 asRString(const char *val)
 {
   USER_OBJECT_ ans;
-  
+
   if (!val)
 	  return(NULL_USER_OBJECT);
-  
+
   PROTECT(ans = NEW_CHARACTER(1));
   if(val)
       SET_STRING_ELT(ans, 0, COPY_TO_USER_STRING(val));
@@ -189,7 +189,7 @@ toRPointerWithFinalizer(gconstpointer val, const gchar *typeName, RPointerFinali
       USER_OBJECT_ public_sym = install(".public");
       setAttrib(ans, public_sym, findVar(public_sym, S_GOBJECT_GET_ENV(val)));
     }
-        
+
     if (klass)
         UNPROTECT(1);
     if (finalizer)
@@ -277,4 +277,3 @@ asCFlag(USER_OBJECT_ s_flag, GType ftype)
 
     return(flags);
 }
-

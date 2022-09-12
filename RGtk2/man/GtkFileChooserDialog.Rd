@@ -26,11 +26,11 @@
       the \verb{GtkFileChooserIface} interface, so you can use all of the
       \code{\link{GtkFileChooser}} functions on the file chooser dialog as well as
       those for \code{\link{GtkDialog}}.
-      
+
       Note that \code{\link{GtkFileChooserDialog}} does not have any methods of its
       own.  Instead, you should use the functions that work on a
       \code{\link{GtkFileChooser}}.
-      
+
  \emph{Typical usage}
 \preformatted{
 ######
@@ -40,7 +40,7 @@
 # This is how one creates a dialog with buttons and associated response codes.
 # (Please ignore the C "Response Code" example in the next section)
 dialog <- gtkFileChooserDialog("Open File", parent_window, "open",
-                               "gtk-cancel", GtkResponseType["cancel"], 
+                               "gtk-cancel", GtkResponseType["cancel"],
                                "gtk-open", GtkResponseType["accept"])
 
 if (dialog$run() == GtkResponseType["accept"]) {
@@ -61,8 +61,8 @@ dialog = gtk_file_chooser_dialog_new ("Open File",
 				      GTK_STOCK_CANCEL, GTK_RESPONSE_CANCEL,
 				      GTK_STOCK_OPEN, GTK_RESPONSE_ACCEPT,
 				      NULL);
-    
-}  
+
+}
       This will create buttons for "Cancel" and "Open" that use stock
       response identifiers from \code{\link{GtkResponseType}}.  For most dialog
       boxes you can use your own custom response codes rather than the
@@ -76,7 +76,7 @@ dialog = gtk_file_chooser_dialog_new ("Open File",
 \item \verb{GTK_RESPONSE_YES}
 \item \verb{GTK_RESPONSE_APPLY}
 }
-      
+
       This is because \code{\link{GtkFileChooserDialog}} must intercept responses
       and switch to folders if appropriate, rather than letting the
       dialog terminate -- the implementation uses these known

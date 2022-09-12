@@ -20,7 +20,7 @@ will be returned. To be notified when space is available, wait for the
 \code{G_IO_ERROR_WOULD_BLOCK} from \code{\link{gSocketSend}} even if you were previously
 notified of a \code{G_IO_OUT} condition. (On Windows in particular, this is
 very common due to the way the underlying APIs work.)
-  
+
 On error -1 is returned and \code{error} is set accordingly.
   Since 2.22}
 \value{

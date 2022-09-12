@@ -1,8 +1,8 @@
 \alias{gtkBoxSetHomogeneous}
 \name{gtkBoxSetHomogeneous}
 \title{gtkBoxSetHomogeneous}
-\description{Sets the \verb{"homogeneous"} property of \code{box}, controlling 
-whether or not all children of \code{box} are given equal space 
+\description{Sets the \verb{"homogeneous"} property of \code{box}, controlling
+whether or not all children of \code{box} are given equal space
 in the box.}
 \usage{gtkBoxSetHomogeneous(object, homogeneous)}
 \arguments{

@@ -31,27 +31,27 @@ A \code{\link{CairoScaledFont}} is a font scaled to a particular size and device
 resolution. A \code{\link{CairoScaledFont}} is most useful for low-level font
 usage where a library or application wants to cache a reference
 to a scaled font to speed up the computation of metrics.
-  
+
 There are various types of scaled fonts, depending on the
 \dfn{font backend} they use. The type of a
 scaled font can be queried using \code{\link{cairoScaledFontGetType}}.
-  
+
 Memory management of \code{\link{CairoScaledFont}} is done with
-\code{cairoScaledFontReference()} and \code{cairoScaledFontDestroy()}.  
+\code{cairoScaledFontReference()} and \code{cairoScaledFontDestroy()}.
 
 }
 \item{\verb{CairoFontExtents}}{
 The \code{\link{CairoFontExtents}} structure stores metric information for
 a font. Values are given in the current user-space coordinate
 system.
-  
+
 Because font metrics are in user-space coordinates, they are
 mostly, but not entirely, independent of the current transformation
 matrix. If you call \code{cairo_scale(cr, 2.0, 2.0)},
 text will be drawn twice as big, but the reported text extents will
 not be doubled. They will change slightly due to hinting (so you
 can't assume that metrics are independent of the transformation
-matrix), but otherwise will remain unchanged.  
+matrix), but otherwise will remain unchanged.
 \strong{\verb{CairoFontExtents} is a \link{transparent-type}.}
 
 \describe{
@@ -93,7 +93,7 @@ entirely, independent of the current transformation matrix. If you call
 be drawn twice as big, but the reported text extents will not be
 doubled. They will change slightly due to hinting (so you can't
 assume that metrics are independent of the transformation matrix),
-but otherwise will remain unchanged.  
+but otherwise will remain unchanged.
 
 \describe{
 \item{\verb{xBearing}}{[numeric]  the horizontal distance from the origin to the

@@ -1,8 +1,8 @@
 \alias{gtkStatusbarGetContextId}
 \name{gtkStatusbarGetContextId}
 \title{gtkStatusbarGetContextId}
-\description{Returns a new context identifier, given a description 
-of the actual context. Note that the description is 
+\description{Returns a new context identifier, given a description
+of the actual context. Note that the description is
 \emph{not} shown in the UI.}
 \usage{gtkStatusbarGetContextId(object, context.description)}
 \arguments{

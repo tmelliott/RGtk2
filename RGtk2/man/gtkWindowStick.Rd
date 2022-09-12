@@ -10,7 +10,7 @@ write code that crashes if not.}
 \usage{gtkWindowStick(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkWindow}}}}
 \details{It's permitted to call this function before showing a window.
-  
+
 You can track stickiness via the "window-state-event" signal
 on \code{\link{GtkWidget}}.}
 \author{Derived by RGtkGen from GTK+ documentation}

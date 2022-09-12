@@ -30,7 +30,7 @@ S_GdkFilterFunc(GdkXEvent* s_xevent, GdkEvent* s_event, gpointer s_data)
 
   if(err)
     return;
-} 
+}
 
 
 void
@@ -61,7 +61,7 @@ S_GdkEventFunc(GdkEvent* s_event, gpointer s_data)
 
   if(err)
     return;
-} 
+}
 
 
 gboolean
@@ -96,7 +96,7 @@ S_GdkPixbufSaveFunc(const guchar* s_buf, gsize s_count, GError** s_error, gpoint
     return(((gboolean)0));
   *s_error = asCGError(VECTOR_ELT(s_ans, 1));
   return(((gboolean)asCLogical(VECTOR_ELT(s_ans, 0))));
-} 
+}
 
 
 void
@@ -127,5 +127,4 @@ S_GdkSpanFunc(GdkSpan* s_span, gpointer s_data)
 
   if(err)
     return;
-} 
-
+}

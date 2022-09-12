@@ -1,7 +1,7 @@
 \alias{gtkPrintSettingsGetOrientation}
 \name{gtkPrintSettingsGetOrientation}
 \title{gtkPrintSettingsGetOrientation}
-\description{Get the value of \code{GTK_PRINT_SETTINGS_ORIENTATION}, 
+\description{Get the value of \code{GTK_PRINT_SETTINGS_ORIENTATION},
 converted to a \code{\link{GtkPageOrientation}}.}
 \usage{gtkPrintSettingsGetOrientation(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkPrintSettings}}}}

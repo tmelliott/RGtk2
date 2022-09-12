@@ -3,7 +3,7 @@
 \title{gtkRcPropertyParseColor}
 \description{A \verb{GtkRcPropertyParser} for use with \code{\link{gtkSettingsInstallPropertyParser}}
 or \code{\link{gtkWidgetClassInstallStylePropertyParser}} which parses a
-color given either by its name or in the form 
+color given either by its name or in the form
 \code{{ red, green, blue }} where \code{red}, \code{green} and
 \code{blue} are integers between 0 and 65535 or floating-point numbers
 between 0 and 1.}

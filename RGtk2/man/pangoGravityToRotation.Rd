@@ -7,7 +7,7 @@
 \arguments{\item{\verb{base.gravity}}{[\code{\link{PangoGravity}}]  gravity to query}}
 \details{Note that \code{\link{pangoMatrixRotate}} takes angle in degrees, not radians.
 So, to call \code{\link{pangoMatrixRotate}} with the output of this function
-you should multiply it by (180. / G_PI).  
+you should multiply it by (180. / G_PI).
   Since 1.16}
 \value{[numeric]  the rotation value corresponding to \code{gravity}.}
 \author{Derived by RGtkGen from GTK+ documentation}

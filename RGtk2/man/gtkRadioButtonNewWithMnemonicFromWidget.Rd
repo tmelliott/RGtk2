@@ -4,7 +4,7 @@
 \description{Creates a new \code{\link{GtkRadioButton}} containing a label. The label
 will be created using \code{\link{gtkLabelNewWithMnemonic}}, so underscores
 in \code{label} indicate the mnemonic for the button.}
-\usage{gtkRadioButtonNewWithMnemonicFromWidget(group = NULL, label, 
+\usage{gtkRadioButtonNewWithMnemonicFromWidget(group = NULL, label,
     show = TRUE)}
 \arguments{
 \item{\verb{group}}{widget to get radio group from or \code{NULL}. \emph{[  \acronym{allow-none}  ]}}

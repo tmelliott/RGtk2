@@ -56,7 +56,7 @@ of communication between processes. In particular, drag and drop and
 \code{\link{GtkClipboard}} work via selections. You will very seldom or
 never need to use most of the functions in this section directly;
 \code{\link{GtkClipboard}} provides a nicer interface to the same functionality.
-  
+
 Some of the datatypes defined this section are used in
 the \code{\link{GtkClipboard}} and drag-and-drop API's as well. The
 \code{\link{GtkTargetEntry}} structure and \code{\link{GtkTargetList}} objects represent

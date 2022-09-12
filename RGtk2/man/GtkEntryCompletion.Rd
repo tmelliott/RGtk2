@@ -40,7 +40,7 @@
 \code{\link{GtkEntry}} to provide the completion functionality. It implements the
 \code{\link{GtkCellLayout}} interface, to allow the user to add extra cells to the
 \code{\link{GtkTreeView}} with completion matches.
-  
+
 "Completion functionality" means that when the user modifies the text
 in the entry, \code{\link{GtkEntryCompletion}} checks which rows in the model match
 the current content of the entry, and displays a list of matches.
@@ -48,15 +48,15 @@ By default, the matching is done by comparing the entry text
 case-insensitively against the text column of the model (see
 \code{\link{gtkEntryCompletionSetTextColumn}}), but this can be overridden with
 a custom match function (see \code{\link{gtkEntryCompletionSetMatchFunc}}).
-  
+
 When the user selects a completion, the content of the entry is updated.
 By default, the content of the entry is replaced by the text column of the
 model, but this can be overridden by connecting to the ::match-selected signal
 and updating the entry in the signal handler. Note that you should return
 \code{TRUE} from the signal handler to suppress the default behaviour.
-  
+
 To add completion functionality to an entry, use \code{\link{gtkEntrySetCompletion}}.
-  
+
 In addition to regular completion matches, which will be inserted into the
 entry when they are selected, \code{\link{GtkEntryCompletion}} also allows to display
 "actions" in the popup window. Their appearance is similar to menuitems,
@@ -118,7 +118,7 @@ pointed to by \code{iter}.
 Gets emitted when the inline autocompletion is triggered.
 The default behaviour is to make the entry display the
 whole prefix and select the newly inserted part.
-  
+
 Applications may connect to this signal in order to insert only a
 smaller part of the \code{prefix} into the entry - e.g. the entry used in
 the \code{\link{GtkFileChooser}} inserts only the part of the prefix up to the

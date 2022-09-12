@@ -57,4 +57,3 @@ G_END_DECLS
 #endif /* __CAIRO_ENUM_TYPES_H__ */
 
 /* Generated data ends here */
-

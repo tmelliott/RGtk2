@@ -29,54 +29,54 @@
 \section{Detailed Description}{A single radio button performs the same basic function as a \code{\link{GtkCheckButton}},
 as its position in the object hierarchy reflects. It is only when multiple
 radio buttons are grouped together that they become a different user
-interface component in their own right.  
+interface component in their own right.
 Every radio button is a member of some group of radio buttons. When one is selected, all other
 radio buttons in the same group are deselected. A \code{\link{GtkRadioButton}} is one way
 of giving the user a choice from many options.
-  
+
 Radio button widgets are created with \code{\link{gtkRadioButtonNew}}, passing NULL
 as the argument if this is the first radio button in a group. In subsequent
 calls, the group you wish to add this button to should be passed as an
 argument. Optionally, \code{\link{gtkRadioButtonNewWithLabel}} can be used if you
 want a text label on the radio button.
-  
+
 Alternatively, when adding widgets to an existing group of radio buttons,
 use \code{\link{gtkRadioButtonNewFromWidget}} with a \code{\link{GtkRadioButton}} that already
 has a group assigned to it. The convenience function
 \code{\link{gtkRadioButtonNewWithLabelFromWidget}} is also provided.
-  
+
 To retrieve the group a \code{\link{GtkRadioButton}} is assigned to, use
 \code{\link{gtkRadioButtonGetGroup}}.
-  
+
 To remove a \code{\link{GtkRadioButton}} from one group and make it part of a new one, use \code{\link{gtkRadioButtonSetGroup}}.
-  
+
 The group list does not need to be freed, as each \code{\link{GtkRadioButton}} will remove
 itself and its list item when it is destroyed.
-  
+
  \emph{How to create a group of two radio buttons.}
 \preformatted{
 # Creating two radio buttons
 create_radio_buttons <- function() {
-  
+
   window <- gtkWindow("toplevel", show = F)
   box <- gtkVBoxNew(TRUE, 2)
-  
-  ## Create a radio button with a GtkEntry widget 
+
+  ## Create a radio button with a GtkEntry widget
   radio1 <- gtkRadioButton()
   entry <- gtkEntry()
   radio1$add(entry)
-   
+
   ## Create a radio button with a label
   radio2 <- gtkRadioButtonNewWithLabelFromWidget(radio1,
                                                  "I'm the second radio button.")
-  
+
   ## Pack them into a box, then show all the widgets
   box$packStart(radio1, TRUE, TRUE, 2)
   box$packStart(radio2, TRUE, TRUE, 2)
   window$add(box)
   window$showAll()
 }
-}  
+}
 When an unselected button in the group is clicked the clicked button
 receives the "toggled" signal, as does the previously selected button.
 Inside the "toggled" handler, \code{\link{gtkToggleButtonGetActive}} can be used

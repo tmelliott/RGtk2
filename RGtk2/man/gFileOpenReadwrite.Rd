@@ -12,7 +12,7 @@ a \code{\link{GFileIOStream}} that can be used to read and write the contents of
 \details{If \code{cancellable} is not \code{NULL}, then the operation can be cancelled by
 triggering the cancellable object from another thread. If the operation
 was cancelled, the error \code{G_IO_ERROR_CANCELLED} will be returned.
-  
+
 If the file does not exist, the G_IO_ERROR_NOT_FOUND error will be returned.
 If the file is a directory, the G_IO_ERROR_IS_DIRECTORY error will be returned.
 Other errors are possible too, and depend on what kind of filesystem the file is on.

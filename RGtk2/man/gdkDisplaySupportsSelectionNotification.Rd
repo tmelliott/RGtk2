@@ -1,7 +1,7 @@
 \alias{gdkDisplaySupportsSelectionNotification}
 \name{gdkDisplaySupportsSelectionNotification}
 \title{gdkDisplaySupportsSelectionNotification}
-\description{Returns whether \code{\link{GdkEventOwnerChange}} events will be 
+\description{Returns whether \code{\link{GdkEventOwnerChange}} events will be
 sent when the owner of a selection changes.}
 \usage{gdkDisplaySupportsSelectionNotification(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GdkDisplay}}}}

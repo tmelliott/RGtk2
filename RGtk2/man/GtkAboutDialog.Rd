@@ -60,7 +60,7 @@ also possible to give credits to the authors, documenters, translators
 and artists who have worked on the program. An about dialog is typically
 opened when the user selects the \code{About} option from
 the \code{Help} menu. All parts of the dialog are optional.
-  
+
 About dialog often contain links and email addresses. \code{\link{GtkAboutDialog}}
 supports this by offering global hooks, which are called when the user
 clicks on a link or email address, see \code{\link{gtkAboutDialogSetEmailHook}}
@@ -69,10 +69,10 @@ authors, documenters and artists properties are recognized by looking for
 \code{<user@    host>}, URLs are
 recognized by looking for \code{http://url}, with
 \code{url} extending to the next space, tab or line break.
-  
+
 Since 2.18 \code{\link{GtkAboutDialog}} provides default website and email hooks that
 use \code{\link{gtkShowUri}}.
-  
+
 If you want provide your own hooks overriding the default ones, it is
 important to do so before setting the website and email URL properties,
 like this:
@@ -83,11 +83,11 @@ gtkShowAboutDialog(NULL, "name" = "ExampleCode", "logo" = example_logo,
 To disable the default hooks, you can pass \code{NULL} as the hook func. Then,
 the \code{\link{GtkAboutDialog}} widget will not display the website or the
 email addresses as clickable.
-  
+
 To make constructing a \code{\link{GtkAboutDialog}} as convenient as possible, you can
 use the function \code{\link{gtkShowAboutDialog}} which constructs and shows a dialog
 and keeps it around so that it can be shown again.
-  
+
 Note that GTK+ sets a default title of \code{_("About \%s")}
 on the dialog window (where \%s is replaced by the name of the
 application, but in order to ensure proper translation of the title,

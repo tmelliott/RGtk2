@@ -1,7 +1,7 @@
 \alias{gtkIconViewSetOrientation}
 \name{gtkIconViewSetOrientation}
 \title{gtkIconViewSetOrientation}
-\description{Sets the ::orientation property which determines whether the labels 
+\description{Sets the ::orientation property which determines whether the labels
 are drawn beside the icons instead of below.}
 \usage{gtkIconViewSetOrientation(object, orientation)}
 \arguments{

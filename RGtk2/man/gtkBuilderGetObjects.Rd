@@ -1,7 +1,7 @@
 \alias{gtkBuilderGetObjects}
 \name{gtkBuilderGetObjects}
 \title{gtkBuilderGetObjects}
-\description{Gets all objects that have been constructed by \code{builder}. Note that 
+\description{Gets all objects that have been constructed by \code{builder}. Note that
 this function does not increment the reference counts of the returned
 objects.}
 \usage{gtkBuilderGetObjects(object)}

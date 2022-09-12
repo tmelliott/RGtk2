@@ -3,7 +3,7 @@
 \title{gtkDrawInsertionCursor}
 \description{Draws a text caret on \code{drawable} at \code{location}. This is not a style function
 but merely a convenience function for drawing the standard cursor shape.}
-\usage{gtkDrawInsertionCursor(widget, drawable, area = NULL, location, 
+\usage{gtkDrawInsertionCursor(widget, drawable, area = NULL, location,
     is.primary, direction, draw.arrow)}
 \arguments{
 \item{\verb{widget}}{a \code{\link{GtkWidget}}}

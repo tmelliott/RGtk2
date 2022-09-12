@@ -12,7 +12,7 @@ function will fail, setting \code{error} to \code{G_IO_ERROR_NOT_SUPPORTED}.}
 }
 \details{For a local \code{\link{GFile}} the newly created directories will have the default
 (current) ownership and permissions of the current process.
-  
+
 If \code{cancellable} is not \code{NULL}, then the operation can be cancelled by
 triggering the cancellable object from another thread. If the operation
 was cancelled, the error \code{G_IO_ERROR_CANCELLED} will be returned.

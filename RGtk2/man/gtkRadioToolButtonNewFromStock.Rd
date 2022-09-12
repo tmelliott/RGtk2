@@ -1,7 +1,7 @@
 \alias{gtkRadioToolButtonNewFromStock}
 \name{gtkRadioToolButtonNewFromStock}
 \title{gtkRadioToolButtonNewFromStock}
-\description{Creates a new \code{\link{GtkRadioToolButton}}, adding it to \code{group}. 
+\description{Creates a new \code{\link{GtkRadioToolButton}}, adding it to \code{group}.
 The new \code{\link{GtkRadioToolButton}} will contain an icon and label from the
 stock item indicated by \code{stock.id}.}
 \usage{gtkRadioToolButtonNewFromStock(group = NULL, stock.id, show = TRUE)}

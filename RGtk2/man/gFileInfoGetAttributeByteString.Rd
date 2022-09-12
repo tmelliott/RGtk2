@@ -1,7 +1,7 @@
 \alias{gFileInfoGetAttributeByteString}
 \name{gFileInfoGetAttributeByteString}
 \title{gFileInfoGetAttributeByteString}
-\description{Gets the value of a byte string attribute. If the attribute does 
+\description{Gets the value of a byte string attribute. If the attribute does
 not contain a byte string, \code{NULL} will be returned.}
 \usage{gFileInfoGetAttributeByteString(object, attribute)}
 \arguments{

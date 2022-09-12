@@ -1,7 +1,7 @@
 \alias{gOutputStreamFlush}
 \name{gOutputStreamFlush}
 \title{gOutputStreamFlush}
-\description{Flushed any outstanding buffers in the stream. Will block during 
+\description{Flushed any outstanding buffers in the stream. Will block during
 the operation. Closing the stream will implicitly cause a flush.}
 \usage{gOutputStreamFlush(object, cancellable = NULL, .errwarn = TRUE)}
 \arguments{
@@ -10,7 +10,7 @@ the operation. Closing the stream will implicitly cause a flush.}
 \item{.errwarn}{Whether to issue a warning on error or fail silently}
 }
 \details{This function is optional for inherited classes.
-  
+
 If \code{cancellable} is not \code{NULL}, then the operation can be cancelled by
 triggering the cancellable object from another thread. If the operation
 was cancelled, the error \code{G_IO_ERROR_CANCELLED} will be returned.}

@@ -5,9 +5,9 @@
 \usage{atkTextGetRangeExtents(object, start.offset, end.offset, coord.type)}
 \arguments{
 \item{\verb{object}}{[\code{\link{AtkText}}]  an \code{\link{AtkText}}}
-\item{\verb{start.offset}}{[integer]  The offset of the first text character for which boundary 
+\item{\verb{start.offset}}{[integer]  The offset of the first text character for which boundary
        information is required.}
-\item{\verb{end.offset}}{[integer]  The offset of the text character after the last character 
+\item{\verb{end.offset}}{[integer]  The offset of the text character after the last character
        for which boundary information is required.}
 \item{\verb{coord.type}}{[\code{\link{AtkCoordType}}]  Specify whether coordinates are relative to the screen or widget window.}
 }

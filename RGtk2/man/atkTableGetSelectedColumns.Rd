@@ -1,7 +1,7 @@
 \alias{atkTableGetSelectedColumns}
 \name{atkTableGetSelectedColumns}
 \title{atkTableGetSelectedColumns}
-\description{Gets the selected columns of the table by initializing **selected with 
+\description{Gets the selected columns of the table by initializing **selected with
 the selected column numbers.}
 \usage{atkTableGetSelectedColumns(object)}
 \arguments{\item{\verb{object}}{[\code{\link{AtkTable}}]  a GObject instance that implements AtkTableIface}}

@@ -3,7 +3,7 @@
 \title{gdkDrawRgb32ImageDithalign}
 \description{Like \code{\link{gdkDrawRgb32Image}}, but allows you to specify the dither
 offsets. See \code{\link{gdkDrawRgbImageDithalign}} for more details.}
-\usage{gdkDrawRgb32ImageDithalign(object, gc, x, y, width, height, dith, 
+\usage{gdkDrawRgb32ImageDithalign(object, gc, x, y, width, height, dith,
     buf, xdith, ydith)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GdkDrawable}}}

@@ -2,7 +2,7 @@
 \name{gFileMakeSymbolicLink}
 \title{gFileMakeSymbolicLink}
 \description{Creates a symbolic link.}
-\usage{gFileMakeSymbolicLink(object, symlink.value, cancellable = NULL, 
+\usage{gFileMakeSymbolicLink(object, symlink.value, cancellable = NULL,
     .errwarn = TRUE)}
 \arguments{
 \item{\verb{object}}{input \code{\link{GFile}}.}

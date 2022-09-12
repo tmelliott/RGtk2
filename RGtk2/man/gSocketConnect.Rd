@@ -13,11 +13,11 @@
 a connection to the \code{address}. For a connection-less socket it sets
 the default address for \code{\link{gSocketSend}} and discards all incoming datagrams
 from other sources.
-  
+
 Generally connection oriented sockets can only connect once, but
 connection-less sockets can connect multiple times to change the
 default address.
-  
+
 If the connect call needs to do network I/O it will block, unless
 non-blocking I/O is enabled. Then \code{G_IO_ERROR_PENDING} is returned
 and the user can be notified of the connection finishing by waiting

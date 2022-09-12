@@ -4,7 +4,7 @@
 \description{Creates a new GtkRadioMenuItem containing a label. The label will be
 created using \code{\link{gtkLabelNewWithMnemonic}}, so underscores in label
 indicate the mnemonic for the menu item.}
-\usage{gtkRadioMenuItemNewWithMnemonicFromWidget(group = NULL, label, 
+\usage{gtkRadioMenuItemNewWithMnemonicFromWidget(group = NULL, label,
     show = TRUE)}
 \arguments{
 \item{\verb{group}}{An existing \code{\link{GtkRadioMenuItem}}}

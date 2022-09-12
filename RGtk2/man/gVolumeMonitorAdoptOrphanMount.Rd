@@ -19,21 +19,21 @@ returned \code{\link{GVolume}} object with the \code{\link{GMount}}. This involv
 it in its \code{\link{gMountGetVolume}} implementation. The caller must
 also listen for the "removed" signal on the returned object
 and give up its reference when handling that signal
-  
+
 Similary, if implementing \code{\link{gVolumeMonitorAdoptOrphanMount}},
 the implementor must take a reference to \code{mount} and return it in
 its \code{\link{gVolumeGetMount}} implemented. Also, the implementor must
 listen for the "unmounted" signal on \code{mount} and give up its
 reference upon handling that signal.
-  
+
 There are two main use cases for this function.
-  
+
 One is when implementing a user space file system driver that reads
 blocks of a block device that is already represented by the native
 volume monitor (for example a CD Audio file system driver). Such
 a driver will generate its own \code{\link{GMount}} object that needs to be
 assoicated with the \code{\link{GVolume}} object that represents the volume.
-  
+
 The other is for implementing a \code{\link{GVolumeMonitor}} whose sole purpose
 is to return \code{\link{GVolume}} objects representing entries in the users
 "favorite servers" list or similar.}

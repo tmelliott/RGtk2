@@ -6,7 +6,7 @@
 \arguments{
 \item{\verb{object}}{[\code{\link{AtkEditableText}}]  an \code{\link{AtkEditableText}}}
 \item{\verb{string}}{[character]  the text to insert}
-\item{\verb{position}}{[integer]  The caller initializes this to 
+\item{\verb{position}}{[integer]  The caller initializes this to
 the position at which to insert the text. After the call it
 points at the position after the newly inserted text.}
 }

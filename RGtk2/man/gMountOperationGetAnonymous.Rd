@@ -1,7 +1,7 @@
 \alias{gMountOperationGetAnonymous}
 \name{gMountOperationGetAnonymous}
 \title{gMountOperationGetAnonymous}
-\description{Check to see whether the mount operation is being used 
+\description{Check to see whether the mount operation is being used
 for an anonymous user.}
 \usage{gMountOperationGetAnonymous(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GMountOperation}}.}}

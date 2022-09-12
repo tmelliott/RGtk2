@@ -36,7 +36,7 @@ cannot exist independentally of this widget.  The primary reason the
 \code{\link{GtkTreeSelection}} objects exists is for cleanliness of code and API.
 That is, there is no conceptual reason all these functions could not be
 methods on the \code{\link{GtkTreeView}} widget instead of a separate function.
-  
+
 The \code{\link{GtkTreeSelection}} object is gotten from a \code{\link{GtkTreeView}} by calling
 \code{\link{gtkTreeViewGetSelection}}.  It can be manipulated to check the
 selection status of the tree, as well as select and deselect individual
@@ -45,7 +45,7 @@ views of the same model can have completely different selections.
 Additionally, you cannot change the selection of a row on the model that
 is not currently displayed by the view without expanding its parents
 first.
-  
+
 One of the important things to remember when monitoring the selection of
 a view is that the \verb{"changed"} signal is mostly a hint.  That is, it may
 only emit one signal when a range of rows is selected.  Additionally, it

@@ -32,7 +32,7 @@ The \code{\link{GtkColorSelectionDialog}} struct contains the following fields.
 an application.)
 \tabular{ll}{
 \code{\link{GtkWidget}}   *colorsel; \tab The   \code{\link{GtkColorSelection}}   widget contained within the
-dialog.  Use this widget and its   \code{\link{gtkColorSelectionGetCurrentColor}}  
+dialog.  Use this widget and its   \code{\link{gtkColorSelectionGetCurrentColor}}
 function to gain access to the selected color.  Connect a handler
 for this widget's color_changed signal to be notified when the
 color changes. \cr

@@ -1,7 +1,7 @@
 \alias{gContentTypeGuess}
 \name{gContentTypeGuess}
 \title{gContentTypeGuess}
-\description{Guesses the content type based on example data. If the function is 
+\description{Guesses the content type based on example data. If the function is
 uncertain, \code{result.uncertain} will be set to \code{TRUE}. Either \code{filename}
 or \code{data} may be \code{NULL}, in which case the guess will be based solely
 on the other argument.}

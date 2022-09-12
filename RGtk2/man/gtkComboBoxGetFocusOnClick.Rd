@@ -1,7 +1,7 @@
 \alias{gtkComboBoxGetFocusOnClick}
 \name{gtkComboBoxGetFocusOnClick}
 \title{gtkComboBoxGetFocusOnClick}
-\description{Returns whether the combo box grabs focus when it is clicked 
+\description{Returns whether the combo box grabs focus when it is clicked
 with the mouse. See \code{\link{gtkComboBoxSetFocusOnClick}}.}
 \usage{gtkComboBoxGetFocusOnClick(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkComboBox}}}}

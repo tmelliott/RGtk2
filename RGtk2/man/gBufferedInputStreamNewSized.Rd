@@ -1,7 +1,7 @@
 \alias{gBufferedInputStreamNewSized}
 \name{gBufferedInputStreamNewSized}
 \title{gBufferedInputStreamNewSized}
-\description{Creates a new \code{\link{GBufferedInputStream}} from the given \code{base.stream}, 
+\description{Creates a new \code{\link{GBufferedInputStream}} from the given \code{base.stream},
 with a buffer set to \code{size}.}
 \usage{gBufferedInputStreamNewSized(base.stream, size)}
 \arguments{

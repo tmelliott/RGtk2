@@ -1,8 +1,8 @@
 \alias{gtkUIManagerAddUiFromString}
 \name{gtkUIManagerAddUiFromString}
 \title{gtkUIManagerAddUiFromString}
-\description{Parses a string containing a UI definition and 
-merges it with the current contents of \code{self}. An enclosing <ui> 
+\description{Parses a string containing a UI definition and
+merges it with the current contents of \code{self}. An enclosing <ui>
 element is added if it is missing.}
 \usage{gtkUIManagerAddUiFromString(object, buffer, length = -1, .errwarn = TRUE)}
 \arguments{

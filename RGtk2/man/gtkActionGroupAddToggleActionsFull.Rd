@@ -1,7 +1,7 @@
 \alias{gtkActionGroupAddToggleActionsFull}
 \name{gtkActionGroupAddToggleActionsFull}
 \title{gtkActionGroupAddToggleActionsFull}
-\description{This variant of \code{\link{gtkActionGroupAddToggleActions}} adds a 
+\description{This variant of \code{\link{gtkActionGroupAddToggleActions}} adds a
 \verb{GDestroyNotify} callback for \code{user.data}.}
 \usage{gtkActionGroupAddToggleActionsFull(object, entries, user.data = NULL)}
 \arguments{

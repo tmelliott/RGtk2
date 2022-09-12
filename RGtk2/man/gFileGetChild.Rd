@@ -10,7 +10,7 @@
 \details{Note that the file with that specific name might not exist, but
 you can still have a \code{\link{GFile}} that points to it. You can use this
 for instance to create that file.
-  
+
 This call does no blocking i/o.}
 \value{[\code{\link{GFile}}] a \code{\link{GFile}} to a child specified by \code{name}.}
 \author{Derived by RGtkGen from GTK+ documentation}

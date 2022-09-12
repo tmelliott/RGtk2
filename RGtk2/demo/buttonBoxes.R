@@ -1,11 +1,11 @@
-create.bbox <- function(horizontal, title, spacing, layout)
-{
+create.bbox <- function(horizontal, title, spacing, layout) {
   frame <- gtkFrameNew(title)
 
-  if (horizontal)
+  if (horizontal) {
     bbox <- gtkHButtonBoxNew()
-  else
+  } else {
     bbox <- gtkVButtonBoxNew()
+  }
 
   bbox$setBorderWidth(5)
   frame$add(bbox)
@@ -25,11 +25,11 @@ create.bbox <- function(horizontal, title, spacing, layout)
   frame
 }
 
-window <- gtkWindowNew("toplevel", show=F)
+window <- gtkWindowNew("toplevel", show = F)
 window$setTitle("Button Boxes")
 window$setBorderWidth(10)
 
-main.vbox <- gtkVBoxNew (FALSE, 0)
+main.vbox <- gtkVBoxNew(FALSE, 0)
 window$add(main.vbox)
 
 frame.horz <- gtkFrameNew("Horizontal Button Boxes")

@@ -38,15 +38,15 @@ The requested quantity in the units of the provided rectangle.
 }
 \details{When positioning text, it is beneficial to know the extents of
 the glyphs being drawn. The macros \code{pangoAscent}, \code{pangoDescent},
-\code{pangoLbearing}, and \code{pangoRbearing} perform simple math on the 
+\code{pangoLbearing}, and \code{pangoRbearing} perform simple math on the
 given rectangle (representing the glyph extents) to determine the corresponding
-properties. The "ascent" and "descent" are how high the glyph extends above and 
-below the baseline, respectively. The "lbearing" and "rbearing" describe the 
+properties. The "ascent" and "descent" are how high the glyph extends above and
+below the baseline, respectively. The "lbearing" and "rbearing" describe the
 left-most and right-most extents of the glyph.
 
-The rest are merely constants for scaling. \code{PANGO_SCALE} is the factor by 
-which device units are scaled to Pango units. To return to device units, use 
-the \code{pangoPixels}. The rest are pre-fab factors 
+The rest are merely constants for scaling. \code{PANGO_SCALE} is the factor by
+which device units are scaled to Pango units. To return to device units, use
+the \code{pangoPixels}. The rest are pre-fab factors
 for scaling by different degrees.
 }
 \author{Michael Lawrence}

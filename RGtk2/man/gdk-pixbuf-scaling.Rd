@@ -18,7 +18,7 @@
     pixbufs and composite against a solid color or checkerboard.
     Compositing a checkerboard is a common way to show an image with
     an alpha channel in image-viewing and editing software.
-    
+
     Since the full-featured functions (\code{\link{gdkPixbufScale}},
     \code{\link{gdkPixbufComposite}}, and \code{\link{gdkPixbufCompositeColor}}) are
     rather complex to use and have many arguments, two simple
@@ -26,14 +26,14 @@
     \code{\link{gdkPixbufCompositeColorSimple}} which create a new pixbuf of a
     given size, scale an original image to fit, and then return the
     new pixbuf.
-    
+
    Scaling and compositing functions take advantage of MMX hardware
    acceleration on systems where MMX is supported.  If gdk-pixbuf is built
    with the Sun mediaLib library, these functions are instead accelerated
    using mediaLib, which provides hardware acceleration on Intel, AMD,
    and Sparc chipsets.  If desired, mediaLib support can be turned off by
    setting the GDK_DISABLE_MEDIALIB environment variable.
-    
+
     The following example demonstrates handling an expose event by
     rendering the appropriate area of a source image (which is scaled
     to fit the widget) onto the widget's window.  The source image is
@@ -42,12 +42,12 @@
     image doesn't have an alpha channel, calling
     \code{\link{gdkPixbufCompositeColor}} function has exactly the same effect
     as calling \code{\link{gdkPixbufScale}}.
-    
+
  \emph{Handling an expose event.}
 \preformatted{
 expose_cb <- function(widget, event, data)
 {
-  dest <- gdkPixbuf(color = "rgb", has.alpha = FALSE, bits = 8, 
+  dest <- gdkPixbuf(color = "rgb", has.alpha = FALSE, bits = 8,
                     w = event[["area"]]$width, h = event[["area"]]$height)
 
   area <- event[["area"]]
@@ -76,8 +76,8 @@ expose_cb <- function(widget, event, data)
     aren't sure what to choose, it has a good speed/quality balance.
     \strong{PLEASE NOTE:} 	Cubic filtering is missing from the list; hyperbolic
 	interpolation is just as fast and results in higher quality.
-      
-  
+
+
 
 \describe{
 \item{\verb{nearest}}{Nearest neighbor sampling; this is the fastest

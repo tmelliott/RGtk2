@@ -17,7 +17,7 @@ stock IDs are just strings, but functions such as \verb{GTK_STOCK_OPEN} are
 provided to avoid typing mistakes in the strings.
 Applications can register their own stock items in addition to those
 built-in to GTK+.
-  
+
 Each stock ID can be associated with a \code{\link{GtkStockItem}}, which contains
 the user-visible label, keyboard accelerator, and translation domain
 of the menu or toolbar item; and/or with an icon stored in a

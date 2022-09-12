@@ -15,11 +15,11 @@ from another thread. If the operation was cancelled, the error
 \code{G_IO_ERROR_CANCELLED} will be returned. If \code{cancellable} is not \code{NULL} and
 the object doesn't support cancellable initialization the error
 \code{G_IO_ERROR_NOT_SUPPORTED} will be returned.
-  
+
 If this function is not called, or returns with an error then all
 operations on the object should fail, generally returning the
 error \code{G_IO_ERROR_NOT_INITIALIZED}.
-  
+
 Implementations of this method must be idempotent, i.e. multiple calls
 to this function with the same argument should return the same results.
 Only the first call initializes the object, further calls return the result

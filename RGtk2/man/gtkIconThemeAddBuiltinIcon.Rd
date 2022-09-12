@@ -19,7 +19,7 @@ for \code{icon.name}.}
 \details{In general, if you use \code{\link{gtkIconThemeAddBuiltinIcon}}
 you should also install the icon in the icon theme, so
 that the icon is generally available.
-  
+
 This function will generally be used with pixbufs loaded
 via \code{gdkPixbufNewFromInline()}.
   Since 2.4}

@@ -19,7 +19,7 @@ provides an easy way to resolve a SRV record, and then attempt to
 connect to one of the hosts that implements that service, handling
 service priority/weighting, multiple IP addresses, and multiple
 address families.
-  
+
 See \code{\link{GSrvTarget}} for more information about SRV records, and see
 \code{\link{GSocketConnectable}} for and example of using the connectable
 interface.}

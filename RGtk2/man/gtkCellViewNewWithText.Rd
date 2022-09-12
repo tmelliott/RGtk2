@@ -1,7 +1,7 @@
 \alias{gtkCellViewNewWithText}
 \name{gtkCellViewNewWithText}
 \title{gtkCellViewNewWithText}
-\description{Creates a new \code{\link{GtkCellView}} widget, adds a \code{\link{GtkCellRendererText}} 
+\description{Creates a new \code{\link{GtkCellView}} widget, adds a \code{\link{GtkCellRendererText}}
 to it, and makes its show \code{text}.}
 \usage{gtkCellViewNewWithText(text)}
 \arguments{\item{\verb{text}}{the text to display in the cell view}}

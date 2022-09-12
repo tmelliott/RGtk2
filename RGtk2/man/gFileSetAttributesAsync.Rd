@@ -2,7 +2,7 @@
 \name{gFileSetAttributesAsync}
 \title{gFileSetAttributesAsync}
 \description{Asynchronously sets the attributes of \code{file} with \code{info}.}
-\usage{gFileSetAttributesAsync(object, info, flags = "G_FILE_QUERY_INFO_NONE", 
+\usage{gFileSetAttributesAsync(object, info, flags = "G_FILE_QUERY_INFO_NONE",
     io.priority = 0, cancellable = NULL, callback, user.data = NULL)}
 \arguments{
 \item{\verb{object}}{input \code{\link{GFile}}.}
@@ -16,7 +16,7 @@ of the request.}
 }
 \details{For more details, see \code{\link{gFileSetAttributesFromInfo}} which is
 the synchronous version of this call.
-  
+
 When the operation is finished, \code{callback} will be called. You can then call
 \code{\link{gFileSetAttributesFinish}} to get the result of the operation.}
 \author{Derived by RGtkGen from GTK+ documentation}

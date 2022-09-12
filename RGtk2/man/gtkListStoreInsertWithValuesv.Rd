@@ -3,7 +3,7 @@
 \title{gtkListStoreInsertWithValuesv}
 \description{A variant of \code{\link{gtkListStoreInsertWithValues}} which
 takes the columns and values as two lists, instead of
-varargs. This function is mainly intended for 
+varargs. This function is mainly intended for
 language-bindings.}
 \usage{gtkListStoreInsertWithValuesv(object, position, columns, values)}
 \arguments{

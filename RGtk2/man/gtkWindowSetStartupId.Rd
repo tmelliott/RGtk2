@@ -1,10 +1,10 @@
 \alias{gtkWindowSetStartupId}
 \name{gtkWindowSetStartupId}
 \title{gtkWindowSetStartupId}
-\description{Startup notification identifiers are used by desktop environment to 
-track application startup, to provide user feedback and other 
+\description{Startup notification identifiers are used by desktop environment to
+track application startup, to provide user feedback and other
 features. This function changes the corresponding property on the
-underlying GdkWindow. Normally, startup identifier is managed 
+underlying GdkWindow. Normally, startup identifier is managed
 automatically and you should only use this function in special cases
 like transferring focus from other processes. You should use this
 function before calling \code{\link{gtkWindowPresent}} or any equivalent

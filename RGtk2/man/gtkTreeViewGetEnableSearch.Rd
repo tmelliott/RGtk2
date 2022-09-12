@@ -1,7 +1,7 @@
 \alias{gtkTreeViewGetEnableSearch}
 \name{gtkTreeViewGetEnableSearch}
 \title{gtkTreeViewGetEnableSearch}
-\description{Returns whether or not the tree allows to start interactive searching 
+\description{Returns whether or not the tree allows to start interactive searching
 by typing in text.}
 \usage{gtkTreeViewGetEnableSearch(object)}
 \arguments{\item{\verb{object}}{A \code{\link{GtkTreeView}}}}

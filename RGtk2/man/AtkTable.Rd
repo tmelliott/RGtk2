@@ -45,11 +45,11 @@ contain multiple "columns".  Individual elements of an \code{\link{AtkTable}} ar
 typically referred to as "cells", and these cells are exposed by
 \code{\link{AtkTable}} as child \verb{AtkObjects} of the \code{\link{AtkTable}}.  Both row/column and
 child-index-based access to these children is provided.
-  
+
 Children of \code{\link{AtkTable}} are frequently "lightweight" objects, that is,
 they may not have backing widgets in the host UI toolkit.  They are
 therefore often transient.
-  
+
 Since tables are often very complex, \code{\link{AtkTable}} includes provision for
 offering simplified summary information, as well as row and column
 headers and captions.  Headers and captions are \verb{AtkObjects} which may

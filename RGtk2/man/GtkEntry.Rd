@@ -87,7 +87,7 @@ widget. A fairly large set of key bindings are supported
 by default. If the entered text is longer than the allocation
 of the widget, the widget will scroll so that the cursor
 position is visible.
-  
+
 When using an entry for passwords and other sensitive information,
 it can be put into "password mode" using \code{\link{gtkEntrySetVisibility}}.
 In this mode, entered text is displayed using a 'invisible' character.
@@ -97,11 +97,11 @@ in the current font, but it can be changed with
 when Caps Lock or input methods might interfere with entering text in
 a password entry. The warning can be turned off with the
 \verb{"caps-lock-warning"} property.
-  
+
 Since 2.16, GtkEntry has the ability to display progress or activity
 information behind the text. To make an entry display such information,
 use \code{\link{gtkEntrySetProgressFraction}} or \code{\link{gtkEntrySetProgressPulseStep}}.
-  
+
 Additionally, GtkEntry can show icons at either side of the entry. These
 icons can be activatable by clicking, can be set up as drag source and
 can have tooltips. To add an icon, use \code{\link{gtkEntrySetIconFromGicon}} or
@@ -111,7 +111,7 @@ connect to the \verb{"icon-press"} signal. To allow DND operations
 from an icon, use \code{\link{gtkEntrySetIconDragSource}}. To set a tooltip on
 an icon, use \code{\link{gtkEntrySetIconTooltipText}} or the corresponding function
 for markup.
-  
+
 Note that functionality or information that is only available by clicking
 on an icon in an entry may not be accessible at all to users which are not
 able to use a mouse or other pointing device. It is therefore recommended
@@ -135,11 +135,11 @@ Specifies the side of the entry at which an icon is placed.
 \item{\code{activate(entry, user.data)}}{
 A  keybinding signal
 which gets emitted when the user activates the entry.
-  
+
 Applications should not connect to it, but may emit it with
 \code{gSignalEmitByName()} if they need to control activation
 programmatically.
-  
+
 The default bindings for this signal are all forms of the Enter key.
 
 \describe{
@@ -153,7 +153,7 @@ The default bindings for this signal are all forms of the Enter key.
 The ::backspace signal is a
 keybinding signal
 which gets emitted when the user asks for it.
-  
+
 The default bindings for this signal are
 Backspace and Shift-Backspace.
 
@@ -168,7 +168,7 @@ Backspace and Shift-Backspace.
 The ::copy-clipboard signal is a
 keybinding signal
 which gets emitted to copy the selection to the clipboard.
-  
+
 The default bindings for this signal are
 Ctrl-c and Ctrl-Insert.
 
@@ -183,7 +183,7 @@ Ctrl-c and Ctrl-Insert.
 The ::cut-clipboard signal is a
 keybinding signal
 which gets emitted to cut the selection to the clipboard.
-  
+
 The default bindings for this signal are
 Ctrl-x and Shift-Delete.
 
@@ -198,11 +198,11 @@ Ctrl-x and Shift-Delete.
 The ::delete-from-cursor signal is a
 keybinding signal
 which gets emitted when the user initiates a text deletion.
-  
+
 If the \code{type} is \code{GTK_DELETE_CHARS}, GTK+ deletes the selection
 if there is one, otherwise it deletes the requested number
 of characters.
-  
+
 The default bindings for this signal are
 Delete for deleting a character and Ctrl-Delete for
 deleting a word.
@@ -249,7 +249,7 @@ The ::insert-at-cursor signal is a
 keybinding signal
 which gets emitted when the user initiates the insertion of a
 fixed string at the cursor.
-  
+
 This signal has no default bindings.
 
 \describe{
@@ -266,19 +266,19 @@ keybinding signal
 which gets emitted when the user initiates a cursor movement.
 If the cursor is not visible in \code{entry}, this signal causes
 the viewport to be moved instead.
-  
+
 Applications should not connect to it, but may emit it with
 \code{gSignalEmitByName()} if they need to control the cursor
 programmatically.
-  
+
 The default bindings for this signal come in two variants,
 the variant with the Shift modifier extends the selection,
 the variant without the Shift modifer does not.
 There are too many key combinations to list them all here.
 \itemize{
-\item 
-\item 
-\item 
+\item
+\item
+\item
 }
 
 \describe{
@@ -296,7 +296,7 @@ The ::paste-clipboard signal is a
 keybinding signal
 which gets emitted to paste the contents of the clipboard
 into the text view.
-  
+
 The default bindings for this signal are
 Ctrl-v and Shift-Insert.
 
@@ -310,7 +310,7 @@ Ctrl-v and Shift-Insert.
 \item{\code{populate-popup(entry, menu, user.data)}}{
 The ::populate-popup signal gets emitted before showing the
 context menu of the entry.
-  
+
 If you need to add items to the context menu, connect
 to this signal and append your menuitems to the \code{menu}.
 
@@ -340,7 +340,7 @@ connect to this signal.
 The ::toggle-overwrite signal is a
 keybinding signal
 which gets emitted to toggle the overwrite mode of the entry.
-  
+
 The default bindings for this signal is Insert.
 
 \describe{
@@ -365,7 +365,7 @@ Text buffer object which actually stores entry text.
 \item{\verb{caps-lock-warning} [logical : Read / Write]}{
 
 Whether password entries will show a warning when Caps Lock is on.
-  
+
 Note that the warning is shown using a secondary icon, and thus
 does not work if you are using the secondary icon position for some
 other purpose.
@@ -391,7 +391,7 @@ FALSE removes outside bevel from entry.  Default value: TRUE
 
 Which IM (input method) module should be used for this entry.
 See \code{\link{GtkIMContext}}.
-  
+
 Setting this to a non-\code{NULL} value overrides the
 system-wide IM module setting. See the GtkSettings
 \verb{"gtk-im-module"} property.
@@ -411,7 +411,7 @@ The invisible character is used when masking entry contents (in
 \verb{"invisible-char"} property, GTK+ determines the character
 to use from a list of possible candidates, depending on availability
 in the current font.
-  
+
 This style property allows the theme to prepend a character
 to the list of candidates.
   Default value: '*'  Since 2.18
@@ -437,10 +437,10 @@ If text is overwritten when typing in the \code{\link{GtkEntry}}.
 \item{\verb{primary-icon-activatable} [logical : Read / Write]}{
 
 Whether the primary icon is activatable.
-  
+
 GTK+ emits the \verb{"icon-press"} and \verb{"icon-release"}
 signals only on sensitive, activatable icons.
-  
+
 Sensitive, but non-activatable icons can be used for purely
 informational purposes.
   Default value: FALSE  Since 2.16
@@ -467,11 +467,11 @@ A pixbuf to use as the primary icon for the entry.
 \item{\verb{primary-icon-sensitive} [logical : Read / Write]}{
 
 Whether the primary icon is sensitive.
-  
+
 An insensitive icon appears grayed out. GTK+ does not emit the
 \verb{"icon-press"} and \verb{"icon-release"} signals and
 does not allow DND from insensitive icons.
-  
+
 An icon should be set insensitive if the action that would trigger
 when clicked is currently not available.
   Default value: TRUE  Since 2.16
@@ -494,7 +494,7 @@ The representation which is used for the primary icon of the entry.
 The contents of the tooltip on the primary icon, which is marked up
 with the Pango text markup
 language.
-  
+
 Also see \code{\link{gtkEntrySetIconTooltipMarkup}}.
   Default value: NULL  Since 2.16
 
@@ -502,7 +502,7 @@ Also see \code{\link{gtkEntrySetIconTooltipMarkup}}.
 \item{\verb{primary-icon-tooltip-text} [character : *                : Read / Write]}{
 
 The contents of the tooltip on the primary icon.
-  
+
 Also see \code{\link{gtkEntrySetIconTooltipText}}.
   Default value: NULL  Since 2.16
 
@@ -528,10 +528,10 @@ Number of pixels of the entry scrolled off the screen to the left.  Allowed valu
 \item{\verb{secondary-icon-activatable} [logical : Read / Write]}{
 
 Whether the secondary icon is activatable.
-  
+
 GTK+ emits the \verb{"icon-press"} and \verb{"icon-release"}
 signals only on sensitive, activatable icons.
-  
+
 Sensitive, but non-activatable icons can be used for purely
 informational purposes.
   Default value: FALSE  Since 2.16
@@ -558,11 +558,11 @@ An pixbuf to use as the secondary icon for the entry.
 \item{\verb{secondary-icon-sensitive} [logical : Read / Write]}{
 
 Whether the secondary icon is sensitive.
-  
+
 An insensitive icon appears grayed out. GTK+ does not emit the
 \verb{"icon-press"} and \verb{"icon-release"} signals and
 does not allow DND from insensitive icons.
-  
+
 An icon should be set insensitive if the action that would trigger
 when clicked is currently not available.
   Default value: TRUE  Since 2.16
@@ -585,7 +585,7 @@ The representation which is used for the secondary icon of the entry.
 The contents of the tooltip on the secondary icon, which is marked up
 with the Pango text markup
 language.
-  
+
 Also see \code{\link{gtkEntrySetIconTooltipMarkup}}.
   Default value: NULL  Since 2.16
 
@@ -593,7 +593,7 @@ Also see \code{\link{gtkEntrySetIconTooltipMarkup}}.
 \item{\verb{secondary-icon-tooltip-text} [character : *                : Read / Write]}{
 
 The contents of the tooltip on the secondary icon.
-  
+
 Also see \code{\link{gtkEntrySetIconTooltipText}}.
   Default value: NULL  Since 2.16
 
@@ -666,7 +666,7 @@ The invisible character is used when masking entry contents (in
 \verb{"invisible-char"} property, GTK+ determines the character
 to use from a list of possible candidates, depending on availability
 in the current font.
-  
+
 This style property allows the theme to prepend a character
 to the list of candidates.
   Default value: 0  Since 2.18

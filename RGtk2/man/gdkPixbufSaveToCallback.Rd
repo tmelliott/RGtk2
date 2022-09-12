@@ -1,13 +1,13 @@
 \alias{gdkPixbufSaveToCallback}
 \name{gdkPixbufSaveToCallback}
 \title{gdkPixbufSaveToCallback}
-\description{Saves pixbuf in format \code{type} by feeding the produced data to a 
-callback. Can be used when you want to store the image to something 
-other than a file, such as an in-memory buffer or a socket.  
+\description{Saves pixbuf in format \code{type} by feeding the produced data to a
+callback. Can be used when you want to store the image to something
+other than a file, such as an in-memory buffer or a socket.
 If \code{error} is set, \code{FALSE} will be returned. Possible errors
 include those in the \verb{GDK_PIXBUF_ERROR} domain and whatever the save
 function generates.}
-\usage{gdkPixbufSaveToCallback(object, save.func, user.data, type, ..., 
+\usage{gdkPixbufSaveToCallback(object, save.func, user.data, type, ...,
     .errwarn = TRUE)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GdkPixbuf}}.}

@@ -2,7 +2,7 @@
 \name{gtkCellRendererStartEditing}
 \title{gtkCellRendererStartEditing}
 \description{Passes an activate event to the cell renderer for possible processing.}
-\usage{gtkCellRendererStartEditing(object, event, widget, path, background.area, 
+\usage{gtkCellRendererStartEditing(object, event, widget, path, background.area,
     cell.area, flags)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GtkCellRenderer}}}

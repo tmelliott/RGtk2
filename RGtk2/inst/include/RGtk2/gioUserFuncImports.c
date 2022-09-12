@@ -6,7 +6,7 @@ S_GIOSchedulerJobFunc(GIOSchedulerJob* job, GCancellable* cancellable, gpointer 
   if(!fun) fun = ((gboolean (*)(GIOSchedulerJob*, GCancellable*, gpointer))R_GetCCallable("RGtk2", "S_GIOSchedulerJobFunc"));
   return(fun(job, cancellable, user_data));
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 gboolean
@@ -16,7 +16,7 @@ S_GSimpleAsyncThreadFunc(GSimpleAsyncResult* res, GObject* object, GCancellable*
   if(!fun) fun = ((gboolean (*)(GSimpleAsyncResult*, GObject*, GCancellable*))R_GetCCallable("RGtk2", "S_GSimpleAsyncThreadFunc"));
   return(fun(res, object, cancellable));
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 void
@@ -26,7 +26,7 @@ S_GAsyncReadyCallback(GObject* source_object, GSimpleAsyncResult* res, gpointer 
   if(!fun) fun = ((void (*)(GObject*, GSimpleAsyncResult*, gpointer))R_GetCCallable("RGtk2", "S_GAsyncReadyCallback"));
   return(fun(source_object, res, user_data));
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 void
@@ -36,7 +36,7 @@ S_GFileProgressCallback(goffset current_num_bytes, goffset total_num_bytes, gpoi
   if(!fun) fun = ((void (*)(goffset, goffset, gpointer))R_GetCCallable("RGtk2", "S_GFileProgressCallback"));
   return(fun(current_num_bytes, total_num_bytes, user_data));
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 void
@@ -46,7 +46,7 @@ S_GFileReadMoreCallback(const char* file_contents, goffset file_size, gpointer c
   if(!fun) fun = ((void (*)(const char*, goffset, gpointer))R_GetCCallable("RGtk2", "S_GFileReadMoreCallback"));
   return(fun(file_contents, file_size, callback_data));
 }
-#endif 
+#endif
 
 #if GIO_CHECK_VERSION(2, 16, 0)
 gpointer
@@ -56,5 +56,4 @@ S_GReallocFunc(gpointer data, gsize size)
   if(!fun) fun = ((gpointer (*)(gpointer, gsize))R_GetCCallable("RGtk2", "S_GReallocFunc"));
   return(fun(data, size));
 }
-#endif 
-
+#endif

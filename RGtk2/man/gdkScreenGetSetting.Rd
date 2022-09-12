@@ -8,7 +8,7 @@ for the \code{\link{GdkScreen}} \code{screen}. }
 \item{\verb{object}}{the \code{\link{GdkScreen}} where the setting is located}
 \item{\verb{name}}{the name of the setting}
 }
-\details{FIXME needs a list of valid settings here, or a link to 
+\details{FIXME needs a list of valid settings here, or a link to
 more information.
   Since 2.2}
 \value{

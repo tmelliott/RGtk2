@@ -2,7 +2,7 @@
 \name{gtkSpinButtonNew}
 \title{gtkSpinButtonNew}
 \description{Creates a new \code{\link{GtkSpinButton}}.}
-\usage{gtkSpinButtonNew(adjustment = NULL, climb.rate = NULL, digits = NULL, 
+\usage{gtkSpinButtonNew(adjustment = NULL, climb.rate = NULL, digits = NULL,
     show = TRUE)}
 \arguments{
 \item{\verb{adjustment}}{the \code{\link{GtkAdjustment}} object that this spin button should use.}

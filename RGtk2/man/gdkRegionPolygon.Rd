@@ -1,7 +1,7 @@
 \alias{gdkRegionPolygon}
 \name{gdkRegionPolygon}
 \title{gdkRegionPolygon}
-\description{Creates a new \code{\link{GdkRegion}} using the polygon defined by a 
+\description{Creates a new \code{\link{GdkRegion}} using the polygon defined by a
 number of points.}
 \usage{gdkRegionPolygon(points, fill.rule)}
 \arguments{

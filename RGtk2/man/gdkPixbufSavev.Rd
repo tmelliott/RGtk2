@@ -2,9 +2,9 @@
 \name{gdkPixbufSavev}
 \title{gdkPixbufSavev}
 \description{Saves pixbuf to a file in \code{type}, which is currently "jpeg", "png", "tiff", "ico" or "bmp".
-If \code{error} is set, \code{FALSE} will be returned. 
+If \code{error} is set, \code{FALSE} will be returned.
 See \code{\link{gdkPixbufSave}} for more details.}
-\usage{gdkPixbufSavev(object, filename, type, option.keys, option.values, 
+\usage{gdkPixbufSavev(object, filename, type, option.keys, option.values,
     .errwarn = TRUE)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GdkPixbuf}}.}

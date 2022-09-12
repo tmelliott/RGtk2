@@ -1,7 +1,7 @@
 \alias{gFileInfoGetEtag}
 \name{gFileInfoGetEtag}
 \title{gFileInfoGetEtag}
-\description{Gets the entity tag for a given 
+\description{Gets the entity tag for a given
 \code{\link{GFileInfo}}. See \code{G_FILE_ATTRIBUTE_ETAG_VALUE}.}
 \usage{gFileInfoGetEtag(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GFileInfo}}.}}

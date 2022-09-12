@@ -7,7 +7,7 @@
 \alias{gtkObjectRemoveCallback}
 \title{Register and control a function as Gtk event handler}
 \description{
-\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)} 
+\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)}
 
   These functions allow one to register an R expression,
    call or more typically a function as a
@@ -17,7 +17,7 @@
 as a callback or event handler
 for the specific event type
 with the widget of interest.
-When the event occurs for this widget, 
+When the event occurs for this widget,
 the S "expression" will be invoked.
 
 The block and unblock functions allow one to temporarily
@@ -40,7 +40,7 @@ gtkObjectDisconnectCallback(obj, id)
   \item{w}{the Gtk object whose events for this signal type
       are to be monitored and reported to us via a call to the function \code{f}.}
   \item{signal}{a string (character vector of length 1) giving
-  the name of the signal type. See the Gtk documentation for the 
+  the name of the signal type. See the Gtk documentation for the
   particular widget.}
   \item{obj}{the Gtk object for which we want to block/unblock or
     disconnect the callback.}
@@ -75,7 +75,7 @@ gtkObjectDisconnectCallback(obj, id)
     This argument is only meaningful if \code{data} is not missing
     as no data argument is passed to the callback if it is not supplied.
   }
-  \item{after}{a logical value indicating whether 
+  \item{after}{a logical value indicating whether
     to invoke this user-defined handler after the signal, or to let the
     signal's default behavior preside (i.e. depending on GTK\_RUN\_FIRST
     and GTK\_RUN\_LAST).
@@ -86,7 +86,7 @@ gtkObjectDisconnectCallback(obj, id)
   \item{id}{}
 }
 \details{
- The S function is invoked by a generic C-level event 
+ The S function is invoked by a generic C-level event
  handler that makes the call to the S function. That
  function is stored in user-level data for the widget.
  The call provides one argument which is a reference to the
@@ -112,7 +112,7 @@ gtkObjectDisconnectCallback(obj, id)
 \note{
 THIS STUFF IS VERY OLD AND DEPRECATED (compatibility wrappers for RGtk 1)
 
-This is an extra-ordinarily early release 
+This is an extra-ordinarily early release
 intended to encourage others to contribute code, etc.}
 
 \seealso{
@@ -121,7 +121,7 @@ intended to encourage others to contribute code, etc.}
 
 \examples{
   if (gtkInit()) {
-    w <- gtkWindow(show = FALSE)  
+    w <- gtkWindow(show = FALSE)
     b <- gtkButton("Hit me")
     w$add(b)
     w$show()
@@ -134,4 +134,3 @@ intended to encourage others to contribute code, etc.}
 
 \keyword{interface}
 \keyword{internal}
-

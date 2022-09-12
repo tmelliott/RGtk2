@@ -2,7 +2,7 @@
 \name{gdkPixbufNewFromStreamAtScale}
 \title{gdkPixbufNewFromStreamAtScale}
 \description{Creates a new pixbuf by loading an image from an input stream.  }
-\usage{gdkPixbufNewFromStreamAtScale(stream, width = -1, height = -1, 
+\usage{gdkPixbufNewFromStreamAtScale(stream, width = -1, height = -1,
     preserve.aspect.ratio = 1, cancellable = NULL, .errwarn = TRUE)}
 \arguments{
 \item{\verb{stream}}{a \code{\link{GInputStream}} to load the pixbuf from}
@@ -12,19 +12,19 @@
 \item{\verb{cancellable}}{optional \code{\link{GCancellable}} object, \code{NULL} to ignore}
 \item{.errwarn}{Whether to issue a warning on error or fail silently}
 }
-\details{The file format is detected automatically. If \code{NULL} is returned, then 
+\details{The file format is detected automatically. If \code{NULL} is returned, then
 \code{error} will be set. The \code{cancellable} can be used to abort the operation
-from another thread. If the operation was cancelled, the error 
-\code{GIO_ERROR_CANCELLED} will be returned. Other possible errors are in 
-the \verb{GDK_PIXBUF_ERROR} and \code{G_IO_ERROR} domains. 
-  
-The image will be scaled to fit in the requested size, optionally 
-preserving the image's aspect ratio. When preserving the aspect ratio, 
-a \code{width} of -1 will cause the image to be scaled to the exact given 
-height, and a \code{height} of -1 will cause the image to be scaled to the 
-exact given width. When not preserving aspect ratio, a \code{width} or 
+from another thread. If the operation was cancelled, the error
+\code{GIO_ERROR_CANCELLED} will be returned. Other possible errors are in
+the \verb{GDK_PIXBUF_ERROR} and \code{G_IO_ERROR} domains.
+
+The image will be scaled to fit in the requested size, optionally
+preserving the image's aspect ratio. When preserving the aspect ratio,
+a \code{width} of -1 will cause the image to be scaled to the exact given
+height, and a \code{height} of -1 will cause the image to be scaled to the
+exact given width. When not preserving aspect ratio, a \code{width} or
 \code{height} of -1 means to not scale the image at all in that dimension.
-  
+
 The stream is not closed.
   Since 2.14}
 \value{

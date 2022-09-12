@@ -24,7 +24,7 @@
  AtkImplementorIface,  \code{\link{GtkBuildable}} and  \code{\link{GtkActivatable}}.}
 \section{Detailed Description}{  A \code{\link{GtkToggleToolButton}} is a \code{\link{GtkToolItem}} that contains a toggle
   button.
-  
+
   Use \code{\link{gtkToggleToolButtonNew}} to create a new
   \code{\link{GtkToggleToolButton}}. Use \code{\link{gtkToggleToolButtonNewFromStock}} to
   create a new \code{\link{GtkToggleToolButton}} containing a stock item.}

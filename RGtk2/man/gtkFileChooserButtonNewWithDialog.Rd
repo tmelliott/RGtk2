@@ -8,7 +8,7 @@ file-picking window.}
 \details{Note that \code{dialog} must be a \code{\link{GtkDialog}} (or subclass) which
 implements the \code{\link{GtkFileChooser}} interface and must not have
 \code{GTK_DIALOG_DESTROY_WITH_PARENT} set.
-  
+
 Also note that the dialog needs to have its confirmative button
 added with response \code{GTK_RESPONSE_ACCEPT} or \code{GTK_RESPONSE_OK} in
 order for the button to take over the file selected in the dialog.

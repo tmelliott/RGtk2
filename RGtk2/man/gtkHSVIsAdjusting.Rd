@@ -2,8 +2,8 @@
 \name{gtkHSVIsAdjusting}
 \title{gtkHSVIsAdjusting}
 \description{An HSV color selector can be said to be adjusting if multiple rapid
-changes are being made to its value, for example, when the user is 
-adjusting the value with the mouse. This function queries whether 
+changes are being made to its value, for example, when the user is
+adjusting the value with the mouse. This function queries whether
 the HSV color selector is being adjusted or not.}
 \usage{gtkHSVIsAdjusting(object)}
 \arguments{\item{\verb{object}}{A \code{\link{GtkHSV}}}}

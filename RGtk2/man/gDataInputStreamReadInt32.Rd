@@ -8,9 +8,9 @@
 \item{\verb{cancellable}}{optional \code{\link{GCancellable}} object, \code{NULL} to ignore.}
 \item{.errwarn}{Whether to issue a warning on error or fail silently}
 }
-\details{In order to get the correct byte order for this read operation, 
+\details{In order to get the correct byte order for this read operation,
 see \code{gDataStreamGetByteOrder()} and \code{gDataStreamSetByteOrder()}.
-  
+
 If \code{cancellable} is not \code{NULL}, then the operation can be cancelled by
 triggering the cancellable object from another thread. If the operation
 was cancelled, the error \code{G_IO_ERROR_CANCELLED} will be returned.}

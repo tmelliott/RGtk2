@@ -31,7 +31,7 @@ S_PangoFontsetForeachFunc(PangoFontset* s_fontset, PangoFont* s_font, gpointer s
   if(err)
     return(((gboolean)0));
   return(((gboolean)asCLogical(s_ans)));
-} 
+}
 
 
 gboolean
@@ -63,7 +63,7 @@ S_PangoAttrFilterFunc(PangoAttribute* s_attribute, gpointer s_data)
   if(err)
     return(((gboolean)0));
   return(((gboolean)asCLogical(s_ans)));
-} 
+}
 
 #if PANGO_CHECK_VERSION(1, 18, 0)
 
@@ -101,5 +101,4 @@ S_PangoCairoShapeRendererFunc(cairo_t* s_cr, PangoAttrShape* s_attr, gboolean s_
     return(((gboolean)0));
   return(((gboolean)asCLogical(s_ans)));
 }
-#endif 
-
+#endif

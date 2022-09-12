@@ -3,23 +3,27 @@ copyFile <- function(uri) {
   gfile <- gFileNewForUri(uri)
   fetched <- 0
   total <- 0
-  
+
   output <- gfile$getBasename()
   con <- file(output, "wb")
 
-  if (output == "/")
+  if (output == "/") {
     output <- "index.html"
+  }
 
   streamReadCallback <- function(stream, result) {
-    if (cancellable$isCancelled())
+    if (cancellable$isCancelled()) {
       return()
+    }
     data <- stream$readFinish(result)
-    if (!length(data))
+    if (!length(data)) {
       dataFinished()
-    else {
+    } else {
       dataRead(data)
-      stream$readAsync(4096, cancellable = cancellable,
-                       callback = streamReadCallback)
+      stream$readAsync(4096,
+        cancellable = cancellable,
+        callback = streamReadCallback
+      )
     }
   }
 
@@ -27,8 +31,10 @@ copyFile <- function(uri) {
     stream <- gfile$readFinish(result)
     info <- gfile$queryInfo(GFileAttributeStandard["size"])
     total <<- info$getAttributeUint64(GFileAttributeStandard["size"])
-    stream$readAsync(4096, cancellable = cancellable,
-                     callback = streamReadCallback)
+    stream$readAsync(4096,
+      cancellable = cancellable,
+      callback = streamReadCallback
+    )
   }
 
   dataRead <- function(data) {
@@ -40,20 +46,23 @@ copyFile <- function(uri) {
       bytesLabel$setText(paste("Bytes read:", fetched))
       ## Often, we never get around to updating the progress bar, due
       ## to the I/O events, which seem to take priority
-      while(gtkEventsPending())
+      while (gtkEventsPending()) {
         gtkMainIteration()
+      }
     }
   }
-  
+
   dataFinished <- function() {
     dialog$setTitle("Copy complete")
     close(con)
   }
 
-  dialog <- gtkDialog("Copying...", NULL, 0,
-                      GTK_STOCK_CANCEL, GtkResponseType["cancel"],
-                      GTK_STOCK_CLOSE, GtkResponseType["none"])
-  
+  dialog <- gtkDialog(
+    "Copying...", NULL, 0,
+    GTK_STOCK_CANCEL, GtkResponseType["cancel"],
+    GTK_STOCK_CLOSE, GtkResponseType["none"]
+  )
+
   contentArea <- dialog$getContentArea()
   vbox <- gtkVBox()
   contentArea$add(vbox)
@@ -72,7 +81,7 @@ copyFile <- function(uri) {
   bytesLabel <- gtkLabel(paste("Bytes read:", fetched))
   bytesLabel["xalign"] <- 0
   vbox$packStart(bytesLabel, FALSE, FALSE)
-  
+
   gSignalConnect(dialog, "response", function(dialog, response, data) {
     if (response == GtkResponseType["cancel"]) {
       cancellable$cancel()
@@ -82,7 +91,7 @@ copyFile <- function(uri) {
 
   cancellable <- gCancellable()
   gfile$readAsync(cancellable = cancellable, callback = readCallback)
-  
+
   invisible(dialog)
 }
 
@@ -90,5 +99,5 @@ library(RGtk2)
 options("RGtk2::newErrorHandling" = TRUE)
 
 uri <- "file:///home/larman/projects/R/motifRG_0.0.1.tar.gz"
-##uri <- "http://cran.r-project.org/src/contrib/RGtk2_2.12.18.tar.gz"
+## uri <- "http://cran.r-project.org/src/contrib/RGtk2_2.12.18.tar.gz"
 copyFile(uri)

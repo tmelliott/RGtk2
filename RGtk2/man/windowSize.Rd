@@ -2,7 +2,7 @@
 \alias{gdkGetWindowSize}
 \title{Obtain dimensions of a Gtk window}
 \description{
-\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)} 
+\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)}
 
  Returns the width and height of a Gtk window.
 }
@@ -17,7 +17,7 @@ gdkGetWindowSize(w)
   An integer vector with two elements:
   \item{width}{the number of pixels the window spans in the horizontal
     dimension}
-  \item{height}{the number of pixels the window spans in the vertical dimension}  
+  \item{height}{the number of pixels the window spans in the vertical dimension}
 }
 
 \author{
@@ -37,4 +37,3 @@ THIS STUFF IS VERY OLD AND DEPRECATED (compatibility wrappers for RGtk 1)
 
 \keyword{interface}
 \keyword{internal}
-

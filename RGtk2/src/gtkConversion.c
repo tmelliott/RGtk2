@@ -89,7 +89,7 @@ asRGtkStockItem(GtkStockItem *item)
 {
     USER_OBJECT_ s_item;
 	char *names[] = { "stock.id", "label", "modifier", "keyval", "translation.domain", NULL };
-	
+
     PROTECT(s_item = NEW_LIST(5));
 
     SET_VECTOR_ELT(s_item, 0, asRString(item->stock_id));
@@ -98,9 +98,9 @@ asRGtkStockItem(GtkStockItem *item)
     SET_VECTOR_ELT(s_item, 3, asRInteger(item->keyval));
     SET_VECTOR_ELT(s_item, 4, asRString(item->translation_domain));
 
-	
+
 	SET_NAMES(s_item, asRStringArray(names));
-	
+
     UNPROTECT(1);
 
     return(s_item);

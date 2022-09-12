@@ -11,10 +11,10 @@ tag to the buffer's tag table. so the ref count will be equal to one.}
 \item{\verb{...}}{a new tag}
 }
 \details{If \code{tag.name} is \code{NULL}, the tag is anonymous.
-  
+
 If \code{tag.name} is non-\code{NULL}, a tag called \code{tag.name} must not already
 exist in the tag table for this buffer.
-  
+
 The \code{first.property.name} argument and subsequent arguments are a list
 of properties to set on the tag, as with \code{\link{gObjectSet}}.}
 \value{[\code{\link{GtkTextTag}}] a new tag}

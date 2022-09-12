@@ -1,7 +1,7 @@
 \alias{atkComponentAddFocusHandler}
 \name{atkComponentAddFocusHandler}
 \title{atkComponentAddFocusHandler}
-\description{Add the specified handler to the set of functions to be called 
+\description{Add the specified handler to the set of functions to be called
 when this object receives focus events (in or out). If the handler is
 already added it is not added again}
 \usage{atkComponentAddFocusHandler(object, handler)}

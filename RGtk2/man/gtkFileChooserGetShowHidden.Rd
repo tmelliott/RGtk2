@@ -1,7 +1,7 @@
 \alias{gtkFileChooserGetShowHidden}
 \name{gtkFileChooserGetShowHidden}
 \title{gtkFileChooserGetShowHidden}
-\description{Gets whether hidden files and folders are displayed in the file selector.   
+\description{Gets whether hidden files and folders are displayed in the file selector.
 See \code{\link{gtkFileChooserSetShowHidden}}.}
 \usage{gtkFileChooserGetShowHidden(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkFileChooser}}}}

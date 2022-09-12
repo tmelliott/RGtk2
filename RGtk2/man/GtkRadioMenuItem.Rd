@@ -28,13 +28,13 @@
  AtkImplementorIface,  \code{\link{GtkBuildable}} and  \code{\link{GtkActivatable}}.}
 \section{Detailed Description}{A radio menu item is a check menu item that belongs to a group. At each
 instant exactly one of the radio menu items from a group is selected.
-  
+
 The group list does not need to be freed, as each \code{\link{GtkRadioMenuItem}} will
 remove itself and its list item when it is destroyed.
-  
+
 The correct way to create a group of radio menu items is approximatively
 this:
-  
+
  \emph{How to create a group of radio menu items.}
 \preformatted{
 group <- NULL

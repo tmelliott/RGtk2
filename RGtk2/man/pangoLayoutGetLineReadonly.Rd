@@ -10,7 +10,7 @@
 }
 \details{This is a faster alternative to \code{\link{pangoLayoutGetLine}},
 but the user is not expected
-to modify the contents of the line (glyphs, glyph widths, etc.).  
+to modify the contents of the line (glyphs, glyph widths, etc.).
   Since 1.16}
 \value{[\code{\link{PangoLayoutLine}}]  the requested \code{\link{PangoLayoutLine}}, or \code{NULL} if the
               index is out of range. This layout line can

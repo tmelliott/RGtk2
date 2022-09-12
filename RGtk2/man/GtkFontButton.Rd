@@ -42,7 +42,7 @@ directly.
 The ::font-set signal is emitted when the user selects a font.
 When handling this signal, use \code{\link{gtkFontButtonGetFontName}}
 to find out which font was just selected.
-  
+
 Note that this signal is only emitted when the \emph{user}
 changes the font. If you need to react to programmatic font changes
 as well, use the notify::font-name signal.

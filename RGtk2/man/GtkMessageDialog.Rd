@@ -30,7 +30,7 @@
 message (Error, Question, etc.) alongside some message text. It's simply a
 convenience widget; you could construct the equivalent of \code{\link{GtkMessageDialog}}
 from \code{\link{GtkDialog}} without too much effort, but \code{\link{GtkMessageDialog}} saves typing.
-  
+
 The easiest way to do a modal message dialog is to use \code{\link{gtkDialogRun}}, though
 you can also pass in the \code{GTK_DIALOG_MODAL} flag, \code{\link{gtkDialogRun}} automatically
 makes the dialog modal and waits for the user to respond to it. \code{\link{gtkDialogRun}}
@@ -45,7 +45,7 @@ dialog <- gtkMessageDialog(main_application_window, "destroy-with-parent",
 dialog$run()
 dialog$destroy()
 }
-  
+
 You might do a non-modal \code{\link{GtkMessageDialog}} as follows:
 
  \emph{A non-modal dialog.}

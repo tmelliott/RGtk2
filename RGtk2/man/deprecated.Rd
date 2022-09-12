@@ -19,4 +19,3 @@
 \author{Michael Lawrence}
 \keyword{internal}
 \keyword{interface}
-

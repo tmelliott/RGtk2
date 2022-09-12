@@ -20,7 +20,7 @@ point will be offset by (\code{dx3}, \code{dy3}).}
 \details{Given a current point of (x, y), cairo_rel_curve_to(\code{cr}, \code{dx1},
 \code{dy1}, \code{dx2}, \code{dy2}, \code{dx3}, \code{dy3}) is logically equivalent to
 cairo_curve_to(\code{cr}, x+\code{dx1}, y+\code{dy1}, x+\code{dx2}, y+\code{dy2}, x+\code{dx3}, y+\code{dy3}).
-  
+
 It is an error to call this function with no current point. Doing
 so will cause \code{cr} to shutdown with a status of
 \code{CAIRO_STATUS_NO_CURRENT_POINT}.  }

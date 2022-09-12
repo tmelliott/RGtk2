@@ -7,7 +7,7 @@ methods, like in its draw_shape() for example.}
 \usage{pangoRendererGetLayout(renderer)}
 \arguments{\item{\verb{renderer}}{[\code{\link{PangoRenderer}}]  a \code{\link{PangoRenderer}}}}
 \details{The returned layout should not be modified while still being
-rendered.  
+rendered.
   Since 1.20}
 \value{[\code{\link{PangoLayout}}]  the layout, or \code{NULL} if no layout is being
  rendered using \code{renderer} at this time.}

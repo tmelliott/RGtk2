@@ -10,38 +10,36 @@ apply_changes_gradually <- function(data) {
 }
 
 
-on_assistant_apply <- function(widget, data)
-{
+on_assistant_apply <- function(widget, data) {
   gTimeoutAdd(100, apply_changes_gradually)
 }
 
-on_assistant_prepare <- function(widget, page, data)
-{
+on_assistant_prepare <- function(widget, page, data) {
   current_page <- widget$getCurrentPage()
   n_pages <- widget$getNPages()
 
   title <- sprintf("Sample assistant (%d of %d)", current_page + 1, n_pages)
   widget$setTitle(title)
 
-  if (current_page == 3)
+  if (current_page == 3) {
     widget$commit()
+  }
 }
 
-on_entry_changed <- function(widget, assistant)
-{
+on_entry_changed <- function(widget, assistant) {
   page_number <- assistant$getCurrentPage()
   current_page <- assistant$getNthPage(page_number)
   text <- widget$getText()
 
-  if (!is.null(text) && nchar(text) > 0)
+  if (!is.null(text) && nchar(text) > 0) {
     assistant$setPageComplete(current_page, TRUE)
-  else
+  } else {
     assistant$setPageComplete(current_page, FALSE)
+  }
 }
 
 
-create_page1 <- function(assistant)
-{
+create_page1 <- function(assistant) {
   box <- gtkHBox(FALSE, 12)
   box$setBorderWidth(12)
 
@@ -55,18 +53,19 @@ create_page1 <- function(assistant)
   assistant$appendPage(box)
   assistant$setPageTitle(box, "Page 1")
   assistant$setPageType(box, "intro")
-  
+
   pixbuf <- assistant$renderIcon(GTK_STOCK_DIALOG_INFO, "dialog")
   assistant$setPageHeaderImage(box, pixbuf)
 }
 
-create_page2 <- function(assistant)
-{
+create_page2 <- function(assistant) {
   box <- gtkVBox(FALSE, 12)
   box$setBorderWidth(12)
 
-  checkbutton <- gtkCheckButton(paste("This is optional data, you may continue",
-						 "even if you do not check this"))
+  checkbutton <- gtkCheckButton(paste(
+    "This is optional data, you may continue",
+    "even if you do not check this"
+  ))
   box$packStart(checkbutton, FALSE, FALSE, 0)
 
   assistant$appendPage(box)
@@ -77,8 +76,7 @@ create_page2 <- function(assistant)
   assistant$setPageHeaderImage(box, pixbuf)
 }
 
-create_page3 <- function(assistant)
-{
+create_page3 <- function(assistant) {
   label <- gtkLabel("This is a confirmation page, press 'Apply' to apply changes")
 
   assistant$appendPage(label)

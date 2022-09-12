@@ -21,12 +21,12 @@
 \section{Detailed Description}{You may wish to begin by reading the text widget
 conceptual overview which gives an overview of all the objects and data
 types related to the text widget and how they work together.
-  
+
 Tags should be in the \code{\link{GtkTextTagTable}} for a given \code{\link{GtkTextBuffer}}
 before using them with that buffer.
   \code{\link{gtkTextBufferCreateTag}} is the best way to create tags.
 See \command{gtk-demo} for numerous examples.
-  
+
 The "invisible" property was not implemented for GTK+ 2.0.
 It is working (with minor issues) since 2.8.}
 \section{Structures}{\describe{
@@ -91,7 +91,7 @@ Describes a type of line wrapping.
                 be technical, between graphemes, see
                 \code{\link{pangoGetLogAttrs}})}
 \item{\verb{word}}{wrap text, breaking lines in between words}
-\item{\verb{word_char}}{wrap text, breaking lines in between words, or if 
+\item{\verb{word_char}}{wrap text, breaking lines in between words, or if
                 that is not enough, also between graphemes.}
 }
 
@@ -116,7 +116,7 @@ event. \code{FALSE} to propagate the event further.
 \item{\verb{accumulative-margin} [logical : Read / Write]}{
 
 Whether the margins accumulate or override each other.
-  
+
 When set to \code{TRUE} the margins of this tag are added to the margins
 of any other non-accumulative margins present. When set to \code{FALSE}
 the margins override one another (the default).
@@ -186,7 +186,7 @@ Whether this tag affects the font family.  Default value: FALSE
 \item{\verb{font} [character : *                : Read / Write]}{
 
 Font description as string, e.g. \\"Sans Italic 12\\".
-  
+
 Note that the initial value of this property depends on
 the internals of \code{\link{PangoFontDescription}}.
   Default value: NULL
@@ -235,7 +235,7 @@ Whether this tag affects indentation.  Default value: FALSE
 \item{\verb{invisible} [logical : Read / Write]}{
 
 Whether this text is hidden.
-  
+
 Note that there may still be problems with the support for invisible
 text, in particular when navigating programmatically inside a buffer
 containing invisible segments.
@@ -262,7 +262,7 @@ Whether this tag affects paragraph justification.  Default value: FALSE
 The language this text is in, as an ISO code. Pango can use this as a
 hint when rendering the text. If not set, an appropriate default will be
 used.
-  
+
 Note that the initial value of this property depends on the current
 locale, see also \code{\link{gtkGetDefaultLanguage}}.
   Default value: NULL

@@ -53,7 +53,7 @@ the number of arguments to each drawing call is
 greatly reduced, and communication overhead is
 minimized, since identical arguments do not need
 to be passed repeatedly.
-  
+
 Most values of a graphics context can be set at
 creation time by using \code{\link{gdkGCNewWithValues}},
 or can be set one-by-one using functions such

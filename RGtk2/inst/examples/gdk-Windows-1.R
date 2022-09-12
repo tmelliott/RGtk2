@@ -1,17 +1,16 @@
 # The expose event handler for the event box.
-# 
+#
 # This function simply draws a transparency onto a widget on the area
 # for which it receives expose events.  This is intended to give the
 # event box a "transparent" background.
-# 
+#
 # In order for this to work properly, the widget must have an RGBA
 # colormap.  The widget should also be set as app-paintable since it
 # doesn't make sense for GTK+ to draw a background if we are drawing it
 # (and because GTK+ might actually replace our transparency with its
 # default background color).
-# 
-transparent_expose <- function(widget, event)
-{
+#
+transparent_expose <- function(widget, event) {
   cr <- gdkCairoCreate(widget$window)
   cr$setOperator("clear")
   gdkCairoRegion(cr, event$region)
@@ -21,31 +20,32 @@ transparent_expose <- function(widget, event)
 }
 
 # The expose event handler for the window.
-# 
+#
 # This function performs the actual compositing of the event box onto
 # the already-existing background of the window at 50% normal opacity.
-# 
+#
 # In this case we do not want app-paintable to be set on the widget
 # since we want it to draw its own (red) background. Because of this,
 # however, we must ensure that we set after = TRUE when connecting to the signal
 # so that this handler is called after the red has been drawn. If it was
 # called before then GTK would just blindly paint over our work.
-# 
+#
 # Note: if the child window has children, then you need a cairo 1.16
 # feature to make this work correctly.
-# 
+#
 
-window_expose_event <- function(widget, event)
-{
-  # get our child (in this case, the event box) 
+window_expose_event <- function(widget, event) {
+  # get our child (in this case, the event box)
   child <- widget$getChild()
 
-  # create a cairo context to draw to the window 
+  # create a cairo context to draw to the window
   cr <- gdkCairoCreate(widget$window)
 
   # the source data is the (composited) event box
-  gdkCairoSetSourcePixmap(cr, child$window, child$allocation$x, 
-                          child$allocation$y)
+  gdkCairoSetSourcePixmap(
+    cr, child$window, child$allocation$x,
+    child$allocation$y
+  )
 
   # draw no more than our expose event intersects our child
   region <- gdkRegionRectangle(child$allocation)

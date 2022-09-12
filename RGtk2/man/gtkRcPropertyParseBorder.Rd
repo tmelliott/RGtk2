@@ -3,8 +3,8 @@
 \title{gtkRcPropertyParseBorder}
 \description{A \verb{GtkRcPropertyParser} for use with \code{\link{gtkSettingsInstallPropertyParser}}
 or \code{\link{gtkWidgetClassInstallStylePropertyParser}} which parses
-borders in the form 
-\code{"{ left, right, top, bottom }"} for integers 
+borders in the form
+\code{"{ left, right, top, bottom }"} for integers
 \code{left}, \code{right}, \code{top} and \code{bottom}.}
 \usage{gtkRcPropertyParseBorder(pspec, gstring)}
 \arguments{

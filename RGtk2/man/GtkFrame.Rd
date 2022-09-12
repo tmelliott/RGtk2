@@ -35,7 +35,7 @@ supports placing a child in the label position by specifying
 "label" as the "type" attribute of a <child> element.
 A normal content child can be specified without specifying
 a <child> type attribute.
-  
+
  \emph{A UI definition fragment with GtkFrame}\preformatted{<object class="GtkFrame">
   <child type="label">
     <object class="GtkLabel" id="frame-label"/>

@@ -12,7 +12,7 @@ with this function, if you like.}
 }
 \details{After calling this with a non-\code{NULL} \code{name}, calls to \code{\link{gdkWindowSetTitle}}
 will not update the icon title.
-  
+
 Using \code{NULL} for \code{name} unsets the icon title; further calls to
 \code{\link{gdkWindowSetTitle}} will again update the icon title as well.}
 \author{Derived by RGtkGen from GTK+ documentation}

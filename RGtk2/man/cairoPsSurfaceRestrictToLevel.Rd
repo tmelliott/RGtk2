@@ -12,7 +12,7 @@ can be used here.}
 \details{This function should only be called before any drawing operations
 have been performed on the given surface. The simplest way to do
 this is to call this function immediately after creating the
-surface.  
+surface.
   Since 1.6}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

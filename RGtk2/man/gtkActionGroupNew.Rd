@@ -2,7 +2,7 @@
 \name{gtkActionGroupNew}
 \title{gtkActionGroupNew}
 \description{Creates a new \code{\link{GtkActionGroup}} object. The name of the action group
-is used when associating keybindings 
+is used when associating keybindings
 with the actions.}
 \usage{gtkActionGroupNew(name = NULL)}
 \arguments{\item{\verb{name}}{the name of the action group.}}

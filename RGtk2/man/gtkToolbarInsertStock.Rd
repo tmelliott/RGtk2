@@ -7,7 +7,7 @@ Inserts a stock item at the specified position of the toolbar.  If
 except that underscores used to mark mnemonics are removed.
 \strong{WARNING: \code{gtk_toolbar_insert_stock} has been deprecated since version 2.4 and should not be used in newly-written code. Use \code{\link{gtkToolbarInsert}} instead.}
 }
-\usage{gtkToolbarInsertStock(object, stock.id, tooltip.text, tooltip.private.text, 
+\usage{gtkToolbarInsertStock(object, stock.id, tooltip.text, tooltip.private.text,
     callback, user.data, position)}
 \arguments{
 \item{\verb{object}}{A \code{\link{GtkToolbar}}}

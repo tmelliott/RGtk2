@@ -3,7 +3,7 @@
 \title{gtkStyleApplyDefaultBackground}
 \description{\emph{undocumented
 }}
-\usage{gtkStyleApplyDefaultBackground(object, window, set.bg, state.type, 
+\usage{gtkStyleApplyDefaultBackground(object, window, set.bg, state.type,
     area = NULL, x, y, width, height)}
 \arguments{
 \item{\verb{object}}{. \emph{[  \acronym{allow-none}  ]}}

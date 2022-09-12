@@ -51,10 +51,10 @@
 create a toolbar item that contain something else than a button, use
 \code{\link{gtkToolItemNew}}. Use \code{\link{gtkContainerAdd}} to add a child
 widget to the tool item.
-  
+
 For toolbar items that contain buttons, see the \code{\link{GtkToolButton}},
 \code{\link{GtkToggleToolButton}} and \code{\link{GtkRadioToolButton}} classes.
-  
+
 See the \code{\link{GtkToolbar}} class for a description of the toolbar widget, and
 \code{\link{GtkToolShell}} for a description of the tool shell interface.}
 \section{Structures}{\describe{\item{\verb{GtkToolItem}}{
@@ -69,11 +69,11 @@ This signal is emitted when the toolbar needs information from \code{tool.item}
 about whether the item should appear in the toolbar overflow menu. In
 response the tool item should either
 \itemize{
-\item 
-\item 
-\item 
+\item
+\item
+\item
 }
-  
+
 The toolbar may cache the result of this signal. When the tool item changes
 how it will respond to this signal it must call \code{\link{gtkToolItemRebuildMenu}}
 to invalidate the cache and ensure that the toolbar rebuilds its overflow
@@ -108,10 +108,10 @@ This signal is emitted when some property of the toolbar that the
 item is a child of changes. For custom subclasses of \code{\link{GtkToolItem}},
 the default handler of this signal use the functions
 \itemize{
-\item 
-\item 
-\item 
-\item 
+\item
+\item
+\item
+\item
 }
 to find out what the toolbar should look like and change
 themselves accordingly.

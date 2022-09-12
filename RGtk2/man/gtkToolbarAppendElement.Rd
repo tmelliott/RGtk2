@@ -5,7 +5,7 @@
 Adds a new element to the end of a toolbar.
 \strong{WARNING: \code{gtk_toolbar_append_element} has been deprecated since version 2.4 and should not be used in newly-written code. Use \code{\link{gtkToolbarInsert}} instead.}
 }
-\usage{gtkToolbarAppendElement(object, type, widget, text, tooltip.text, 
+\usage{gtkToolbarAppendElement(object, type, widget, text, tooltip.text,
     tooltip.private.text, icon, callback, user.data = NULL)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GtkToolbar}}.}
@@ -24,7 +24,7 @@ the radio group for the new element. In all other cases, \code{widget} must
 be \code{NULL}.
   \code{callback} must be a pointer to a function taking a \code{\link{GtkWidget}} and a gpointer as
 arguments. Use \code{gCallback()} to cast the function to \verb{GCallback}.
-  
+
   }
 \value{[\code{\link{GtkWidget}}] the new toolbar element as a \code{\link{GtkWidget}}.}
 \author{Derived by RGtkGen from GTK+ documentation}

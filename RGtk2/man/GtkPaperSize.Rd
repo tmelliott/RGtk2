@@ -33,11 +33,11 @@
 to name the paper sizes (and to get the data for the page sizes).
 In addition to standard paper sizes, GtkPaperSize allows to
 construct custom paper sizes with arbitrary dimensions.
-  
+
 The \code{\link{GtkPaperSize}} object stores not only the dimensions (width
 and height) of a paper size and its name, it also provides
 default print margins.
-  
+
 Printing support has been added in GTK+ 2.10.}
 \section{Structures}{\describe{\item{\verb{GtkPaperSize}}{
 \emph{undocumented

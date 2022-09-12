@@ -14,7 +14,7 @@
       </author>
     </authorgroup>
     <abstract>
-      <para>This is a tutorial on how to use GTK (the GIMP Toolkit) through its 
+      <para>This is a tutorial on how to use GTK (the GIMP Toolkit) through its
       R interface RGtk2. It is based on the original C interface tutorial by
       Tony Gale, Ian Main, and the GTK+ team.</para>
     </abstract>
@@ -29,7 +29,7 @@
 <para>A copy of this tutorial in SGML is distributed with each
 source code release of RGtk2.</para>
 
-<para>A copy is available online for <ulink 
+<para>A copy is available online for <ulink
 url="http://www.ggobi.org/rgtk2/tutorial/">reference</ulink>.</para>
 
 </chapter>
@@ -68,7 +68,7 @@ versions, such as gMalloc() that has enhanced debugging utilities.</para>
 
 <para>In version 2.0, GLib has picked up the type system which forms the
 foundation for GTK's class hierarchy, the signal system which is used
-throughout GTK, a thread API which abstracts the different native thread APIs 
+throughout GTK, a thread API which abstracts the different native thread APIs
 of the various platforms and a facility for loading modules.
 </para>
 
@@ -101,9 +101,9 @@ improved. Please see the section on <link linkend="ch-Contributing">Contributing
 <chapter id="ch-GettingStarted">
 <title>Getting Started</title>
 
-<para>The first thing to do, of course, is to install the RGtk2 package from CRAN. 
+<para>The first thing to do, of course, is to install the RGtk2 package from CRAN.
 You can also view other sources of GTK information on
-<ulink url="http://www.gtk.org/">http://www.gtk.org/</ulink>. 
+<ulink url="http://www.gtk.org/">http://www.gtk.org/</ulink>.
 
 <para>The RGtk2 source distribution also contains the complete source to all
 of the examples used in this tutorial.</para>
@@ -127,9 +127,9 @@ win &lt;- gtkWindow("toplevel")
 <!-- example-end -->
 </programlisting>
 
-<para>This single line of code creates a GtkWindow object and assigns it to 
+<para>This single line of code creates a GtkWindow object and assigns it to
 the <literal>win</literal> simple. In RGtk2, any GTK+ class may be instantiated
-by calling a function with the same name of the class, with the 
+by calling a function with the same name of the class, with the
 first character in lowercase.</para>
 
 <para>The <literal>"toplevel"</literal> argument specifies that we want the
@@ -138,7 +138,7 @@ create a window of 0x0 size, a window without children is set to
 200x200 by default so you can still manipulate it.</para>
 
 <para>The window, like all other widgets, is automatically
-shown by RGtk2; this can be avoided by passing <literal>show = FALSE</literal> 
+shown by RGtk2; this can be avoided by passing <literal>show = FALSE</literal>
 to <literal>gtkWindow()</literal>.</para>
 
 <!-- ----------------------------------------------------------------- -->
@@ -181,7 +181,7 @@ deleteEvent &lt;- function(widget, event)
     return(TRUE)
 }
 
-# create a new window 
+# create a new window
 window &lt;- gtkWindow("toplevel")
 
 # When the window is given the "deleteEvent" signal (this is given
@@ -205,7 +205,7 @@ gSignalConnect(button, "clicked", gtkWidgetDestroy, user.data.first = TRUE)
 
 # This packs the button into the window (a gtk container).
 window$add(button)
-    
+
 <!-- example-end -->
 </programlisting>
 
@@ -221,7 +221,7 @@ sleep until an event occurs and control is passed to the
 appropriate function.</para>
 
 <para>This passing of control is done using the idea of "signals". (Note
-that these signals are not the same as R signals). 
+that these signals are not the same as R signals).
 When an event occurs, such as the press of a mouse button,
 the appropriate signal will be "emitted" by the widget that was
 pressed.  This is how GTK does most of its useful work. There are
@@ -346,7 +346,7 @@ signals:</para>
 callbackFunc(widget, event, data)
 </programlisting>
 
-<para>The <literal>event</literal> parameter is a GdkEvent structure whose type will depend upon 
+<para>The <literal>event</literal> parameter is a GdkEvent structure whose type will depend upon
 which of the above events has occurred. In order for us to tell which event
 has been issued each of the possible alternatives has a <literal>type</literal>
 member that reflects the event being issued. The other components
@@ -374,15 +374,15 @@ should be propagated further by the GTK event handling
 mechanism. Returning TRUE indicates that the event has been handled,
 and that it should not propagate further. Returning FALSE continues
 the normal event handling.  See the section on
-<link linkend="ch-AdvancedEventsAndSignals">Advanced Event and Signal Handling</link> 
+<link linkend="ch-AdvancedEventsAndSignals">Advanced Event and Signal Handling</link>
 for more details on this propagation process.</para>
 
 <para>For details on the GdkEvent data types, see the appendix entitled
 <link linkend="app-GDKEventTypes">GDK Event Types</link>.</para>
 
 <para>The GDK selection and drag-and-drop APIs also emit a number of events which
-are reflected in GTK by the signals. See <link 
-linkend="sec-SignalsOnSourceWidgets">Signals on the source widget</link> and <link 
+are reflected in GTK by the signals. See <link
+linkend="sec-SignalsOnSourceWidgets">Signals on the source widget</link> and <link
 linkend="sec-SignalsOnDestWidgets">Signals on the destination widget</link>
 for details on the signatures of the callback functions for these signals:</para>
 
@@ -600,7 +600,7 @@ hello &lt;- function(wid, data)
     cat(sprintf("Hello again - %s was pressed\n", data))
 }
 
-# create a new window 
+# create a new window
 window &lt;- gtkWindow("toplevel")
 
 # This is a new call, which just sets the title of our
@@ -620,7 +620,7 @@ window$add(box1)
 
 # Creates a new button with the label "Button 1".
 button &lt;- gtkButton("Button 1")
-    
+
 # Now when the button is clicked, we call the "callback" function
 # with "button 1" as its argument
 gSignalConnect(button, "clicked", hello, "button 1")
@@ -776,180 +776,180 @@ it.</para>
 <title>Packing Demonstration Program</title>
 
 <programlisting role="R">
-# Make a new hbox filled with button-labels. Arguments for the 
-# variables we're interested are passed in to this function. 
+# Make a new hbox filled with button-labels. Arguments for the
+# variables we're interested are passed in to this function.
 # We do not show the box, but do show everything inside.
-makeBox &lt;- function(homogeneous, spacing, expand, fill, padding) 
+makeBox &lt;- function(homogeneous, spacing, expand, fill, padding)
 {
     # Create a new hbox with the appropriate homogeneous
     # and spacing settings
     box &lt;- gtkHBox(homogeneous, spacing)
-    
-    # Create a series of buttons with the appropriate settings 
+
+    # Create a series of buttons with the appropriate settings
     button &lt;- gtkButton("gtkBoxPack")
     box$packStart(button, expand, fill, padding)
-        
+
     button &lt;- gtkButton("(box,")
     box$packStart(button, expand, fill, padding)
-        
+
     button &lt;- gtkButton("button,")
     box$packStart(button, expand, fill, padding)
-        
+
     # Create a button with the label depending on the value of
-    # expand. 
+    # expand.
     if(expand)
 	    button &lt;- gtkButton("TRUE,")
     else
 	    button &lt;- gtkButton("FALSE,")
-    
+
     box$packStart(button, expand, fill, padding)
-        
+
     # This is the same as the button creation for "expand"
-    # above, but uses the shorthand form. 
+    # above, but uses the shorthand form.
     button &lt;- gtkButton(ifelse(fill, "TRUE,", "FALSE,"))
     box$packStart(button, expand, fill, padding)
-        
+
     button &lt;- gtkButton(padding)
     box$packStart(button, expand, fill, padding)
-        
+
     return box
 }
 
-# Create our window 
+# Create our window
 window &lt;- gtkWindow("toplevel")
 window$setBorderWidth(10)
 
 # We create a vertical vbox to pack the horizontal boxes into.
 # This allows us to stack the horizontal boxes filled with buttons one
-# on top of the other in this vbox. 
+# on top of the other in this vbox.
 box1 &lt;- gtkVBox(FALSE, 0)
 
 example1 &lt;- function() {
-  # create a new label. 
+  # create a new label.
   label &lt;- gtkLabel("gtkHHbox(FALSE, 0)")
-  
-  # Align the label to the left side.  We'll discuss this function and 
-  # others in the section on Widget Attributes. 
+
+  # Align the label to the left side.  We'll discuss this function and
+  # others in the section on Widget Attributes.
   label$setAlignment(0, 0)
-  
-  # Pack the label into the vertical box(vbox box1).  Remember that 
+
+  # Pack the label into the vertical box(vbox box1).  Remember that
   # widgets added to a vbox will be packed one on top of the other in
-  # order. 
+  # order.
   box1$packStart(label, FALSE, FALSE, 0)
-  
+
   # Call our make box function - homogeneous = FALSE, spacing = 0,
-  # expand = FALSE, fill = FALSE, padding = 0 
+  # expand = FALSE, fill = FALSE, padding = 0
   box2 &lt;- makeBox(FALSE, 0, FALSE, FALSE, 0)
   box1$packStart(box2, FALSE, FALSE, 0)
-  
+
   # Call our make box function - homogeneous = FALSE, spacing = 0,
-  # expand = TRUE, fill = FALSE, padding = 0 
+  # expand = TRUE, fill = FALSE, padding = 0
   box2 &lt;- makeBox(FALSE, 0, TRUE, FALSE, 0)
   box1$packStart(box2, FALSE, FALSE, 0)
-  
-  # Args are: homogeneous, spacing, expand, fill, padding 
+
+  # Args are: homogeneous, spacing, expand, fill, padding
   box2 &lt;- makeBox(FALSE, 0, TRUE, TRUE, 0)
   box1$packStart(box2, FALSE, FALSE, 0)
-  
-  # Creates a separator, we'll learn more about these later, 
-  # but they are quite simple. 
+
+  # Creates a separator, we'll learn more about these later,
+  # but they are quite simple.
   separator &lt;- gtkHSeparator()
-  
+
   # Pack the separator into the vbox. Remember each of these
   # widgets is being packed into a vbox, so they'll be stacked
-  # vertically. 
+  # vertically.
   box1$packStart(separator, FALSE, TRUE, 5)
-  
-  # Create another new label, and show it. 
+
+  # Create another new label, and show it.
   label &lt;- gtkLabel("gtkHBox(TRUE, 0)")
   label$setAlignment(0, 0)
   box1$packStart(label, FALSE, FALSE, 0)
-  
-  # Args are: homogeneous, spacing, expand, fill, padding 
+
+  # Args are: homogeneous, spacing, expand, fill, padding
   box2 &lt;- makeBox(TRUE, 0, TRUE, FALSE, 0)
   box1$packStart(box2, FALSE, FALSE, 0)
-  
-  # Args are: homogeneous, spacing, expand, fill, padding 
+
+  # Args are: homogeneous, spacing, expand, fill, padding
   box2 &lt;- makeBox(TRUE, 0, TRUE, TRUE, 0)
   box1$packStart(box2, FALSE, FALSE, 0)
-  
-  # Another new separator. 
+
+  # Another new separator.
   separator &lt;- gtkHSeparator()
   # The last 3 arguments to box$packStartare:
-  # expand, fill, padding. 
+  # expand, fill, padding.
   box1$packStart(separator, FALSE, TRUE, 5)
-} 
+}
 
 example2 &lt;- function() {
 
-  # Create a new label, remember box1 is a vbox as created 
-  # near the beginning of main() 
+  # Create a new label, remember box1 is a vbox as created
+  # near the beginning of main()
   label &lt;- gtkLabelNew("gtkHBox(FALSE, 10)")
   label$setAlignment(0, 0)
   box1$packStart(label, FALSE, FALSE, 0)
-  
-  # Args are: homogeneous, spacing, expand, fill, padding 
+
+  # Args are: homogeneous, spacing, expand, fill, padding
   box2 &lt;- makeBox(FALSE, 10, TRUE, FALSE, 0)
   box1$packStart(box2, FALSE, FALSE, 0)
-  
-  # Args are: homogeneous, spacing, expand, fill, padding 
+
+  # Args are: homogeneous, spacing, expand, fill, padding
   box2 &lt;- makeBox(FALSE, 10, TRUE, TRUE, 0)
   box1$packStart(box2, FALSE, FALSE, 0)
-  
+
   separator &lt;- gtkHSeparator()
   # The last 3 arguments to box$packStartare:
-  # expand, fill, padding. 
+  # expand, fill, padding.
   box1$packStart(separator, FALSE, TRUE, 5)
-  
+
   label &lt;- gtkLabel("gtkHBox(FALSE, 0)")
   label$setAlignment(0, 0)
   box1$packStart(label, FALSE, FALSE, 0)
-  
-  # Args are: homogeneous, spacing, expand, fill, padding 
+
+  # Args are: homogeneous, spacing, expand, fill, padding
   box2 &lt;- makeBox(FALSE, 0, TRUE, FALSE, 10)
   box1$packStart(box2, FALSE, FALSE, 0)
-  
-  # Args are: homogeneous, spacing, expand, fill, padding 
+
+  # Args are: homogeneous, spacing, expand, fill, padding
   box2 &lt;- makeBox(FALSE, 0, TRUE, TRUE, 10)
   box1$packStart(box2, FALSE, FALSE, 0)
-  
+
   separator &lt;- gtkHSeparator()
-  # The last 3 arguments to box$packStartare: expand, fill, padding. 
+  # The last 3 arguments to box$packStartare: expand, fill, padding.
   box1$packStart(separator, FALSE, TRUE, 5)
-} 
+}
 
 example3 &lt;- function() {
 
   # This demonstrates the ability to use gtkBoxPackEnd() to
-  # right justify widgets. First, we create a new box as before. 
+  # right justify widgets. First, we create a new box as before.
   box2 &lt;- makeBox(FALSE, 0, FALSE, FALSE, 0)
-  
-  # Create the label that will be put at the end. 
+
+  # Create the label that will be put at the end.
   label &lt;- gtkLabel("end")
   # Pack it using gtkBoxPackEnd(), so it is put on the right
-  # side of the hbox created in the makeBox() call. 
+  # side of the hbox created in the makeBox() call.
   box2$packEnd(label, FALSE, FALSE, 0)
-  
-  # Pack box2 into box1(the vbox remember ? :) 
+
+  # Pack box2 into box1(the vbox remember ? :)
   box1$packStart(box2, FALSE, FALSE, 0)
-  
-  # A separator for the bottom. 
+
+  # A separator for the bottom.
   separator &lt;- gtkHSeparator()
   # This explicitly sets the separator to 400 pixels wide by 5 pixels
   # high. This is so the hbox we created will also be 400 pixels wide,
   # and the "end" label will be separated from the other labels in the
   # hbox. Otherwise, all the widgets in the hbox would be packed as
-  # close together as possible. 
+  # close together as possible.
   separator$setSizeRequest(400, 5)
-  # pack the separator into the vbox(box1) created near the start 
-  # of main() 
-  box1$packStart(separator, FALSE, TRUE, 5)   
+  # pack the separator into the vbox(box1) created near the start
+  # of main()
+  box1$packStart(separator, FALSE, TRUE, 5)
 }
-  
-# Create another new hbox.. remember we can use as many as we need! 
+
+# Create another new hbox.. remember we can use as many as we need!
 quitbox &lt;- gtkHBox(FALSE, 0)
 
-# Our quit button. 
+# Our quit button.
 button &lt;- gtkButton("Quit")
 
 # Setup the signal to close the window when clicked
@@ -957,13 +957,13 @@ gSignalConnect(button, "clicked", gtkWidgetDestroy, window, user.data.first = TR
 
 # Pack the button into the quitbox.
 # The last 3 arguments to box$packStartare:
-# expand, fill, padding. 
+# expand, fill, padding.
 quitbox$packStart(button, TRUE, FALSE, 0)
-# pack the quitbox into the vbox(box1) 
+# pack the quitbox into the vbox(box1)
 box1$packStart(quitbox, FALSE, FALSE, 0)
 
 # Pack the vbox(box1) which now contains all our widgets, into the
-# main window. 
+# main window.
 window$add(box1)
 <!-- example-end -->
 </programlisting>
@@ -1012,9 +1012,9 @@ and columns = 2, the layout would look something like this:</para>
 To place a widget into a box, use the following function:</para>
 
 <programlisting role="R">
-gtkTableAttach(table, child, leftAttach, rightAttach, topAttach, bottomAttach, 
-  xoptions = GtkAttachOptions["expand"] + GtkAttachOptions["fill"], 
-  yoptions = GtkAttachOptions["expand"] + GtkAttachOptions["fill"], 
+gtkTableAttach(table, child, leftAttach, rightAttach, topAttach, bottomAttach,
+  xoptions = GtkAttachOptions["expand"] + GtkAttachOptions["fill"],
+  yoptions = GtkAttachOptions["expand"] + GtkAttachOptions["fill"],
   xpadding = 0, ypadding = 0)
 </programlisting>
 
@@ -1123,7 +1123,7 @@ Which means it should look something like this:</para>
 <!-- example-start table table.R -->
 
 # Our callback.
-# The data passed to this function is printed to stdout 
+# The data passed to this function is printed to stdout
 callback &lt;- function(widget, data)
 {
     cat(sprintf("Hello again - %s was pressed\n", data))
@@ -1165,7 +1165,7 @@ gSignalConnect(button, "clicked", callback, "button 2")
 # Insert button 2 into the upper right quadrant of the table
 table$attach(button, 1, 2, 0, 1)
 
-# Insert the quit button into the both 
+# Insert the quit button into the both
 # lower quadrants of the table
 table$attach(button, 0, 2, 1, 2)
 
@@ -1269,19 +1269,19 @@ pretty simple. There is however more than one way to create a button. The
 gtkButton() function takes a number of arguments. The <literal>label</literal>
 parameter specifies the button label. If the <literal>stock.id</literal>
 parameter is specified, a button is created containing the image and text from
-a stock item (overriding the <literal>label</literal> parameter). 
+a stock item (overriding the <literal>label</literal> parameter).
 You can also use gtkButtonNewWithMnemonic() to create a button with "mnemonic" label, meaning
 that one can "press" the button using the key combination ALT + the character
 underlined in the label. Prefix the character to underline with "_" in the
 button label text. You can also call gtkButton() without any parameters.
-It's then up to you to pack a label or pixmap into 
-this new button. To do this, create a new box, and then pack your objects into 
-this box using the usual gtkBoxPackStart(), and then use gtkContainerAdd() 
+It's then up to you to pack a label or pixmap into
+this new button. To do this, create a new box, and then pack your objects into
+this box using the usual gtkBoxPackStart(), and then use gtkContainerAdd()
 to pack the box into the button.</para>
 
 <para>Here's an example of using gtkButton() to create a button with a
-image and a label in it. I've broken up the code to create a box from the rest 
-so you can use it in your programs. There are further examples of using images 
+image and a label in it. I've broken up the code to create a box from the rest
+so you can use it in your programs. There are further examples of using images
 later in the tutorial.</para>
 
 <para>
@@ -1296,47 +1296,47 @@ later in the tutorial.</para>
 <!-- example-start buttons buttons.c -->
 
 # Create a new hbox with an image and a label packed into it
-# and return the box. 
+# and return the box.
 
 xpmLabelBox &lt;- function (xpmFilename, labelText)
 {
-    # Create box for image and label 
+    # Create box for image and label
     box &lt;- gtkHBox(FALSE, 0)
     box$setBorderWidth(2)
 
-    # Now on to the image stuff 
+    # Now on to the image stuff
     image &lt;- gtkImage(filename = xpmFilename)
 
-    # Create a label for the button 
+    # Create a label for the button
     label &lt;- gtkLabel(labelText)
 
-    # Pack the image and label into the box 
+    # Pack the image and label into the box
     box$packStart(image, FALSE, FALSE, 3)
     box$packStart(label, FALSE, FALSE, 3)
-    
+
     box
 }
 
-# Our usual callback function 
+# Our usual callback function
 callback &lt;- function(widget, data)
 {
     cat(sprintf("Hello again - %s was pressed\n", data))
 }
 
-# Create a new window 
+# Create a new window
 window &lt;- gtkWindow()
 window$setTitle("Pixmap'd Buttons!")
 
-# Sets the border width of the window. 
+# Sets the border width of the window.
 window$setBorderWidth(10)
 
-# Create a new button 
+# Create a new button
 button &lt;- gtkButton()
 
-# Connect the "clicked" signal of the button to our callback 
+# Connect the "clicked" signal of the button to our callback
 gSignalConnect(button, "clicked", callback, "cool button")
 
-# This calls our box creating function 
+# This calls our box creating function
 box &lt;- xpmLabelBox ("info.xpm", "cool button")
 
 button$add(box)
@@ -1406,13 +1406,13 @@ to determine its state. The callback will look something like:</para>
 <programlisting role="R">
 toggleButtonCallback &lt;- function(widget, data)
 {
-    if (widget$getActive()) 
+    if (widget$getActive())
     {
-        # If control reaches here, the toggle button is down 
-    
+        # If control reaches here, the toggle button is down
+
     } else {
-    
-        # If control reaches here, the toggle button is up 
+
+        # If control reaches here, the toggle button is up
     }
 }
 </programlisting>
@@ -1461,7 +1461,7 @@ gtkCheckButton(label)
 gtkCheckButtonNewWithMnemonic(label)
 </programlisting>
 
-<para>The gtkCheckButtonNewWithLabel() function creates a check button 
+<para>The gtkCheckButtonNewWithLabel() function creates a check button
 with a label beside it.</para>
 
 <para>Checking the state of the check button is identical to that of the
@@ -1491,7 +1491,7 @@ gtkRadioButtonNewWithMnemonicFromWidget(group, label)
 
 <para>You'll notice the extra argument to these calls. They require a group
 to perform their duty properly. The first call to gtkRadioButton()
-should pass NULL as the first argument. 
+should pass NULL as the first argument.
 Then create a group using:</para>
 
 <programlisting role="R">
@@ -1499,8 +1499,8 @@ radioButton$getGroup()
 </programlisting>
 
 <para>The important thing to remember is that gtkRadioButtonGetGroup() must be
-called for each new button added to the group, with the previous button passed 
-in as an argument. The result is then passed into the next call to 
+called for each new button added to the group, with the previous button passed
+in as an argument. The result is then passed into the next call to
 gtkRadioButton(). This allows a
 chain of buttons to be established. The example below should make this clear.</para>
 
@@ -1513,7 +1513,7 @@ removes the need for a variable to hold the list of buttons:</para>
 
 <para>
 The FromWidget() variants of the creation functions allow you to shorten this
-further, by omitting the gtkRadioButtonGetGroup() call. This form is used 
+further, by omitting the gtkRadioButtonGetGroup() call. This form is used
 in the example to create the third button:
 </para>
 
@@ -1688,15 +1688,15 @@ find out, and it may be different from widget to widget).</para>
 
 <para>Now, you're probably thinking, since text widgets and viewports insist
 on setting everything except the <literal>value</literal> of their adjustments,
-while scrollbars will <emphasis>only</emphasis> touch the adjustment's 
+while scrollbars will <emphasis>only</emphasis> touch the adjustment's
 <literal>value</literal>, if you <emphasis>share</emphasis> an adjustment
-object between a scrollbar and a text widget, manipulating the scrollbar will 
+object between a scrollbar and a text widget, manipulating the scrollbar will
 automagically adjust the viewport widget?  Of course it will! Just like this:</para>
 
 <programlisting role="R">
-  # creates its own adjustments 
+  # creates its own adjustments
   viewport &lt;- gtkViewport()
-  # uses the newly-created adjustment for the scrollbar as well 
+  # uses the newly-created adjustment for the scrollbar as well
   vscrollbar &lt;- gtkVScrollbar(viewport$getVadjustment())
 </programlisting>
 
@@ -1708,7 +1708,7 @@ automagically adjust the viewport widget?  Of course it will! Just like this:</p
 
 <para>Ok, you say, that's nice, but what if I want to create my own handlers
 to respond when the user adjusts a range widget or a spin button, and
-how do I get at the value of the adjustment in these handlers? 
+how do I get at the value of the adjustment in these handlers?
 
 <programlisting role="R">
 adjustment$getValue()
@@ -1855,7 +1855,7 @@ takes over the screen.</para>
 <para>As with scrollbars, there are separate widget types for horizontal and
 vertical scale widgets. (Most programmers seem to favour horizontal
 scale widgets.) Since they work essentially the same way, there's no
-need to treat them separately here. The following functions create vertical and 
+need to treat them separately here. The following functions create vertical and
 horizontal scale widgets, respectively:</para>
 
 <programlisting role="R">
@@ -1869,13 +1869,13 @@ gtkHScale(, min, max, step)
 <para>The <literal>adjustment</literal> argument can either be an adjustment which has
 already been created with gtkAdjustment(), or NULL, in
 which case, an anonymous Adjustment is created with all of its
-values set to <literal>0.0</literal> (which isn't very useful in this case). 
+values set to <literal>0.0</literal> (which isn't very useful in this case).
 In order to avoid confusing yourself, you probably want to create your
-adjustment with a <literal>pageSize</literal> of <literal>0.0</literal> so 
-that its <literal>upper</literal> value actually corresponds to the highest 
+adjustment with a <literal>pageSize</literal> of <literal>0.0</literal> so
+that its <literal>upper</literal> value actually corresponds to the highest
 value the user can select. (If you're <emphasis>already</emphasis> thoroughly
-confused, read the section on <link linkend="ch-Adjustments">Adjustments</link> 
-again for an explanation of what exactly adjustments do and how to create and 
+confused, read the section on <link linkend="ch-Adjustments">Adjustments</link>
+again for an explanation of what exactly adjustments do and how to create and
 manipulate them.)</para>
 
 </sect2>
@@ -2043,23 +2043,23 @@ the same way. Clicking button-1 in the trough will cause its
 adjustment's <literal>pageIncrement</literal> to be added or subtracted from its
 <literal>value</literal>, and the slider to be moved accordingly. Clicking mouse
 button-2 in the trough will jump the slider to the point at which the
-button was clicked. Clicking button-3 in the trough of a range or any button on 
+button was clicked. Clicking button-3 in the trough of a range or any button on
 a scrollbar's arrows will cause its adjustment's value to change by
 <literal>stepIncrement</literal> at a time.</para>
 
 <para>Scrollbars are not focusable, thus have no key bindings. The key bindings
-for the other range widgets (which are, of course, only active when the widget 
-has focus) are do <emphasis>not</emphasis> differentiate between horizontal and 
+for the other range widgets (which are, of course, only active when the widget
+has focus) are do <emphasis>not</emphasis> differentiate between horizontal and
 vertical range widgets.</para>
 
 <para>All range widgets can be operated with the left, right, up and down arrow
-keys, as well as with the <literal>Page Up</literal> and <literal>Page Down</literal> 
+keys, as well as with the <literal>Page Up</literal> and <literal>Page Down</literal>
 keys. The arrows move the slider up and down by <literal>stepIncrement</literal>, while
-<literal>Page Up</literal> and <literal>Page Down</literal> move it by 
+<literal>Page Up</literal> and <literal>Page Down</literal> move it by
 <literal>pageIncrement</literal>.</para>
 
 <para>The user can also move the slider all the way to one end or the other
-of the trough using the keyboard. This is done with the <literal>Home</literal> 
+of the trough using the keyboard. This is done with the <literal>Home</literal>
 and <literal>End</literal> keys.</para>
 
 </sect1>
@@ -2093,7 +2093,7 @@ GtkWidget#hscale,#vscale;
 static void cbPosMenuSelect( GtkWidget      #item,
                                 GtkPositionType  pos )
 {
-    # Set the value position on both scale widgets 
+    # Set the value position on both scale widgets
     gtkScaleSetValuePos (GTKSCALE (hscale), pos);
     gtkScaleSetValuePos (GTKSCALE (vscale), pos);
 }
@@ -2101,14 +2101,14 @@ static void cbPosMenuSelect( GtkWidget      #item,
 static void cbUpdateMenuSelect( GtkWidget    #item,
                                    GtkUpdateType  policy )
 {
-    # Set the update policy for both scale widgets 
+    # Set the update policy for both scale widgets
     gtkRangeSetUpdatePolicy (GTKRANGE (hscale), policy);
     gtkRangeSetUpdatePolicy (GTKRANGE (vscale), policy);
 }
 
 static void cbDigitsScale( GtkAdjustment#adj )
 {
-    # Set the number of decimal places to which adj->value is rounded 
+    # Set the number of decimal places to which adj->value is rounded
     gtkScaleSetDigits (GTKSCALE (hscale), (gint) adj->value);
     gtkScaleSetDigits (GTKSCALE (vscale), (gint) adj->value);
 }
@@ -2117,12 +2117,12 @@ static void cbPageSize( GtkAdjustment#get,
                           GtkAdjustment#set )
 {
     # Set the page size and page increment size of the sample
-    # adjustment to the value specified by the "Page Size" scale 
+    # adjustment to the value specified by the "Page Size" scale
     set->pageSize = get->value;
     set->pageIncrement = get->value;
 
-    # This sets the adjustment and makes it emit the "changed" signal to 
-       reconfigure all the widgets that are attached to this signal.  
+    # This sets the adjustment and makes it emit the "changed" signal to
+       reconfigure all the widgets that are attached to this signal.
     gtkAdjustmentSetValue (set, CLAMP (set->value,
 					  set->lower,
 					  (set->upper - set->pageSize)));
@@ -2132,19 +2132,19 @@ static void cbPageSize( GtkAdjustment#get,
 static void cbDrawValue( GtkToggleButton#button )
 {
     # Turn the value display on the scale widgets off or on depending
-    #  on the state of the checkbutton 
+    #  on the state of the checkbutton
     gtkScaleSetDrawValue (GTKSCALE (hscale), button->active);
-    gtkScaleSetDrawValue (GTKSCALE (vscale), button->active);  
+    gtkScaleSetDrawValue (GTKSCALE (vscale), button->active);
 }
 
-# Convenience functions 
+# Convenience functions
 
 static GtkWidget#makeMenuItem ( gchar    #name,
                                    GCallback  callback,
                                    gpointer   data )
 {
     GtkWidget#item;
-  
+
     item = gtkMenuItemNewWithLabel (name);
     gSignalConnect (GOBJECT (item), "activate",
 	              callback, (gpointer) data);
@@ -2162,7 +2162,7 @@ static void scaleSetDefaultValues( GtkScale#scale )
     gtkScaleSetDrawValue (scale, TRUE);
 }
 
-# makes the sample window 
+# makes the sample window
 
 static void createRangeControls( void )
 {
@@ -2176,7 +2176,7 @@ static void createRangeControls( void )
     GtkWidget#scale;
     GtkObject#adj1,#adj2;
 
-    # Standard window-creating stuff 
+    # Standard window-creating stuff
     window = gtkWindowNew (GTKWINDOWTOPLEVEL);
     gSignalConnect (GOBJECT (window), "destroy",
                       GCALLBACK (gtkMainQuit),
@@ -2192,12 +2192,12 @@ static void createRangeControls( void )
     gtkBoxPackStart (GTKBOX (box1), box2, TRUE, TRUE, 0);
     gtkWidgetShow (box2);
 
-    # value, lower, upper, stepIncrement, pageIncrement, pageSize 
+    # value, lower, upper, stepIncrement, pageIncrement, pageSize
     # Note that the pageSize value only makes a difference for
     # scrollbar widgets, and the highest value you'll get is actually
-    # (upper - pageSize). 
+    # (upper - pageSize).
     adj1 = gtkAdjustmentNew (0.0, 0.0, 101.0, 0.1, 1.0, 1.0);
-  
+
     vscale = gtkVscaleNew (GTKADJUSTMENT (adj1));
     scaleSetDefaultValues (GTKSCALE (vscale));
     gtkBoxPackStart (GTKBOX (box2), vscale, TRUE, TRUE, 0);
@@ -2207,18 +2207,18 @@ static void createRangeControls( void )
     gtkBoxPackStart (GTKBOX (box2), box3, TRUE, TRUE, 0);
     gtkWidgetShow (box3);
 
-    # Reuse the same adjustment 
+    # Reuse the same adjustment
     hscale = gtkHscaleNew (GTKADJUSTMENT (adj1));
     gtkWidgetSetSizeRequest (GTKWIDGET (hscale), 200, -1);
     scaleSetDefaultValues (GTKSCALE (hscale));
     gtkBoxPackStart (GTKBOX (box3), hscale, TRUE, TRUE, 0);
     gtkWidgetShow (hscale);
 
-    # Reuse the same adjustment again 
+    # Reuse the same adjustment again
     scrollbar = gtkHscrollbarNew (GTKADJUSTMENT (adj1));
     # Notice how this causes the scales to always be updated
-    # continuously when the scrollbar is moved 
-    gtkRangeSetUpdatePolicy (GTKRANGE (scrollbar), 
+    # continuously when the scrollbar is moved
+    gtkRangeSetUpdatePolicy (GTKRANGE (scrollbar),
                                  GTKUPDATECONTINUOUS);
     gtkBoxPackStart (GTKBOX (box3), scrollbar, TRUE, TRUE, 0);
     gtkWidgetShow (scrollbar);
@@ -2228,22 +2228,22 @@ static void createRangeControls( void )
     gtkBoxPackStart (GTKBOX (box1), box2, TRUE, TRUE, 0);
     gtkWidgetShow (box2);
 
-    # A checkbutton to control whether the value is displayed or not 
+    # A checkbutton to control whether the value is displayed or not
     button = gtkCheckButtonNewWithLabel("Display value on scale widgets");
     gtkToggleButtonSetActive (GTKTOGGLEBUTTON (button), TRUE);
     gSignalConnect (GOBJECT (button), "toggled",
                       GCALLBACK (cbDrawValue), NULL);
     gtkBoxPackStart (GTKBOX (box2), button, TRUE, TRUE, 0);
     gtkWidgetShow (button);
-  
+
     box2 = gtkHboxNew (FALSE, 10);
     gtkContainerSetBorderWidth (GTKCONTAINER (box2), 10);
 
-    # An option menu to change the position of the value 
+    # An option menu to change the position of the value
     label = gtkLabelNew ("Scale Value Position:");
     gtkBoxPackStart (GTKBOX (box2), label, FALSE, FALSE, 0);
     gtkWidgetShow (label);
-  
+
     opt = gtkOptionMenuNew ();
     menu = gtkMenuNew ();
 
@@ -2251,19 +2251,19 @@ static void createRangeControls( void )
                            GCALLBACK (cbPosMenuSelect),
                            GINTTOPOINTER (GTKPOSTOP));
     gtkMenuShellAppend (GTKMENUSHELL (menu), item);
-  
-    item = makeMenuItem ("Bottom", GCALLBACK (cbPosMenuSelect), 
+
+    item = makeMenuItem ("Bottom", GCALLBACK (cbPosMenuSelect),
                            GINTTOPOINTER (GTKPOSBOTTOM));
     gtkMenuShellAppend (GTKMENUSHELL (menu), item);
-  
+
     item = makeMenuItem ("Left", GCALLBACK (cbPosMenuSelect),
                            GINTTOPOINTER (GTKPOSLEFT));
     gtkMenuShellAppend (GTKMENUSHELL (menu), item);
-  
+
     item = makeMenuItem ("Right", GCALLBACK (cbPosMenuSelect),
                            GINTTOPOINTER (GTKPOSRIGHT));
     gtkMenuShellAppend (GTKMENUSHELL (menu), item);
-  
+
     gtkOptionMenuSetMenu (GTKOPTIONMENU (opt), menu);
     gtkBoxPackStart (GTKBOX (box2), opt, TRUE, TRUE, 0);
     gtkWidgetShow (opt);
@@ -2275,41 +2275,41 @@ static void createRangeControls( void )
     gtkContainerSetBorderWidth (GTKCONTAINER (box2), 10);
 
     # Yet another option menu, this time for the update policy of the
-    # scale widgets 
+    # scale widgets
     label = gtkLabelNew ("Scale Update Policy:");
     gtkBoxPackStart (GTKBOX (box2), label, FALSE, FALSE, 0);
     gtkWidgetShow (label);
-  
+
     opt = gtkOptionMenuNew ();
     menu = gtkMenuNew ();
-  
+
     item = makeMenuItem ("Continuous",
                            GCALLBACK (cbUpdateMenuSelect),
                            GINTTOPOINTER (GTKUPDATECONTINUOUS));
     gtkMenuShellAppend (GTKMENUSHELL (menu), item);
-  
+
     item = makeMenuItem ("Discontinuous",
                            GCALLBACK (cbUpdateMenuSelect),
                            GINTTOPOINTER (GTKUPDATEDISCONTINUOUS));
     gtkMenuShellAppend (GTKMENUSHELL (menu), item);
-  
+
     item = makeMenuItem ("Delayed",
                            GCALLBACK (cbUpdateMenuSelect),
                            GINTTOPOINTER (GTKUPDATEDELAYED));
     gtkMenuShellAppend (GTKMENUSHELL (menu), item);
-  
+
     gtkOptionMenuSetMenu (GTKOPTIONMENU (opt), menu);
     gtkBoxPackStart (GTKBOX (box2), opt, TRUE, TRUE, 0);
     gtkWidgetShow (opt);
-  
+
     gtkBoxPackStart (GTKBOX (box1), box2, TRUE, TRUE, 0);
     gtkWidgetShow (box2);
 
     box2 = gtkHboxNew (FALSE, 10);
     gtkContainerSetBorderWidth (GTKCONTAINER (box2), 10);
-  
+
     # An HScale widget for adjusting the number of digits on the
-    # sample scales. 
+    # sample scales.
     label = gtkLabelNew ("Scale Digits:");
     gtkBoxPackStart (GTKBOX (box2), label, FALSE, FALSE, 0);
     gtkWidgetShow (label);
@@ -2324,12 +2324,12 @@ static void createRangeControls( void )
 
     gtkBoxPackStart (GTKBOX (box1), box2, TRUE, TRUE, 0);
     gtkWidgetShow (box2);
-  
+
     box2 = gtkHboxNew (FALSE, 10);
     gtkContainerSetBorderWidth (GTKCONTAINER (box2), 10);
-  
+
     # And, one last HScale widget for adjusting the page size of the
-    # scrollbar. 
+    # scrollbar.
     label = gtkLabelNew ("Scrollbar Page Size:");
     gtkBoxPackStart (GTKBOX (box2), label, FALSE, FALSE, 0);
     gtkWidgetShow (label);
@@ -2430,7 +2430,7 @@ the label string.</para>
 <para>To retrieve the current string, use:</para>
 
 <programlisting role="R">
-const gchar* gtkLabelGetText( GtkLabel #label );                    
+const gchar* gtkLabelGetText( GtkLabel #label );
 </programlisting>
 
 <para>Do not free the returned string, as it is used internally by GTK.</para>
@@ -2474,17 +2474,17 @@ indicates that the corresponding character in the label should be
 underlined. For example, the string <literal>"_     _"</literal> would underline the
 first two characters and eight and ninth characters.</para>
 
-<note><para>If you simply want to have an underlined accelerator ("mnemonic") 
-in your label, you should use gtkLabelNewWithMnemonic() or 
+<note><para>If you simply want to have an underlined accelerator ("mnemonic")
+in your label, you should use gtkLabelNewWithMnemonic() or
 gtkLabelSetTextWithMnemonic(), not gtkLabelSetPattern().</para>
 </note>
 
 <para>Below is a short example to illustrate these functions. This example
 makes use of the Frame widget to better demonstrate the label
-styles. You can ignore this for now as the <link linkend="sec-Frames">Frame</link> 
+styles. You can ignore this for now as the <link linkend="sec-Frames">Frame</link>
 widget is explained later on.</para>
 
-<para>In GTK+ 2.0, label texts can contain markup for font and other text attribute 
+<para>In GTK+ 2.0, label texts can contain markup for font and other text attribute
 changes, and labels may be selectable (for copy-and-paste). These advanced features
 won't be explained here.</para>
 
@@ -2510,7 +2510,7 @@ int main( int   argc,
   GtkWidget#frame;
   GtkWidget#label;
 
-  # Initialise GTK 
+  # Initialise GTK
   gtkInit (&amp;argc, &amp;argv);
 
   window = gtkWindowNew (GTKWINDOWTOPLEVEL);
@@ -2524,25 +2524,25 @@ int main( int   argc,
   gtkContainerAdd (GTKCONTAINER (window), hbox);
   gtkBoxPackStart (GTKBOX (hbox), vbox, FALSE, FALSE, 0);
   gtkContainerSetBorderWidth (GTKCONTAINER (window), 5);
-  
+
   frame = gtkFrameNew ("Normal Label");
   label = gtkLabelNew ("This is a Normal label");
   gtkContainerAdd (GTKCONTAINER (frame), label);
   gtkBoxPackStart (GTKBOX (vbox), frame, FALSE, FALSE, 0);
-  
+
   frame = gtkFrameNew ("Multi-line Label");
   label = gtkLabelNew ("This is a Multi-line label.\nSecond line\n" \
 			 "Third line");
   gtkContainerAdd (GTKCONTAINER (frame), label);
   gtkBoxPackStart (GTKBOX (vbox), frame, FALSE, FALSE, 0);
-  
+
   frame = gtkFrameNew ("Left Justified Label");
   label = gtkLabelNew ("This is a Left-Justified\n" \
 			 "Multi-line label.\nThird      line");
   gtkLabelSetJustify (GTKLABEL (label), GTKJUSTIFYLEFT);
   gtkContainerAdd (GTKCONTAINER (frame), label);
   gtkBoxPackStart (GTKBOX (vbox), frame, FALSE, FALSE, 0);
-  
+
   frame = gtkFrameNew ("Right Justified Label");
   label = gtkLabelNew ("This is a Right-Justified\nMulti-line label.\n" \
 			 "Fourth line, (j/k)");
@@ -2566,7 +2566,7 @@ int main( int   argc,
   gtkLabelSetLineWrap (GTKLABEL (label), TRUE);
   gtkContainerAdd (GTKCONTAINER (frame), label);
   gtkBoxPackStart (GTKBOX (vbox), frame, FALSE, FALSE, 0);
-  
+
   frame = gtkFrameNew ("Filled, wrapped label");
   label = gtkLabelNew ("This is an example of a line-wrapped, filled label.  " \
 			 "It should be taking "\
@@ -2582,7 +2582,7 @@ int main( int   argc,
   gtkLabelSetLineWrap (GTKLABEL (label), TRUE);
   gtkContainerAdd (GTKCONTAINER (frame), label);
   gtkBoxPackStart (GTKBOX (vbox), frame, FALSE, FALSE, 0);
-  
+
   frame = gtkFrameNew ("Underlined label");
   label = gtkLabelNew ("This label is underlined!\n"
 			 "This one is underlined in quite a funky fashion");
@@ -2591,11 +2591,11 @@ int main( int   argc,
 			 "____________  ____  ___     _ ___ _");
   gtkContainerAdd (GTKCONTAINER (frame), label);
   gtkBoxPackStart (GTKBOX (vbox), frame, FALSE, FALSE, 0);
-  
+
   gtkWidgetShowAll (window);
 
   gtkMain ();
-  
+
   return 0;
 }
 <!-- example-end -->
@@ -2661,7 +2661,7 @@ point. The <literal>shadowType</literal> argument may take one of these values:<
 #include &lt;gtk/gtk.h&gt;
 
 # Create an Arrow widget with the specified parameters
-# and pack it into a button 
+# and pack it into a button
 static GtkWidget#createArrowButton( GtkArrowType  arrowType,
                                        GtkShadowType shadowType )
 {
@@ -2672,7 +2672,7 @@ static GtkWidget#createArrowButton( GtkArrowType  arrowType,
   arrow = gtkArrowNew (arrowType, shadowType);
 
   gtkContainerAdd (GTKCONTAINER (button), arrow);
-  
+
   gtkWidgetShow (button);
   gtkWidgetShow (arrow);
 
@@ -2682,32 +2682,32 @@ static GtkWidget#createArrowButton( GtkArrowType  arrowType,
 int main( int   argc,
           char#argv[] )
 {
-  # GtkWidget is the storage type for widgets 
+  # GtkWidget is the storage type for widgets
   GtkWidget#window;
   GtkWidget#button;
   GtkWidget#box;
 
-  # Initialize the toolkit 
+  # Initialize the toolkit
   gtkInit (&amp;argc, &amp;argv);
 
-  # Create a new window 
+  # Create a new window
   window = gtkWindowNew (GTKWINDOWTOPLEVEL);
 
   gtkWindowSetTitle (GTKWINDOW (window), "Arrow Buttons");
 
-  # It's a good idea to do this for all windows. 
+  # It's a good idea to do this for all windows.
   gSignalConnect (GOBJECT (window), "destroy",
                     GCALLBACK (gtkMainQuit), NULL);
 
-  # Sets the border width of the window. 
+  # Sets the border width of the window.
   gtkContainerSetBorderWidth (GTKCONTAINER (window), 10);
 
-  # Create a box to hold the arrows/buttons 
+  # Create a box to hold the arrows/buttons
   box = gtkHboxNew (FALSE, 0);
   gtkContainerSetBorderWidth (GTKCONTAINER (box), 2);
   gtkContainerAdd (GTKCONTAINER (window), box);
 
-  # Pack and show all our widgets 
+  # Pack and show all our widgets
   gtkWidgetShow (box);
 
   button = createArrowButton (GTKARROWUP, GTKSHADOWIN);
@@ -2715,18 +2715,18 @@ int main( int   argc,
 
   button = createArrowButton (GTKARROWDOWN, GTKSHADOWOUT);
   gtkBoxPackStart (GTKBOX (box), button, FALSE, FALSE, 3);
-  
+
   button = createArrowButton (GTKARROWLEFT, GTKSHADOWETCHEDIN);
   gtkBoxPackStart (GTKBOX (box), button, FALSE, FALSE, 3);
-  
+
   button = createArrowButton (GTKARROWRIGHT, GTKSHADOWETCHEDOUT);
   gtkBoxPackStart (GTKBOX (box), button, FALSE, FALSE, 3);
-  
+
   gtkWidgetShow (window);
-  
-  # Rest in gtkMain and wait for the fun to begin! 
+
+  # Rest in gtkMain and wait for the fun to begin!
   gtkMain ();
-  
+
   return 0;
 }
 <!-- example-end -->
@@ -2856,16 +2856,16 @@ values to indicate the direction in which the progress bar moves:</para>
 </programlisting>
 
 <para>As well as indicating the amount of progress that has occured, the
-progress bar may be set to just indicate that there is some activity. 
-This can be useful in situations where progress cannot be measured against 
-a value range. The following function indicates that some progress has been 
+progress bar may be set to just indicate that there is some activity.
+This can be useful in situations where progress cannot be measured against
+a value range. The following function indicates that some progress has been
 made.</para>
 
 <programlisting role="R">
 void gtkProgressBarPulse ( GtkProgressBar#progress );
 </programlisting>
 
-<para>The step size of the activity indicator is set using the following 
+<para>The step size of the activity indicator is set using the following
 function.</para>
 
 <programlisting role="R">
@@ -2888,7 +2888,7 @@ of the GTK+ 1.2 Progressbar.</para></note>
 <para>You can turn off the display of the string by calling gtkProgessBarSetText()
 again with NULL as second argument.</para>
 
-<para>The current text setting of a progressbar can be retrieved with the 
+<para>The current text setting of a progressbar can be retrieved with the
 following function. Do not free the returned string.</para>
 
 <programlisting role="R">
@@ -2896,9 +2896,9 @@ const gchar#gtkProgressBarGetText( GtkProgressBar#pbar );
 </programlisting>
 
 <para>Progress Bars are usually used with timeouts or other such functions
-(see section on <link linkend="ch-Timeouts">Timeouts, I/O and Idle Functions</link>) 
+(see section on <link linkend="ch-Timeouts">Timeouts, I/O and Idle Functions</link>)
 to give the illusion of multitasking. All will employ the
-gtkProgressBarSetFraction() or gtkProgressBarPulse() functions in the 
+gtkProgressBarSetFraction() or gtkProgressBarPulse() functions in the
 same manner.</para>
 
 <para>Here is an example of the progress bar, updated using timeouts. This
@@ -2925,78 +2925,78 @@ typedef struct ProgressData {
 } ProgressData;
 
 # Update the value of the progress bar so that we get
-# some movement 
+# some movement
 static gboolean progressTimeout( gpointer data )
 {
   ProgressData#pdata = (ProgressData#)data;
   gdouble newVal;
-  
-  if (pdata-&gt;activityMode) 
+
+  if (pdata-&gt;activityMode)
     gtkProgressBarPulse (GTKPROGRESSBAR (pdata-&gt;pbar));
-  else 
+  else
     {
       # Calculate the value of the progress bar using the
-      # value range set in the adjustment object 
-      
+      # value range set in the adjustment object
+
       newVal = gtkProgressBarGetFraction (GTKPROGRESSBAR (pdata-&gt;pbar)) + 0.01;
-      
+
       if (newVal &gt; 1.0)
 	newVal = 0.0;
-      
-      # Set the new value 
+
+      # Set the new value
       gtkProgressBarSetFraction (GTKPROGRESSBAR (pdata-&gt;pbar), newVal);
     }
-  
-  # As this is a timeout function, return TRUE so that it
-  # continues to get called 
-  return TRUE;
-} 
 
-# Callback that toggles the text display within the progress bar trough 
+  # As this is a timeout function, return TRUE so that it
+  # continues to get called
+  return TRUE;
+}
+
+# Callback that toggles the text display within the progress bar trough
 static void toggleShowText( GtkWidget   #widget,
                               ProgressData#pdata )
 {
   const gchar#text;
-  
+
   text = gtkProgressBarGetText (GTKPROGRESSBAR (pdata-&gt;pbar));
   if (text &amp;&amp;#text)
     gtkProgressBarSetText (GTKPROGRESSBAR (pdata-&gt;pbar), "");
-  else 
+  else
     gtkProgressBarSetText (GTKPROGRESSBAR (pdata-&gt;pbar), "some text");
 }
 
-# Callback that toggles the activity mode of the progress bar 
+# Callback that toggles the activity mode of the progress bar
 static void toggleActivityMode( GtkWidget   #widget,
                                   ProgressData#pdata )
 {
   pdata-&gt;activityMode = !pdata-&gt;activityMode;
-  if (pdata-&gt;activityMode) 
+  if (pdata-&gt;activityMode)
       gtkProgressBarPulse (GTKPROGRESSBAR (pdata-&gt;pbar));
   else
       gtkProgressBarSetFraction (GTKPROGRESSBAR (pdata-&gt;pbar), 0.0);
 }
 
- 
-# Callback that toggles the orientation of the progress bar 
+
+# Callback that toggles the orientation of the progress bar
 static void toggleOrientation( GtkWidget   #widget,
                                 ProgressData#pdata )
 {
   switch (gtkProgressBarGetOrientation (GTKPROGRESSBAR (pdata-&gt;pbar))) {
   case GTKPROGRESSLEFTTORIGHT:
-    gtkProgressBarSetOrientation (GTKPROGRESSBAR (pdata-&gt;pbar), 
+    gtkProgressBarSetOrientation (GTKPROGRESSBAR (pdata-&gt;pbar),
 				      GTKPROGRESSRIGHTTOLEFT);
     break;
   case GTKPROGRESSRIGHTTOLEFT:
-    gtkProgressBarSetOrientation (GTKPROGRESSBAR (pdata-&gt;pbar), 
+    gtkProgressBarSetOrientation (GTKPROGRESSBAR (pdata-&gt;pbar),
 				      GTKPROGRESSLEFTTORIGHT);
     break;
   default:;
-    # do nothing 
+    # do nothing
   }
 }
 
- 
-# Clean up allocated memory and remove the timer 
+
+# Clean up allocated memory and remove the timer
 static void destroyProgress( GtkWidget   #widget,
                               ProgressData#pdata)
 {
@@ -3020,9 +3020,9 @@ int main( int   argc,
 
     gtkInit (&amp;argc, &amp;argv);
 
-    # Allocate memory for the data that is passed to the callbacks 
+    # Allocate memory for the data that is passed to the callbacks
     pdata = gMalloc (sizeof (ProgressData));
-  
+
     pdata-&gt;window = gtkWindowNew (GTKWINDOWTOPLEVEL);
     gtkWindowSetResizable (GTKWINDOW (pdata-&gt;window), TRUE);
 
@@ -3036,32 +3036,32 @@ int main( int   argc,
     gtkContainerSetBorderWidth (GTKCONTAINER (vbox), 10);
     gtkContainerAdd (GTKCONTAINER (pdata-&gt;window), vbox);
     gtkWidgetShow (vbox);
-  
-    # Create a centering alignment object 
+
+    # Create a centering alignment object
     align = gtkAlignmentNew (0.5, 0.5, 0, 0);
     gtkBoxPackStart (GTKBOX (vbox), align, FALSE, FALSE, 5);
     gtkWidgetShow (align);
 
-    # Create the GtkProgressBar 
+    # Create the GtkProgressBar
     pdata-&gt;pbar = gtkProgressBarNew ();
     pdata-&gt;activityMode = FALSE;
 
     gtkContainerAdd (GTKCONTAINER (align), pdata-&gt;pbar);
     gtkWidgetShow (pdata-&gt;pbar);
 
-    # Add a timer callback to update the value of the progress bar 
+    # Add a timer callback to update the value of the progress bar
     pdata-&gt;timer = gTimeoutAdd (100, progressTimeout, pdata);
 
     separator = gtkHseparatorNew ();
     gtkBoxPackStart (GTKBOX (vbox), separator, FALSE, FALSE, 0);
     gtkWidgetShow (separator);
 
-    # rows, columns, homogeneous 
+    # rows, columns, homogeneous
     table = gtkTableNew (2, 3, FALSE);
     gtkBoxPackStart (GTKBOX (vbox), table, FALSE, TRUE, 0);
     gtkWidgetShow (table);
 
-    # Add a check button to select displaying of the trough text 
+    # Add a check button to select displaying of the trough text
     check = gtkCheckButtonNewWithLabel ("Show text");
     gtkTableAttach (GTKTABLE (table), check, 0, 1, 0, 1,
                       GTKEXPAND | GTKFILL, GTKEXPAND | GTKFILL,
@@ -3071,7 +3071,7 @@ int main( int   argc,
                       (gpointer) pdata);
     gtkWidgetShow (check);
 
-    # Add a check button to toggle activity mode 
+    # Add a check button to toggle activity mode
     check = gtkCheckButtonNewWithLabel ("Activity mode");
     gtkTableAttach (GTKTABLE (table), check, 0, 1, 1, 2,
                       GTKEXPAND | GTKFILL, GTKEXPAND | GTKFILL,
@@ -3081,7 +3081,7 @@ int main( int   argc,
                       (gpointer) pdata);
     gtkWidgetShow (check);
 
-    # Add a check button to toggle orientation 
+    # Add a check button to toggle orientation
     check = gtkCheckButtonNewWithLabel ("Right to Left");
     gtkTableAttach (GTKTABLE (table), check, 0, 1, 2, 3,
                       GTKEXPAND | GTKFILL, GTKEXPAND | GTKFILL,
@@ -3091,25 +3091,25 @@ int main( int   argc,
                       (gpointer) pdata);
     gtkWidgetShow (check);
 
-    # Add a button to exit the program 
+    # Add a button to exit the program
     button = gtkButtonNewWithLabel ("close");
     gSignalConnectSwapped (GOBJECT (button), "clicked",
                               GCALLBACK (gtkWidgetDestroy),
                               GOBJECT (pdata-&gt;window));
     gtkBoxPackStart (GTKBOX (vbox), button, FALSE, FALSE, 0);
 
-    # This makes it so the button is the default. 
+    # This makes it so the button is the default.
     GTKWIDGETSETFLAGS (button, GTKCANDEFAULT);
 
     # This grabs this button to be the default button. Simply hitting
-    # the "Enter" key will cause this button to activate. 
+    # the "Enter" key will cause this button to activate.
     gtkWidgetGrabDefault (button);
     gtkWidgetShow (button);
 
     gtkWidgetShow (pdata-&gt;window);
 
     gtkMain ();
-    
+
     return 0;
 }
 <!-- example-end -->
@@ -3128,7 +3128,7 @@ few things pre-packed into it for you. The structure for a Dialog is:</para>
 struct GtkDialog
 {
       GtkWindow window;
-    
+
       GtkWidget#vbox;
       GtkWidget#actionArea;
 };
@@ -3146,7 +3146,7 @@ GtkWidget#gtkDialogNew( void );
 
 GtkWidget#gtkDialogNewWithButtons( const gchar   #title,
                                         GtkWindow     #parent,
-                                        GtkDialogFlags  flags, 
+                                        GtkDialogFlags  flags,
                                         const gchar   #firstButtonText,
                                         ... );
 </programlisting>
@@ -3161,7 +3161,7 @@ GtkWidget#gtkDialogNewWithButtons( const gchar   #title,
     gtkWidgetShow (button);
 </programlisting>
 
-<para>And you could add to the vbox area by packing, for instance, a label 
+<para>And you could add to the vbox area by packing, for instance, a label
 in it, try something like this:</para>
 
 <programlisting role="R">
@@ -3219,9 +3219,9 @@ pointer relative to the ruler.</para>
 created using</para>
 
 <programlisting role="R">
-GtkWidget#gtkHrulerNew( void );    # horizontal ruler 
+GtkWidget#gtkHrulerNew( void );    # horizontal ruler
 
-GtkWidget#gtkVrulerNew( void );    # vertical ruler   
+GtkWidget#gtkVrulerNew( void );    # vertical ruler
 </programlisting>
 
 <para>Once a ruler is created, we can define the unit of measurement. Units
@@ -3309,7 +3309,7 @@ Placement of the drawing area and the rulers is done using a table.</para>
 #define XSIZE  600
 #define YSIZE  400
 
-# This routine gets control when the close button is clicked 
+# This routine gets control when the close button is clicked
 static gboolean closeApplication( GtkWidget#widget,
                                    GdkEvent #event,
                                    gpointer   data )
@@ -3318,12 +3318,12 @@ static gboolean closeApplication( GtkWidget#widget,
     return FALSE;
 }
 
-# The main routine 
+# The main routine
 int main( int   argc,
           char#argv[] ) {
     GtkWidget#window,#table,#area,#hrule,#vrule;
 
-    # Initialize GTK and create the main window 
+    # Initialize GTK and create the main window
     gtkInit (&amp;argc, &amp;argv);
 
     window = gtkWindowNew (GTKWINDOWTOPLEVEL);
@@ -3331,7 +3331,7 @@ int main( int   argc,
                       GCALLBACK (closeApplication), NULL);
     gtkContainerSetBorderWidth (GTKCONTAINER (window), 10);
 
-    # Create a table for placing the ruler and the drawing area 
+    # Create a table for placing the ruler and the drawing area
     table = gtkTableNew (3, 2, FALSE);
     gtkContainerAdd (GTKCONTAINER (window), table);
 
@@ -3344,7 +3344,7 @@ int main( int   argc,
 
     # The horizontal ruler goes on top. As the mouse moves across the
     # drawing area, a motionNotifyEvent is passed to the
-    # appropriate event handler for the ruler. 
+    # appropriate event handler for the ruler.
     hrule = gtkHrulerNew ();
     gtkRulerSetMetric (GTKRULER (hrule), GTKPIXELS);
     gtkRulerSetRange (GTKRULER (hrule), 7, 13, 0, 20);
@@ -3353,10 +3353,10 @@ int main( int   argc,
                               GOBJECT (hrule));
     gtkTableAttach (GTKTABLE (table), hrule, 1, 2, 0, 1,
                       GTKEXPAND|GTKSHRINK|GTKFILL, GTKFILL, 0, 0);
-    
+
     # The vertical ruler goes on the left. As the mouse moves across
     # the drawing area, a motionNotifyEvent is passed to the
-    # appropriate event handler for the ruler. 
+    # appropriate event handler for the ruler.
     vrule = gtkVrulerNew ();
     gtkRulerSetMetric (GTKRULER (vrule), GTKPIXELS);
     gtkRulerSetRange (GTKRULER (vrule), 0, YSIZE, 10, YSIZE );
@@ -3366,7 +3366,7 @@ int main( int   argc,
     gtkTableAttach (GTKTABLE (table), vrule, 0, 1, 1, 2,
                       GTKFILL, GTKEXPAND|GTKSHRINK|GTKFILL, 0, 0);
 
-    # Now show everything 
+    # Now show everything
     gtkWidgetShow (area);
     gtkWidgetShow (hrule);
     gtkWidgetShow (vrule);
@@ -3402,7 +3402,7 @@ identifier order.</para>
 GtkWidget#gtkStatusbarNew( void );
 </programlisting>
 
-<para>A new Context Identifier is requested using a call to the following 
+<para>A new Context Identifier is requested using a call to the following
 function with a short textual description of the context:</para>
 
 <programlisting role="R">
@@ -3422,7 +3422,7 @@ void gtkStatusbarPop( GtkStatusbar#statusbar)
 
 void gtkStatusbarRemove( GtkStatusbar#statusbar,
                            guint         contextId,
-                           guint         messageId ); 
+                           guint         messageId );
 </programlisting>
 
 <para>The first, gtkStatusbarPush(), is used to add a new message to the
@@ -3433,7 +3433,7 @@ given Message and Context Identifiers from the statusbar's stack.</para>
 <para>The function gtkStatusbarPop() removes the message highest in the
 stack with the given Context Identifier.</para>
 
-<para>In addition to messages, statusbars may also display a resize grip, which 
+<para>In addition to messages, statusbars may also display a resize grip, which
 can be dragged with the mouse to resize the toplevel window containing the statusbar,
 similar to dragging the window frame. The following functions control the display
 of the resize grip.</para>
@@ -3495,18 +3495,18 @@ int main( int   argc,
 
     gtkInit (&amp;argc, &amp;argv);
 
-    # create a new window 
+    # create a new window
     window = gtkWindowNew (GTKWINDOWTOPLEVEL);
     gtkWidgetSetSizeRequest (GTKWIDGET (window), 200, 100);
     gtkWindowSetTitle (GTKWINDOW (window), "GTK Statusbar Example");
     gSignalConnect (GOBJECT (window), "deleteEvent",
                       GCALLBACK (exit), NULL);
- 
+
     vbox = gtkVboxNew (FALSE, 1);
     gtkContainerAdd (GTKCONTAINER (window), vbox);
     gtkWidgetShow (vbox);
-          
-    statusBar = gtkStatusbarNew ();      
+
+    statusBar = gtkStatusbarNew ();
     gtkBoxPackStart (GTKBOX (vbox), statusBar, TRUE, TRUE, 0);
     gtkWidgetShow (statusBar);
 
@@ -3517,7 +3517,7 @@ int main( int   argc,
     gSignalConnect (GOBJECT (button), "clicked",
                       GCALLBACK (pushItem), GINTTOPOINTER (contextId));
     gtkBoxPackStart (GTKBOX (vbox), button, TRUE, TRUE, 2);
-    gtkWidgetShow (button);              
+    gtkWidgetShow (button);
 
     button = gtkButtonNewWithLabel ("pop last item");
     gSignalConnect (GOBJECT (button), "clicked",
@@ -3526,7 +3526,7 @@ int main( int   argc,
     gtkWidgetShow (button);
 
     # always display the window as the last step so it all splashes on
-    # the screen at once. 
+    # the screen at once.
     gtkWidgetShow (window);
 
     gtkMain ();
@@ -3665,14 +3665,14 @@ int main( int   argc,
 
     gtkInit (&amp;argc, &amp;argv);
 
-    # create a new window 
+    # create a new window
     window = gtkWindowNew (GTKWINDOWTOPLEVEL);
     gtkWidgetSetSizeRequest (GTKWIDGET (window), 200, 100);
     gtkWindowSetTitle (GTKWINDOW (window), "GTK Entry");
     gSignalConnect (GOBJECT (window), "destroy",
                       GCALLBACK (gtkMainQuit), NULL);
     gSignalConnectSwapped (GOBJECT (window), "deleteEvent",
-                              GCALLBACK (gtkWidgetDestroy), 
+                              GCALLBACK (gtkWidgetDestroy),
                               GOBJECT (window));
 
     vbox = gtkVboxNew (FALSE, 0);
@@ -3695,21 +3695,21 @@ int main( int   argc,
     hbox = gtkHboxNew (FALSE, 0);
     gtkContainerAdd (GTKCONTAINER (vbox), hbox);
     gtkWidgetShow (hbox);
-                                  
+
     check = gtkCheckButtonNewWithLabel ("Editable");
     gtkBoxPackStart (GTKBOX (hbox), check, TRUE, TRUE, 0);
     gSignalConnect (GOBJECT (check), "toggled",
 	              GCALLBACK (entryToggleEditable), (gpointer) entry);
     gtkToggleButtonSetActive (GTKTOGGLEBUTTON (check), TRUE);
     gtkWidgetShow (check);
-    
+
     check = gtkCheckButtonNewWithLabel ("Visible");
     gtkBoxPackStart (GTKBOX (hbox), check, TRUE, TRUE, 0);
     gSignalConnect (GOBJECT (check), "toggled",
 	              GCALLBACK (entryToggleVisibility), (gpointer) entry);
     gtkToggleButtonSetActive (GTKTOGGLEBUTTON (check), TRUE);
     gtkWidgetShow (check);
-                                   
+
     button = gtkButtonNewFromStock (GTKSTOCKCLOSE);
     gSignalConnectSwapped (GOBJECT (button), "clicked",
 			      GCALLBACK (gtkWidgetDestroy),
@@ -3718,7 +3718,7 @@ int main( int   argc,
     GTKWIDGETSETFLAGS (button, GTKCANDEFAULT);
     gtkWidgetGrabDefault (button);
     gtkWidgetShow (button);
-    
+
     gtkWidgetShow (window);
 
     gtkMain();
@@ -4020,7 +4020,7 @@ int main( int   argc,
   GtkWidget#valLabel;
   GtkAdjustment#adj;
 
-  # Initialise GTK 
+  # Initialise GTK
   gtkInit (&amp;argc, &amp;argv);
 
   window = gtkWindowNew (GTKWINDOWTOPLEVEL);
@@ -4034,90 +4034,90 @@ int main( int   argc,
   mainVbox = gtkVboxNew (FALSE, 5);
   gtkContainerSetBorderWidth (GTKCONTAINER (mainVbox), 10);
   gtkContainerAdd (GTKCONTAINER (window), mainVbox);
-  
+
   frame = gtkFrameNew ("Not accelerated");
   gtkBoxPackStart (GTKBOX (mainVbox), frame, TRUE, TRUE, 0);
-  
+
   vbox = gtkVboxNew (FALSE, 0);
   gtkContainerSetBorderWidth (GTKCONTAINER (vbox), 5);
   gtkContainerAdd (GTKCONTAINER (frame), vbox);
-  
-  # Day, month, year spinners 
-  
+
+  # Day, month, year spinners
+
   hbox = gtkHboxNew (FALSE, 0);
   gtkBoxPackStart (GTKBOX (vbox), hbox, TRUE, TRUE, 5);
-  
+
   vbox2 = gtkVboxNew (FALSE, 0);
   gtkBoxPackStart (GTKBOX (hbox), vbox2, TRUE, TRUE, 5);
-  
+
   label = gtkLabelNew ("Day :");
   gtkMiscSetAlignment (GTKMISC (label), 0, 0.5);
   gtkBoxPackStart (GTKBOX (vbox2), label, FALSE, TRUE, 0);
-  
+
   adj = (GtkAdjustment#) gtkAdjustmentNew (1.0, 1.0, 31.0, 1.0,
 					      5.0, 0.0);
   spinner = gtkSpinButtonNew (adj, 0, 0);
   gtkSpinButtonSetWrap (GTKSPINBUTTON (spinner), TRUE);
   gtkBoxPackStart (GTKBOX (vbox2), spinner, FALSE, TRUE, 0);
-  
+
   vbox2 = gtkVboxNew (FALSE, 0);
   gtkBoxPackStart (GTKBOX (hbox), vbox2, TRUE, TRUE, 5);
-  
+
   label = gtkLabelNew ("Month :");
   gtkMiscSetAlignment (GTKMISC (label), 0, 0.5);
   gtkBoxPackStart (GTKBOX (vbox2), label, FALSE, TRUE, 0);
-  
+
   adj = (GtkAdjustment#) gtkAdjustmentNew (1.0, 1.0, 12.0, 1.0,
 					      5.0, 0.0);
   spinner = gtkSpinButtonNew (adj, 0, 0);
   gtkSpinButtonSetWrap (GTKSPINBUTTON (spinner), TRUE);
   gtkBoxPackStart (GTKBOX (vbox2), spinner, FALSE, TRUE, 0);
-  
+
   vbox2 = gtkVboxNew (FALSE, 0);
   gtkBoxPackStart (GTKBOX (hbox), vbox2, TRUE, TRUE, 5);
-  
+
   label = gtkLabelNew ("Year :");
   gtkMiscSetAlignment (GTKMISC (label), 0, 0.5);
   gtkBoxPackStart (GTKBOX (vbox2), label, FALSE, TRUE, 0);
-  
+
   adj = (GtkAdjustment#) gtkAdjustmentNew (1998.0, 0.0, 2100.0,
 					      1.0, 100.0, 0.0);
   spinner = gtkSpinButtonNew (adj, 0, 0);
   gtkSpinButtonSetWrap (GTKSPINBUTTON (spinner), FALSE);
   gtkWidgetSetSizeRequest (spinner, 55, -1);
   gtkBoxPackStart (GTKBOX (vbox2), spinner, FALSE, TRUE, 0);
-  
+
   frame = gtkFrameNew ("Accelerated");
   gtkBoxPackStart (GTKBOX (mainVbox), frame, TRUE, TRUE, 0);
-  
+
   vbox = gtkVboxNew (FALSE, 0);
   gtkContainerSetBorderWidth (GTKCONTAINER (vbox), 5);
   gtkContainerAdd (GTKCONTAINER (frame), vbox);
-  
+
   hbox = gtkHboxNew (FALSE, 0);
   gtkBoxPackStart (GTKBOX (vbox), hbox, FALSE, TRUE, 5);
-  
+
   vbox2 = gtkVboxNew (FALSE, 0);
   gtkBoxPackStart (GTKBOX (hbox), vbox2, TRUE, TRUE, 5);
-  
+
   label = gtkLabelNew ("Value :");
   gtkMiscSetAlignment (GTKMISC (label), 0, 0.5);
   gtkBoxPackStart (GTKBOX (vbox2), label, FALSE, TRUE, 0);
-  
+
   adj = (GtkAdjustment#) gtkAdjustmentNew (0.0, -10000.0, 10000.0,
 					      0.5, 100.0, 0.0);
   spinner1 = gtkSpinButtonNew (adj, 1.0, 2);
   gtkSpinButtonSetWrap (GTKSPINBUTTON (spinner1), TRUE);
   gtkWidgetSetSizeRequest (spinner1, 100, -1);
   gtkBoxPackStart (GTKBOX (vbox2), spinner1, FALSE, TRUE, 0);
-  
+
   vbox2 = gtkVboxNew (FALSE, 0);
   gtkBoxPackStart (GTKBOX (hbox), vbox2, TRUE, TRUE, 5);
-  
+
   label = gtkLabelNew ("Digits :");
   gtkMiscSetAlignment (GTKMISC (label), 0, 0.5);
   gtkBoxPackStart (GTKBOX (vbox2), label, FALSE, TRUE, 0);
-  
+
   adj = (GtkAdjustment#) gtkAdjustmentNew (2, 1, 5, 1, 1, 0);
   spinner2 = gtkSpinButtonNew (adj, 0.0, 0);
   gtkSpinButtonSetWrap (GTKSPINBUTTON (spinner2), TRUE);
@@ -4125,26 +4125,26 @@ int main( int   argc,
 		    GCALLBACK (changeDigits),
 		    (gpointer) spinner2);
   gtkBoxPackStart (GTKBOX (vbox2), spinner2, FALSE, TRUE, 0);
-  
+
   hbox = gtkHboxNew (FALSE, 0);
   gtkBoxPackStart (GTKBOX (vbox), hbox, FALSE, TRUE, 5);
-  
+
   button = gtkCheckButtonNewWithLabel ("Snap to 0.5-ticks");
   gSignalConnect (GOBJECT (button), "clicked",
 		    GCALLBACK (toggleSnap),
 		    (gpointer) spinner1);
   gtkBoxPackStart (GTKBOX (vbox), button, TRUE, TRUE, 0);
   gtkToggleButtonSetActive (GTKTOGGLEBUTTON (button), TRUE);
-  
+
   button = gtkCheckButtonNewWithLabel ("Numeric only input mode");
   gSignalConnect (GOBJECT (button), "clicked",
 		    GCALLBACK (toggleNumeric),
 		    (gpointer) spinner1);
   gtkBoxPackStart (GTKBOX (vbox), button, TRUE, TRUE, 0);
   gtkToggleButtonSetActive (GTKTOGGLEBUTTON (button), TRUE);
-  
+
   valLabel = gtkLabelNew ("");
-  
+
   hbox = gtkHboxNew (FALSE, 0);
   gtkBoxPackStart (GTKBOX (vbox), hbox, FALSE, TRUE, 5);
   button = gtkButtonNewWithLabel ("Value as Int");
@@ -4153,20 +4153,20 @@ int main( int   argc,
 		    GCALLBACK (getValue),
 		    GINTTOPOINTER (1));
   gtkBoxPackStart (GTKBOX (hbox), button, TRUE, TRUE, 5);
-  
+
   button = gtkButtonNewWithLabel ("Value as Float");
   gObjectSetData (GOBJECT (button), "userData", valLabel);
   gSignalConnect (GOBJECT (button), "clicked",
 		    GCALLBACK (getValue),
 		    GINTTOPOINTER (2));
   gtkBoxPackStart (GTKBOX (hbox), button, TRUE, TRUE, 5);
-  
+
   gtkBoxPackStart (GTKBOX (vbox), valLabel, TRUE, TRUE, 0);
   gtkLabelSetText (GTKLABEL (valLabel), "0");
-  
+
   hbox = gtkHboxNew (FALSE, 0);
   gtkBoxPackStart (GTKBOX (mainVbox), hbox, FALSE, TRUE, 0);
-  
+
   button = gtkButtonNewWithLabel ("Close");
   gSignalConnectSwapped (GOBJECT (button), "clicked",
                             GCALLBACK (gtkWidgetDestroy),
@@ -4175,9 +4175,9 @@ int main( int   argc,
 
   gtkWidgetShowAll (window);
 
-  # Enter the event loop 
+  # Enter the event loop
   gtkMain ();
-    
+
   return 0;
 }
 
@@ -4200,12 +4200,12 @@ can type a different option directly into the text box.</para>
 identifies several of the components:</para>
 
 <programlisting role="R">
-struct GtkCombo { 
-        GtkHBox hbox; 
-        GtkWidget#entry; 
+struct GtkCombo {
+        GtkHBox hbox;
+        GtkWidget#entry;
         GtkWidget#button;
-        GtkWidget#popup; 
-        GtkWidget#popwin; 
+        GtkWidget#popup;
+        GtkWidget#popwin;
         GtkWidget#list;
 	...  };
 </programlisting>
@@ -4240,7 +4240,7 @@ moment, the quick and dirty explanation is that you need to set up a
 GList pointer, set it equal to NULL, then append strings to it with</para>
 
 <programlisting role="R">
-GList#gListAppend( GList#glist, 
+GList#gListAppend( GList#glist,
                       gpointer data );
 </programlisting>
 
@@ -4255,12 +4255,12 @@ pointer to the GList.</para>
 
     glist = gListAppend (glist, "String 1");
     glist = gListAppend (glist, "String 2");
-    glist = gListAppend (glist, "String 3"); 
+    glist = gListAppend (glist, "String 3");
     glist = gListAppend (glist, "String 4");
 
     gtkComboSetPopdownStrings (GTKCOMBO (combo), glist);
-    
-    # can free glist now, combo takes a copy 
+
+    # can free glist now, combo takes a copy
 </programlisting>
 
 <para>The combo widget makes a copy of the strings passed to it in the glist
@@ -4402,13 +4402,13 @@ following five options using the logical bitwise OR (|) operation:</para>
 <variablelist>
 <varlistentry>
 <term><literal>GTKCALENDARSHOWHEADING</literal></term>
-<listitem><para>this option specifies that the month and year should be shown 
+<listitem><para>this option specifies that the month and year should be shown
 when drawing the calendar.</para>
 </listitem>
 </varlistentry>
 <varlistentry>
 <term><literal>GTKCALENDARSHOWDAYNAMES</literal></term>
-<listitem><para>this option specifies that the three letter descriptions should 
+<listitem><para>this option specifies that the three letter descriptions should
 be displayed for each day (eg Mon,Tue, etc.).</para>
 </listitem>
 </varlistentry>
@@ -4442,7 +4442,7 @@ left to right.</para>
 date:</para>
 
 <programlisting role="R">
-gint gtkCalendarSelectMonth( GtkCalendar#calendar, 
+gint gtkCalendarSelectMonth( GtkCalendar#calendar,
                                 guint        month,
                                 guint        year );
 
@@ -4484,9 +4484,9 @@ elements are numbered 0 to n-1). For example:</para>
 
     ...
 
-    # Is day 7 marked? 
+    # Is day 7 marked?
     if (calendar->markedDate[7-1])
-       # day is marked 
+       # day is marked
 </programlisting>
 
 <para>Note that marks are persistent across month and year changes.</para>
@@ -4495,7 +4495,7 @@ elements are numbered 0 to n-1). For example:</para>
 selected date, month and/or year.</para>
 
 <programlisting role="R">
-void gtkCalendarGetDate( GtkCalendar#calendar, 
+void gtkCalendarGetDate( GtkCalendar#calendar,
                             guint      #year,
                             guint      #month,
                             guint      #day );
@@ -4556,7 +4556,7 @@ example code.</para>
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
- 
+
 
 #include &lt;stdio.h&gt;
 #include &lt;string.h&gt;
@@ -4581,14 +4581,14 @@ typedef struct CalendarData {
 enum {
   calendarShowHeader,
   calendarShowDays,
-  calendarMonthChange, 
+  calendarMonthChange,
   calendarShowWeek,
   calendarMondayFirst
 };
 
 #
 # GtkCalendar
- 
+
 
 static void calendarDateToString( CalendarData#data,
                                      char        #buffer,
@@ -4649,7 +4649,7 @@ static void calendarDaySelectedDoubleClick ( GtkWidget   #widget,
 
   if (GTKCALENDAR (data-&gt;window)-&gt;markedDate[day-1] == 0) {
     gtkCalendarMarkDay (GTKCALENDAR (data-&gt;window), day);
-  } else { 
+  } else {
     gtkCalendarUnmarkDay (GTKCALENDAR (data-&gt;window), day);
   }
 }
@@ -4695,7 +4695,7 @@ static void calendarSetFlags( CalendarData#calendar )
 {
   gint i;
   gint options = 0;
-  for (i = 0;i &lt; 5; i++) 
+  for (i = 0;i &lt; 5; i++)
     if (calendar-&gt;settings[i])
       {
 	options = options + (1 &lt;&lt; i);
@@ -4716,7 +4716,7 @@ static void calendarToggleFlag( GtkWidget   #toggle,
 
   calendar-&gt;settings[j] = !calendar-&gt;settings[j];
   calendarSetFlags (calendar);
-  
+
 }
 
 static void calendarFontSelectionOk( GtkWidget   #button,
@@ -4728,7 +4728,7 @@ static void calendarFontSelectionOk( GtkWidget   #button,
   if (calendar-&gt;window)
     {
       fontName = gtkFontSelectionDialogGetFontName (GTKFONTSELECTIONDIALOG (calendar-&gt;fontDialog));
-      if (fontName) 
+      if (fontName)
 	{
 	  style = gtkRcStyleNew ();
 	  pangoFontDescriptionFree (style-&gt;fontDesc);
@@ -4750,18 +4750,18 @@ static void calendarSelectFont( GtkWidget   #button,
     window = gtkFontSelectionDialogNew ("Font Selection Dialog");
     gReturnIfFail (GTKISFONTSELECTIONDIALOG (window));
     calendar-&gt;fontDialog = window;
-    
+
     gtkWindowSetPosition (GTKWINDOW (window), GTKWINPOSMOUSE);
-    
+
     gSignalConnect (window, "destroy",
 		      GCALLBACK (gtkWidgetDestroyed),
 		      &amp;calendar-&gt;fontDialog);
-    
+
     gSignalConnect (GTKFONTSELECTIONDIALOG (window)-&gt;okButton,
 		      "clicked", GCALLBACK (calendarFontSelectionOk),
 		      calendar);
     gSignalConnectSwapped (GTKFONTSELECTIONDIALOG (window)-&gt;cancelButton,
-			     "clicked", GCALLBACK (gtkWidgetDestroy), 
+			     "clicked", GCALLBACK (gtkWidgetDestroy),
 			     calendar-&gt;fontDialog);
   }
   window = calendar-&gt;fontDialog;
@@ -4787,7 +4787,7 @@ static void createCalendar( void )
   GtkWidget#bbox;
   static CalendarData calendarData;
   gint i;
-  
+
   struct {
     char#label;
   } flags[] =
@@ -4799,7 +4799,7 @@ static void createCalendar( void )
       { "Week Start Monday" }
     };
 
-  
+
   calendarData.window = NULL;
   calendarData.fontDialog = NULL;
 
@@ -4823,7 +4823,7 @@ static void createCalendar( void )
 
   #
   # The top part of the window, Calendar, flags and fontsel.
-   
+
 
   hbox = gtkHboxNew (FALSE, DEFPAD);
   gtkBoxPackStart (GTKBOX (vbox), hbox, TRUE, TRUE, DEFPAD);
@@ -4832,33 +4832,33 @@ static void createCalendar( void )
   gtkButtonBoxSetLayout (GTKBUTTONBOX (hbbox), GTKBUTTONBOXSPREAD);
   gtkBoxSetSpacing (GTKBOX (hbbox), 5);
 
-  # Calendar widget 
+  # Calendar widget
   frame = gtkFrameNew ("Calendar");
   gtkBoxPackStart(GTKBOX (hbbox), frame, FALSE, TRUE, DEFPAD);
   calendar=gtkCalendarNew ();
   calendarData.window = calendar;
   calendarSetFlags (&amp;calendarData);
-  gtkCalendarMarkDay (GTKCALENDAR (calendar), 19);	
+  gtkCalendarMarkDay (GTKCALENDAR (calendar), 19);
   gtkContainerAdd (GTKCONTAINER (frame), calendar);
-  gSignalConnect (calendar, "monthChanged", 
+  gSignalConnect (calendar, "monthChanged",
 		    GCALLBACK (calendarMonthChanged),
 		    &amp;calendarData);
-  gSignalConnect (calendar, "daySelected", 
+  gSignalConnect (calendar, "daySelected",
 		    GCALLBACK (calendarDaySelected),
 		    &amp;calendarData);
-  gSignalConnect (calendar, "daySelectedDoubleClick", 
+  gSignalConnect (calendar, "daySelectedDoubleClick",
 		    GCALLBACK (calendarDaySelectedDoubleClick),
 		    &amp;calendarData);
-  gSignalConnect (calendar, "prevMonth", 
+  gSignalConnect (calendar, "prevMonth",
 		    GCALLBACK (calendarPrevMonth),
 		    &amp;calendarData);
-  gSignalConnect (calendar, "nextMonth", 
+  gSignalConnect (calendar, "nextMonth",
 		    GCALLBACK (calendarNextMonth),
 		    &amp;calendarData);
-  gSignalConnect (calendar, "prevYear", 
+  gSignalConnect (calendar, "prevYear",
 		    GCALLBACK (calendarPrevYear),
 		    &amp;calendarData);
-  gSignalConnect (calendar, "nextYear", 
+  gSignalConnect (calendar, "nextYear",
 		    GCALLBACK (calendarNextYear),
 		    &amp;calendarData);
 
@@ -4868,8 +4868,8 @@ static void createCalendar( void )
 
   vbox2 = gtkVboxNew (FALSE, DEFPAD);
   gtkBoxPackStart (GTKBOX (hbox), vbox2, FALSE, FALSE, DEFPAD);
-  
-  # Build the Right frame with the flags in  
+
+  # Build the Right frame with the flags in
 
   frame = gtkFrameNew ("Flags");
   gtkBoxPackStart (GTKBOX (vbox2), frame, TRUE, TRUE, DEFPAD);
@@ -4886,7 +4886,7 @@ static void createCalendar( void )
       gtkBoxPackStart (GTKBOX (vbox3), toggle, TRUE, TRUE, 0);
       calendarData.flagCheckboxes[i] = toggle;
     }
-  # Build the right font-button  
+  # Build the right font-button
   button = gtkButtonNewWithLabel ("Font...");
   gSignalConnect (button,
 		    "clicked",
@@ -4896,14 +4896,14 @@ static void createCalendar( void )
 
   #
   #  Build the Signal-event part.
-   
+
 
   frame = gtkFrameNew ("Signal events");
   gtkBoxPackStart (GTKBOX (vbox), frame, TRUE, TRUE, DEFPAD);
 
   vbox2 = gtkVboxNew (TRUE, DEFPADSMALL);
   gtkContainerAdd (GTKCONTAINER (frame), vbox2);
-  
+
   hbox = gtkHboxNew (FALSE, 3);
   gtkBoxPackStart (GTKBOX (vbox2), hbox, FALSE, TRUE, 0);
   label = gtkLabelNew ("Signal:");
@@ -4930,8 +4930,8 @@ static void createCalendar( void )
   gtkButtonBoxSetLayout (GTKBUTTONBOX (bbox), GTKBUTTONBOXEND);
 
   button = gtkButtonNewWithLabel ("Close");
-  gSignalConnect (button, "clicked", 
-		    GCALLBACK (gtkMainQuit), 
+  gSignalConnect (button, "clicked",
+		    GCALLBACK (gtkMainQuit),
 		    NULL);
   gtkContainerAdd (GTKCONTAINER (bbox), button);
   GTKWIDGETSETFLAGS (button, GTKCANDEFAULT);
@@ -4981,7 +4981,7 @@ GtkColorSelectionDialog.</para>
 <programlisting role="R">
 GtkWidget#gtkColorSelectionNew( void );
 </programlisting>
-	
+
 <para>You'll probably not be using this constructor directly. It creates an
 orphan ColorSelection widget which you'll have to parent
 yourself. The ColorSelection widget inherits from the VBox
@@ -5017,9 +5017,9 @@ void gtkColorSelectionSetCurrentAlpha( GtkColorSelection#colorsel,
                                             guint16            alpha );
 </programlisting>
 
-<para>You can set the current color explicitly by calling 
-gtkColorSelectionSetCurrentColor() with a pointer to a GdkColor. 
-Setting the opacity (alpha channel) is done with 
+<para>You can set the current color explicitly by calling
+gtkColorSelectionSetCurrentColor() with a pointer to a GdkColor.
+Setting the opacity (alpha channel) is done with
 gtkColorSelectionSetCurrentAlpha(). The alpha value should be between
 0 (fully transparent) and 65535 (fully opaque).
 </para>
@@ -5073,7 +5073,7 @@ GtkWidget#colorseldlg = NULL;
 GtkWidget#drawingarea = NULL;
 GdkColor color;
 
-# Color changed handler 
+# Color changed handler
 
 static void colorChangedCb( GtkWidget        #widget,
                               GtkColorSelection#colorsel )
@@ -5081,10 +5081,10 @@ static void colorChangedCb( GtkWidget        #widget,
   GdkColor ncolor;
 
   gtkColorSelectionGetCurrentColor (colorsel, &amp;ncolor);
-  gtkWidgetModifyBg (drawingarea, GTKSTATENORMAL, &amp;ncolor);       
+  gtkWidgetModifyBg (drawingarea, GTKSTATENORMAL, &amp;ncolor);
 }
 
-# Drawingarea event handler 
+# Drawingarea event handler
 
 static gboolean areaEvent( GtkWidget#widget,
                             GdkEvent #event,
@@ -5094,17 +5094,17 @@ static gboolean areaEvent( GtkWidget#widget,
   gint response;
   GtkColorSelection#colorsel;
 
-  # Check if we've received a button pressed event 
+  # Check if we've received a button pressed event
 
   if (event-&gt;type == GDKBUTTONPRESS)
     {
       handled = TRUE;
 
-       # Create color selection dialog 
+       # Create color selection dialog
       if (colorseldlg == NULL)
         colorseldlg = gtkColorSelectionDialogNew ("Select background color");
 
-      # Get the ColorSelection widget 
+      # Get the ColorSelection widget
       colorsel = GTKCOLORSELECTION (GTKCOLORSELECTIONDIALOG (colorseldlg)-&gt;colorsel);
 
       gtkColorSelectionSetPreviousColor (colorsel, &amp;color);
@@ -5112,16 +5112,16 @@ static gboolean areaEvent( GtkWidget#widget,
       gtkColorSelectionSetHasPalette (colorsel, TRUE);
 
       # Connect to the "colorChanged" signal, set the client-data
-      # to the colorsel widget 
+      # to the colorsel widget
       gSignalConnect (GOBJECT (colorsel), "colorChanged",
                         GCALLBACK (colorChangedCb), (gpointer) colorsel);
 
-      # Show the dialog 
+      # Show the dialog
       response = gtkDialogRun (GTKDIALOG (colorseldlg));
 
       if (response == GTKRESPONSEOK)
         gtkColorSelectionGetCurrentColor (colorsel, &amp;color);
-      else 
+      else
         gtkWidgetModifyBg (drawingarea, GTKSTATENORMAL, &amp;color);
 
       gtkWidgetHide (colorseldlg);
@@ -5130,7 +5130,7 @@ static gboolean areaEvent( GtkWidget#widget,
   return handled;
 }
 
-# Close down and exit handler 
+# Close down and exit handler
 
 static gboolean destroyWindow( GtkWidget#widget,
                                 GdkEvent #event,
@@ -5140,56 +5140,56 @@ static gboolean destroyWindow( GtkWidget#widget,
   return TRUE;
 }
 
-# Main 
+# Main
 
 gint main( gint   argc,
            gchar#argv[] )
 {
   GtkWidget#window;
 
-  # Initialize the toolkit, remove gtk-related commandline stuff 
+  # Initialize the toolkit, remove gtk-related commandline stuff
 
   gtkInit (&amp;argc, &amp;argv);
 
-  # Create toplevel window, set title and policies 
+  # Create toplevel window, set title and policies
 
   window = gtkWindowNew (GTKWINDOWTOPLEVEL);
   gtkWindowSetTitle (GTKWINDOW (window), "Color selection test");
   gtkWindowSetPolicy (GTKWINDOW (window), TRUE, TRUE, TRUE);
 
-  # Attach to the "delete" and "destroy" events so we can exit 
+  # Attach to the "delete" and "destroy" events so we can exit
 
   gSignalConnect (GTKOBJECT (window), "deleteEvent",
                     GTKSIGNALFUNC (destroyWindow), (gpointer) window);
-  
-  # Create drawingarea, set size and catch button events 
+
+  # Create drawingarea, set size and catch button events
 
   drawingarea = gtkDrawingAreaNew ();
 
   color.red = 0;
   color.blue = 65535;
   color.green = 0;
-  gtkWidgetModifyBg (drawingarea, GTKSTATENORMAL, &amp;color);       
+  gtkWidgetModifyBg (drawingarea, GTKSTATENORMAL, &amp;color);
 
   gtkWidgetSetSizeRequest (GTKWIDGET (drawingarea), 200, 200);
 
   gtkWidgetSetEvents (drawingarea, GDKBUTTONPRESSMASK);
 
-  gSignalConnect (GTKOBJECT (drawingarea), "event", 
+  gSignalConnect (GTKOBJECT (drawingarea), "event",
 	            GTKSIGNALFUNC (areaEvent), (gpointer) drawingarea);
-  
-  # Add drawingarea to window, then show them both 
+
+  # Add drawingarea to window, then show them both
 
   gtkContainerAdd (GTKCONTAINER (window), drawingarea);
 
   gtkWidgetShow (drawingarea);
   gtkWidgetShow (window);
-  
-  # Enter the gtk main loop (this never returns) 
+
+  # Enter the gtk main loop (this never returns)
 
   gtkMain ();
 
-  # Satisfy grumpy compilers 
+  # Satisfy grumpy compilers
 
   return 0;
 }
@@ -5220,14 +5220,14 @@ void gtkFileSelectionSetFilename( GtkFileSelection#filesel,
                                       const gchar     #filename );
 </programlisting>
 
-<para>To grab the text that the user has entered or clicked on, use this 
+<para>To grab the text that the user has entered or clicked on, use this
 function:</para>
 
 <programlisting role="R">
 gchar#gtkFileSelectionGetFilename( GtkFileSelection#filesel );
 </programlisting>
 
-<para>There are also pointers to the widgets contained within the file 
+<para>There are also pointers to the widgets contained within the file
 selection widget. These are:</para>
 
 <programlisting role="R">
@@ -5240,7 +5240,7 @@ selection widget. These are:</para>
   cancelButton
   helpButton
 </programlisting>
- 
+
 <para>Most likely you will want to use the okButton, cancelButton, and
 helpButton pointers in signaling their use.</para>
 
@@ -5262,7 +5262,7 @@ screen, it does nothing as there is not a signal attached to it.</para>
 
 #include &lt;gtk/gtk.h&gt;
 
-# Get the selected filename and print it to the console 
+# Get the selected filename and print it to the console
 static void fileOkSel( GtkWidget       #w,
                          GtkFileSelection#fs )
 {
@@ -5273,28 +5273,28 @@ int main( int   argc,
           char#argv[] )
 {
     GtkWidget#filew;
-    
+
     gtkInit (&amp;argc, &amp;argv);
-    
-    # Create a new file selection widget 
+
+    # Create a new file selection widget
     filew = gtkFileSelectionNew ("File selection");
-    
+
     gSignalConnect (GOBJECT (filew), "destroy",
 	              GCALLBACK (gtkMainQuit), NULL);
-    # Connect the okButton to fileOkSel function 
+    # Connect the okButton to fileOkSel function
     gSignalConnect (GOBJECT (GTKFILESELECTION (filew)-&gt;okButton),
 		      "clicked", GCALLBACK (fileOkSel), (gpointer) filew);
-    
-    # Connect the cancelButton to destroy the widget 
+
+    # Connect the cancelButton to destroy the widget
     gSignalConnectSwapped (GOBJECT (GTKFILESELECTION (filew)-&gt;cancelButton),
 	                      "clicked", GCALLBACK (gtkWidgetDestroy),
 			      GOBJECT (filew));
-    
+
     # Lets set the filename, as if this were a save dialog, and we are giving
-     a default filename 
-    gtkFileSelectionSetFilename (GTKFILESELECTION(filew), 
+     a default filename
+    gtkFileSelectionSetFilename (GTKFILESELECTION(filew),
 				     "penguin.png");
-    
+
     gtkWidgetShow (filew);
     gtkMain ();
     return 0;
@@ -5309,7 +5309,7 @@ int main( int   argc,
 <chapter id="ch-ContainerWidgets">
 <title>Container Widgets</title>
 
-<!-- ----------------------------------------------------------------- -->   
+<!-- ----------------------------------------------------------------- -->
 <sect1 id="sec-EventBox">
 <title>The EventBox</title>
 
@@ -5367,47 +5367,47 @@ int main( int argc,
     GtkWidget#window;
     GtkWidget#eventBox;
     GtkWidget#label;
-    
+
     gtkInit (&amp;argc, &amp;argv);
-    
+
     window = gtkWindowNew (GTKWINDOWTOPLEVEL);
-    
+
     gtkWindowSetTitle (GTKWINDOW (window), "Event Box");
-    
+
     gSignalConnect (GOBJECT (window), "destroy",
 	              GCALLBACK (exit), NULL);
-    
+
     gtkContainerSetBorderWidth (GTKCONTAINER (window), 10);
-    
-    # Create an EventBox and add it to our toplevel window 
-    
+
+    # Create an EventBox and add it to our toplevel window
+
     eventBox = gtkEventBoxNew ();
     gtkContainerAdd (GTKCONTAINER (window), eventBox);
     gtkWidgetShow (eventBox);
-    
-    # Create a long label 
-    
+
+    # Create a long label
+
     label = gtkLabelNew ("Click here to quit, quit, quit, quit, quit");
     gtkContainerAdd (GTKCONTAINER (eventBox), label);
     gtkWidgetShow (label);
-    
-    # Clip it short. 
+
+    # Clip it short.
     gtkWidgetSetSizeRequest (label, 110, 20);
-    
-    # And bind an action to it 
+
+    # And bind an action to it
     gtkWidgetSetEvents (eventBox, GDKBUTTONPRESSMASK);
     gSignalConnect (GOBJECT (eventBox), "buttonPressEvent",
 	              GCALLBACK (exit), NULL);
-    
-    # Yet one more thing you need an X window for ... 
-    
+
+    # Yet one more thing you need an X window for ...
+
     gtkWidgetRealize (eventBox);
     gdkWindowSetCursor (eventBox-&gt;window, gdkCursorNew (GDKHAND1));
-    
+
     gtkWidgetShow (window);
-    
+
     gtkMain ();
-    
+
     return 0;
 }
 <!-- example-end -->
@@ -5415,7 +5415,7 @@ int main( int argc,
 
 </sect1>
 
-<!-- ----------------------------------------------------------------- -->   
+<!-- ----------------------------------------------------------------- -->
 <sect1 id="sec-TheAlignmentWidget">
 <title>The Alignment widget</title>
 
@@ -5501,8 +5501,8 @@ gboolean gtkFixedGetHasWindow( GtkFixed#fixed );
 </programlisting>
 
 <para>Normally, Fixed widgets don't have their own X window. Since this is
-different from the behaviour of Fixed widgets in earlier releases of GTK, 
-the function gtkFixedSetHasWindow() allows the creation of Fixed widgets 
+different from the behaviour of Fixed widgets in earlier releases of GTK,
+the function gtkFixedSetHasWindow() allows the creation of Fixed widgets
 <emphasis>with</emphasis> their own window. It has to be called before
 realizing the widget.</para>
 
@@ -5523,71 +5523,71 @@ realizing the widget.</para>
 
 # I'm going to be lazy and use some global variables to
 # store the position of the widget within the fixed
-# container 
+# container
 gint x = 50;
 gint y = 50;
 
 # This callback function moves the button to a new position
-# in the Fixed container. 
+# in the Fixed container.
 static void moveButton( GtkWidget#widget,
                          GtkWidget#fixed )
 {
   x = (x + 30) % 300;
   y = (y + 50) % 300;
-  gtkFixedMove (GTKFIXED (fixed), widget, x, y); 
+  gtkFixedMove (GTKFIXED (fixed), widget, x, y);
 }
 
 int main( int   argc,
           char#argv[] )
 {
-  # GtkWidget is the storage type for widgets 
+  # GtkWidget is the storage type for widgets
   GtkWidget#window;
   GtkWidget#fixed;
   GtkWidget#button;
   gint i;
 
-  # Initialise GTK 
+  # Initialise GTK
   gtkInit (&amp;argc, &amp;argv);
-    
-  # Create a new window 
+
+  # Create a new window
   window = gtkWindowNew (GTKWINDOWTOPLEVEL);
   gtkWindowSetTitle (GTKWINDOW (window), "Fixed Container");
 
-  # Here we connect the "destroy" event to a signal handler  
+  # Here we connect the "destroy" event to a signal handler
   gSignalConnect (GOBJECT (window), "destroy",
 		    GCALLBACK (gtkMainQuit), NULL);
- 
-  # Sets the border width of the window. 
+
+  # Sets the border width of the window.
   gtkContainerSetBorderWidth (GTKCONTAINER (window), 10);
 
-  # Create a Fixed Container 
+  # Create a Fixed Container
   fixed = gtkFixedNew ();
   gtkContainerAdd (GTKCONTAINER (window), fixed);
   gtkWidgetShow (fixed);
-  
+
   for (i = 1 ; i &lt;= 3 ; i++) {
-    # Creates a new button with the label "Press me" 
+    # Creates a new button with the label "Press me"
     button = gtkButtonNewWithLabel ("Press me");
-  
+
     # When the button receives the "clicked" signal, it will call the
     # function moveButton() passing it the Fixed Container as its
-    # argument. 
+    # argument.
     gSignalConnect (GOBJECT (button), "clicked",
 		      GCALLBACK (moveButton), (gpointer) fixed);
-  
-    # This packs the button into the fixed containers window. 
+
+    # This packs the button into the fixed containers window.
     gtkFixedPut (GTKFIXED (fixed), button, i*50, i*50);
-  
-    # The final step is to display this newly created widget. 
+
+    # The final step is to display this newly created widget.
     gtkWidgetShow (button);
   }
 
-  # Display the window 
+  # Display the window
   gtkWidgetShow (window);
-    
-  # Enter the event loop 
+
+  # Enter the event loop
   gtkMain ();
-    
+
   return 0;
 }
 <!-- example-end -->
@@ -5729,53 +5729,53 @@ void gtkFrameSetShadowType( GtkFrame     #frame,
 int main( int   argc,
           char#argv[] )
 {
-  # GtkWidget is the storage type for widgets 
+  # GtkWidget is the storage type for widgets
   GtkWidget#window;
   GtkWidget#frame;
 
-  # Initialise GTK 
+  # Initialise GTK
   gtkInit (&amp;argc, &amp;argv);
-    
-  # Create a new window 
+
+  # Create a new window
   window = gtkWindowNew (GTKWINDOWTOPLEVEL);
   gtkWindowSetTitle (GTKWINDOW (window), "Frame Example");
 
-  # Here we connect the "destroy" event to a signal handler  
+  # Here we connect the "destroy" event to a signal handler
   gSignalConnect (GOBJECT (window), "destroy",
 		    GCALLBACK (gtkMainQuit), NULL);
 
   gtkWidgetSetSizeRequest (window, 300, 300);
-  # Sets the border width of the window. 
+  # Sets the border width of the window.
   gtkContainerSetBorderWidth (GTKCONTAINER (window), 10);
 
-  # Create a Frame 
+  # Create a Frame
   frame = gtkFrameNew (NULL);
   gtkContainerAdd (GTKCONTAINER (window), frame);
 
-  # Set the frame's label 
+  # Set the frame's label
   gtkFrameSetLabel (GTKFRAME (frame), "GTK Frame Widget");
 
-  # Align the label at the right of the frame 
+  # Align the label at the right of the frame
   gtkFrameSetLabelAlign (GTKFRAME (frame), 1.0, 0.0);
 
-  # Set the style of the frame 
+  # Set the style of the frame
   gtkFrameSetShadowType (GTKFRAME (frame), GTKSHADOWETCHEDOUT);
 
   gtkWidgetShow (frame);
-  
-  # Display the window 
+
+  # Display the window
   gtkWidgetShow (window);
-    
-  # Enter the event loop 
+
+  # Enter the event loop
   gtkMain ();
-    
+
   return 0;
 }
 <!-- example-end -->
 </programlisting>
 </sect1>
 
-<!-- ----------------------------------------------------------------- -->   
+<!-- ----------------------------------------------------------------- -->
 <sect1 id="sec-AspectFrames">
 <title>Aspect Frames</title>
 
@@ -5786,7 +5786,7 @@ space if necessary. This is useful, for instance, if you want to
 preview a larger image. The size of the preview should vary when the
 user resizes the window, but the aspect ratio needs to always match
 the original image.</para>
-  
+
 <para>To create a new aspect frame use:</para>
 
 <programlisting role="R">
@@ -5796,12 +5796,12 @@ GtkWidget#gtkAspectFrameNew( const gchar#label,
                                  gfloat       ratio,
                                  gboolean     obeyChild);
 </programlisting>
-   
+
 <para><literal>xalign</literal> and <literal>yalign</literal> specify alignment as with Alignment
 widgets. If <literal>obeyChild</literal> is TRUE, the aspect ratio of a child
 widget will match the aspect ratio of the ideal size it requests.
 Otherwise, it is given by <literal>ratio</literal>.</para>
-   
+
 <para>To change the options of an existing aspect frame, you can use:</para>
 
 <programlisting role="R">
@@ -5811,7 +5811,7 @@ void gtkAspectFrameSet( GtkAspectFrame#aspectFrame,
                            gfloat          ratio,
                            gboolean        obeyChild);
 </programlisting>
-   
+
 <para>As an example, the following program uses an AspectFrame to present a
 drawing area whose aspect ratio will always be 2:1, no matter how the
 user resizes the top-level window.</para>
@@ -5828,7 +5828,7 @@ user resizes the top-level window.</para>
 <!-- example-start aspectframe aspectframe.c -->
 
 #include &lt;gtk/gtk.h&gt;
-   
+
 int main( int argc,
           char#argv[] )
 {
@@ -5836,34 +5836,34 @@ int main( int argc,
     GtkWidget#aspectFrame;
     GtkWidget#drawingArea;
     gtkInit (&amp;argc, &amp;argv);
-   
+
     window = gtkWindowNew (GTKWINDOWTOPLEVEL);
     gtkWindowSetTitle (GTKWINDOW (window), "Aspect Frame");
     gSignalConnect (GOBJECT (window), "destroy",
 	              GCALLBACK (gtkMainQuit), NULL);
     gtkContainerSetBorderWidth (GTKCONTAINER (window), 10);
-   
-    # Create an aspectFrame and add it to our toplevel window 
-   
-    aspectFrame = gtkAspectFrameNew ("2x1", # label 
-                                         0.5, # center x 
-                                         0.5, # center y 
-                                         2, # xsize/ysize = 2 
+
+    # Create an aspectFrame and add it to our toplevel window
+
+    aspectFrame = gtkAspectFrameNew ("2x1", # label
+                                         0.5, # center x
+                                         0.5, # center y
+                                         2, # xsize/ysize = 2
                                          FALSE # ignore child's aspect );
-   
+
     gtkContainerAdd (GTKCONTAINER (window), aspectFrame);
     gtkWidgetShow (aspectFrame);
-   
-    # Now add a child widget to the aspect frame 
-   
+
+    # Now add a child widget to the aspect frame
+
     drawingArea = gtkDrawingAreaNew ();
-   
+
     # Ask for a 200x200 window, but the AspectFrame will give us a 200x100
-    # window since we are forcing a 2x1 aspect ratio 
+    # window since we are forcing a 2x1 aspect ratio
     gtkWidgetSetSizeRequest (drawingArea, 200, 200);
     gtkContainerAdd (GTKCONTAINER (aspectFrame), drawingArea);
     gtkWidgetShow (drawingArea);
-   
+
     gtkWidgetShow (window);
     gtkMain ();
     return 0;
@@ -5873,7 +5873,7 @@ int main( int argc,
 
 </sect1>
 
-<!-- ----------------------------------------------------------------- -->   
+<!-- ----------------------------------------------------------------- -->
 <sect1 id="sec-PanedWindowWidgets">
 <title>Paned Window Widgets</title>
 
@@ -5882,7 +5882,7 @@ into two parts, with the relative size of the two parts controlled by
 the user. A groove is drawn between the two portions with a handle
 that the user can drag to change the ratio. The division can either be
 horizontal (HPaned) or vertical (VPaned).</para>
-   
+
 <para>To create a new paned window, call one of:</para>
 
 <programlisting role="R">
@@ -5931,8 +5931,8 @@ window.</para>
 
 #include &lt;stdio.h&gt;
 #include &lt;gtk/gtk.h&gt;
-   
-# Create the list of "messages" 
+
+# Create the list of "messages"
 static GtkWidget#createList( void )
 {
 
@@ -5944,56 +5944,56 @@ static GtkWidget#createList( void )
     GtkTreeViewColumn#column;
 
     int i;
-   
-    # Create a new scrolled window, with scrollbars only if needed 
+
+    # Create a new scrolled window, with scrollbars only if needed
     scrolledWindow = gtkScrolledWindowNew (NULL, NULL);
     gtkScrolledWindowSetPolicy (GTKSCROLLEDWINDOW (scrolledWindow),
-				    GTKPOLICYAUTOMATIC, 
+				    GTKPOLICYAUTOMATIC,
 				    GTKPOLICYAUTOMATIC);
-   
+
     model = gtkListStoreNew (1, GTYPESTRING);
     treeView = gtkTreeViewNew ();
-    gtkScrolledWindowAddWithViewport (GTKSCROLLEDWINDOW (scrolledWindow), 
+    gtkScrolledWindowAddWithViewport (GTKSCROLLEDWINDOW (scrolledWindow),
                                            treeView);
     gtkTreeViewSetModel (GTKTREEVIEW (treeView), GTKTREEMODEL (model));
     gtkWidgetShow (treeView);
-   
-    # Add some messages to the window 
+
+    # Add some messages to the window
     for (i = 0; i &lt; 10; i++) {
         gchar#msg = gStrdupPrintf ("Message #%d", i);
         gtkListStoreAppend (GTKLISTSTORE (model), &amp;iter);
-        gtkListStoreSet (GTKLISTSTORE (model), 
+        gtkListStoreSet (GTKLISTSTORE (model),
 	                    &amp;iter,
                             0, msg,
 	                    -1);
 	gFree (msg);
     }
-   
+
     cell = gtkCellRendererTextNew ();
 
     column = gtkTreeViewColumnNewWithAttributes ("Messages",
                                                        cell,
                                                        "text", 0,
                                                        NULL);
-  
+
     gtkTreeViewAppendColumn (GTKTREEVIEW (treeView),
 	  		         GTKTREEVIEWCOLUMN (column));
 
     return scrolledWindow;
 }
-   
+
 # Add some text to our text widget - this is a callback that is invoked
 when our window is realized. We could also force our window to be
 realized with gtkWidgetRealize, but it would have to be part of
-a hierarchy first 
+a hierarchy first
 
 static void insertText( GtkTextBuffer#buffer )
 {
    GtkTextIter iter;
- 
+
    gtkTextBufferGetIterAtOffset (buffer, &amp;iter, 0);
 
-   gtkTextBufferInsert (buffer, &amp;iter,   
+   gtkTextBufferInsert (buffer, &amp;iter,
     "From: pathfinder@nasa.gov\n"
     "To: mom@nasa.gov\n"
     "Subject: Made it!\n"
@@ -6003,8 +6003,8 @@ static void insertText( GtkTextBuffer#buffer )
     "Sojourner says hi. See you soon.\n"
     " -Path\n", -1);
 }
-   
-# Create a scrolled text area that displays a "message" 
+
+# Create a scrolled text area that displays a "message"
 static GtkWidget#createText( void )
 {
    GtkWidget#scrolledWindow;
@@ -6026,7 +6026,7 @@ static GtkWidget#createText( void )
 
    return scrolledWindow;
 }
-   
+
 int main( int   argc,
           char#argv[] )
 {
@@ -6036,7 +6036,7 @@ int main( int   argc,
     GtkWidget#text;
 
     gtkInit (&amp;argc, &amp;argv);
-   
+
     window = gtkWindowNew (GTKWINDOWTOPLEVEL);
     gtkWindowSetTitle (GTKWINDOW (window), "Paned Windows");
     gSignalConnect (GOBJECT (window), "destroy",
@@ -6044,18 +6044,18 @@ int main( int   argc,
     gtkContainerSetBorderWidth (GTKCONTAINER (window), 10);
     gtkWidgetSetSizeRequest (GTKWIDGET (window), 450, 400);
 
-    # create a vpaned widget and add it to our toplevel window 
-   
+    # create a vpaned widget and add it to our toplevel window
+
     vpaned = gtkVpanedNew ();
     gtkContainerAdd (GTKCONTAINER (window), vpaned);
     gtkWidgetShow (vpaned);
-   
-    # Now create the contents of the two halves of the window 
-   
+
+    # Now create the contents of the two halves of the window
+
     list = createList ();
     gtkPanedAdd1 (GTKPANED (vpaned), list);
     gtkWidgetShow (list);
-   
+
     text = createText ();
     gtkPanedAdd2 (GTKPANED (vpaned), text);
     gtkWidgetShow (text);
@@ -6125,7 +6125,7 @@ void gtkViewportSetShadowType( GtkViewport  #viewport,
   GTKSHADOWETCHEDIN,
   GTKSHADOWETCHEDOUT
 </programlisting>
- 
+
 </sect1>
 
 <!-- ----------------------------------------------------------------- -->
@@ -6156,7 +6156,7 @@ void gtkScrolledWindowSetPolicy( GtkScrolledWindow#scrolledWindow,
 
 <para>This sets the policy to be used with respect to the scrollbars.
 The first argument is the scrolled window you wish to change. The second
-sets the policy for the horizontal scrollbar, and the third the policy for 
+sets the policy for the horizontal scrollbar, and the third the policy for
 the vertical scrollbar.</para>
 
 <para>The policy may be one of <literal>GTKPOLICYAUTOMATIC</literal> or
@@ -6205,49 +6205,49 @@ int main( int   argc,
     GtkWidget#button;
     char buffer[32];
     int i, j;
-    
+
     gtkInit (&amp;argc, &amp;argv);
-    
+
     # Create a new dialog window for the scrolled window to be
-    # packed into.  
+    # packed into.
     window = gtkDialogNew ();
     gSignalConnect (GOBJECT (window), "destroy",
 		      GCALLBACK (destroy), NULL);
     gtkWindowSetTitle (GTKWINDOW (window), "GtkScrolledWindow example");
     gtkContainerSetBorderWidth (GTKCONTAINER (window), 0);
     gtkWidgetSetSizeRequest (window, 300, 300);
-    
-    # create a new scrolled window. 
+
+    # create a new scrolled window.
     scrolledWindow = gtkScrolledWindowNew (NULL, NULL);
-    
+
     gtkContainerSetBorderWidth (GTKCONTAINER (scrolledWindow), 10);
-    
+
     # the policy is one of GTKPOLICY AUTOMATIC, or GTKPOLICYALWAYS.
     # GTKPOLICYAUTOMATIC will automatically decide whether you need
     # scrollbars, whereas GTKPOLICYALWAYS will always leave the scrollbars
-    # there.  The first one is the horizontal scrollbar, the second, 
-    # the vertical. 
+    # there.  The first one is the horizontal scrollbar, the second,
+    # the vertical.
     gtkScrolledWindowSetPolicy (GTKSCROLLEDWINDOW (scrolledWindow),
                                     GTKPOLICYAUTOMATIC, GTKPOLICYALWAYS);
-    # The dialog window is created with a vbox packed into it. 								
-    gtkBoxPackStart (GTKBOX (GTKDIALOG(window)-&gt;vbox), scrolledWindow, 
+    # The dialog window is created with a vbox packed into it.
+    gtkBoxPackStart (GTKBOX (GTKDIALOG(window)-&gt;vbox), scrolledWindow,
 			TRUE, TRUE, 0);
     gtkWidgetShow (scrolledWindow);
-    
-    # create a table of 10 by 10 squares. 
+
+    # create a table of 10 by 10 squares.
     table = gtkTableNew (10, 10, FALSE);
-    
-    # set the spacing to 10 on x and 10 on y 
+
+    # set the spacing to 10 on x and 10 on y
     gtkTableSetRowSpacings (GTKTABLE (table), 10);
     gtkTableSetColSpacings (GTKTABLE (table), 10);
-    
-    # pack the table into the scrolled window 
+
+    # pack the table into the scrolled window
     gtkScrolledWindowAddWithViewport (
                    GTKSCROLLEDWINDOW (scrolledWindow), table);
     gtkWidgetShow (table);
-    
+
     # this simply creates a grid of toggle buttons on the table
-    # to demonstrate the scrolled window. 
+    # to demonstrate the scrolled window.
     for (i = 0; i &lt; 10; i++)
        for (j = 0; j &lt; 10; j++) {
           sprintf (buffer, "button (%d,%d)\n", i, j);
@@ -6256,27 +6256,27 @@ int main( int   argc,
 	                             i, i+1, j, j+1);
           gtkWidgetShow (button);
        }
-    
-    # Add a "close" button to the bottom of the dialog 
+
+    # Add a "close" button to the bottom of the dialog
     button = gtkButtonNewWithLabel ("close");
     gSignalConnectSwapped (GOBJECT (button), "clicked",
 			      GCALLBACK (gtkWidgetDestroy),
 			      GOBJECT (window));
-    
-    # this makes it so the button is the default. 
-    
+
+    # this makes it so the button is the default.
+
     GTKWIDGETSETFLAGS (button, GTKCANDEFAULT);
     gtkBoxPackStart (GTKBOX (GTKDIALOG (window)-&gt;actionArea), button, TRUE, TRUE, 0);
-    
+
     # This grabs this button to be the default button. Simply hitting
-    # the "Enter" key will cause this button to activate. 
+    # the "Enter" key will cause this button to activate.
     gtkWidgetGrabDefault (button);
     gtkWidgetShow (button);
-    
+
     gtkWidgetShow (window);
-    
+
     gtkMain();
-    
+
     return 0;
 }
 <!-- example-end -->
@@ -6288,7 +6288,7 @@ the default size of the window or other widgets.</para>
 
 </sect1>
 
-<!-- ----------------------------------------------------------------- -->   
+<!-- ----------------------------------------------------------------- -->
 <sect1 id="sec-ButtonBoxes">
 <title>Button Boxes</title>
 
@@ -6325,7 +6325,7 @@ for Button Boxes.</para>
 
 #include &lt;gtk/gtk.h&gt;
 
-# Create a Button Box with the specified parameters 
+# Create a Button Box with the specified parameters
 static GtkWidget#createBbox( gint  horizontal,
                                char#title,
                                gint  spacing,
@@ -6347,7 +6347,7 @@ static GtkWidget#createBbox( gint  horizontal,
   gtkContainerSetBorderWidth (GTKCONTAINER (bbox), 5);
   gtkContainerAdd (GTKCONTAINER (frame), bbox);
 
-  # Set the appearance of the Button Box 
+  # Set the appearance of the Button Box
   gtkButtonBoxSetLayout (GTKBUTTONBOX (bbox), layout);
   gtkBoxSetSpacing (GTKBOX (bbox), spacing);
   #gtkButtonBoxSetChildSize (GTKBUTTONBOX (bbox), childW, childH);
@@ -6374,7 +6374,7 @@ int main( int   argc,
   GtkWidget#frameHorz;
   GtkWidget#frameVert;
 
-  # Initialize GTK 
+  # Initialize GTK
   gtkInit (&amp;argc, &amp;argv);
 
   window = gtkWindowNew (GTKWINDOWTOPLEVEL);
@@ -6437,9 +6437,9 @@ int main( int   argc,
 
   gtkWidgetShowAll (window);
 
-  # Enter the event loop 
+  # Enter the event loop
   gtkMain ();
-    
+
   return 0;
 }
 <!-- example-end -->
@@ -6447,7 +6447,7 @@ int main( int   argc,
 
 </sect1>
 
-<!-- ----------------------------------------------------------------- -->   
+<!-- ----------------------------------------------------------------- -->
 <sect1 id="sec-Toolbar">
 <title>Toolbar</title>
 
@@ -6545,7 +6545,7 @@ additional explanations):</para>
 #include &lt;gtk/gtk.h&gt;
 
 # This function is connected to the Close button or
-# closing the window from the WM 
+# closing the window from the WM
 static gboolean deleteEvent( GtkWidget#widget,
                               GdkEvent#event,
                               gpointer data )
@@ -6561,13 +6561,13 @@ picture to serve as an icon for all of the buttons.</para>
 
 <programlisting role="R">
 GtkWidget* closeButton; # This button will emit signal to close
-                         # application 
-GtkWidget* tooltipsButton; # to enable/disable tooltips 
+                         # application
+GtkWidget* tooltipsButton; # to enable/disable tooltips
 GtkWidget* textButton,
         # iconButton,
-        # bothButton; # radio buttons for toolbar style 
+        # bothButton; # radio buttons for toolbar style
 GtkWidget* entry; # a text entry to show packing any widget into
-                  # toolbar 
+                  # toolbar
 </programlisting>
 
 <para>In fact not all of the above widgets are needed here, but to make things
@@ -6577,11 +6577,11 @@ clearer I put them all together.</para>
 # that's easy... when one of the buttons is toggled, we just
 # check which one is active and set the style of the toolbar
 # accordingly
-# ATTENTION: our toolbar is passed as data to callback ! 
+# ATTENTION: our toolbar is passed as data to callback !
 static void radioEvent( GtkWidget#widget,
                          gpointer data )
 {
-  if (GTKTOGGLEBUTTON (textButton)->active) 
+  if (GTKTOGGLEBUTTON (textButton)->active)
     gtkToolbarSetStyle (GTKTOOLBAR (data), GTKTOOLBARTEXT);
   else if (GTKTOGGLEBUTTON (iconButton)->active)
     gtkToolbarSetStyle (GTKTOOLBAR (data), GTKTOOLBARICONS);
@@ -6589,8 +6589,8 @@ static void radioEvent( GtkWidget#widget,
     gtkToolbarSetStyle (GTKTOOLBAR (data), GTKTOOLBARBOTH);
 }
 
-# even easier, just check given toggle button and enable/disable 
-# tooltips 
+# even easier, just check given toggle button and enable/disable
+# tooltips
 static void toggleEvent( GtkWidget#widget,
                           gpointer   data )
 {
@@ -6607,35 +6607,35 @@ radio buttons).</para>
 <programlisting role="R">
 int main (int argc, char#argv[])
 {
-  # Here is our main window (a dialog) and a handle for the handlebox 
+  # Here is our main window (a dialog) and a handle for the handlebox
   GtkWidget* dialog;
   GtkWidget* handlebox;
 
-  # Ok, we need a toolbar, an icon with a mask (one for all of 
-     the buttons) and an icon widget to put this icon in (but 
-     we'll create a separate widget for each button) 
+  # Ok, we need a toolbar, an icon with a mask (one for all of
+     the buttons) and an icon widget to put this icon in (but
+     we'll create a separate widget for each button)
   GtkWidget# toolbar;
   GtkWidget# iconw;
 
-  # this is called in all GTK application. 
+  # this is called in all GTK application.
   gtkInit (&amp;argc, &amp;argv);
-  
-  # create a new window with a given title, and nice size 
+
+  # create a new window with a given title, and nice size
   dialog = gtkDialogNew ();
   gtkWindowSetTitle (GTKWINDOW (dialog), "GTKToolbar Tutorial");
   gtkWidgetSetSizeRequest (GTKWIDGET (dialog), 600, 300);
   GTKWINDOW (dialog)->allowShrink = TRUE;
 
-  # typically we quit if someone tries to close us 
+  # typically we quit if someone tries to close us
   gSignalConnect (GOBJECT (dialog), "deleteEvent",
                     GCALLBACK (deleteEvent), NULL);
 
-  # we need to realize the window because we use pixmaps for 
-  # items on the toolbar in the context of it 
+  # we need to realize the window because we use pixmaps for
+  # items on the toolbar in the context of it
   gtkWidgetRealize (dialog);
 
-  # to make it nice we'll put the toolbar into the handle box, 
-  # so that it can be detached from the main window 
+  # to make it nice we'll put the toolbar into the handle box,
+  # so that it can be detached from the main window
   handlebox = gtkHandleBoxNew ();
   gtkBoxPackStart (GTKBOX (GTKDIALOG (dialog)->vbox),
                       handlebox, FALSE, FALSE, 5);
@@ -6654,8 +6654,8 @@ together quite often.</para>
 
 <programlisting role="R">
   # toolbar will be horizontal, with both icons and text, and
-  # with 5pxl spaces between items and finally, 
-  # we'll also put it into our handlebox 
+  # with 5pxl spaces between items and finally,
+  # we'll also put it into our handlebox
   toolbar = gtkToolbarNew ();
   gtkToolbarSetOrientation (GTKTOOLBAR (toolbar), GTKORIENTATIONHORIZONTAL);
   gtkToolbarSetStyle (GTKTOOLBAR (toolbar), GTKTOOLBARBOTH);
@@ -6668,17 +6668,17 @@ together quite often.</para>
 the toolbar widget.</para>
 
 <programlisting role="R">
-  # our first item is &lt;close&gt; button 
-  iconw = gtkImageNewFromFile ("gtk.xpm"); # icon widget 
-  closeButton = 
-    gtkToolbarAppendItem (GTKTOOLBAR (toolbar), # our toolbar 
-                             "Close",               # button label 
-                             "Closes this app",     # this button's tooltip 
-                             "Private",             # tooltip private info 
-                             iconw,                 # icon widget 
-                             GTKSIGNALFUNC (deleteEvent), # a signal 
+  # our first item is &lt;close&gt; button
+  iconw = gtkImageNewFromFile ("gtk.xpm"); # icon widget
+  closeButton =
+    gtkToolbarAppendItem (GTKTOOLBAR (toolbar), # our toolbar
+                             "Close",               # button label
+                             "Closes this app",     # this button's tooltip
+                             "Private",             # tooltip private info
+                             iconw,                 # icon widget
+                             GTKSIGNALFUNC (deleteEvent), # a signal
                              NULL);
-  gtkToolbarAppendSpace (GTKTOOLBAR (toolbar)); # space after item 
+  gtkToolbarAppendSpace (GTKTOOLBAR (toolbar)); # space after item
 </programlisting>
 
 <para>In the above code you see the simplest case: adding a button to
@@ -6690,18 +6690,18 @@ gtkToolbarAppendItem() returns a pointer to our newly created button
 widget, so that we can work with it in the normal way.</para>
 
 <programlisting role="R">
-  # now, let's make our radio buttons group... 
+  # now, let's make our radio buttons group...
   iconw = gtkImageNewFromFile ("gtk.xpm");
   iconButton = gtkToolbarAppendElement (
                     GTKTOOLBAR (toolbar),
-                    GTKTOOLBARCHILDRADIOBUTTON, # a type of element 
-                    NULL,                          # pointer to widget 
-                    "Icon",                        # label 
-                    "Only icons in toolbar",       # tooltip 
-                    "Private",                     # tooltip private string 
-                    iconw,                         # icon 
-                    GTKSIGNALFUNC (radioEvent), # signal 
-                    toolbar);                      # data for signal 
+                    GTKTOOLBARCHILDRADIOBUTTON, # a type of element
+                    NULL,                          # pointer to widget
+                    "Icon",                        # label
+                    "Only icons in toolbar",       # tooltip
+                    "Private",                     # tooltip private string
+                    iconw,                         # icon
+                    GTKSIGNALFUNC (radioEvent), # signal
+                    toolbar);                      # data for signal
   gtkToolbarAppendSpace (GTKTOOLBAR (toolbar));
 </programlisting>
 
@@ -6716,9 +6716,9 @@ linkend="sec-RadioButtons">Radio Buttons</link> earlier in this
 tutorial).</para>
 
 <programlisting role="R">
-  # following radio buttons refer to previous ones 
+  # following radio buttons refer to previous ones
   iconw = gtkImageNewFromFile ("gtk.xpm");
-  textButton = 
+  textButton =
     gtkToolbarAppendElement (GTKTOOLBAR (toolbar),
                                 GTKTOOLBARCHILDRADIOBUTTON,
                                 iconButton,
@@ -6729,9 +6729,9 @@ tutorial).</para>
                                 GTKSIGNALFUNC (radioEvent),
                                 toolbar);
   gtkToolbarAppendSpace (GTKTOOLBAR (toolbar));
-                                          
+
   iconw = gtkImageNewFromFile ("gtk.xpm");
-  bothButton = 
+  bothButton =
     gtkToolbarAppendElement (GTKTOOLBAR (toolbar),
                                 GTKTOOLBARCHILDRADIOBUTTON,
                                 textButton,
@@ -6750,9 +6750,9 @@ tutorial).</para>
 between them).</para>
 
 <programlisting role="R">
-  # here we have just a simple toggle button 
+  # here we have just a simple toggle button
   iconw = gtkImageNewFromFile ("gtk.xpm");
-  tooltipsButton = 
+  tooltipsButton =
     gtkToolbarAppendElement (GTKTOOLBAR (toolbar),
                                 GTKTOOLBARCHILDTOGGLEBUTTON,
                                 NULL,
@@ -6770,15 +6770,15 @@ between them).</para>
 radio buttons already).</para>
 
 <programlisting role="R">
-  # to pack a widget into toolbar, we only have to 
-  # create it and append it with an appropriate tooltip 
+  # to pack a widget into toolbar, we only have to
+  # create it and append it with an appropriate tooltip
   entry = gtkEntryNew ();
-  gtkToolbarAppendWidget (GTKTOOLBAR (toolbar), 
-                             entry, 
-                             "This is just an entry", 
+  gtkToolbarAppendWidget (GTKTOOLBAR (toolbar),
+                             entry,
+                             "This is just an entry",
                              "Private");
 
-  # well, it isn't created within the toolbar, so we must still show it 
+  # well, it isn't created within the toolbar, so we must still show it
   gtkWidgetShow (entry);
 </programlisting>
 
@@ -6787,14 +6787,14 @@ one thing you have to remember is that this widget must be shown manually
 (contrary to other items which will be shown together with the toolbar).</para>
 
 <programlisting role="R">
-  # that's it ! let's show everything. 
+  # that's it ! let's show everything.
   gtkWidgetShow (toolbar);
   gtkWidgetShow (handlebox);
   gtkWidgetShow (dialog);
 
-  # rest in gtkMain and wait for the fun to begin! 
+  # rest in gtkMain and wait for the fun to begin!
   gtkMain ();
-  
+
   return 0;
 }
 </programlisting>
@@ -6803,7 +6803,7 @@ one thing you have to remember is that this widget must be shown manually
 it in full you need also this nice XPM icon, so here it is:</para>
 
 <programlisting role="R">
-# XPM 
+# XPM
 static char# gtkXpm[] = {
 "32 39 5 1",
 ".      c none",
@@ -6994,7 +6994,7 @@ void gtkNotebookSetScrollable( GtkNotebook#notebook,
 <para><literal>showTabs</literal>, <literal>showBorder</literal> and <literal>scrollable</literal> can be either
 TRUE or FALSE.</para>
 
-<para>Now let's look at an example, it is expanded from the 
+<para>Now let's look at an example, it is expanded from the
 <filename>testgtk.c</filename> code
 that comes with the GTK distribution. This small program creates a
 window with a notebook and six buttons. The notebook contains 11
@@ -7017,38 +7017,38 @@ backward manner, and exit the program.</para>
 #include &lt;stdio.h&gt;
 #include &lt;gtk/gtk.h&gt;
 
-# This function rotates the position of the tabs 
+# This function rotates the position of the tabs
 static void rotateBook( GtkButton  #button,
                          GtkNotebook#notebook )
 {
     gtkNotebookSetTabPos (notebook, (notebook-&gt;tabPos + 1) % 4);
 }
 
-# Add/Remove the page tabs and the borders 
+# Add/Remove the page tabs and the borders
 static void tabsborderBook( GtkButton  #button,
                              GtkNotebook#notebook )
 {
     gint tval = FALSE;
     gint bval = FALSE;
     if (notebook-&gt;showTabs == 0)
-	    tval = TRUE; 
+	    tval = TRUE;
     if (notebook-&gt;showBorder == 0)
 	    bval = TRUE;
-    
+
     gtkNotebookSetShowTabs (notebook, tval);
     gtkNotebookSetShowBorder (notebook, bval);
 }
 
-# Remove a page from the notebook 
+# Remove a page from the notebook
 static void removeBook( GtkButton  #button,
                          GtkNotebook#notebook )
 {
     gint page;
-    
+
     page = gtkNotebookGetCurrentPage (notebook);
     gtkNotebookRemovePage (notebook, page);
-    # Need to refresh the widget -- 
-     This forces the widget to redraw itself. 
+    # Need to refresh the widget --
+     This forces the widget to redraw itself.
     gtkWidgetQueueDraw (GTKWIDGET (notebook));
 }
 
@@ -7073,119 +7073,119 @@ int main( int argc,
     int i;
     char bufferf[32];
     char bufferl[32];
-    
+
     gtkInit (&amp;argc, &amp;argv);
-    
+
     window = gtkWindowNew (GTKWINDOWTOPLEVEL);
-    
+
     gSignalConnect (GOBJECT (window), "deleteEvent",
 	              GCALLBACK (delete), NULL);
-    
+
     gtkContainerSetBorderWidth (GTKCONTAINER (window), 10);
 
     table = gtkTableNew (3, 6, FALSE);
     gtkContainerAdd (GTKCONTAINER (window), table);
-    
-    # Create a new notebook, place the position of the tabs 
+
+    # Create a new notebook, place the position of the tabs
     notebook = gtkNotebookNew ();
     gtkNotebookSetTabPos (GTKNOTEBOOK (notebook), GTKPOSTOP);
     gtkTableAttachDefaults (GTKTABLE (table), notebook, 0, 6, 0, 1);
     gtkWidgetShow (notebook);
-    
-    # Let's append a bunch of pages to the notebook 
+
+    # Let's append a bunch of pages to the notebook
     for (i = 0; i &lt; 5; i++) {
 	sprintf(bufferf, "Append Frame %d", i + 1);
 	sprintf(bufferl, "Page %d", i + 1);
-	
+
 	frame = gtkFrameNew (bufferf);
 	gtkContainerSetBorderWidth (GTKCONTAINER (frame), 10);
 	gtkWidgetSetSizeRequest (frame, 100, 75);
 	gtkWidgetShow (frame);
-	
+
 	label = gtkLabelNew (bufferf);
 	gtkContainerAdd (GTKCONTAINER (frame), label);
 	gtkWidgetShow (label);
-	
+
 	label = gtkLabelNew (bufferl);
 	gtkNotebookAppendPage (GTKNOTEBOOK (notebook), frame, label);
     }
-      
-    # Now let's add a page to a specific spot 
+
+    # Now let's add a page to a specific spot
     checkbutton = gtkCheckButtonNewWithLabel ("Check me please!");
     gtkWidgetSetSizeRequest (checkbutton, 100, 75);
     gtkWidgetShow (checkbutton);
-   
+
     label = gtkLabelNew ("Add page");
     gtkNotebookInsertPage (GTKNOTEBOOK (notebook), checkbutton, label, 2);
-    
-    # Now finally let's prepend pages to the notebook 
+
+    # Now finally let's prepend pages to the notebook
     for (i = 0; i &lt; 5; i++) {
 	sprintf (bufferf, "Prepend Frame %d", i + 1);
 	sprintf (bufferl, "PPage %d", i + 1);
-	
+
 	frame = gtkFrameNew (bufferf);
 	gtkContainerSetBorderWidth (GTKCONTAINER (frame), 10);
 	gtkWidgetSetSizeRequest (frame, 100, 75);
 	gtkWidgetShow (frame);
-	
+
 	label = gtkLabelNew (bufferf);
 	gtkContainerAdd (GTKCONTAINER (frame), label);
 	gtkWidgetShow (label);
-	
+
 	label = gtkLabelNew (bufferl);
 	gtkNotebookPrependPage (GTKNOTEBOOK (notebook), frame, label);
     }
-    
-    # Set what page to start at (page 4) 
+
+    # Set what page to start at (page 4)
     gtkNotebookSetCurrentPage (GTKNOTEBOOK (notebook), 3);
 
-    # Create a bunch of buttons 
+    # Create a bunch of buttons
     button = gtkButtonNewWithLabel ("close");
     gSignalConnectSwapped (GOBJECT (button), "clicked",
 			      GCALLBACK (delete), NULL);
     gtkTableAttachDefaults (GTKTABLE (table), button, 0, 1, 1, 2);
     gtkWidgetShow (button);
-    
+
     button = gtkButtonNewWithLabel ("next page");
     gSignalConnectSwapped (GOBJECT (button), "clicked",
 			      GCALLBACK (gtkNotebookNextPage),
 			      GOBJECT (notebook));
     gtkTableAttachDefaults (GTKTABLE (table), button, 1, 2, 1, 2);
     gtkWidgetShow (button);
-    
+
     button = gtkButtonNewWithLabel ("prev page");
     gSignalConnectSwapped (GOBJECT (button), "clicked",
 			      GCALLBACK (gtkNotebookPrevPage),
 			      GOBJECT (notebook));
     gtkTableAttachDefaults (GTKTABLE (table), button, 2, 3, 1, 2);
     gtkWidgetShow (button);
-    
+
     button = gtkButtonNewWithLabel ("tab position");
     gSignalConnect (GOBJECT (button), "clicked",
                       GCALLBACK (rotateBook),
 	              (gpointer) notebook);
     gtkTableAttachDefaults (GTKTABLE (table), button, 3, 4, 1, 2);
     gtkWidgetShow (button);
-    
+
     button = gtkButtonNewWithLabel ("tabs/border on/off");
     gSignalConnect (GOBJECT (button), "clicked",
                       GCALLBACK (tabsborderBook),
                       (gpointer) notebook);
     gtkTableAttachDefaults (GTKTABLE (table), button, 4, 5, 1, 2);
     gtkWidgetShow (button);
-    
+
     button = gtkButtonNewWithLabel ("remove page");
     gSignalConnect (GOBJECT (button), "clicked",
                       GCALLBACK (removeBook),
                       (gpointer) notebook);
     gtkTableAttachDefaults (GTKTABLE (table), button, 5, 6, 1, 2);
     gtkWidgetShow (button);
-    
+
     gtkWidgetShow (table);
     gtkWidgetShow (window);
-    
+
     gtkMain ();
-    
+
     return 0;
 }
 <!-- example-end -->
@@ -7289,19 +7289,19 @@ standard <literal>File</literal> menu, with the options <literal>Open</literal>,
 <literal>Quit</literal>, the code would look something like:</para>
 
 <programlisting role="R">
-    fileMenu = gtkMenuNew ();    # Don't need to show menus 
+    fileMenu = gtkMenuNew ();    # Don't need to show menus
 
-    # Create the menu items 
+    # Create the menu items
     openItem = gtkMenuItemNewWithLabel ("Open");
     saveItem = gtkMenuItemNewWithLabel ("Save");
     quitItem = gtkMenuItemNewWithLabel ("Quit");
 
-    # Add them to the menu 
+    # Add them to the menu
     gtkMenuShellAppend (GTKMENUSHELL (fileMenu), openItem);
     gtkMenuShellAppend (GTKMENUSHELL (fileMenu), saveItem);
     gtkMenuShellAppend (GTKMENUSHELL (fileMenu), quitItem);
 
-    # Attach the callback functions to the activate signal 
+    # Attach the callback functions to the activate signal
     gSignalConnectSwapped (GOBJECT (openItem), "activate",
                               GCALLBACK (menuitemResponse),
                               (gpointer) "file.open");
@@ -7309,12 +7309,12 @@ standard <literal>File</literal> menu, with the options <literal>Open</literal>,
                               GCALLBACK (menuitemResponse),
                               (gpointer) "file.save");
 
-    # We can attach the Quit menu item to our exit function 
+    # We can attach the Quit menu item to our exit function
     gSignalConnectSwapped (GOBJECT (quitItem), "activate",
                               GCALLBACK (destroy),
                               (gpointer) "file.quit");
 
-    # We do need to show menu items 
+    # We do need to show menu items
     gtkWidgetShow (openItem);
     gtkWidgetShow (saveItem);
     gtkWidgetShow (quitItem);
@@ -7473,7 +7473,7 @@ int main( int   argc,
 
     gtkInit (&amp;argc, &amp;argv);
 
-    # create a new window 
+    # create a new window
     window = gtkWindowNew (GTKWINDOWTOPLEVEL);
     gtkWidgetSetSizeRequest (GTKWIDGET (window), 200, 100);
     gtkWindowSetTitle (GTKWINDOW (window), "GTK Menu Test");
@@ -7481,72 +7481,72 @@ int main( int   argc,
                       GCALLBACK (gtkMainQuit), NULL);
 
     # Init the menu-widget, and remember -- never
-    # gtkShowWidget() the menu widget!! 
+    # gtkShowWidget() the menu widget!!
     # This is the menu that holds the menu items, the one that
-    # will pop up when you click on the "Root Menu" in the app 
+    # will pop up when you click on the "Root Menu" in the app
     menu = gtkMenuNew ();
 
     # Next we make a little loop that makes three menu-entries for "test-menu".
     # Notice the call to gtkMenuShellAppend.  Here we are adding a list of
     # menu items to our menu.  Normally, we'd also catch the "clicked"
     # signal on each of the menu items and setup a callback for it,
-    # but it's omitted here to save space. 
+    # but it's omitted here to save space.
 
     for (i = 0; i &lt; 3; i++)
         {
-            # Copy the names to the buf. 
+            # Copy the names to the buf.
             sprintf (buf, "Test-undermenu - %d", i);
 
-            # Create a new menu-item with a name... 
+            # Create a new menu-item with a name...
             menuItems = gtkMenuItemNewWithLabel (buf);
 
-            # ...and add it to the menu. 
+            # ...and add it to the menu.
             gtkMenuShellAppend (GTKMENUSHELL (menu), menuItems);
 
-	    # Do something interesting when the menuitem is selected 
+	    # Do something interesting when the menuitem is selected
 	    gSignalConnectSwapped (GOBJECT (menuItems), "activate",
-		                      GCALLBACK (menuitemResponse), 
+		                      GCALLBACK (menuitemResponse),
                                       (gpointer) gStrdup (buf));
 
-            # Show the widget 
+            # Show the widget
             gtkWidgetShow (menuItems);
         }
 
     # This is the root menu, and will be the label
     # displayed on the menu bar.  There won't be a signal handler attached,
-    # as it only pops up the rest of the menu when pressed. 
+    # as it only pops up the rest of the menu when pressed.
     rootMenu = gtkMenuItemNewWithLabel ("Root Menu");
 
     gtkWidgetShow (rootMenu);
 
     # Now we specify that we want our newly created "menu" to be the menu
-    # for the "root menu" 
+    # for the "root menu"
     gtkMenuItemSetSubmenu (GTKMENUITEM (rootMenu), menu);
 
-    # A vbox to put a menu and a button in: 
+    # A vbox to put a menu and a button in:
     vbox = gtkVboxNew (FALSE, 0);
     gtkContainerAdd (GTKCONTAINER (window), vbox);
     gtkWidgetShow (vbox);
 
-    # Create a menu-bar to hold the menus and add it to our main window 
+    # Create a menu-bar to hold the menus and add it to our main window
     menuBar = gtkMenuBarNew ();
     gtkBoxPackStart (GTKBOX (vbox), menuBar, FALSE, FALSE, 2);
     gtkWidgetShow (menuBar);
 
-    # Create a button to which to attach menu as a popup 
+    # Create a button to which to attach menu as a popup
     button = gtkButtonNewWithLabel ("press me");
     gSignalConnectSwapped (GOBJECT (button), "event",
-	                      GCALLBACK (buttonPress), 
+	                      GCALLBACK (buttonPress),
                               GOBJECT (menu));
     gtkBoxPackEnd (GTKBOX (vbox), button, TRUE, TRUE, 2);
     gtkWidgetShow (button);
 
     # And finally we append the menu-item to the menu-bar -- this is the
-    # "root" menu-item I have been raving about =) 
+    # "root" menu-item I have been raving about =)
     gtkMenuShellAppend (GTKMENUSHELL (menuBar), rootMenu);
 
     # always display the window as the last step so it all splashes on
-    # the screen at once. 
+    # the screen at once.
     gtkWidgetShow (window);
 
     gtkMain ();
@@ -7558,27 +7558,27 @@ int main( int   argc,
 #
 # Note that the "widget" argument is the menu being posted, NOT
 # the button that was pressed.
- 
+
 
 static gboolean buttonPress( GtkWidget#widget,
                               GdkEvent#event )
 {
 
     if (event-&gt;type == GDKBUTTONPRESS) {
-        GdkEventButton#bevent = (GdkEventButton#) event; 
+        GdkEventButton#bevent = (GdkEventButton#) event;
         gtkMenuPopup (GTKMENU (widget), NULL, NULL, NULL, NULL,
                         bevent-&gt;button, bevent-&gt;time);
         # Tell calling code that we have handled this event; the buck
-        # stops here. 
+        # stops here.
         return TRUE;
     }
 
-    # Tell calling code that we have not handled this event; pass it on. 
+    # Tell calling code that we have not handled this event; pass it on.
     return FALSE;
 }
 
 
-# Print a string when a menu item is selected 
+# Print a string when a menu item is selected
 
 static void menuitemResponse( gchar#string )
 {
@@ -7599,7 +7599,7 @@ table, bind keys to menu functions.</para>
 <para>Now that we've shown you the hard way, here's how you do it using the
 gtkItemFactory calls.</para>
 
-<para>ItemFactory creates a menu out of an array of ItemFactory entries. This 
+<para>ItemFactory creates a menu out of an array of ItemFactory entries. This
 means you can define your menu in its simplest form and then create the
 menu/menubar widgets with a minimum of function calls.</para>
 
@@ -7683,9 +7683,9 @@ NULL or "" or "&lt;Item&gt;" - create a simple item
 "&lt;Separator&gt;"          - create a separator
 "&lt;Branch&gt;"             - create an item to hold submenus (optional)
 "&lt;LastBranch&gt;"         - create a right justified branch
-"&lt;StockItem&gt;"          - create a simple item with a stock image. 
+"&lt;StockItem&gt;"          - create a simple item with a stock image.
                                see <filename>gtkstock.h</filename> for builtin stock items
- 
+
 </programlisting>
 
 <para>Note that &lt;LastBranch&gt; is only useful for one submenu of
@@ -7935,14 +7935,14 @@ section.</para>
 
 #include &lt;gtk/gtk.h&gt;
 
-# Obligatory basic callback 
+# Obligatory basic callback
 static void printHello( GtkWidget#w,
                          gpointer   data )
 {
   gMessage ("Hello, World!\n");
 }
 
-# For the check button 
+# For the check button
 static void printToggle( gpointer   callbackData,
                           guint      callbackAction,
                           GtkWidget#menuItem )
@@ -7951,7 +7951,7 @@ static void printToggle( gpointer   callbackData,
               GTKCHECKMENUITEM (menuItem)-&gt;active);
 }
 
-# For the radio buttons 
+# For the radio buttons
 static void printSelected( gpointer   callbackData,
                             guint      callbackAction,
                             GtkWidget#menuItem )
@@ -7960,7 +7960,7 @@ static void printSelected( gpointer   callbackData,
      gMessage ("Radio button %d selected\n", callbackAction);
 }
 
-# Our menu, an array of GtkItemFactoryEntry structures that defines each menu item 
+# Our menu, an array of GtkItemFactoryEntry structures that defines each menu item
 static GtkItemFactoryEntry menuItems[] = {
   { "/File",         NULL,         NULL,           0, "&lt;Branch&gt;" },
   { "/File/New",     "&lt;control&gt;N", printHello,    0, "&lt;StockItem&gt;", GTKSTOCKNEW },
@@ -7982,65 +7982,65 @@ static GtkItemFactoryEntry menuItems[] = {
 
 static gint nmenuItems = sizeof (menuItems) / sizeof (menuItems[0]);
 
-# Returns a menubar widget made from the above menu 
+# Returns a menubar widget made from the above menu
 static GtkWidget#getMenubarMenu( GtkWidget #window )
 {
   GtkItemFactory#itemFactory;
   GtkAccelGroup#accelGroup;
 
-  # Make an accelerator group (shortcut keys) 
+  # Make an accelerator group (shortcut keys)
   accelGroup = gtkAccelGroupNew ();
 
-  # Make an ItemFactory (that makes a menubar) 
+  # Make an ItemFactory (that makes a menubar)
   itemFactory = gtkItemFactoryNew (GTKTYPEMENUBAR, "&lt;main&gt;",
                                        accelGroup);
 
   # This function generates the menu items. Pass the item factory,
      the number of items in the array, the array itself, and any
-     callback data for the the menu items. 
+     callback data for the the menu items.
   gtkItemFactoryCreateItems (itemFactory, nmenuItems, menuItems, NULL);
 
-  # Attach the new accelerator group to the window. 
+  # Attach the new accelerator group to the window.
   gtkWindowAddAccelGroup (GTKWINDOW (window), accelGroup);
 
-  # Finally, return the actual menu bar created by the item factory. 
+  # Finally, return the actual menu bar created by the item factory.
   return gtkItemFactoryGetWidget (itemFactory, "&lt;main&gt;");
 }
 
-# Popup the menu when the popup button is pressed 
+# Popup the menu when the popup button is pressed
 static gboolean popupCb( GtkWidget#widget,
                           GdkEvent#event,
                           GtkWidget#menu )
 {
    GdkEventButton#bevent = (GdkEventButton#)event;
-  
-   # Only take button presses 
+
+   # Only take button presses
    if (event-&gt;type != GDKBUTTONPRESS)
      return FALSE;
-  
-   # Show the menu 
+
+   # Show the menu
    gtkMenuPopup (GTKMENU(menu), NULL, NULL,
                    NULL, NULL, bevent-&gt;button, bevent-&gt;time);
-  
+
    return TRUE;
 }
 
 # Same as with getMenubarMenu() but just return a button with a signal to
-   call a popup menu 
+   call a popup menu
 GtkWidget#getPopupMenu( void )
 {
    GtkItemFactory#itemFactory;
    GtkWidget#button,#menu;
-  
-   # Same as before but don't bother with the accelerators 
+
+   # Same as before but don't bother with the accelerators
    itemFactory = gtkItemFactoryNew (GTKTYPEMENU, "&lt;main&gt;",
                                         NULL);
    gtkItemFactoryCreateItems (itemFactory, nmenuItems, menuItems, NULL);
    menu = gtkItemFactoryGetWidget (itemFactory, "&lt;main&gt;");
-  
-   # Make a button to activate the popup menu 
+
+   # Make a button to activate the popup menu
    button = gtkButtonNewWithLabel ("Popup");
-   # Make the menu popup when clicked 
+   # Make the menu popup when clicked
    gSignalConnect (GOBJECT(button),
                      "event",
                      GCALLBACK(popupCb),
@@ -8049,13 +8049,13 @@ GtkWidget#getPopupMenu( void )
    return button;
 }
 
-# Same again but return an option menu 
+# Same again but return an option menu
 GtkWidget#getOptionMenu( void )
 {
    GtkItemFactory#itemFactory;
    GtkWidget#optionMenu;
-  
-   # Same again, not bothering with the accelerators 
+
+   # Same again, not bothering with the accelerators
    itemFactory = gtkItemFactoryNew (GTKTYPEOPTIONMENU, "&lt;main&gt;",
                                         NULL);
    gtkItemFactoryCreateItems (itemFactory, nmenuItems, menuItems, NULL);
@@ -8064,48 +8064,48 @@ GtkWidget#getOptionMenu( void )
    return optionMenu;
 }
 
-# You have to start somewhere 
+# You have to start somewhere
 int main( int argc,
           char#argv[] )
 {
   GtkWidget#window;
   GtkWidget#mainVbox;
   GtkWidget#menubar,#optionMenu,#popupButton;
- 
-  # Initialize GTK 
+
+  # Initialize GTK
   gtkInit (&amp;argc, &amp;argv);
- 
-  # Make a window 
+
+  # Make a window
   window = gtkWindowNew (GTKWINDOWTOPLEVEL);
   gSignalConnect (GOBJECT (window), "destroy",
                     GCALLBACK (gtkMainQuit),
                     NULL);
   gtkWindowSetTitle (GTKWINDOW(window), "Item Factory");
   gtkWidgetSetSizeRequest (GTKWIDGET(window), 300, 200);
- 
-  # Make a vbox to put the three menus in 
+
+  # Make a vbox to put the three menus in
   mainVbox = gtkVboxNew (FALSE, 1);
   gtkContainerSetBorderWidth (GTKCONTAINER (mainVbox), 1);
   gtkContainerAdd (GTKCONTAINER (window), mainVbox);
- 
-  # Get the three types of menu 
+
+  # Get the three types of menu
   # Note: all three menus are separately created, so they are not the
-     same menu 
+     same menu
   menubar = getMenubarMenu (window);
   popupButton = getPopupMenu ();
   optionMenu = getOptionMenu ();
-  
-  # Pack it all together 
+
+  # Pack it all together
   gtkBoxPackStart (GTKBOX (mainVbox), menubar, FALSE, TRUE, 0);
   gtkBoxPackEnd (GTKBOX (mainVbox), popupButton, FALSE, TRUE, 0);
   gtkBoxPackEnd (GTKBOX (mainVbox), optionMenu, FALSE, TRUE, 0);
 
-  # Show the widgets 
+  # Show the widgets
   gtkWidgetShowAll (window);
-  
-  # Finished! 
+
+  # Finished!
   gtkMain ();
- 
+
   return 0;
 }
 <!-- example-end -->
@@ -8275,7 +8275,7 @@ void gtkWidgetSetSensitive( GtkWidget#widget,
 
 void gtkWidgetSetStyle( GtkWidget#widget,
                            GtkStyle #style );
-					   
+
 GtkStyle#gtkWidgetGetStyle( GtkWidget#widget );
 
 GtkStyle#gtkWidgetGetDefaultStyle( void );
@@ -8380,7 +8380,7 @@ void gdkInputRemove( gint tag );
 
 <programlisting role="R">
 void inputCallback( gpointer          data,
-                     gint              source, 
+                     gint              source,
                      GdkInputCondition condition );
 </programlisting>
 
@@ -8610,8 +8610,8 @@ selections and targets are identified by atoms.</para>
 process, you call:</para>
 
 <programlisting role="R">
-gboolean gtkSelectionConvert( GtkWidget#widget, 
-                                GdkAtom    selection, 
+gboolean gtkSelectionConvert( GtkWidget#widget,
+                                GdkAtom    selection,
                                 GdkAtom    target,
                                 guint32    time );
 </programlisting>
@@ -8667,49 +8667,49 @@ converted.</para>
 #include &lt;stdlib.h&gt;
 #include &lt;gtk/gtk.h&gt;
 
-static void selectionReceived( GtkWidget       #widget, 
-                                GtkSelectionData#selectionData, 
+static void selectionReceived( GtkWidget       #widget,
+                                GtkSelectionData#selectionData,
                                 gpointer          data );
 
-# Signal handler invoked when user clicks on the "Get Targets" button 
+# Signal handler invoked when user clicks on the "Get Targets" button
 static void getTargets( GtkWidget#widget,
                          gpointer data )
 {
   static GdkAtom targetsAtom = GDKNONE;
-  GtkWidget#window = (GtkWidget#)data;	
+  GtkWidget#window = (GtkWidget#)data;
 
-  # Get the atom corresponding to the string "TARGETS" 
+  # Get the atom corresponding to the string "TARGETS"
   if (targetsAtom == GDKNONE)
     targetsAtom = gdkAtomIntern ("TARGETS", FALSE);
 
-  # And request the "TARGETS" target for the primary selection 
+  # And request the "TARGETS" target for the primary selection
   gtkSelectionConvert (window, GDKSELECTIONPRIMARY, targetsAtom,
 			 GDKCURRENTTIME);
 }
 
-# Signal handler called when the selections owner returns the data 
+# Signal handler called when the selections owner returns the data
 static void selectionReceived( GtkWidget       #widget,
-                                GtkSelectionData#selectionData, 
+                                GtkSelectionData#selectionData,
                                 gpointer          data )
 {
   GdkAtom#atoms;
   GList#itemList;
   int i;
 
-  #*** IMPORTANT*** Check to see if retrieval succeeded  
+  #*** IMPORTANT*** Check to see if retrieval succeeded
   if (selectionData-&gt;length &lt; 0)
     {
       gPrint ("Selection retrieval failed\n");
       return;
     }
-  # Make sure we got the data in the expected form 
+  # Make sure we got the data in the expected form
   if (selectionData-&gt;type != GDKSELECTIONTYPEATOM)
     {
       gPrint ("Selection \"TARGETS\" was not returned as atoms!\n");
       return;
     }
-  
-  # Print out the atoms we received 
+
+  # Print out the atoms we received
   atoms = (GdkAtom#)selectionData-&gt;data;
 
   itemList = NULL;
@@ -8731,10 +8731,10 @@ int main( int   argc,
 {
   GtkWidget#window;
   GtkWidget#button;
-  
+
   gtkInit (&amp;argc, &amp;argv);
 
-  # Create the toplevel window 
+  # Create the toplevel window
 
   window = gtkWindowNew (GTKWINDOWTOPLEVEL);
   gtkWindowSetTitle (GTKWINDOW (window), "Event Box");
@@ -8743,7 +8743,7 @@ int main( int   argc,
   gSignalConnect (GOBJECT (window), "destroy",
 	            GCALLBACK (exit), NULL);
 
-  # Create a button the user can click to get targets 
+  # Create a button the user can click to get targets
 
   button = gtkButtonNewWithLabel ("Get Targets");
   gtkContainerAdd (GTKCONTAINER (window), button);
@@ -8755,9 +8755,9 @@ int main( int   argc,
 
   gtkWidgetShow (button);
   gtkWidgetShow (window);
-  
+
   gtkMain ();
-  
+
   return 0;
 }
 <!-- example-end -->
@@ -8768,12 +8768,12 @@ int main( int   argc,
 <sect1 id="sec-SupplyingTheSelection">
 <title>Supplying the selection</title>
 
-<para>Supplying the selection is a bit more complicated. You must register 
+<para>Supplying the selection is a bit more complicated. You must register
 handlers that will be called when your selection is requested. For
 each selection/target pair you will handle, you make a call to:</para>
 
 <programlisting role="R">
-void gtkSelectionAddTarget( GtkWidget          #widget, 
+void gtkSelectionAddTarget( GtkWidget          #widget,
                                GdkAtom              selection,
                                GdkAtom              target,
                                guint                info );
@@ -8843,7 +8843,7 @@ string representation of the time is returned.</para>
 GtkWidget#selectionButton;
 GtkWidget#selectionWidget;
 
-# Callback when the user toggles the selection 
+# Callback when the user toggles the selection
 static void selectionToggled( GtkWidget#widget,
                                gint     #haveSelection )
 {
@@ -8853,7 +8853,7 @@ static void selectionToggled( GtkWidget#widget,
 						 GDKSELECTIONPRIMARY,
 						 GDKCURRENTTIME);
       # if claiming the selection failed, we return the button to
-	 the out state 
+	 the out state
       if (!*haveSelection)
 	gtkToggleButtonSetActive (GTKTOGGLEBUTTON (widget), FALSE);
     }
@@ -8862,7 +8862,7 @@ static void selectionToggled( GtkWidget#widget,
       if (*haveSelection)
 	{
 	  # Before clearing the selection by setting the owner to NULL,
-	     we check if we are the actual owner 
+	     we check if we are the actual owner
 	  if (gdkSelectionOwnerGet (GDKSELECTIONPRIMARY) == widget-&gt;window)
 	    gtkSelectionOwnerSet (NULL, GDKSELECTIONPRIMARY,
 				     GDKCURRENTTIME);
@@ -8871,7 +8871,7 @@ static void selectionToggled( GtkWidget#widget,
     }
 }
 
-# Called when another application claims the selection 
+# Called when another application claims the selection
 static gboolean selectionClear( GtkWidget        #widget,
                                  GdkEventSelection#event,
                                  gint             #haveSelection )
@@ -8882,8 +8882,8 @@ static gboolean selectionClear( GtkWidget        #widget,
   return TRUE;
 }
 
-# Supplies the current time as the selection. 
-static void selectionHandle( GtkWidget       #widget, 
+# Supplies the current time as the selection.
+static void selectionHandle( GtkWidget       #widget,
                               GtkSelectionData#selectionData,
                               guint             info,
                               guint             timeStamp,
@@ -8893,9 +8893,9 @@ static void selectionHandle( GtkWidget       #widget,
   timeT currentTime;
 
   currentTime = time (NULL);
-  timestr = asctime (localtime (&amp;currentTime)); 
+  timestr = asctime (localtime (&amp;currentTime));
   # When we return a single string, it should not be null terminated.
-     That will be done for us 
+     That will be done for us
 
   gtkSelectionDataSet (selectionData, GDKSELECTIONTYPESTRING,
 			  8, timestr, strlen (timestr));
@@ -8907,10 +8907,10 @@ int main( int   argc,
   GtkWidget#window;
 
   static int haveSelection = FALSE;
-  
+
   gtkInit (&amp;argc, &amp;argv);
 
-  # Create the toplevel window 
+  # Create the toplevel window
 
   window = gtkWindowNew (GTKWINDOWTOPLEVEL);
   gtkWindowSetTitle (GTKWINDOW (window), "Event Box");
@@ -8919,7 +8919,7 @@ int main( int   argc,
   gSignalConnect (GOBJECT (window), "destroy",
 		    GCALLBACK (exit), NULL);
 
-  # Create a toggle button to act as the selection 
+  # Create a toggle button to act as the selection
 
   selectionWidget = gtkInvisibleNew ();
   selectionButton = gtkToggleButtonNewWithLabel ("Claim Selection");
@@ -8940,9 +8940,9 @@ int main( int   argc,
 
   gtkWidgetShow (selectionButton);
   gtkWidgetShow (window);
-  
+
   gtkMain ();
-  
+
   return 0;
 }
 <!-- example-end -->
@@ -9342,7 +9342,7 @@ GList#gListAppend( GList   #list,
 
 <para>This adds a new element (with value <literal>data</literal>) onto the end of the
 list.</para>
-  
+
 <programlisting role="R">
 GList#gListPrepend( GList   #list,
                        gpointer  data );
@@ -9381,7 +9381,7 @@ first.</para>
 see the glib documentation for more information.  Here are a few of
 the more useful functions' signatures:</para>
 
-<programlisting role="R">  
+<programlisting role="R">
 GList#gListRemoveLink( GList#list,
                            GList#link );
 
@@ -9389,7 +9389,7 @@ GList#gListReverse( GList#list );
 
 GList#gListNth( GList#list,
                    gint   n );
-			   
+
 GList#gListFind( GList   #list,
                     gpointer  data );
 
@@ -9416,28 +9416,28 @@ above. Here is a list of some of their operations:</para>
 <programlisting role="R">
 GSList#gSlistAppend( GSList  #list,
                         gpointer  data );
-		
+
 GSList#gSlistPrepend( GSList  #list,
                          gpointer  data );
-			     
+
 GSList#gSlistInsert( GSList  #list,
                         gpointer  data,
 		        gint      position );
-			     
+
 GSList#gSlistRemove( GSList  #list,
                         gpointer  data );
-			     
+
 GSList#gSlistRemoveLink( GSList#list,
                              GSList#link );
-			     
+
 GSList#gSlistReverse( GSList#list );
 
 GSList#gSlistNth( GSList#list,
                      gint    n );
-			     
+
 GSList#gSlistFind( GSList  #list,
                       gpointer  data );
-			     
+
 GSList#gSlistLast( GSList#list );
 
 gint gSlistLength( GSList#list );
@@ -9445,7 +9445,7 @@ gint gSlistLength( GSList#list );
 void gSlistForeach( GSList  #list,
                       GFunc     func,
                       gpointer  userData );
-	
+
 </programlisting>
 
 </sect1>
@@ -9537,10 +9537,10 @@ important feature, and hence I recommend that you make use of
 GStrings. GString itself has a simple public definition:</para>
 
 <programlisting role="R">
-struct GString 
+struct GString
 {
-  gchar#str; # Points to the string's current \0-terminated value. 
-  gint len; # Current length 
+  gchar#str; # Points to the string's current \0-terminated value.
+  gint len; # Current length
 };
 </programlisting>
 
@@ -9563,7 +9563,7 @@ void gStringFree( GString#string,
 <para>This frees the memory for the given GString. If <literal>freeSegment</literal> is
 TRUE, then this also frees its character data.</para>
 
-<programlisting role="R">	     
+<programlisting role="R">
 GString#gStringAssign( GString    #lval,
                           const gchar#rval );
 </programlisting>
@@ -9575,27 +9575,27 @@ function.</para>
 
 <para>The rest of these functions should be relatively obvious (the C
 versions accept a character instead of a string):</para>
-	     
-<programlisting role="R">	     
+
+<programlisting role="R">
 GString#gStringTruncate( GString#string,
                             gint     len );
-			     
+
 GString#gStringAppend( GString#string,
                           gchar  #val );
-			    
+
 GString#gStringAppendC( GString#string,
                             gchar    c );
-	
+
 GString#gStringPrepend( GString#string,
                            gchar  #val );
-			     
+
 GString#gStringPrependC( GString#string,
                              gchar    c );
-	
+
 void gStringSprintf( GString#string,
                        gchar  #fmt,
                        ...);
-	
+
 void gStringSprintfa ( GString#string,
                          gchar  #fmt,
                          ... );
@@ -9636,7 +9636,7 @@ void gError( gchar#format, ... );
 </programlisting>
 
 <para>Prints an error message. The format is just like printf, but it
-prepends "** ERROR*: " to your message, and exits the program.  
+prepends "** ERROR*: " to your message, and exits the program.
 Use only for fatal errors.</para>
 
 <programlisting role="R">
@@ -9792,8 +9792,8 @@ fg[&lt;STATE>] = { Red, Green, Blue }
 
 <para>Where STATE is one of the above states (PRELIGHT, ACTIVE, etc), and the Red,
 Green and Blue are values in the range of 0 - 1.0,  { 1.0, 1.0, 1.0 } being
-white. They must be in float form, or they will register as 0, so a straight 
-"1" will not work, it must be "1.0".  A straight "0" is fine because it 
+white. They must be in float form, or they will register as 0, so a straight
+"1" will not work, it must be "1.0".  A straight "0" is fine because it
 doesn't matter if it's not recognized.  Unrecognized values are set to 0.</para>
 
 <para>bgPixmap is very similar to the above, except the colors are replaced by a
@@ -9902,9 +9902,9 @@ style "scale"
 {
   #Sets the foreground color (font color) to red when in the "NORMAL"
   #state.
-  
+
   fg[NORMAL] = { 1.0, 0, 0 }
-  
+
   #Sets the background pixmap of this widget to that of its parent.
   bgPixmap[NORMAL] = "&lt;parent>"
 }
@@ -9913,7 +9913,7 @@ style "button"
 {
   # This shows all the possible states for a button.  The only one that
   # doesn't apply is the SELECTED state.
-  
+
   fg[PRELIGHT] = { 0, 1.0, 1.0 }
   bg[PRELIGHT] = { 0, 0, 1.0 }
   bg[ACTIVE] = { 1.0, 0, 0 }
@@ -9938,7 +9938,7 @@ style "toggleButton" = "button"
 {
   fg[NORMAL] = { 1.0, 0, 0 }
   fg[ACTIVE] = { 1.0, 0, 0 }
-  
+
   # This sets the background pixmap of the toggleButton to that of its
   # parent widget (as defined in the application).
   bgPixmap[NORMAL] = "&lt;parent>"
@@ -10001,7 +10001,7 @@ to this, once you finish your widget, announce it to the world so
 other people can benefit. The best place to do this is probably the
 <literal>gtk-list</literal>.</para>
 
-<para>Complete sources for the example widgets are available at the place you 
+<para>Complete sources for the example widgets are available at the place you
 got this tutorial, or from:</para>
 
 <para><ulink url="http://www.gtk.org/~otaylor/gtk/tutorial/">http://www.gtk.org/~otaylor/gtk/tutorial/</ulink></para>
@@ -10022,7 +10022,7 @@ they are implemented in standard C. This greatly improves portability
 and stability over using current generation C++ compilers; however,
 it does mean that the widget writer has to pay attention to some of
 the implementation details. The information common to all instances of
-one class of widgets (e.g., to all Button widgets) is stored in the 
+one class of widgets (e.g., to all Button widgets) is stored in the
 <emphasis>class structure</emphasis>. There is only one copy of this in
 which is stored information about the class's signals
 (which act like virtual functions in C). To support inheritance, the
@@ -10122,7 +10122,7 @@ is natural to make our parent class the Table class.</para>
 <title>The header file</title>
 
 <para>Each GObject class has a header file which declares the object and
-class structures for that object, along with public functions. 
+class structures for that object, along with public functions.
 A couple of features are worth pointing out. To prevent duplicate
 definitions, we wrap the entire header file in:</para>
 
@@ -10132,7 +10132,7 @@ definitions, we wrap the entire header file in:</para>
 .
 .
 .
-#endif # _TICTACTOEH_ 
+#endif # _TICTACTOEH_
 </programlisting>
 
 <para>And to keep C++ programs that include the header file happy, in:</para>
@@ -10179,13 +10179,13 @@ tictactoeGetType (void)
       static const GTypeInfo tttInfo =
       {
 	sizeof (TictactoeClass),
-	NULL, # baseInit 
-	NULL, # baseFinalize 
+	NULL, # baseInit
+	NULL, # baseFinalize
 	(GClassInitFunc) tictactoeClassInit,
-	NULL, # classFinalize 
-	NULL, # classData 
+	NULL, # classFinalize
+	NULL, # classData
 	sizeof (Tictactoe),
-	0,    # nPreallocs 
+	0,    # nPreallocs
 	(GInstanceInitFunc) tictactoeInit,
       };
 
@@ -10204,23 +10204,23 @@ tictactoeGetType (void)
 <programlisting role="R">
 struct GTypeInfo
 {
-  # interface types, classed types, instantiated types 
+  # interface types, classed types, instantiated types
   guint16                classSize;
-   
+
   GBaseInitFunc          baseInit;
   GBaseFinalizeFunc      baseFinalize;
-   
-  # classed types, instantiated types 
+
+  # classed types, instantiated types
   GClassInitFunc         classInit;
   GClassFinalizeFunc     classFinalize;
   gconstpointer          classData;
-   
-  # instantiated types 
+
+  # instantiated types
   guint16                instanceSize;
   guint16                nPreallocs;
   GInstanceInitFunc      instanceInit;
-   
-  # value handling 
+
+  # value handling
   const GTypeValueTable#valueTable;
 };
 </programlisting>
@@ -10293,7 +10293,7 @@ guint gSignalNew( const gchar        #signalName,
 <listitem><simpara> <literal>itype</literal>: The ID of the object that this signal applies
 to. (It will also apply to that objects descendants.)</simpara>
 </listitem>
-                                                                                
+
 <listitem><simpara> <literal>signalFlags</literal>: Whether the default handler runs before or after
 user handlers and other flags. Usually this will be one of
 <literal>GSIGNALRUNFIRST</literal> or <literal>GSIGNALRUNLAST</literal>,
@@ -10387,7 +10387,7 @@ tictactoeInit (Tictactoe#ttt)
     for (j=0;j&lt;3; j++)
       {
 	ttt->buttons[i][j] = gtkToggleButtonNew ();
-	gtkTableAttachDefaults (GTKTABLE (ttt), ttt->buttons[i][j], 
+	gtkTableAttachDefaults (GTKTABLE (ttt), ttt->buttons[i][j],
 				   i, i+1, j, j+1);
 	gSignalConnect (GOBJECT (ttt->buttons[i][j]), "toggled",
 			  GCALLBACK (tictactoeToggle), ttt);
@@ -10428,7 +10428,7 @@ tictactoeNew (void)
   return GTKWIDGET ( gObjectNew (TICTACTOETYPE, NULL));
 }
 
-void	       
+void
 tictactoeClear (Tictactoe#ttt)
 {
   int i,j;
@@ -10468,15 +10468,15 @@ tictactoeToggle (GtkWidget#widget, Tictactoe#ttt)
 
       for (i=0;i&lt;3;i++)
 	{
-	  success = success &amp;&amp; 
+	  success = success &amp;&amp;
 	    GTKTOGGLEBUTTON(ttt->buttons[rwins[k][i]][cwins[k][i]])->active;
 	  found = found ||
 	    ttt->buttons[rwins[k][i]][cwins[k][i]] == widget;
 	}
-      
+
       if (success &amp;&amp; found)
 	{
-	  gSignalEmit (GOBJECT (ttt), 
+	  gSignalEmit (GOBJECT (ttt),
 			 tictactoeSignals[TICTACTOESIGNAL], 0);
 	  break;
 	}
@@ -10490,7 +10490,7 @@ tictactoeToggle (GtkWidget#widget, Tictactoe#ttt)
 #include &lt;gtk/gtk.h&gt;
 #include "tictactoe.h"
 
-# Invoked when a row, column or diagonal is completed 
+# Invoked when a row, column or diagonal is completed
 void
 win (GtkWidget#widget, gpointer data)
 {
@@ -10498,36 +10498,36 @@ win (GtkWidget#widget, gpointer data)
   tictactoeClear (TICTACTOE (widget));
 }
 
-int 
+int
 main (int argc, char#argv[])
 {
   GtkWidget#window;
   GtkWidget#ttt;
-  
+
   gtkInit (&amp;argc, &amp;argv);
 
   window = gtkWindowNew (GTKWINDOWTOPLEVEL);
-  
+
   gtkWindowSetTitle (GTKWINDOW (window), "Aspect Frame");
-  
+
   gSignalConnect (GOBJECT (window), "destroy",
                     GCALLBACK (exit), NULL);
-  
+
   gtkContainerSetBorderWidth (GTKCONTAINER (window), 10);
 
-  # Create a new Tictactoe widget 
+  # Create a new Tictactoe widget
   ttt = tictactoeNew ();
   gtkContainerAdd (GTKCONTAINER (window), ttt);
   gtkWidgetShow (ttt);
 
-  # And attach to its "tictactoe" signal 
+  # And attach to its "tictactoe" signal
   gSignalConnect (GOBJECT (ttt), "tictactoe",
                     GCALLBACK (win), NULL);
 
   gtkWidgetShow (window);
-  
+
   gtkMain ();
-  
+
   return 0;
 }
 </programlisting>
@@ -10659,7 +10659,7 @@ Tictactoe widget. First, we have a header file:</para>
 # You should have received a copy of the GNU Library General Public
 # License along with this library; if not, write to the Free
 # Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
- 
+
 
 #ifndef _GTKDIALH_
 #define _GTKDIALH_
@@ -10671,7 +10671,7 @@ Tictactoe widget. First, we have a header file:</para>
 
 #ifdef _cplusplus
 extern "C" {
-#endif # _cplusplus 
+#endif # _cplusplus
 
 
 #define GTKDIAL(obj)          GTKCHECKCAST (obj, gtkDialGetType (), GtkDial)
@@ -10686,28 +10686,28 @@ struct GtkDial
 {
   GtkWidget widget;
 
-  # update policy (GTKUPDATE[CONTINUOUS/DELAYED/DISCONTINUOUS]) 
+  # update policy (GTKUPDATE[CONTINUOUS/DELAYED/DISCONTINUOUS])
   guint policy : 2;
 
-  # Button currently pressed or 0 if none 
+  # Button currently pressed or 0 if none
   guint8 button;
 
-  # Dimensions of dial components 
+  # Dimensions of dial components
   gint radius;
   gint pointerWidth;
 
-  # ID of update timer, or 0 if none 
+  # ID of update timer, or 0 if none
   guint32 timer;
 
-  # Current angle 
+  # Current angle
   gfloat angle;
 
-  # Old values from adjustment stored so we know when something changes 
+  # Old values from adjustment stored so we know when something changes
   gfloat oldValue;
   gfloat oldLower;
   gfloat oldUpper;
 
-  # The adjustment object that stores the data for this dial 
+  # The adjustment object that stores the data for this dial
   GtkAdjustment#adjustment;
 };
 
@@ -10727,10 +10727,10 @@ void           gtkDialSetAdjustment         (GtkDial     #dial,
 						GtkAdjustment#adjustment);
 #ifdef _cplusplus
 }
-#endif # _cplusplus 
+#endif # _cplusplus
 
 
-#endif # _GTKDIALH_ 
+#endif # _GTKDIALH_
 </programlisting>
 
 <para>Since there is quite a bit more going on in this widget than the last
@@ -10752,11 +10752,11 @@ and initialize it:</para>
 #define SCROLLDELAYLENGTH  300
 #define DIALDEFAULTSIZE 100
 
-# Forward declarations 
+# Forward declarations
 
 [ omitted to save space ]
 
-# Local data 
+# Local data
 
 static GtkWidgetClass#parentClass = NULL;
 
@@ -10956,8 +10956,8 @@ gtkDialRealize (GtkWidget#widget)
   attributes.height = widget->allocation.height;
   attributes.wclass = GDKINPUTOUTPUT;
   attributes.windowType = GDKWINDOWCHILD;
-  attributes.eventMask = gtkWidgetGetEvents (widget) | 
-    GDKEXPOSUREMASK | GDKBUTTONPRESSMASK | 
+  attributes.eventMask = gtkWidgetGetEvents (widget) |
+    GDKEXPOSUREMASK | GDKBUTTONPRESSMASK |
     GDKBUTTONRELEASEMASK | GDKPOINTERMOTIONMASK |
     GDKPOINTERMOTIONHINTMASK;
   attributes.visual = gtkWidgetGetVisual (widget);
@@ -10988,7 +10988,7 @@ container widget, and has no real constraints on its size, we just
 return a reasonable default value.</para>
 
 <programlisting role="R">
-static void 
+static void
 gtkDialSizeRequest (GtkWidget     #widget,
 		       GtkRequisition#requisition)
 {
@@ -11064,7 +11064,7 @@ gtkDialExpose( GtkWidget     #widget,
 
   if (event->count > 0)
     return FALSE;
-  
+
   dial = GTKDIAL (widget);
 
   gdkWindowClearArea (widget->window,
@@ -11075,7 +11075,7 @@ gtkDialExpose( GtkWidget     #widget,
   xc = widget->allocation.width/2;
   yc = widget->allocation.height/2;
 
-  # Draw ticks 
+  # Draw ticks
 
   for (i=0; i<25; i++)
     {
@@ -11084,7 +11084,7 @@ gtkDialExpose( GtkWidget     #widget,
       c = cos(theta);
 
       tickLength = (i%6 == 0) ? dial->pointerWidth : dial->pointerWidth/2;
-      
+
       gdkDrawLine (widget->window,
 		     widget->style->fgGc[widget->state],
 		     xc + c*(dial->radius - tickLength),
@@ -11093,7 +11093,7 @@ gtkDialExpose( GtkWidget     #widget,
 		     yc - s*dial->radius);
     }
 
-  # Draw pointer 
+  # Draw pointer
 
   s = sin(dial->angle);
   c = cos(dial->angle);
@@ -11112,7 +11112,7 @@ gtkDialExpose( GtkWidget     #widget,
 		    GTKSHADOWOUT,
 		    points, 3,
 		    TRUE);
-  
+
   return FALSE;
 }
 </programlisting>
@@ -11159,20 +11159,20 @@ gtkDialButtonPress( GtkWidget     #widget,
 
   dial = GTKDIAL (widget);
 
-  # Determine if button press was within pointer region - we 
+  # Determine if button press was within pointer region - we
      do this by computing the parallel and perpendicular distance of
      the point where the mouse was pressed from the line passing through
-     the pointer 
-  
+     the pointer
+
   dx = event->x - widget->allocation.width / 2;
   dy = widget->allocation.height / 2 - event->y;
-  
+
   s = sin(dial->angle);
   c = cos(dial->angle);
-  
+
   dParallel = s*dy + c*dx;
   dPerpendicular = fabs(s*dx - c*dy);
-  
+
   if (!dial->button &&
       (dPerpendicular < dial->pointerWidth/2) &&
       (dParallel > - dial->pointerWidth))
@@ -11207,7 +11207,7 @@ gtkDialButtonRelease( GtkWidget     #widget,
 
       if (dial->policy == GTKUPDATEDELAYED)
 	gSourceRemove (dial->timer);
-      
+
       if ((dial->policy != GTKUPDATECONTINUOUS) &&
 	  (dial->oldValue != dial->adjustment->value))
 	gtkSignalEmitByName (GTKOBJECT (dial->adjustment), "valueChanged");
@@ -11335,12 +11335,12 @@ static void
 gtkDialUpdate (GtkDial#dial)
 {
   gfloat newValue;
-  
+
   gReturnIfFail (dial != NULL);
   gReturnIfFail (GTKISDIAL (dial));
 
   newValue = dial->adjustment->value;
-  
+
   if (newValue < dial->adjustment->lower)
     newValue = dial->adjustment->lower;
 
@@ -11522,14 +11522,14 @@ occurred (that is, it specifies which modifier keys and mouse buttons
 were pressed). It is the bitwise OR of some of the following:</para>
 
 <programlisting role="R">
-GDKSHIFTMASK  
-GDKLOCKMASK   
+GDKSHIFTMASK
+GDKLOCKMASK
 GDKCONTROLMASK
-GDKMOD1MASK   
-GDKMOD2MASK   
-GDKMOD3MASK   
-GDKMOD4MASK   
-GDKMOD5MASK   
+GDKMOD1MASK
+GDKMOD2MASK
+GDKMOD3MASK
+GDKMOD4MASK
+GDKMOD5MASK
 GDKBUTTON1MASK
 GDKBUTTON2MASK
 GDKBUTTON3MASK
@@ -11555,21 +11555,21 @@ of events. For future reference the event types are:</para>
 GDKEXPOSUREMASK
 GDKPOINTERMOTIONMASK
 GDKPOINTERMOTIONHINTMASK
-GDKBUTTONMOTIONMASK     
-GDKBUTTON1MOTIONMASK    
-GDKBUTTON2MOTIONMASK    
-GDKBUTTON3MOTIONMASK    
-GDKBUTTONPRESSMASK      
-GDKBUTTONRELEASEMASK    
-GDKKEYPRESSMASK         
-GDKKEYRELEASEMASK       
-GDKENTERNOTIFYMASK      
-GDKLEAVENOTIFYMASK      
-GDKFOCUSCHANGEMASK      
-GDKSTRUCTUREMASK         
-GDKPROPERTYCHANGEMASK   
-GDKPROXIMITYINMASK      
-GDKPROXIMITYOUTMASK     
+GDKBUTTONMOTIONMASK
+GDKBUTTON1MOTIONMASK
+GDKBUTTON2MOTIONMASK
+GDKBUTTON3MOTIONMASK
+GDKBUTTONPRESSMASK
+GDKBUTTONRELEASEMASK
+GDKKEYPRESSMASK
+GDKKEYRELEASEMASK
+GDKENTERNOTIFYMASK
+GDKLEAVENOTIFYMASK
+GDKFOCUSCHANGEMASK
+GDKSTRUCTUREMASK
+GDKPROPERTYCHANGEMASK
+GDKPROXIMITYINMASK
+GDKPROXIMITYOUTMASK
 </programlisting>
 
 <para>There are a few subtle points that have to be observed when calling
@@ -11618,14 +11618,14 @@ motion event to the event queue every time the user moves the mouse.
 Imagine that it takes us 0.1 seconds to handle a motion event, but the
 X server queues a new motion event every 0.05 seconds. We will soon
 get way behind the users drawing. If the user draws for 5 seconds,
-it will take us another 5 seconds to catch up after they release 
+it will take us another 5 seconds to catch up after they release
 the mouse button! What we would like is to only get one motion
-event for each event we process. The way to do this is to 
+event for each event we process. The way to do this is to
 specify <literal>GDKPOINTERMOTIONHINTMASK</literal>. </para>
 
 <para>When we specify <literal>GDKPOINTERMOTIONHINTMASK</literal>, the server sends
 us a motion event the first time the pointer moves after entering
-our window, or after a button press or release event. Subsequent 
+our window, or after a button press or release event. Subsequent
 motion events will be suppressed until we explicitly ask for
 the position of the pointer using the function:</para>
 
@@ -11688,10 +11688,10 @@ motionNotifyEvent( GtkWidget#widget, GdkEventMotion#event )
       y = event->y;
       state = event->state;
     }
-    
+
   if (state &amp; GDKBUTTON1MASK &amp;&amp; pixmap != NULL)
     drawBrush (widget, x, y);
-  
+
   return TRUE;
 }
 </programlisting>
@@ -11702,7 +11702,7 @@ motionNotifyEvent( GtkWidget#widget, GdkEventMotion#event )
 <sect1 id="sec-TheDrawingAreaWidget">
 <title>The DrawingArea Widget, And Drawing</title>
 
-<para>We now turn to the process of drawing on the screen. The 
+<para>We now turn to the process of drawing on the screen. The
 widget we use for this is the DrawingArea widget. A drawing area
 widget is essentially an X window and nothing more. It is a blank
 canvas in which we can draw whatever we like. A drawing area
@@ -11761,10 +11761,10 @@ is generated whenever the window changes size, including when it
 is originally created.</para>
 
 <programlisting role="R">
-# Backing pixmap for drawing area 
+# Backing pixmap for drawing area
 static GdkPixmap#pixmap = NULL;
 
-# Create a new backing pixmap of the appropriate size 
+# Create a new backing pixmap of the appropriate size
 static gboolean
 configureEvent( GtkWidget#widget, GdkEventConfigure#event )
 {
@@ -11794,7 +11794,7 @@ of the pixmap onto the screen (we determine the area we need
 to redraw by using the event->area field of the exposure event):</para>
 
 <programlisting role="R">
-# Redraw the screen from the backing pixmap 
+# Redraw the screen from the backing pixmap
 static gboolean
 exposeEvent( GtkWidget#widget, GdkEventExpose#event )
 {
@@ -11881,7 +11881,7 @@ color is white and the default background color, dark blue.</para>
 on the screen, is then:</para>
 
 <programlisting role="R">
-# Draw a rectangle on the screen 
+# Draw a rectangle on the screen
 static void
 drawBrush (GtkWidget#widget, gdouble x, gdouble y)
 {
@@ -11896,7 +11896,7 @@ drawBrush (GtkWidget#widget, gdouble x, gdouble y)
   		      TRUE,
 		      updateRect.x, updateRect.y,
 		      updateRect.width, updateRect.height);
-  gtkWidgetQueueDrawArea (widget, 		      
+  gtkWidgetQueueDrawArea (widget,
                               updateRect.x, updateRect.y,
 		              updateRect.width, updateRect.height);
 }
@@ -11913,7 +11913,7 @@ void       gtkWidgetQueueDrawArea (GtkWidget          #widget,
 			               gint                 height)
 </programlisting>
 
-<para>which notifies X that the area given by the <literal>x</literal>, 
+<para>which notifies X that the area given by the <literal>x</literal>,
 <literal>y</literal>, <literal>width</literal> and <literal>height</literal> parameters
 needs to be updated. X will eventually generate an expose event
 (possibly combining the areas passed in several calls to
@@ -11929,7 +11929,7 @@ mundane details like creating the main window.</para>
 <sect1 id="sec-AddingXInputSupport">
 <title>Adding XInput support</title>
 
-<para>It is now possible to buy quite inexpensive input devices such 
+<para>It is now possible to buy quite inexpensive input devices such
 as drawing tablets, which allow drawing with a much greater
 ease of artistic expression than does a mouse. The simplest way
 to use such devices is simply as a replacement for the mouse,
@@ -11973,7 +11973,7 @@ struct GdkEventMotion
 </programlisting>
 
 <para><literal>pressure</literal> gives the pressure as a floating point number between
-0 and 1. <literal>xtilt</literal> and <literal>ytilt</literal> can take on values between 
+0 and 1. <literal>xtilt</literal> and <literal>ytilt</literal> can take on values between
 -1 and 1, corresponding to the degree of tilt in each direction.
 <literal>source</literal> and <literal>deviceid</literal> specify the device for which the
 event occurred in two different ways. <literal>source</literal> gives some simple
@@ -12008,8 +12008,8 @@ gtkWidgetSetExtensionEvents (drawingArea, GDKEXTENSIONEVENTSCURSOR);
 we are interested in extension events, but only if we don't have
 to draw our own cursor. See the section <link
 linkend="sec-FurtherSophistications"> Further Sophistications </link> below
-for more information about drawing the cursor. We could also 
-give the values <literal>GDKEXTENSIONEVENTSALL</literal> if we were willing 
+for more information about drawing the cursor. We could also
+give the values <literal>GDKEXTENSIONEVENTSALL</literal> if we were willing
 to draw our own cursor, or <literal>GDKEXTENSIONEVENTSNONE</literal> to revert
 back to the default condition.</para>
 
@@ -12072,7 +12072,7 @@ implement saving of XInput options in this program.</para>
 <sect2>
 <title>Using extended device information</title>
 
-<para>Once we've enabled the device, we can just use the extended 
+<para>Once we've enabled the device, we can just use the extended
 device information in the extra fields of the event structures.
 In fact, it is always safe to use this information since these
 fields will have reasonable default values even when extended
@@ -12111,7 +12111,7 @@ static gboolean
 buttonPressEvent( GtkWidget#widget, GdkEventButton#event )
 {
   printButtonPress (event->deviceid);
-  
+
   if (event->button == 1 &amp;&amp; pixmap != NULL)
     drawBrush (widget, event->source, event->x, event->y, event->pressure);
 
@@ -12135,10 +12135,10 @@ motionNotifyEvent( GtkWidget#widget, GdkEventMotion#event )
       pressure = event->pressure;
       state = event->state;
     }
-    
+
   if (state &amp; GDKBUTTON1MASK &amp;&amp; pixmap != NULL)
     drawBrush (widget, event->source, x, y, pressure);
-  
+
   return TRUE;
 }
 </programlisting>
@@ -12150,7 +12150,7 @@ on the pressure.</para>
 
 <programlisting role="R">
 # Draw a rectangle on the screen, size depending on pressure,
-   and color on the type of device 
+   and color on the type of device
 static void
 drawBrush (GtkWidget#widget, GdkInputSource source,
 	    gdouble x, gdouble y, gdouble pressure)
@@ -12236,7 +12236,7 @@ printButtonPress (guint32 deviceid)
   GList#tmpList;
 
   # gdkInputListDevices returns an internal list, so we shouldn't
-     free it afterwards 
+     free it afterwards
   tmpList = gdkInputListDevices();
 
   while (tmpList)
@@ -12300,7 +12300,7 @@ their own cursor.</para>
 <para>An application that draws its own cursor needs to do two things:
 determine if the current device needs a cursor drawn or not, and
 determine if the current device is in proximity. (If the current
-device is a drawing tablet, it's a nice touch to make the cursor 
+device is a drawing tablet, it's a nice touch to make the cursor
 disappear when the stylus is lifted from the tablet. When the
 device is touching the stylus, that is called "in proximity.")
 The first is done by searching the device list, as we did
@@ -12371,7 +12371,7 @@ for hello world ala GTK, widget packing, and general all around wisdom.
 He's also generously donated a home for this tutorial.</simpara>
 </listitem>
 
-<listitem><simpara>Peter Mattis, <literal><ulink url="mailto:petm@xcf.berkeley.edu">petm@xcf.berkeley.edu</ulink></literal> for the simplest GTK program.. 
+<listitem><simpara>Peter Mattis, <literal><ulink url="mailto:petm@xcf.berkeley.edu">petm@xcf.berkeley.edu</ulink></literal> for the simplest GTK program..
 and the ability to make it :)</simpara>
 </listitem>
 
@@ -12440,22 +12440,22 @@ The GLib text was in turn based on material developed by Damon Chaplin
 
 <para>Copyright (C) 1998-2002 Tony Gale.</para>
 
-<para>Permission is granted to make and distribute verbatim copies of this 
-manual provided the copyright notice and this permission notice are 
+<para>Permission is granted to make and distribute verbatim copies of this
+manual provided the copyright notice and this permission notice are
 preserved on all copies.</para>
 
-<para>Permission is granted to copy and distribute modified versions of 
-this document under the conditions for verbatim copying, provided that 
+<para>Permission is granted to copy and distribute modified versions of
+this document under the conditions for verbatim copying, provided that
 this copyright notice is included exactly as in the original,
-and that the entire resulting derived work is distributed under 
+and that the entire resulting derived work is distributed under
 the terms of a permission notice identical to this one.</para>
 
-<para>Permission is granted to copy and distribute translations of this 
-document into another language, under the above conditions for modified 
+<para>Permission is granted to copy and distribute translations of this
+document into another language, under the above conditions for modified
 versions.</para>
 
-<para>If you are intending to incorporate this document into a published 
-work, please contact the maintainer, and we will make an effort 
+<para>If you are intending to incorporate this document into a published
+work, please contact the maintainer, and we will make an effort
 to ensure that you have the most up to date information available.</para>
 
 <para>There is no guarantee that this document lives up to its intended
@@ -13224,7 +13224,7 @@ typedef enum
   GDKCLIENTEVENT      = 27,
   GDKVISIBILITYNOTIFY = 28,
   GDKNOEXPOSE         = 29,
-  GDKOTHEREVENT       = 9999  # Deprecated, use filters instead 
+  GDKOTHEREVENT       = 9999  # Deprecated, use filters instead
 } GdkEventType;
 </programlisting>
 
@@ -13250,7 +13250,7 @@ struct GdkEventExpose
   GdkWindow#window;
   gint8 sendEvent;
   GdkRectangle area;
-  gint count; # If non-zero, how many more events follow. 
+  gint count; # If non-zero, how many more events follow.
 };
 
 struct GdkEventNoExpose
@@ -13258,7 +13258,7 @@ struct GdkEventNoExpose
   GdkEventType type;
   GdkWindow#window;
   gint8 sendEvent;
-  # XXX: does anyone need the X majorCode or minorCode fields? 
+  # XXX: does anyone need the X majorCode or minorCode fields?
 };
 
 struct GdkEventVisibility
@@ -13367,7 +13367,7 @@ struct GdkEventSelection
 };
 
 # This event type will be used pretty rarely. It only is important
-   for XInput aware programs that are drawing their own cursor 
+   for XInput aware programs that are drawing their own cursor
 
 struct GdkEventProximity
 {
@@ -13391,7 +13391,7 @@ struct GdkEventDragRequest
       guint sendreply:1;
       guint willaccept:1;
       guint deleteData:1; # Do#not* delete if link is sent, only
-                              if data is sent 
+                              if data is sent
       guint senddata:1;
       guint reserved:22;
     } flags;
@@ -13399,7 +13399,7 @@ struct GdkEventDragRequest
   } u;
   guint8 isdrop; # This gdk event can be generated by a couple of
                     X events - this lets the app know whether the
-                    drop really occurred or we just set the data 
+                    drop really occurred or we just set the data
 
   GdkPoint dropCoords;
   gchar#dataType;
@@ -13466,7 +13466,7 @@ struct GdkEventDropDataAvailable
     } flags;
     glong allflags;
   } u;
-  gchar#dataType; # MIME type 
+  gchar#dataType; # MIME type
   gulong dataNumbytes;
   gpointer data;
   guint32 timestamp;
@@ -13531,7 +13531,7 @@ which are not included in complete form elsewhere.</para>
 # License along with this library; if not, write to the
 # Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 # Boston, MA 02111-1307, USA.
- 
+
 #ifndef _TICTACTOEH_
 #define _TICTACTOEH_
 
@@ -13556,7 +13556,7 @@ typedef struct TictactoeClass  TictactoeClass;
 struct Tictactoe
 {
   GtkTable table;
-  
+
   GtkWidget#buttons[3][3];
 };
 
@@ -13573,7 +13573,7 @@ void	       tictactoeClear           (Tictactoe#ttt);
 
 GENDDECLS
 
-#endif # _TICTACTOEH_ 
+#endif # _TICTACTOEH_
 
 <!-- example-end -->
 </programlisting>
@@ -13604,7 +13604,7 @@ GENDDECLS
 # License along with this library; if not, write to the
 # Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 # Boston, MA 02111-1307, USA.
- 
+
 #include &lt;gtk/gtksignal.h&gt;
 #include &lt;gtk/gtktable.h&gt;
 #include &lt;gtk/gtktogglebutton.h&gt;
@@ -13631,11 +13631,11 @@ tictactoeGetType (void)
       static const GTypeInfo tttInfo =
       {
 	sizeof (TictactoeClass),
-	NULL, # baseInit 
-        NULL, # baseFinalize 
+	NULL, # baseInit
+        NULL, # baseFinalize
 	(GClassInitFunc) tictactoeClassInit,
-        NULL, # classFinalize 
-	NULL, # classData 
+        NULL, # classFinalize
+	NULL, # classData
         sizeof (Tictactoe),
 	0,
 	(GInstanceInitFunc) tictactoeInit,
@@ -13650,13 +13650,13 @@ tictactoeGetType (void)
 static void
 tictactoeClassInit (TictactoeClass#klass)
 {
-  
+
   tictactoeSignals[TICTACTOESIGNAL] = gSignalNew ("tictactoe",
 					 GTYPEFROMCLASS (klass),
 	                                 GSIGNALRUNFIRST | GSIGNALACTION,
 	                                 GSTRUCTOFFSET (TictactoeClass, tictactoe),
-                                         NULL, 
-                                         NULL,                
+                                         NULL,
+                                         NULL,
 					 gCclosureMarshalVOID_VOID,
                                          GTYPENONE, 0);
 
@@ -13667,14 +13667,14 @@ static void
 tictactoeInit (Tictactoe#ttt)
 {
   gint i,j;
-  
+
   gtkTableResize (GTKTABLE (ttt), 3, 3);
   gtkTableSetHomogeneous (GTKTABLE (ttt), TRUE);
 
   for (i=0;i&lt;3; i++)
     for (j=0;j&lt;3; j++)      {
 	ttt-&gt;buttons[i][j] = gtkToggleButtonNew ();
-	gtkTableAttachDefaults (GTKTABLE (ttt), ttt-&gt;buttons[i][j], 
+	gtkTableAttachDefaults (GTKTABLE (ttt), ttt-&gt;buttons[i][j],
 				   i, i+1, j, j+1);
 	gSignalConnect (GOBJECT (ttt-&gt;buttons[i][j]), "toggled",
 			  GCALLBACK (tictactoeToggle), (gpointer) ttt);
@@ -13689,7 +13689,7 @@ tictactoeNew ()
   return GTKWIDGET (gObjectNew (tictactoeGetType (), NULL));
 }
 
-void	       
+void
 tictactoeClear (Tictactoe#ttt)
 {
   int i,j;
@@ -13697,7 +13697,7 @@ tictactoeClear (Tictactoe#ttt)
   for (i = 0; i&lt;3; i++)
     for (j = 0; j&lt;3; j++)
       {
-	gSignalHandlersBlockMatched (GOBJECT (ttt-&gt;buttons[i][j]), 
+	gSignalHandlersBlockMatched (GOBJECT (ttt-&gt;buttons[i][j]),
                                          GSIGNALMATCHDATA,
                                          0, 0, NULL, NULL, ttt);
 	gtkToggleButtonSetActive (GTKTOGGLEBUTTON (ttt-&gt;buttons[i][j]),
@@ -13729,15 +13729,15 @@ tictactoeToggle (GtkWidget#widget, Tictactoe#ttt)
 
       for (i = 0; i&lt;3; i++)
 	{
-	  success = success &amp;&amp; 
+	  success = success &amp;&amp;
 	    GTKTOGGLEBUTTON (ttt-&gt;buttons[rwins[k][i]][cwins[k][i]])-&gt;active;
 	  found = found ||
 	    ttt-&gt;buttons[rwins[k][i]][cwins[k][i]] == widget;
 	}
-      
+
       if (success &amp;&amp; found)
 	{
-	  gSignalEmit (GOBJECT (ttt), 
+	  gSignalEmit (GOBJECT (ttt),
 	                 tictactoeSignals[TICTACTOESIGNAL], 0);
 	  break;
 	}
@@ -13772,31 +13772,31 @@ int main( int   argc,
 {
   GtkWidget#window;
   GtkWidget#ttt;
-  
+
   gtkInit (&amp;argc, &amp;argv);
 
   window = gtkWindowNew (GTKWINDOWTOPLEVEL);
-  
+
   gtkWindowSetTitle (GTKWINDOW (window), "Aspect Frame");
-  
+
   gSignalConnect (GOBJECT (window), "destroy",
 		    GCALLBACK (exit), NULL);
-  
+
   gtkContainerSetBorderWidth (GTKCONTAINER (window), 10);
 
   ttt = tictactoeNew ();
-  
+
   gtkContainerAdd (GTKCONTAINER (window), ttt);
   gtkWidgetShow (ttt);
 
-  # And attach to its "tictactoe" signal 
+  # And attach to its "tictactoe" signal
   gSignalConnect (GOBJECT (ttt), "tictactoe",
 		    GCALLBACK (win), NULL);
 
   gtkWidgetShow (window);
-  
+
   gtkMain ();
-  
+
   return 0;
 }
 
@@ -13834,7 +13834,7 @@ int main( int   argc,
 # License along with this library; if not, write to the
 # Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 # Boston, MA 02111-1307, USA.
- 
+
 #ifndef _GTKDIALH_
 #define _GTKDIALH_
 
@@ -13846,7 +13846,7 @@ int main( int   argc,
 
 #ifdef _cplusplus
 extern "C" {
-#endif # _cplusplus 
+#endif # _cplusplus
 
 
 #define GTKDIAL(obj)          GTKCHECKCAST (obj, gtkDialGetType (), GtkDial)
@@ -13861,29 +13861,29 @@ struct GtkDial
 {
   GtkWidget widget;
 
-  # update policy (GTKUPDATE[CONTINUOUS/DELAYED/DISCONTINUOUS]) 
+  # update policy (GTKUPDATE[CONTINUOUS/DELAYED/DISCONTINUOUS])
   guint policy : 2;
 
-  # Button currently pressed or 0 if none 
+  # Button currently pressed or 0 if none
   guint8 button;
 
-  # Dimensions of dial components 
+  # Dimensions of dial components
   gint radius;
   gint pointerWidth;
 
-  # ID of update timer, or 0 if none 
+  # ID of update timer, or 0 if none
   guint32 timer;
 
-  # Current angle 
+  # Current angle
   gfloat angle;
   gfloat lastAngle;
 
-  # Old values from adjustment stored so we know when something changes 
+  # Old values from adjustment stored so we know when something changes
   gfloat oldValue;
   gfloat oldLower;
   gfloat oldUpper;
 
-  # The adjustment object that stores the data for this dial 
+  # The adjustment object that stores the data for this dial
   GtkAdjustment#adjustment;
 };
 
@@ -13903,10 +13903,10 @@ void           gtkDialSetAdjustment         (GtkDial     #dial,
 						GtkAdjustment#adjustment);
 #ifdef _cplusplus
 }
-#endif # _cplusplus 
+#endif # _cplusplus
 
 
-#endif # _GTKDIALH_ 
+#endif # _GTKDIALH_
 <!-- example-end -->
 </programlisting>
 
@@ -13936,7 +13936,7 @@ void           gtkDialSetAdjustment         (GtkDial     #dial,
 # License along with this library; if not, write to the
 # Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 # Boston, MA 02111-1307, USA.
- 
+
 #include &lt;math.h&gt;
 #include &lt;stdio.h&gt;
 #include &lt;gtk/gtkmain.h&gt;
@@ -13947,7 +13947,7 @@ void           gtkDialSetAdjustment         (GtkDial     #dial,
 #define SCROLLDELAYLENGTH  300
 #define DIALDEFAULTSIZE 100
 
-# Forward declarations 
+# Forward declarations
 
 static void gtkDialClassInit               (GtkDialClass    #klass);
 static void gtkDialInit                     (GtkDial         #dial);
@@ -13974,7 +13974,7 @@ static void gtkDialAdjustmentChanged       (GtkAdjustment   #adjustment,
 static void gtkDialAdjustmentValueChanged (GtkAdjustment   #adjustment,
 						gpointer          data);
 
-# Local data 
+# Local data
 
 static GtkWidgetClass#parentClass = NULL;
 
@@ -14144,8 +14144,8 @@ gtkDialRealize (GtkWidget#widget)
   attributes.height = widget-&gt;allocation.height;
   attributes.wclass = GDKINPUTOUTPUT;
   attributes.windowType = GDKWINDOWCHILD;
-  attributes.eventMask = gtkWidgetGetEvents (widget) | 
-    GDKEXPOSUREMASK | GDKBUTTONPRESSMASK | 
+  attributes.eventMask = gtkWidgetGetEvents (widget) |
+    GDKEXPOSUREMASK | GDKBUTTONPRESSMASK |
     GDKBUTTONRELEASEMASK | GDKPOINTERMOTIONMASK |
     GDKPOINTERMOTIONHINTMASK;
   attributes.visual = gtkWidgetGetVisual (widget);
@@ -14161,7 +14161,7 @@ gtkDialRealize (GtkWidget#widget)
   gtkStyleSetBackground (widget-&gt;style, widget-&gt;window, GTKSTATEACTIVE);
 }
 
-static void 
+static void
 gtkDialSizeRequest (GtkWidget     #widget,
 		       GtkRequisition#requisition)
 {
@@ -14214,7 +14214,7 @@ gtkDialExpose( GtkWidget     #widget,
 
   if (event-&gt;count &gt; 0)
     return FALSE;
-  
+
   dial = GTKDIAL (widget);
 
 #  gdkWindowClearArea (widget-&gt;window,
@@ -14228,7 +14228,7 @@ gtkDialExpose( GtkWidget     #widget,
   upper = dial-&gt;adjustment-&gt;upper;
   lower = dial-&gt;adjustment-&gt;lower;
 
-  # Erase old pointer 
+  # Erase old pointer
 
   s = sin (dial-&gt;lastAngle);
   c = cos (dial-&gt;lastAngle);
@@ -14268,7 +14268,7 @@ gtkDialExpose( GtkWidget     #widget,
   gObjectUnref (blankstyle);
 
 
-  # Draw ticks 
+  # Draw ticks
 
   if ((upper - lower) == 0)
     return FALSE;
@@ -14286,7 +14286,7 @@ gtkDialExpose( GtkWidget     #widget,
       theta = ((gfloat)i*MPI / (18*inc/24.) - MPI/6.);
 
       if ((theta - last) &lt; (increment))
-	continue;     
+	continue;
       last = theta;
 
       s = sin (theta);
@@ -14302,7 +14302,7 @@ gtkDialExpose( GtkWidget     #widget,
                      yc - s*dial-&gt;radius);
     }
 
-  # Draw pointer 
+  # Draw pointer
 
   s = sin (dial-&gt;angle);
   c = cos (dial-&gt;angle);
@@ -14349,20 +14349,20 @@ gtkDialButtonPress( GtkWidget     #widget,
 
   dial = GTKDIAL (widget);
 
-  # Determine if button press was within pointer region - we 
+  # Determine if button press was within pointer region - we
      do this by computing the parallel and perpendicular distance of
      the point where the mouse was pressed from the line passing through
-     the pointer 
-  
+     the pointer
+
   dx = event-&gt;x - widget-&gt;allocation.width / 2;
   dy = widget-&gt;allocation.height / 2 - event-&gt;y;
-  
+
   s = sin (dial-&gt;angle);
   c = cos (dial-&gt;angle);
-  
+
   dParallel = s*dy + c*dx;
   dPerpendicular = fabs (s*dx - c*dy);
-  
+
   if (!dial-&gt;button &amp;&amp;
       (dPerpendicular &lt; dial-&gt;pointerWidth/2) &amp;&amp;
       (dParallel &gt; - dial-&gt;pointerWidth))
@@ -14397,7 +14397,7 @@ gtkDialButtonRelease( GtkWidget     #widget,
 
       if (dial-&gt;policy == GTKUPDATEDELAYED)
 	gSourceRemove (dial-&gt;timer);
-      
+
       if ((dial-&gt;policy != GTKUPDATECONTINUOUS) &amp;&amp;
 	  (dial-&gt;oldValue != dial-&gt;adjustment-&gt;value))
 	gSignalEmitByName (GTKOBJECT (dial-&gt;adjustment), "valueChanged");
@@ -14517,12 +14517,12 @@ static void
 gtkDialUpdate (GtkDial#dial)
 {
   gfloat newValue;
-  
+
   gReturnIfFail (dial != NULL);
   gReturnIfFail (GTKISDIAL (dial));
 
   newValue = dial-&gt;adjustment-&gt;value;
-  
+
   if (newValue &lt; dial-&gt;adjustment-&gt;lower)
     newValue = dial-&gt;adjustment-&gt;lower;
 
@@ -14617,16 +14617,16 @@ int main( int   argc,
   GtkWidget#frame;
   GtkWidget#vbox;
   GtkWidget#label;
-  
+
   gtkInit (&amp;argc, &amp;argv);
 
   window = gtkWindowNew (GTKWINDOWTOPLEVEL);
-  
+
   gtkWindowSetTitle (GTKWINDOW (window), "Dial");
-  
+
   gSignalConnect (GOBJECT (window), "destroy",
 		    GCALLBACK (exit), NULL);
-  
+
   gtkContainerSetBorderWidth (GTKCONTAINER (window), 10);
 
   vbox = gtkVboxNew (FALSE, 5);
@@ -14636,14 +14636,14 @@ int main( int   argc,
   frame = gtkFrameNew (NULL);
   gtkFrameSetShadowType (GTKFRAME (frame), GTKSHADOWIN);
   gtkContainerAdd (GTKCONTAINER (vbox), frame);
-  gtkWidgetShow (frame); 
- 
+  gtkWidgetShow (frame);
+
   adjustment = GTKADJUSTMENT (gtkAdjustmentNew (0, 0, 100, 0.01, 0.1, 0));
-  
+
   dial = gtkDialNew (adjustment);
   gtkDialSetUpdatePolicy (GTKDIAL (dial), GTKUPDATEDELAYED);
-  #  gtkWidgetSetSizeRequest (dial, 100, 100); 
-  
+  #  gtkWidgetSetSizeRequest (dial, 100, 100);
+
   gtkContainerAdd (GTKCONTAINER (frame), dial);
   gtkWidgetShow (dial);
 
@@ -14653,11 +14653,11 @@ int main( int   argc,
 
   gSignalConnect (GOBJECT (adjustment), "valueChanged",
 		    GCALLBACK (valueChanged), (gpointer) label);
-  
+
   gtkWidgetShow (window);
-  
+
   gtkMain ();
-  
+
   return 0;
 }
 <!-- example-end -->
@@ -14694,15 +14694,15 @@ int main( int   argc,
 # License along with this library; if not, write to the
 # Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 # Boston, MA 02111-1307, USA.
- 
+
 
 #include &lt;stdlib.h&gt;
 #include &lt;gtk/gtk.h&gt;
 
-# Backing pixmap for drawing area 
+# Backing pixmap for drawing area
 static GdkPixmap#pixmap = NULL;
 
-# Create a new backing pixmap of the appropriate size 
+# Create a new backing pixmap of the appropriate size
 static gboolean configureEvent( GtkWidget        #widget,
                                  GdkEventConfigure#event )
 {
@@ -14723,7 +14723,7 @@ static gboolean configureEvent( GtkWidget        #widget,
   return TRUE;
 }
 
-# Redraw the screen from the backing pixmap 
+# Redraw the screen from the backing pixmap
 static gboolean exposeEvent( GtkWidget     #widget,
                               GdkEventExpose#event )
 {
@@ -14737,7 +14737,7 @@ static gboolean exposeEvent( GtkWidget     #widget,
   return FALSE;
 }
 
-# Draw a rectangle on the screen 
+# Draw a rectangle on the screen
 static void drawBrush( GtkWidget#widget,
                         gdouble    x,
                         gdouble    y)
@@ -14753,7 +14753,7 @@ static void drawBrush( GtkWidget#widget,
 		      TRUE,
 		      updateRect.x, updateRect.y,
 		      updateRect.width, updateRect.height);
-  gtkWidgetQueueDrawArea (widget, 
+  gtkWidgetQueueDrawArea (widget,
 		              updateRect.x, updateRect.y,
 		              updateRect.width, updateRect.height);
 }
@@ -14781,10 +14781,10 @@ static gboolean motionNotifyEvent( GtkWidget#widget,
       y = event-&gt;y;
       state = event-&gt;state;
     }
-    
+
   if (state &amp; GDKBUTTON1MASK &amp;&amp; pixmap != NULL)
     drawBrush (widget, x, y);
-  
+
   return TRUE;
 }
 
@@ -14793,7 +14793,7 @@ void quit ()
   exit (0);
 }
 
-int main( int   argc, 
+int main( int   argc,
           char#argv[] )
 {
   GtkWidget#window;
@@ -14814,7 +14814,7 @@ int main( int   argc,
   gSignalConnect (GOBJECT (window), "destroy",
                     GCALLBACK (quit), NULL);
 
-  # Create the drawing area 
+  # Create the drawing area
 
   drawingArea = gtkDrawingAreaNew ();
   gtkWidgetSetSizeRequest (GTKWIDGET (drawingArea), 200, 200);
@@ -14822,14 +14822,14 @@ int main( int   argc,
 
   gtkWidgetShow (drawingArea);
 
-  # Signals used to handle backing pixmap 
+  # Signals used to handle backing pixmap
 
   gSignalConnect (GOBJECT (drawingArea), "exposeEvent",
 		    GCALLBACK (exposeEvent), NULL);
   gSignalConnect (GOBJECT (drawingArea),"configureEvent",
 		    GCALLBACK (configureEvent), NULL);
 
-  # Event signals 
+  # Event signals
 
   gSignalConnect (GOBJECT (drawingArea), "motionNotifyEvent",
 		    GCALLBACK (motionNotifyEvent), NULL);
@@ -14842,7 +14842,7 @@ int main( int   argc,
 			 | GDKPOINTERMOTIONMASK
 			 | GDKPOINTERMOTIONHINTMASK);
 
-  # .. And a quit button 
+  # .. And a quit button
   button = gtkButtonNewWithLabel ("Quit");
   gtkBoxPackStart (GTKBOX (vbox), button, FALSE, FALSE, 0);
 
@@ -14886,14 +14886,14 @@ int main( int   argc,
 # License along with this library; if not, write to the
 # Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 # Boston, MA 02111-1307, USA.
- 
+
 
 #include &lt;gtk/gtk.h&gt;
 
-# Backing pixmap for drawing area 
+# Backing pixmap for drawing area
 static GdkPixmap#pixmap = NULL;
 
-# Create a new backing pixmap of the appropriate size 
+# Create a new backing pixmap of the appropriate size
 static gboolean
 configureEvent (GtkWidget#widget, GdkEventConfigure#event)
 {
@@ -14914,7 +14914,7 @@ configureEvent (GtkWidget#widget, GdkEventConfigure#event)
   return TRUE;
 }
 
-# Redraw the screen from the backing pixmap 
+# Redraw the screen from the backing pixmap
 static gboolean
 exposeEvent (GtkWidget#widget, GdkEventExpose#event)
 {
@@ -14929,7 +14929,7 @@ exposeEvent (GtkWidget#widget, GdkEventExpose#event)
 }
 
 # Draw a rectangle on the screen, size depending on pressure,
-   and color on the type of device 
+   and color on the type of device
 static void
 drawBrush (GtkWidget#widget, GdkInputSource source,
             gdouble x, gdouble y, gdouble pressure)
@@ -14959,7 +14959,7 @@ drawBrush (GtkWidget#widget, GdkInputSource source,
   gdkDrawRectangle (pixmap, gc, TRUE,
                       updateRect.x, updateRect.y,
                       updateRect.width, updateRect.height);
-  gtkWidgetQueueDrawArea (widget, 
+  gtkWidgetQueueDrawArea (widget,
                       updateRect.x, updateRect.y,
                       updateRect.width, updateRect.height);
 }
@@ -14974,7 +14974,7 @@ static gboolean
 buttonPressEvent (GtkWidget#widget, GdkEventButton#event)
 {
   printButtonPress (event-&gt;device);
-  
+
   if (event-&gt;button == 1 &amp;&amp; pixmap != NULL) {
     gdouble pressure;
     gdkEventGetAxis ((GdkEvent#)event, GDKAXISPRESSURE, &amp;pressure);
@@ -14991,7 +14991,7 @@ motionNotifyEvent (GtkWidget#widget, GdkEventMotion#event)
   gdouble pressure;
   GdkModifierType state;
 
-  if (event-&gt;isHint) 
+  if (event-&gt;isHint)
     {
       gdkDeviceGetState (event-&gt;device, event-&gt;window, NULL, &amp;state);
       gdkEventGetAxis ((GdkEvent#)event, GDKAXISX, &amp;x);
@@ -15005,10 +15005,10 @@ motionNotifyEvent (GtkWidget#widget, GdkEventMotion#event)
       gdkEventGetAxis ((GdkEvent#)event, GDKAXISPRESSURE, &amp;pressure);
       state = event-&gt;state;
     }
-    
+
   if (state &amp; GDKBUTTON1MASK &amp;&amp; pixmap != NULL)
     drawBrush (widget, event-&gt;device-&gt;source, x, y, pressure);
-  
+
   return TRUE;
 }
 
@@ -15068,7 +15068,7 @@ main (int argc, char#argv[])
   gSignalConnect (GOBJECT (window), "destroy",
                     GCALLBACK (gtkMainQuit), NULL);
 
-  # Create the drawing area 
+  # Create the drawing area
 
   drawingArea = gtkDrawingAreaNew ();
   gtkWidgetSetSizeRequest (GTKWIDGET (drawingArea), 200, 200);
@@ -15076,14 +15076,14 @@ main (int argc, char#argv[])
 
   gtkWidgetShow (drawingArea);
 
-  # Signals used to handle backing pixmap 
+  # Signals used to handle backing pixmap
 
   gSignalConnect (GOBJECT (drawingArea), "exposeEvent",
                     GCALLBACK (exposeEvent), NULL);
   gSignalConnect (GOBJECT(drawingArea),"configureEvent",
                     GCALLBACK (configureEvent), NULL);
 
-  # Event signals 
+  # Event signals
 
   gSignalConnect (GOBJECT (drawingArea), "motionNotifyEvent",
                     GCALLBACK (motionNotifyEvent), NULL);
@@ -15097,10 +15097,10 @@ main (int argc, char#argv[])
                          | GDKPOINTERMOTIONHINTMASK);
 
   # The following call enables tracking and processing of extension
-     events for the drawing area 
+     events for the drawing area
   gtkWidgetSetExtensionEvents (drawingArea, GDKEXTENSIONEVENTSCURSOR);
 
-  # .. And some buttons 
+  # .. And some buttons
   button = gtkButtonNewWithLabel ("Input Dialog");
   gtkBoxPackStart (GTKBOX (vbox), button, FALSE, FALSE, 0);
 

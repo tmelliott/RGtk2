@@ -47,7 +47,7 @@ and \file{.gtkrc-2.0} in the users home directory.
 \option{--prefix} or \option{--sysconfdir} options when
 configuring GTK+.) Note that although the filenames contain the version
 number 2.0, all 2.x versions of GTK+ look for these files.
-  
+
 The set of these \dfn{default} files
 can be retrieved with \code{\link{gtkRcGetDefaultFiles}}
 and modified with \code{\link{gtkRcAddDefaultFile}} and
@@ -55,14 +55,14 @@ and modified with \code{\link{gtkRcAddDefaultFile}} and
 Additionally, the \env{GTK2_RC_FILES} environment variable
 can be set to a \verb{G_SEARCHPATH_SEPARATOR_S-separated} list of files
 in order to overwrite the set of default files at runtime.
-  
+
 For each RC file, in addition to the file itself, GTK+ will look for
 a locale-specific file that will be parsed after the main file.
 For instance, if \env{LANG} is set to \code{ja_JP.ujis},
 when loading the default file \file{~/.gtkrc} then GTK+ looks
 for \file{~/.gtkrc.ja_JP} and \file{~/.gtkrc.ja},
 and parses the first of those that exists.}
-\section{Optimizing RC Style Matches}{  
+\section{Optimizing RC Style Matches}{
 Everytime a widget is created and added to the layout hierarchy of a \code{\link{GtkWindow}}
 ("anchored" to be exact), a list of matching RC styles out of all RC styles read
 in so far is composed.
@@ -80,7 +80,7 @@ matches:
   applications that are affected by them.
   This reduces the overall amount of RC styles that have to be considered
   for a match across a group of applications.
-  
+
 \item   Merge multiple styles which use the same matching rule, for instance:
 \preformatted{     style "Foo" { foo_content }
      class "X" style "Foo"
@@ -91,29 +91,29 @@ matches:
 \preformatted{     style "FooBar" { foo_content bar_content }
      class "X" style "FooBar"
 }
-  
+
 \item   Use of wildcards should be avoided, this can reduce the individual RC style
   match to a single integer comparison in most cases.
-  
+
 \item   To avoid complex recursive matching, specification of full class names
   (for \code{class} matches) or full path names (for
   \code{widget} and \code{widget_class} matches)
   is to be preferred over shortened names
   containing \code{"*"} or \code{"?"}.
-  
+
 \item   If at all necessary, wildcards should only be used at the tail or head
   of a pattern. This reduces the match complexity to a string comparison
   per RC style.
-  
+
 \item   When using wildcards, use of \code{"?"} should be preferred
   over \code{"*"}. This can reduce the matching complexity from
   O(n^2) to O(n). For example \code{"Gtk*Box"} can be turned into
   \code{"Gtk?Box"} and will still match \code{\link{GtkHBox}} and \code{\link{GtkVBox}}.
-  
+
 \item   The use of \code{"*"} wildcards should be restricted as much
   as possible, because matching \code{"A*B*C*RestString"} can
   result in matching complexities of O(n^2) worst case.
-  
+
 }}
 \section{Structures}{\describe{\item{\verb{GtkRcStyle}}{
 The \code{\link{GtkRcStyle}} structure is used to represent a set

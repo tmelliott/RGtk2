@@ -5,11 +5,11 @@
 \usage{gdkPangoContextGetForScreen(screen)}
 \arguments{\item{\verb{screen}}{the \code{\link{GdkScreen}} for which the context is to be created.}}
 \details{
-  
+
 When using GTK+, normally you should use \code{\link{gtkWidgetGetPangoContext}}
 instead of this function, to get the appropriate context for
 the widget you intend to render text onto.
-  
+
 The newly created context will have the default font options
 (see \code{\link{CairoFontOptions}}) for the screen; if these options
 change it will not be updated. Using \code{\link{gtkWidgetGetPangoContext}}

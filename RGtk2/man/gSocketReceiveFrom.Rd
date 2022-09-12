@@ -11,7 +11,7 @@
 }
 \details{If \code{address} is non-\code{NULL} then \code{address} will be set equal to the
 source the received packet.
-  
+
 See \code{\link{gSocketReceive}} for additional information.
   Since 2.22}
 \value{

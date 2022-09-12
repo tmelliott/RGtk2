@@ -24,7 +24,7 @@
       applications will only need to use the latter; you can use
       \code{\link{GtkFileChooserWidget}} as part of a larger window if you have
       special needs.
-      
+
       Note that \code{\link{GtkFileChooserWidget}} does not have any methods of its
       own.  Instead, you should use the functions that work on a
       \code{\link{GtkFileChooser}}.

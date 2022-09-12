@@ -13,7 +13,7 @@ within cairo. Typical usage will be of the form:}
 stride <- format$strideForWidth(width)
 data <- raw(stride * height)
 surface <- cairoImageSurfaceCreateForData(data, format, width, height, stride)
-}  
+}
   Since 1.6}
 \value{[integer]  the appropriate stride to use given the desired
 format and width, or -1 if either the format is invalid or the width

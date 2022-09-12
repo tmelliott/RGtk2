@@ -2,10 +2,10 @@
 \alias{gtkShow}
 \title{Show/realize one or more Widgets}
 \description{
-\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)} 
+\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)}
 
 This causes each widget given in the call
-to be realized or actually displayed 
+to be realized or actually displayed
 }
 \usage{
 gtkShow(..., all = T)
@@ -42,7 +42,7 @@ that were realized in the call.
 
 \examples{
   if (gtkInit()) {
-    w <- gtkWindow(show = FALSE) 
+    w <- gtkWindow(show = FALSE)
     b <- gtkButton("Hit me") # automatically shown in the creation.
     w$add(b)
     gtkShow(w)
@@ -51,4 +51,3 @@ that were realized in the call.
 
 \keyword{interface}
 \keyword{internal}
-

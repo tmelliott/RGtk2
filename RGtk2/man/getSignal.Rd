@@ -3,7 +3,7 @@
 \alias{gtkTypeGetSignals}
 \title{Retrieve information about available signals}
 \description{
-\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)} 
+\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)}
 
   This provides dynamic (run-time) reflectance information about
   the available signals for a Gtk type/class.
@@ -19,7 +19,7 @@ gtkTypeGetSignals(type)
 \arguments{
   \item{obj}{the Gtk object whose signals are to be queried.}
   \item{type}{a string or object of class \code{GtkType} whose signals
-    are to be retrieved.}  
+    are to be retrieved.}
 }
 
 \references{

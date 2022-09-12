@@ -1,7 +1,7 @@
 \alias{gtkPrintOperationGetStatus}
 \name{gtkPrintOperationGetStatus}
 \title{gtkPrintOperationGetStatus}
-\description{Returns the status of the print operation. 
+\description{Returns the status of the print operation.
 Also see \code{\link{gtkPrintOperationGetStatusString}}.}
 \usage{gtkPrintOperationGetStatus(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkPrintOperation}}}}

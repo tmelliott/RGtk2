@@ -1,7 +1,7 @@
 \alias{gIoExtensionPointSetRequiredType}
 \name{gIoExtensionPointSetRequiredType}
 \title{gIoExtensionPointSetRequiredType}
-\description{Sets the required type for \code{extension.point} to \code{type}. 
+\description{Sets the required type for \code{extension.point} to \code{type}.
 All implementations must henceforth have this type.}
 \usage{gIoExtensionPointSetRequiredType(object, type)}
 \arguments{

@@ -1,7 +1,7 @@
 \alias{gFileAttributeMatcherMatches}
 \name{gFileAttributeMatcherMatches}
 \title{gFileAttributeMatcherMatches}
-\description{Checks if an attribute will be matched by an attribute matcher. If 
+\description{Checks if an attribute will be matched by an attribute matcher. If
 the matcher was created with the "*" matching string, this function
 will always return \code{TRUE}.}
 \usage{gFileAttributeMatcherMatches(object, attribute)}

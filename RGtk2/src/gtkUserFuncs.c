@@ -30,7 +30,7 @@ S_GtkAboutDialogActivateLinkFunc(GtkAboutDialog* s_about, const gchar* s_link, g
 
   if(err)
     return;
-} 
+}
 
 
 void
@@ -67,7 +67,7 @@ S_GtkCellLayoutDataFunc(GtkCellLayout* s_cell_layout, GtkCellRenderer* s_cell, G
 
   if(err)
     return;
-} 
+}
 
 
 void
@@ -102,7 +102,7 @@ S_GtkClipboardGetFunc(GtkClipboard* s_clipboard, GtkSelectionData* s_selection_d
 
   if(err)
     return;
-} 
+}
 
 
 void
@@ -135,7 +135,7 @@ S_GtkClipboardReceivedFunc(GtkClipboard* s_clipboard, GtkSelectionData* s_select
 
   if(err)
     return;
-} 
+}
 
 
 void
@@ -168,7 +168,7 @@ S_GtkClipboardImageReceivedFunc(GtkClipboard* s_clipboard, GdkPixbuf* s_image, g
 
   if(err)
     return;
-} 
+}
 
 
 void
@@ -201,7 +201,7 @@ S_GtkClipboardTextReceivedFunc(GtkClipboard* s_clipboard, const gchar* s_text, g
 
   if(err)
     return;
-} 
+}
 
 
 void
@@ -236,7 +236,7 @@ S_GtkClipboardTargetsReceivedFunc(GtkClipboard* s_clipboard, GdkAtom* s_atoms, g
 
   if(err)
     return;
-} 
+}
 
 
   R_CallbackData * GtkColorSelectionChangePaletteFunc_cbdata;
@@ -270,7 +270,7 @@ S_GtkColorSelectionChangePaletteFunc(const GdkColor* s_colors, gint s_n_colors)
 
   if(err)
     return;
-} 
+}
 
 
   R_CallbackData * GtkColorSelectionChangePaletteWithScreenFunc_cbdata;
@@ -306,7 +306,7 @@ S_GtkColorSelectionChangePaletteWithScreenFunc(GdkScreen* s_screen, const GdkCol
 
   if(err)
     return;
-} 
+}
 
 
 gboolean
@@ -344,7 +344,7 @@ S_GtkCTreeGNodeFunc(GtkCTree* s_ctree, guint s_depth, GNode* s_gnode, GtkCTreeNo
   if(err)
     return(((gboolean)0));
   return(((gboolean)asCLogical(s_ans)));
-} 
+}
 
 
 void
@@ -377,7 +377,7 @@ S_GtkCTreeFunc(GtkCTree* s_ctree, GtkCTreeNode* s_node, gpointer s_data)
 
   if(err)
     return;
-} 
+}
 
 
 gboolean
@@ -413,7 +413,7 @@ S_GtkEntryCompletionMatchFunc(GtkEntryCompletion* s_completion, const gchar* s_k
   if(err)
     return(((gboolean)0));
   return(((gboolean)asCLogical(s_ans)));
-} 
+}
 
 
 gboolean
@@ -445,7 +445,7 @@ S_GtkFileFilterFunc(const GtkFileFilterInfo* s_filter_info, gpointer s_data)
   if(err)
     return(((gboolean)0));
   return(((gboolean)asCLogical(s_ans)));
-} 
+}
 
 
 void
@@ -478,7 +478,7 @@ S_GtkIconViewForeachFunc(GtkIconView* s_icon_view, GtkTreePath* s_path, gpointer
 
   if(err)
     return;
-} 
+}
 
 
 void
@@ -509,7 +509,7 @@ S_GtkTranslateFunc(const gchar* s_path, gpointer s_func_data)
 
   if(err)
     return;
-} 
+}
 
 
 gboolean
@@ -540,7 +540,7 @@ S_GtkFunction(gpointer s_data)
   if(err)
     return(((gboolean)0));
   return(((gboolean)asCLogical(s_ans)));
-} 
+}
 
 
 gint
@@ -574,7 +574,7 @@ S_GtkKeySnoopFunc(GtkWidget* s_grab_widget, GdkEventKey* s_event, gpointer s_fun
   if(err)
     return(((gint)0));
   return(((gint)asCInteger(s_ans)));
-} 
+}
 
 
 gint
@@ -609,7 +609,7 @@ S_GtkMenuPositionFunc(GtkMenu* s_menu, gint* s_x, gint* s_y, gboolean* s_push_in
   *s_y = ((gint)asCInteger(VECTOR_ELT(s_ans, 2)));
   *s_push_in = ((gboolean)asCLogical(VECTOR_ELT(s_ans, 3)));
   return(((gint)asCInteger(VECTOR_ELT(s_ans, 0))));
-} 
+}
 
 
 gint
@@ -645,7 +645,7 @@ S_GtkTreeModelForeachFunc(GtkTreeModel* s_model, GtkTreePath* s_path, GtkTreeIte
   if(err)
     return(((gint)0));
   return(((gint)asCInteger(s_ans)));
-} 
+}
 
 
 gint
@@ -679,7 +679,7 @@ S_GtkTreeModelFilterVisibleFunc(GtkTreeModel* s_model, GtkTreeIter* s_iter, gpoi
   if(err)
     return(((gint)0));
   return(((gint)asCInteger(s_ans)));
-} 
+}
 
 
 gint
@@ -717,7 +717,7 @@ S_GtkTreeModelFilterModifyFunc(GtkTreeModel* s_model, GtkTreeIter* s_iter, GValu
   if(err)
     return(((gint)0));
   return(((gint)asCInteger(s_ans)));
-} 
+}
 
 
 gboolean
@@ -755,7 +755,7 @@ S_GtkTreeSelectionFunc(GtkTreeSelection* s_selection, GtkTreeModel* s_model, Gtk
   if(err)
     return(((gboolean)0));
   return(((gboolean)asCLogical(s_ans)));
-} 
+}
 
 
 void
@@ -790,7 +790,7 @@ S_GtkTreeSelectionForeachFunc(GtkTreeModel* s_model, GtkTreePath* s_path, GtkTre
 
   if(err)
     return;
-} 
+}
 
 
 gint
@@ -826,7 +826,7 @@ S_GtkTreeIterCompareFunc(GtkTreeModel* s_model, GtkTreeIter* s_a, GtkTreeIter* s
   if(err)
     return(((gint)0));
   return(((gint)asCInteger(s_ans)));
-} 
+}
 
 
 void
@@ -863,7 +863,7 @@ S_GtkTreeCellDataFunc(GtkTreeViewColumn* s_tree_column, GtkCellRenderer* s_cell,
 
   if(err)
     return;
-} 
+}
 
 
 gboolean
@@ -901,7 +901,7 @@ S_GtkTreeViewColumnDropFunc(GtkTreeView* s_tree_view, GtkTreeViewColumn* s_colum
   if(err)
     return(((gboolean)0));
   return(((gboolean)asCLogical(s_ans)));
-} 
+}
 
 
 void
@@ -934,7 +934,7 @@ S_GtkTreeViewMappingFunc(GtkTreeView* s_tree_view, GtkTreePath* s_path, gpointer
 
   if(err)
     return;
-} 
+}
 
 
 gboolean
@@ -972,7 +972,7 @@ S_GtkTreeViewSearchEqualFunc(GtkTreeModel* s_model, gint s_column, const gchar* 
   if(err)
     return(((gboolean)0));
   return(((gboolean)asCLogical(s_ans)));
-} 
+}
 
 
 void
@@ -1007,7 +1007,7 @@ S_GtkTreeDestroyCountFunc(GtkTreeView* s_tree_view, GtkTreePath* s_path, gint s_
 
   if(err)
     return;
-} 
+}
 
 
 gboolean
@@ -1041,7 +1041,7 @@ S_GtkTreeViewRowSeparatorFunc(GtkTreeModel* s_model, GtkTreeIter* s_iter, gpoint
   if(err)
     return(((gboolean)0));
   return(((gboolean)asCLogical(s_ans)));
-} 
+}
 
 
 void
@@ -1072,7 +1072,7 @@ S_GtkCallback(GtkWidget* s_child, gpointer s_data)
 
   if(err)
     return;
-} 
+}
 
 
 void
@@ -1109,7 +1109,7 @@ S_GtkAccelMapForeach(gpointer s_data, const gchar* s_accel_path, guint s_accel_k
 
   if(err)
     return;
-} 
+}
 
 
 gboolean
@@ -1143,7 +1143,7 @@ S_GtkAccelGroupFindFunc(GtkAccelKey* s_key, GClosure* s_closure, gpointer s_data
   if(err)
     return(((gboolean)0));
   return(((gboolean)asCLogical(s_ans)));
-} 
+}
 
 
   R_CallbackData * GtkAccelGroupActivate_cbdata;
@@ -1182,7 +1182,7 @@ S_GtkAccelGroupActivate(GtkAccelGroup* s_accel_group, GObject* s_acceleratable, 
   if(err)
     return(((gboolean)0));
   return(((gboolean)asCLogical(s_ans)));
-} 
+}
 
 
 void
@@ -1213,7 +1213,7 @@ S_GtkTextTagTableForeach(GtkTextTag* s_tag, gpointer s_data)
 
   if(err)
     return;
-} 
+}
 
 
 gboolean
@@ -1245,7 +1245,7 @@ S_GtkTextCharPredicate(gunichar s_ch, gpointer s_user_data)
   if(err)
     return(((gboolean)0));
   return(((gboolean)asCLogical(s_ans)));
-} 
+}
 
 
 void
@@ -1278,7 +1278,7 @@ S_GtkItemFactoryCallback1(gpointer s_callback_data, guint s_callback_action, Gtk
 
   if(err)
     return;
-} 
+}
 
 
 void
@@ -1311,7 +1311,7 @@ S_GtkItemFactoryCallback2(GtkWidget* s_widget, gpointer s_callback_data, guint s
 
   if(err)
     return;
-} 
+}
 
 #if GTK_CHECK_VERSION(2, 10, 0)
 
@@ -1345,7 +1345,7 @@ S_GtkAssistantPageFunc(gint s_current_page, gpointer s_data)
     return(((gint)0));
   return(((gint)asCInteger(s_ans)));
 }
-#endif 
+#endif
 
 #if GTK_CHECK_VERSION(2, 10, 0)
 
@@ -1384,7 +1384,7 @@ S_GtkClipboardRichTextReceivedFunc(GtkClipboard* s_clipboard, GdkAtom s_format, 
   if(err)
     return;
 }
-#endif 
+#endif
 
 #if GTK_CHECK_VERSION(2, 10, 0)
 
@@ -1419,7 +1419,7 @@ S_GtkLinkButtonUriFunc(GtkLinkButton* s_button, const gchar* s_link, gpointer s_
   if(err)
     return;
 }
-#endif 
+#endif
 
 #if GTK_CHECK_VERSION(2, 10, 0)
 
@@ -1459,7 +1459,7 @@ S_GtkNotebookWindowCreationFunc(GtkNotebook* s_source, GtkWidget* s_page, gint s
     return(((GtkNotebook*)0));
   return(GTK_NOTEBOOK(getPtrValue(s_ans)));
 }
-#endif 
+#endif
 
 #if GTK_CHECK_VERSION(2, 10, 0)
 
@@ -1492,7 +1492,7 @@ S_GtkPageSetupDoneFunc(GtkPageSetup* s_page_setup, gpointer s_data)
   if(err)
     return;
 }
-#endif 
+#endif
 
 #if GTK_CHECK_VERSION(2, 10, 0)
 
@@ -1527,7 +1527,7 @@ S_GtkPrintSettingsFunc(const gchar* s_key, const gchar* s_value, gpointer s_user
   if(err)
     return;
 }
-#endif 
+#endif
 
 #if GTK_CHECK_VERSION(2, 10, 0)
 
@@ -1563,7 +1563,7 @@ S_GtkRecentSortFunc(GtkRecentInfo* s_a, GtkRecentInfo* s_b, gpointer s_user_data
     return(((gint)0));
   return(((gint)asCInteger(s_ans)));
 }
-#endif 
+#endif
 
 #if GTK_CHECK_VERSION(2, 10, 0)
 
@@ -1597,7 +1597,7 @@ S_GtkRecentFilterFunc(const GtkRecentFilterInfo* s_filter_info, gpointer s_user_
     return(((gboolean)0));
   return(((gboolean)asCLogical(s_ans)));
 }
-#endif 
+#endif
 
 #if GTK_CHECK_VERSION(2, 10, 0)
 
@@ -1642,7 +1642,7 @@ S_GtkTextBufferDeserializeFunc(GtkTextBuffer* s_register_buffer, GtkTextBuffer* 
   *s_error = asCGError(VECTOR_ELT(s_ans, 1));
   return(((gboolean)asCLogical(VECTOR_ELT(s_ans, 0))));
 }
-#endif 
+#endif
 
 #if GTK_CHECK_VERSION(2, 10, 0)
 
@@ -1677,7 +1677,7 @@ S_GtkTreeViewSearchPositionFunc(GtkTreeView* s_tree_view, GtkWidget* s_search_di
   if(err)
     return;
 }
-#endif 
+#endif
 
 #if GTK_CHECK_VERSION(2, 12, 0)
 
@@ -1720,7 +1720,7 @@ S_GtkBuilderConnectFunc(GtkBuilder* s_builder, GObject* s_object, const gchar* s
   if(err)
     return;
 }
-#endif 
+#endif
 
 #if GTK_CHECK_VERSION(2, 14, 0)
 
@@ -1760,7 +1760,7 @@ S_GtkCalendarDetailFunc(GtkCalendar* s_calendar, guint s_year, guint s_month, gu
     return(((gchar*)0));
   return(((gchar*)g_strdup(asCString(s_ans))));
 }
-#endif 
+#endif
 
 #if GTK_CHECK_VERSION(2, 14, 0)
 
@@ -1795,5 +1795,4 @@ S_GtkClipboardURIReceivedFunc(GtkClipboard* s_clipboard, gchar** s_uris, gpointe
   if(err)
     return;
 }
-#endif 
-
+#endif

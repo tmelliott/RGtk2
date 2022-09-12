@@ -17,10 +17,10 @@ The alpha channel of the window defines which pixels are
 invisible and allows for nicely antialiased borders,
 and the input shape controls where the window is
 "clickable".
-  
+
 On the X11 platform, this requires version 1.1 of the
 shape extension.
-  
+
 On the Win32 platform, this functionality is not present and the
 function does nothing.
   Since 2.10}

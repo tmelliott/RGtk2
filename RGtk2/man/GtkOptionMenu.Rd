@@ -26,7 +26,7 @@
 list of valid choices.  The \code{\link{GtkOptionMenu}} displays the selected
 choice.  When activated the \code{\link{GtkOptionMenu}} displays a popup \code{\link{GtkMenu}}
 which allows the user to make a new choice.
-  
+
 Using a \code{\link{GtkOptionMenu}} is simple; build a \code{\link{GtkMenu}}, by calling
 \code{\link{gtkMenuNew}}, then appending menu items to it with
 \code{\link{gtkMenuShellAppend}}. Set that menu on the option menu
@@ -34,7 +34,7 @@ with \code{\link{gtkOptionMenuSetMenu}}. Set the selected menu item with
 \code{\link{gtkOptionMenuSetHistory}}; connect to the "changed" signal on
 the option menu; in the "changed" signal, check the new selected
 menu item with \code{\link{gtkOptionMenuGetHistory}}.
-  
+
 As of GTK+ 2.4, \code{\link{GtkOptionMenu}} has been deprecated in favor of \code{\link{GtkComboBox}}.}
 \section{Structures}{\describe{\item{\verb{GtkOptionMenu}}{
 \strong{WARNING: \code{GtkOptionMenu} has been deprecated since version 2.4 and should not be used in newly-written code. Use \code{\link{GtkComboBox}} instead.}

@@ -11,13 +11,13 @@ during this read.}
 }
 \details{On success, the byte read from the stream is returned. On end of stream
 -1 is returned but it's not an exceptional error and \code{error} is not set.
-  
+
 If \code{cancellable} is not \code{NULL}, then the operation can be cancelled by
 triggering the cancellable object from another thread. If the operation
 was cancelled, the error \code{G_IO_ERROR_CANCELLED} will be returned. If an
 operation was partially finished when the operation was cancelled the
 partial result will be returned, without an error.
-  
+
 On error -1 is returned and \code{error} is set accordingly.}
 \value{
 A list containing the following elements:

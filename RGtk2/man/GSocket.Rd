@@ -67,7 +67,7 @@ by e.g. \code{\link{gObjectNew}} you must call \code{\link{gInitableInit}} and c
 results before using the object. This is done automatically in
 \code{\link{gSocketNew}} and \code{\link{gSocketNewFromFd}}, so these functions can return
 \code{NULL}.
-  
+
 Sockets operate in two general modes, blocking or non-blocking. When
 in blocking mode all operations block until the requested operation
 is finished or there is an error. In non-blocking mode all calls that
@@ -77,7 +77,7 @@ or \code{\link{gSocketConditionWait}}. You can also use \code{\link{gSocketCreat
 attach it to a \verb{GMainContext} to get callbacks when I/O is possible.
 Note that all sockets are always set to non blocking mode in the system, and
 blocking mode is emulated in GSocket.
-  
+
 When working in non-blocking mode applications should always be able to
 handle getting a \code{G_IO_ERROR_WOULD_BLOCK} error even when some other
 function said that I/O was possible. This can easily happen in case
@@ -89,9 +89,9 @@ For connection oriented types you must first establish a connection by
 either connecting to an address or accepting a connection from another
 address. For connectionless socket types the target/source address is
 specified or received in each I/O operation.
-  
+
 All socket file descriptors are set to be close-on-exec.
-  
+
 Note that creating a \code{\link{GSocket}} causes the signal \code{SIGPIPE} to be
 ignored for the remainder of the program. If you are writing a
 command-line utility that uses \code{\link{GSocket}}, you may need to take into
@@ -123,7 +123,7 @@ all the socket types.
 A protocol identifier is specified when creating a \code{\link{GSocket}}, which is a
 family/type specific identifier, where 0 means the default protocol for
 the particular family/type.
-  
+
 This enum contains a set of commonly available and used protocols. You
 can also pass any other identifiers handled by the platform in order to
 use protocols not listed here.

@@ -3,7 +3,7 @@
 \title{gdkPixbufNewFromData}
 \description{Creates a new \code{\link{GdkPixbuf}} out of in-memory image data.  Currently only RGB
 images with 8 bits per sample are supported.}
-\usage{gdkPixbufNewFromData(data, colorspace, has.alpha, bits.per.sample, 
+\usage{gdkPixbufNewFromData(data, colorspace, has.alpha, bits.per.sample,
     width, height, rowstride)}
 \arguments{
 \item{\verb{data}}{Image data in 8-bit/sample packed format}

@@ -17,12 +17,12 @@ functionality, or \code{NULL} to unset the current path. \emph{[  \acronym{allow
 \details{This function is basically a convenience wrapper that handles calling
 \code{\link{gtkWidgetSetAccelPath}} with the appropriate accelerator group for
 the menu item.
-  
+
 Note that you do need to set an accelerator on the parent menu with
 \code{\link{gtkMenuSetAccelGroup}} for this to work.
-  
+
 Note that \code{accel.path} string will be stored in a \code{\link{GQuark}}. Therefore, if you
-pass a static string, you can save some memory by interning it first with 
+pass a static string, you can save some memory by interning it first with
 \code{gInternStaticString()}.}
 \author{Derived by RGtkGen from GTK+ documentation}
 \keyword{internal}

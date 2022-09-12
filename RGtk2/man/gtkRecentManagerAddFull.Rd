@@ -12,14 +12,14 @@ structure passed in \code{recent.data}.}
 }
 \details{The passed URI will be used to identify this resource inside the
 list.
-  
+
 In order to register the new recently used resource, metadata about
 the resource must be passed as well as the URI; the metadata is
 stored in a \code{\link{GtkRecentData}} structure, which must contain the MIME
 type of the resource pointed by the URI; the name of the application
 that is registering the item, and a command line to be used when
 launching the item.
-  
+
 Optionally, a \code{\link{GtkRecentData}} structure might contain a UTF-8 string
 to be used when viewing the item instead of the last component of the
 URI; a short description of the item; whether the item should be

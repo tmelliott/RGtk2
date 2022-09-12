@@ -95,7 +95,7 @@ GObject
          +----PangoFontsetSimple
 }}
 \section{Interface Derivations}{PangoFont is required by
- \code{\link{PangoCairoFont}}.  
+ \code{\link{PangoCairoFont}}.
 PangoFontMap is required by
  \code{\link{PangoCairoFontMap}}.}
 \section{Detailed Description}{Pango supports a flexible architecture where a
@@ -151,7 +151,7 @@ a larger structure that contains a nested
 the nested \code{\link{PangoFont}} with a pointer to
 a appropriate \verb{PangoFontClass}, then call
 \code{pangoFontInit()} on the structure.
-  
+
 The \code{\link{PangoFont}} structure contains one member
 which the implementation fills in.
 
@@ -176,7 +176,7 @@ specific code should allocate a larger structure that contains a nested
 \code{\link{PangoFontMap}}, fill in the \code{klass} member of the nested \code{\link{PangoFontMap}} with a
 pointer to a appropriate \verb{PangoFontMapClass}, then call
 \code{pangoFontMapInit()} on the structure.
-  
+
 The \code{\link{PangoFontMap}} structure contains one member which the implementation
 fills in.
 
@@ -200,7 +200,7 @@ which the creator provides when constructing the
 }}
 \section{Enums and Flags}{\describe{
 \item{\verb{PangoStyle}}{
-An enumeration specifying the various slant styles possible for a font.  
+An enumeration specifying the various slant styles possible for a font.
 
 \describe{
 \item{\verb{normal}}{ the font is upright.}
@@ -272,7 +272,7 @@ The bits in a \code{\link{PangoFontMask}} correspond to fields in a
 }}
 \section{User Functions}{\describe{\item{\code{PangoFontsetForeachFunc(fontset, font, data)}}{
 A callback function used by \code{\link{pangoFontsetForeach}} when enumerating
-the fonts in a fontset.  
+the fonts in a fontset.
   Since 1.4
 
 \describe{

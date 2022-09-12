@@ -1,11 +1,11 @@
 \alias{gdkDisplayWarpPointer}
 \name{gdkDisplayWarpPointer}
 \title{gdkDisplayWarpPointer}
-\description{Warps the pointer of \code{display} to the point \code{x},\code{y} on 
+\description{Warps the pointer of \code{display} to the point \code{x},\code{y} on
 the screen \code{screen}, unless the pointer is confined
 to a window by a grab, in which case it will be moved
-as far as allowed by the grab. Warping the pointer 
-creates events as if the user had moved the mouse 
+as far as allowed by the grab. Warping the pointer
+creates events as if the user had moved the mouse
 instantaneously to the destination.}
 \usage{gdkDisplayWarpPointer(object, screen, x, y)}
 \arguments{

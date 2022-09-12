@@ -2,7 +2,7 @@
 \alias{gtkSignalGetInfo}
 \title{Reflectance information about a Gtk signal}
 \description{
-\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)} 
+\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)}
 
   This returns information about the
   Gtk signal of interest, giving details
@@ -65,7 +65,7 @@ Duncan Temple Lang <duncan@research.bell-labs.com>
 
 \seealso{
    \code{\link{gtkTypeGetSignals}}
-   \code{\link{getSignalInfo}}   
+   \code{\link{getSignalInfo}}
 }
 
 \examples{

@@ -2,7 +2,7 @@
 \alias{gtkTopWindow}
 \title{Create a Gtk Window}
 \description{
-\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)} 
+\strong{DEPRECATED!! (compatibility wrappers for RGtk 1!)}
 
   This creates a top-level Gtk window
   (as opposed to a dialog or popup window).
@@ -37,7 +37,7 @@ THIS STUFF IS VERY OLD AND DEPRECATED (compatibility wrappers for RGtk 1)
 
 \seealso{
   \code{\link{gtkWindow}}
-  \code{\link{gtkWindowNew}}  
+  \code{\link{gtkWindowNew}}
 }
 
 

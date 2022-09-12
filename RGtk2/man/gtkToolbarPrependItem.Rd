@@ -5,7 +5,7 @@
 Adds a new button to the beginning (top or left edges) of the given toolbar.
 \strong{WARNING: \code{gtk_toolbar_prepend_item} has been deprecated since version 2.4 and should not be used in newly-written code. Use \code{\link{gtkToolbarInsert}} instead.}
 }
-\usage{gtkToolbarPrependItem(object, text, tooltip.text, tooltip.private.text, 
+\usage{gtkToolbarPrependItem(object, text, tooltip.text, tooltip.private.text,
     icon, callback, user.data)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GtkToolbar}}.}

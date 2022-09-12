@@ -7,7 +7,7 @@
 \details{This returns \code{TRUE} if the ellipsization mode for \code{layout}
 is not \code{PANGO_ELLIPSIZE_NONE}, a positive width is set on \code{layout},
 and there are paragraphs exceeding that width that have to be
-ellipsized.  
+ellipsized.
   Since 1.16}
 \value{[logical] \code{TRUE} if any paragraphs had to be ellipsized, \code{FALSE}
 otherwise.}

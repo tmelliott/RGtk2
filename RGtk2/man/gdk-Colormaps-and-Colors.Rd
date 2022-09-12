@@ -32,7 +32,7 @@ values. In general, colormaps only contain
 significant information for pseudo-color visuals,
 but even for other visual types, a colormap object
 is required in some circumstances.
-  
+
 There are a couple of special colormaps that can
 be retrieved. The system colormap (retrieved
 with \code{\link{gdkColormapGetSystem}}) is the default
@@ -42,7 +42,7 @@ colormap in which GdkRGB works, retrieved with
 \code{\link{gdkRgbGetColormap}}. However, when using GdkRGB,
 it is not generally necessary to allocate colors
 directly.
-  
+
 In previous revisions of this interface, a number
 of functions that take a \code{\link{GdkColormap}} parameter
 were replaced with functions whose names began

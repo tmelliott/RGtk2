@@ -1,7 +1,7 @@
 \alias{gdkGCGetValues}
 \name{gdkGCGetValues}
 \title{gdkGCGetValues}
-\description{Retrieves the current values from a graphics context. Note that 
+\description{Retrieves the current values from a graphics context. Note that
 only the pixel values of the \code{values->foreground} and \code{values->background}
 are filled, use \code{\link{gdkColormapQueryColor}} to obtain the rgb values
 if you need them.}

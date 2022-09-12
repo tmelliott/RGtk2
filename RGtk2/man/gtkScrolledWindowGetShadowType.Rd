@@ -1,7 +1,7 @@
 \alias{gtkScrolledWindowGetShadowType}
 \name{gtkScrolledWindowGetShadowType}
 \title{gtkScrolledWindowGetShadowType}
-\description{Gets the shadow type of the scrolled window. See 
+\description{Gets the shadow type of the scrolled window. See
 \code{\link{gtkScrolledWindowSetShadowType}}.}
 \usage{gtkScrolledWindowGetShadowType(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkScrolledWindow}}}}

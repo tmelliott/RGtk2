@@ -9,7 +9,7 @@ to \code{pangoContextNew()} followed by \code{\link{pangoContextSetFontMap}}.}
 that system may have it's own way of create a \code{\link{PangoContext}}.
 For instance, the GTK+ toolkit has, among others,
 \code{\link{gdkPangoContextGetForScreen}}, and
-\code{\link{gtkWidgetGetPangoContext}}.  Use those instead.  
+\code{\link{gtkWidgetGetPangoContext}}.  Use those instead.
   Since 1.22}
 \value{[\code{\link{PangoContext}}]  the newly allocated \code{\link{PangoContext}},}
 \author{Derived by RGtkGen from GTK+ documentation}

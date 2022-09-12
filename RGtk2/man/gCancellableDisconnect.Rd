@@ -13,7 +13,7 @@ function returns the handler will not run anymore in any thread.}
 same time as the cancellable operation is finished and the
 signal handler is removed. See \verb{"cancelled"} for
 details on how to use this.
-  
+
 If \code{cancellable} is \code{NULL} or \code{handler.id} is \code{0} this function does
 nothing.
   Since 2.22}

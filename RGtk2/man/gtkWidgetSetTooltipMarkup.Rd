@@ -10,7 +10,7 @@
 }
 \details{This function will take care of setting GtkWidget:has-tooltip to \code{TRUE}
 and of the default handler for the GtkWidget::query-tooltip signal.
-  
+
 See also the GtkWidget:tooltip-markup property and
 \code{\link{gtkTooltipSetMarkup}}.
   Since 2.12}

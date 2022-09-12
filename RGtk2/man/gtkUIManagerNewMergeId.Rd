@@ -1,7 +1,7 @@
 \alias{gtkUIManagerNewMergeId}
 \name{gtkUIManagerNewMergeId}
 \title{gtkUIManagerNewMergeId}
-\description{Returns an unused merge id, suitable for use with 
+\description{Returns an unused merge id, suitable for use with
 \code{\link{gtkUIManagerAddUi}}.}
 \usage{gtkUIManagerNewMergeId(object)}
 \arguments{\item{\verb{object}}{a \code{\link{GtkUIManager}}}}

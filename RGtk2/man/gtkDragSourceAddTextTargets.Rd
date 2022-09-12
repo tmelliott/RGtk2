@@ -3,7 +3,7 @@
 \title{gtkDragSourceAddTextTargets}
 \description{Add the text targets supported by \verb{GtkSelection} to
 the target list of the drag source.  The targets
-are added with \code{info} = 0. If you need another value, 
+are added with \code{info} = 0. If you need another value,
 use \code{\link{gtkTargetListAddTextTargets}} and
 \code{\link{gtkDragSourceSetTargetList}}.}
 \usage{gtkDragSourceAddTextTargets(object)}

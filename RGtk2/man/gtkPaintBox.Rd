@@ -2,7 +2,7 @@
 \name{gtkPaintBox}
 \title{gtkPaintBox}
 \description{Draws a box on \code{window} with the given parameters.}
-\usage{gtkPaintBox(object, window, state.type, shadow.type, area = NULL, 
+\usage{gtkPaintBox(object, window, state.type, shadow.type, area = NULL,
     widget = NULL, detail = NULL, x, y, width, height)}
 \arguments{
 \item{\verb{object}}{a \code{\link{GtkStyle}}}
