@@ -11,4 +11,5 @@ gen/
 *~
 docgen
 *.tar.gz
+autom4te.cache
 .Rhistory

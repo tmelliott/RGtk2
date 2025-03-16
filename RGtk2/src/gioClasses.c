@@ -1578,7 +1578,7 @@ S_gmount_operation_class_init(GMountOperationClass * c, SEXP e)
 static SEXP S_GOutputStream_symbol;
 
 static gssize
-S_virtual_goutput_stream_write_fn(GOutputStream* s_object, const guchar* s_buffer, gsize s_count, GCancellable* s_cancellable, GError** s_error)
+S_virtual_goutput_stream_write_fn(GOutputStream* s_object, const void* s_buffer, gsize s_count, GCancellable* s_cancellable, GError** s_error)
 {
   USER_OBJECT_ e;
   USER_OBJECT_ tmp;
@@ -1593,7 +1593,10 @@ S_virtual_goutput_stream_write_fn(GOutputStream* s_object, const guchar* s_buffe
 
   SETCAR(tmp, S_G_OBJECT_ADD_ENV(s_object, toRPointerWithRef(s_object, "GOutputStream")));
   tmp = CDR(tmp);
-  SETCAR(tmp, asRRawArrayWithSize(s_buffer, s_count));
+  /* Create a new R raw vector directly instead of using asRRawArrayWithSize with void pointer */
+  USER_OBJECT_ raw_vec = allocVector(RAWSXP, s_count);
+  if (s_buffer != NULL) memcpy(RAW(raw_vec), s_buffer, s_count);
+  SETCAR(tmp, raw_vec);
   tmp = CDR(tmp);
   SETCAR(tmp, asRNumeric(s_count));
   tmp = CDR(tmp);
@@ -1702,7 +1705,7 @@ S_virtual_goutput_stream_close_fn(GOutputStream* s_object, GCancellable* s_cance
 }
 
 static void
-S_virtual_goutput_stream_write_async(GOutputStream* s_object, const guchar* s_buffer, gsize s_count, int s_io_priority, GCancellable* s_cancellable, GAsyncReadyCallback s_callback, gpointer s_user_data)
+S_virtual_goutput_stream_write_async(GOutputStream* s_object, const void* s_buffer, gsize s_count, int s_io_priority, GCancellable* s_cancellable, GAsyncReadyCallback s_callback, gpointer s_user_data)
 {
   USER_OBJECT_ e;
   USER_OBJECT_ tmp;
@@ -1717,7 +1720,10 @@ S_virtual_goutput_stream_write_async(GOutputStream* s_object, const guchar* s_bu
 
   SETCAR(tmp, S_G_OBJECT_ADD_ENV(s_object, toRPointerWithRef(s_object, "GOutputStream")));
   tmp = CDR(tmp);
-  SETCAR(tmp, asRRawArrayWithSize(s_buffer, s_count));
+  /* Create a new R raw vector directly instead of using asRRawArrayWithSize with void pointer */
+  USER_OBJECT_ raw_vec = allocVector(RAWSXP, s_count);
+  if (s_buffer != NULL) memcpy(RAW(raw_vec), s_buffer, s_count);
+  SETCAR(tmp, raw_vec);
   tmp = CDR(tmp);
   SETCAR(tmp, asRNumeric(s_count));
   tmp = CDR(tmp);
@@ -1971,7 +1977,7 @@ S_goutput_stream_class_init(GOutputStreamClass * c, SEXP e)
 
 #if GIO_CHECK_VERSION(2, 16, 0)
   if(VECTOR_ELT(s, 0) != NULL_USER_OBJECT)
-    c->write_fn = S_virtual_goutput_stream_write_fn;
+    c->write_fn = (gssize (*)(GOutputStream*, const void*, gsize, GCancellable*, GError**))S_virtual_goutput_stream_write_fn;
 #endif
 #if GIO_CHECK_VERSION(2, 16, 0)
   if(VECTOR_ELT(s, 1) != NULL_USER_OBJECT)
@@ -1987,7 +1993,7 @@ S_goutput_stream_class_init(GOutputStreamClass * c, SEXP e)
 #endif
 #if GIO_CHECK_VERSION(2, 16, 0)
   if(VECTOR_ELT(s, 4) != NULL_USER_OBJECT)
-    c->write_async = S_virtual_goutput_stream_write_async;
+    c->write_async = (void (*)(GOutputStream*, const void*, gsize, int, GCancellable*, GAsyncReadyCallback, gpointer))S_virtual_goutput_stream_write_async;
 #endif
 #if GIO_CHECK_VERSION(2, 16, 0)
   if(VECTOR_ELT(s, 5) != NULL_USER_OBJECT)

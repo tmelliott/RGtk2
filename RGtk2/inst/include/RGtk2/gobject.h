@@ -312,7 +312,7 @@ __extension__ \
 __extension__ \
 ({ \
     type* array = asCArray(s, type, converter); \
-    g_memdup(array, sizeof(type) * GET_LENGTH(s)); \
+    g_memdup2(array, sizeof(type) * GET_LENGTH(s)); \
 })
 
 #define asCEnumArray(s_array, type, code) \

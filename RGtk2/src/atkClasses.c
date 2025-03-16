@@ -413,7 +413,7 @@ S_atk_hyperlink_class_link_activated(USER_OBJECT_ s_object_class, USER_OBJECT_ s
 
   return(_result);
 }
- 
+
 
 static SEXP S_AtkObject_symbol;
 
@@ -1051,7 +1051,7 @@ S_atk_object_class_init(AtkObjectClass * c, SEXP e)
   if(VECTOR_ELT(s, 16) != NULL_USER_OBJECT)
     c->initialize = S_virtual_atk_object_initialize;
   if(VECTOR_ELT(s, 17) != NULL_USER_OBJECT)
-    c->children_changed = S_virtual_atk_object_children_changed;
+    c->children_changed = (void (*)(AtkObject *, guint, gpointer))S_virtual_atk_object_children_changed;
   if(VECTOR_ELT(s, 18) != NULL_USER_OBJECT)
     c->focus_event = S_virtual_atk_object_focus_event;
   if(VECTOR_ELT(s, 19) != NULL_USER_OBJECT)
@@ -1059,7 +1059,7 @@ S_atk_object_class_init(AtkObjectClass * c, SEXP e)
   if(VECTOR_ELT(s, 20) != NULL_USER_OBJECT)
     c->visible_data_changed = S_virtual_atk_object_visible_data_changed;
   if(VECTOR_ELT(s, 21) != NULL_USER_OBJECT)
-    c->active_descendant_changed = S_virtual_atk_object_active_descendant_changed;
+    c->active_descendant_changed = (void (*)(AtkObject *, gpointer *))S_virtual_atk_object_active_descendant_changed;
 }
 USER_OBJECT_
 S_atk_object_class_get_name(USER_OBJECT_ s_object_class, USER_OBJECT_ s_object)
@@ -1398,12 +1398,12 @@ S_atk_object_class_active_descendant_changed(USER_OBJECT_ s_object_class, USER_O
   AtkObject* child = ATK_OBJECT(getPtrValue(s_child));
 
 
-  object_class->active_descendant_changed(object, child);
+  object_class->active_descendant_changed(object, (gpointer *)child);
 
 
   return(_result);
 }
- 
+
 
 static SEXP S_AtkGObjectAccessible_symbol;
 void
@@ -1419,7 +1419,7 @@ S_atk_gobject_accessible_class_init(AtkGObjectAccessibleClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_AtkNoOpObject_symbol;
 void
@@ -1435,7 +1435,7 @@ S_atk_no_op_object_class_init(AtkNoOpObjectClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_AtkObjectFactory_symbol;
 
@@ -1492,7 +1492,7 @@ S_atk_object_factory_class_invalidate(USER_OBJECT_ s_object_class, USER_OBJECT_ 
 
   return(_result);
 }
- 
+
 
 static SEXP S_AtkNoOpObjectFactory_symbol;
 void
@@ -1508,7 +1508,7 @@ S_atk_no_op_object_factory_class_init(AtkNoOpObjectFactoryClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_AtkRegistry_symbol;
 void
@@ -1524,7 +1524,7 @@ S_atk_registry_class_init(AtkRegistryClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_AtkRelation_symbol;
 void
@@ -1540,7 +1540,7 @@ S_atk_relation_class_init(AtkRelationClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_AtkRelationSet_symbol;
 void
@@ -1556,7 +1556,7 @@ S_atk_relation_set_class_init(AtkRelationSetClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_AtkStateSet_symbol;
 void
@@ -1572,7 +1572,7 @@ S_atk_state_set_class_init(AtkStateSetClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_AtkUtil_symbol;
 void
@@ -1588,7 +1588,7 @@ S_atk_util_class_init(AtkUtilClass * c, SEXP e)
 
   UNPROTECT(1);
 
-} 
+}
 
 static SEXP S_AtkTable_symbol;
 
@@ -3279,7 +3279,7 @@ S_atk_table_iface_model_changed(USER_OBJECT_ s_object_class, USER_OBJECT_ s_obje
 
   return(_result);
 }
- 
+
 
 static SEXP S_AtkStreamableContent_symbol;
 
@@ -3384,7 +3384,7 @@ S_atk_streamable_content_iface_get_mime_type(USER_OBJECT_ s_object_class, USER_O
 
   return(_result);
 }
- 
+
 
 static SEXP S_AtkSelection_symbol;
 
@@ -3759,7 +3759,7 @@ S_atk_selection_iface_selection_changed(USER_OBJECT_ s_object_class, USER_OBJECT
 
   return(_result);
 }
- 
+
 
 static SEXP S_AtkImplementor_symbol;
 
@@ -3817,7 +3817,7 @@ S_atk_implementor_iface_ref_accessible(USER_OBJECT_ s_object_class, USER_OBJECT_
 
   return(_result);
 }
- 
+
 
 static SEXP S_AtkImage_symbol;
 
@@ -4025,7 +4025,7 @@ S_atk_image_iface_set_image_description(USER_OBJECT_ s_object_class, USER_OBJECT
 
   return(_result);
 }
- 
+
 
 static SEXP S_AtkHypertext_symbol;
 
@@ -4221,7 +4221,7 @@ S_atk_hypertext_iface_link_selected(USER_OBJECT_ s_object_class, USER_OBJECT_ s_
 
   return(_result);
 }
- 
+
 
 static SEXP S_AtkEditableText_symbol;
 
@@ -4568,7 +4568,7 @@ S_atk_editable_text_iface_paste_text(USER_OBJECT_ s_object_class, USER_OBJECT_ s
 
   return(_result);
 }
- 
+
 
 static SEXP S_AtkComponent_symbol;
 
@@ -5232,7 +5232,7 @@ S_atk_component_iface_bounds_changed(USER_OBJECT_ s_object_class, USER_OBJECT_ s
 
   return(_result);
 }
- 
+
 
 static SEXP S_AtkAction_symbol;
 
@@ -5575,7 +5575,7 @@ S_atk_action_iface_get_localized_name(USER_OBJECT_ s_object_class, USER_OBJECT_ 
 
   return(_result);
 }
- 
+
 
 static SEXP S_AtkValue_symbol;
 
@@ -5852,7 +5852,7 @@ S_atk_value_iface_get_minimum_increment(USER_OBJECT_ s_object_class, USER_OBJECT
 
   return(_result);
 }
- 
+
 
 static SEXP S_AtkText_symbol;
 
@@ -7035,7 +7035,7 @@ S_atk_text_iface_get_bounded_ranges(USER_OBJECT_ s_object_class, USER_OBJECT_ s_
 
   return(_result);
 }
- 
+
 
 static SEXP S_AtkDocument_symbol;
 
@@ -7137,7 +7137,7 @@ S_atk_document_iface_get_document(USER_OBJECT_ s_object_class, USER_OBJECT_ s_ob
 
   return(_result);
 }
- 
+
 
 #if ATK_CHECK_VERSION(1, 12, 1)
 static SEXP S_AtkHyperlinkImpl_symbol;
@@ -7153,5 +7153,4 @@ S_atk_hyperlink_impl_class_init(AtkHyperlinkImplIface * c, SEXP e)
   UNPROTECT(1);
 
 }
-#endif 
-
+#endif

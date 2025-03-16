@@ -8691,7 +8691,7 @@ S_virtual_gtk_notebook_focus_tab(GtkNotebook* s_object, GtkNotebookTab s_type)
   return(((gboolean)asCLogical(s_ans)));
 }
 
-static void
+static gboolean
 S_virtual_gtk_notebook_change_current_page(GtkNotebook* s_object, gint s_offset)
 {
   USER_OBJECT_ e;
@@ -8715,7 +8715,9 @@ S_virtual_gtk_notebook_change_current_page(GtkNotebook* s_object, gint s_offset)
   UNPROTECT(1);
 
   if(err)
-    return;
+    return(FALSE);
+    
+  return(asCLogical(s_ans));
 }
 
 static void
@@ -11242,7 +11244,7 @@ S_gtk_scrollbar_class_init(GtkScrollbarClass * c, SEXP e)
 
 static SEXP S_GtkScrolledWindow_symbol;
 
-static void
+static gboolean
 S_virtual_gtk_scrolled_window_scroll_child(GtkScrolledWindow* s_object, GtkScrollType s_scroll, gboolean s_horizontal)
 {
   USER_OBJECT_ e;
@@ -11268,7 +11270,9 @@ S_virtual_gtk_scrolled_window_scroll_child(GtkScrolledWindow* s_object, GtkScrol
   UNPROTECT(1);
 
   if(err)
-    return;
+    return(FALSE);
+    
+  return(asCLogical(s_ans));
 }
 
 static void

@@ -5995,7 +5995,7 @@ S_gdk_window_get_user_data(USER_OBJECT_ s_object)
   USER_OBJECT_ _result = NULL_USER_OBJECT;
   GdkWindow* object = GDK_WINDOW(getPtrValue(s_object));
 
-  GtkWidget* user_data = NULL;
+  gpointer user_data = NULL;
 
   gdk_window_get_user_data(object, &user_data);
 
